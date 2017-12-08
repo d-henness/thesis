@@ -9,7 +9,7 @@
 %% http://www.elsevier.com/wps/find/authorsview.authors/elsarticle.
 %%
 %%
-\documentclass[preprint,12pt]{elsarticle}
+\documentclass[12pt]{book}
 
 %% Use the option review to obtain double line spacing
 %% \documentclass[preprint,review,12pt]{elsarticle}
@@ -45,6 +45,10 @@
 
 \usepackage{algorithm}
 \usepackage{algorithmic}
+
+\usepackage{setspace}
+\doublespacing
+
 %% The amsthm package provides extended theorem environments
 %% \usepackage{amsthm}
 
@@ -92,68 +96,8 @@
  \setlength{\rightmargin}{0pt}}}
  {\endlist}
 
-\journal{Computer Physics Communications}
-
 \begin{document}
 
-\begin{frontmatter}
-
-%% Title, authors and addresses
-
-%% use the tnoteref command within \title for footnotes;
-%% use the tnotetext command for the associated footnote;
-%% use the fnref command within \author or \address for footnotes;
-%% use the fntext command for the associated footnote;
-%% use the corref command within \author for corresponding author footnotes;
-%% use the cortext command for the associated footnote;
-%% use the ead command for the email address,
-%% and the form \ead[url] for the home page:
-%%
-%% \title{Title\tnoteref{label1}}
-%% \tnotetext[label1]{}
-%% \author{Name\corref{cor1}\fnref{label2}}
-%% \ead{email address}
-%% \ead[url]{home page}
-%% \fntext[label2]{}
-%% \cortext[cor1]{}
-%% \address{Address\fnref{label3}}
-%% \fntext[label3]{}
-
-\title{A \LaTeX{} template for CPC Computer Physics Descriptions}
-
-%% use optional labels to link authors explicitly to addresses:
-%% \author[label1,label2]{<author name>}
-%% \address[label1]{<address>}
-%% \address[label2]{<address>}
-
-\author[a]{First Author\corref{author}}
-\author[a,b]{Second Author}
-\author[b]{Third Author}
-
-\cortext[author] {Corresponding author.\\\textit{E-mail address:} firstAuthor@somewhere.edu}
-\address[a]{First Address}
-\address[b]{Second Address}
-
-\begin{abstract}
-%% Text of abstract
-A submitted program is expected to be of benefit to other physicists or physical chemists, or be an exemplar of good programming practice, or illustrate new or novel programming techniques which are of importance to some branch of computational physics or physical chemistry.
-
-Acceptable program descriptions can take different forms. The following Long Write-Up structure is a suggested structure but it is not obligatory. Actual structure will depend on the length of the program, the extent to which the algorithms or software have already been described in literature, and the detail provided in the user manual.
-
-Your manuscript and figure sources should be submitted through the Elsevier Editorial System (EES) by using the online submission tool at \\
-http://www.ees.elsevier.com/cpc.
-
-In addition to the manuscript you must supply: the program source code; job control scripts, where applicable; a README file giving the names and a brief description of all the files that make up the package and clear instructions on the installation and execution of the program; sample input and output data for at least one comprehensive test run; and, where appropriate, a user manual. These should be sent, via email as a compressed archive file, to the CPC Program Librarian at cpc@qub.ac.uk.
-
-\end{abstract}
-
-\begin{keyword}
-%% keywords here, in the form: keyword \sep keyword
-keyword1; keyword2; keyword3; etc.
-
-\end{keyword}
-
-\end{frontmatter}
 
 %%
 %% Start line numbering here if you want
@@ -163,47 +107,31 @@ keyword1; keyword2; keyword3; etc.
 % Computer program descriptions should contain the following
 % PROGRAM SUMMARY.
 
-{\bf PROGRAM SUMMARY/NEW VERSION PROGRAM SUMMARY}
-  %Delete as appropriate.
-
-\begin{small}
-\noindent
-{\em Program Title:}                                          \\
-{\em Licensing provisions(please choose one): CC0 1.0/CC By 4.0/MIT/Apache-2.0/BSD 3-clause/BSD 2-clause/GPLv3/CC BY NC 3.0 }                                   \\
-{\em Programming language:}                                   \\
-
-{\em Supplementary material:}                                 \\
-  % Fill in if necessary, otherwise leave out.
-{\em Journal reference of previous version:}                  \\
-  %Only required for a New Version summary, otherwise leave out.
-{\em Does the new version supersede the previous version?:}   \\
-  %Only required for a New Version summary, otherwise leave out.
-{\em Reasons for the new version:}\\
-  %Only required for a New Version summary, otherwise leave out.
-{\em Summary of revisions:}*\\
-  %Only required for a New Version summary, otherwise leave out.
-
-{\em Nature of problem(approx. 50-250 words):}\\
-  %Describe the nature of the problem here. \\
-{\em Solution method(approx. 50-250 words):}\\
-  %Describe the method solution here.
-{\em Additional comments including Restrictions and Unusual features (approx. 50-250 words):}\\
-  %Provide any additional comments here.
-   \\
-
-\begin{thebibliography}{0}
-\bibitem{1}Reference 1         % This list should only contain those items referenced in the                 
-\bibitem{2}Reference 2         % Program Summary section.   
-\bibitem{3}Reference 3         % Type references in text as [1], [2], etc.
-                               % This list is different from the bibliography at the end of 
-                               % the Long Write-Up.
-\end{thebibliography}
-* Items marked with an asterisk are only required for new versions
-of programs previously published in the CPC Program Library.\\
-\end{small}
-
-
 %% main text
+\chapter{Basis Sets}
+\section{Methods}
+\subsection{Basis set size optimization}
+In keeping with the theme of "computers should work, people should think", we decided to use a somewhat novel method of generating our basis sets. We begin by choosing an arbitrarily large basis set size, such as s$(1:40)$p$(1:40)$d$(1:40)$f$(1:40)$ (here $i(\#:\#)$ refers to the starting and ending index of $\zeta$'s used for symmetry $i$). We then find the optimal $\alpha$, $\beta$, $\delta$, and $\gamma$ wtbs parameters for this basis set. We then use the following steps to find the optimal basis set size.
+
+\textit{Step 1.} Begin by finding the fewest number of f functions necessary. This can be done by generating .inps files that range in size from s$(1:40)$p$(1:40)$d$(1:40)$f$(1:1)$ to s$(1:40)$p$(1:40)$d$(1:40)$f$(1:40)$.
+
+\textit{Step 2.} Optimize the basis sets and select the smallest basis set that is still below some minimum accuracy threshold (we chose a relative error of no greater than $5.0\times10^{-8}$ to numerical calculations). The size of this basis set is s$(1:40)$p$(1:40)$d$(1:40)$f$(1:x_{f})$.
+
+\textit{Step 3.} Replace the wtbs parameters with those from the newly optimized set and generate a list of .inp files that range in size from s$(1:40)$p$(1:40)$d$(1:x_{f})$f$(1:x_{f})$ to s$(1:40)$p$(1:40)$d$(1:40)$f$(1:x_{f})$.
+
+\textit{Step 4.} Optimize these new sets and select the smallest that is still below the accuracy threshold. The size of this basis set is s$(1:40)$p$(1:40)$d$(1:x_{d})$f$(1:x_{f})$.
+
+\textit{Step 5.} Repeat steps 3 and 4 for the remaining symmetries. The size of the basis set at the end of this step will be of size s$(1:x_{s})$p$(1:x_{p})$d$(1:x_{d})$f$(1:x_{f})$.
+
+\textit{Step 6.} Replace the wtbs parameters with those from the newly optimized set and generate a list of .inp files that range in size from s$(1:x_{s})$p$(1:x_{p})$d$(1:x_{d})$f$(1:x_{f})$ to s$(1:x_{s})$p$(1:x_{p})$d$(1:x_{d})$f$(x_{f}:x_{f})$.
+
+\textit{Step 7.} Optimize and select from the basis sets. The new set will be of size s$(1:x_{s})$p$(1:x_{p})$d$(1:x_{d})$f$(y_{f}:x_{f})$.
+
+\textit{Step 8.} Repeat steps 6 and 7 for the other symmetries except s. The final basis set will be of size s$(1:x_{s})$p$(y_{p}:x_{p})$d$(y_{d}:x_{d})$f$(y_{f}:x_{f})$.
+
+This process has a major drawback in that it requires a lot of computer power to run efficiently. But this is not really a problem if access to large computer clusters is available. The advantages of this are it finds a very small basis set that is still accurate, and it is also completely automatable. If there are no problems with individual calculations not converging, the output files never even need to be manually examined!
+
+\chapter{CUDAProphet}
 \section{GPU Architecture}
 While general purpose computing on graphics processing units (GPGPU) (GPUs) has been adopted by the high performance computing (HPC) community for quite some time, it can seem quite complex to the uninitiated. While most quantum chemists who decide to dip their toes into computational waters can get away with having little to no understanding of what is actually going on under the hood when programming for a central processing uint (CPU), the same can not at all be said for GPUs. Therefore, in this section I will explain what makes a GPU tick in order to help understand the terms and techniques used in the following chapter. As CUDAProphet was optimized for (and is currently hardcoded for :( ) the Tesla C2050, I will be referring to its specs for examples when needed. I will begin will the most granularity possible, and zoom out so that by the end of this section, the reader should come away prepared for the rest of this chapter.
 

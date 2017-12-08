@@ -1,0 +1,571 @@
+%% This template can be used to write a paper for
+%% Computer Physics Communications using LaTeX.
+%% For authors who want to write a computer program description,
+%% an example Program Summary is included that only has to be
+%% completed and which will give the correct layout in the
+%% preprint and the journal.
+%% The `elsarticle' style is used and more information on this style
+%% can be found at 
+%% http://www.elsevier.com/wps/find/authorsview.authors/elsarticle.
+%%
+%%
+\documentclass[preprint,12pt]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+%% \documentclass[final,1p,times]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn]{elsarticle}
+%% \documentclass[final,3p,times]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn]{elsarticle}
+%% \documentclass[final,5p,times]{elsarticle}
+%% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+%% if you use PostScript figures in your article
+%% use the graphics package for simple commands
+%% \usepackage{graphics}
+%% or use the graphicx package for more complicated commands
+%% \usepackage{graphicx}
+%% or use the epsfig package if you prefer to use the old commands
+%% \usepackage{epsfig}
+
+\newcommand{\vartables}{p{1.5cm} p{.5cm} p{1.25cm} p{7.5cm}} %% The format used in the input description tables
+\newcommand{\notetodylan}[1]{\textcolor{red}{#1}} %% Makes text red to indicate notes to myself
+\newcommand{\citethis}{\textsuperscript{\textcolor{blue}{citation needed}}} %% Indicates a citation is needed
+\newcommand{\kernel}[1]{\textit{\textbf{#1}}}
+\newcommand{\comm}[1]{\textbf{#1}}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+\usepackage{listings}
+
+\usepackage{xcolor}
+
+\usepackage{algorithm}
+\usepackage{algorithmic}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+%% \usepackage{lineno}
+
+%% natbib.sty is loaded by default. However, natbib options can be
+%% provided with \biboptions{...} command. Following options are
+%% valid:
+
+%%   round  -  round parentheses are used (default)
+%%   square -  square brackets are used   [option]
+%%   curly  -  curly braces are used      {option}
+%%   angle  -  angle brackets are used    <option>
+%%   semicolon  -  multiple citations separated by semi-colon
+%%   colon  - same as semicolon, an earlier confusion
+%%   comma  -  separated by comma
+%%   numbers-  selects numerical citations
+%%   super  -  numerical citations as superscripts
+%%   sort   -  sorts multiple citations according to order in ref. list
+%%   sort&compress   -  like sort, but also compresses numerical citations
+%%   compress - compresses without sorting
+%%
+%% \biboptions{comma,round}
+
+% \biboptions{}
+
+%% This list environment is used for the references in the
+%% Program Summary
+%%
+\newcounter{bla}
+\newenvironment{refnummer}{%
+\list{[\arabic{bla}]}%
+{\usecounter{bla}%
+ \setlength{\itemindent}{0pt}%
+ \setlength{\topsep}{0pt}%
+ \setlength{\itemsep}{0pt}%
+ \setlength{\labelsep}{2pt}%
+ \setlength{\listparindent}{0pt}%
+ \settowidth{\labelwidth}{[9]}%
+ \setlength{\leftmargin}{\labelwidth}%
+ \addtolength{\leftmargin}{\labelsep}%
+ \setlength{\rightmargin}{0pt}}}
+ {\endlist}
+
+\journal{Computer Physics Communications}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for the associated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for the associated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for the associated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%%
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+\title{A \LaTeX{} template for CPC Computer Physics Descriptions}
+
+%% use optional labels to link authors explicitly to addresses:
+%% \author[label1,label2]{<author name>}
+%% \address[label1]{<address>}
+%% \address[label2]{<address>}
+
+\author[a]{First Author\corref{author}}
+\author[a,b]{Second Author}
+\author[b]{Third Author}
+
+\cortext[author] {Corresponding author.\\\textit{E-mail address:} firstAuthor@somewhere.edu}
+\address[a]{First Address}
+\address[b]{Second Address}
+
+\begin{abstract}
+%% Text of abstract
+A submitted program is expected to be of benefit to other physicists or physical chemists, or be an exemplar of good programming practice, or illustrate new or novel programming techniques which are of importance to some branch of computational physics or physical chemistry.
+
+Acceptable program descriptions can take different forms. The following Long Write-Up structure is a suggested structure but it is not obligatory. Actual structure will depend on the length of the program, the extent to which the algorithms or software have already been described in literature, and the detail provided in the user manual.
+
+Your manuscript and figure sources should be submitted through the Elsevier Editorial System (EES) by using the online submission tool at \\
+http://www.ees.elsevier.com/cpc.
+
+In addition to the manuscript you must supply: the program source code; job control scripts, where applicable; a README file giving the names and a brief description of all the files that make up the package and clear instructions on the installation and execution of the program; sample input and output data for at least one comprehensive test run; and, where appropriate, a user manual. These should be sent, via email as a compressed archive file, to the CPC Program Librarian at cpc@qub.ac.uk.
+
+\end{abstract}
+
+\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+keyword1; keyword2; keyword3; etc.
+
+\end{keyword}
+
+\end{frontmatter}
+
+%%
+%% Start line numbering here if you want
+%%
+% \linenumbers
+
+% Computer program descriptions should contain the following
+% PROGRAM SUMMARY.
+
+{\bf PROGRAM SUMMARY/NEW VERSION PROGRAM SUMMARY}
+  %Delete as appropriate.
+
+\begin{small}
+\noindent
+{\em Program Title:}                                          \\
+{\em Licensing provisions(please choose one): CC0 1.0/CC By 4.0/MIT/Apache-2.0/BSD 3-clause/BSD 2-clause/GPLv3/CC BY NC 3.0 }                                   \\
+{\em Programming language:}                                   \\
+
+{\em Supplementary material:}                                 \\
+  % Fill in if necessary, otherwise leave out.
+{\em Journal reference of previous version:}                  \\
+  %Only required for a New Version summary, otherwise leave out.
+{\em Does the new version supersede the previous version?:}   \\
+  %Only required for a New Version summary, otherwise leave out.
+{\em Reasons for the new version:}\\
+  %Only required for a New Version summary, otherwise leave out.
+{\em Summary of revisions:}*\\
+  %Only required for a New Version summary, otherwise leave out.
+
+{\em Nature of problem(approx. 50-250 words):}\\
+  %Describe the nature of the problem here. \\
+{\em Solution method(approx. 50-250 words):}\\
+  %Describe the method solution here.
+{\em Additional comments including Restrictions and Unusual features (approx. 50-250 words):}\\
+  %Provide any additional comments here.
+   \\
+
+\begin{thebibliography}{0}
+\bibitem{1}Reference 1         % This list should only contain those items referenced in the                 
+\bibitem{2}Reference 2         % Program Summary section.   
+\bibitem{3}Reference 3         % Type references in text as [1], [2], etc.
+                               % This list is different from the bibliography at the end of 
+                               % the Long Write-Up.
+\end{thebibliography}
+* Items marked with an asterisk are only required for new versions
+of programs previously published in the CPC Program Library.\\
+\end{small}
+
+
+%% main text
+\section{GPU Architecture}
+While general purpose computing on graphics processing units (GPGPU) (GPUs) has been adopted by the high performance computing (HPC) community for quite some time, it can seem quite complex to the uninitiated. While most quantum chemists who decide to dip their toes into computational waters can get away with having little to no understanding of what is actually going on under the hood when programming for a central processing uint (CPU), the same can not at all be said for GPUs. Therefore, in this section I will explain what makes a GPU tick in order to help understand the terms and techniques used in the following chapter. As CUDAProphet was optimized for (and is currently hardcoded for :( ) the Tesla C2050, I will be referring to its specs for examples when needed. I will begin will the most granularity possible, and zoom out so that by the end of this section, the reader should come away prepared for the rest of this chapter.
+
+\subsection{Threads, Blocks, and Grids}\label{ThBlGr}
+The most granular element of computation on a GPU is the thread. When a CUDA function or subroutine (hereafter called a kernel) is called, it is a thread that actually executes the code. What makes GPGPU so powerful is that while a thread in a kernel is always executing the same code, the data a thread works with can be completely different between threads. This method of parallelism is called single instruction, multiple data (SIMD). 
+
+32 threads are organized into a structure called a warp. Within a warp, all threads execute code in lock-step. If a condition arises where some threads in warp must execute some code, and other threads in the same warp execute some other code (for instance in a \textbf{if eles} statement), this leads to serialization of code execution, a process called warp divergence. In a worst case scenario, this could cause all 32 threads to execute serially which could lead to a massive hit to performance. It can also cause warps to fall behind other warps and has the potential to cause race conditions to appear. If one warp need data generated by another warp that is several steps behind, this can cause all kinds of confusing errors to appear. Therefore, it is generally advisable to avoid warp divergence whenever possible. But, for programs of any considerable usefulness, warp divergence will be inevitable. Thankfully, the good people of Nvidia have included the \comm{syncthreads} command. This provides a barrier that all threads within a block must meet before any can continue. 
+
+The next highest structure is the thread block, or block for short. Simply put, a block is a collection of 1 or more threads. When a kernel is called, the block scheduler assigns each block to a streaming multiprocessor (SM). How many blocks a SM can run at once depends on the resources each block uses (more on this in section \ref{GPUmem}), but no more than 8 block per SM can ever be run at once on our C2050. Blocks also add an element of dimensionality to threads through the thread index ($threadIdx$) variable. This variable has three parts, $threadIdx.x$, $threadIdx.y$, and $threadIdx.z$. These variables make dealing with matrixes and arrays much simpler and can help with paralyzing large nested loops. The size of dimensions of the grid can be accessed through the $blockDim$ variable. $blockDim$ also has $x$, $y$, and $z$ parts. These variables are all integer type, and the $threadIdx$ variables range from 1 in Fortran (or 0 in C/++) to the relevant part of $blockDim$ in Fortran (or $blockDim$ -1 in C/++). The $threadIdx$ set of variables are all reset at the boundary of each block. 
+
+Finally there is the grid. The grid is the entire collection of blocks that are launched for a kernel. They also give a dimensionality to blocks through the $blockIdx$ variable which has similar parts to the $threadIdx$ variable. It also adds in the $gridDim$ variable which is analogous to $blockDim$.  
+
+\section{Program flow}
+In this section, the control flow of a typical calculation is given.
+
+\textit{Step 1}. The input file is read by the \textit{\textbf{intin}} subroutine. If needed, the basis set and open-shell configurations are calculated by \textit{\textbf{formbs}} and \textit{\textbf{find\_bin\_configurations}} respectively. The options set in the input file are rewritten to stdout.
+
+\textit{Step 2}. The calculation of small arrays and other constants is performed by \textit{\textbf{calc\_parameters}} and \textit{\textbf{bsnorm}}. \textit{\textbf{calc\_parameters}} calls \textit{\textbf{bcoef}} and \textit{\textbf{setvc}}.
+
+\textit{Step 3}. The mapping of threads to the unrolled one and two-electron integral matrixes are calculated by \textit{\textbf{lmpqrsa}} on the GPU. All other data from step 1 and 2 is then uploaded to the GPU.
+
+\textit{Step 4}. The one and two electron integrals are calculated on the GPU by \textit{\textbf{eint1gpu}} and \textit{\textbf{eint2gpu}} respectively.
+
+\textit{Step 5}. The initial guess of the density matrix is calculated by \textit{\textbf{guess}} on the GPU. This is done by the diagonalization of the one-electron Hamiltonian matrix.
+
+\textit{Step 6}. \textit{\textbf{scfiter}} then performs the SCF until convergence of the density matrix has been reached, or the maximum number of iterations has been reached. SCF is performed with cuSOLVER functions, as well as a few custom helper functions. The converged eigenvectors, values, and energies are downloaded from the GPU and then written to stdout.
+
+\textit{Step 7} (optional). If jobtyp='bsopt', then an optional basis set optimization is then carried out. This starts by assigning pointers to variables on the CPU and GPU through \textit{\textbf{hookup\_cpu}} and \textit{\textbf{hookup\_gpu}}. Then, the four wtbs parameters are optimized by \textit{\textbf{newuoa}}. \textit{\textbf{newuoa}} calls \textit{\textbf{calc\_energy}} which essentially reconstructs the basis set from new parameters from \textit{\textbf{newuoa}}, then repeats steps 2 - 6 and feeds the energy back into \textit{\textbf{newuoa}}. This repeats until optimal wtbs parameters have been found.
+
+\section{Alterations for CUDA}
+While almost all of the code from the original DFRATOM was modified in someway, the most extreme changes were the integral evaluation and the formation of the P and Q matrixes. Therefore, we will discuss these changes in detail in this section.
+
+The original DFRATOM calculates the two electron integrals with a long series of nested for loops. Working from the outside in, the indices of the loops are $L$, $P$, $Q$, $M$, $R$, and $S$ where $L$ and $M$ are spinor symmetries, $P$ and $Q$ are basis functions of symmetry $L$, and $R$ and $S$ are basis functions of symmetry $M$. The pseudocode for these is shown in Algorithm \ref{origcode}. Where $nsym$ is the total number of symmetries, and $nbs(i)$ is the number of basis functions for symmetry species $i$. Thus, each set of J and K integrals are uniquely defined by their $L$, $M$, $P$, $Q$, $R$, and $S$ values. In order to have an effective CUDA implementation of this algorithm, we to find a way to map these six numbers to CUDA threads. The simplest approach would be to map the values of $L$, $P$, and $Q$ onto the $threadIdx.x$, $threadIdx.y$, and $threadIdx.z$ variables for each thread, launch the needed number of blocks, and then have each thread loop over the remaining indices. The pseudocode for this can be seen in Algorithm \ref{easycode}. A similar method is employed by many other programs, and for larger systems it works perfectly well. But because this program is for only single atoms, problems begin to appear.
+
+\begin{algorithm}
+\caption{The original }
+\label{origcode}
+\begin{algorithmic}
+\FOR{$L = 1$ to $nsym$}
+	\FOR{$P = 1$ to $nbs(L)$}
+		\FOR{$Q = 1$ to $P$}
+			\FOR{$M = 1$ to $L$}
+				\IF{$L = M$}
+					\STATE{$maxr$ = $P$}
+				\ELSE
+					\STATE{$maxr$ = $nbs(M)$}
+				\ENDIF
+				\FOR{$R = 1$ to $maxr$}
+					\IF{$(L = M)$ \AND $(P = R)$}
+						\STATE{$maxs$ = $Q$}
+					\ELSE
+						\STATE{$maxs$ = $R$}
+					\ENDIF
+					\FOR{$S = 1$ to $maxs$}
+						\STATE{compute the J and K integrals of $L$, $M$, $P$, $Q$, $R$, and $S$}
+					\ENDFOR
+				\ENDFOR
+			\ENDFOR
+		\ENDFOR
+	\ENDFOR
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+\caption{Easy Code}
+\label{easycode}
+\begin{algorithmic}
+
+\STATE{$L = threadIdx.x + (blockIdx.x - 1) * blockDim.x$}
+\STATE{$P = threadIdx.y + (blockIdx.y - 1) * blockDim.y$}
+\STATE{$Q = threadIdx.z + (blockIdx.z - 1) * blockDim.z$}
+\STATE{}
+\IF{$(L \leq nsym)$ \AND $(P \leq nbs(L))$ \AND $(Q \leq P)$}
+			\FOR{$M = 1$ to $L$}
+				\IF{$L = M$}
+					\STATE{$maxr$ = $P$}
+				\ELSE
+					\STATE{$maxr$ = $nbs(M)$}
+				\ENDIF
+				\FOR{$R = 1$ to $maxr$}
+					\IF{$(L = M)$ \AND $(P = R)$}
+						\STATE{$maxs$ = $Q$}
+					\ELSE
+						\STATE{$maxs$ = $R$}
+					\ENDIF
+					\FOR{$S = 1$ to $maxs$}
+						\STATE{compute the J and K integrals of $L$, $M$, $P$, $Q$, $R$, and $S$}
+					\ENDFOR
+				\ENDFOR
+			\ENDFOR
+\ENDIF
+\end{algorithmic}
+\end{algorithm}
+
+The first is the problem of warp divergence. Because the maximum values of $M$, $R$, and $S$ depend on $L$, $P$, and $Q$, different threads will have a different number of loops to complete than others. Because a streaming multiprocessor (SM) must finish the block is it currently working on before it can grab another, there is the possibility that most of the threads in a block are idling while waiting for others in the same block to finish. The second problem is that with this method, there will always be several blocks that have threads that remain idle throughout the block's runtime, no matter what. This can be seen more clearly in \notetodylan{Figure whatever}. The third problem with this is that with the maximum values for $L$, $P$, and $Q$ available for a single atom, there might not even be enough combinations to completely fill the GPU. While all of these issues begin to disappear once the number of integrals to evaluate becomes large enough, we are still very much in the range where they are in play. Therefore a smarter algorithm had to be used.
+
+The second problem can be solved by opting for a one dimensional solution instead of the three dimensional one of Algorithm \ref{easycode}. By restricting ourselves to only using threadIdx.x, we ensure that only the last block to run will have the possibility of having threads remaining idle throughout the block's runtime. The third problem can be solved by having each thread calculate one and only one set of J and K integrals. If we start with a valid combination of $L$, $M$, $P$, $Q$, $R$, and $S$ values, we can very easily figure out which thread will calculate that set of integrals by using the following equations.
+
+\begin{equation}
+\label{nprime}
+n'(j) = \frac{j^{2}+j}{2}
+\end{equation}
+
+\begin{equation}
+\label{xlpq}
+y = n'(nbs(L - 1)) + n'(P - 1) + Q
+\end{equation}
+
+\begin{equation}
+\label{ymrs}
+x = n'(nbs(M - 1)) + n'(R - 1) + S
+\end{equation}
+
+\begin{equation}
+\label{numtothread}
+i = n'(x) + y
+\end{equation}
+
+\begin{equation}
+\label{imax}
+i_{max} = n'(\sum^{nsym}_{j = 1}n'(nbs(j)))
+\end{equation}
+
+$nbs(0) = 0$ and $i$ would be equal to $threadIdx.x + (blockIdx.x - 1) * blockDim.x$. Starting with a value of $i$ and working our way back though is a much more challenging task. It becomes easier if we reframe it in the following way.
+
+Consider \notetodylan{Figure whatever}. It shows the top half of the symmetric two-electron integral matrix for a problem with $nsym = 2$ and 3 basis function for symmetry one, and two for symmetry two. In each element of this matrix, there is a set of seven numbers. The top two are $L$ and $M$, then $P$ and $Q$, then $R$ and $S$, and the last number is the value of $i$ for the thread calculating that integral. With this, it can be seen that each element in the same row have the same $M$, $R$, and $S$ values and the elements in the same column have the same $L$, $P$, and $Q$ values. Therefore, finding out which column the element belongs to gives us our value for $y$, and finding the row give us the value of $x$. This can be done with the following binary search algorithm. 
+
+\begin{algorithm}
+\caption{Binary Search for $x$ and $y$}
+\label{bsxy}
+\begin{algorithmic}
+
+\IF{$theadIdx.x \leq nsym$}
+	\STATE{$s\_nsym = nsym$}
+	\STATE{$s\_nbs(threadIdx.x) = nbs(threadIdx.x)$}
+	\STATE{$s\_nprime(threadIdx.x) = n'(s\_nbs(threadIdx.x))$}
+\ENDIF
+
+\STATE{call \textbf{syncthreads}}
+
+\STATE{$i =  threadIdx.x + (blockIdx.x - 1) * blockDim.x$}
+\IF{$i \leq i_{max}$}
+	\STATE{$low = 1$}
+	\STATE{$high = \textbf{sum}(s\_nprime(1:s\_nsym))$}
+	\WHILE{$low \leq high$}
+		\STATE{$mid = \frac{(low + high)}{2}$}
+		\STATE{$lownum = \frac{(mid - 1)(mid - 2)}{2} + mid$}
+		\STATE{$highnum = lownum - 1 + mid$}
+		\IF{$(i \leq highnum)$ \AND $(i \geq lownum)$}
+			\STATE{$y = mid$}
+			\STATE{\textbf{exit}}
+		\ELSIF{$i > highnum$}
+			\STATE{low = mid + 1}
+		\ELSIF{$i < lownum$}
+			\STATE{high = mid - 1}
+		\ENDIF
+	\ENDWHILE
+	\STATE{$x = i - lownum + 1$}
+\ENDIF
+
+\end{algorithmic}
+\end{algorithm}
+
+
+\begin{algorithm}
+\caption{Binary Search for $L$}
+\label{bsL}
+\begin{algorithmic}
+
+\STATE{$i =  threadIdx.x + (blockIdx.x - 1) * blockDim.x$}
+\IF{$i \leq i_{max}$}
+	\STATE{$low = 1$}
+	\STATE{$high = s\_nsym$}
+	\WHILE{$low \leq high$}
+		\STATE{$mid = \frac{(low + high)}{2}$}
+		\STATE{$lownum = 1 + \textbf{sum}(s\_nprime(1:mid-1)$}
+		\STATE{$highnum = lownum - 1 + s\_nprime(mid)$}
+		\IF{$(i \leq highnum)$ \AND $(i \geq lownum)$}
+			\STATE{$L = mid$}
+			\STATE{\textbf{exit}}
+		\ELSIF{$y > highnum$}
+			\STATE{$low = mid + 1$}
+		\ELSIF{$y < lownum$}
+			\STATE{$high = mid - 1$}
+		\ENDIF
+	\ENDWHILE
+\ENDIF
+
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+\caption{Binary Search for $P$ and $Q$}
+\label{bsPQ}
+\begin{algorithmic}
+
+\STATE{$i =  threadIdx.x + (blockIdx.x - 1) * blockDim.x$}
+\IF{$i \leq i_{max}$}
+	\STATE{$low = 1$}
+	\STATE{$high = s\_nbs(L)$}
+	\WHILE{$low \leq high$}
+		\STATE{$mid = \frac{(low + high)}{2}$}
+		\STATE{$lownum =  \frac{(mid - 1)(mid - 2)}{2} + mid + \textbf{sum}(s\_nprime(1:L-1))$}
+		\STATE{$highnum = lownum + mid - 1$}
+		\IF{$(i \leq highnum)$ \AND $(i \geq lownum)$}
+			\STATE{$P = mid$}
+			\STATE{\textbf{exit}}
+		\ELSIF{$y > highnum$}
+			\STATE{$low = mid + 1$}
+		\ELSIF{$y < lownum$}
+			\STATE{$high = mid - 1$}
+		\ENDIF
+	\ENDWHILE
+	\STATE{$Q = y - lownum + 1$}
+\ENDIF
+
+\end{algorithmic}
+\end{algorithm}
+
+Where variables with the $s\_$ prefix refer to those in the shared memory, and $lownum$ and $highnum$ refer to the minimum and values the $i$ could be for the current guess ($mid$) of $y$. From here, $L$ can be found with Algorithm \ref{bsL}, and $P$ and $Q$ can be found with Algorithm \ref{bsPQ}. The same set of algorithms can then be used to get $M$, $R$, and $S$ by substituting the relevant variables. If there is sufficient global memory available, these values can be stored and referred to later as needed. Otherwise, they could be calculated on the fly as needed. Because binary search scales as $\mathcal{O}(n\log{}n)$, this should ensure that this remains a fast method of mapping threads to integrals for large problems as well. \notetodylan{(CHECK WITH MARIUSZ TO BE SURE THE NEXT IS TRUE!!!!!!)} With some alterations, this method could also apply to molecular symmetries other than a single atom. For instance in C1, all possible combinations of four basis functions must be used (ignoring those that appear on the bottom triangle of the two electron integral matrix of course). We could simply remove the search for $L$ and $M$, have the initial value of $high$ in Algorithm \ref{bsPQ} be the total number of basis functions, and remove the \textbf{sum}$(s\_nprime(1:L-1)$ term from $lownum$. 
+
+From here, the code for actually evaluating the integrals remains largely the same as the original code, except for some minor changes to allow for more efficient global or shared memory access. We also use a process referred to as "grid-stride looping" where all these binary search algorithms have their \textbf{if} $i \le i_{max}$ \textbf{then} removed, and then are placed within the following loop: \textbf{for} $i = threadIdx.x + (blockIdx.x - 1) * blockDim.x$ to $i_{max}$, $i \mathrel{+}= blockDim.x * gridDim.x$ \textbf{do}. If we know the occupancy of the algorithm on the GPU beforehand, we can launch exactly the number of blocks that will fill the GPU. This reduces the overhead of block swapping and lets us further eke out some performance.	
+
+
+\section{Input Description}\label{inp_des}
+The program can be excited on Unix-like systems in the following way
+\begin{lstlisting}[language=bash]
+	$ path_to_executable input_file > output_file
+\end{lstlisting}
+
+The input file must end in ".inp" or an error will be given. Redirection of stdout to an output file is optional, but is recommended to save the results of a calculation. The input file is read using the namelist functionality of Fortran. A description of what must appear on each line of the input file is given below. Sample input files are also given at the end of this document.
+
+\begin{enumerate}
+	\item A title of no more than 200 characters.
+	\item	\$contrl	\\
+				\\
+		\begin{tabular}{\vartables}
+			jobtype	&		&			&	The type of calculation to be performed.							\\
+					&	=	& 	'energy'	& 	Will do a single point energy calculation.							\\
+					&	=	&	'bsopt'	& 	Will optimize the basis set. Can only be used if bastype equals 'wtbs'.	\\
+			c		&		&			&	The speed of light. If not given, the default is set to 137.03599976 au.	\\
+		\end{tabular}
+	\item \$nuc	\\
+				\\
+		\begin{tabular}{\vartables}
+			znuc		&		&		&	The charge of the nucleus.									\\
+			nucmdl	&		& 		&	The nuclear model to use.										\\
+					&	=	&	1	&	Point nucleus (default).										\\
+					&	=	&	2	&	Finite sphere (not yet supported). 								\\
+					&	=	&	3	&	Gaussian.													\\
+			rnuc		&		&		&	The radius of the finite sphere nucleus.							\\	
+			alpha	&		&		&	The exponent for the gaussian nucleus. Defaults are given in litdata.f90.	\\				
+		\end{tabular}
+	\item \$bas	\\
+				\\
+			\begin{tabular}{\vartables}
+			nsym	&		&			&	The number of symmetries to be used.							\\
+			bastype	&		& 			&	The type of basis set given.									\\
+					&	=	&	'wtbs'	&	Use a wtbs.												\\
+					&	=	&	'rdin'		&	Read in the basis set from the input file.							\\
+			ngroup	&		&			&	The number of different groups to use in the wtbs scheme (default 1).	\\			
+		\end{tabular}
+		\\			
+		The next line will depend on what bastype was set to. If bastype equals 'rdin' then the following lines must be the number of functions for the S+ symmetry, followed by the exponents to use, each on a new line. The pattern repeats for each new symmetry. See the sample input files for further clarification. Otherwise, if bastype equals 'wtbs' the \$wtbs group is read next.
+		
+	\item \$wtbs has to be given if bastype='wtbs'.	\\
+										\\
+		\begin{tabular}{\vartables}
+			wtbspara	&		&	&	The $\alpha$, $\beta$, $\delta$, and $\gamma$ wtbs parameters.
+									If there is more than one group, the order would be  $\alpha_{1}$, $\beta_{1}$, 
+									$\delta_{1}$, $\gamma_{1}$,  $\alpha_{2}$, $\beta_{2}$, $\delta_{2}$, $\gamma_{2}$ 
+									and so on.																	\\
+			nbs		&		& 	&	The number of functions used in each symmetry.									\\
+			start		&		&	&	Where in the $\zeta$ pool each symmetry starts taking exponents from (default=1,1,1,1,1,1,1).	\\
+			groups	&		&	&	What group each symmetry belongs to (default=1,1,1,1,1,1,1).							\\
+		\end{tabular}
+		\\
+		The next line depends on what the jobtype was set to. If jobtype equals 'energy' \$newuoa is skipped and \$econfig will be read next. If jobtype equals 'bsopt', then the \$newuoa group will be needed.
+		
+		\item \$newuoa has to be given if jobtype='bsopt'. Refer to the newuoa documentation for more information if needed.	\\
+												\\
+		\begin{tabular}{\vartables}
+			rhobeg	&		&		&	The initial value of the trust region used by newuoa (default=0.1).									\\
+			rhoend	&		& 		&	The final value of the trust region used by newuoa. Must be smaller
+										than rhobeg (default=$1.0\times{}10^{-4}$).			\\
+			iprint		&		&		&	The print level for newuoa.													\\
+					&	=	&	0	&	No printing from newuoa (default).												\\
+					&	=	&	1	&	Print only when newuoa has finished.											\\
+					&	=	&	2	&	Print only when the trust region has decreased by an order of magnitude.					\\
+					&	=	&	3	&	Print every iteration of newuoa.													\\
+			maxfun	&		&		&	The maximum number of calls to calfun newuoa will make before terminating (default=500).	\\
+		\end{tabular}
+		\\
+		\item \$econfig
+		\\
+		\begin{tabular}{\vartables}
+			nclose	&		&		&	The number of closed spinors for each symmetry.										\\
+			nopen	&		& 		&	The number of open spinors for each symmetry. There is a limit to one open orbital per symmetry.	\\
+			freeel	&		&		&	The number of electrons available in the open spinors.									\\
+			autogen	&		&		&	Automatically generates all possible combinations of spinor occupancies (default=.false.).			\\
+			nconf	&		&		&	The number of configurations to be read in (needed if autogen is false).						\\
+		\end{tabular}
+		\\
+		If autogen is false, then the next nconf lines will be the spinor occupancies. They will be given as real numbers with one configuration per line.
+		\\
+		\\
+		\item \$scf
+		\\
+		\begin{tabular}{\vartables}
+			maxitr	&		&		&	The maximum number of SCF iterations (default=50).									\\
+			ixtrp		&		& 		&	The method of extrapolation.														\\
+					&	=	&	0	&	No extrapolation (default).															\\
+					&	=	&	1	&	Extrapolate the Fock matrix.														\\
+			dfctr		&		&		&	Damping factor for Fock maxtrix (default=0.3).											\\
+			thdll		&		&		&	Convergence limit for the large-large components of the density matrix (default=$1.0\times10^{-5}$)	\\
+			thdsl		&		&		&	Convergence limit for the small-large components of the density matrix (default=$1.0\times10^{-7}$)	\\
+			thdss	&		&		&	Convergence limit for the small-small components of the density matrix (default=$1.0\times10^{-9}$)	\\
+		\end{tabular}
+		\\
+\end{enumerate}
+
+
+
+%% The Appendices part is started with the command \appendix;
+%% appendix sections are then done as normal sections
+%% \appendix
+
+%% \section{}
+%% \label{}
+
+%% References
+%%
+%% Following citation commands can be used in the body text:
+%% Usage of \cite is as follows:
+%%   \cite{key}         ==>>  [#]
+%%   \cite[chap. 2]{key} ==>> [#, chap. 2]
+%%
+
+%% References with bibTeX database:
+
+\bibliographystyle{elsarticle-num}
+\bibliography{<your-bib-database>}
+
+%% Authors are advised to submit their bibtex database files. They are
+%% requested to list a bibtex style file in the manuscript if they do
+%% not want to use elsarticle-num.bst.
+
+%% References without bibTeX database:
+
+% \begin{thebibliography}{00}
+
+%% \bibitem must have the following form:
+%%   \bibitem{key}...
+%%
+
+% \bibitem{}
+
+% \end{thebibliography}
+
+
+\end{document}
+
+%%
+%% End of file 

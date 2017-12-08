@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  7 DEC 2017 21:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.29)  8 DEC 2017 09:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **CUDAProphet.tex
 (./CUDAProphet.tex
-LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/book.cls
+LaTeX2e <2016/03/31> patch level 2
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/bk12.clo
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/bk12.clo
 File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -25,10 +25,10 @@ File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks14
 \symAMSa=\mathgroup4
@@ -36,8 +36,8 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
@@ -54,267 +54,253 @@ Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \lst@lineno=\count93
 \lst@maxwidth=\dimen106
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 \c@lstnumber=\count94
 \lst@skipnumbers=\count95
 \lst@framebox=\box27
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2014/09/06 1.5e listings configuration
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
-Package: listings 2014/09/06 1.5e (Carsten Heinz)
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip43
+\LTright=\skip44
+\LTpre=\skip45
+\LTpost=\skip46
+\LTchunksize=\count96
+\LTcapwidth=\dimen107
+\LT@head=\box28
+\LT@firsthead=\box29
+\LT@foot=\box30
+\LT@lastfoot=\box31
+\LT@cols=\count97
+\LT@rows=\count98
+\c@LT@tables=\count99
+\c@LT@chunks=\count100
+\LT@p@ftn=\toks17
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+(/usr/local/texlive/2016/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+(/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count96
+\Gread@gobject=\count101
 )
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
-Package xcolor Info: Model `RGB' extended on input line 1353.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/algorithms/algorithm.sty
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count97
-\float@exts=\toks17
-\float@box=\box28
-\@float@everytoks=\toks18
-\@floatcapt=\box29
+\c@float@type=\count102
+\float@exts=\toks18
+\float@box=\box32
+\@float@everytoks=\toks19
+\@floatcapt=\box33
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\@float@every@algorithm=\toks19
-\c@algorithm=\count98
+\@float@every@algorithm=\toks20
+\c@algorithm=\count103
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/algorithms/algorithmic.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count99
-\c@ALC@line=\count100
-\c@ALC@rem=\count101
-\c@ALC@depth=\count102
-\ALC@tlm=\skip43
-\algorithmicindent=\skip44
+\c@ALC@unique=\count104
+\c@ALC@line=\count105
+\c@ALC@rem=\count106
+\c@ALC@depth=\count107
+\ALC@tlm=\skip47
+\algorithmicindent=\skip48
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/setspace/setspace.sty
+(/usr/local/texlive/2016/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-\c@bla=\count103
+\c@bla=\count108
 
 (./CUDAProphet.aux)
 \openout1 = `CUDAProphet.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-\c@lstlisting=\count104
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+\c@lstlisting=\count109
 
-(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count105
-\scratchdimen=\dimen107
-\scratchbox=\box30
-\nofMPsegments=\count106
-\nofMParguments=\count107
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count108
-\MPscratchDim=\dimen108
-\MPnumerator=\count109
-\makeMPintoPDFobject=\count110
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count110
+\scratchdimen=\dimen108
+\scratchbox=\box34
+\nofMPsegments=\count111
+\nofMParguments=\count112
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count113
+\MPscratchDim=\dimen109
+\MPnumerator=\count114
+\makeMPintoPDFobject=\count115
+\everyMPtoPDFconversion=\toks22
 )
 Chapter 1.
-LaTeX Font Info:    Try loading font information for U+msa on input line 114.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Try loading font information for U+msa on input line 116.
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 114.
+LaTeX Font Info:    Try loading font information for U+msb on input line 116.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
- [4
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Overfull \hbox (31.29337pt too wide) in alignment at lines 141--163
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (31.29337pt too wide) in alignment at lines 163--183
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (31.29337pt too wide) in alignment at lines 183--203
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[3]
+Overfull \hbox (31.29337pt too wide) in alignment at lines 203--223
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (31.29337pt too wide) in alignment at lines 223--230
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[4] [5] [6
 
 ]
 Chapter 2.
 
 Underfull \vbox (badness 2608) has occurred while \output is active []
 
- [5]
-[6]
+ [7]
+[8]
 
-LaTeX Warning: Reference `GPUmem' on page 7 undefined on input line 143.
+LaTeX Warning: Reference `GPUmem' on page 9 undefined on input line 242.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7]
+ [9]
 Underfull \vbox (badness 1701) has occurred while \output is active []
 
- [8]
-[9] [10] [11]
+ [10]
+[11] [12] [13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
-[13] [14] [15] [16]
+ [14]
+[15] [16] [17] [18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
+ [19]
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
+(/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 363.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 462.
 
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omlcmr.fd
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 363.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 462.
 
-Overfull \hbox (4.57948pt too wide) in paragraph at lines 374--374
+Overfull \hbox (4.57948pt too wide) in paragraph at lines 473--473
 []\OT1/cmr/m/n/12 'energy'| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--378
+Underfull \hbox (badness 10000) in paragraph at lines 469--477
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--389
+Underfull \hbox (badness 10000) in paragraph at lines 477--488
 
  []
 
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 389--400
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 488--499
 
  []
 
 
-Overfull \hbox (4.38567pt too wide) in paragraph at lines 404--404
+Overfull \hbox (4.38567pt too wide) in paragraph at lines 503--503
 []\OT1/cmr/m/n/12 wtbspara| 
  []
 
 
-Underfull \hbox (badness 3895) in paragraph at lines 409--410
+Underfull \hbox (badness 3895) in paragraph at lines 508--509
 []\OT1/cmr/m/n/12 Where in the $\OML/cmm/m/it/12 ^^P$ \OT1/cmr/m/n/12 pool each
  sym-me-
  []
 
 
-Underfull \hbox (badness 1122) in paragraph at lines 409--410
+Underfull \hbox (badness 1122) in paragraph at lines 508--509
 \OT1/cmr/m/n/12 try starts tak-ing ex-po-nents from (de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--414
+Underfull \hbox (badness 10000) in paragraph at lines 500--513
 
  []
 
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 415--429
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 415--429
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 514--528
 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20]
-Underfull \hbox (badness 5133) in paragraph at lines 435--436
-\OT1/cmr/m/n/12 bi-na-tions of spinor oc-cu-pan-cies (de-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 429--442
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 429--442
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
-Underfull \hbox (badness 3396) in paragraph at lines 450--451
-[]\OT1/cmr/m/n/12 Convergence limit for the large-large
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 450--451
-\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
- []
-
-
-Underfull \hbox (badness 2653) in paragraph at lines 451--452
-[]\OT1/cmr/m/n/12 Convergence limit for the small-large
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 451--452
-\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
- []
-
-
-Underfull \hbox (badness 2020) in paragraph at lines 452--453
-[]\OT1/cmr/m/n/12 Convergence limit for the small-small
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 452--453
-\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 442--455
+Underfull \hbox (badness 10000) in paragraph at lines 514--528
 
  []
 
@@ -322,35 +308,91 @@ Underfull \hbox (badness 10000) in paragraph at lines 442--455
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22]
+Underfull \hbox (badness 5133) in paragraph at lines 534--535
+\OT1/cmr/m/n/12 bi-na-tions of spinor oc-cu-pan-cies (de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--541
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--541
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+Underfull \hbox (badness 3396) in paragraph at lines 549--550
+[]\OT1/cmr/m/n/12 Convergence limit for the large-large
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 549--550
+\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
+ []
+
+
+Underfull \hbox (badness 2653) in paragraph at lines 550--551
+[]\OT1/cmr/m/n/12 Convergence limit for the small-large
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
+\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 551--552
+[]\OT1/cmr/m/n/12 Convergence limit for the small-small
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 551--552
+\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 541--554
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
 No file CUDAProphet.bbl.
-[23] (./CUDAProphet.aux)
+[25] (./CUDAProphet.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3427 strings out of 493089
- 45255 string characters out of 6134842
- 141115 words of memory out of 5000000
- 6899 multiletter control sequences out of 15000+600000
+ 3524 strings out of 493013
+ 46479 string characters out of 6133343
+ 147776 words of memory out of 5000000
+ 7050 multiletter control sequences out of 15000+600000
  11467 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  32i,10n,51p,1346b,1230s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on CUDAProphet.pdf (23 pages, 162941 bytes).
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
+b></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on CUDAProphet.pdf (25 pages, 166342 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

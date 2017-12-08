@@ -40,6 +40,8 @@
 %% The amssymb package provides various useful mathematical symbols
 \usepackage{amssymb}
 \usepackage{listings}
+\usepackage{longtable}
+
 
 \usepackage{xcolor}
 
@@ -115,7 +117,7 @@ In keeping with the theme of "computers should work, people should think", we de
 
 \textit{Step 1.} Begin by finding the fewest number of f functions necessary. This can be done by generating .inps files that range in size from s$(1:40)$p$(1:40)$d$(1:40)$f$(1:1)$ to s$(1:40)$p$(1:40)$d$(1:40)$f$(1:40)$.
 
-\textit{Step 2.} Optimize the basis sets and select the smallest basis set that is still below some minimum accuracy threshold (we chose a relative error of no greater than $5.0\times10^{-8}$ to numerical calculations). The size of this basis set is s$(1:40)$p$(1:40)$d$(1:40)$f$(1:x_{f})$.
+\textit{Step 2.} Optimize the basis sets and select the smallest basis set that is still below some minimum accuracy threshold (we chose a relative error of no greater than $5.0\times10^{-9}$ to numerical calculations). The size of this basis set is s$(1:40)$p$(1:40)$d$(1:40)$f$(1:x_{f})$.
 
 \textit{Step 3.} Replace the wtbs parameters with those from the newly optimized set and generate a list of .inp files that range in size from s$(1:40)$p$(1:40)$d$(1:x_{f})$f$(1:x_{f})$ to s$(1:40)$p$(1:40)$d$(1:40)$f$(1:x_{f})$.
 
@@ -131,6 +133,103 @@ In keeping with the theme of "computers should work, people should think", we de
 
 This process has a major drawback in that it requires a lot of computer power to run efficiently. But this is not really a problem if access to large computer clusters is available. The advantages of this are it finds a very small basis set that is still accurate, and it is also completely automatable. If there are no problems with individual calculations not converging, the output files never even need to be manually examined!
 
+\section{Discussion}
+
+The optimized wtbs parameters and basis set sizes for elements 2 to 86 are shown in Table \ref{tab:BStab}.
+\begin{center}
+\singlespacing
+\begin{longtable}{r l l l l l l l l l}
+\caption{Basis sets optimized using rwtbs}\label{tab:BStab} \\
+	Element	&	Configuration	&	$\alpha$	&	$\beta$	&	$\delta$	&	$\gamma$	&	s	&	p	&	d	&	f	\\
+	\hline
+	02he	&	1s	&	8.1402$\times10^{-02}$	&	1.9536	&	4.5046	&	1.5158 \\
+	03li	&	2s	&	1.5961$\times10^{-02}$	&	1.9334	&	5.7019	&	1.5733 \\
+	04be	&	1s	&	2.6475$\times10^{-02}$	&	1.9382	&	5.8417	&	1.5941 \\
+	05b	  &	2p	&	3.2387$\times10^{-02}$	&	1.9480	&	5.5736	&	1.5233 \\
+	06c	  &	3p	&	4.6132$\times10^{-02}$	&	1.9415	&	4.7179	&	1.3177 \\
+	07n	  &	4s	&	5.9765$\times10^{-02}$	&	1.9239	&	5.1835	&	1.4424 \\
+	08o	  &	3p	&	6.9671$\times10^{-02}$	&	1.9366	&	5.1701	&	1.4261 \\
+	09f	  &	2p	&	8.3219$\times10^{-02}$	&	1.9426	&	5.0845	&	1.4080 \\
+	10ne	&	1s	&	9.9432$\times10^{-02}$	&	1.9457	&	4.9889	&	1.3924 \\
+	11na	&	2s	&	1.6960$\times10^{-02}$	&	1.9502	&	6.0567	&	1.4695 \\
+	12mg&	1s	&	2.3756$\times10^{-02}$	&	1.9320	&	5.6865	&	1.4306 \\
+	13al	&	2p	&	2.2391$\times10^{-02}$	&	1.8983	&	5.5553	&	1.4135 \\
+	14si	&	3p	&	3.3523$\times10^{-02}$	&	1.9218	&	5.4190	&	1.4103 \\
+	15p	  &	4s	&	4.4108$\times10^{-02}$	&	1.9072	&	5.1968	&	1.3909 \\
+	16s	  &	3p	&	5.0047$\times10^{-02}$	&	1.8967	&	4.9626	&	1.3629 \\
+	17cl	&	2p	&	5.8312$\times10^{-02}$	&	1.8869	&	4.7841	&	1.3443 \\
+	18ar	&	1s	&	6.8345$\times10^{-02}$	&	1.8787	&	4.6546	&	1.3314 \\
+	19k	  &	2s	&	1.4020$\times10^{-02}$	&	1.8907	&	6.3886	&	1.5274 \\
+	20ca	&	1s	&	1.8614$\times10^{-02}$	&	1.8758	&	6.1617	&	1.5117 \\
+	21sc	&	2d	&	2.0595$\times10^{-02}$	&	1.8799	&	6.1968	&	1.5113 \\
+	22ti	&	3f	&	2.2312$\times10^{-02}$	&	1.8870	&	6.2747	&	1.5134 \\
+	23v	  &	4f	&	2.3706$\times10^{-02}$	&	1.8876	&	6.6055	&	1.5128 \\
+	24cr	&	7s	&	2.3579$\times10^{-02}$	&	1.8655	&	5.3555	&	1.4093 \\
+	25mn&	6s	&	2.5779$\times10^{-02}$	&	1.8659	&	5.3494	&	1.4107 \\
+	26fe	&	5d	&	2.7386$\times10^{-02}$	&	1.8685	&	5.3547	&	1.4103 \\
+	27co	&	4f	&	2.8470$\times10^{-02}$	&	1.8696	&	5.9737	&	1.4317 \\
+	28ni	&	3f	&	3.0030$\times10^{-02}$	&	1.8738	&	5.9737	&	1.4250 \\
+	29cu	&	2s	&	2.6735$\times10^{-02}$	&	1.8610	&	5.7993	&	1.4774 \\
+	30zn	&	1s	&	3.2991$\times10^{-02}$	&	1.8812	&	5.8188	&	1.3393 \\
+	31ga	&	2p	&	2.7458$\times10^{-02}$	&	1.8637	&	5.7090	&	1.4648 \\
+	32ge	&	3p	&	3.6139$\times10^{-02}$	&	1.8533	&	5.6198	&	1.4547 \\
+	33as	&	4s	&	4.7438$\times10^{-02}$	&	1.8695	&	5.3427	&	1.3448 \\
+	34se	&	3p	&	5.0979$\times10^{-02}$	&	1.8471	&	4.9562	&	1.5367 \\
+	35br	&	2p	&	5.9414$\times10^{-02}$	&	1.8621	&	5.2129	&	1.3388 \\
+	36kr	&	1s	&	6.8233$\times10^{-02}$	&	1.8600	&	5.5404	&	1.3764 \\
+	37rb	&	2s	&	1.4319$\times10^{-02}$	&	1.8574	&	7.1985	&	1.6287 \\
+	38sr	&	1s	&	1.8315$\times10^{-02}$	&	1.8459	&	6.6780	&	1.5548 \\
+	39y	&	2d	&	2.0484$\times10^{-02}$	&	1.8397	&	6.5392	&	1.5414 \\
+	40zr	&	5f	&	2.2027$\times10^{-02}$	&	1.8373	&	6.4805	&	1.5354 \\
+	41nb	&	6d	&	2.4370$\times10^{-02}$	&	1.8321	&	6.3626	&	1.5234 \\
+	42mo&	7s	&	2.5726$\times10^{-02}$	&	1.8317	&	6.3487	&	1.5218 \\
+	43tc	&	6s	&	2.6038$\times10^{-02}$	&	1.8362	&	6.4554	&	1.5349 \\
+	44ru	&	5f	&	2.6910$\times10^{-02}$	&	1.8329	&	6.7863	&	1.6058 \\
+	45rh	&	4f	&	2.7554$\times10^{-02}$	&	1.8358	&	6.8855	&	1.6196 \\
+	46pd	&	1s	&	5.9550$\times10^{-02}$	&	1.8279	&	5.9798	&	1.5036 \\
+	47ag	&	2s	&	2.5958$\times10^{-02}$	&	1.7951	&	5.4672	&	1.4209 \\
+	48cd	&	1s	&	3.0102$\times10^{-02}$	&	1.7848	&	5.3332	&	1.4114 \\
+	49in	&	2p	&	2.7173$\times10^{-02}$	&	1.7993	&	5.5382	&	1.4313 \\
+	50sn	&	3p	&	3.4062$\times10^{-02}$	&	1.7793	&	5.2471	&	1.4039 \\
+	51sb	&	4s	&	4.5051$\times10^{-02}$	&	1.8149	&	6.5596	&	1.6032 \\
+	52te	&	3p	&	4.8683$\times10^{-02}$	&	1.8168	&	6.2438	&	1.5279 \\
+	53i	&	2p	&	5.3928$\times10^{-02}$	&	1.8104	&	6.0171	&	1.5066 \\
+	54xe	&	1s	&	6.0103$\times10^{-02}$	&	1.8026	&	5.8608	&	1.4907 \\
+	55cs	&	2s	&	1.2855$\times10^{-02}$	&	1.7828	&	6.2757	&	1.4895 \\
+	56ba	&	1s	&	1.5853$\times10^{-02}$	&	1.7692	&	6.1433	&	1.5188 \\
+	57la	&	2d	&	1.7344$\times10^{-02}$	&	1.7639	&	6.0521	&	1.5123 \\
+	58ce	&	3h	&	1.6781$\times10^{-02}$	&	1.7686	&	6.0001	&	1.4644 \\
+	59pr	&	4i	&	1.7185$\times10^{-02}$	&	1.7758	&	6.2865	&	1.5337 \\
+	60nd	&	5i	&	1.7564$\times10^{-02}$	&	1.7775	&	6.5512	&	1.5794 \\
+	61pm&	6h	&	1.8016$\times10^{-02}$	&	1.7797	&	6.6017	&	1.5841 \\
+	62sm&	7f	&	1.8709$\times10^{-02}$	&	1.7777	&	5.8441	&	1.4672 \\
+	63eu	&	8s	&	1.8909$\times10^{-02}$	&	1.7840	&	6.7077	&	1.5952 \\
+	64gd	&	7f	&	1.9561$\times10^{-02}$	&	1.7816	&	6.1306	&	1.5217 \\
+	65tb	&	6h	&	1.9924$\times10^{-02}$	&	1.7878	&	6.5207	&	1.5707 \\
+	66dy	&	5i	&	2.0346$\times10^{-02}$	&	1.7876	&	6.5033	&	1.5289 \\
+	67ho	&	4i	&	2.0740$\times10^{-02}$	&	1.7904	&	6.9684	&	1.6317 \\
+	68er	&	3h	&	2.1199$\times10^{-02}$	&	1.7921	&	7.0221	&	1.6383 \\
+	69tm	&	2f	&	2.1652$\times10^{-02}$	&	1.7938	&	7.0776	&	1.6442 \\
+	70yb	&	1s	&	2.2102$\times10^{-02}$	&	1.7952	&	7.1405	&	1.6542 \\
+	71lu	&	2d	&	2.4224$\times10^{-02}$	&	1.7889	&	6.9809	&	1.6379 \\
+	72hf	&	3f	&	2.5724$\times10^{-02}$	&	1.7860	&	6.9232	&	1.6343 \\
+	73ta	&	4f	&	2.7058$\times10^{-02}$	&	1.7842	&	6.8929	&	1.6324 \\
+	74w	  &	5d	&	2.8296$\times10^{-02}$	&	1.7830	&	6.8797	&	1.6327 \\
+	75re	&	6s	&	2.9400$\times10^{-02}$	&	1.7826	&	6.8837	&	1.6343 \\
+	76os	&	5d	&	3.0756$\times10^{-02}$	&	1.7813	&	6.8979	&	1.6378 \\
+	77ir	&	4f	&	3.2004$\times10^{-02}$	&	1.7807	&	6.8690	&	1.6364 \\
+	78pt	&	3d	&	3.1806$\times10^{-02}$	&	1.7857	&	7.0167	&	1.6534 \\
+	79au	&	2s	&	3.2248$\times10^{-02}$	&	1.7899	&	6.5803	&	1.5341 \\
+	80hg	&	1s	&	3.5498$\times10^{-02}$	&	1.7819	&	6.6918	&	1.6049 \\
+	81tl	&	2p	&	2.9054$\times10^{-02}$	&	1.7445	&	5.0229	&	1.3663 \\
+	82pb	&	3p	&	3.8974$\times10^{-02}$	&	1.7778	&	6.9364	&	1.6561 \\
+	83bi	&	4s	&	4.5333$\times10^{-02}$	&	1.7662	&	6.1580	&	1.5460 \\
+	84po	&	3p	&	4.8209$\times10^{-02}$	&	1.7631	&	5.9691	&	1.5162 \\
+	85at	&	2p	&	5.2512$\times10^{-02}$	&	1.7565	&	5.8363	&	1.5019 \\
+	86rn	&	1s	&	5.7612$\times10^{-02}$	&	1.7488	&	5.6871	&	1.4861 \\
+\end{longtable}
+\end{center}
+	
 \chapter{CUDAProphet}
 \section{GPU Architecture}
 While general purpose computing on graphics processing units (GPGPU) (GPUs) has been adopted by the high performance computing (HPC) community for quite some time, it can seem quite complex to the uninitiated. While most quantum chemists who decide to dip their toes into computational waters can get away with having little to no understanding of what is actually going on under the hood when programming for a central processing uint (CPU), the same can not at all be said for GPUs. Therefore, in this section I will explain what makes a GPU tick in order to help understand the terms and techniques used in the following chapter. As CUDAProphet was optimized for (and is currently hardcoded for :( ) the Tesla C2050, I will be referring to its specs for examples when needed. I will begin will the most granularity possible, and zoom out so that by the end of this section, the reader should come away prepared for the rest of this chapter.

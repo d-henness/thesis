@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.29)  8 DEC 2017 09:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.29)  17 JAN 2018 12:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -231,94 +231,80 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 1701) has occurred while \output is active []
 
  [10]
-[11] [12] [13]
+[11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14]
-[15] [16] [17] [18]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [12]
+[13] [14] [15]
+Underfull \vbox (badness 7814) has occurred while \output is active []
 
- [19]
+ [16]
+[17] [18] [19]
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 462.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 467.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 462.
-
-Overfull \hbox (4.57948pt too wide) in paragraph at lines 473--473
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 467.
+ [20]
+Overfull \hbox (4.57948pt too wide) in paragraph at lines 478--478
 []\OT1/cmr/m/n/12 'energy'| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 469--477
+Underfull \hbox (badness 10000) in paragraph at lines 474--482
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--488
-
- []
-
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 488--499
-
- []
-
-
-Overfull \hbox (4.38567pt too wide) in paragraph at lines 503--503
-[]\OT1/cmr/m/n/12 wtbspara| 
- []
-
-
-Underfull \hbox (badness 3895) in paragraph at lines 508--509
-[]\OT1/cmr/m/n/12 Where in the $\OML/cmm/m/it/12 ^^P$ \OT1/cmr/m/n/12 pool each
- sym-me-
- []
-
-
-Underfull \hbox (badness 1122) in paragraph at lines 508--509
-\OT1/cmr/m/n/12 try starts tak-ing ex-po-nents from (de-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 500--513
-
- []
-
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 514--528
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 514--528
+Underfull \hbox (badness 10000) in paragraph at lines 482--493
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22]
-Underfull \hbox (badness 5133) in paragraph at lines 534--535
-\OT1/cmr/m/n/12 bi-na-tions of spinor oc-cu-pan-cies (de-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 528--541
+ [21]
+Underfull \hbox (badness 10000) in paragraph at lines 493--504
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--541
+Overfull \hbox (4.38567pt too wide) in paragraph at lines 508--508
+[]\OT1/cmr/m/n/12 wtbspara| 
+ []
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 513--514
+[]\OT1/cmr/m/n/12 Where in the $\OML/cmm/m/it/12 ^^P$ \OT1/cmr/m/n/12 pool each
+ sym-me-
+ []
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 513--514
+\OT1/cmr/m/n/12 try starts tak-ing ex-po-nents from (de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 505--518
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 519--533
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 519--533
 
  []
 
@@ -326,37 +312,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 528--541
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23]
-Underfull \hbox (badness 3396) in paragraph at lines 549--550
-[]\OT1/cmr/m/n/12 Convergence limit for the large-large
+Underfull \hbox (badness 5133) in paragraph at lines 539--540
+\OT1/cmr/m/n/12 bi-na-tions of spinor oc-cu-pan-cies (de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 549--550
-\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
+Underfull \hbox (badness 10000) in paragraph at lines 533--546
+
  []
 
 
-Underfull \hbox (badness 2653) in paragraph at lines 550--551
-[]\OT1/cmr/m/n/12 Convergence limit for the small-large
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 550--551
-\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
- []
-
-
-Underfull \hbox (badness 2020) in paragraph at lines 551--552
-[]\OT1/cmr/m/n/12 Convergence limit for the small-small
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 551--552
-\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 541--554
+Underfull \hbox (badness 10000) in paragraph at lines 533--546
 
  []
 
@@ -364,8 +330,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 541--554
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24]
+Underfull \hbox (badness 3396) in paragraph at lines 554--555
+[]\OT1/cmr/m/n/12 Convergence limit for the large-large
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 554--555
+\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
+ []
+
+
+Underfull \hbox (badness 2653) in paragraph at lines 555--556
+[]\OT1/cmr/m/n/12 Convergence limit for the small-large
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 555--556
+\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 556--557
+[]\OT1/cmr/m/n/12 Convergence limit for the small-small
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 556--557
+\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 546--559
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
 No file CUDAProphet.bbl.
-[25] (./CUDAProphet.aux)
+[26] (./CUDAProphet.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -373,7 +377,7 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  3524 strings out of 493013
  46479 string characters out of 6133343
- 147776 words of memory out of 5000000
+ 148828 words of memory out of 5000000
  7050 multiletter control sequences out of 15000+600000
  11467 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -389,10 +393,10 @@ ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/lo
 cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
 al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
 /texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on CUDAProphet.pdf (25 pages, 166342 bytes).
+Output written on CUDAProphet.pdf (26 pages, 167243 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
+ 132 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

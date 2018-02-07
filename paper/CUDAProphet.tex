@@ -138,95 +138,97 @@ This process has a major drawback in that it requires a lot of computer power to
 The optimized wtbs parameters and basis set sizes for elements 2 to 86 are shown in Table \ref{tab:BStab}.
 \begin{center}
 \singlespacing
-\begin{longtable}{r l l l l l l l l l}
+\begin{longtable}{l l l l l l l l l l}
 \caption{Basis sets optimized using rwtbs}\label{tab:BStab} \\
-	Element	&	Configuration	&	$\alpha$	&	$\beta$	&	$\delta$	&	$\gamma$	&	s	&	p	&	d	&	f	\\
-	\hline
-	02he	&	1s	&	8.1402$\times10^{-02}$	&	1.9536	&	4.5046	&	1.5158 \\
-	03li	&	2s	&	1.5961$\times10^{-02}$	&	1.9334	&	5.7019	&	1.5733 \\
-	04be	&	1s	&	2.6475$\times10^{-02}$	&	1.9382	&	5.8417	&	1.5941 \\
-	05b	  &	2p	&	3.2387$\times10^{-02}$	&	1.9480	&	5.5736	&	1.5233 \\
-	06c	  &	3p	&	4.6132$\times10^{-02}$	&	1.9415	&	4.7179	&	1.3177 \\
-	07n	  &	4s	&	5.9765$\times10^{-02}$	&	1.9239	&	5.1835	&	1.4424 \\
-	08o	  &	3p	&	6.9671$\times10^{-02}$	&	1.9366	&	5.1701	&	1.4261 \\
-	09f	  &	2p	&	8.3219$\times10^{-02}$	&	1.9426	&	5.0845	&	1.4080 \\
-	10ne	&	1s	&	9.9432$\times10^{-02}$	&	1.9457	&	4.9889	&	1.3924 \\
-	11na	&	2s	&	1.6960$\times10^{-02}$	&	1.9502	&	6.0567	&	1.4695 \\
-	12mg&	1s	&	2.3756$\times10^{-02}$	&	1.9320	&	5.6865	&	1.4306 \\
-	13al	&	2p	&	2.2391$\times10^{-02}$	&	1.8983	&	5.5553	&	1.4135 \\
-	14si	&	3p	&	3.3523$\times10^{-02}$	&	1.9218	&	5.4190	&	1.4103 \\
-	15p	  &	4s	&	4.4108$\times10^{-02}$	&	1.9072	&	5.1968	&	1.3909 \\
-	16s	  &	3p	&	5.0047$\times10^{-02}$	&	1.8967	&	4.9626	&	1.3629 \\
-	17cl	&	2p	&	5.8312$\times10^{-02}$	&	1.8869	&	4.7841	&	1.3443 \\
-	18ar	&	1s	&	6.8345$\times10^{-02}$	&	1.8787	&	4.6546	&	1.3314 \\
-	19k	  &	2s	&	1.4020$\times10^{-02}$	&	1.8907	&	6.3886	&	1.5274 \\
-	20ca	&	1s	&	1.8614$\times10^{-02}$	&	1.8758	&	6.1617	&	1.5117 \\
-	21sc	&	2d	&	2.0595$\times10^{-02}$	&	1.8799	&	6.1968	&	1.5113 \\
-	22ti	&	3f	&	2.2312$\times10^{-02}$	&	1.8870	&	6.2747	&	1.5134 \\
-	23v	  &	4f	&	2.3706$\times10^{-02}$	&	1.8876	&	6.6055	&	1.5128 \\
-	24cr	&	7s	&	2.3579$\times10^{-02}$	&	1.8655	&	5.3555	&	1.4093 \\
-	25mn&	6s	&	2.5779$\times10^{-02}$	&	1.8659	&	5.3494	&	1.4107 \\
-	26fe	&	5d	&	2.7386$\times10^{-02}$	&	1.8685	&	5.3547	&	1.4103 \\
-	27co	&	4f	&	2.8470$\times10^{-02}$	&	1.8696	&	5.9737	&	1.4317 \\
-	28ni	&	3f	&	3.0030$\times10^{-02}$	&	1.8738	&	5.9737	&	1.4250 \\
-	29cu	&	2s	&	2.6735$\times10^{-02}$	&	1.8610	&	5.7993	&	1.4774 \\
-	30zn	&	1s	&	3.2991$\times10^{-02}$	&	1.8812	&	5.8188	&	1.3393 \\
-	31ga	&	2p	&	2.7458$\times10^{-02}$	&	1.8637	&	5.7090	&	1.4648 \\
-	32ge	&	3p	&	3.6139$\times10^{-02}$	&	1.8533	&	5.6198	&	1.4547 \\
-	33as	&	4s	&	4.7438$\times10^{-02}$	&	1.8695	&	5.3427	&	1.3448 \\
-	34se	&	3p	&	5.0979$\times10^{-02}$	&	1.8471	&	4.9562	&	1.5367 \\
-	35br	&	2p	&	5.9414$\times10^{-02}$	&	1.8621	&	5.2129	&	1.3388 \\
-	36kr	&	1s	&	6.8233$\times10^{-02}$	&	1.8600	&	5.5404	&	1.3764 \\
-	37rb	&	2s	&	1.4319$\times10^{-02}$	&	1.8574	&	7.1985	&	1.6287 \\
-	38sr	&	1s	&	1.8315$\times10^{-02}$	&	1.8459	&	6.6780	&	1.5548 \\
-	39y	&	2d	&	2.0484$\times10^{-02}$	&	1.8397	&	6.5392	&	1.5414 \\
-	40zr	&	5f	&	2.2027$\times10^{-02}$	&	1.8373	&	6.4805	&	1.5354 \\
-	41nb	&	6d	&	2.4370$\times10^{-02}$	&	1.8321	&	6.3626	&	1.5234 \\
-	42mo&	7s	&	2.5726$\times10^{-02}$	&	1.8317	&	6.3487	&	1.5218 \\
-	43tc	&	6s	&	2.6038$\times10^{-02}$	&	1.8362	&	6.4554	&	1.5349 \\
-	44ru	&	5f	&	2.6910$\times10^{-02}$	&	1.8329	&	6.7863	&	1.6058 \\
-	45rh	&	4f	&	2.7554$\times10^{-02}$	&	1.8358	&	6.8855	&	1.6196 \\
-	46pd	&	1s	&	5.9550$\times10^{-02}$	&	1.8279	&	5.9798	&	1.5036 \\
-	47ag	&	2s	&	2.5958$\times10^{-02}$	&	1.7951	&	5.4672	&	1.4209 \\
-	48cd	&	1s	&	3.0102$\times10^{-02}$	&	1.7848	&	5.3332	&	1.4114 \\
-	49in	&	2p	&	2.7173$\times10^{-02}$	&	1.7993	&	5.5382	&	1.4313 \\
-	50sn	&	3p	&	3.4062$\times10^{-02}$	&	1.7793	&	5.2471	&	1.4039 \\
-	51sb	&	4s	&	4.5051$\times10^{-02}$	&	1.8149	&	6.5596	&	1.6032 \\
-	52te	&	3p	&	4.8683$\times10^{-02}$	&	1.8168	&	6.2438	&	1.5279 \\
-	53i	&	2p	&	5.3928$\times10^{-02}$	&	1.8104	&	6.0171	&	1.5066 \\
-	54xe	&	1s	&	6.0103$\times10^{-02}$	&	1.8026	&	5.8608	&	1.4907 \\
-	55cs	&	2s	&	1.2855$\times10^{-02}$	&	1.7828	&	6.2757	&	1.4895 \\
-	56ba	&	1s	&	1.5853$\times10^{-02}$	&	1.7692	&	6.1433	&	1.5188 \\
-	57la	&	2d	&	1.7344$\times10^{-02}$	&	1.7639	&	6.0521	&	1.5123 \\
-	58ce	&	3h	&	1.6781$\times10^{-02}$	&	1.7686	&	6.0001	&	1.4644 \\
-	59pr	&	4i	&	1.7185$\times10^{-02}$	&	1.7758	&	6.2865	&	1.5337 \\
-	60nd	&	5i	&	1.7564$\times10^{-02}$	&	1.7775	&	6.5512	&	1.5794 \\
-	61pm&	6h	&	1.8016$\times10^{-02}$	&	1.7797	&	6.6017	&	1.5841 \\
-	62sm&	7f	&	1.8709$\times10^{-02}$	&	1.7777	&	5.8441	&	1.4672 \\
-	63eu	&	8s	&	1.8909$\times10^{-02}$	&	1.7840	&	6.7077	&	1.5952 \\
-	64gd	&	7f	&	1.9561$\times10^{-02}$	&	1.7816	&	6.1306	&	1.5217 \\
-	65tb	&	6h	&	1.9924$\times10^{-02}$	&	1.7878	&	6.5207	&	1.5707 \\
-	66dy	&	5i	&	2.0346$\times10^{-02}$	&	1.7876	&	6.5033	&	1.5289 \\
-	67ho	&	4i	&	2.0740$\times10^{-02}$	&	1.7904	&	6.9684	&	1.6317 \\
-	68er	&	3h	&	2.1199$\times10^{-02}$	&	1.7921	&	7.0221	&	1.6383 \\
-	69tm	&	2f	&	2.1652$\times10^{-02}$	&	1.7938	&	7.0776	&	1.6442 \\
-	70yb	&	1s	&	2.2102$\times10^{-02}$	&	1.7952	&	7.1405	&	1.6542 \\
-	71lu	&	2d	&	2.4224$\times10^{-02}$	&	1.7889	&	6.9809	&	1.6379 \\
-	72hf	&	3f	&	2.5724$\times10^{-02}$	&	1.7860	&	6.9232	&	1.6343 \\
-	73ta	&	4f	&	2.7058$\times10^{-02}$	&	1.7842	&	6.8929	&	1.6324 \\
-	74w	  &	5d	&	2.8296$\times10^{-02}$	&	1.7830	&	6.8797	&	1.6327 \\
-	75re	&	6s	&	2.9400$\times10^{-02}$	&	1.7826	&	6.8837	&	1.6343 \\
-	76os	&	5d	&	3.0756$\times10^{-02}$	&	1.7813	&	6.8979	&	1.6378 \\
-	77ir	&	4f	&	3.2004$\times10^{-02}$	&	1.7807	&	6.8690	&	1.6364 \\
-	78pt	&	3d	&	3.1806$\times10^{-02}$	&	1.7857	&	7.0167	&	1.6534 \\
-	79au	&	2s	&	3.2248$\times10^{-02}$	&	1.7899	&	6.5803	&	1.5341 \\
-	80hg	&	1s	&	3.5498$\times10^{-02}$	&	1.7819	&	6.6918	&	1.6049 \\
-	81tl	&	2p	&	2.9054$\times10^{-02}$	&	1.7445	&	5.0229	&	1.3663 \\
-	82pb	&	3p	&	3.8974$\times10^{-02}$	&	1.7778	&	6.9364	&	1.6561 \\
-	83bi	&	4s	&	4.5333$\times10^{-02}$	&	1.7662	&	6.1580	&	1.5460 \\
-	84po	&	3p	&	4.8209$\times10^{-02}$	&	1.7631	&	5.9691	&	1.5162 \\
-	85at	&	2p	&	5.2512$\times10^{-02}$	&	1.7565	&	5.8363	&	1.5019 \\
-	86rn	&	1s	&	5.7612$\times10^{-02}$	&	1.7488	&	5.6871	&	1.4861 \\
+	Element	&	Term		&	$\alpha$	&	$\beta$	&	$\delta$	&	$\gamma$	&	s	&	p	&	d	&	f	\\
+			&	Symbol	&			&			&			&				&		&		&		&		\\
+\hline
+02 He & $^{1}S$ & 8.140$\times10^{-02}$ & 1.953 & 4.504 & 1.515 & (1:18) & (:) & (:) & (:) \\
+03 Li & $^{2}S$ & 1.596$\times10^{-02}$ & 1.933 & 5.701 & 1.573 & (1:22) & (:) & (:) & (:) \\
+04 Be & $^{1}S$ & 2.647$\times10^{-02}$ & 1.938 & 5.841 & 1.594 & (1:22) & (:) & (:) & (:) \\	
+05 B & $^{2}P$ & 3.238$\times10^{-02}$ & 1.948 & 5.573 & 1.523 & (1:22) & (1:15) & (:) & (:) \\
+06 C & $^{3}P$ & 4.613$\times10^{-02}$ & 1.941 & 4.717 & 1.317 & (1:23) & (1:15) & (:) & (:) \\
+07 N & $^{4}S$ & 5.976$\times10^{-02}$ & 1.923 & 5.183 & 1.442 & (1:23) & (1:16) & (:) & (:) \\
+08 O & $^{3}P$ & 6.967$\times10^{-02}$ & 1.936 & 5.170 & 1.426 & (1:23) & (1:16) & (:) & (:) \\
+09 F & $^{2}P$ & 8.321$\times10^{-02}$ & 1.942 & 5.084 & 1.408 & (1:23) & (1:16) & (:) & (:) \\
+10 Ne & $^{1}S$ & 9.943$\times10^{-02}$ & 1.945 & 4.988 & 1.392 & (1:23) & (1:16) & (:) & (:) \\
+11 Na & $^{2}S$ & 1.696$\times10^{-02}$ & 1.950 & 6.056 & 1.469 & (1:26) & (3:19) & (:) & (:) \\
+12 Mg & $^{1}S$ & 2.375$\times10^{-02}$ & 1.932 & 5.686 & 1.430 & (1:26) & (3:19) & (:) & (:) \\
+13 Al & $^{2}P$ & 2.239$\times10^{-02}$ & 1.898 & 5.555 & 1.413 & (1:27) & (1:20) & (:) & (:) \\
+14 Si & $^{3}P$ & 3.352$\times10^{-02}$ & 1.921 & 5.419 & 1.410 & (1:26) & (1:19) & (:) & (:) \\
+15 P & $^{4}S$ & 4.410$\times10^{-02}$ & 1.907 & 5.196 & 1.390 & (1:26) & (1:19) & (:) & (:) \\
+16 S & $^{3}P$ & 5.004$\times10^{-02}$ & 1.896 & 4.962 & 1.362 & (1:26) & (1:19) & (:) & (:) \\
+17 Cl & $^{2}P$ & 5.831$\times10^{-02}$ & 1.886 & 4.784 & 1.344 & (1:26) & (1:19) & (:) & (:) \\
+18 Ar & $^{1}S$ & 6.834$\times10^{-02}$ & 1.878 & 4.654 & 1.331 & (1:26) & (1:19) & (:) & (:) \\
+19 K & $^{2}S$ & 1.392$\times10^{-02}$ & 1.889 & 6.354 & 1.523 & (1:28) & (3:22) & (:) & (:) \\
+20 Ca & $^{1}S$ & 1.837$\times10^{-02}$ & 1.874 & 6.109 & 1.504 & (1:28) & (3:22) & (:) & (:) \\
+21 Sc & $^{2}D$ & 2.040$\times10^{-02}$ & 1.878 & 6.160 & 1.505 & (1:28) & (3:22) & (2:16) & (:) \\
+22 Ti & $^{3}F$ & 2.218$\times10^{-02}$ & 1.886 & 6.247 & 1.508 & (1:28) & (3:22) & (2:16) & (:) \\
+23 V & $^{4}F$ & 2.361$\times10^{-02}$ & 1.887 & 6.573 & 1.507 & (1:29) & (3:23) & (2:16) & (:) \\
+24 Cr & $^{7}S$ & 2.345$\times10^{-02}$ & 1.865 & 5.348 & 1.407 & (1:29) & (3:22) & (2:17) & (:) \\
+25 Mn & $^{6}S$ & 2.572$\times10^{-02}$ & 1.865 & 5.336 & 1.407 & (1:29) & (3:22) & (2:17) & (:) \\
+26 Fe & $^{5}D$ & 2.621$\times10^{-02}$ & 1.869 & 5.301 & 1.395 & (1:29) & (3:22) & (3:17) & (:) \\
+27 Co & $^{4}F$ & 2.643$\times10^{-02}$ & 1.871 & 5.905 & 1.413 & (1:29) & (4:23) & (3:17) & (:) \\
+28 Ni & $^{3}F$ & 2.882$\times10^{-02}$ & 1.875 & 5.935 & 1.413 & (1:29) & (3:23) & (3:17) & (:) \\
+29 Cu & $^{2}S$ & 2.283$\times10^{-02}$ & 1.857 & 5.485 & 1.413 & (1:30) & (4:23) & (3:18) & (:) \\
+30 Zn & $^{1}S$ & 3.297$\times10^{-02}$ & 1.881 & 5.817 & 1.339 & (1:30) & (3:24) & (2:17) & (:) \\
+31 Ga & $^{2}P$ & 2.742$\times10^{-02}$ & 1.863 & 5.703 & 1.462 & (1:30) & (1:23) & (3:18) & (:) \\
+32 Ge & $^{3}P$ & 3.143$\times10^{-02}$ & 1.848 & 5.290 & 1.386 & (1:30) & (1:23) & (4:18) & (:) \\
+33 As & $^{4}S$ & 4.728$\times10^{-02}$ & 1.869 & 5.325 & 1.340 & (1:30) & (1:23) & (3:17) & (:) \\
+34 Se & $^{3}P$ & 5.087$\times10^{-02}$ & 1.847 & 4.949 & 1.533 & (1:30) & (1:22) & (3:18) & (:) \\
+35 Br & $^{2}P$ & 5.927$\times10^{-02}$ & 1.861 & 5.192 & 1.333 & (1:30) & (1:23) & (3:17) & (:) \\
+36 Kr & $^{1}S$ & 6.804$\times10^{-02}$ & 1.859 & 5.510 & 1.370 & (1:29) & (1:23) & (3:17) & (:) \\
+37 Rb & $^{2}S$ & 1.421$\times10^{-02}$ & 1.856 & 7.181 & 1.626 & (1:30) & (3:25) & (6:21) & (:) \\
+38 Sr & $^{1}S$ & 1.808$\times10^{-02}$ & 1.846 & 6.674 & 1.553 & (1:30) & (3:25) & (6:20) & (:) \\
+39 Y & $^{2}D$ & 1.997$\times10^{-02}$ & 1.841 & 6.569 & 1.543 & (1:30) & (3:25) & (2:20) & (:) \\
+40 Zr & $^{5}F$ & 2.184$\times10^{-02}$ & 1.837 & 6.485 & 1.535 & (1:30) & (3:25) & (2:20) & (:) \\
+41 Nb & $^{6}D$ & 2.340$\times10^{-02}$ & 1.835 & 6.434 & 1.530 & (1:30) & (3:25) & (2:20) & (:) \\
+42 Mo & $^{7}S$ & 2.537$\times10^{-02}$ & 1.832 & 6.372 & 1.524 & (1:30) & (3:25) & (2:20) & (:) \\
+43 Tc & $^{6}S$ & 2.597$\times10^{-02}$ & 1.836 & 6.453 & 1.534 & (1:30) & (3:25) & (2:20) & (:) \\
+44 Ru & $^{5}F$ & 2.682$\times10^{-02}$ & 1.833 & 6.788 & 1.606 & (1:30) & (3:25) & (2:21) & (:) \\
+45 Rh & $^{4}F$ & 2.751$\times10^{-02}$ & 1.835 & 6.883 & 1.620 & (1:30) & (3:25) & (2:21) & (:) \\
+46 Pd & $^{1}S$ & 5.944$\times10^{-02}$ & 1.827 & 5.980 & 1.504 & (1:29) & (2:24) & (1:19) & (:) \\
+47 Ag & $^{2}S$ & 2.438$\times10^{-02}$ & 1.800 & 5.521 & 1.423 & (1:31) & (4:25) & (3:21) & (:) \\
+48 Cd & $^{1}S$ & 2.911$\times10^{-02}$ & 1.786 & 5.334 & 1.408 & (1:31) & (4:25) & (3:21) & (:) \\
+49 In & $^{2}P$ & 2.714$\times10^{-02}$ & 1.799 & 5.540 & 1.431 & (1:31) & (1:25) & (3:21) & (:) \\
+50 Sn & $^{3}P$ & 2.884$\times10^{-02}$ & 1.794 & 5.422 & 1.415 & (1:31) & (1:25) & (4:21) & (:) \\
+51 Sb & $^{4}S$ & 4.481$\times10^{-02}$ & 1.815 & 6.567 & 1.605 & (1:30) & (1:25) & (3:21) & (:) \\
+52 Te & $^{3}P$ & 4.846$\times10^{-02}$ & 1.817 & 6.247 & 1.528 & (1:30) & (1:26) & (3:20) & (:) \\
+53 I & $^{2}P$ & 5.369$\times10^{-02}$ & 1.810 & 6.016 & 1.505 & (1:30) & (1:25) & (3:20) & (:) \\
+54 Xe & $^{1}S$ & 5.981$\times10^{-02}$ & 1.802 & 5.862 & 1.490 & (1:30) & (1:25) & (3:20) & (:) \\
+55 Cs & $^{2}S$ & 1.177$\times10^{-02}$ & 1.792 & 6.485 & 1.510 & (1:33) & (4:28) & (5:23) & (:) \\
+56 Ba & $^{1}S$ & 1.560$\times10^{-02}$ & 1.770 & 6.152 & 1.518 & (1:32) & (3:28) & (6:23) & (:) \\
+57 La & $^{2}D$ & 1.716$\times10^{-02}$ & 1.764 & 6.067 & 1.513 & (1:32) & (3:28) & (2:23) & (5:14) \\
+\notetodylan{missing}	\\
+59 Pr & $^{4}I$ & 1.696$\times10^{-02}$ & 1.776 & 6.297 & 1.533 & (1:32) & (3:28) & (6:23) & (4:19) \\
+60 Nd & $^{5}I$ & 1.737$\times10^{-02}$ & 1.778 & 6.563 & 1.579 & (1:32) & (3:28) & (6:24) & (4:19) \\
+61 Pm & $^{6}H$ & 1.784$\times10^{-02}$ & 1.780 & 6.615 & 1.585 & (1:32) & (3:28) & (6:24) & (4:19) \\
+62 Sm & $^{7}F$ & 1.857$\times10^{-02}$ & 1.778 & 5.842 & 1.464 & (1:33) & (3:27) & (6:23) & (4:19) \\
+63 Eu & $^{8}S$ & 1.876$\times10^{-02}$ & 1.784 & 6.718 & 1.596 & (1:32) & (3:28) & (6:24) & (4:19) \\
+\notetodylan{missing}	\\
+\notetodylan{missing}	\\
+66 Dy & $^{5}I$ & 2.020$\times10^{-02}$ & 1.788 & 6.543 & 1.540 & (1:33) & (3:28) & (6:23) & (4:19) \\
+\notetodylan{missing}	\\
+68 Er & $^{3}H$ & 2.106$\times10^{-02}$ & 1.792 & 7.029 & 1.638 & (1:32) & (3:28) & (6:24) & (4:20) \\
+69 Tm & $^{2}F$ & 2.152$\times10^{-02}$ & 1.794 & 7.075 & 1.643 & (1:32) & (3:28) & (6:24) & (4:20) \\
+71 Lu & $^{2}D$ & 2.373$\times10^{-02}$ & 1.790 & 7.018 & 1.640 & (1:32) & (3:28) & (2:24) & (4:20) \\
+72 Hf & $^{3}F$ & 2.511$\times10^{-02}$ & 1.788 & 6.963 & 1.636 & (1:32) & (3:28) & (2:24) & (5:20) \\
+73 Ta & $^{4}F$ & 2.684$\times10^{-02}$ & 1.784 & 6.907 & 1.633 & (1:32) & (2:28) & (2:24) & (5:20) \\
+74 W & $^{5}D$ & 2.814$\times10^{-02}$ & 1.783 & 6.889 & 1.633 & (1:32) & (3:28) & (2:24) & (5:20) \\
+75 Re & $^{6}S$ & 2.931$\times10^{-02}$ & 1.782 & 6.886 & 1.634 & (1:32) & (3:28) & (2:24) & (5:20) \\
+76 Os & $^{5}D$ & 3.075$\times10^{-02}$ & 1.781 & 6.896 & 1.637 & (1:32) & (2:29) & (2:24) & (4:20) \\
+77 Ir & $^{4}F$ & 3.195$\times10^{-02}$ & 1.780 & 6.867 & 1.635 & (1:32) & (3:28) & (2:24) & (5:20) \\
+78 Pt & $^{3}D$ & 3.173$\times10^{-02}$ & 1.785 & 7.020 & 1.654 & (1:32) & (3:28) & (2:24) & (5:20) \\
+79 Au & $^{2}S$ & 3.190$\times10^{-02}$ & 1.791 & 6.702 & 1.569 & (1:33) & (4:28) & (2:23) & (5:19) \\
+80 Hg & $^{1}S$ & 3.546$\times10^{-02}$ & 1.781 & 6.691 & 1.604 & (1:32) & (3:28) & (2:23) & (5:20) \\
+81 Tl & $^{2}P$ & 3.241$\times10^{-02}$ & 1.794 & 6.826 & 1.561 & (1:34) & (1:29) & (3:23) & (6:20) \\
+82 Pb & $^{3}P$ & 3.867$\times10^{-02}$ & 1.778 & 6.948 & 1.656 & (1:32) & (1:28) & (3:25) & (6:21) \\
+83 Bi & $^{4}S$ & 4.514$\times10^{-02}$ & 1.766 & 6.158 & 1.545 & (1:32) & (1:27) & (2:24) & (6:19) \\
+84 Po & $^{3}P$ & 4.783$\times10^{-02}$ & 1.763 & 5.977 & 1.516 & (1:32) & (1:27) & (3:23) & (6:19) \\
+85 At & $^{2}P$ & 5.210$\times10^{-02}$ & 1.757 & 5.846 & 1.502 & (1:32) & (1:27) & (3:23) & (6:19) \\
+86 Rn & $^{1}S$ & 5.716$\times10^{-02}$ & 1.749 & 5.695 & 1.486 & (1:32) & (1:27) & (3:23) & (6:19) \\
+\hline
+	
 \end{longtable}
 \end{center}
 	
@@ -237,11 +239,31 @@ While general purpose computing on graphics processing units (GPGPU) (GPUs) has 
 \subsection{Threads, Blocks, and Grids}\label{ThBlGr}
 The most granular element of computation on a GPU is the thread. When a CUDA function or subroutine (hereafter called a kernel) is called, it is a thread that actually executes the code. What makes GPGPU so powerful is that while a thread in a kernel is always executing the same code, the data a thread works with can be completely different between threads. This method of parallelism is called single instruction, multiple data (SIMD). 
 
-32 threads are organized into a structure called a warp. Within a warp, all threads execute code in lock-step. If a condition arises where some threads in warp must execute some code, and other threads in the same warp execute some other code (for instance in a \textbf{if eles} statement), this leads to serialization of code execution, a process called warp divergence. In a worst case scenario, this could cause all 32 threads to execute serially which could lead to a massive hit to performance. It can also cause warps to fall behind other warps and has the potential to cause race conditions to appear. If one warp need data generated by another warp that is several steps behind, this can cause all kinds of confusing errors to appear. Therefore, it is generally advisable to avoid warp divergence whenever possible. But, for programs of any considerable usefulness, warp divergence will be inevitable. Thankfully, the good people of Nvidia have included the \comm{syncthreads} command. This provides a barrier that all threads within a block must meet before any can continue. 
+32 threads are organized into a structure called a warp. Within a warp, all threads execute code in lock-step. If a condition arises where some threads in warp must execute some code, and other threads in the same warp execute some other code (for instance in a \textbf{if else} statement), this leads to serialization of code execution, a process called warp divergence. In a worst case scenario, this could cause all 32 threads to execute serially which could lead to a massive hit to performance. It can also cause warps to fall behind other warps and has the potential to cause race conditions to appear. If one warp need data generated by another warp that is several steps behind, this can cause all kinds of confusing errors to appear. Therefore, it is generally advisable to avoid warp divergence whenever possible. But, for programs of any considerable usefulness, warp divergence will be inevitable. Thankfully, the good people of Nvidia have included the \comm{syncthreads} command. This provides a barrier that all threads within a block must meet before any can continue. 
 
 The next highest structure is the thread block, or block for short. Simply put, a block is a collection of 1 or more threads. When a kernel is called, the block scheduler assigns each block to a streaming multiprocessor (SM). How many blocks a SM can run at once depends on the resources each block uses (more on this in section \ref{GPUmem}), but no more than 8 block per SM can ever be run at once on our C2050. Blocks also add an element of dimensionality to threads through the thread index ($threadIdx$) variable. This variable has three parts, $threadIdx.x$, $threadIdx.y$, and $threadIdx.z$. These variables make dealing with matrixes and arrays much simpler and can help with paralyzing large nested loops. The size of dimensions of the grid can be accessed through the $blockDim$ variable. $blockDim$ also has $x$, $y$, and $z$ parts. These variables are all integer type, and the $threadIdx$ variables range from 1 in Fortran (or 0 in C/++) to the relevant part of $blockDim$ in Fortran (or $blockDim$ -1 in C/++). The $threadIdx$ set of variables are all reset at the boundary of each block. 
 
-Finally there is the grid. The grid is the entire collection of blocks that are launched for a kernel. They also give a dimensionality to blocks through the $blockIdx$ variable which has similar parts to the $threadIdx$ variable. It also adds in the $gridDim$ variable which is analogous to $blockDim$.  
+Finally there is the grid. The grid is the entire collection of blocks that are launched for a kernel. They also give a dimensionality to blocks through the $blockIdx$ variable which has similar parts to the $threadIdx$ variable. It also adds in the $gridDim$ variable which is analogous to $blockDim$.
+
+\subsection{Memory}
+To simplify the discussion of the kinds of memory available on a GPU we will limit ourselves to the three main types. They are the global memory, the shared memory, and the register memory. Because the execution time of a calculation is often not limited by the actual number of FLOPs to compute, but rather the reading and writing to memory, it is essential to be sure that the three main types of memory are managed correctly.
+
+Global memory is both the most plentiful and the slowest available memory on a GPU. In a typical calculation, global memory will be allocated in code executed by the CPU (host). Data will be uploaded to the allocated memory and then used by the GPU (device). Global memory is distinct from the other kinds of device memory in that it can be read from and wrote to by all threads currently executing. This can allow threads of one block to pass messages to threads in an other block, but great care must be taken to avoid race conditions. There is an additional caveat with global memory in that if threads are reading from non-contiguous memory locations, then memory bandwidth plummets. There is also a problem when multiple threads try to read from the same location. Instead of being one transaction, the read is serialized which leads to a massive performance penalty. It is therefore to the programmers advantage to write their kernels with as little use of the global memory as possible.
+
+Shared memory, as its name implies, is shared and private to threads in a single block. It is able to be access much faster than global memory, but this comes at the cost of a much reduced volume. The amount of it available per SM varies with hardware generation, but the maximum available on our card is 48KB. This amount is shared among all blocks that are running on the SM, so the amount available per block will typically be even less. Also, there is no guarantee that memory loaded by one thread will be available to all other threads right away, only a call to \comm{syncthreads} ensures proper loading. But, when used properly, shared memory is indispensable for speeding up calculations. It does not suffer from threads reading from non-contiguous memory locations like global memory does, and if all threads in a warp read from the same memory location a "broadcast" occurs. This means that instead of the read being serialized, all threads are able to read the data in one transaction. Shared memory is also distinct from global memory in that instead of being declared in the host code, it is declared in the device code. This is done by giving the variable the "shared" attribute in its declaration. One must be careful not to over use the shared memory however. As mentioned, there is only 48KB available per SM. If a block needs more than is available, the function will fail to execute. It can also affect the occupancy of the kernel, a concept that will be explained later on.
+
+Lastly there is the register memory. This is the fastest memory available and is also private to an individual thread. On our card, there are a total of 32768 32-bit registers available per SM. An individual thread in a block can use no more than 63 registers, and if the number of threads in a block times the number of registers needed per thread for a kernel is larger than the total registers available per SM then the execution of the kernel will fail. If a thread needs more memory than the registers will allow, then "register-spilling" takes place. This means that instead of a variable being stored into a register, it "spills over" into a fourth memory type called local memory. Local memory is really just a section of the global memory and comes with all the problems that global memory has, but the compiler is able to arrange it such that it can be read efficiently without the programmer having to worry about this. There is no way for a programmer to specify which variables will be stored in register or local memory, the complier handles all of this. There are complier flags which can change the maximum amount of registers per thread allowed which will prompt the complier to place more data into local memory. While this may sound like a bad idea, we will see in the next section how there are situations where this might be useful.
+
+\subsection{Occupancy and Performance}
+With the description of the various resources out of the way, now we can talk about how the can be used most effectively. The occupancy of a kernel is the number of warps that are actually able to run on a SM divided by the maximum possible warps a SM can run. Occupancy is important, as it determines the maximum number of blocks, and thus threads that are able to be run simultaneously. The occupancy of a kernel is determined by three things: the block size, the amount of shared memory per block, and the number of registers used per thread. While block size and shared memory are explicitly set by the programmer, it is next to impossible to guess how registers will be used before compile time. Thankfully, there are complier flags that will display this information.
+
+Armed with the resources our kernel will need, we can now determine its occupancy. The "CUDA Occupancy Calculator" is an excel spreadsheet provided by NVIDIA and is an indispensable tool. We can input the needed resources and the hardware generation of our card and then receive the occupancy of the current resource configuration, where the bottle neck of the current configuration is, as well as information on how the occupancy will change upon tweaking the configuration. In some sense, the best block size is determined by how the other resources are used. Therefore, in order to maximize the occupancy, we must first make sure that we are using the memory provided correctly.
+
+Registers are the fastest memory available, but they are also the easiest to over use. Therefore, they are best suited for small variables that need to be referenced frequently, such as accumulators. Shared memory is best used for storing large sections of non-contiguous data stored in the global memory. Finally data that is able to be stored nicely, or is infrequently used might best be left in the global memory.
+
+As with everything, these rules are only guide lines. The best resource configuration will be individual not only to every kernel, but the GPU it is to be run on as well. The best way to maximize the efficiency of a calculation is to make minor alterations to where data is stored and play around with the code. Finally, it might not always be the best idea to maximize the occupancy of a kernel. If the bottleneck is not the actual calculation, but how fast the data can be read, then it might be advantageous to fill up the registers and shared memory as much as possible and have a very low occupation. The only way to know is to try!
+
+\notetodylan{This is better put in the discussion section of this chapter.... In the case of the work in this thesis, the resource bottleneck for my kernels was almost always the number of registers used per thread. 63 32-bit registers provide only 252 bytes to work with, which when using double precision numbers is hardly anything at all.}
 
 \section{Program flow}
 In this section, the control flow of a typical calculation is given.
@@ -264,7 +286,7 @@ In this section, the control flow of a typical calculation is given.
 While almost all of the code from the original DFRATOM was modified in someway, the most extreme changes were the integral evaluation and the formation of the P and Q matrixes. Therefore, we will discuss these changes in detail in this section.
 
 \subsection{Two-electron Integrals}
-The original DFRATOM calculates the two electron integrals with a long series of nested for loops. Working from the outside in, the indices of the loops are $L$, $P$, $Q$, $M$, $R$, and $S$ where $L$ and $M$ are spinor symmetries, $P$ and $Q$ are basis functions of symmetry $L$, and $R$ and $S$ are basis functions of symmetry $M$. The pseudocode for these is shown in Algorithm \ref{origcode}. Where $nsym$ is the total number of symmetries, and $nbs(i)$ is the number of basis functions for symmetry species $i$. Thus, each set of J and K integrals are uniquely defined by their $L$, $M$, $P$, $Q$, $R$, and $S$ values. In order to have an effective CUDA implementation of this algorithm, we to find a way to map these six numbers to CUDA threads. The simplest approach would be to map the values of $L$, $P$, and $Q$ onto the $threadIdx.x$, $threadIdx.y$, and $threadIdx.z$ variables for each thread, launch the needed number of blocks, and then have each thread loop over the remaining indices. The pseudocode for this can be seen in Algorithm \ref{easycode}. A similar method is employed by many other programs, and for larger systems it works perfectly well. But because this program is for only single atoms, problems begin to appear.
+The original DFRATOM calculates the two electron integrals with a long series of nested for loops. Working from the outside in, the indices of the loops are $L$, $P$, $Q$, $M$, $R$, and $S$ where $L$ and $M$ are spinor symmetries, $P$ and $Q$ are basis functions of symmetry $L$, and $R$ and $S$ are basis functions of symmetry $M$. The pseudocode for these is shown in Algorithm \ref{origcode}. Where $nsym$ is the total number of symmetries, and $nbs(i)$ is the number of basis functions for symmetry species $i$. Thus, each set of J and K integrals is uniquely defined by its $L$, $M$, $P$, $Q$, $R$, and $S$ values. In order to have an effective CUDA implementation of this algorithm, we to find a way to map these six numbers to CUDA threads. The simplest approach would be to map the values of $L$, $P$, and $Q$ onto the $threadIdx.x$, $threadIdx.y$, and $threadIdx.z$ variables for each thread, launch the needed number of blocks, and then have each thread loop over the remaining indices. The pseudocode for this can be seen in Algorithm \ref{easycode}. A similar method is employed by many other programs, and for larger systems it works perfectly well. But because this program is for only single atoms, problems begin to appear.
 
 \begin{algorithm}
 \caption{The original }
@@ -329,7 +351,7 @@ The original DFRATOM calculates the two electron integrals with a long series of
 
 The first is the problem of warp divergence. Because the maximum values of $M$, $R$, and $S$ depend on $L$, $P$, and $Q$, different threads will have a different number of loops to complete than others. Because a streaming multiprocessor (SM) must finish the block is it currently working on before it can grab another, there is the possibility that most of the threads in a block are idling while waiting for others in the same block to finish. The second problem is that with this method, there will always be several blocks that have threads that remain idle throughout the block's runtime, no matter what. This can be seen more clearly in \notetodylan{Figure whatever}. The third problem with this is that with the maximum values for $L$, $P$, and $Q$ available for a single atom, there might not even be enough combinations to completely fill the GPU. While all of these issues begin to disappear once the number of integrals to evaluate becomes large enough, we are still very much in the range where they are in play. Therefore a smarter algorithm had to be used.
 
-The second problem can be solved by opting for a one dimensional solution instead of the three dimensional one of Algorithm \ref{easycode}. By restricting ourselves to only using threadIdx.x, we ensure that only the last block to run will have the possibility of having threads remaining idle throughout the block's runtime. The third problem can be solved by having each thread calculate one and only one set of J and K integrals. If we start with a valid combination of $L$, $M$, $P$, $Q$, $R$, and $S$ values, we can very easily figure out which thread will calculate that set of integrals by using the following equations.
+The second problem can be solved by opting for a one dimensional solution instead of the three dimensional one of Algorithm \ref{easycode}. By restricting ourselves to only using $threadIdx.x$, we ensure that only the last block to run will have the possibility of having threads remaining idle throughout the block's runtime. The third problem can be solved by having each thread calculate one and only one set of J and K integrals. If we start with a valid combination of $L$, $M$, $P$, $Q$, $R$, and $S$ values, we can very easily figure out which thread will calculate that set of integrals by using the following equations.
 
 \begin{equation}
 \label{nprime}
@@ -358,7 +380,7 @@ i_{max} = n'(\sum^{nsym}_{j = 1}n'(nbs(j)))
 
 $nbs(0) = 0$ and $i$ would be equal to $threadIdx.x + (blockIdx.x - 1) * blockDim.x$. Starting with a value of $i$ and working our way back though is a much more challenging task. It becomes easier if we reframe it in the following way.
 
-Consider \notetodylan{Figure whatever}. It shows the top half of the symmetric two-electron integral matrix for a problem with $nsym = 2$ and 3 basis function for symmetry one, and two for symmetry two. In each element of this matrix, there is a set of seven numbers. The top two are $L$ and $M$, then $P$ and $Q$, then $R$ and $S$, and the last number is the value of $i$ for the thread calculating that integral. With this, it can be seen that each element in the same row have the same $M$, $R$, and $S$ values and the elements in the same column have the same $L$, $P$, and $Q$ values. Therefore, finding out which column the element belongs to gives us our value for $y$, and finding the row give us the value of $x$. This can be done with the following binary search algorithm. 
+Consider \notetodylan{Figure whatever}. It shows the top half of the symmetric two-electron integral matrix for a problem with $nsym = 2$ and 3 basis function for symmetry one, and two for symmetry two. In each element of this matrix, there is a set of seven numbers. The top two are $L$ and $M$, then $P$ and $Q$, then $R$ and $S$, and the last number is the value of $i$ for the thread calculating that integral. With this, it can be seen that each element in the same row have the same $M$, $R$, and $S$ values and the elements in the same column have the same $L$, $P$, and $Q$ values. Therefore, finding out which column the element belongs to gives us the value for $y$, and finding the row give us the value of $x$. This can be done with the following binary search algorithm. 
 
 \begin{algorithm}
 \caption{Binary Search for $x$ and $y$}
@@ -385,9 +407,9 @@ Consider \notetodylan{Figure whatever}. It shows the top half of the symmetric t
 			\STATE{$y = mid$}
 			\STATE{\textbf{exit}}
 		\ELSIF{$i > highnum$}
-			\STATE{low = mid + 1}
+			\STATE{l$ow = mid + 1$}
 		\ELSIF{$i < lownum$}
-			\STATE{high = mid - 1}
+			\STATE{$high = mid - 1$}
 		\ENDIF
 	\ENDWHILE
 	\STATE{$x = i - lownum + 1$}
@@ -452,7 +474,7 @@ Consider \notetodylan{Figure whatever}. It shows the top half of the symmetric t
 \end{algorithmic}
 \end{algorithm}
 
-Where variables with the $s\_$ prefix refer to those in the shared memory, and $lownum$ and $highnum$ refer to the minimum and values the $i$ could be for the current guess ($mid$) of $y$. From here, $L$ can be found with Algorithm \ref{bsL}, and $P$ and $Q$ can be found with Algorithm \ref{bsPQ}. The same set of algorithms can then be used to get $M$, $R$, and $S$ by substituting the relevant variables. If there is sufficient global memory available, these values can be stored and referred to later as needed. Otherwise, they could be calculated on the fly as needed. Because binary search scales as $\mathcal{O}(n\log{}n)$, this should ensure that this remains a fast method of mapping threads to integrals for large problems as well. \notetodylan{(CHECK WITH MARIUSZ TO BE SURE THE NEXT IS TRUE!!!!!!)} With some alterations, this method could also apply to molecular symmetries other than a single atom. For instance in C1, all possible combinations of four basis functions must be used (ignoring those that appear on the bottom triangle of the two electron integral matrix of course). We could simply remove the search for $L$ and $M$, have the initial value of $high$ in Algorithm \ref{bsPQ} be the total number of basis functions, and remove the \textbf{sum}$(s\_nprime(1:L-1)$ term from $lownum$. 
+Where variables with the $s\_$ prefix refer to those in the shared memory, and $lownum$ and $highnum$ refer to the minimum and values the $i$ could be for the current guess ($mid$) of $y$. From here, $L$ can be found with Algorithm \ref{bsL}, and $P$ and $Q$ can be found with Algorithm \ref{bsPQ}. The same set of algorithms can then be used to get $M$, $R$, and $S$ by substituting the relevant variables. If there is sufficient global memory available, these values can be stored and referred to later as needed. Otherwise, they could be calculated on the fly as needed. Because binary search scales as $\mathcal{O}(n\log{}n)$, this should ensure that this remains a fast method of mapping threads to integrals for large problems as well. With some alterations, this method could also apply to molecular symmetries other than a single atom. For instance in C1, all possible combinations of four basis functions must be used (ignoring those that appear on the bottom triangle of the two electron integral matrix of course). We could simply remove the search for $L$ and $M$, have the initial value of $high$ in Algorithm \ref{bsPQ} be the total number of basis functions, and remove the \textbf{sum}$(s\_nprime(1:L-1)$ term from $lownum$. 
 
 From here, the code for actually evaluating the integrals remains largely the same as the original code, except for some minor changes to allow for more efficient global or shared memory access. We also use a process referred to as "grid-stride looping" where all these binary search algorithms have their \textbf{if} $i \le i_{max}$ \textbf{then} removed, and then are placed within the following loop: \textbf{for} $i = threadIdx.x + (blockIdx.x - 1) * blockDim.x$ to $i_{max}$, $i \mathrel{+}= blockDim.x * gridDim.x$ \textbf{do}. If we know the occupancy of the algorithm on the GPU beforehand, we can launch exactly the number of blocks that will fill the GPU. This reduces the overhead of block swapping and lets us further eke out some performance.
 
@@ -462,7 +484,7 @@ In the previous subsection we discussed the calculation of the two-electron inte
 
 
 \section{Input Description}\label{inp_des}
-The program can be excited on Unix-like systems in the following way
+The program can be executed on Unix-like systems in the following way
 \begin{lstlisting}[language=bash]
 	$ path_to_executable input_file > output_file
 \end{lstlisting}

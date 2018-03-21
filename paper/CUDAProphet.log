@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.29)  7 FEB 2018 11:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.29)  21 MAR 2018 16:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -238,140 +238,133 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16]
-[17] [18] [19]
+[17] [18] [19] [20]
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 493.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 529.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 493.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 529.
 
-Overfull \hbox (4.57948pt too wide) in paragraph at lines 504--504
+Overfull \hbox (4.57948pt too wide) in paragraph at lines 540--540
 []\OT1/cmr/m/n/12 'energy'| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--508
+Underfull \hbox (badness 10000) in paragraph at lines 536--544
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 508--519
+Underfull \hbox (badness 10000) in paragraph at lines 544--555
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 555--566
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 519--530
-
- []
-
-[20]
-Overfull \hbox (4.38567pt too wide) in paragraph at lines 534--534
+Overfull \hbox (4.38567pt too wide) in paragraph at lines 570--570
 []\OT1/cmr/m/n/12 wtbspara| 
  []
 
 
-Underfull \hbox (badness 3895) in paragraph at lines 539--540
+Underfull \hbox (badness 3895) in paragraph at lines 575--576
 []\OT1/cmr/m/n/12 Where in the $\OML/cmm/m/it/12 ^^P$ \OT1/cmr/m/n/12 pool each
  sym-me-
  []
 
 
-Underfull \hbox (badness 1122) in paragraph at lines 539--540
+Underfull \hbox (badness 1122) in paragraph at lines 575--576
 \OT1/cmr/m/n/12 try starts tak-ing ex-po-nents from (de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 531--544
+Underfull \hbox (badness 10000) in paragraph at lines 567--580
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 581--595
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 545--559
+Underfull \hbox (badness 10000) in paragraph at lines 581--595
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 545--559
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21]
-Underfull \hbox (badness 5133) in paragraph at lines 565--566
+Underfull \hbox (badness 5133) in paragraph at lines 601--602
 \OT1/cmr/m/n/12 bi-na-tions of spinor oc-cu-pan-cies (de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--572
+Underfull \hbox (badness 10000) in paragraph at lines 595--608
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--572
+Underfull \hbox (badness 10000) in paragraph at lines 595--608
 
  []
 
-
-Underfull \hbox (badness 3396) in paragraph at lines 580--581
+[23]
+Underfull \hbox (badness 3396) in paragraph at lines 616--617
 []\OT1/cmr/m/n/12 Convergence limit for the large-large
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 580--581
+Underfull \hbox (badness 10000) in paragraph at lines 616--617
 \OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
  []
 
 
-Underfull \hbox (badness 2653) in paragraph at lines 581--582
+Underfull \hbox (badness 2653) in paragraph at lines 617--618
 []\OT1/cmr/m/n/12 Convergence limit for the small-large
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 581--582
+Underfull \hbox (badness 10000) in paragraph at lines 617--618
 \OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
  []
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 582--583
+Underfull \hbox (badness 2020) in paragraph at lines 618--619
 []\OT1/cmr/m/n/12 Convergence limit for the small-small
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 582--583
+Underfull \hbox (badness 10000) in paragraph at lines 618--619
 \OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 572--585
+Underfull \hbox (badness 10000) in paragraph at lines 608--621
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22]
 No file CUDAProphet.bbl.
-[23] (./CUDAProphet.aux)
+[24] (./CUDAProphet.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3524 strings out of 493013
- 46479 string characters out of 6133343
- 157972 words of memory out of 5000000
- 7050 multiletter control sequences out of 15000+600000
+ 3528 strings out of 493013
+ 46505 string characters out of 6133343
+ 158508 words of memory out of 5000000
+ 7054 multiletter control sequences out of 15000+600000
  11467 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  32i,10n,51p,1527b,1230s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -386,10 +379,10 @@ ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/lo
 cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
 al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
 /texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on CUDAProphet.pdf (23 pages, 174473 bytes).
+Output written on CUDAProphet.pdf (24 pages, 183030 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 125 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

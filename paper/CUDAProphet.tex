@@ -486,6 +486,42 @@ From here, the code for actually evaluating the integrals remains largely the sa
 
 In the previous subsection we discussed the calculation of the two-electron integrals, now we will discuss how they are actually used. 
 
+SCF begins with the formation of the density matrices. In this program, each spinor symmetry $i$ has its own density matrix. There are also two types of density matrices, one for contributions from closed shell spinors (\textbf{D$_\textbf{C}$}) and one for contributions from open shelled spinors (\textbf{D$_\textbf{O}$}).
+
+Using a procedure developed by Roothann and Hall\citethis{}, we first need to find the matrix \textbf{C} which satisfies 
+
+\begin{equation}
+\label{RHE}
+\textbf{FC} = \epsilon{}\textbf{SC}
+\end{equation}
+
+where \textbf{F} is the Fock matrix, $\epsilon$ is the vector of eigenvalues of \textbf{F} with respect to matrix \textbf{S}, and \textbf{S} is the overlap matrix. The non-relativistic \textbf{F} for closed shells of symmetry $i$ is given by
+
+\begin{equation}
+\label{FOCKM}
+\textbf{F}_{i, pq} = \langle p|h(1)|q\rangle + \sum^{K}_{r=1}\sum^{K}_{s=1}\left( 2\sum^{occ}_{a=1}\textbf{C}_{i, ra}\textbf{C}^{*}_{i, sa}\right)
+				\left[\langle pq|rs\rangle - \frac{1}{2}\langle pq|sr\rangle\right]
+\end{equation}
+
+where $p$, $q$, $r$, and $s$ are basis functions, $K$ is the total number of basis functions for symmetry $i$, and $occ$ is the number of occupied closed shells in symmetry $i$. As we can see, \textbf{F} is itself a function of \textbf{C} and we left with a rather disappointing outcome. That is, in order for us to find \textbf{C}, we first must know what it is. And so it would seem that all is lost and all of this hard work was for nothing. And yet, there is a glimmer of hope. \textbf{F} is made up of two terms, and as luck would have it, only the term corresponding to contributions from the two-electron integrals depends on \textbf{C}, the term from one-electron integrals can be known exactly. Thus, we begin by assuming that \textbf{F} depends solely on this term. Feeding this into Equation \ref{RHE} will give us the initial guess of \textbf{C} and now we can begin our work in earnest. In addition, the sum of the \textbf{C} elements are multiplied 
+
+\subsubsection{Density Matrix Formation}
+The term in parenthesis in Equation \ref{FOCKM} corresponds to the non-relativistic density matrix. But as we are interested in relativistic calculations, it will need to be altered. Firstly, because a relativistic wavefunction has both large and small components, so too does its density matrix. Therefore, it will have two dimensions that span from 1 to $2K$ where dimensions 1 to $K$ are the large components and the rest are for small components. Secondly, the factor of 2 is replaced by the number of electrons that can occupy spinors of symmetry $i$. Its matrix and vector representations are shown in \notetodylan{Figure whatever}. It mathematical form is given in Equation \ref{RDCMX}
+
+\begin{equation}
+\label{RDCMX}
+\textbf{D$_{\textbf{C}i, pq}$} =N_{i}\sum^{occ}_{a=1}\textbf{C}_{i, ra}\textbf{C}^{*}_{i, sa}
+\end{equation}
+
+where $N_{i}$ is the number of electrons that occupy a closed shell of symmetry $i$. \textbf{D$_\textbf{O}$} is similar to this and is shown below.
+
+\begin{equation}
+\label{RDOMX}
+\textbf{D$_{\textbf{O}i, pq}$} =N_{i}\textbf{C}_{i, r(occ+1)}\textbf{C}^{*}_{i, s(occ+1)}
+\end{equation}
+
+where $N_{i}$ is equal to the number of electrons in the open shell. Note that in this program, only the most energetic shell can be open.
+
 
 \section{Input Description}\label{inp_des}
 The program can be executed on Unix-like systems in the following way
@@ -493,7 +529,7 @@ The program can be executed on Unix-like systems in the following way
 	$ path_to_executable input_file > output_file
 \end{lstlisting}
 
-The input file must end in ".inp" or an error will be given. Redirection of stdout to an output file is optional, but is recommended to save the results of a calculation. The input file is read using the namelist functionality of Fortran. A description of what must appear on each line of the input file is given below. Sample input files are also given at the end of this document.
+The input file must end in ".inp" or an error will be given. Redirection of stdout to an output file is optional, but is recommended to save the results of a calculation. The input file is read using the namelist functionality of Fortran. A description of what must appear on each line of the input file is given below. Sample input files are also given in \notetodylan{Appendix whatever}.
 
 \begin{enumerate}
 	\item A title of no more than 200 characters.

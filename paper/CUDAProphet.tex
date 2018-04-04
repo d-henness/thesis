@@ -512,14 +512,14 @@ The term in parenthesis in Equation \ref{FOCKM} corresponds to the non-relativis
 
 \begin{equation}
 \label{RDCMX}
-\textbf{D$_{\textbf{C}p,q}$} =N_{\mu}\sum^{occ}_{a=1}\textbf{C}_{r,a}\textbf{C}^{*}_{s,a}
+\textbf{D$_{\textbf{C}r,s}$} =N_{\mu}\sum^{occ}_{a=1}\textbf{C}_{r,a}\textbf{C}^{*}_{s,a}
 \end{equation}
 
 where $N_{i}$ is the number of electrons that occupy a closed shell of symmetry $i$. \textbf{D$_\textbf{O}$} is similar to this and is shown below.
 
 \begin{equation}
 \label{RDOMX}
-\textbf{D$_{\textbf{O}p,q}$} =N_{i}\textbf{C}_{i, r(occ+1)}\textbf{C}^{*}_{i, s(occ+1)}
+\textbf{D$_{\textbf{O}r,s}$} =N_{i}\textbf{C}_{r,(occ+1)}\textbf{C}^{*}_{s,(occ+1)}
 \end{equation}
 
 where $N_{i}$ is equal to the number of electrons in the open shell. Note that in this program, only the most energetic shell of any symmetry can be open.
@@ -545,7 +545,7 @@ With the density matrices in hand we can begin to combine the two-electron integ
 
 where the subscripts $L$ and $S$ refer to the large and small components respectively. $I$ is a function that returns the values of $x$ and $y$ from Equations \ref{ylpq} and \ref{xmrs} where $L=\lambda$ and $M=\mu$. From here, all subscripts of \textbf{X} will be implied to go through this $I$ function.
 
-The \textbf{P} and \textbf{Q} super matrices have a similar layout to the density matrices. The elements of \textbf{P} have the following form \notetodylan{not sure how best to show sym labels for the D and X matrices, also z is a placeholder for how I eventually decide to show the combination of 2+3 or 4+6}
+The \textbf{P} and \textbf{Q} super matrices have a similar layout to the density matrices. The elements of \textbf{P} have the following form
 
 \begin{equation}
 \label{PSMTX}
@@ -563,7 +563,7 @@ The form of the \textbf{Q} super matrix is almost the same a \textbf{P}, but the
 
 \subsubsection{FORMPQ Algorithm}
 \label{FORMPQ Algorithm}
-Forming the P and Q matrices proved to be the most difficult part of this program to parallelize. It's difficultly was due to the second term in the summations where each \textbf{X} matrix used depends on how far along the summation has progressed. Further, each element of \textbf{P} will have the \textbf{X} matrix change at different times. These two factors result in lots of \textbf{if} statements which GPUs cannot handle in parallel. There is also the issue where each element in the $LL$ and $SS$ sections need to loop over every element of the same sections of the density matrix, as do the $LS$ and $SL$ sections. This means that there will be lots of global memory reads unless handled properly. All together, this makes for a very ugly algorithm to type and parallelize.
+Forming the P and Q matrices proved to be the most difficult part of this program to parallelize. It's difficultly was due to the second term in the summations where each \textbf{X} matrix used depends on how far along the summation has progressed. Further, each element of \textbf{P} will have the \textbf{X} matrix change at different times. These two factors result in lots of \textbf{if} statements which GPUs cannot handle in parallel. There is also the issue where each element in the $LL$ and $SS$ sections need to loop over every element of the same sections of the density matrix, as do the $LS$ and $SL$ sections. This means that there will be lots of global memory reads unless handled properly. All together, this makes for a very ugly algorithm to try and parallelize.
 
 We can begin to tackle this problems when we notice that each element of the $LL$ and $SS$ sections of \textbf{P} depend on only the \textbf{X$^{1}$}, \textbf{X$^{2}$}, \textbf{X$^{3}$}, and \textbf{X$^{8}$} sets of integrals, and both need the entire $LL$ and $SS$ sections of the density matrix. Likewise, the $LS$ and $SL$ sections depend on only the \textbf{X$^{4}$}, \textbf{X$^{5}$}, \textbf{X$^{6}$}, and \textbf{X$^{7}$} sets of integrals and the $SL$ and $LS$ sections of the density matrix. So we can divide the threads into two sets, one which will calculate the $LL$ and $SS$ sections, and one which will calculate the $SL$ and $LS$ sections. To further reduce the amount of global memory reads, each thread will make the most of a read as possible. This is done by loading a chunk of the density matrix into the shared memory and then looping over each element of the chunk. While looping, each thread accumulates data for both sections of the set it belongs to (e.i. thread 1 accumulates data for \textbf{P}$^{LL}_{1,1}$ and \textbf{P}$^{SS}_{1,1}$). Additionally, the \textbf{P} and \textbf{Q} matrices are calculated simultaneously, so each thread calculates a total of four elements. 
 

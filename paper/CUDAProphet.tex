@@ -568,9 +568,7 @@ Forming the P and Q matrices proved to be the most difficult part of this progra
 Two different attempts were made to try and accelerate this algorithm. Each tried to exploit a different property of GPUS. One attempted to combat the amount of FLOPs to compute by distributing the amount of work to as many threads as possible. This will be referred to as the Multiple Threads Single Element (MTSE) algorithm. The second tried to deal with the amount of global memory reads by making the most of each read. This will be referred to as Single Thread Multiple Element (STME) algorithm. Each will be described in the sections below.
 
 \subsubsection{MTSE Algorithm}
-As previously stated, the propose of the MTSE algorithm is to distribute the amount of work needed to be done to as many threads as possible. This was achieved by having multiple threads each computing two of the multiplications needed for a single element of two matrices in Equation \ref{PSMTX}, and then combining the products of these multiplications in parallel. These two tasks were performed by two separate kernels and the pseudocode for each (showing only the calculation for \textbf{P}) is shown in Algorithms \ref{MTSE_K1} and \ref{MTSE_K2} respectively.
-
-In Algorithm \ref{Kernel 1 for MTSE} 
+As previously stated, the propose of the MTSE algorithm is to distribute the amount of work needed to be done to as many threads as possible. This was achieved by having multiple threads each computing two of the multiplications needed for a single element of two matrices in Equation \ref{PSMTX}, and then combining the products of these multiplications in parallel. These two tasks were performed by two separate kernels and the pseudocode for each is shown in Algorithms \ref{MTSE_K1} and \ref{MTSE_K2} respectively. The pseudocode shows only the calculation for the \textbf{P} matrices, and Algorithm \ref{MTSE_K2} shows only the calculation of the \textbf{P$^{LL}$} portion. 
 
 \begin{algorithm}
 \caption{Kernel 1 for MTSE}
@@ -584,15 +582,13 @@ In Algorithm \ref{Kernel 1 for MTSE}
 	\STATE{$l = lpq\_array(i, 1)$}
 	\STATE{$p = lpq\_array(i, 2)$}
 	\STATE{$q = lpq\_array(i, 3)$}
-	
+	\STATE{$fctr = 1.0$}
 	\IF{$(p \neq q)$ \AND $(inttype == 0)$}
 		\STATE{$fctr = 2.0$}
 	\ELSIF{$(p == q)$ \AND $(inttype == 1)$}
 		\STATE{$fctr = 0.5$}
-	\ELSE
-		\STATE{$fctr = 1.0$}
 	\ENDIF
-	
+	\STATE{$loc = \textbf{max}(i, j) + ((\textbf{max}(i, j) - 1) * (\textbf{max}(i, j) - 2) / 2) + \textbf{min}(i, j) - 1$}
 	\IF{$(inttype == 0)$}
 		\IF{$i>j$}
 			\STATE{$k1 = 3$}
@@ -603,8 +599,8 @@ In Algorithm \ref{Kernel 1 for MTSE}
 		\ENDIF
 		\STATE{$pos1 = locmx(l) + ((p - 1)^2 + p - 1) / 2 + q$}
 		\STATE{$pos2 = locmx(l) + ((p - 1 + nbs(l))^2 + p + nbs(l) - 1) / 2 + q + nbs(l)$}
-		\STATE{$pLL(i, j) = d(pos1) * fctr * xp(1, loc) + d(pos2) * fctr * xp(k1, loc)$}
-		\STATE{$pSS(i, j) = d(pos1) * fctr * xp(k2, loc) + d(pos2) * fctr * xp(k8, loc)$}
+		\STATE{$pLL(i, j) = d(pos1) * fctr * x(1, loc) + d(pos2) * fctr * x(k1, loc)$}
+		\STATE{$pSS(i, j) = d(pos1) * fctr * x(k2, loc) + d(pos2) * fctr * x(k8, loc)$}
 	\ELSE
 		\IF{$i>j$}
 			\STATE{$k1 = 4$}
@@ -615,18 +611,65 @@ In Algorithm \ref{Kernel 1 for MTSE}
 		\ENDIF
 		\STATE{$pos1 = locmx(l) + ((p - 1 + nbs(l))^2 + p - 1 + nbs(l)) / 2 + q$}
 		\STATE{$pos2 = locmx(l) + ((q - 1 + nbs(l))^2 + q - 1 + nbs(l)) / 2 + p$}
-		\STATE{$pSL(i, j) = d(pos1) * fctr * xp(7, loc) + d(pos2) * fctr * xp(k1, loc)$}
-		\STATE{$pLS(i, j) = d(pos1) * fctr * xp(k2, loc) + d(pos2) * fctr * xp(5, loc)$}
+		\STATE{$pSL(i, j) = d(pos1) * fctr * x(7, loc) + d(pos2) * fctr * x(k1, loc)$}
+		\STATE{$pLS(i, j) = d(pos1) * fctr * x(k2, loc) + d(pos2) * fctr * x(5, loc)$}
 	\ENDIF
-	
 \ENDIF
 
 \end{algorithmic}
 \end{algorithm}
 
+\begin{algorithm}
+\caption{Kernel 2 for MTSE}
+\label{MTSE_K2}
+\begin{algorithmic}
+
+\STATE{$i =  threadIdx.x + (blockIdx.x - 1) * blockDim.x * 2$}
+\STATE{$inttype = blockIdx.z - 1$}
+
+\IF{$inttype == 0$}
+	\IF{$i \leq total$}
+		\STATE{$s\_tile(threadIdx.x) = pLL(i, blockIdx.y)$}
+	\ELSE
+		\STATE{$s\_tile(threadIdx.x) = 0.0$}
+	\ENDIF
+	\IF{$i + blockDim.x \leq total$}
+		\STATE{$s\_tile(threadIdx.x + blockDim.x) = pLL(i + blockDim.x, blockIdx.y)$}
+	\ELSE
+		\STATE{$s\_tile(threadIdx.x + blockDim.x) = 0.0$}
+	\ENDIF
+\ELSE
+\STATE{Perform a similar instruction on the other $pXY$ or $qXY$ matrices depending on $inttype$}
+\ENDIF
+\FOR{$j = \textbf{log}_{2}(blockDim.x), j \geq 0, j = j-1$}
+	\STATE{call \textbf{syncthreads}}
+	\IF{$threadIdx.x \leq 2^{j}$}
+		\STATE{$s\_tile(threadIdx.x) = s\_tile(threadIdx.x) + s\_tile(threadIdx.x + 2^{j})$}
+	\ENDIF
+\ENDFOR	 
+\IF{$threadIdx.x == 1$}
+	\STATE{$l = lpq\_array(blockIdx.y, 1)$}
+	\STATE{$p = lpq\_array(blockIdx.y, 2)$}
+	\STATE{$q = lpq\_array(blockIdx.y, 3)$}
+	
+	\IF{$(inttype == 0)$}
+		\STATE{$pos = locmx(l) + ((p - 1)^{2} + p - 1) / 2 + q$}
+		\STATE{$istat = \textbf{atomicadd}(pmx(pos), s\_tile(threadIdx.x))$}
+	\ELSE
+		\STATE{Perform a similar instruction on the other $pXY$ or $qXY$ matrices depending on $inttype$}
+	\ENDIF	
+\ENDIF
+
+\end{algorithmic}
+\end{algorithm}
+
+$inttype$ refers to one or more if the \textbf{P} or \textbf{Q} matrices. In Algorithm \ref{MTSE_K1}, $inttype$ can have a value of 0 or 1, where 0 refers to the $LL$ and $SS$ \textbf{P} or \textbf{Q} matrices, and 1 is the $SL$ and $LS$ matrices.  In Algorithm \ref{MTSE_K2}, $inttype$ can have a values ranging from 0 to 7 where 0 to 3 are the \textbf{P} $LL$, $SS$, $SL$, $LS$ matrices, and the rest are the \textbf{Q} matrices in the same order. $d$ is \textbf{D} in its vector representation and $pos$ are the locations of the $p$ and $q$ elements within it. $locmx$ is an array with 7 elements, and each element is equal to the number of unique $LL$, $SS$, $SL$, $LS$ elements of symmetry $l-1$. $fctr$ accounts for when an element is single or double counted in the summation. $x(\chi, :)$ is the vector representation of \textbf{X$^{\chi}$}, $loc$ is the location of needed $pqrs$ element in the vector, $total$ is the length of one of the dimensions of \textbf{X$^{\chi}$}, and $k1$ and $k2$ are the outputs of the $J$ function from Equation \ref{PSMTX}. Finally, $pXY$ variables are matrices dimension $total$ by $total$ and store the sum of the two multiplications of the $d$ and $x$ vectors, $pmx$ if the vector representation of the \textbf{P} matrices, and $s\_tile$ is a vector in the shared memory for summing up the elements of each row of the $pXY$ matrices. 
+
+The grid will need to have $\frac{total - 1}{blockDim.x} \times \frac{total - 1}{blockDim.y} \times 2$ dimensions for Algorithm \ref{MTSE_K1} and $\frac{total - 1}{blockDim.x} \times \frac{total - 1}{blockDim.y} \times 8$ for Algorithm \ref{MTSE_K2}. Algorithm \ref{MTSE_K1} is fairly straight forward, 
+
+
 \subsubsection{STME Algorithm}
 We can begin to tackle this problems when we notice that each element of the $LL$ and $SS$ sections of \textbf{P} depend on only the \textbf{X$^{1}$}, \textbf{X$^{2}$}, \textbf{X$^{3}$}, and \textbf{X$^{8}$} sets of integrals, and both need the entire $LL$ and $SS$ sections of the density matrix. Likewise, the $LS$ and $SL$ sections depend on only the \textbf{X$^{4}$}, \textbf{X$^{5}$}, \textbf{X$^{6}$}, and \textbf{X$^{7}$} sets of integrals and the $SL$ and $LS$ sections of the density matrix. So we can divide the threads into two sets, one which will calculate the $LL$ and $SS$ sections, and one which will calculate the $SL$ and $LS$ sections. To further reduce the amount of global memory reads, each thread will make the most of a read as possible. This is done by loading a chunk of the density matrix into the shared memory and then looping over each element of the chunk. While looping, each thread accumulates data for both sections of the set it belongs to (e.i. thread 1 accumulates data for \textbf{P}$^{LL}_{1,1}$ and \textbf{P}$^{SS}_{1,1}$). Additionally, the \textbf{P} and \textbf{Q} matrices are calculated simultaneously, so each thread calculates a total of four elements. 
-
 \section{Input Description}\label{inp_des}
 The program can be executed on Unix-like systems in the following way
 \begin{lstlisting}[language=bash]

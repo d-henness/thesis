@@ -236,6 +236,7 @@ The optimized wtbs parameters and basis set sizes for elements 2 to 86 are shown
 85 At & $^{2}P$ & 5.210$\times10^{-02}$ & 1.757 & 5.846 & 1.502 & (1:32) & (1:27) & (3:23) & (6:19) \\
 86 Rn & $^{1}S$ & 5.716$\times10^{-02}$ & 1.749 & 5.695 & 1.486 & (1:32) & (1:27) & (3:23) & (6:19) \\
 \end{longtable}
+\doublespacing
 
 	
 \chapter{CUDAProphet}
@@ -557,14 +558,73 @@ The \textbf{P} and \textbf{Q} super matrices have a similar layout to the densit
 \end{split}
 \end{equation}
 
-Where $J(pqrs)$ is an integer function that selects specific definitions of the two-electron integrals from Equation \ref{2EINTS}. How exactly this works is shown in Section \ref{FORMPQ Algorithm}.
+Where $J(pqrs)$ is an integer function that selects specific definitions of the two-electron integrals from Equation \ref{2EINTS}. How exactly this works is shown in the following sections.
 
 The form of the \textbf{Q} super matrix is almost the same a \textbf{P}, but there will be and additional multiplication of the vector coupling coefficient between the open shells for each summation.
 
 \subsubsection{FORMPQ Algorithm}
-\label{FORMPQ Algorithm}
-Forming the P and Q matrices proved to be the most difficult part of this program to parallelize. It's difficultly was due to the second term in the summations where each \textbf{X} matrix used depends on how far along the summation has progressed. Further, each element of \textbf{P} will have the \textbf{X} matrix change at different times. These two factors result in lots of \textbf{if} statements which GPUs cannot handle in parallel. There is also the issue where each element in the $LL$ and $SS$ sections need to loop over every element of the same sections of the density matrix, as do the $LS$ and $SL$ sections. This means that there will be lots of global memory reads unless handled properly. All together, this makes for a very ugly algorithm to try and parallelize.
+Forming the P and Q matrices proved to be the most difficult part of this program to parallelize. It's difficultly was due to the second term in the summations where each \textbf{X} matrix used depends on how far along the summation has progressed. Further, each element of \textbf{P} will have the \textbf{X} matrix change at different times. These two factors result in lots of \textbf{if} statements which GPUs have difficulty handling in parallel. There is also the issue where each element in the $LL$ and $SS$ sections need to loop over every element of the same sections of the density matrix, as do the $LS$ and $SL$ sections. This means that there will be lots of global memory reads unless handled properly. All together, this makes for a very ugly algorithm to try and parallelize.
 
+Two different attempts were made to try and accelerate this algorithm. Each tried to exploit a different property of GPUS. One attempted to combat the amount of FLOPs to compute by distributing the amount of work to as many threads as possible. This will be referred to as the Multiple Threads Single Element (MTSE) algorithm. The second tried to deal with the amount of global memory reads by making the most of each read. This will be referred to as Single Thread Multiple Element (STME) algorithm. Each will be described in the sections below.
+
+\subsubsection{MTSE Algorithm}
+As previously stated, the propose of the MTSE algorithm is to distribute the amount of work needed to be done to as many threads as possible. This was achieved by having multiple threads each computing two of the multiplications needed for a single element of two matrices in Equation \ref{PSMTX}, and then combining the products of these multiplications in parallel. These two tasks were performed by two separate kernels and the pseudocode for each (showing only the calculation for \textbf{P}) is shown in Algorithms \ref{MTSE_K1} and \ref{MTSE_K2} respectively.
+
+In Algorithm \ref{Kernel 1 for MTSE} 
+
+\begin{algorithm}
+\caption{Kernel 1 for MTSE}
+\label{MTSE_K1}
+\begin{algorithmic}
+
+\STATE{$i =  threadIdx.x + (blockIdx.x - 1) * blockDim.x$}
+\STATE{$j =  blockIdx.y$}
+\STATE{$inttype = blockIdx.z - 1$}
+\IF{$i \leq total$}
+	\STATE{$l = lpq\_array(i, 1)$}
+	\STATE{$p = lpq\_array(i, 2)$}
+	\STATE{$q = lpq\_array(i, 3)$}
+	
+	\IF{$(p \neq q)$ \AND $(inttype == 0)$}
+		\STATE{$fctr = 2.0$}
+	\ELSIF{$(p == q)$ \AND $(inttype == 1)$}
+		\STATE{$fctr = 0.5$}
+	\ELSE
+		\STATE{$fctr = 1.0$}
+	\ENDIF
+	
+	\IF{$(inttype == 0)$}
+		\IF{$i>j$}
+			\STATE{$k1 = 3$}
+			\STATE{$k2 = 2$}
+		\ELSE
+			\STATE{$k1 = 2$}
+			\STATE{$k2 = 3$}
+		\ENDIF
+		\STATE{$pos1 = locmx(l) + ((p - 1)^2 + p - 1) / 2 + q$}
+		\STATE{$pos2 = locmx(l) + ((p - 1 + nbs(l))^2 + p + nbs(l) - 1) / 2 + q + nbs(l)$}
+		\STATE{$pLL(i, j) = d(pos1) * fctr * xp(1, loc) + d(pos2) * fctr * xp(k1, loc)$}
+		\STATE{$pSS(i, j) = d(pos1) * fctr * xp(k2, loc) + d(pos2) * fctr * xp(k8, loc)$}
+	\ELSE
+		\IF{$i>j$}
+			\STATE{$k1 = 4$}
+			\STATE{$k2 = 6$}
+		\ELSE
+			\STATE{$k1 = 6$}
+			\STATE{$k2 = 4$}
+		\ENDIF
+		\STATE{$pos1 = locmx(l) + ((p - 1 + nbs(l))^2 + p - 1 + nbs(l)) / 2 + q$}
+		\STATE{$pos2 = locmx(l) + ((q - 1 + nbs(l))^2 + q - 1 + nbs(l)) / 2 + p$}
+		\STATE{$pSL(i, j) = d(pos1) * fctr * xp(7, loc) + d(pos2) * fctr * xp(k1, loc)$}
+		\STATE{$pLS(i, j) = d(pos1) * fctr * xp(k2, loc) + d(pos2) * fctr * xp(5, loc)$}
+	\ENDIF
+	
+\ENDIF
+
+\end{algorithmic}
+\end{algorithm}
+
+\subsubsection{STME Algorithm}
 We can begin to tackle this problems when we notice that each element of the $LL$ and $SS$ sections of \textbf{P} depend on only the \textbf{X$^{1}$}, \textbf{X$^{2}$}, \textbf{X$^{3}$}, and \textbf{X$^{8}$} sets of integrals, and both need the entire $LL$ and $SS$ sections of the density matrix. Likewise, the $LS$ and $SL$ sections depend on only the \textbf{X$^{4}$}, \textbf{X$^{5}$}, \textbf{X$^{6}$}, and \textbf{X$^{7}$} sets of integrals and the $SL$ and $LS$ sections of the density matrix. So we can divide the threads into two sets, one which will calculate the $LL$ and $SS$ sections, and one which will calculate the $SL$ and $LS$ sections. To further reduce the amount of global memory reads, each thread will make the most of a read as possible. This is done by loading a chunk of the density matrix into the shared memory and then looping over each element of the chunk. While looping, each thread accumulates data for both sections of the set it belongs to (e.i. thread 1 accumulates data for \textbf{P}$^{LL}_{1,1}$ and \textbf{P}$^{SS}_{1,1}$). Additionally, the \textbf{P} and \textbf{Q} matrices are calculated simultaneously, so each thread calculates a total of four elements. 
 
 \section{Input Description}\label{inp_des}

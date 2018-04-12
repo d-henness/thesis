@@ -46,6 +46,7 @@
 \usepackage{xcolor}
 
 \usepackage{algorithm}
+
 \usepackage{algorithmic}
 \usepackage{amsmath}
 
@@ -565,9 +566,11 @@ The form of the \textbf{Q} super matrix is almost the same a \textbf{P}, but the
 \subsubsection{FORMPQ Algorithm}
 Forming the P and Q matrices proved to be the most difficult part of this program to parallelize. It's difficultly was due to the second term in the summations where each \textbf{X} matrix used depends on how far along the summation has progressed. Further, each element of \textbf{P} will have the \textbf{X} matrix change at different times. These two factors result in lots of \textbf{if} statements which GPUs have difficulty handling in parallel. There is also the issue where each element in the $LL$ and $SS$ sections need to loop over every element of the same sections of the density matrix, as do the $LS$ and $SL$ sections. This means that there will be lots of global memory reads unless handled properly. All together, this makes for a very ugly algorithm to try and parallelize.
 
-Two different attempts were made to try and accelerate this algorithm. Each tried to exploit a different property of GPUS. One attempted to combat the amount of FLOPs to compute by distributing the amount of work to as many threads as possible. This will be referred to as the Multiple Threads Single Element (MTSE) algorithm. The second tried to deal with the amount of global memory reads by making the most of each read. This will be referred to as Single Thread Multiple Element (STME) algorithm. Each will be described in the sections below.
+Two different attempts were made to try and accelerate this algorithm. Each tried to exploit a different property of GPUS. One attempted to combat the amount of FLOPs to compute by distributing the amount of work to as many threads as possible. This will be referred to as the Multiple Threads Single Element (MTSE) algorithm. The second tried to deal with the amount of global memory reads by making the most of each read. This will be referred to as Single Thread Single Element (STSE) algorithm. Each will be described in the sections below.
 
 \subsubsection{MTSE Algorithm}
+\notetodylan{The acronyms for these algorithms don't really describe what each does, think of something better}
+
 As previously stated, the propose of the MTSE algorithm is to distribute the amount of work needed to be done to as many threads as possible. This was achieved by having multiple threads each computing two of the multiplications needed for a single element of two matrices in Equation \ref{PSMTX}, and then combining the products of these multiplications in parallel. These two tasks were performed by two separate kernels and the pseudocode for each is shown in Algorithms \ref{MTSE_K1} and \ref{MTSE_K2} respectively. The pseudocode shows only the calculation for the \textbf{P} matrices, and Algorithm \ref{MTSE_K2} shows only the calculation of the \textbf{P$^{LL}$} portion. 
 
 \begin{algorithm}
@@ -615,7 +618,6 @@ As previously stated, the propose of the MTSE algorithm is to distribute the amo
 		\STATE{$pLS(i, j) = d(pos1) * fctr * x(k2, loc) + d(pos2) * fctr * x(5, loc)$}
 	\ENDIF
 \ENDIF
-
 \end{algorithmic}
 \end{algorithm}
 
@@ -665,11 +667,66 @@ As previously stated, the propose of the MTSE algorithm is to distribute the amo
 
 $inttype$ refers to one or more if the \textbf{P} or \textbf{Q} matrices. In Algorithm \ref{MTSE_K1}, $inttype$ can have a value of 0 or 1, where 0 refers to the $LL$ and $SS$ \textbf{P} or \textbf{Q} matrices, and 1 is the $SL$ and $LS$ matrices.  In Algorithm \ref{MTSE_K2}, $inttype$ can have a values ranging from 0 to 7 where 0 to 3 are the \textbf{P} $LL$, $SS$, $SL$, $LS$ matrices, and the rest are the \textbf{Q} matrices in the same order. $d$ is \textbf{D} in its vector representation and $pos$ are the locations of the $p$ and $q$ elements within it. $locmx$ is an array with 7 elements, and each element is equal to the number of unique $LL$, $SS$, $SL$, $LS$ elements of symmetry $l-1$. $fctr$ accounts for when an element is single or double counted in the summation. $x(\chi, :)$ is the vector representation of \textbf{X$^{\chi}$}, $loc$ is the location of needed $pqrs$ element in the vector, $total$ is the length of one of the dimensions of \textbf{X$^{\chi}$}, and $k1$ and $k2$ are the outputs of the $J$ function from Equation \ref{PSMTX}. Finally, $pXY$ variables are matrices dimension $total$ by $total$ and store the sum of the two multiplications of the $d$ and $x$ vectors, $pmx$ if the vector representation of the \textbf{P} matrices, and $s\_tile$ is a vector in the shared memory for summing up the elements of each row of the $pXY$ matrices. 
 
-The grid will need to have $\frac{total - 1}{blockDim.x} \times \frac{total - 1}{blockDim.y} \times 2$ dimensions for Algorithm \ref{MTSE_K1} and $\frac{total - 1}{blockDim.x} \times \frac{total - 1}{blockDim.y} \times 8$ for Algorithm \ref{MTSE_K2}. Algorithm \ref{MTSE_K1} is fairly straight forward, 
+The grid will need to have $\frac{total - 1}{blockDim.x} \times \frac{total - 1}{blockDim.y} \times 2$ dimensions for Algorithm \ref{MTSE_K1} and $\frac{total - 1}{blockDim.x} \times \frac{total - 1}{blockDim.y} \times 8$ for Algorithm \ref{MTSE_K2}. Algorithm \ref{MTSE_K1} is fairly straight forward, but Algorithm \ref{MTSE_K2} could use a little more explanation. It is a ``parallel reduction" algorithm. At the start, each thread loads an element of the relevant $pXY$ array into the shared variable $s\_tile$ and also loads the element that is $blockDim.x$ elements ahead of the original element. Then, in a loop starting from $j= \textbf{log}_{2}(blockDim.x)$ and descending to $j = 0$ threads with a $threadIdx.x$ value of less then $2^{j}$ add the value of  $s\_tile(threadIdx.x + 2^{j})$ to $s\_tile(threadIdx.x)$. The key is that the amount of elements that need to be added up is reduced by half every loop. Because it is possible that the total number of elements of $pXY$ needed to sum up for the relevant $pmx$ element could be larger than one block can handle, atomic operations are used to force the final addition to occur serially.
+
+\subsubsection{STSE Algorithm}
+The STSE Algorithm tries a different approach to this problem then the MTSE Algorithm. Instead of trying to spread out the amount of work to do as much as possible, it tries to reduce the amount of global memory reads by making each thread do as much work as it can. This results in fewer blocks, but each block needs to run for longer. Giving only the calculations for $pmx$ and when $inttype = 0$, Algorithm \ref{STSE_K} shows how this is done.
+
+\begin{algorithm}
+\caption{STSE Algorithm}
+\label{STSE_K}
+\begin{algorithmic}
+
+\STATE{$i =  threadIdx.x + (blockIdx.x - 1) * blockDim.x$}
+\STATE{$inttype = blockIdx.z - 1$}
+\IF{$i \leq total$}
+	\STATE{$l = lpq\_array(i, 1)$}
+	\STATE{$p = lpq\_array(i, 2)$}
+	\STATE{$q = lpq\_array(i, 3)$}
+	\STATE{$fctr = 1.0$}
+	\STATE{$loop = 0$}
+	\FOR{$j = 1, j \leq (total - 1)/blockDim.x + 1, j = j + 1$}
+		\STATE{$mink = 1 + (j - 1) * blockDim.x$}
+		\STATE{$maxk = \textbf{min}(j * blockDim.x, total)$}
+		\IF{$threadIdx.x + (j - 1) * blockDim.x \leq total$}
+			\STATE{$m = lpq\_array(threadIdx.x + (j - 1) * blockDim.x, 1)$}
+			\STATE{$r = lpq\_array(threadIdx.x + (j - 1) * blockDim.x, 2)$}
+			\STATE{$s = lpq\_array(threadIdx.x + (j - 1) * blockDim.x, 3)$}
+			\IF{$(r \neq s)$ \AND $(inttype == 0)$}
+				\STATE{$fctr = 2.0$}
+			\ENDIF
+			\STATE{$s\_d(threadIdx.x, 1) = fctr * d(locmx(m) + ((r - 1)^2 + r - 1) / 2 + s - 1)$}
+			\STATE{$s\_d(threadIdx.x, 2) = fctr * d(locmx(m) + ((r - 1 + nbs(m))^2 + r + nbs(m) - 1) / 2 + s + nbs(m))$}
+		\ENDIF
+		\STATE{$fctr = 1.0$}
+		\STATE{call \textbf{syncthreads}}
+		\FOR{$k = mink, k \leq maxk, k = k + 1$}
+			\IF{$(i \geq k)$ \AND $(inttype == 0)$}
+				\STATE{$loc = ((i - 1)^{2} + i - 1) / 2 + k$}
+				\STATE{$k1 = 3$}
+				\STATE{$k2 = 2$}
+			\ELSIF{$(i \leq k)$ \AND $(inttype == 0)$}
+				\STATE{$loop = loop + k - 1$}
+				\STATE{$loc = (i^{2} + i) / 2 + loop$}
+				\STATE{$k1 = 2$}
+				\STATE{$k2 = 3$}
+			\ENDIF
+			\STATE{$pm1 = pm1 + s\_d(1 + k - mink, 1) * x(1, loc) + s\_d(1 + k - mink, 2) * x(k1, loc)$}
+			\STATE{$pm2 = pm2 + s\_d(1 + k - mink, 1) * x(k2, loc) + s\_d(1 + k - mink, 2) * x(k8, loc)$}
+		\ENDFOR
+		\STATE{call \textbf{syncthreads}}
+	\ENDFOR
+	\STATE{$pmx(locmx(l) + ((p - 1)^2 + p - 1) / 2 + q) = pm1$}
+	\STATE{$pmx(locmx(l) + ((p - 1 + nbs(l))^2 + p + nbs(l) - 1) / 2 + q + nbs(l)) = pm2$}
+\ENDIF
+\end{algorithmic}
+\end{algorithm}
+
+All variables are the same as in Algorithms \ref{MTSE_K1} and \ref{MTSE_K2}, but $inttype$ can only be 0 or 1 (the meaning are the same as Algorithm \ref{MTSE_K1}). As for the new variables, $s\_d$ is a chunk of $d$ that has been loading into the shared memory.$mink$ and $maxk$ are used to calculated the sections of $x$ that current chunk of $d$ in shared memory applies to and $loop$ is used to adjust the value of $loc$ if the needed two-electron integral is on the bottom triangle of a \textbf{X} matrix. $pm1$ and $pm2$ are accumulator variables that track the sum of an element of $pmx$ as $d$ is looped through.
+
+Algorithm \ref{STSE_K} has two nested loops. The outer loop loops over elements of $d$, loading chunks of it into the shared memory as it goes. The inner loop loops over elements of $x$ and preforms the multiplications of $d$ and $x$ elements, keeping a running tally of the sum of these multiplications.
 
 
-\subsubsection{STME Algorithm}
-We can begin to tackle this problems when we notice that each element of the $LL$ and $SS$ sections of \textbf{P} depend on only the \textbf{X$^{1}$}, \textbf{X$^{2}$}, \textbf{X$^{3}$}, and \textbf{X$^{8}$} sets of integrals, and both need the entire $LL$ and $SS$ sections of the density matrix. Likewise, the $LS$ and $SL$ sections depend on only the \textbf{X$^{4}$}, \textbf{X$^{5}$}, \textbf{X$^{6}$}, and \textbf{X$^{7}$} sets of integrals and the $SL$ and $LS$ sections of the density matrix. So we can divide the threads into two sets, one which will calculate the $LL$ and $SS$ sections, and one which will calculate the $SL$ and $LS$ sections. To further reduce the amount of global memory reads, each thread will make the most of a read as possible. This is done by loading a chunk of the density matrix into the shared memory and then looping over each element of the chunk. While looping, each thread accumulates data for both sections of the set it belongs to (e.i. thread 1 accumulates data for \textbf{P}$^{LL}_{1,1}$ and \textbf{P}$^{SS}_{1,1}$). Additionally, the \textbf{P} and \textbf{Q} matrices are calculated simultaneously, so each thread calculates a total of four elements. 
 \section{Input Description}\label{inp_des}
 The program can be executed on Unix-like systems in the following way
 \begin{lstlisting}[language=bash]

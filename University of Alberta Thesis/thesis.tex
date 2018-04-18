@@ -1,35 +1,6 @@
-%% This template can be used to write a paper for
-%% Computer Physics Communications using LaTeX.
-%% For authors who want to write a computer program description,
-%% an example Program Summary is included that only has to be
-%% completed and which will give the correct layout in the
-%% preprint and the journal.
-%% The `elsarticle' style is used and more information on this style
-%% can be found at 
-%% http://www.elsevier.com/wps/find/authorsview.authors/elsarticle.
-%%
-%%
-\documentclass[12pt]{book}
 
-%% Use the option review to obtain double line spacing
-%% \documentclass[preprint,review,12pt]{elsarticle}
-
-%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
-%% for a journal layout:
-%% \documentclass[final,1p,times]{elsarticle}
-%% \documentclass[final,1p,times,twocolumn]{elsarticle}
-%% \documentclass[final,3p,times]{elsarticle}
-%% \documentclass[final,3p,times,twocolumn]{elsarticle}
-%% \documentclass[final,5p,times]{elsarticle}
-%% \documentclass[final,5p,times,twocolumn]{elsarticle}
-
-%% if you use PostScript figures in your article
-%% use the graphics package for simple commands
-%% \usepackage{graphics}
-%% or use the graphicx package for more complicated commands
-%% \usepackage{graphicx}
-%% or use the epsfig package if you prefer to use the old commands
-%% \usepackage{epsfig}
+\documentclass[12pt]{report}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\vartables}{p{1.5cm} p{.5cm} p{1.25cm} p{7.5cm}} %% The format used in the input description tables
 \newcommand{\notetodylan}[1]{\textcolor{red}{#1}} %% Makes text red to indicate notes to myself
@@ -37,82 +8,712 @@
 \newcommand{\kernel}[1]{\textit{\textbf{#1}}}
 \newcommand{\comm}[1]{\textbf{#1}}
 
-%% The amssymb package provides various useful mathematical symbols
+\usepackage[none,dcucite,abbr]{harvard}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{uathesis}
+\usepackage{lscape}
+\usepackage{longtable}
+
+%my packages
 \usepackage{amssymb}
 \usepackage{listings}
 \usepackage{longtable}
-
-
 \usepackage{xcolor}
-
 \usepackage{algorithm}
-
 \usepackage{algorithmic}
 \usepackage{amsmath}
 
 
-\usepackage{setspace}
-\doublespacing
 
-%% The amsthm package provides extended theorem environments
-%% \usepackage{amsthm}
+%TCIDATA{OutputFilter=Latex.dll}
+%TCIDATA{LastRevised=Sat Jul 17 17:16:09 1999}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{CSTFile=report.cst}
 
-%% The lineno packages adds line numbers. Start line numbering with
-%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
-%% for the whole article with \linenumbers after \end{frontmatter}.
-%% \usepackage{lineno}
-
-%% natbib.sty is loaded by default. However, natbib options can be
-%% provided with \biboptions{...} command. Following options are
-%% valid:
-
-%%   round  -  round parentheses are used (default)
-%%   square -  square brackets are used   [option]
-%%   curly  -  curly braces are used      {option}
-%%   angle  -  angle brackets are used    <option>
-%%   semicolon  -  multiple citations separated by semi-colon
-%%   colon  - same as semicolon, an earlier confusion
-%%   comma  -  separated by comma
-%%   numbers-  selects numerical citations
-%%   super  -  numerical citations as superscripts
-%%   sort   -  sorts multiple citations according to order in ref. list
-%%   sort&compress   -  like sort, but also compresses numerical citations
-%%   compress - compresses without sorting
-%%
-%% \biboptions{comma,round}
-
-% \biboptions{}
-
-%% This list environment is used for the references in the
-%% Program Summary
-%%
-\newcounter{bla}
-\newenvironment{refnummer}{%
-\list{[\arabic{bla}]}%
-{\usecounter{bla}%
- \setlength{\itemindent}{0pt}%
- \setlength{\topsep}{0pt}%
- \setlength{\itemsep}{0pt}%
- \setlength{\labelsep}{2pt}%
- \setlength{\listparindent}{0pt}%
- \settowidth{\labelwidth}{[9]}%
- \setlength{\leftmargin}{\labelwidth}%
- \addtolength{\leftmargin}{\labelsep}%
- \setlength{\rightmargin}{0pt}}}
- {\endlist}
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+%\input{tcilatex}
 
 \begin{document}
 
 
-%%
-%% Start line numbering here if you want
-%%
-% \linenumbers
+%TCIMACRO{
+%\TeXButton{degree}{\degree{\MSc}%
+%}}%
+%BeginExpansion
+\degree{\MSc}%
+%
+%EndExpansion
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%The degree completed.  \PhD or \MSc
 
-% Computer program descriptions should contain the following
-% PROGRAM SUMMARY.
+%TCIMACRO{
+%\TeXButton{dept}{\dept{Department of Chemical and Materials Engineering}%
+%}}%
+%BeginExpansion
+\dept{Department of Chemistry}%
+%
+%EndExpansion
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%The Department in which degree completed
 
-%% main text
+%TCIMACRO{
+%\TeXButton{field}{\field{Process Control}%
+%}}%
+%BeginExpansion
+\field{\notetodylan{put something here}}%
+%
+%EndExpansion
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%Field of specialization
+
+%TCIMACRO{
+%\TeXButton{address}{\permanentaddress{CME 536 \\
+%University of Alberta \\
+%Edmonton, AB \\
+%Canada, T6G 2G6}%
+%}}%
+%BeginExpansion
+\permanentaddress{
+\notetodylan{change this CME 536 \\
+University of Alberta \\
+Edmonton, AB \\
+Canada, T6G 2G6}}%
+%
+%EndExpansion
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%Your address
+
+%TCIMACRO{
+%\TeXButton{examiners}{\examiners{J. Fraser Forbes, Martin Guay, G. Galileo }%
+%}}%
+%BeginExpansion
+\examiners{\notetodylan{put examiners here} }%
+%
+%EndExpansion
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%Examiners on your committee
+
+%TCIMACRO{
+%\TeXButton{convocationseason}{\convocationseason{Fall}%
+%}}%
+%BeginExpansion
+\convocationseason{Fall}%
+%
+%EndExpansion
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%When you graduate. (finally...)
+
+%TCIMACRO{
+%\TeXButton{quotes}{\frontpiece{
+%{\large ```The stars are made of the same atoms as the earth.'
+%I usually pick one small topic like this to give a lecture on. 
+%Poets say science takes away from the beauty of the stars -- mere gobs of gas atoms. 
+%Nothing is ``mere." I too can see the stars on a desert night, and feel them. 
+%But do I see less or more? The vastness of the heavens stretches my imagination -- 
+%stuck on this carousel my little eye can catch one-million-year-old light. 
+%A vast pattern -- of which I am a part --  perhaps my stuff was belched from some forgotten star, 
+%as one is belching there. Or see them with the greater eye of Palomar, 
+%rushing all apart from some common starting point when they were perhaps all together. 
+%What is the pattern, or the meaning, or the *why?* It does not do harm to the mystery to know 
+%a little about it. For far more marvelous is the truth than any artists of the past imagined! 
+%Why do the poets of the present not speak of it? 
+%What men are poets who can speak of Jupiter if he were like a man, 
+%but if he is an immense spinning sphere of methane and ammonia must be silent?" \\
+%Richard P. Feynman\\
+%\vspace{1.0in}
+%``The most exciting phrase to hear in science,
+%the one that heralds the most discoveries, is not `Eureka!' (I found it!) but `That's funny...'"\\
+%Isaac Asimov
+%}
+%}%
+%}}%
+%BeginExpansion
+\frontpiece{
+{
+\notetodylen{optional put a quote here}
+}
+}%
+%
+%EndExpansion
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%Frontpage with some quote  by some (in)famous person(s)
+
+%TCIMACRO{
+%\TeXButton{dedication}{\dedication{\large To Love, Peace, and the Brotherhood of Man}%
+%}}%
+%BeginExpansion
+\dedication{\notetodylan{optional put something here}}%
+%
+%EndExpansion
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%I dedicate this thesis to ...
+
+%TCIMACRO{
+%\TeXButton{author,title}{\title{Constrained Optimization of Nonlinear Chemical Dynamical Systems}
+%\author{Sachin Kansal}%
+%}}%
+%BeginExpansion
+\title{\notetodylan{title goes here}}
+\author{Dylan Hennessey}%
+%
+%EndExpansion
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%author and title fields. replace with your own, or not...
+
+%TCIMACRO{
+%\TeXButton{Front Pages}{\admin  	%
+%}}%
+%BeginExpansion
+\admin  	%
+%
+%EndExpansion
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%generates all the prefatory pages
+
+%TCIMACRO{
+%\TeXButton{acknowledgements}{\begin{acknowledgements}
+%...
+%\end{acknowledgements}
+%}}%
+%BeginExpansion
+\begin{acknowledgements}
+...
+\end{acknowledgements}
+%
+%EndExpansion
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%Acknowledge everyone, whether they are even aware you exist is inconsequential.
+
+\doublespacing		%abstract has to be double-spaced
+
+%TCIMACRO{
+%\TeXButton{abstract}{\begin{abstract}
+%......
+%\end{abstract}%
+%}}%
+%BeginExpansion
+\begin{abstract}
+......
+\end{abstract}%
+%
+%EndExpansion
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%the abstract goes into the preceding field between the begin{abstract} and end{abstract}
+
+\doublespacing	%everything from here on will be 1.5 spaced
+
+%TCIMACRO{
+%\TeXButton{contents and lists}{\tableofcontents
+%\listoffigures
+%\listoftables
+%}}%
+%BeginExpansion
+\tableofcontents
+\listoffigures
+\listoftables
+%
+%EndExpansion
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%generates lists of tables, figures and the table of contents
+
+\bodyoftext
+
 \chapter{Basis Sets}
 \section{Methods}
 \subsection{Basis set size optimization}
@@ -270,8 +871,6 @@ Armed with the resources our kernel will need, we can now determine its occupanc
 Registers are the fastest memory available, but they are also the easiest to over use. Therefore, they are best suited for small variables that need to be referenced frequently, such as accumulators. Shared memory is best used for storing large sections of non-contiguous data stored in the global memory. Finally data that is able to be stored nicely, or is infrequently used might best be left in the global memory.
 
 As with everything, these rules are only guide lines. The best resource configuration will be individual not only to every kernel, but the GPU it is to be run on as well. The best way to maximize the efficiency of a calculation is to make minor alterations to where data is stored and play around with the code. Finally, it might not always be the best idea to maximize the occupancy of a kernel. If the bottleneck is not the actual calculation, but how fast the data can be read, then it might be advantageous to fill up the registers and shared memory as much as possible and have a very low occupation. The only way to know is to try!
-
-\notetodylan{This is better put in the discussion section of this chapter.... In the case of the work in this thesis, the resource bottleneck for my kernels was almost always the number of registers used per thread. 63 32-bit registers provide only 252 bytes to work with, which when using double precision numbers is hardly anything at all.}
 
 \section{Program flow}
 In this section, the control flow of a typical calculation is given.
@@ -728,6 +1327,7 @@ Algorithm \ref{STSE_K} has two nested loops. The outer loop loops over elements 
 
 \section{Discussion}
 
+\notetodylan{This is better put in the discussion section of this chapter.... In the case of the work in this thesis, the resource bottleneck for my kernels was almost always the number of registers used per thread. 63 32-bit registers provide only 252 bytes to work with, which when using double precision numbers is hardly anything at all.}
 
 \section{Input Description}\label{inp_des}
 The program can be executed on Unix-like systems in the following way
@@ -827,45 +1427,107 @@ The input file must end in ".inp" or an error will be given. Redirection of stdo
 \end{enumerate}
 
 
+\bigskip 
 
-%% The Appendices part is started with the command \appendix;
-%% appendix sections are then done as normal sections
-%% \appendix
+%TCIMACRO{
+%\TeXButton{bibliography in contents}{\clearpage\addcontentsline{toc}{chapter}{Bibliography}
+%\singlespacing
+%}}%
+%BeginExpansion
+\clearpage\addcontentsline{toc}{chapter}{Bibliography}
+\singlespacing
+%
+%EndExpansion
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%dont forget this if you want the bibliography to show up on the contents page
 
-%% \section{}
-%% \label{}
+\bibliographystyle{IFAC}
+\bibliography{sample}
+\bigskip 
+%Generates the bibliography. You have to specify the source bib files and the biblio style 
 
-%% References
-%%
-%% Following citation commands can be used in the body text:
-%% Usage of \cite is as follows:
-%%   \cite{key}         ==>>  [#]
-%%   \cite[chap. 2]{key} ==>> [#, chap. 2]
-%%
-
-%% References with bibTeX database:
-
-\bibliographystyle{elsarticle-num}
-\bibliography{<your-bib-database>}
-
-%% Authors are advised to submit their bibtex database files. They are
-%% requested to list a bibtex style file in the manuscript if they do
-%% not want to use elsarticle-num.bst.
-
-%% References without bibTeX database:
-
-% \begin{thebibliography}{00}
-
-%% \bibitem must have the following form:
-%%   \bibitem{key}...
-%%
-
-% \bibitem{}
-
-% \end{thebibliography}
-
+%TCIMACRO{
+%\TeXButton{Appendices}{\appendix
+%}}%
+%BeginExpansion
+\appendix
+%
+%EndExpansion
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%The chapters after this tab are all appendices
 
 \end{document}
-
-%%
-%% End of file 

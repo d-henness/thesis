@@ -17,4 +17,5 @@
 \contentsline {subsubsection}{MTSE Algorithm}{20}
 \contentsline {subsubsection}{STSE Algorithm}{23}
 \contentsline {section}{\numberline {2.4}Discussion}{25}
+\contentsline {subsection}{\numberline {2.4.1}Resource Usage}{25}
 \contentsline {section}{\numberline {2.5}Input Description}{25}

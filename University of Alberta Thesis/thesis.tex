@@ -1326,8 +1326,32 @@ All variables are the same as in Algorithms \ref{MTSE_K1} and \ref{MTSE_K2}, but
 Algorithm \ref{STSE_K} has two nested loops. The outer loop loops over elements of $d$, loading chunks of it into the shared memory as it goes. The inner loop loops over elements of $x$ and preforms the multiplications of $d$ and $x$ elements, keeping a running tally of the sum of these multiplications. Something that is not shown in the pseudocode is check to see if $l$ and $m$ have open shells. If both of them do, then $qm1$ and $qm2$ will be calculated as well. If only one or neither of them do, then this calculation is skipped. Because most of the shells will be closed, this allows for many calculations to be skipped. Once the inner loop has finished, the next section of $d$ is loaded into the shared memory and then the multiplication of $x$ and $s\_d$ continues. This process goes on until all elements of a row of \textbf{X} have been used.
 
 \section{Discussion}
+\subsection{Resource Usage}
+In the case of the work in this thesis, the resource bottleneck for my kernels was almost always the number of registers used per thread. 63 32-bit registers provide only 252 bytes to work with, which when using double precision numbers is hardly anything at all. A summary of the block sizes and resource usage of all kernels is given in Table \ref{tab:resources}.
 
-\notetodylan{This is better put in the discussion section of this chapter.... In the case of the work in this thesis, the resource bottleneck for my kernels was almost always the number of registers used per thread. 63 32-bit registers provide only 252 bytes to work with, which when using double precision numbers is hardly anything at all.}
+\begin{table}[h!]
+\caption{Kernel Resource Usage}
+\label{tab:resources}
+\begin{tabular}{lrrr}
+	Kernel				&	Block Size		&	Registers	&	Shared Memory (bytes)	\\
+	\hline
+	\kernel{eint1}			&	(512, 1, 1)		&	63		&	45056				\\
+	\kernel{eint2}			&	(512, 1, 1)		&	63		&	45088				\\
+	\kernel{vec2matrix}		&	(512, 1, 1)		&	17		&	0					\\
+	\kernel{formd}			&	(512, 1, 1)		&	33		&	28672				\\
+	\kernel{binary\_search}	&	(512, 1, 1)		&	30		&	60					\\
+	\kernel{convd}			&	(512, 1, 1)		&	25		&	0					\\
+	\kernel{formpq\_alg1}	&	(512, 1, 1)		&	46		&	32768				\\
+	\kernel{formpq\_alg2}	&	(512, 1, 1)		&	56		&	39388				\\
+	\kernel{forme}			&	(512, 1, 1)		&	39		&	4152					\\
+	\kernel{formf}			&	(512, 1, 1)		&	18		&	0					\\
+	\kernel{xtrpf}			&	(512, 1, 1)		&	12		&	0					\\
+	\kernel{formg}			&	(32, 16, 1)		&	55		&	12288				\\
+	\kernel{swapcol}		&	(32, 16, 1)		&	10		&	0					\\
+\end{tabular}
+\end{table}
+
+Of these, \kernel{eint2} and the \kernel{formpq\_alg} kernels take up the bulk of the time needed in a typical calculation.
 
 \section{Input Description}\label{inp_des}
 The program can be executed on Unix-like systems in the following way

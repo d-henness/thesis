@@ -1363,14 +1363,26 @@ Table \ref{tab:2eintprof} and Figure \ref{fig:2eintprof} show the results of pro
 \caption{\kernel{eint2} Kernel Performance}
 \label{tab:2eintprof}
 \begin{tabular}{rrrrrrr}
-	\multirow{4}{2cm}{Two-Electron Integrals}	&	\multirow{4}{*}{CPU Time}		&	\multirow{4}{*}{\kernel{eint2}}	&	\multirow{4}{2.4cm}{\kernel{binary\_search}}		&	\multirow{4}{1cm}{Total GPU time}	&	\multirow{4}{1.5cm}{Speedup (\kernel{eint2})}	&	\multirow{4}{2cm}{Speedup (\kernel{eint2} + \kernel{binary\_search})}	\\
-	\\
+	\multirow{3}{2cm}{Two-Electron Integrals}	&	\multirow{3}{*}{CPU Time}		&	\multirow{3}{*}{\kernel{eint2}}	&	\multirow{3}{2.4cm}{\kernel{binary\_search}}		&	\multirow{3}{1cm}{Total GPU time}	&	\multirow{3}{*}{Speedup\textsuperscript{\emph{a}}}	&	\multirow{3}{*}{Speedup\textsuperscript{\emph{b}}}	\\
 	\\
 	\\
 	\hline
 	74305	&	59		&	4.68		&	0.18		&	4.86		&	12.81	&	12.32	\\	353220	&	320		&	18.05	&	0.71		&	18.77	&	17.72	&	17.04	\\	1081185	&	980		&	52.51	&	2.21		&	54.72	&	18.66	&	17.90	\\	2588950	&	2360		&	118.20	&	5.36		&	123.56	&	19.96	&	19.09	\\	5299140	&	4910		&	237.96	&	11.07	&	249.03	&	20.63	&	19.71	\\	9726255	&	8880		&	437.88	&	20.81	&	458.69	&	20.27	&	19.35	\\	16476670	&	15140	&	730.24	&	35.96	&	766.20	&	20.73	&	19.75	\\	26248635	&	24180	&	1159.98	&	57.99	&	1217.97	&	20.84	&	19.85	\\
 \end{tabular}
+
+\textsuperscript{\emph{a}} Speedup comparing just the time of \kernel{eint2} to the CPU time. \\
+\textsuperscript{\emph{b}} Speedup comparing the time of \kernel{eint2} and \kernel{binary\_search} to the CPU time. \\
+\notetodylan{include the hardware info}
 \end{table}
+
+\begin{figure}[h]
+\includegraphics[width=1\textwidth]{Figures/eint2prof.png}
+\caption[Profiling of Two-Electron Integral Calculations]
+{Profiling of Two-Electron Integral Calculations. This figure shows the results of profiling the calculation of growing amounts of two-electron integrals. The blue line shows the time needed for GPU calculations and the yellow line shows time needed for CPU calculations. The time for the GPU calculations is the combined time of the \kernel{eint2} and \kernel{binary\_search} kernels.}
+\label{fig:2eintprof}
+\end{figure}
+
+As can be seen, the GPU calculations outperform the CPU calculations with an average speedup of over 19$\times$. For calculations with fewer number of integrals to compute the speedup is not as dramatic. This is most likely due to the overhead involved in just starting a GPU kernel. Table \ref{tab:2eintprof} shows two different speedups: one for just calculation of the integrals, and one that shows the speedup if the time needed for \kernel{binary\_search} is included. It does not have much of an impact on the total performance on the total calculation time which proves this was a good way to generate the $lmpqrs$ indices. Additionally, because CUDAProphet is a basis set optimizer, \kernel{binary\_search} will need to be called only once, whereas \kernel{eint2} may need to be called many hundreds of times. Therefore, for an optimization calculation (which the original program is incapable of doing) the total speedup will limit to the just the integral calculations.
 
 
 \section{Input Description}\label{inp_des}

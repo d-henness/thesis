@@ -14,6 +14,7 @@
 \usepackage{uathesis}
 \usepackage{lscape}
 \usepackage{longtable}
+\usepackage{multirow}
 
 %my packages
 \usepackage{amssymb}
@@ -855,6 +856,7 @@ The next highest structure is the thread block, or block for short. Simply put, 
 Finally there is the grid. The grid is the entire collection of blocks that are launched for a kernel. They also give a dimensionality to blocks through the $blockIdx$ variable which has similar parts to the $threadIdx$ variable. It also adds in the $gridDim$ variable which is analogous to $blockDim$.
 
 \subsection{Memory}
+\label{sec:gpumem}
 To simplify the discussion of the kinds of memory available on a GPU we will limit ourselves to the three main types. They are the global memory, the shared memory, and the register memory. Because the execution time of a calculation is often not limited by the actual number of FLOPs to compute, but rather the reading and writing to memory, it is essential to be sure that the three main types of memory are managed correctly.
 
 Global memory is both the most plentiful and the slowest available memory on a GPU. In a typical calculation, global memory will be allocated in code executed by the CPU (host). Data will be uploaded to the allocated memory and then used by the GPU (device). Global memory is distinct from the other kinds of device memory in that it can be read from and wrote to by all threads currently executing. This can allow threads of one block to pass messages to threads in an other block, but great care must be taken to avoid race conditions. There is an additional caveat with global memory in that if threads are reading from non-contiguous memory locations, then memory bandwidth plummets. There is also a problem when multiple threads try to read from the same location. Instead of being one transaction, the read is serialized which leads to a massive performance penalty. It is therefore to the programmers advantage to write their kernels with as little use of the global memory as possible.
@@ -864,6 +866,7 @@ Shared memory, as its name implies, is shared and private to threads in a single
 Lastly there is the register memory. This is the fastest memory available and is also private to an individual thread. On our card, there are a total of 32768 32-bit registers available per SM. An individual thread in a block can use no more than 63 registers, and if the number of threads in a block times the number of registers needed per thread for a kernel is larger than the total registers available per SM then the execution of the kernel will fail. If a thread needs more memory than the registers will allow, then "register-spilling" takes place. This means that instead of a variable being stored into a register, it "spills over" into a fourth memory type called local memory. Local memory is really just a section of the global memory and comes with all the problems that global memory has, but the compiler is able to arrange it such that it can be read efficiently without the programmer having to worry about this. There is no way for a programmer to specify which variables will be stored in register or local memory, the complier handles all of this. There are complier flags which can change the maximum amount of registers per thread allowed which will prompt the complier to place more data into local memory. While this may sound like a bad idea, we will see in the next section how there are situations where this might be useful.
 
 \subsection{Occupancy and Performance}
+\label{sec:gpuocc}
 With the description of the various resources out of the way, now we can talk about how the can be used most effectively. The occupancy of a kernel is the number of warps that are actually able to run on a SM divided by the maximum possible warps a SM can run. Occupancy is important, as it determines the maximum number of blocks, and thus threads that are able to be run simultaneously. The occupancy of a kernel is determined by three things: the block size, the amount of shared memory per block, and the number of registers used per thread. While block size and shared memory are explicitly set by the programmer, it is next to impossible to guess how registers will be used before compile time. Thankfully, there are complier flags that will display this information.
 
 Armed with the resources our kernel will need, we can now determine its occupancy. The "CUDA Occupancy Calculator" is an excel spreadsheet provided by NVIDIA and is an indispensable tool. We can input the needed resources and the hardware generation of our card and then receive the occupancy of the current resource configuration, where the bottle neck of the current configuration is, as well as information on how the occupancy will change upon tweaking the configuration. In some sense, the best block size is determined by how the other resources are used. Therefore, in order to maximize the occupancy, we must first make sure that we are using the memory provided correctly.
@@ -1329,7 +1332,7 @@ Algorithm \ref{STSE_K} has two nested loops. The outer loop loops over elements 
 \subsection{Resource Usage}
 In the case of the work in this thesis, the resource bottleneck for my kernels was almost always the number of registers used per thread. 63 32-bit registers provide only 252 bytes to work with, which when using double precision numbers is hardly anything at all. A summary of the block sizes and resource usage of all kernels is given in Table \ref{tab:resources}.
 
-\begin{table}[h!]
+\begin{table}[h]
 \caption{Kernel Resource Usage}
 \label{tab:resources}
 \begin{tabular}{lrrr}
@@ -1351,7 +1354,24 @@ In the case of the work in this thesis, the resource bottleneck for my kernels w
 \end{tabular}
 \end{table}
 
-Of these, \kernel{eint2} and the \kernel{formpq\_alg} kernels take up the bulk of the time needed in a typical calculation.
+Of these kernels, \kernel{eint2} and the \kernel{formpq\_alg} kernels take up the bulk of the time needed in a typical calculation. This is in part due to the exponential growth in the number of two-electron integrals, but it is also caused by the amount of register spilling that each kernel will have. As stated in section \ref{sec:gpumem} when the amount of registers a thread needs exceeds the amount that is available, it will begin to store the data in the global memory. As global memory is the slowest available memory type, this is very undesirable. To counteract this, many variables that would otherwise be better stored in register memory were moved into the shared memory. But this is also undesirable because that means that there will be less shared memory available for storing data that needs to be read frequently from global memory. This in turn leads to more frequent reads from the global memory. Solving this balancing act required many iterations of testing, moving variables around, compiling, and retesting. Eventually, I arrived at the configurations shown above. Note how each kernel uses a block containing 512 threads. This number was chosen because it is the largest possible block size that can run when the required number of register per thread exceeds 32. 512 is also a good block size because in instances where a kernel is not limited by register or shared memory usage, it allows for the maximum number of threads per SM (1536) to be run.
+
+\subsection{Two-Electron Integral performance}
+Table \ref{tab:2eintprof} and Figure \ref{fig:2eintprof} show the results of profiling the \kernel{eint2} kernel against its CPU counterpart.
+
+\begin{table}[h]
+\caption{\kernel{eint2} Kernel Performance}
+\label{tab:2eintprof}
+\begin{tabular}{rrrrrrr}
+	\multirow{4}{2cm}{Two-Electron Integrals}	&	\multirow{4}{*}{CPU Time}		&	\multirow{4}{*}{\kernel{eint2}}	&	\multirow{4}{2.4cm}{\kernel{binary\_search}}		&	\multirow{4}{1cm}{Total GPU time}	&	\multirow{4}{1.5cm}{Speedup (\kernel{eint2})}	&	\multirow{4}{2cm}{Speedup (\kernel{eint2} + \kernel{binary\_search})}	\\
+	\\
+	\\
+	\\
+	\hline
+	74305	&	59		&	4.68		&	0.18		&	4.86		&	12.81	&	12.32	\\	353220	&	320		&	18.05	&	0.71		&	18.77	&	17.72	&	17.04	\\	1081185	&	980		&	52.51	&	2.21		&	54.72	&	18.66	&	17.90	\\	2588950	&	2360		&	118.20	&	5.36		&	123.56	&	19.96	&	19.09	\\	5299140	&	4910		&	237.96	&	11.07	&	249.03	&	20.63	&	19.71	\\	9726255	&	8880		&	437.88	&	20.81	&	458.69	&	20.27	&	19.35	\\	16476670	&	15140	&	730.24	&	35.96	&	766.20	&	20.73	&	19.75	\\	26248635	&	24180	&	1159.98	&	57.99	&	1217.97	&	20.84	&	19.85	\\
+\end{tabular}
+\end{table}
+
 
 \section{Input Description}\label{inp_des}
 The program can be executed on Unix-like systems in the following way

@@ -1,0 +1,558 @@
+\ifglsentryexists{gtp}{}%
+{%
+\gls@defglossaryentry{gtp}%
+{%
+name={GTP},%
+sort={GTP},%
+type={acronym},%
+first={Guanosine Triphosphate\glsspace (GTP)},%
+firstplural={Guanosine Triphosphates\glsspace (GTPs)},%
+text={GTP},%
+plural={GTPs},%
+description={Guanosine Triphosphate},%
+descriptionplural={Guanosine Triphosphate\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Guanosine Triphosphate},%
+longplural={Guanosine Triphosphates},%
+short={GTP},%
+shortplural={GTPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{gdp}{}%
+{%
+\gls@defglossaryentry{gdp}%
+{%
+name={GDP},%
+sort={GDP},%
+type={acronym},%
+first={Guanosine Diphosphate\glsspace (GDP)},%
+firstplural={Guanosine Diphosphates\glsspace (GDPs)},%
+text={GDP},%
+plural={GDPs},%
+description={Guanosine Diphosphate},%
+descriptionplural={Guanosine Diphosphate\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Guanosine Diphosphate},%
+longplural={Guanosine Diphosphates},%
+short={GDP},%
+shortplural={GDPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{mt}{}%
+{%
+\gls@defglossaryentry{mt}%
+{%
+name={MT},%
+sort={MT},%
+type={acronym},%
+first={Microtubule\glsspace (MT)},%
+firstplural={Microtubules\glsspace (MTs)},%
+text={MT},%
+plural={MTs},%
+description={Microtubule},%
+descriptionplural={Microtubule\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Microtubule},%
+longplural={Microtubules},%
+short={MT},%
+shortplural={MTs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{mmpbsa}{}%
+{%
+\gls@defglossaryentry{mmpbsa}%
+{%
+name={MM/PBSA},%
+sort={MM/PBSA},%
+type={acronym},%
+first={Molecular Mechanics/Poisson-Boltzmann Surface Area Method\glsspace (MM/PBSA)},%
+firstplural={Molecular Mechanics/Poisson-Boltzmann Surface Area Methods\glsspace (MM/PBSAs)},%
+text={MM/PBSA},%
+plural={MM/PBSAs},%
+description={Molecular Mechanics/Poisson-Boltzmann Surface Area Method},%
+descriptionplural={Molecular Mechanics/Poisson-Boltzmann Surface Area Method\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Molecular Mechanics/Poisson-Boltzmann Surface Area Method},%
+longplural={Molecular Mechanics/Poisson-Boltzmann Surface Area Methods},%
+short={MM/PBSA},%
+shortplural={MM/PBSAs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{mmgbsa}{}%
+{%
+\gls@defglossaryentry{mmgbsa}%
+{%
+name={MM/GBSA},%
+sort={MM/GBSA},%
+type={acronym},%
+first={Molecular Mechanics/Generalizedd-Born Surface Area Method\glsspace (MM/GBSA)},%
+firstplural={Molecular Mechanics/Generalizedd-Born Surface Area Methods\glsspace (MM/GBSAs)},%
+text={MM/GBSA},%
+plural={MM/GBSAs},%
+description={Molecular Mechanics/Generalizedd-Born Surface Area Method},%
+descriptionplural={Molecular Mechanics/Generalizedd-Born Surface Area Method\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Molecular Mechanics/Generalizedd-Born Surface Area Method},%
+longplural={Molecular Mechanics/Generalizedd-Born Surface Area Methods},%
+short={MM/GBSA},%
+shortplural={MM/GBSAs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{gmpcpp}{}%
+{%
+\gls@defglossaryentry{gmpcpp}%
+{%
+name={GMPCPP},%
+sort={GMPCPP},%
+type={acronym},%
+first={Guanylyl-(alpha, beta)-Methylene-Diphosphonate\glsspace (GMPCPP)},%
+firstplural={Guanylyl-(alpha, beta)-Methylene-Diphosphonates\glsspace (GMPCPPs)},%
+text={GMPCPP},%
+plural={GMPCPPs},%
+description={Guanylyl-(alpha, beta)-Methylene-Diphosphonate},%
+descriptionplural={Guanylyl-(alpha, beta)-Methylene-Diphosphonate\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Guanylyl-(alpha, beta)-Methylene-Diphosphonate},%
+longplural={Guanylyl-(alpha, beta)-Methylene-Diphosphonates},%
+short={GMPCPP},%
+shortplural={GMPCPPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{pdb}{}%
+{%
+\gls@defglossaryentry{pdb}%
+{%
+name={PDB},%
+sort={PDB},%
+type={acronym},%
+first={Protein Data Bank\glsspace (PDB)},%
+firstplural={Protein Data Banks\glsspace (PDBs)},%
+text={PDB},%
+plural={PDBs},%
+description={Protein Data Bank},%
+descriptionplural={Protein Data Bank\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Protein Data Bank},%
+longplural={Protein Data Banks},%
+short={PDB},%
+shortplural={PDBs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{rmsd}{}%
+{%
+\gls@defglossaryentry{rmsd}%
+{%
+name={RMSD},%
+sort={RMSD},%
+type={acronym},%
+first={Root-Mean-Square Deviation\glsspace (RMSD)},%
+firstplural={Root-Mean-Square Deviations\glsspace (RMSDs)},%
+text={RMSD},%
+plural={RMSDs},%
+description={Root-Mean-Square Deviation},%
+descriptionplural={Root-Mean-Square Deviation\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Root-Mean-Square Deviation},%
+longplural={Root-Mean-Square Deviations},%
+short={RMSD},%
+shortplural={RMSDs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{md}{}%
+{%
+\gls@defglossaryentry{md}%
+{%
+name={MD},%
+sort={MD},%
+type={acronym},%
+first={Molecular Dynamics\glsspace (MD)},%
+firstplural={Molecular Dynamicss\glsspace (MDs)},%
+text={MD},%
+plural={MDs},%
+description={Molecular Dynamics},%
+descriptionplural={Molecular Dynamics\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Molecular Dynamics},%
+longplural={Molecular Dynamicss},%
+short={MD},%
+shortplural={MDs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{qtaim}{}%
+{%
+\gls@defglossaryentry{qtaim}%
+{%
+name={QTAIM},%
+sort={QTAIM},%
+type={acronym},%
+first={Quantum Theory of Atoms in Molecules\glsspace (QTAIM)},%
+firstplural={Quantum Theory of Atoms in Moleculess\glsspace (QTAIMs)},%
+text={QTAIM},%
+plural={QTAIMs},%
+description={Quantum Theory of Atoms in Molecules},%
+descriptionplural={Quantum Theory of Atoms in Molecules\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Quantum Theory of Atoms in Molecules},%
+longplural={Quantum Theory of Atoms in Moleculess},%
+short={QTAIM},%
+shortplural={QTAIMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{aim}{}%
+{%
+\gls@defglossaryentry{aim}%
+{%
+name={AIM},%
+sort={AIM},%
+type={acronym},%
+first={Atoms in Molecules\glsspace (AIM)},%
+firstplural={Atoms in Moleculess\glsspace (AIMs)},%
+text={AIM},%
+plural={AIMs},%
+description={Atoms in Molecules},%
+descriptionplural={Atoms in Molecules\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Atoms in Molecules},%
+longplural={Atoms in Moleculess},%
+short={AIM},%
+shortplural={AIMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{sd}{}%
+{%
+\gls@defglossaryentry{sd}%
+{%
+name={SD},%
+sort={SD},%
+type={acronym},%
+first={Standard Deviation\glsspace (SD)},%
+firstplural={Standard Deviations\glsspace (SDs)},%
+text={SD},%
+plural={SDs},%
+description={Standard Deviation},%
+descriptionplural={Standard Deviation\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Standard Deviation},%
+longplural={Standard Deviations},%
+short={SD},%
+shortplural={SDs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{bcp}{}%
+{%
+\gls@defglossaryentry{bcp}%
+{%
+name={BCP},%
+sort={BCP},%
+type={acronym},%
+first={Bond Critical Point\glsspace (BCP)},%
+firstplural={Bond Critical Points\glsspace (BCPs)},%
+text={BCP},%
+plural={BCPs},%
+description={Bond Critical Point},%
+descriptionplural={Bond Critical Point\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Bond Critical Point},%
+longplural={Bond Critical Points},%
+short={BCP},%
+shortplural={BCPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{ha}{}%
+{%
+\gls@defglossaryentry{ha}%
+{%
+name={HA},%
+sort={HA},%
+type={acronym},%
+first={Hydrogen bond Acceptor\glsspace (HA)},%
+firstplural={Hydrogen bond Acceptors\glsspace (HAs)},%
+text={HA},%
+plural={HAs},%
+description={Hydrogen bond Acceptor},%
+descriptionplural={Hydrogen bond Acceptor\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Hydrogen bond Acceptor},%
+longplural={Hydrogen bond Acceptors},%
+short={HA},%
+shortplural={HAs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{hd}{}%
+{%
+\gls@defglossaryentry{hd}%
+{%
+name={HD},%
+sort={HD},%
+type={acronym},%
+first={Hydrogen bond Donor\glsspace (HD)},%
+firstplural={Hydrogen bond Donors\glsspace (HDs)},%
+text={HD},%
+plural={HDs},%
+description={Hydrogen bond Donor},%
+descriptionplural={Hydrogen bond Donor\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Hydrogen bond Donor},%
+longplural={Hydrogen bond Donors},%
+short={HD},%
+shortplural={HDs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{latb}{}%
+{%
+\gls@defglossaryentry{latb}%
+{%
+name={LatB},%
+sort={LatB},%
+type={acronym},%
+first={Lateral interface between two tubulin dimers in B-configuration\glsspace (LatB)},%
+firstplural={Lateral interface between two tubulin dimers in B-configurations\glsspace (LatBs)},%
+text={LatB},%
+plural={LatBs},%
+description={Lateral interface between two tubulin dimers in B-configuration},%
+descriptionplural={Lateral interface between two tubulin dimers in B-configuration\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Lateral interface between two tubulin dimers in B-configuration},%
+longplural={Lateral interface between two tubulin dimers in B-configurations},%
+short={LatB},%
+shortplural={LatBs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{lata}{}%
+{%
+\gls@defglossaryentry{lata}%
+{%
+name={LatA},%
+sort={LatA},%
+type={acronym},%
+first={Lateral interface between two tubulin dimers in A-configuration\glsspace (LatA)},%
+firstplural={Lateral interface between two tubulin dimers in A-configurations\glsspace (LatAs)},%
+text={LatA},%
+plural={LatAs},%
+description={Lateral interface between two tubulin dimers in A-configuration},%
+descriptionplural={Lateral interface between two tubulin dimers in A-configuration\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Lateral interface between two tubulin dimers in A-configuration},%
+longplural={Lateral interface between two tubulin dimers in A-configurations},%
+short={LatA},%
+shortplural={LatAs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{longab}{}%
+{%
+\gls@defglossaryentry{longab}%
+{%
+name={LongAB},%
+sort={LongAB},%
+type={acronym},%
+first={Longitudinal interface between two tubulin dimers\glsspace (LongAB)},%
+firstplural={Longitudinal interface between two tubulin dimerss\glsspace (LongABs)},%
+text={LongAB},%
+plural={LongABs},%
+description={Longitudinal interface between two tubulin dimers},%
+descriptionplural={Longitudinal interface between two tubulin dimers\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Longitudinal interface between two tubulin dimers},%
+longplural={Longitudinal interface between two tubulin dimerss},%
+short={LongAB},%
+shortplural={LongABs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{MOC}{}%
+{%
+\gls@defglossaryentry{MOC}%
+{%
+name={MOC},%
+sort={MOC},%
+type={acronym},%
+first={Mulliken Overlap Charge\glsspace (MOC)},%
+firstplural={Mulliken Overlap Charges\glsspace (MOCs)},%
+text={MOC},%
+plural={MOCs},%
+description={Mulliken Overlap Charge},%
+descriptionplural={Mulliken Overlap Charge\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},

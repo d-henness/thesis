@@ -1,0 +1,1137 @@
+\begin{thebibliography}{100}
+
+\bibitem{wcr2014}
+B.~Stewart and C.~P. Wild.
+\newblock {\em Word Cancer Report}.
+\newblock World Health Organization, 2014.
+
+\bibitem{nciDef}
+Defining cancer.
+\newblock \url{http://www.cancer.gov/cancertopics/what-is-cancer}.
+\newblock Accessed: 17 March 2015.
+
+\bibitem{nciMeta}
+Metastatic cancer.
+\newblock
+  \url{http://www.cancer.gov/cancertopics/what-is-cancer/metastatic-fact-sheet}.
+\newblock Accessed: 17 March 2015.
+
+\bibitem{Hanahan2000}
+D.~Hanahan and R.~A. Weinberg.
+\newblock The hallmarks of cancer.
+\newblock {\em Cell}, 100(1):57 -- 70, 2000.
+
+\bibitem{Hanahan2011}
+D.~Hanahan and R.~A. Weinberg.
+\newblock Hallmarks of cancer: The next generation.
+\newblock {\em Cell}, 144(5):646 -- 674, 2011.
+
+\bibitem{Mitosis}
+The {C}ell {C}ycle.
+\newblock
+  \url{http://en.wikipedia.org/wiki/Mitosis#/media/File:Animal_cell_cycle.svg}.
+\newblock Accessed: 24 March 2015.
+
+\bibitem{Campbell1999}
+N.~A. Campbell, J.~B. Reece, and L.~G. Mitchell.
+\newblock {\em Biology}.
+\newblock Benjamin Cummings Publ. Co., Inc., Menlo Park, CA, 5th edition, 1999.
+
+\bibitem{Blow2005}
+J.~J. Blow and T.~U. Tanaka.
+\newblock The chromosome cycle: coordinating replication and segregation.
+\newblock {\em EMBO Rep.}, 6(11):1028--1034, 2005.
+
+\bibitem{Weisenberg1972}
+R.~C. Weisenberg.
+\newblock Microtubule formation in vitro in solutions containing low calcium
+  concentrations.
+\newblock {\em Science}, 177(4054):1104--1105, 1972.
+
+\bibitem{Mitchison1993}
+T.~J. Mitchison.
+\newblock Localization of an exchangeable {GTP} binding site at the plus end of
+  microtubules.
+\newblock {\em Science}, 261(5124):1044--1047, 1993.
+
+\bibitem{Dustin1984}
+P.~Dustin.
+\newblock {\em Microtubules}.
+\newblock Springer-Verlag, New-York, 1984.
+
+\bibitem{Walker1988}
+R.~A. Walker, E.~T. O'Brien, N.~K. Pryer, M.~F. Soboeiro, W.~A. Voter, H.~P.
+  Erickson, and E.~D. Salmon.
+\newblock Dynamic instability of individual microtubules analyzed by video
+  light microscopy: rate constants and transition frequencies.
+\newblock {\em J. Cell Biol.}, 107(4):1437--1448, 1988.
+
+\bibitem{Mitchison1984}
+T.~Mitchison and M.~Kirschner.
+\newblock {Dynamic instability of microtubule growth}.
+\newblock {\em Nature}, 312(5991):237--242, November 1984.
+
+\bibitem{Schiff1980}
+P.~B. Schiff and S.~B. Horwitz.
+\newblock {Taxol stabilizes microtubules in mouse fibroblast cells }.
+\newblock {\em Proc. Natl. Acad. Sci. USA}, 77(3):1561--1565, March 1980.
+
+\bibitem{Conde2009}
+C.~Conde and A.~C\'{a}ceres.
+\newblock {Microtubule assembly, organization and dynamics in axons and
+  dendrites.}
+\newblock {\em Nat. Rev. Neurosci.}, 10(5):319--32, May 2009.
+
+\bibitem{Carlier1981}
+M.~F. Carlier and D.~Pantaloni.
+\newblock Kinetic analysis of guanosine 5'-triphosphate hydrolysis associated
+  with tubulin polymerization.
+\newblock {\em Biochemistry}, 20(7):1918--1924, 1981.
+
+\bibitem{Cramer2004}
+C.~J. Cramer.
+\newblock {\em Essentials of Computational Chemistry: Theories and Models}.
+\newblock John Wiley \& Sons Ltd. (Canada), 2004.
+
+\bibitem{Bader1990}
+R.~F.~W. Bader.
+\newblock {\em Atoms in Molecules -- A Quantum Theory}.
+\newblock Oxford University Press, Oxford, U.K., 1990.
+
+\bibitem{CHARMM}
+Molecular dynamics tutorial.
+\newblock \url{http://www.ch.embnet.org/MD_tutorial/}.
+\newblock Accessed: 24 March 2015.
+
+\bibitem{Adcock2006}
+S.~A. Adcock and J.~A. McCammon.
+\newblock Molecular dynamics:  survey of methods for simulating the activity
+  of proteins.
+\newblock {\em Chem. Rev.}, 106(5):1589--1615, 2006.
+
+\bibitem{Karplus2002}
+M.~Karplus and J.~A. McCammon.
+\newblock Molecular dynamics simulations of biomolecules.
+\newblock {\em Nat. Struct. Biol.}, 9(9):646--652, 2002.
+
+\bibitem{Kollman2000}
+P.~A. Kollman, I.~Massova, C.~Reyes, B.~Kuhn, S.~Huo, L.~Chong, M.~Lee, T.~Lee,
+  Y.~Duan, W.~Wang, O.~Donini, P.~Cieplak, J.~Srinivasan, D.~A. Case, and T.~E.
+  Cheatham.
+\newblock {Calculating Structures and Free Energies of Complex Molecules:
+  Combining Molecular Mechanics and Continuum Models}.
+\newblock {\em Acc. Chem. Res.}, 33(12):889--897, October 2000.
+
+\bibitem{aimplot}
+The {T}heory of {A}toms in {M}olecules.
+\newblock \url{http://www.chemistry.mcmaster.ca/aim/aim_1.html}.
+\newblock Accessed: 16 April 2015.
+
+\bibitem{Hayden1990}
+J.~H. Hayden, S.~S. Bowser, and C.~L. Rieder.
+\newblock Kinetochores capture astral microtubules during chromosome attachment
+  to the mitotic spindle: direct visualization in live newt lung cells.
+\newblock {\em J. Cell Biol.}, 111(3):1039--1045, 1990.
+
+\bibitem{Schiff1979}
+P.~B. Schiff, J.~Fant, and S.~B. Horwitz.
+\newblock {Promotion of microtubule assembly in vitro by taxol}.
+\newblock {\em Nature}, 277(5698):665--667, February 1979.
+
+\bibitem{Nogales1998}
+E.~Nogales, S.~G. Wolf, K.~H. Downing, R.~A. Gray, and A.~M. Pertsov.
+\newblock {Structure of the $\alpha$$\beta$ tubulin dimer by electron
+  crystallography}.
+\newblock {\em Nature}, 393(6681):191, May 1998.
+
+\bibitem{Rao1995}
+S.~Rao, G.~A. Orr, A.~G. Chaudhary, D.~G.~I. Kingston, and S.~B. Horwitz.
+\newblock {Characterization of the Taxol Binding Site on the Microtubule }.
+\newblock {\em J. Biol. Chem.}, 270(35):20235--20238, September 1995.
+
+\bibitem{Rao1999}
+S.~Rao, L.~He, S.~Chakravarty, I.~Ojima, G.~A. Orr, and S.~B. Horwitz.
+\newblock {Characterization of the Taxol Binding Site on the Microtubule }.
+\newblock {\em J. Biol. Chem.}, 274(53):37990--37994, December 1999.
+
+\bibitem{Bollag1995}
+D.~M. Bollag, P.~A. McQueney, J.~Zhu, O.~Hensens, L.~Koupal, J.~Liesch,
+  M.~Goetz, E.~Lazarides, and C.~M. Woods.
+\newblock {Epothilones, a New Class of Microtubule-stabilizing Agents with a
+  Taxol-like Mechanism of Action}.
+\newblock {\em Cancer Res.}, 55(11):2325--2333, June 1995.
+
+\bibitem{Hamel1999}
+E.~Hamel, D.~L. Sackett, D.~Vourloumis, and K.~C. Nicolaou.
+\newblock {The Coral-Derived Natural Products Eleutherobin and Sarcodictyins A
+  and B: Effects on the Assembly of Purified Tubulin with and without
+  Microtubule-Associated Proteins and Binding at the Polymer Taxoid Site}.
+\newblock {\em Biochemistry}, 38(17):5490--5498, April 1999.
+
+\bibitem{Kowalski1997}
+R.~J. Kowalski, P.~Giannakakou, S.~P. Gunasekera, R.~E. Longley, B.~W. Day, and
+  E.~Hamel.
+\newblock {The Microtubule-Stabilizing Agent Discodermolide Competitively
+  Inhibits the Binding of Paclitaxel (Taxol) to Tubulin Polymers, Enhances
+  Tubulin Nucleation Reactions More Potently than Paclitaxel, and Inhibits the
+  Growth of Paclitaxel-Resistant Cells}.
+\newblock {\em Mol. Pharmacol.}, 52(4):613--622, October 1997.
+
+\bibitem{Buey2005}
+R.~M. Buey, I.~Barasoain, E.~Jackson, A.~Meyer, P.~Giannakakou, I.~Paterson,
+  S.~Mooberry, J.~M. Andreu, and J.~F. D\'{\i}az.
+\newblock {Microtubule interactions with chemically diverse stabilizing agents:
+  thermodynamics of binding to the paclitaxel site predicts cytotoxicity.}
+\newblock {\em Chem. Biol.}, 12(12):1269--79, December 2005.
+
+\bibitem{Pineda2004}
+O.~Pineda, J.~Farr\`{a}s, L.~Maccari, F.~Manetti, M.~Botta, and J.~Vilarrasa.
+\newblock {Computational comparison of microtubule-stabilising agents
+  laulimalide and peloruside with taxol and colchicine.}
+\newblock {\em Bioorg. Med. Chem. Lett.}, 14(19):4825--9, October 2004.
+
+\bibitem{Khrapunovich-Baine2011}
+M.~Khrapunovich-Baine, V.~Menon, C.-P.~H. Yang, P.~T. Northcote, J.~H. Miller,
+  R.~H. Angeletti, A.~Fiser, S.~B. Horwitz, and H.~Xiao.
+\newblock {Hallmarks of molecular action of microtubule stabilizing agents:
+  effects of epothilone B, ixabepilone, peloruside A, and laulimalide on
+  microtubule conformation.}
+\newblock {\em J. Biol. Chem.}, 286(13):11765--78, April 2011.
+
+\bibitem{Bennett2010}
+M.~J. Bennett, K.~Barakat, J.~T. Huzil, J.~Tuszynski, and D.~C. Schriemer.
+\newblock {Discovery and characterization of the laulimalide-microtubule
+  binding mode by mass shift perturbation mapping.}
+\newblock {\em Chem. Biol.}, 17(7):725--34, July 2010.
+
+\bibitem{Orr2003}
+G.~A. Orr, P.~Verdier-Pinard, H.~McDaid, and S.~B. Horwitz.
+\newblock {Mechanisms of Taxol resistance related to microtubules.}
+\newblock {\em Oncogene}, 22(47):7280--95, October 2003.
+
+\bibitem{Natarajan2012}
+K.~Natarajan and S.~Senapati.
+\newblock {Understanding the Basis of Drug Resistance of the Mutants of
+  $\alpha$$\beta$-Tubulin Dimer via Molecular Dynamics Simulations.}
+\newblock {\em PLoS ONE}, 7(8):e42351, January 2012.
+
+\bibitem{Singla2002}
+A.~K. Singla, A.~Garg, and D.~Aggarwal.
+\newblock {Paclitaxel and its formulations}.
+\newblock {\em Int. J. Pharm.}, 235(1–2):179--192, March 2002.
+
+\bibitem{Hopper-Borge2009}
+E.~Hopper-Borge, X.~Xu, T.~Shen, Z.~Shi, Z.-S. Chen, and G.~D. Kruh.
+\newblock {Human multidrug resistance protein 7 (ABCC10) is a resistance factor
+  for nucleoside analogues and epothilone B.}
+\newblock {\em Cancer Res.}, 69(1):178--84, January 2009.
+
+\bibitem{Ojima1999}
+I.~Ojima, S.~Chakravarty, T.~Inoue, S.~Lin, L.~He, S.~B. Horwitz, S.~D. Kuduk,
+  and S.~J. Danishefsky.
+\newblock {A common pharmacophore for cytotoxic natural products that stabilize
+  microtubules.}
+\newblock {\em Proc. Natl. Acad. Sci. USA}, 96(8):4256--61, April 1999.
+
+\bibitem{He2000}
+L.~He, P.~G. Jagtap, D.~G. Kingston, H.~J. Shen, G.~A. Orr, and S.~B. Horwitz.
+\newblock {A common pharmacophore for Taxol and the epothilones based on the
+  biological activity of a taxane molecule lacking a C-13 side chain.}
+\newblock {\em Biochemistry}, 39(14):3972--8, April 2000.
+
+\bibitem{Giannakakou2000}
+P.~Giannakakou, R.~Gussio, E.~Nogales, K.~H. Downing, D.~Zaharevitz,
+  B.~Bollbuck, G.~Poy, D.~Sackett, K.~C. Nicolaou, and T.~Fojo.
+\newblock {A common pharmacophore for epothilone and taxanes: molecular basis
+  for drug resistance conferred by tubulin mutations in human cancer cells.}
+\newblock {\em Proc. Natl. Acad. Sci. USA}, 97(6):2904--9, March 2000.
+
+\bibitem{Nikolova2003}
+N.~Nikolova and J.~Jaworska.
+\newblock {Approaches to Measure Chemical Similarity- a Review}.
+\newblock {\em QSAR Comb. Sci.}, 22(910):1006--1026, December 2003.
+
+\bibitem{Lipinski2001}
+C.~A. Lipinski, F.~Lombardo, B.~W. Dominy, and P.~J. Feeney.
+\newblock Experimental and computational approaches to estimate solubility and
+  permeability in drug discovery and development settings.
+\newblock {\em Adv. Drug Deliv. Rev.}, 46(1–3):3 -- 26, 2001.
+
+\bibitem{Morris2009}
+G.~M. Morris, R.~Huey, W.~Lindstrom, M.~F. Sanner, R.~K. Belew, D.~S. Goodsell,
+  and A.~J. Olson.
+\newblock {AutoDock4 and AutoDockTools4: Automated docking with selective
+  receptor flexibility}.
+\newblock {\em J. Comput. Chem.}, 30(16):2785--2791, 2009.
+
+\bibitem{Hanwell2012}
+M.~D. Hanwell, D.~E. Curtis, D.~C. Lonie, T.~Vandermeersch, E.~Zurek, and G.~R.
+  Hutchison.
+\newblock {Avogadro: An advanced semantic chemical editor, visualization, and
+  analysis platform.}
+\newblock {\em J. Cheminform.}, 4(1):17, August 2012.
+
+\bibitem{case2012}
+D.~Case, T.~Darden, T.~Cheatham~III, C.~Simmerling, J.~Wang, R.~Duke, R.~Luo,
+  R.~Walker, W.~Zhang, K.~Merz, B.~Roberts, S.~Hayik, A.~Roitberg, G.~Seabra,
+  J.~Swails, A.~Goetz, I.~Kolossv\'{a}ry, K.~Wong, F.~Paesani, J.~Vanicek,
+  R.~Wolf, J.~Liu, X.~Wu, S.~Brozell, T.~Steinbrecher, H.~Gohlke, Q.~Cai,
+  X.~Ye, J.~Wang, M.~Hsieh, G.~Cui, D.~Roe, D.~Mathews, M.~Seetin,
+  R.~Salomon-Ferrer, C.~Sagui, V.~Babin, T.~Luchko, S.~Gusarov, A.~Kovalenko,
+  and P.~Kollman.
+\newblock Amber 12, 2012.
+\newblock University of California, San Francisco.
+
+\bibitem{Hornak2006}
+V.~Hornak, R.~Abel, A.~Okur, B.~Strockbine, A.~Roitberg, and C.~Simmerling.
+\newblock {Comparison of multiple Amber force fields and development of
+  improved protein backbone parameters}.
+\newblock {\em Proteins: Struct., Funct., Bioinf.}, 65(3):712--725, November
+  2006.
+
+\bibitem{Nettles2004}
+J.~H. Nettles, H.~Li, B.~Cornett, J.~M. Krahn, J.~P. Snyder, and K.~H. Downing.
+\newblock {The Binding Mode of Epothilone A on $\alpha$,$\beta$-Tubulin by
+  Electron Crystallography}.
+\newblock {\em Science}, 305(5685):866--869, August 2004.
+
+\bibitem{Wang2004}
+J.~Wang, R.~M. Wolf, J.~W. Caldwell, P.~A. Kollman, and D.~A. Case.
+\newblock {Development and testing of a general amber force field.}
+\newblock {\em J. Comput. Chem.}, 25(9):1157--74, July 2004.
+
+\bibitem{Jakalian2002}
+A.~Jakalian, D.~B. Jack, and C.~I. Bayly.
+\newblock {Fast, efficient generation of high-quality atomic charges. AM1-BCC
+  model: II. Parameterization and validation.}
+\newblock {\em J. Comput. Chem.}, 23(16):1623--41, December 2002.
+
+\bibitem{Humphrey1996}
+W.~Humphrey, A.~Dalke, and K.~Schulten.
+\newblock {VMD}: Visual molecular dynamics.
+\newblock {\em J. Mol. Graphics}, 14(1):33 -- 38, 1996.
+
+\bibitem{Wang2001}
+W.~Wang and P.~A. Kollman.
+\newblock {Computational study of protein specificity: The molecular basis of
+  HIV-1 protease drug resistance}.
+\newblock {\em Proc. Natl. Acad. Sci. USA}, 98(26):14937--14942, December 2001.
+
+\bibitem{Barakat2010}
+K.~Barakat, J.~Mane, D.~Friesen, and J.~Tuszynski.
+\newblock {Ensemble-based virtual screening reveals dual-inhibitors for the
+  p53-MDM2/MDMX interactions.}
+\newblock {\em J. Mol. Graph. Model.}, 28(6):555--68, February 2010.
+
+\bibitem{Lepsik2004}
+M.~Lep\v{s}\'{\i}k, Z.~K\v{r}\'{\i}\v{z}, and Z.~Havlas.
+\newblock {Efficiency of a second-generation HIV-1 protease inhibitor studied
+  by molecular dynamics and absolute binding free energy calculations}.
+\newblock {\em Proteins: Struct., Funct., Bioinf.}, 57(2):279--293, November
+  2004.
+
+\bibitem{Brown2006}
+S.~P. Brown and S.~W. Muchmore.
+\newblock {High-Throughput Calculation of Protein-Ligand Binding Affinities:
+  Modification and Adaptation of the MM-PBSA Protocol to Enterprise Grid
+  Computing}.
+\newblock {\em J. Chem. Inf. Model.}, 46(3):999--1005, February 2006.
+
+\bibitem{Hou2007}
+T.~Hou and R.~Yu.
+\newblock {Molecular dynamics and free energy studies on the wild-type and
+  double mutant HIV-1 protease complexed with amprenavir and two
+  amprenavir-related inhibitors: mechanism for binding and drug resistance.}
+\newblock {\em J. Med. Chem.}, 50(6):1177--88, March 2007.
+
+\bibitem{ADMET}
+{ADMET Predictor, Simulations Plus}.
+\newblock www.simulations-plus.com.
+
+\bibitem{Su1997}
+D.-S. Su, A.~Balog, D.~Meng, P.~Bertinato, S.~J. Danishefsky, Y.-H. Zheng,
+  T.-C. Chou, L.~He, and S.~B. Horwitz.
+\newblock Structure-activity relationship of the epothilones and the first in
+  vivo comparison with paclitaxel.
+\newblock {\em Angew. Chem. Int. Edit.}, 36(19):2093--2096, 1997.
+
+\bibitem{Mooberry2008}
+S.~L. Mooberry, M.~K. Hilinski, E.~A. Clark, and P.~A. Wender.
+\newblock Function-oriented synthesis: Biological evaluation of laulimalide
+  analogues derived from a last step cross metathesis diversification strategy.
+\newblock {\em Mol. Pharm.}, 5(5):829--838, 2008.
+
+\bibitem{Lam2012}
+E.~T. Lam, S.~Goel, L.~J. Schaaf, G.~F. Cropp, A.~L. Hannah, Y.~Zhou,
+  B.~McCracken, B.~I. Haley, R.~G. Johnson, S.~Mani, and M.~A.
+  Villalona-Calero.
+\newblock Phase {I} dose escalation study of {KOS}-1584, a novel epothilone, in
+  patients with advanced solid tumors.
+\newblock {\em Cancer Chemoth. Pharm.}, 69(2):523--531, 2012.
+
+\bibitem{Hardt2001}
+I.~H. Hardt, H.~Steinmetz, K.~Gerth, F.~Sasse, H.~Reichenbach, and
+  G.~H\"{o}fle.
+\newblock New natural epothilones from sorangium cellulosum, strains {So}
+  ce90/b2 and {So} ce90/d13:  isolation, structure elucidation, and {SAR}
+  studies.
+\newblock {\em J. Nat. Prod.}, 64(7):847--856, 2001.
+
+\bibitem{Sefkow1998}
+M.~Sefkow, M.~Kiffe, and G.~H\"{o}fle.
+\newblock {Derivatization of the C12C13 functional groups of epothilones A, B
+  and C}.
+\newblock {\em Bioorg. Med. Chem. Lett.}, 8(21):3031--3036, November 1998.
+
+\bibitem{Namikoshi2001}
+M.~Namikoshi, K.~Akano, S.~Meguro, I.~Kasuga, Y.~Mine, T.~Takahashi, and
+  H.~Kobayashi.
+\newblock {A New Macrocyclic Trichothecene, 12,13-Deoxyroridin E, Produced by
+  the Marine-Derived Fungus Myrothecium roridum Collected in Palau}.
+\newblock {\em J. Nat. Prod.}, 64(3):396--398, February 2001.
+
+\bibitem{Buey2004}
+R.~M. Buey, J.~F. D\'{\i}az, J.~M. Andreu, A.~O'Brate, P.~Giannakakou, K.~C.
+  Nicolaou, P.~K. Sasmal, A.~Ritz\'{e}n, and K.~Namoto.
+\newblock {Interaction of Epothilone Analogs with the Paclitaxel Binding Site:
+  Relationship between Binding Affinity, Microtubule Stabilization, and
+  Cytotoxicity}.
+\newblock {\em Chem. Biol.}, 11(2):225--236, February 2004.
+
+\bibitem{Harada1969}
+S.~Harada, E.~Higashide, T.~Fugono, and T.~Kishi.
+\newblock Isolation and structures of {T}-2636 antibiotics.
+\newblock {\em Tetrahedron Lett.}, 10(27):2239 -- 2244, 1969.
+
+\bibitem{Harada1971}
+S.~Harada, T.~Kishi, and K.~Mizuno.
+\newblock Studies on {T}-2636 antibiotics. {II}. {I}solation and chemical
+  properties of {T}-2636 antibiotics.
+\newblock {\em J. Antibiot.}, 24(1):13 -- 22, 1971.
+
+\bibitem{Harada1973}
+S.~Harada, S.~Tanayama, and T.~Kishi.
+\newblock Studies on lankacidin-group ({T}-2636) antibiotics. 8. {M}etabolism
+  of lankacidin c 14-propionate in rats and mice.
+\newblock {\em J. Antibiot.}, 26(11):658 -- 668, 1973.
+
+\bibitem{Harada1973b}
+S.~Harada, T.~Yamazaki, K.~Hatano, K.~Tsuchiya, and T.~Kishi.
+\newblock Studies on lankacidin-group ({T}-2636) antibiotics. {VII}.
+  {S}tructure-activity relationships of lankacidin-group antibiotics.
+\newblock {\em J. Antibiot.}, 26(11):647 -- 657, 1973.
+
+\bibitem{Harada1974}
+S.~Harada and T.~Kishi.
+\newblock Studies on lankacidin-group ({T}-2636) antibiotics. {V}. {C}hemical
+  structures of lankacidin-group antibiotics. 1.
+\newblock {\em Chem. Pharm. Bull.}, 22(1):99 -- 108, 1974.
+
+\bibitem{Tsuchiya1971}
+K.~Tsuchiya, T.~Yamazaki, Y.~Takeuchi, and T.~Oishi.
+\newblock Studies on {T}-2636 antibiotics. {IV. I}n vitro and in vivo
+  antibacterial activity of {T}-2636 antibiotics.
+\newblock {\em J. Antibiot.}, 24(1):29 -- 41, 1971.
+
+\bibitem{Ootsu1973}
+K.~Ootsu and T.~Matsumoto.
+\newblock Effects of lankacidin group {(T2636)} antibiotics on the tumor growth
+  and immune response against sheep erythrocytes in mice.
+\newblock {\em Gann.}, 64(5):481 -- 492, 1973.
+
+\bibitem{Ootsu1975}
+K.~Ootsu, T.~Matsumoto, S.~Harada, and T.~Kishi.
+\newblock Antitumor and immunosuppressive activities of lankacidin-group
+  antibiotics: structure-activity relationships.
+\newblock {\em Cancer Chemother. Rep.}, 59(5):919 -- 928, 1975.
+
+\bibitem{Kende1995}
+A.~S. Kende, K.~Liu, I.~Kaldor, G.~Dorey, and K.~Koch.
+\newblock Total synthesis of the macrolide antitumor antibiotic lankacidin c.
+\newblock {\em J. Am. Chem. Soc.}, 117(31):8258--8270, 1995.
+
+\bibitem{Auerbach2010}
+T.~Auerbach, I.~Mermershtain, C.~Davidovich, A.~Bashan, M.~Belousoff,
+  I.~Wekselman, E.~Zimmerman, L.~Xiong, D.~Klepacki, K.~Arakawa, H.~Kinashi,
+  A.~S. Mankin, and A.~Yonath.
+\newblock The structure of ribosome-lankacidin complex reveals ribosomal sites
+  for synergistic antibiotics.
+\newblock {\em Proc. Natl. Acad. Sci. U.S.A.}, 107(5):1983--1988, 2010.
+
+\bibitem{Belousoff2011}
+M.~J. Belousoff, T.~Shapira, A.~Bashan, E.~Zimmerman, H.~Rozenberg, K.~Arakawa,
+  H.~Kinashi, and A.~Yonath.
+\newblock Crystal structure of the synergistic antibiotic pair, lankamycin and
+  lankacidin, in complex with the large ribosomal subunit.
+\newblock {\em Proc. Natl. Acad. Sci. U.S.A.}, 108(7):2717--2722, 2011.
+
+\bibitem{Ayoub2013}
+A.~T. Ayoub, M.~Klobukowski, and J.~Tuszynski.
+\newblock Similarity-based virtual screening for microtubule stabilizers
+  reveals novel antimitotic scaffold.
+\newblock {\em J. Mol. Graph. Model.}, 44(0):188 -- 196, 2013.
+
+\bibitem{Meagher2003}
+K.~L. Meagher, L.~T. Redman, and H.~A. Carlson.
+\newblock Development of polyphosphate parameters for use with the {AMBER}
+  force field.
+\newblock {\em J. Comput. Chem.}, 24(9):1016--1025, 2003.
+
+\bibitem{Kinashi1994}
+H.~Kinashi, E.~Mori, A.~Hatani, and O.~Nimi.
+\newblock Isolation and characterization of linear plasmids from
+  lankacidin-producing streptomyces species.
+\newblock {\em J. Antibiot.}, 47(12):1447 -- 1455, 1994.
+
+\bibitem{Arakawa2005}
+K.~Arakawa, F.~Sugino, K.~Kodama, T.~Ishii, and H.~Kinashi.
+\newblock Cyclization mechanism for the synthesis of macrocyclic antibiotic
+  lankacidin in streptomyces rochei.
+\newblock {\em Chem. Biol.}, 12(2):249 -- 256, 2005.
+
+\bibitem{Arunan2011-1}
+E.~Arunan, G.~R. Desiraju, R.~A. Klein, J.~Sadlej, S.~Scheiner, I.~Alkorta,
+  D.~C. Clary, R.~H. Crabtree, J.~J. Dannenberg, P.~Hobza, H.~G. Kjaergaard,
+  A.~C. Legon, B.~Mennucci, and D.~J. Nesbitt.
+\newblock {Definition of the hydrogen bond (IUPAC Recommendations 2011)}.
+\newblock {\em Pure Appl. Chem.}, 83(8):1637--1641, July 2011.
+
+\bibitem{Arunan2011-2}
+E.~Arunan, G.~R. Desiraju, R.~A. Klein, J.~Sadlej, S.~Scheiner, I.~Alkorta,
+  D.~C. Clary, R.~H. Crabtree, J.~J. Dannenberg, P.~Hobza, H.~G. Kjaergaard,
+  A.~C. Legon, B.~Mennucci, and D.~J. Nesbitt.
+\newblock {Defining the hydrogen bond: An account (IUPAC Technical Report)}.
+\newblock {\em Pure Appl. Chem.}, 83(8):1619--1636, July 2011.
+
+\bibitem{Desiraju2002}
+G.~R. Desiraju.
+\newblock Hydrogen bridges in crystal engineering: Interactions without
+  borders.
+\newblock {\em Accounts Chem. Res.}, 35(7):565--573, 2002.
+
+\bibitem{Deechongkit2004}
+S.~Deechongkit, H.~Nguyen, E.~T. Powers, P.~E. Dawson, M.~Gruebele, and J.~W.
+  Kelly.
+\newblock {Context-dependent contributions of backbone hydrogen bonding to
+  $\beta$-sheet folding energetics}.
+\newblock {\em Nature}, 430(6995):101--105, July 2004.
+
+\bibitem{Rose2006}
+G.~D. Rose, P.~J. Fleming, J.~R. Banavar, and A.~Maritan.
+\newblock A backbone-based theory of protein folding.
+\newblock {\em Proc. Natl. Acad. Sci. U.S.A.}, 103(45):16623--16633, 2006.
+
+\bibitem{Hellgren2007}
+M.~Hellgren, C.~Kaiser, S.~Haij, {\AA{}}.~Norberg, and J.-O. H\"{o}\"{o}g.
+\newblock A hydrogen-bonding network in mammalian sorbitol dehydrogenase
+  stabilizes the tetrameric state and is essential for the catalytic power.
+\newblock {\em Cell Mol. Life Sci.}, 64(23):3129--3138, 2007.
+
+\bibitem{Davidson1967}
+E.~R. Davidson.
+\newblock Electronic population analysis of molecular wavefunctions.
+\newblock {\em J. Chem. Phys.}, 46(9):3320--3324, 1967.
+
+\bibitem{Roby1974}
+K.~R. Roby.
+\newblock Quantum theory of chemical valence concepts.
+\newblock {\em Mol. Phys.}, 27(1):81--104, 1974.
+
+\bibitem{Ehrhardt1985}
+C.~Ehrhardt and R.~Ahlrichs.
+\newblock Population analysis based on occupation numbers {II}. relationship
+  between shared electron numbers and bond energies and characterization of
+  hypervalent contributions.
+\newblock {\em Theor. Chim. Acta}, 68(3):231--245, 1985.
+
+\bibitem{Reiher2001}
+M.~Reiher, D.~Sellmann, and B.~A. Hess.
+\newblock Stabilization of diazene in fe{(II)}--sulfur model complexes relevant
+  for nitrogenase activity. {I}. a new approach to the evaluation of
+  intramolecular hydrogen bond energies.
+\newblock {\em Theor. Chem. Acc.}, 106(6):379--392, 2001.
+
+\bibitem{Thar2006}
+J.~Thar and B.~Kirchner.
+\newblock Hydrogen bond detection.
+\newblock {\em J. Phys. Chem. A}, 110(12):4229--4237, 2006.
+
+\bibitem{Schmidt2008}
+M.~Schmidt, S.~Zahn, M.~Carella, O.~Ohlenschl{\"{a}}ger, M.~G{\"{o}}rlach,
+  E.~Kothe, and J.~Weston.
+\newblock Solution structure of a functional biomimetic and mechanistic
+  implications for nickel superoxide dismutases.
+\newblock {\em ChemBioChem}, 9(13):2135--2146, 2008.
+
+\bibitem{Schenk2008}
+S.~Schenk, B.~Le~Guennic, B.~Kirchner, and M.~Reiher.
+\newblock First-principles investigation of the schrock mechanism of dinitrogen
+  reduction employing the full {HIPTN}$_{3}${N} ligand.
+\newblock {\em Inorg. Chem.}, 47(9):3634--3650, 2008.
+
+\bibitem{Grabowski2001}
+S.~J. Grabowski.
+\newblock Ab initio calculations on conventional and unconventional hydrogen
+  bonds -- study of the hydrogen bond strength.
+\newblock {\em J. Phys. Chem. A}, 105(47):10739--10746, 2001.
+
+\bibitem{Gora2005}
+R.~W. Gora, S.~J. Grabowski, and J.~Leszczynski.
+\newblock Dimers of formic acid, acetic acid, formamide and
+  pyrrole-2-carboxylic acid: An ab initio study.
+\newblock {\em J. Phys. Chem. A}, 109(29):6397--6405, 2005.
+
+\bibitem{Parthasarathi2005}
+R.~Parthasarathi, V.~Subramanian, and N.~Sathyamurthy.
+\newblock Hydrogen bonding in phenol, water, and phenol--water clusters.
+\newblock {\em J. Phys. Chem. A}, 109(5):843--850, 2005.
+
+\bibitem{Parthasarathi2006}
+R.~Parthasarathi, V.~Subramanian, and N.~Sathyamurthy.
+\newblock Hydrogen bonding without borders: An atoms-in-molecules perspective.
+\newblock {\em J. Phys. Chem. A}, 110(10):3349--3351, 2006.
+
+\bibitem{Gatti1994}
+C.~Gatti, V.~R. Saunders, and C.~Roetti.
+\newblock Crystal field effects on the topological properties of the electron
+  density in molecular crystals: The case of urea.
+\newblock {\em J. Chem. Phys.}, 101(12):10686--10696, 1994.
+
+\bibitem{Bader1991}
+R.~F.~W. Bader.
+\newblock A quantum theory of molecular structure and its applications.
+\newblock {\em Chem. Rev.}, 91(5):893--928, 1991.
+
+\bibitem{Glendening2012}
+E.~D. Glendening, C.~R. Landis, and F.~Weinhold.
+\newblock {Natural bond orbital methods}.
+\newblock {\em Wiley Interdisciplinary Reviews: Computational Molecular
+  Science}, 2(1):1--42, January 2012.
+
+\bibitem{Mulliken1955}
+R.~S. Mulliken.
+\newblock Electronic population analysis on {LCAO}--{MO} molecular wave
+  functions.
+\newblock {\em J. Chem. Phys.}, 23(10):1833--1840, 1955.
+
+\bibitem{Grabowski2000}
+S.~Grabowski.
+\newblock {BeH}$_2$ as a proton--accepting molecule for dihydrogen bonded
+  systems--ab initio study.
+\newblock {\em J. Mol. Struct.}, 553(1--3):151--156, 2000.
+
+\bibitem{Alkorta1998}
+I.~Alkorta and J.~Elguero.
+\newblock Non--conventional hydrogen bonds.
+\newblock {\em Chem. Soc. Rev.}, 27:163--170, 1998.
+
+\bibitem{Wiberg1968}
+K.~Wiberg.
+\newblock Application of the {Pople--Santry--Segal} \{CNDO\} method to the
+  cyclopropylcarbinyl and cyclobutyl cation and to bicyclobutane.
+\newblock {\em Tetrahedron}, 24(3):1083--1096, 1968.
+
+\bibitem{Reed1983}
+A.~E. Reed and F.~Weinhold.
+\newblock Natural bond orbital analysis of {near--Hartree--Fock} water dimer.
+\newblock {\em J. Chem. Phys.}, 78(6):4066--4073, 1983.
+
+\bibitem{Reed1985}
+A.~E. Reed, R.~B. Weinstock, and F.~Weinhold.
+\newblock Natural population analysis.
+\newblock {\em J. Chem. Phys.}, 83(2):735--746, 1985.
+
+\bibitem{Scheiner2007}
+S.~Scheiner.
+\newblock {\em Calculating the Properties of Hydrogen Bonds by ab Initio
+  Methods}, pages 165--218.
+\newblock John Wiley \& Sons, Inc., 2007.
+
+\bibitem{Jeziorski2002}
+B.~Jeziorski and K.~Szalewicz.
+\newblock {\em Intermolecular Interactions by Perturbation Theory}, pages
+  1376--1398.
+\newblock John Wiley \& Sons, Ltd, 2002.
+
+\bibitem{Becke1993}
+A.~D. Becke.
+\newblock Density--functional thermochemistry. {III.} the role of exact
+  exchange.
+\newblock {\em J. Chem. Phys.}, 98(7):5648--5652, 1993.
+
+\bibitem{Lee1988}
+C.~Lee, W.~Yang, and R.~G. Parr.
+\newblock Development of the {Colle--Salvetti} correlation--energy formula into
+  a functional of the electron density.
+\newblock {\em Phys. Rev. B}, 37:785--789, Jan 1988.
+
+\bibitem{Vosko1980}
+S.~H. Vosko, L.~Wilk, and M.~Nusair.
+\newblock Accurate spin--dependent electron liquid correlation energies for
+  local spin density calculations: a critical analysis.
+\newblock {\em Can. J. Phys.}, 58(8):1200--1211, 1980.
+
+\bibitem{Schaeffer1992}
+A.~Sch{\"{a}}fer, H.~Horn, and R.~Ahlrichs.
+\newblock Fully optimized contracted gaussian basis sets for atoms {Li to Kr}.
+\newblock {\em J. Chem. Phys.}, 97(4):2571--2577, 1992.
+
+\bibitem{Schaeffer1994}
+A.~Sch{\"{a}}fer, C.~Huber, and R.~Ahlrichs.
+\newblock Fully optimized contracted gaussian basis sets of triple zeta valence
+  quality for atoms {Li to Kr}.
+\newblock {\em J. Chem. Phys.}, 100(8):5829--5835, 1994.
+
+\bibitem{Boys1970}
+S.~Boys and F.~Bernardi.
+\newblock The calculation of small molecular interactions by the differences of
+  separate total energies. some procedures with reduced errors.
+\newblock {\em Mol. Phys.}, 19(4):553--566, 1970.
+
+\bibitem{Simon1996}
+S.~Simon, M.~Duran, and J.~J. Dannenberg.
+\newblock How does basis set superposition error change the potential surfaces
+  for hydrogen--bonded dimers?
+\newblock {\em J. Chem. Phys.}, 105(24):11024--11031, 1996.
+
+\bibitem{Grimme2006}
+S.~Grimme.
+\newblock Semiempirical {GGA}-type density functional constructed with a
+  long-range dispersion correction.
+\newblock {\em J. Comput. Chem.}, 27(15):1787--1799, 2006.
+
+\bibitem{Jeng-Da2008}
+J.-D. Chai and M.~Head-Gordon.
+\newblock Systematic optimization of long-range corrected hybrid density
+  functionals.
+\newblock {\em J. Chem. Phys.}, 128(8):--, 2008.
+
+\bibitem{Jeng-Da20082}
+J.-D. Chai and M.~Head-Gordon.
+\newblock Long-range corrected hybrid density functionals with damped atom-atom
+  dispersion corrections.
+\newblock {\em Phys. Chem. Chem. Phys.}, 10:6615--6620, 2008.
+
+\bibitem{Moller1934}
+C.~M\o{}ller and M.~S. Plesset.
+\newblock Note on an approximation treatment for many-electron systems.
+\newblock {\em Phys. Rev.}, 46:618--622, Oct 1934.
+
+\bibitem{HeadGordon1988}
+M.~Head-Gordon, J.~A. Pople, and M.~J. Frisch.
+\newblock {MP2} energy evaluation by direct methods.
+\newblock {\em Chem. Phys. Lett.}, 153(6):503 -- 506, 1988.
+
+\bibitem{Frisch1990}
+M.~J. Frisch, M.~Head-Gordon, and J.~A. Pople.
+\newblock A direct {MP2} gradient method.
+\newblock {\em Chem. Phys. Lett.}, 166(3):275 -- 280, 1990.
+
+\bibitem{ccpVTZ}
+T.~H. Dunning.
+\newblock Gaussian basis sets for use in correlated molecular calculations.
+  {I}. the atoms boron through neon and hydrogen.
+\newblock {\em J. Chem. Phys.}, 90(2), 1989.
+
+\bibitem{Kendall1992}
+R.~A. Kendall, T.~H. Dunning, and R.~J. Harrison.
+\newblock Electron affinities of the first‐row atoms revisited. {S}ystematic
+  basis sets and wave functions.
+\newblock {\em J. Chem. Phys.}, 96(9), 1992.
+
+\bibitem{g09}
+M.~J. Frisch, G.~W. Trucks, H.~B. Schlegel, G.~E. Scuseria, M.~A. Robb, J.~R.
+  Cheeseman, G.~Scalmani, V.~Barone, B.~Mennucci, G.~A. Petersson,
+  H.~Nakatsuji, M.~Caricato, X.~Li, H.~P. Hratchian, A.~F. Izmaylov, J.~Bloino,
+  G.~Zheng, J.~L. Sonnenberg, M.~Hada, M.~Ehara, K.~Toyota, R.~Fukuda,
+  J.~Hasegawa, M.~Ishida, T.~Nakajima, Y.~Honda, O.~Kitao, H.~Nakai, T.~Vreven,
+  J.~A. Montgomery, {Jr.}, J.~E. Peralta, F.~Ogliaro, M.~Bearpark, J.~J. Heyd,
+  E.~Brothers, K.~N. Kudin, V.~N. Staroverov, R.~Kobayashi, J.~Normand,
+  K.~Raghavachari, A.~Rendell, J.~C. Burant, S.~S. Iyengar, J.~Tomasi,
+  M.~Cossi, N.~Rega, J.~M. Millam, M.~Klene, J.~E. Knox, J.~B. Cross,
+  V.~Bakken, C.~Adamo, J.~Jaramillo, R.~Gomperts, R.~E. Stratmann, O.~Yazyev,
+  A.~J. Austin, R.~Cammi, C.~Pomelli, J.~W. Ochterski, R.~L. Martin,
+  K.~Morokuma, V.~G. Zakrzewski, G.~A. Voth, P.~Salvador, J.~J. Dannenberg,
+  S.~Dapprich, A.~D. Daniels, {\"{o}}.~Farkas, J.~B. Foresman, J.~V. Ortiz,
+  J.~Cioslowski, and D.~J. Fox.
+\newblock Gaussian~09 {R}evision {D}.01.
+\newblock Gaussian Inc. Wallingford CT 2009.
+
+\bibitem{Ayoub2014HB}
+A.~T. Ayoub, J.~Tuszynski, and M.~Klobukowski.
+\newblock Estimating hydrogen bond energies: comparison of methods.
+\newblock {\em Theor. Chem. Acc.}, 133(8):1520--1526, 2014.
+
+\bibitem{Ayoub2014}
+A.~T. Ayoub, T.~J. Craddock, M.~Klobukowski, and J.~Tuszynski.
+\newblock Analysis of the strength of interfacial hydrogen bonds between
+  tubulin dimers using quantum theory of atoms in molecules.
+\newblock {\em Biophys. J.}, 107(3):740--750, December 2014.
+
+\bibitem{McIntosh2009}
+J.~R. McIntosh, M.~K. Morphew, P.~M. Grissom, S.~P. Gilbert, and A.~Hoenger.
+\newblock Lattice structure of cytoplasmic microtubules in a cultured mammalian
+  cell.
+\newblock {\em J. Mol. Biol.}, 394(2):177--182, 2009.
+
+\bibitem{Mandelkow1986}
+E.~M. Mandelkow, R.~Schultheiss, R.~Rapp, M.~M\"{u}ller, and E.~Mandelkow.
+\newblock On the surface lattice of microtubules: helix starts, protofilament
+  number, seam, and handedness.
+\newblock {\em J. Cell. Biol.}, 102(3):1067--1073, 1986.
+
+\bibitem{Cohen1975}
+C.~Cohen, D.~DeRosier, S.~C. Harrison, R.~E. Stephens, and J.~Thomas.
+\newblock X-ray patterns from microtubules.
+\newblock {\em Ann. N. Y. Acad. Sci.}, 253(1):53--59, 1975.
+
+\bibitem{Mandelkow1977}
+E.-M. Mandelkow, E.~Mandelkow, N.~Unwin, and C.~Cohen.
+\newblock {Tubulin hoops}.
+\newblock {\em Nature}, 265(5595):655--657, February 1977.
+
+\bibitem{WaisSteider1987}
+C.~Wais-Steider, N.~White, D.~Gilbert, and P.~Eagles.
+\newblock X-ray diffraction patterns from microtubules and neurofilaments in
+  axoplasm.
+\newblock {\em J. Mol. Biol.}, 197(2):205--218, 1987.
+
+\bibitem{Mandelkow1995}
+E.~Mandelkow, Y.~H. Song, and E.~M. Mandelkow.
+\newblock {The microtubule lattice--dynamic instability of concepts.}
+\newblock {\em Trends Cell Biol.}, 5(7):262--266, July 1995.
+
+\bibitem{Song1993}
+Y.~H. Song and E.~Mandelkow.
+\newblock Recombinant kinesin motor domain binds to beta-tubulin and decorates
+  microtubules with a b surface lattice.
+\newblock {\em Proc. Natl. Acad. Sci. U.S.A.}, 90(5):1671--1675, 1993.
+
+\bibitem{Georges2009}
+A.~des Georges, M.~Katsuki, D.~R. Drummond, M.~Osei, R.~A. Cross, and L.~A.
+  Amos.
+\newblock {Mal3, the Schizosaccharomyces pombe homolog of EB1, changes the
+  microtubule lattice}.
+\newblock {\em Nat. Struct. Mol. Biol.}, 15(10):1102--1108, October 2008.
+
+\bibitem{Vitre2008}
+B.~Vitre, F.~M. Coquelle, C.~Heichette, C.~Garnier, D.~Chr\'{e}tien, and
+  I.~Arnal.
+\newblock {EB1 regulates microtubule dynamics and tubulin sheet closure in
+  vitro}.
+\newblock {\em Nat. Cell Biol.}, 10(4):415--421, April 2008.
+
+\bibitem{Sept2003}
+D.~Sept, N.~A. Baker, and J.~A. McCammon.
+\newblock The physical basis of microtubule structure and stability.
+\newblock {\em Protein Sci.}, 12(10):2257--2261, 2003.
+
+\bibitem{Drabik2007}
+P.~Drabik, S.~Gusarov, and A.~Kovalenko.
+\newblock {Microtubule stability studied by three-dimensional molecular theory
+  of solvation.}
+\newblock {\em Biophys. J.}, 92(2):394--403, January 2007.
+
+\bibitem{Erickson1981}
+H.~P. Erickson and D.~Pantaloni.
+\newblock The role of subunit entropy in cooperative assembly. nucleation of
+  microtubules and other two--dimensional polymers.
+\newblock {\em Biophys. J.}, 34(2):293--309, 1981.
+
+\bibitem{Popelier1998}
+P.~L.~A. Popelier.
+\newblock Characterization of a dihydrogen bond on the basis of the electron
+  density.
+\newblock {\em J. Phys. Chem. A}, 102(10):1873--1878, 1998.
+
+\bibitem{Scheiner2001}
+S.~Scheiner, S.~J. Grabowski, and T.~Kar.
+\newblock Influence of hybridization and substitution on the properties of the
+  ch···o hydrogen bond.
+\newblock {\em J. Phys. Chem. A}, 105(46):10607--10612, 2001.
+
+\bibitem{Bernstein1978}
+F.~C. Bernstein, T.~F. Koetzle, G.~J. Williams, E.~F.~M. Jr., M.~D. Brice,
+  J.~R. Rodgers, O.~Kennard, T.~Shimanouchi, and M.~Tasumi.
+\newblock The protein data bank: A computer-based archival file for
+  macromolecular structures.
+\newblock {\em Arch. Biochem. Biophys.}, 185(2):584--591, 1978.
+
+\bibitem{Lowe2001}
+J.~L{\"{o}}we, H.~Li, K.~Downing, and E.~Nogales.
+\newblock Refined structure of $\alpha\beta$-tubulin at 3.5 \r{A} resolution.
+\newblock {\em J. Mol. Biol.}, 313(5):1045--1057, 2001.
+
+\bibitem{Sali1993}
+A.~\v{S}ali and T.~L. Blundell.
+\newblock Comparative protein modelling by satisfaction of spatial restraints.
+\newblock {\em J. Mol. Biol.}, 234(3):779--815, 1993.
+
+\bibitem{Phillips2005}
+J.~C. Phillips, R.~Braun, W.~Wang, J.~Gumbart, E.~Tajkhorshid, E.~Villa,
+  C.~Chipot, R.~D. Skeel, L.~Kal\'{e}, and K.~Schulten.
+\newblock Scalable molecular dynamics with {NAMD}.
+\newblock {\em J. Comput. Chem.}, 26(16):1781--1802, 2005.
+
+\bibitem{Li2002}
+H.~Li, D.~J. DeRosier, W.~V. Nicholson, E.~Nogales, and K.~H. Downing.
+\newblock Microtubule structure at 8 \r{A} resolution.
+\newblock {\em Structure}, 10(10):1317--1328, 2002.
+
+\bibitem{PyMol}
+W.~L. DeLano.
+\newblock The {PyMOL} molecular graphics system. {San Carlos}, {CA}: Delano
+  {S}cientific, 2002.
+
+\bibitem{Wells2010}
+D.~B. Wells and A.~Aksimentiev.
+\newblock Mechanical properties of a complete microtubule revealed through
+  molecular dynamics simulation.
+\newblock {\em Biophys. J.}, 99(2):629 -- 637, 2010.
+
+\bibitem{Guex1997}
+N.~Guex and M.~C. Peitsch.
+\newblock {SWISS-MODEL and the Swiss-PDB Viewer}: An environment for
+  comparative protein modeling.
+\newblock {\em Electrophoresis}, 18(15):2714--2723, 1997.
+
+\bibitem{Cornell1995}
+W.~D. Cornell, P.~Cieplak, C.~I. Bayly, I.~R. Gould, K.~M. Merz, D.~M.
+  Ferguson, D.~C. Spellmeyer, T.~Fox, J.~W. Caldwell, and P.~A. Kollman.
+\newblock A second generation force field for the simulation of proteins,
+  nucleic acids, and organic molecules.
+\newblock {\em J. Am. Chem. Soc.}, 117(19):5179--5197, 1995.
+
+\bibitem{Li2005}
+H.~Li, A.~D. Robertson, and J.~H. Jensen.
+\newblock Very fast empirical prediction and rationalization of protein {pKa}
+  values.
+\newblock {\em Proteins: Struct., Funct., Bioinf.}, 61(4):704--721, 2005.
+
+\bibitem{Bas2008}
+D.~C. Bas, D.~M. Rogers, and J.~H. Jensen.
+\newblock Very fast prediction and rationalization of {pKa} values for
+  protein--ligand complexes.
+\newblock {\em Proteins: Struct., Funct., Bioinf.}, 73(3):765--783, 2008.
+
+\bibitem{Olsson2011}
+M.~H.~M. Olsson, C.~R. S\o{}ndergaard, M.~Rostkowski, and J.~H. Jensen.
+\newblock {PROPKA3}: consistent treatment of internal and surface residues in
+  empirical {pKa} predictions.
+\newblock {\em J. Chem. Theory Comput.}, 7(2):525--537, 2011.
+
+\bibitem{Sondergaard2011}
+C.~R. S\o{}ndergaard, M.~H.~M. Olsson, M.~Rostkowski, and J.~H. Jensen.
+\newblock Improved treatment of ligands and coupling effects in empirical
+  calculation and rationalization of {pKa} values.
+\newblock {\em J. Chem. Theory Comput.}, 7(7):2284--2295, 2011.
+
+\bibitem{Salomon-Ferrer2013}
+R.~Salomon-Ferrer, A.~W. G\"{o}tz, D.~Poole, S.~Le~Grand, and R.~C. Walker.
+\newblock Routine microsecond molecular dynamics simulations with {AMBER} on
+  {GPUs}. 2. {Explicit} solvent {Particle} {Mesh} {Ewald}.
+\newblock {\em J. Chem. Theory Comput.}, 9(9):3878--3888, 2013.
+
+\bibitem{Gotz2012}
+A.~W. G\"{o}tz, M.~J. Williamson, D.~Xu, D.~Poole, S.~Le~Grand, and R.~C.
+  Walker.
+\newblock Routine microsecond molecular dynamics simulations with {AMBER on
+  GPUs. 1. Generalized Born}.
+\newblock {\em J. Chem. Theory Comput.}, 8(5):1542--1555, 2012.
+
+\bibitem{LeGrand2013}
+S.~L. Grand, A.~W. G\"{o}tz, and R.~C. Walker.
+\newblock {SPFP}: Speed without compromise - a mixed precision model for {GPU}
+  accelerated molecular dynamics simulations.
+\newblock {\em Comput. Phys. Commun.}, 184(2):374 -- 380, 2013.
+
+\bibitem{Shao2007}
+J.~Shao, S.~W. Tanner, N.~Thompson, and T.~E. Cheatham.
+\newblock Clustering molecular dynamics trajectories: 1. characterizing the
+  performance of different clustering algorithms.
+\newblock {\em J. Chem. Theory Comput.}, 3(6):2312--2334, 2007.
+
+\bibitem{Roe2013}
+D.~R. Roe and T.~E. Cheatham.
+\newblock {PTRAJ} and {CPPTRAJ}: Software for processing and analysis of
+  molecular dynamics trajectory data.
+\newblock {\em J. Chem. Theory Comput.}, 9(7):3084--3095, 2013.
+
+\bibitem{Wendler2010}
+K.~Wendler, J.~Thar, S.~Zahn, and B.~Kirchner.
+\newblock Estimating the hydrogen bond energy.
+\newblock {\em J. Phys. Chem. A}, 114(35):9529--9536, 2010.
+
+\bibitem{AIMPAC}
+R.~F.~W. Bader.
+\newblock {\em AIMPAC, Suite of programs for the Theory of Atoms in Molecules}.
+\newblock McMaster University, Hamilton, Ontario, Canada, 1994.
+
+\bibitem{Gigant2005}
+B.~Gigant, C.~Wang, R.~B.~G. Ravelli, F.~Roussi, M.~O. Steinmetz, P.~A. Curmi,
+  A.~Sobel, and M.~Knossow.
+\newblock {Structural basis for the regulation of tubulin by vinblastine}.
+\newblock {\em Nature}, 435(7041):519--522, May 2005.
+
+\bibitem{Toso1993}
+R.~J. Toso, M.~A. Jordan, K.~W. Farrell, B.~Matsumoto, and L.~Wilson.
+\newblock Kinetic stabilization of microtubule dynamic instability in vitro by
+  vinblastine.
+\newblock {\em Biochemistry}, 32(5):1285--1293, 1993.
+
+\bibitem{Torin2006}
+J.~T. Huzil, R.~F. Ludue{\~{n}}a, and J.~Tuszynski.
+\newblock Comparative modelling of human $\beta$ tubulin isotypes and
+  implications for drug binding.
+\newblock {\em Nanotechnology}, 17(4):S90--S100, 2006.
+
+\bibitem{VanBuren2002}
+V.~VanBuren, D.~J. Odde, and L.~Cassimeris.
+\newblock Estimates of lateral and longitudinal bond energies within the
+  microtubule lattice.
+\newblock {\em Proc. Natl. Acad. Sci. U.S.A.}, 99(9):6035--6040, 2002.
+
+\bibitem{Nogales1999}
+E.~Nogales, M.~Whittaker, R.~A. Milligan, and K.~H. Downing.
+\newblock High-resolution model of the microtubule.
+\newblock {\em Cell}, 96(1):79--88, 1999.
+
+\bibitem{Snyder2001}
+J.~P. Snyder, J.~H. Nettles, B.~Cornett, K.~H. Downing, and E.~Nogales.
+\newblock The binding conformation of taxol in $\beta$-tubulin: A model based
+  on electron crystallographic density.
+\newblock {\em Proc. Natl. Acad. Sci. U.S.A.}, 98(9):5312--5316, 2001.
+
+\bibitem{Amos1999}
+L.~A. Amos and J.~L\"{o}we.
+\newblock {How Taxol stabilizes microtubule structure}.
+\newblock {\em Chem. Biol.}, 6(3):R65--R69, March 1999.
+
+\bibitem{Prota2013}
+A.~E. Prota, K.~Bargsten, D.~Zurwerra, J.~J. Field, J.~F. D\'{i}az, K.-H.
+  Altmann, and M.~O. Steinmetz.
+\newblock Molecular mechanism of action of microtubule-stabilizing anticancer
+  agents.
+\newblock {\em Science}, 339(6119):587--590, 2013.
+
+\bibitem{Sirajuddin2014}
+M.~Sirajuddin, L.~M. Rice, and R.~D. Vale.
+\newblock {Regulation of microtubule motors by tubulin isotypes and
+  post-translational modifications.}
+\newblock {\em Nat. Cell Biol.}, 16(4):335--344, April 2014.
+
+\bibitem{Hyams1993}
+J.~S. Hyams and C.~W. Lloyd.
+\newblock {\em Microtubules}.
+\newblock New York: Wiley-Liss, 1993.
+
+\bibitem{Dumontet2010}
+C.~Dumontet and M.~A. Jordan.
+\newblock {Microtubule-binding agents: a dynamic field of cancer therapeutics}.
+\newblock {\em Nat. Rev. Drug Discov.}, 9(10):790--803, October 2010.
+
+\bibitem{Mandelkow1991}
+E.~M. Mandelkow, E.~Mandelkow, and R.~A. Milligan.
+\newblock Microtubule dynamics and microtubule caps: a time-resolved
+  cryo-electron microscopy study.
+\newblock {\em J. Cell Biol.}, 114(5):977--991, 1991.
+
+\bibitem{Hyman1995}
+A.~A. Hyman, D.~Chr\'{e}tien, I.~Arnal, and R.~H. Wade.
+\newblock Structural changes accompanying {GTP} hydrolysis in microtubules:
+  information from a slowly hydrolyzable analogue
+  guanylyl-(alpha,beta)-methylene-diphosphonate.
+\newblock {\em J. Cell Biol.}, 128(1):117--125, 1995.
+
+\bibitem{Nogales2006}
+E.~Nogales and H.-W. Wang.
+\newblock Structural mechanisms underlying nucleotide-dependent self-assembly
+  of tubulin and its relatives.
+\newblock {\em Curr. Opin. Struc. Biol.}, 16(2):221 -- 229, 2006.
+
+\bibitem{Barbier2010}
+P.~Barbier, A.~Dorl\'{e}ans, F.~Devred, L.~Sanz, D.~Allegro, C.~Alfonso,
+  M.~Knossow, V.~Peyrot, and J.~M. Andreu.
+\newblock Stathmin and interfacial microtubule inhibitors recognize a naturally
+  curved conformation of tubulin dimers.
+\newblock {\em J. Biol. Chem.}, 285(41):31672--31681, 2010.
+
+\bibitem{Alushin2014}
+G.~M. Alushin, G.~C. Lander, E.~H. Kellogg, R.~Zhang, D.~Baker, and E.~Nogales.
+\newblock {High-resolution microtubule structures reveal the structural
+  transitions in $\alpha$$\beta$-tubulin upon GTP hydrolysis}.
+\newblock {\em Cell}, 157(5):1117--1129, December 2014.
+
+\bibitem{Mitchison2014}
+T.~J. Mitchison.
+\newblock The engine of microtubule dynamics comes into focus.
+\newblock {\em Cell}, 157(5):1008 -- 1010, 2014.
+
+\bibitem{Andre2012}
+J.~R. Andr\'{e}, M.-J. Cl\'{e}ment, E.~Adjadj, F.~Toma, P.~A. Curmi, and
+  P.~Manivet.
+\newblock The state of the guanosine nucleotide allosterically affects the
+  interfaces of tubulin in protofilament.
+\newblock {\em J. Comput. Aid. Mol. Des.}, 26(4):397--407, 2012.
+
+\bibitem{Kononova2014}
+O.~Kononova, Y.~Kholodov, K.~E. Theisen, K.~A. Marx, R.~I. Dima, F.~I.
+  Ataullakhanov, E.~L. Grishchuk, and V.~Barsegov.
+\newblock Tubulin bond energies and microtubule biomechanics determined from
+  nanoindentation in silico.
+\newblock {\em J. Am. Chem. Soc.}, 136(49):17036--17045, 2014.
+
+\bibitem{moe}
+\mbox{Molecular} \mbox{Operating}~\mbox{Environment} \mbox{(MOE)}, 2012.
+\newblock Chemical Computing Group Inc., 1010 Sherbooke St. West, Suite \#910,
+  Montreal, QC, Canada, H3A 2R7.
+
+\bibitem{Miller2012}
+B.~R. Miller, T.~D. McGee, J.~M. Swails, N.~Homeyer, H.~Gohlke, and A.~E.
+  Roitberg.
+\newblock {MMPBSA.py}: An efficient program for end-state free energy
+  calculations.
+\newblock {\em J. Chem. Theory Comput.}, 8(9):3314--3321, 2012.
+
+\bibitem{Hou2011}
+T.~Hou, J.~Wang, Y.~Li, and W.~Wang.
+\newblock {Assessing the performance of the MM/PBSA and MM/GBSA methods. 1. The
+  accuracy of binding free energy calculations based on molecular dynamics
+  simulations.}
+\newblock {\em J. Chem. Inf. Model.}, 51(1):69--82, January 2011.
+
+\bibitem{Ayoub2015}
+A.~T. Ayoub, M.~Klobukowski, and J.~A. Tuszynski.
+\newblock {Detailed Per-residue Energetic Analysis Explains the Driving Force
+  for Microtubule Disassembly}.
+\newblock {\em PLoS Comput. Biol.}, 11(6):e1004313, June 2015.
+
+\bibitem{Correia1987}
+J.~J. Correia, L.~T. Baty, and R.~C. Williams.
+\newblock Mg$^{2+}$ dependence of guanine nucleotide binding to tubulin.
+\newblock {\em J. Biol. Chem.}, 262(36):17278--17284, 1987.
+
+\bibitem{Frigon1975}
+R.~P. Frigon and S.~N. Timasheff.
+\newblock Magnesium-induced self-association of calf brain tubulin. {II}.
+  {T}hermodynamics.
+\newblock {\em Biochemistry}, 14(21):4567--4573, 1975.
+
+\bibitem{Gal1988}
+V.~Gal, S.~Martin, and P.~Bayley.
+\newblock Fast disassembly of microtubules induced by {Mg}$^{2+}$ or
+  {Ca}$^{2+}$.
+\newblock {\em Biochem. Bioph. Res. Co.}, 155(3):1464 -- 1470, 1988.
+
+\bibitem{Brien1990}
+E.~T. O'Brien, E.~D. Salmon, R.~A. Walker, and H.~P. Erickson.
+\newblock Effects of magnesium on the dynamic instability of individual
+  microtubules.
+\newblock {\em Biochemistry}, 29(28):6648--6656, 1990.
+
+\bibitem{Katsuki2014}
+M.~Katsuki, D.~R. Drummond, and R.~A. Cross.
+\newblock {Ectopic A-lattice seams destabilize microtubules.}
+\newblock {\em Nat. Commun.}, 5:3094, January 2014.
+
+\end{thebibliography}

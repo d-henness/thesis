@@ -1,0 +1,82 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Cancer}{1}
+\contentsline {section}{\numberline {1.2}Mitosis}{3}
+\contentsline {section}{\numberline {1.3}Microtubules}{3}
+\contentsline {section}{\numberline {1.4}Computational Methodology}{5}
+\contentsline {subsection}{\numberline {1.4.1}Molecular Mechanics Force Fields}{5}
+\contentsline {subsubsection}{\numberline {1.4.1.1}Bond Stretching}{6}
+\contentsline {subsubsection}{\numberline {1.4.1.2}Angle Bending}{6}
+\contentsline {subsubsection}{\numberline {1.4.1.3}Torsions}{6}
+\contentsline {subsubsection}{\numberline {1.4.1.4}van der Waals Interactions}{7}
+\contentsline {subsubsection}{\numberline {1.4.1.5}Electrostatic Interactions}{8}
+\contentsline {subsection}{\numberline {1.4.2}Molecular Dynamics Simulations}{8}
+\contentsline {subsubsection}{\numberline {1.4.2.1}Verlet Algorithm}{10}
+\contentsline {subsubsection}{\numberline {1.4.2.2}The Leapfrog Algorithm}{10}
+\contentsline {subsection}{\numberline {1.4.3}Energy Calculations with MM/PB(GB)SA Algorithm}{11}
+\contentsline {subsubsection}{\numberline {1.4.3.1}Poisson-Boltzmann Electrostatics}{12}
+\contentsline {subsubsection}{\numberline {1.4.3.2}Generalized Born Electrostatics}{12}
+\contentsline {subsubsection}{\numberline {1.4.3.3}Accessible Surface Area Based Method}{12}
+\contentsline {subsection}{\numberline {1.4.4}Quantum Theory of Atoms in Molecules}{13}
+\contentsline {section}{\numberline {1.5}Scope of Thesis}{14}
+\contentsline {chapter}{\numberline {2}Similarity-Based Virtual Screening for Microtubule Stabilizers Reveals Novel Antimitotic Scaffold}{16}
+\contentsline {section}{\numberline {2.1}Summary}{16}
+\contentsline {section}{\numberline {2.2}Introduction}{16}
+\contentsline {section}{\numberline {2.3}Computational Methods}{17}
+\contentsline {subsection}{\numberline {2.3.1}Filtering PubChem Compound Library}{17}
+\contentsline {subsection}{\numberline {2.3.2}Preparing Receptor for Docking}{19}
+\contentsline {subsection}{\numberline {2.3.3}Rescoring the best hits using MM/PBSA}{20}
+\contentsline {subsection}{\numberline {2.3.4}Prediction of Physicochemical Properties}{21}
+\contentsline {section}{\numberline {2.4}Results and Discussion}{21}
+\contentsline {subsection}{\numberline {2.4.1}Results of Virtual Screening}{21}
+\contentsline {subsection}{\numberline {2.4.2}Results of Rescoring via MM/PBSA}{25}
+\contentsline {subsection}{\numberline {2.4.3}Results of Physicochemical Predictions}{28}
+\contentsline {section}{\numberline {2.5}Conclusion}{29}
+\contentsline {chapter}{\numberline {3}Unravelling the Mechanism of Action of Antitumor Lankacidin}{31}
+\contentsline {section}{\numberline {3.1}Summary}{31}
+\contentsline {section}{\numberline {3.2}Introduction}{31}
+\contentsline {section}{\numberline {3.3}Methodology}{32}
+\contentsline {subsection}{\numberline {3.3.1}Computational Simulations}{32}
+\contentsline {subsection}{\numberline {3.3.2}Isolation of Lankacidin}{33}
+\contentsline {subsection}{\numberline {3.3.3}Fluorescence Quenching Assays}{33}
+\contentsline {subsection}{\numberline {3.3.4}Determination of Kinetic Parameters}{34}
+\contentsline {section}{\numberline {3.4}Results}{34}
+\contentsline {subsection}{\numberline {3.4.1}Computational Predictions}{34}
+\contentsline {subsection}{\numberline {3.4.2}Fluorescence Quenching Assays}{35}
+\contentsline {section}{\numberline {3.5}Discussion and Conclusions}{35}
+\contentsline {chapter}{\numberline {4}Estimating Hydrogen Bond Energies: Comparison of Methods}{38}
+\contentsline {section}{\numberline {4.1}Summary}{38}
+\contentsline {section}{\numberline {4.2}Introduction}{38}
+\contentsline {section}{\numberline {4.3}Methodology}{39}
+\contentsline {section}{\numberline {4.4}Results and Discussion}{40}
+\contentsline {subsection}{\numberline {4.4.1}Performance of Descriptors}{40}
+\contentsline {subsection}{\numberline {4.4.2}Effect of Dispersion}{44}
+\contentsline {section}{\numberline {4.5}Conclusion}{45}
+\contentsline {chapter}{\numberline {5}Analysis of the Strength of Interfacial Hydrogen Bonds between Tubulin Dimers Using Quantum Theory of Atoms in Molecules}{47}
+\contentsline {section}{\numberline {5.1}Summary}{47}
+\contentsline {section}{\numberline {5.2}Introduction}{48}
+\contentsline {section}{\numberline {5.3}Methods}{49}
+\contentsline {subsection}{\numberline {5.3.1}Energy Calculation using AIM Approach}{49}
+\contentsline {subsection}{\numberline {5.3.2}Molecular Dynamics Simulations}{50}
+\contentsline {subsection}{\numberline {5.3.3}Quantum Mechanical Calculations}{52}
+\contentsline {section}{\numberline {5.4}Results and Discussion}{52}
+\contentsline {subsection}{\numberline {5.4.1}Longitudinal Interactions}{54}
+\contentsline {subsection}{\numberline {5.4.2}Lateral B Interactions}{55}
+\contentsline {subsection}{\numberline {5.4.3}Lateral A Interactions}{60}
+\contentsline {section}{\numberline {5.5}Conclusion}{62}
+\contentsline {chapter}{\numberline {6}Detailed Per-residue Energetic Analysis Explains the Driving force for Microtubule Disassembly}{64}
+\contentsline {section}{\numberline {6.1}Introduction}{64}
+\contentsline {section}{\numberline {6.2}Methodology}{66}
+\contentsline {subsection}{\numberline {6.2.1}Building the Models}{66}
+\contentsline {subsection}{\numberline {6.2.2}Parameterization and Dynamics}{67}
+\contentsline {subsection}{\numberline {6.2.3}Trajectory Analysis}{67}
+\contentsline {section}{\numberline {6.3}Results and Discussion}{69}
+\contentsline {subsection}{\numberline {6.3.1}Molecular Dynamics Equilibration}{69}
+\contentsline {subsection}{\numberline {6.3.2}Lateral Energetics in the GDP-Model}{69}
+\contentsline {subsection}{\numberline {6.3.3}Lateral Energetics in the GTP-Model}{71}
+\contentsline {subsection}{\numberline {6.3.4}Longitudinal Energetics in the GDP-Model}{73}
+\contentsline {subsection}{\numberline {6.3.5}Longitudinal Energetics in the GTP-Model}{74}
+\contentsline {subsection}{\numberline {6.3.6}Energy Profile Explains the MT Disassembly Mechanism}{75}
+\contentsline {subsection}{\numberline {6.3.7}Energy Distribution around the Microtubule Ring}{78}
+\contentsline {section}{\numberline {6.4}Conclusions}{80}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{82}
+\contentsline {chapter}{Bibliography}{85}

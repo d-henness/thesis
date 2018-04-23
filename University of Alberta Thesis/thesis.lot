@@ -1,5 +1,9 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {1.1}{Basis sets optimized using rwtbs}}{2}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Kernel Resource Usage}}{25}
-\contentsline {table}{\numberline {2.2}{\ignorespaces \textit {\textbf {eint2}} Kernel Performance}}{26}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Kernel Resource Usage}}{26}
+\contentsline {table}{\numberline {2.2}{\ignorespaces \textit {\textbf {eint2}} Kernel Performance}}{27}
+\contentsline {table}{\numberline {2.3}{\ignorespaces \textit {\textbf {formpq\_alg1}} Kernel Profiling Results.}}{28}
+\contentsline {table}{\numberline {2.4}{\ignorespaces \textit {\textbf {formpq\_alg2}} Kernel Profiling Results.}}{28}
+\contentsline {table}{\numberline {2.5}{\ignorespaces Total Speedup of Alg1}}{31}
+\contentsline {table}{\numberline {2.6}{\ignorespaces Total Speedup of Alg2}}{31}

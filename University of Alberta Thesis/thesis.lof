@@ -1,3 +1,5 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Profiling of Two-Electron Integral Calculations}}{27}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Profiling of the \textit {\textbf {formpq}} Kernels.}}{29}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Total Time need to complete a calculation.}}{32}

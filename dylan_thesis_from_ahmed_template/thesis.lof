@@ -1,0 +1,7 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Two-electron Integral Matrix as a Matrix}}{15}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Two-electron Integral Matrix as a Vector}}{16}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Profiling of Two-Electron Integral Calculations}}{27}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Profiling of the \textit {\textbf {formpq}} Kernels.}}{28}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Total Time need to complete a calculation.}}{31}

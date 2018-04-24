@@ -1061,14 +1061,14 @@ Consider Figures \ref{fig:eint2mat} and \ref{fig:eint2mat}. Figure \ref{fig:eint
 \begin{figure}[h!]
 \includegraphics[width=1\textwidth]{Figures/eint2_mat.png}
 \caption[Two-electron Integral Matrix as a Matrix]
-{Two-electron Integral Matrix as a Matrix. This figure shows the top triangle of the two-electron symmetric matrix in a matrix representation. The key for translating the numbers in each box into the $L$, $M$, $P$, $Q$, $R$, and $S$ values is given in the bottom left. Notice how all rows have the same $M$, $R$, and $S$ values, while all columns have the same $L$, $P$, and $Q$ values. For clarity, the boxes have been coloured based on the spinor symmetries that they contain.}
+{Two-electron Integral Matrix as a Matrix. This figure shows the top triangle of the two-electron symmetric matrix in a matrix representation. In this instance, the total number of symmetries is 2, with 3 basis functions for the first symmetry and 2 basis functions for the second. The key for translating the numbers in each box into the $L$, $M$, $P$, $Q$, $R$, and $S$ values is given in the bottom left. Notice how all rows have the same $M$, $R$, and $S$ values, while all columns have the same $L$, $P$, and $Q$ values. For clarity, the boxes have been coloured based on the spinor symmetries that they contain.}
 \label{fig:eint2mat}
 \end{figure}
 
 \begin{figure}[h!]
 \includegraphics[width=1\textwidth]{Figures/eint2_vec.png}
 \caption[Two-electron Integral Matrix as a Vector]
-{Two-electron Integral Matrix as a Vector. This figure shows the top triangle of the two-electron symmetric matrix in a vector representation. The key for translating the numbers in each box into the $L$, $M$, $P$, $Q$, $R$, and $S$ values is given in the bottom center. Notice how the $L$, $M$, $P$, $Q$, $R$, and $S$ values are much harder to predict than from the matrix representation. For clarity, the boxes have been coloured based on the spinor symmetries that they contain. Gaps between rows are used to reinforce that the elements are not connected like a matrix.}
+{Two-electron Integral Matrix as a Vector. This figure shows the top triangle of the two-electron symmetric matrix in a vector representation. In this instance, the total number of symmetries is 2, with 3 basis functions for the first symmetry and 2 basis functions for the second. The key for translating the numbers in each box into the $L$, $M$, $P$, $Q$, $R$, and $S$ values is given in the bottom center. Notice how the $L$, $M$, $P$, $Q$, $R$, and $S$ values are much harder to predict than from the matrix representation. For clarity, the boxes have been coloured based on the spinor symmetries that they contain. Gaps between rows are used to reinforce that the elements are not connected like a matrix.}
 \label{fig:eint2vec}
 \end{figure}
 
@@ -1193,12 +1193,27 @@ where \textbf{F} is the Fock matrix, $\epsilon$ is the vector of eigenvalues of 
 where $p$, $q$, $r$, and $s$ are basis functions, $K$ is the total number of basis functions for symmetry $\mu$, and $occ$ is the number of occupied closed shells in symmetry $\mu$. Because $p$ and $q$ will always be of the same symmetry, and likewise with $r$ and $s$, the $\lambda$ and $\mu$ subscripts will be dropped from these indices and instead will be obtained from context. As we can see, \textbf{F} is itself a function of \textbf{C} and we left with a rather disappointing outcome. That is, in order for us to find \textbf{C}, we first must know what it is. And so it would seem that all is lost and all of this hard work was for nothing. And yet, there is a glimmer of hope. \textbf{F} is made up of two terms, and as luck would have it, only the term corresponding to contributions from the two-electron integrals depends on \textbf{C}, the term from one-electron integrals can be known exactly. Thus, we begin by assuming that \textbf{F} depends solely on this term. Feeding this into Equation \ref{RHE} will give us the initial guess of \textbf{C} and now we can begin our work in earnest.
 
 \subsubsection{Density Matrix Formation}
-The term in parenthesis in Equation \ref{FOCKM} corresponds to the non-relativistic density matrix. But as we are interested in relativistic calculations, it will need to be altered. Firstly, because a relativistic wavefunction has both large and small components, so too does its density matrix. Therefore, it will have two dimensions that span from 1 to $2K$ where dimensions 1 to $K$ are the large components and the rest are for small components. Secondly, the factor of 2 is replaced by the number of electrons that can occupy spinors of symmetry $\mu$. Its matrix and vector representations are shown in \notetodylan{Figure whatever}. It mathematical form is given in Equation \ref{RDCMX}
+The term in parenthesis in Equation \ref{FOCKM} corresponds to the non-relativistic density matrix. But as we are interested in relativistic calculations, it will need to be altered. Firstly, because a relativistic wavefunction has both large and small components, so too does its density matrix. Therefore, it will have two dimensions that span from 1 to $2K$ where dimensions 1 to $K$ are the large components and the rest are for small components. Secondly, the factor of 2 is replaced by the number of electrons that can occupy spinors of symmetry $\mu$. Its matrix and vector representations are shown in Figures \ref{fig:dtmxmat} and \ref{fig:dtmxvec} respectively. Its mathematical form is given in Equation \ref{RDCMX}
 
 \begin{equation}
 \label{RDCMX}
 \textbf{D$_{\textbf{C}r,s}$} =N_{\mu}\sum^{occ}_{a=1}\textbf{C}_{r,a}\textbf{C}^{*}_{s,a}
 \end{equation}
+
+\begin{figure}
+\includegraphics[width=1\textwidth]{Figures/dtmx_mat.png}
+\caption[Density Matrix as a Matrix]
+{Density Matrix as a Matrix. This figure shows the top triangle of the symmetric density matrix in a matrix representation. The key for translating the numbers in each box into the $R$ and $S$ values is given in the bottom right. All active symmetries would have a similar, separate matrix. For clarity, the elements have been colorized based on the combination of large and small components they contain.}
+\label{fig:dtmxmat}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=1\textwidth]{Figures/dtmx_vec.png}
+\caption[Density Matrix as a Vector]
+{Density Matrix as a Vector. This figure shows the top triangle of the symmetric density matrix in a vector representation. The key for translating the numbers in each box into the $R$ and $S$ values is given in the bottom left. All active symmetries would have a similar, similar vector that continue one after the other. For clarity, the elements have been colorized based on the combination of large and small components they contain.}
+\label{fig:dtmxvec}
+\end{figure}
+
 
 where $N_{i}$ is the number of electrons that occupy a closed shell of symmetry $i$. \textbf{D$_\textbf{O}$} is similar to this and is shown below.
 

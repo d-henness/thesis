@@ -10,16 +10,16 @@
 \contentsline {section}{\numberline {2.2}Program flow}{8}
 \contentsline {section}{\numberline {2.3}Alterations for CUDA}{9}
 \contentsline {subsection}{\numberline {2.3.1}Two-electron Integrals}{9}
-\contentsline {subsection}{\numberline {2.3.2}Relativistic SCF}{17}
-\contentsline {subsubsection}{\numberline {2.3.2.1}Density Matrix Formation}{18}
-\contentsline {subsubsection}{\numberline {2.3.2.2}P Q Super Matrices}{18}
-\contentsline {subsubsection}{\numberline {2.3.2.3}FORMPQ Algorithm}{21}
-\contentsline {subsubsection}{\numberline {2.3.2.4}MTSE Algorithm}{22}
-\contentsline {subsubsection}{\numberline {2.3.2.5}STSE Algorithm}{25}
-\contentsline {section}{\numberline {2.4}Discussion}{27}
-\contentsline {subsection}{\numberline {2.4.1}Resource Usage}{27}
-\contentsline {subsection}{\numberline {2.4.2}Two-Electron Integral performance}{28}
-\contentsline {subsection}{\numberline {2.4.3}P Q Matrix Formation Performance}{29}
-\contentsline {subsection}{\numberline {2.4.4}Total Speedup}{32}
-\contentsline {section}{\numberline {2.5}Input Description}{33}
-\contentsline {chapter}{Bibliography}{37}
+\contentsline {subsection}{\numberline {2.3.2}Relativistic SCF}{18}
+\contentsline {subsubsection}{\numberline {2.3.2.1}Density Matrix Formation}{19}
+\contentsline {subsubsection}{\numberline {2.3.2.2}P Q Super Matrices}{19}
+\contentsline {subsubsection}{\numberline {2.3.2.3}FORMPQ Algorithm}{22}
+\contentsline {subsubsection}{\numberline {2.3.2.4}MTSE Algorithm}{23}
+\contentsline {subsubsection}{\numberline {2.3.2.5}STSE Algorithm}{26}
+\contentsline {section}{\numberline {2.4}Discussion}{28}
+\contentsline {subsection}{\numberline {2.4.1}Resource Usage}{28}
+\contentsline {subsection}{\numberline {2.4.2}Two-Electron Integral performance}{29}
+\contentsline {subsection}{\numberline {2.4.3}P Q Matrix Formation Performance}{30}
+\contentsline {subsection}{\numberline {2.4.4}Total Speedup}{33}
+\contentsline {section}{\numberline {2.5}Input Description}{34}
+\contentsline {chapter}{Bibliography}{38}

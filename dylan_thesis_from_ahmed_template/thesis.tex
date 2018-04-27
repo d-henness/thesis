@@ -45,22 +45,36 @@
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{myblue}{rgb}{0.00,0.5,1.00}
+\definecolor{mycyan}{rgb}{0.00,0.70,1.00}
+\definecolor{mygray}{gray}{0.6}
+\definecolor{myyellow}{rgb}{0.80, 0.50,0.20}
+
 
 \lstset{ 
   backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
-  basicstyle=\ttfamily\footnotesize,        % the size of the fonts that are used for the code
-  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  basicstyle=\ttfamily\small\color{black},        % the size of the fonts that are used for the code
+  breakatwhitespace=true,         % sets if automatic breaks should only happen at whitespace
   breaklines=true,                 % sets automatic line breaking
   captionpos=b,                    % sets the caption-position to bottom
-  commentstyle=\color{mygreen},    % comment style
-  deletekeywords={...},            % if you want to delete keywords from the given language
+  commentstyle=\color{mycyan},    % comment style
   escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
   extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
   frame=single,	                   % adds a frame around the code
-  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
-  keywordstyle=\color{blue},       % keyword style
-  language=Fortran,                 % the language of the code
-  morekeywords={*,...},            % if you want to add more keywords to the set
+  keepspaces=true, columns=flexible,                % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  morecomment=[l]{!},
+  classoffset=0,
+  morekeywords={do, enddo, if, else, endif, and, allocate, deallocate, random_number, call, random_seed},
+  keywordstyle=\color{myyellow},       % keyword style
+%  language=[90]Fortran,		 % the language of the code
+  otherkeywords={-, +, *, /,  =, <, >, <=, >=},                % include math symbols as keywords
+%  deletekeywords={MODULE, IMPLICIT, NONE, CONTAINS, INTEGER, PARAMETER, KIND, SUBROUTINE, REAL, DIMENSION,
+ % 				CALL, END, PROGRAM, USE, ALLOCATABLE, TYPE},            % if you want to delete keywords from the given language
+  classoffset=1,
+  morekeywords={module, contains, subroutine, end, attributes, program, use},keywordstyle=\color{myblue},		% function and subroutine stuff
+   classoffset=2,
+  morekeywords={integer, real, implicit, none, dimension, allocatable, device, type, kind, parameter, shared},keywordstyle=\color{mygreen},		% variable declarations
+  classoffset=0,         
   numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
   numbersep=5pt,                   % how far the line-numbers are from the code
   numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
@@ -978,7 +992,13 @@ As with everything, these rules are only guide lines. The best resource configur
 \subsection{Matrix Multiplication Example}
 To complete the introduction to CUDA programming, we will go over a real example of CUDA Fortran code. For our example, we will examine code that preforms matrix multiplication on matrices of arbitrary dimensions. This makes use of all the concepts we've covered so far, so it will be a good exercise to examine. The code is given below.
 
-\lstinputlisting{mat_mul.cuf}
+\lstinputlisting[caption={Matrix Multiplication Kernel}]{mat_mul.cuf}
+
+\notetodylan{make sure line numbers are correct} Lines 1 - 43 define a module which contains our matrix multiplication kernel. The kernel takes the matrices \texttt{inputA} and \texttt{inputB}, multiplies them together, and stores the result in \texttt{output}. The kernel has the \texttt{{\color{myblue}{attributes}}(global)} attribute, which means that it can be called from either device or host code. \texttt{rowA}, \texttt{colA}, \texttt{rowB}, and \texttt{colB} are the rows and columns of \texttt{inputA} and \texttt{inputB}. Because they are small and don't change over the course of the calculation, they get stored in a special memory type called constant memory. This is a small cache of read only memory that is 64KB in size and allows for constant values to be read very quickly. There are two shared variables, \texttt{s\_tileA} and \texttt{s\_tileB}. Each of these are square matrices with dimensions of \texttt{block\_dim} and these will be used to store sections or ``tiles" of \texttt{inputA} and \texttt{inputB} respectively. We want each thread to do all the calculations needed to compute a simple element of \texttt{output}. Line 13 and 14 use the \texttt{threadIdx}, \texttt{blockDim}, and \texttt{blockIdx} variables so that each thread get a unique combination of \texttt{x} and \texttt{y} values. \texttt{x} corresponds to a row of the \texttt{output} matrix and \texttt{y} corresponds to a column, so each thread is then uniquely mapped to an element of \texttt{output}. We will see in the host code how these index values are determined, but for now it is sufficient to know that there will be at least as many threads as elements of \texttt{output}.
+
+\notetodylan{make sure line numbers are correct} Lines 17 - 37 are where the actual calculation takes place. For each iteration of the loop, a different tile of \texttt{inputA} and \texttt{inputB} are fetched from the global memory and stored into the shared memory. The reason for using this tiling approach can be seen when we consider how the threads must read \texttt{inputB}. If we did not use shared memory, the loop would just be \texttt{total {\color{myyellow}{=}} total {\color{myyellow}{+}} inputA(x, i) {\color{myyellow}{*}} inputB(i, y)}. In this case, access to \texttt{inputA} is coalesced, but access to \texttt{inputB} is not. Therefore, the kernel will be stunted due this unoptimized memory usage. Instead, we load tiles in a coalesced manor into the shared memory, synchronize the threads, and then read through the shared memory in an uncoalesced fashion which carries no penalty. At the end of each loop, the tiles are moved in the \texttt{y} direction for \texttt{inputA} and in the \texttt{x} direction for \texttt{inputB}, and the process repeats. Notice how it is possible that a tile might fall on the boundary of an \texttt{input} matrix. This is why there are checks to make sure the coordinates of the tile don't exceed the boundaries of a matrix so we don't start reading garbage.
+
+\notetodylan{make sure line numbers are correct} In the host code on lines 45 - 102, we have two sets of variables, those for the host and those for the device. Notice how device variables have the \texttt{{\color{mygreen}{device}}} attribute. For clarity, they are given the same name as their host variables but with a \texttt{d\_} prefix. Next we assign constant variables from line 5 to arbitrary values. Next we set up the random number generator, allocate the host matrices memory, and and randomly initialize the input matrices. Then the device variables are allocated memory and the host data is then uploaded to the GPU. On lines 87 and 88 are where the block and grid dimensions are setup. \texttt{blockDim} and \texttt{gridDim} are variables of \texttt{{\color{mygreen}{type}}(dim3)} which is a tuple that is defined in the \texttt{cudafor} module. The block has two dimensions containing \texttt{block\_dim}$^{2}$ threads. The grid also has two dimensions, and as we need one thread per element of \texttt{output} we preform a calculation which returns the minimum number of blocks that will cover it. Finally, we launch the kernel on line 90 using the \texttt{\color{myyellow}{<<< >>>}} operators to provide the grid and block dimensions, download the result from the GPU, and deallocate the memory.
 
 \section{Program flow}
 In this section, the control flow of a typical calculation is given.
@@ -1073,7 +1093,23 @@ The first is the problem of warp divergence. Because the maximum values of $M$, 
 \label{fig:naivelayout}
 \end{figure}
 
+\begin{figure}[h!]
+\includegraphics[width=1\textwidth]{Figures/gen_mat_block_layout.png}
+\caption[Two-Electron Integral Layout: 2D Blocks and Grid]
+{Two-Electron Integral Layout: 2D Blocks and Grid. \notetodylan{talk about this somewhere}}
+\label{fig:genmatblock}
+\end{figure}
+
+
 The second problem can be solved by opting for a one dimensional solution instead of the three dimensional one of Algorithm \ref{easycode}. By restricting ourselves to only using $threadIdx.x$, we ensure that only the last block to run will have the possibility of having threads remaining idle throughout the block's runtime. The third problem can be solved by having each thread calculate one and only one set of J and K integrals. If we start with a valid combination of $L$, $M$, $P$, $Q$, $R$, and $S$ values, we can very easily figure out which thread will calculate that set of integrals by using the following equations.
+
+\begin{figure}[h!]
+\includegraphics[width=1\textwidth]{Figures/gen_vec_block_layout.png}
+\caption[Two-Electron Integral Layout: 1D Blocks and Grid]
+{Two-Electron Integral Layout: 1D Blocks and Grid. \notetodylan{talk about this somewhere}}
+\label{fig:genmatblock}
+\end{figure}
+
 
 \begin{equation}
 \label{nprime}
@@ -1587,6 +1623,21 @@ As explained in section \ref{sec:PQmeth}, there were two different attempts to s
 As can be seen, the attempt at \kernel{formpq\_alg1} was a complete failure and isn't even faster than the CPU calculations. \kernel{formpq\_alg2} was much better, but only just. It achieves little more than a 2$\times$ speedup at best. 
 
 There are several reasons this could be the case. The first due to the poor global memory access that reading $x$ has. $x$ is stored as a vector. This helps greatly with memory cost and integral calculation, but makes it difficult to retrieve it as if it where a matrix.There is the cost of calculating where the necessary integral is, and then the cost of the very uncoalesced reads. Calculating the integrals as a vector, and then copying them into a matrix after could help with this, but the large amount of integrals needed for large calculations makes this impractical on current hardware. How much of an effect inefficient access of global memory has on a calculation does have a limit however which is most likely why the speedup sees an improvement as the calculations get larger. A second reason that the speedup is limited is caused by the occupancy that the kernels has on the GPU. A block size of 512 means that there is a maximum number of 3 blocks running per SM at a time. But these kernels are both limited by the register usage to just running one block per SM at a time. This is also most likely why \kernel{formpq\_alg1} performs so poorly compared \kernel{formpq\_alg2}. \kernel{formpq\_alg1} was designed to spread out the amount of work to as many threads as possible. This results in a lot of blocks to be run. But because the amount of blocks that can run at a time is so limited there is no chance to see an improvement. But in the case of \kernel{formpq\_alg2}, there are a fewer number of blocks needing be be run, although each one needs to run for longer than those of \kernel{formpq\_alg1}. Overall \kernel{formpq\_alg1} comes out on top.
+
+\begin{figure}
+\includegraphics[width=1\textwidth]{Figures/eint2_mat_lots.png}
+\caption[Integrals Needed for the First Element of \textbf{P}: Matrix Representation]
+{Integrals Needed for the First Element of \textbf{P}: Matrix Representation. This figure shows the top triangle of the symmetric two-electron integral matrix in a matrix representation. The required integrals have been highlighted with a green boarder. The basis set used had $nsym=7$ with $nbs(i) = (10, 10, 10)$. For clarity, the boxes have been coloured based on the spinor symmetries that they contain. \notetodylan{talk about this in text}}
+\label{fig:eint2matlots}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=1\textwidth]{Figures/eint2_vec_lots.png}
+\caption[Integrals Needed for the First Element of \textbf{P}: Vector Representation]
+{Integrals Needed for the First Element of \textbf{P}: Vector Representation. This figure shows the top triangle of the symmetric two-electron integral matrix in a vector representation. The required integrals have been highlighted with a green boarder.  The spreading out of the elements means that reads to them can not be done effectively. The basis set used had $nsym=7$ with $nbs(i) = (10, 10, 10)$. For clarity, the boxes have been coloured in the same way as Figure \ref{fig:eint2matlots}. \notetodylan{talk about this in text}}
+\label{fig:eint2matlots}
+\end{figure}
+
 
 How long will this be true though? At the moment, the limitations of these algorithms are caused by the hardware they run on, not the efficiency of the algorithms themselves. If we imagine removing these limitations, which one will win then. I propose that \kernel{formpq\_alg1} will eventually surpass \kernel{formpq\_alg2} for very large systems. Lets it look at it this way, the time it takes for a single block of \kernel{formpq\_alg1} to run is mostly governed by how well it can read the $x$ vector. How poorly it reads it has a limit, once the elements are spread out enough, spreading them out further has no impact. Therefore there is a maximum amount of time it takes for a single block to run. The time for a single block of \kernel{formpq\_alg1} on the other hand is controlled by both the efficiency of reading global memory \textit{and} the amount of two-electron integrals it must read though. So there is no limit to how long a block can take. Therefore, I predict that \kernel{formpq\_alg1} should be faster as the number of integrals $\rightarrow \infty$
 

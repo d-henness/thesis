@@ -29,16 +29,15 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}Occupancy and Performance}{8}}
 \newlabel{sec:gpuocc}{{2.1.3}{8}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1.4}Matrix Multiplication Example}{8}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Program flow}{11}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Alterations for CUDA}{12}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Two-electron Integrals}{12}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces The original \relax }}{13}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {2.1}Matrix Multiplication Kernel}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Program flow}{12}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Alterations for CUDA}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Two-electron Integrals}{13}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces The original \relax }}{14}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{origcode}{{1}{13}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Easy Code\relax }}{14}}
-\newlabel{easycode}{{2}{14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Two-Electron Integral Layout: Naive Implementation}}{15}}
-\newlabel{fig:naivelayout}{{2.1}{15}}
+\newlabel{origcode}{{1}{14}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces Easy Code\relax }}{15}}
+\newlabel{easycode}{{2}{15}}
 \newlabel{nprime}{{2.1}{16}}
 \newlabel{ylpq}{{2.2}{16}}
 \newlabel{xmrs}{{2.3}{16}}
@@ -50,58 +49,68 @@
 \newlabel{bsL}{{4}{18}}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {5}{\ignorespaces Binary Search for $P$ and $Q$\relax }}{18}}
 \newlabel{bsPQ}{{5}{18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Two-electron Integral Matrix as a Matrix}}{19}}
-\newlabel{fig:eint2mat}{{2.2}{19}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Two-electron Integral Matrix as a Vector}}{20}}
-\newlabel{fig:eint2vec}{{2.3}{20}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Relativistic SCF}{21}}
-\newlabel{RHE}{{2.6}{21}}
-\newlabel{FOCKM}{{2.7}{21}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2.1}Density Matrix Formation}{21}}
-\newlabel{RDCMX}{{2.8}{22}}
-\newlabel{RDOMX}{{2.9}{22}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2.2}P Q Super Matrices}{22}}
-\newlabel{sec:PQmeth}{{2.3.2.2}{22}}
-\newlabel{2EINTS}{{2.10}{22}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Density Matrix as a Matrix}}{23}}
-\newlabel{fig:dtmxmat}{{2.4}{23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Density Matrix as a Vector}}{24}}
-\newlabel{fig:dtmxvec}{{2.5}{24}}
-\newlabel{PSMTX}{{2.11}{25}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2.3}FORMPQ Algorithm}{25}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2.4}MTSE Algorithm}{25}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2.5}STSE Algorithm}{26}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {6}{\ignorespaces Kernel 1 for MTSE\relax }}{27}}
-\newlabel{MTSE_K1}{{6}{27}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {7}{\ignorespaces Kernel 2 for MTSE\relax }}{28}}
-\newlabel{MTSE_K2}{{7}{28}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Discussion}{29}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Resource Usage}{29}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {8}{\ignorespaces STSE Algorithm\relax }}{30}}
-\newlabel{STSE_K}{{8}{30}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Kernel Resource Usage\relax }}{31}}
-\newlabel{tab:resources}{{2.1}{31}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Two-Electron Integral performance}{31}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces \textit  {\textbf  {eint2}} Kernel Performance}}{32}}
-\newlabel{tab:2eintprof}{{2.2}{32}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Profiling of Two-Electron Integral Calculations}}{32}}
-\newlabel{fig:2eintprof}{{2.6}{32}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}P Q Matrix Formation Performance}{33}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces \textit  {\textbf  {formpq\_alg1}} Kernel Profiling Results.}}{33}}
-\newlabel{tab:PQprofalg1}{{2.3}{33}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.4}{\ignorespaces \textit  {\textbf  {formpq\_alg2}} Kernel Profiling Results.}}{34}}
-\newlabel{tab:PQprofalg2}{{2.4}{34}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Profiling of the \textit  {\textbf  {formpq}} Kernels.}}{34}}
-\newlabel{fig:formpqprof}{{2.7}{34}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.4}Total Speedup}{35}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.5}{\ignorespaces Total Speedup of Alg1}}{35}}
-\newlabel{tab:totalprofalg1}{{2.5}{35}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.6}{\ignorespaces Total Speedup of Alg2}}{36}}
-\newlabel{tab:totalprofalg2}{{2.6}{36}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Total Time need to complete a calculation.}}{36}}
-\newlabel{fig:totaltimeprof}{{2.8}{36}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.5}Input Description}{37}}
-\newlabel{inp_des}{{2.5}{37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Two-Electron Integral Layout: Naive Implementation}}{19}}
+\newlabel{fig:naivelayout}{{2.1}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Two-Electron Integral Layout: 2D Blocks and Grid}}{20}}
+\newlabel{fig:genmatblock}{{2.2}{20}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Two-Electron Integral Layout: 1D Blocks and Grid}}{21}}
+\newlabel{fig:genmatblock}{{2.3}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Two-electron Integral Matrix as a Matrix}}{22}}
+\newlabel{fig:eint2mat}{{2.4}{22}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Two-electron Integral Matrix as a Vector}}{23}}
+\newlabel{fig:eint2vec}{{2.5}{23}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Relativistic SCF}{24}}
+\newlabel{RHE}{{2.6}{24}}
+\newlabel{FOCKM}{{2.7}{24}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2.1}Density Matrix Formation}{24}}
+\newlabel{RDCMX}{{2.8}{25}}
+\newlabel{RDOMX}{{2.9}{25}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2.2}P Q Super Matrices}{25}}
+\newlabel{sec:PQmeth}{{2.3.2.2}{25}}
+\newlabel{2EINTS}{{2.10}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces Density Matrix as a Matrix}}{26}}
+\newlabel{fig:dtmxmat}{{2.6}{26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Density Matrix as a Vector}}{27}}
+\newlabel{fig:dtmxvec}{{2.7}{27}}
+\newlabel{PSMTX}{{2.11}{28}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2.3}FORMPQ Algorithm}{28}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2.4}MTSE Algorithm}{28}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2.5}STSE Algorithm}{29}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {6}{\ignorespaces Kernel 1 for MTSE\relax }}{30}}
+\newlabel{MTSE_K1}{{6}{30}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {7}{\ignorespaces Kernel 2 for MTSE\relax }}{31}}
+\newlabel{MTSE_K2}{{7}{31}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Discussion}{32}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.1}Resource Usage}{32}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {8}{\ignorespaces STSE Algorithm\relax }}{33}}
+\newlabel{STSE_K}{{8}{33}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces Kernel Resource Usage\relax }}{34}}
+\newlabel{tab:resources}{{2.1}{34}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Two-Electron Integral performance}{34}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces \textit  {\textbf  {eint2}} Kernel Performance}}{35}}
+\newlabel{tab:2eintprof}{{2.2}{35}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces Profiling of Two-Electron Integral Calculations}}{35}}
+\newlabel{fig:2eintprof}{{2.8}{35}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.3}P Q Matrix Formation Performance}{36}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces \textit  {\textbf  {formpq\_alg1}} Kernel Profiling Results.}}{36}}
+\newlabel{tab:PQprofalg1}{{2.3}{36}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.4}{\ignorespaces \textit  {\textbf  {formpq\_alg2}} Kernel Profiling Results.}}{37}}
+\newlabel{tab:PQprofalg2}{{2.4}{37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces Profiling of the \textit  {\textbf  {formpq}} Kernels.}}{37}}
+\newlabel{fig:formpqprof}{{2.9}{37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4.4}Total Speedup}{38}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.5}{\ignorespaces Total Speedup of Alg1}}{38}}
+\newlabel{tab:totalprofalg1}{{2.5}{38}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Integrals Needed for the First Element of \textbf  {P}: Matrix Representation}}{39}}
+\newlabel{fig:eint2matlots}{{2.10}{39}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Integrals Needed for the First Element of \textbf  {P}: Vector Representation}}{40}}
+\newlabel{fig:eint2matlots}{{2.11}{40}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.6}{\ignorespaces Total Speedup of Alg2}}{41}}
+\newlabel{tab:totalprofalg2}{{2.6}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces Total Time need to complete a calculation.}}{41}}
+\newlabel{fig:totaltimeprof}{{2.12}{41}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Input Description}{42}}
+\newlabel{inp_des}{{2.5}{42}}
 \bibstyle{initunsrt}
 \bibdata{thesis}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{41}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{46}}

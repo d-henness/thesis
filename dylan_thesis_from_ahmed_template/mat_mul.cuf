@@ -2,12 +2,12 @@ module mat_mul
   implicit none
   integer, parameter  ::  dp = kind(0.d0)
   integer, parameter  ::  block_dim = 16
+  integer, constant ::  rowA, colA, rowB, colB
   contains
-    attributes(global) subroutine mat_mul_kernel(inputA, inputB, output, rowA, colA, rowB, colB)
+    attributes(global) subroutine mat_mul_kernel(inputA, inputB, output)
       real(dp), dimension(:,:)  ::  inputA, inputB, output
       real(dp)  ::  total
       real(dp), shared, dimension(block_dim, block_dim) ::  s_tileA, s_tileB
-      integer ::  rowA, colA, rowB, colB
       integer ::  x, y, i, j
 
       x = threadIdx%x + blockDim%x * (blockIdx%x - 1)
@@ -48,13 +48,11 @@ program main
   implicit none
   ! Host variables
   real(dp), allocatable, dimension(:, :)  ::  inputA, inputB, output
-  integer ::  rowA, colA, rowB, colB
-  integer, device ::  d_rowA, d_colA, d_rowB, d_colB
+  ! Device variables
+  real(dp), device, allocatable, dimension(:, :)  ::  d_inputA, d_inputB, d_output
   ! For generating random numbers
   integer, allocatable, dimension(:)  ::  seed
   integer ::  n
-  ! Device variables
-  real(dp), device, allocatable, dimension(:, :)  ::  d_inputA, d_inputB, d_output
   ! block and grid dimensions
   type(dim3)  ::  blockDim, gridDim
 
@@ -85,23 +83,20 @@ program main
   allocate(d_output(rowA, colB))
   d_inputA = inputA
   d_inputB = inputB
-  d_rowA = rowA
-  d_colA = colA
-  d_rowB = rowB
-  d_colB = colB
 
   blockDim = dim3(block_dim, block_dim, 1)
   gridDim = dim3((rowA - 1) / block_dim + 1, (colB - 1) / block_dim + 1, 1)
 
-  call mat_mul_kernel <<<gridDim, blockDim>>> (d_inputA, d_inputB, d_output, d_rowA, d_colA, d_rowB, d_colB)
+  call mat_mul_kernel <<<gridDim, blockDim>>> (d_inputA, d_inputB, d_output)
 
   ! Download device data
-
   output = d_output
 
-  ! Deallocate device data
-
-  deallocate(d_inputA(rowA, colA))
-  deallocate(d_inputB(rowB, colB))
-  deallocate(d_output(rowA, colB))
+  ! Deallocate variables
+  deallocate(d_inputA)
+  deallocate(d_inputB)
+  deallocate(d_output)
+  deallocate(inputA)
+  deallocate(inputB)
+  deallocate(output)
 end program main

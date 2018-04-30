@@ -19,10 +19,10 @@
 \contentsline {subsubsection}{\numberline {3.3.2.2}FORMPQ Algorithm}{29}
 \contentsline {subsubsection}{\numberline {3.3.2.3}MTSE Algorithm}{30}
 \contentsline {subsubsection}{\numberline {3.3.2.4}STSE Algorithm}{33}
-\contentsline {section}{\numberline {3.4}Discussion}{33}
+\contentsline {section}{\numberline {3.4}Discussion}{35}
 \contentsline {subsection}{\numberline {3.4.1}Resource Usage}{35}
 \contentsline {subsection}{\numberline {3.4.2}Two-Electron Integral performance}{36}
-\contentsline {subsection}{\numberline {3.4.3}P and Q Matrix Formation Performance}{36}
-\contentsline {subsection}{\numberline {3.4.4}Total Speedup}{39}
+\contentsline {subsection}{\numberline {3.4.3}P and Q Matrix Formation Performance}{37}
+\contentsline {subsection}{\numberline {3.4.4}Total Speedup}{42}
 \contentsline {section}{\numberline {3.5}Input Description}{43}
 \contentsline {chapter}{Bibliography}{47}

@@ -1118,7 +1118,7 @@ The original DFRATOM calculates the two electron integrals with a long series of
 \end{algorithmic}
 \end{algorithm}
 
-The first problem arises due to warp divergence. Because the maximum values of $M$, $R$, and $S$ depend on $L$, $P$, and $Q$, different threads will have a different number of loops to complete than others. Because a streaming multiprocessor (SM) must finish the block is it currently working on before it can grab another, there is the possibility that most of the threads in a block are idling while waiting for others in the same block to finish. The second problem is that with this method, there will always be several blocks that have threads that remain idle throughout the block's runtime, no matter what. This can be seen more clearly in Figure \ref{fig:naivelayout}. The third problem with this is that with the maximum values for $L$, $P$, and $Q$ available for a single atom, there might not even be enough combinations to completely fill the GPU. While all of these issues begin to disappear once the number of integrals to evaluate becomes large enough, we are still very much in the range where they are in play. Therefore a smarter algorithm had to be used.
+The first problem arises due to warp divergence. Because the maximum values of $M$, $R$, and $S$ depend on $L$, $P$, and $Q$, different threads will have a different number of loops to complete than others. Because a streaming multiprocessor (SM) must finish the block is it currently working on before it can grab another, there is the possibility that most of the threads in a block are idling while waiting for others in the same block to finish. The second problem is that with this method, there will always be several blocks that have threads that remain idle throughout the block's runtime, no matter what. \newaddition{This can be seen more clearly in Figure \ref{fig:naivelayout}}. The third problem with this is that with the maximum values for $L$, $P$, and $Q$ available for a single atom, there might not even be enough combinations to completely fill the GPU. While all of these issues begin to disappear once the number of integrals to evaluate becomes large enough, we are still very much in the range where they are in play. Therefore a smarter algorithm had to be used.
 
 \begin{figure}[h!]
 \includegraphics[width=1\textwidth]{Figures/30_25_20_15_naive_layout.png}
@@ -1127,23 +1127,21 @@ The first problem arises due to warp divergence. Because the maximum values of $
 \label{fig:naivelayout}
 \end{figure}
 
+The second problem can be solved by opting \newaddition{restricting the dimensionally of the solution instead of the using the three dimensional one of Algorithm \ref{easycode}. We might consider using a two dimensional solution, but then we still will have blocks with idle threads which can be seen in Figure \ref{fig:genmatblock} By restricting ourselves to only using $threadIdx.x$, we ensure that only the last block to run will have the possibility of having threads remaining idle throughout the block's runtime as shown in Figure \ref{fig:genvecblock}}. The third problem can be solved by having each thread calculate one and only one set of J and K integrals. If we start with a valid combination of $L$, $M$, $P$, $Q$, $R$, and $S$ values, we can very easily figure out which thread will calculate that set of integrals by using the following equations:
+
 \begin{figure}[h!]
 \includegraphics[width=1\textwidth]{Figures/gen_mat_block_layout.png}
 \caption[Two-Electron Integral Layout: 2D Blocks and Grid]
-{Two-Electron Integral Layout: 2D Blocks and Grid. \notetodylan{talk about this somewhere}}
+{\newaddition{Two-Electron Integral Layout: 2D Blocks and Grid. Orange lines indicate the border of blocks. Notice that many blocks have idle threads.}}
 \label{fig:genmatblock}
 \end{figure}
-
-
-The second problem can be solved by opting for a one dimensional solution instead of the three dimensional one of Algorithm \ref{easycode}. By restricting ourselves to only using $threadIdx.x$, we ensure that only the last block to run will have the possibility of having threads remaining idle throughout the block's runtime. The third problem can be solved by having each thread calculate one and only one set of J and K integrals. If we start with a valid combination of $L$, $M$, $P$, $Q$, $R$, and $S$ values, we can very easily figure out which thread will calculate that set of integrals by using the following equations:
 
 \begin{figure}[h!]
 \includegraphics[width=1\textwidth]{Figures/gen_vec_block_layout.png}
 \caption[Two-Electron Integral Layout: 1D Blocks and Grid]
-{Two-Electron Integral Layout: 1D Blocks and Grid. \notetodylan{talk about this somewhere}}
-\label{fig:genmatblock}
+{\newaddition{Two-Electron Integral Layout: 1D Blocks and Grid. Orange lines indicate the border of blocks. Notice that only the last block contains idle threads.}}
+\label{fig:genvecblock}
 \end{figure}
-
 
 \begin{equation}
 \label{nprime}
@@ -1171,6 +1169,8 @@ i_{max} = n'(\sum^{nsym}_{j = 1}n'(nbs(j)))
 \end{equation}
 
 where $nbs(0) = 0$ and $i=threadIdx.x + (blockIdx.x - 1) * blockDim.x$. Starting with a value of $i$ and working our way back is a much more challenging task. It becomes easier if we reframe it in the following way.
+
+\clearpage
 
 Consider Figures \ref{fig:eint2mat} and \ref{fig:eint2vec}. Figure \ref{fig:eint2mat} shows the top half of the symmetric two-electron integral matrix for a problem with $nsym = 2$ and 3 basis function for symmetry one, and 2 for symmetry two. Figure \ref{fig:eint2vec} shows the same but mapped onto a vector representation. In each element of both figures, there is a set of seven numbers. The top two are $L$ and $M$, then $P$ and $Q$, then $R$ and $S$, and the last number is the value of $i$ for the thread calculating that integral. With this, it can be seen from the matrix representation that each element in the same row have the same $M$, $R$, and $S$ values and the elements in the same column have the same $L$, $P$, and $Q$ values. Therefore, finding out which column the element belongs to gives us the value for $y$, and finding the row give us the value of $x$. This can be done with the binary search algorithm shown in Algorithm \ref{bsxy}.
 
@@ -1283,8 +1283,6 @@ In this algorithm, variables with the $s\_$ prefix refer to those in the shared 
 \end{algorithm}
 
 From here, the code for evaluating the integrals remains largely the same as the original code\citethis{}, except for some minor changes to allow for more efficient global or shared memory access. We also use a process referred to as "grid-stride looping" where all these binary search algorithms have their \textbf{if} $i \le i_{max}$ \textbf{then} removed, and then are placed within the following loop: \textbf{for} $i = threadIdx.x + (blockIdx.x - 1) * blockDim.x$ to $i_{max}$, $i \mathrel{+}= blockDim.x * gridDim.x$ \textbf{do}. If we know the occupancy of the algorithm on the GPU beforehand, we can launch exactly the number of blocks that will fill the GPU. This reduces the overhead of block swapping and lets us further eke out some performance.
-
-\clearpage
 
 \subsection{Density Matrix Formation}
 The term in parenthesis in Equation \ref{FOCKM} corresponds to the non-relativistic density matrix. But as we are interested in relativistic calculations, it will need to be altered. Firstly, because a relativistic wavefunction has both large and small components, so too does its density matrix. Therefore, it will have two dimensions that span from 1 to $2K$ where dimensions 1 to $K$ are the large components and the rest are for small components. Secondly, the factor of 2 is replaced by the number of electrons that can occupy spinors of symmetry $\mu$. Its matrix and vector representations are shown in Figures \ref{fig:dtmxmat} and \ref{fig:dtmxvec} respectively. Its mathematical form is given in Equation \ref{RDCMX}

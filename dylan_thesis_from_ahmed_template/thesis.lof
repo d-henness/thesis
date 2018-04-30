@@ -1,14 +1,15 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Two-Electron Integral Layout: Naive Implementation}}{19}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Two-Electron Integral Layout: 2D Blocks and Grid}}{20}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Two-Electron Integral Layout: 1D Blocks and Grid}}{21}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Two-electron Integral Matrix as a Matrix}}{22}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Two-electron Integral Matrix as a Vector}}{23}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Density Matrix as a Matrix}}{26}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Density Matrix as a Vector}}{27}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Profiling of Two-Electron Integral Calculations}}{35}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Profiling of the \textit {\textbf {formpq}} Kernels.}}{37}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Integrals Needed for the First Element of \textbf {P}: Matrix Representation}}{39}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Integrals Needed for the First Element of \textbf {P}: Vector Representation}}{40}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Total Time need to complete a calculation.}}{41}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Two-Electron Integral Layout: Naive Implementation}}{19}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Two-Electron Integral Layout: 2D Blocks and Grid}}{20}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Two-Electron Integral Layout: 1D Blocks and Grid}}{21}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Two-electron Integral Matrix as a Matrix}}{22}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Two-electron Integral Matrix as a Vector}}{23}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Density Matrix as a Matrix}}{27}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Density Matrix as a Vector}}{28}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Profiling of Two-Electron Integral Calculations}}{37}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Profiling of the \textit {\textbf {formpq}} Kernels.}}{38}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Integrals Needed for the First Element of \textbf {P}: Matrix Representation}}{40}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Integrals Needed for the First Element of \textbf {P}: Vector Representation}}{41}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Total Time need to complete a calculation.}}{43}

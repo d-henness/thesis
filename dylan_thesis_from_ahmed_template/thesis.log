@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.29)  27 APR 2018 14:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.29)  30 APR 2018 15:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -267,14 +267,14 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \c@theorem=\count129
 
 
-./thesis.tex:106: LaTeX Error: Command \algorithm already defined.
+./thesis.tex:107: LaTeX Error: Command \algorithm already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.106 \newtheorem{algorithm}[theorem]{Algorithm}
+l.107 \newtheorem{algorithm}[theorem]{Algorithm}
                                                 
 ? 
 (./tcilatex.tex
@@ -310,7 +310,7 @@ Package: xr 1994/05/28 v5.02 eXternal References (DPC)
 Package xr Warning: 
 No file supp.aux
 LABELS NOT IMPORTED.
- on input line 129.
+ on input line 130.
 
 (./thesis.aux
 
@@ -322,18 +322,18 @@ LaTeX Warning: Label `fig:eint2matlots' multiply defined.
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 132.
  (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count136
@@ -407,14 +407,14 @@ Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count142
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 523.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 524.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 523.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 524.
  [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
@@ -460,80 +460,82 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 Chapter 1.
 [1
 
-] [2] [3] [4]
+] [2]
 Chapter 2.
-[5
+[3
 
-]
+] [4] [5] [6]
+Chapter 3.
+[7
 
-LaTeX Warning: Reference `GPUmem' on page 6 undefined on input line 968.
-
-[6] [7] [8] (./mat_mul.cuf [9] [10]) [11]
-Overfull \hbox (19.58568pt too wide) in paragraph at lines 1008--1009
+] [8] [9] [10] (./mat_mul.cuf [11] [12]) [13]
+Overfull \hbox (19.58568pt too wide) in paragraph at lines 1042--1043
 []\OT1/cmr/m/it/12 Step 2\OT1/cmr/m/n/12 . The cal-cu-la-tion of small ar-rays 
 and other con-stants is per-formed by \OT1/cmr/bx/it/12 calc[]parameters
  []
 
-[12] [13] [14] [15]
-<Figures/30_25_20_15_naive_layout.png, id=88, 1957.3125pt x 2007.5pt>
+[14] [15] [16] [17]
+<Figures/30_25_20_15_naive_layout.png, id=98, 1957.3125pt x 2007.5pt>
 File: Figures/30_25_20_15_naive_layout.png Graphic file (type png)
 
 <use Figures/30_25_20_15_naive_layout.png>
 Package pdftex.def Info: Figures/30_25_20_15_naive_layout.png used on input lin
-e 1090.
+e 1124.
 (pdftex.def)             Requested size: 469.75499pt x 481.77922pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/gen_mat_block_layout.png, id=89, 1003.75pt x 1001.7425pt>
+<Figures/gen_mat_block_layout.png, id=99, 1003.75pt x 1001.7425pt>
 File: Figures/gen_mat_block_layout.png Graphic file (type png)
 
 <use Figures/gen_mat_block_layout.png>
-Package pdftex.def Info: Figures/gen_mat_block_layout.png used on input line 10
-97.
+Package pdftex.def Info: Figures/gen_mat_block_layout.png used on input line 11
+31.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/gen_vec_block_layout.png, id=90, 1003.75pt x 1286.8075pt>
+<Figures/gen_vec_block_layout.png, id=100, 1003.75pt x 1286.8075pt>
 File: Figures/gen_vec_block_layout.png Graphic file (type png)
 
 <use Figures/gen_vec_block_layout.png>
 Package pdftex.def Info: Figures/gen_vec_block_layout.png used on input line 11
-07.
+41.
 (pdftex.def)             Requested size: 469.75499pt x 602.22742pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/eint2_mat.png, id=91, 1003.75pt x 1001.7425pt>
+<Figures/eint2_mat.png, id=101, 1003.75pt x 1001.7425pt>
 File: Figures/eint2_mat.png Graphic file (type png)
 
 <use Figures/eint2_mat.png>
-Package pdftex.def Info: Figures/eint2_mat.png used on input line 1144.
+Package pdftex.def Info: Figures/eint2_mat.png used on input line 1178.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
+ [18]
 
+LaTeX Warning: Text page 19 contains only floats.
+
+[19 <./Figures/30_25_20_15_naive_layout.png (PNG copy)>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/eint2_vec.png, id=92, 1003.75pt x 787.94376pt>
+<Figures/eint2_vec.png, id=108, 1003.75pt x 787.94376pt>
 File: Figures/eint2_vec.png Graphic file (type png)
 
 <use Figures/eint2_vec.png>
-Package pdftex.def Info: Figures/eint2_vec.png used on input line 1151.
+Package pdftex.def Info: Figures/eint2_vec.png used on input line 1185.
 (pdftex.def)             Requested size: 469.75499pt x 368.75859pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[16] [17] [18]
 
-LaTeX Warning: Text page 19 contains only floats.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[19 <./Figures/30_25_20_15_naive_layout.png (PNG copy)>] [20 <./Figures/gen_mat
-_block_layout.png (PNG copy)>]
+[20 <./Figures/gen_mat_block_layout.png (PNG copy)>]
 
 LaTeX Warning: Text page 21 contains only floats.
 
@@ -542,44 +544,41 @@ Overfull \vbox (4.29741pt too high) has occurred while \output is active []
 
 
 [21 <./Figures/gen_vec_block_layout.png (PNG copy)>] [22 <./Figures/eint2_mat.p
-ng (PNG copy)>] [23 <./Figures/eint2_vec.png (PNG copy)>] [24]
-<Figures/dtmx_mat.png, id=125, 1003.75pt x 1001.7425pt>
+ng (PNG copy)>] [23 <./Figures/eint2_vec.png (PNG copy)>] [24] [25]
+<Figures/dtmx_mat.png, id=128, 1003.75pt x 1001.7425pt>
 File: Figures/dtmx_mat.png Graphic file (type png)
 
 <use Figures/dtmx_mat.png>
-Package pdftex.def Info: Figures/dtmx_mat.png used on input line 1286.
+Package pdftex.def Info: Figures/dtmx_mat.png used on input line 1298.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
 
-<Figures/dtmx_vec.png, id=126, 1003.75pt x 713.66624pt>
+<Figures/dtmx_vec.png, id=129, 1003.75pt x 713.66624pt>
 File: Figures/dtmx_vec.png Graphic file (type png)
 
 <use Figures/dtmx_vec.png>
-Package pdftex.def Info: Figures/dtmx_vec.png used on input line 1293.
+Package pdftex.def Info: Figures/dtmx_vec.png used on input line 1305.
 (pdftex.def)             Requested size: 469.75499pt x 333.99663pt.
- [25] [26 <./Figures/dtmx_mat.png (PNG copy)>]
-[27 <./Figures/dtmx_vec.png (PNG copy)>] [28] [29] [30] [31] [32] [33]
-Overfull \hbox (13.66783pt too wide) in paragraph at lines 1547--1547
+ [26
+
+] [27 <./Figures/dtmx_mat.png (PNG copy)>]
+[28 <./Figures/dtmx_vec.png (PNG copy)>] [29] [30] [31] [32] [33] [34]
+Overfull \hbox (13.66783pt too wide) in paragraph at lines 1559--1559
 []|\OT1/cmr/bx/it/12 binary[]search|  
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Figures/eint2prof.png, id=155, 1003.75pt x 625.33624pt>
+[35] <Figures/eint2prof.png, id=162, 1003.75pt x 625.33624pt>
 File: Figures/eint2prof.png Graphic file (type png)
 
 <use Figures/eint2prof.png>
-Package pdftex.def Info: Figures/eint2prof.png used on input line 1567.
+Package pdftex.def Info: Figures/eint2prof.png used on input line 1580.
 (pdftex.def)             Requested size: 469.75499pt x 292.6581pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[34]
 
-LaTeX Warning: Text page 35 contains only floats.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[35 <./Figures/eint2prof.png (PNG copy)>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -587,145 +586,119 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Figures/formpqprof.png Graphic file (type png)
 
 <use Figures/formpqprof.png>
-Package pdftex.def Info: Figures/formpqprof.png used on input line 1617.
+Package pdftex.def Info: Figures/formpqprof.png used on input line 1630.
 (pdftex.def)             Requested size: 469.75499pt x 298.29517pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[36] [37 <./Figures/formpqprof.png (PNG copy)>]
-<Figures/eint2_mat_lots.png, id=170, 1003.75pt x 1001.7425pt>
+[36] [37 <./Figures/eint2prof.png (PNG copy)>] [38 <./Figures/formpqprof.png (P
+NG copy)>] <Figures/eint2_mat_lots.png, id=173, 1003.75pt x 1001.7425pt>
 File: Figures/eint2_mat_lots.png Graphic file (type png)
 
 <use Figures/eint2_mat_lots.png>
-Package pdftex.def Info: Figures/eint2_mat_lots.png used on input line 1628.
+Package pdftex.def Info: Figures/eint2_mat_lots.png used on input line 1641.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
 
-<Figures/eint2_vec_lots.png, id=171, 2007.5pt x 1238.6275pt>
+<Figures/eint2_vec_lots.png, id=174, 2007.5pt x 1238.6275pt>
 File: Figures/eint2_vec_lots.png Graphic file (type png)
 
 <use Figures/eint2_vec_lots.png>
-Package pdftex.def Info: Figures/eint2_vec_lots.png used on input line 1635.
+Package pdftex.def Info: Figures/eint2_vec_lots.png used on input line 1648.
 (pdftex.def)             Requested size: 469.75499pt x 289.83011pt.
 
-Overfull \hbox (15.54016pt too wide) in paragraph at lines 1650--1663
-[][] 
- []
-
-
-Overfull \hbox (15.54016pt too wide) in paragraph at lines 1668--1681
+Overfull \hbox (15.54016pt too wide) in paragraph at lines 1663--1676
 [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/totaltimeprof.png, id=172, 1003.75pt x 642.4pt>
+
+Overfull \hbox (15.54016pt too wide) in paragraph at lines 1681--1694
+[][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Figures/totaltimeprof.png, id=175, 1003.75pt x 642.4pt>
 File: Figures/totaltimeprof.png Graphic file (type png)
 
 <use Figures/totaltimeprof.png>
-Package pdftex.def Info: Figures/totaltimeprof.png used on input line 1684.
+Package pdftex.def Info: Figures/totaltimeprof.png used on input line 1697.
 (pdftex.def)             Requested size: 469.75499pt x 300.64395pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[38] [39 <./Figures/eint2_mat_lots.png (PNG copy)>] [40 <./Figures/eint2_vec_lo
-ts.png (PNG copy)>] [41 <./Figures/totaltimeprof.png (PNG copy)>]
+[39] [40 <./Figures/eint2_mat_lots.png (PNG copy)>] [41 <./Figures/eint2_vec_lo
+ts.png (PNG copy)>] [42]
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Overfull \hbox (4.57948pt too wide) in paragraph at lines 1707--1707
+Overfull \hbox (4.57948pt too wide) in paragraph at lines 1720--1720
 []\OT1/cmr/m/n/12 'energy'| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1711--1722
+Underfull \hbox (badness 10000) in paragraph at lines 1716--1724
 
  []
 
-[42]
-Underfull \hbox (badness 10000) in paragraph at lines 1722--1733
+[43 <./Figures/totaltimeprof.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 1724--1735
 
  []
 
 
-Overfull \hbox (4.38567pt too wide) in paragraph at lines 1737--1737
+Underfull \hbox (badness 10000) in paragraph at lines 1735--1746
+
+ []
+
+
+Overfull \hbox (4.38567pt too wide) in paragraph at lines 1750--1750
 []\OT1/cmr/m/n/12 wtbspara| 
  []
 
 
-Underfull \hbox (badness 3895) in paragraph at lines 1742--1743
+Underfull \hbox (badness 3895) in paragraph at lines 1755--1756
 []\OT1/cmr/m/n/12 Where in the $[]\OML/cmm/m/it/12 ^^P$ \OT1/cmr/m/n/12 pool ea
 ch sym-me-
  []
 
 
-Underfull \hbox (badness 1122) in paragraph at lines 1742--1743
+Underfull \hbox (badness 1122) in paragraph at lines 1755--1756
 \OT1/cmr/m/n/12 try starts tak-ing ex-po-nents from (de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1734--1747
+Underfull \hbox (badness 10000) in paragraph at lines 1747--1760
+
+ []
+
+[44]
+Overfull \hbox (17.11868pt too wide) in paragraph at lines 1761--1775
+[]\OT1/cmr/m/n/12 $newuoa has to be given if job-type='bsopt'. Re-fer to the ne
+wuoa$[]$documentation
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1761--1775
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1748--1762
+Underfull \hbox (badness 10000) in paragraph at lines 1761--1775
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1748--1762
-
- []
-
-[43]
-Underfull \hbox (badness 5133) in paragraph at lines 1768--1769
+Underfull \hbox (badness 5133) in paragraph at lines 1781--1782
 \OT1/cmr/m/n/12 bi-na-tions of spinor oc-cu-pan-cies (de-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1762--1775
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1762--1775
-
- []
-
-
-Underfull \hbox (badness 3396) in paragraph at lines 1783--1784
-[]\OT1/cmr/m/n/12 Convergence limit for the large-large
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1783--1784
-\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
- []
-
-
-Underfull \hbox (badness 2653) in paragraph at lines 1784--1785
-[]\OT1/cmr/m/n/12 Convergence limit for the small-large
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1784--1785
-\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
- []
-
-
-Underfull \hbox (badness 2020) in paragraph at lines 1785--1786
-[]\OT1/cmr/m/n/12 Convergence limit for the small-small
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1785--1786
-\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
  []
 
 
@@ -733,17 +706,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 1775--1788
 
  []
 
-[44] [45] (./thesis.bbl
+
+Underfull \hbox (badness 10000) in paragraph at lines 1775--1788
+
+ []
+
+
+Underfull \hbox (badness 3396) in paragraph at lines 1796--1797
+[]\OT1/cmr/m/n/12 Convergence limit for the large-large
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1796--1797
+\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
+ []
+
+
+Underfull \hbox (badness 2653) in paragraph at lines 1797--1798
+[]\OT1/cmr/m/n/12 Convergence limit for the small-large
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1797--1798
+\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 1798--1799
+[]\OT1/cmr/m/n/12 Convergence limit for the small-small
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1798--1799
+\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1788--1801
+
+ []
+
+[45] [46] (./thesis.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-) [46
+) [47
 
 
 ] (./thesis.aux)
-
-LaTeX Warning: There were undefined references.
-
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -751,12 +761,12 @@ LaTeX Warning: There were multiply-defined labels.
 (\end occurred when \ifx on line 678 was incomplete) 
 Here is how much of TeX's memory you used:
  6737 strings out of 493013
- 95194 string characters out of 6133343
- 319486 words of memory out of 5000000
+ 95197 string characters out of 6133343
+ 312518 words of memory out of 5000000
  10125 multiletter control sequences out of 15000+600000
  14052 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,23n,47p,1842b,1557s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,23n,47p,1856b,1557s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2016/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2016/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2016/texmf
@@ -774,10 +784,10 @@ pe1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmtt12.pfb>
-Output written on thesis.pdf (54 pages, 987776 bytes).
+Output written on thesis.pdf (55 pages, 990296 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
+ 259 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

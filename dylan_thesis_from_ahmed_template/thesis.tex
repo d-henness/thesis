@@ -859,6 +859,32 @@ Much like a satellite in orbit around the Earth, the proton and neutron vastly o
 
 $\hat{H}$ can be assumed to be $\hat{H_{ele}}$ for the remainder of this Thesis, and with the Hamiltonian out of the way, we can now turn our attention to the wavefunction. While we were able to get away with turning nuclei into classical particles, the electrons unfortunately remain fully quantum. Therefore, we need to deal with all the complex mathematical baggage this comes with.
 
+Consider the hydrogen atom. By the grace of God, it (and all other one-electron atomic systems) is one of the few exactly solvable problems in quantum mechanics. The solution for its wavefunction in spherical coordinates is given in Equation \ref{eq:wavehydro} \notetodylan{solutions taken from Ideas of Quantum Chemistry}
+
+\begin{equation}
+\label{eq:wavehydro}
+\Psi_{nlm}(r, \theta, \phi) = N_{nl}R_{nl}(r)Y^{m}_{l}(\theta,\phi)
+\end{equation} 
+
+where $N_{nl}$ is a normalization constant, $R_{nl}$ is
+
+\begin{equation}
+\label{eq:wavehydro_R}
+R_{nl}(r) = r^{l}L^{2l+1}_{n+l}\left(\frac{2Zr}{n}\right)e^{-\frac{Zr}{n}}
+\end{equation} 
+
+where
+
+\begin{equation}
+\label{eq:wavehydro_L1}
+L^{\beta}_{\alpha}(x) = \frac{d^\beta}{dx_{\beta}}L_{\alpha}(x)
+\end{equation}
+
+\begin{equation}
+\label{eq:wavehydro_L2}
+L_{\alpha}(x) = e^{x}\frac{d^{\alpha}}{dx^{\alpha}}\left[x^{\alpha}e^{-x}\right]
+\end{equation}
+
 \section{Hartree-Fock SCF}
 \notetodylan{rewrite this section so that it makes sense with what came before it.}
 In the previous subsection we discussed the calculation of the two-electron integrals, now we will discuss how they are actually used. 

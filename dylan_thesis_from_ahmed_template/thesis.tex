@@ -866,14 +866,14 @@ Consider the hydrogen atom. By the grace of God, it (and all other one-electron 
 \Psi_{nlm}(r, \theta, \phi) = N_{nl}R_{nl}(r)Y^{m}_{l}(\theta,\phi)
 \end{equation} 
 
-where $N_{nl}$ is a normalization constant, $R_{nl}$ is
+where $N_{nl}$ is a normalization constant \notetodylan{check with Mariusz}, $R_{nl}$ is
 
 \begin{equation}
 \label{eq:wavehydro_R}
-R_{nl}(r) = r^{l}L^{2l+1}_{n+l}\left(\frac{2Zr}{n}\right)e^{-\frac{Zr}{n}}
+R_{nl}(r) = r^{l}L^{2l+1}_{n+l}\left(\frac{2Zr}{na_{0}}\right)e^{-\frac{Zr}{na_{0}}}
 \end{equation} 
 
-where
+where $a_{0}$ is the reduced Bohr radius
 
 \begin{equation}
 \label{eq:wavehydro_L1}
@@ -884,6 +884,32 @@ L^{\beta}_{\alpha}(x) = \frac{d^\beta}{dx_{\beta}}L_{\alpha}(x)
 \label{eq:wavehydro_L2}
 L_{\alpha}(x) = e^{x}\frac{d^{\alpha}}{dx^{\alpha}}\left[x^{\alpha}e^{-x}\right]
 \end{equation}
+
+and
+
+\begin{equation}
+\label{eq:wavehydro_Y1}
+Y^{m}_{l}(\theta,\phi) = \sqrt{\frac{(2l + 1)}{2}\frac{(l-|m|)!}{(l+|m|)!}}P^{|m|}_{l}(cos\theta)\frac{1}{2\pi}e^{im\phi}
+\end{equation}
+
+where $i=\sqrt{-1}$ and 
+
+\begin{equation}
+\label{eq:wavehydro_Y2}
+P^{|m|}_{l}(x) = (1 - x^{2})^{\frac{|m|}{2}}\frac{d^{|m|}}{dx^{|m|}}P_{l}(x)
+\end{equation}
+
+\begin{equation}
+\label{eq:wavehydro_Y3}
+P_{l}(x) = \frac{1}{2^{l}l!}\frac{d^{j}}{dx^{j}}(x^{2}-1)^{l}
+\end{equation} 
+
+Oh my, well it didn't take long for this to get ugly did it. Inspection of these equations reveals that $n$ must be a positive integer greater than 0, $l$ must be a positive integer between 0 and $n-1$, and $|m|$ can be no larger than $l$. These are called quantum numbers, specifically $n$ is the principal quantum number, $l$ is the azimuthal quantum number, and $l$ is the magnetic quantum number. Also notice that there is no limit to how large $n$ can get, which suggests that there is not just one solution to this equation, but an infinite number of them. The solutions to the hydrogen like atom problem are given the special name of orbitals. Table \ref{tab:hsol} shows the reduced form of $\Psi$ for a few different orbitals. So how about solutions for atoms with more than one electron? Well, if we make some further assumptions about the nature of reality, it has been shown that an atomic system with two electrons can also be solved \notetodylan{cite harmonic helium}, but we can go no further than this. At least, not exactly. In the next section we will see how solutions for atoms, and indeed molecules can begin to be approached.
+
+\section{Hartree-Fock}
+While the wavefunction might appear complex, it is important to remember that it is still just a wave, and one of the fundamental properties of waves is that they can be added together to produce a separate, more complex wave. Likewise, any wave, no matter how complex, can be broken down as a summation of many simpler waves \notetodylan{cite fourier transform}. Thus, any linear combination of solutions to the wavefunction must therefore be a solution of a different (albeit perhaps non-physical) wavefunction. It is this property that will be exploited to solve our many electron problem. But first we must layout some ground rules.
+
+The first rule is our combination of \textit{trial} wavefunctions ($\psi(r)$) must meet the boundary conditions of the problem. For atoms and molecules, this means that the our collection of $\psi(r)$s must go to 0 as $r$ goes to infinity. This is easy enough to satisfy, we just saw one that does this in Equation \ref{eq:wavehydro}. The second rule is that the overall wavefunction must satisfy the Pauli exclusion principle.   
 
 \section{Hartree-Fock SCF}
 \notetodylan{rewrite this section so that it makes sense with what came before it.}
@@ -1700,14 +1726,14 @@ There are several reasons this could be the case. The first due to the poor glob
 \begin{figure}
 \includegraphics[width=1\textwidth]{Figures/eint2_mat_lots.png}
 \caption[Integrals Needed for the First Element of \textbf{P}: Matrix Representation]
-{Integrals Needed for the First Element of \textbf{P}: Matrix Representation. This figure shows the top triangle of the symmetric two-electron integral matrix in a matrix representation. The required integrals have been highlighted with a green boarder. The basis set used had $nsym=7$ with $nbs(i) = (10, 10, 10)$. For clarity, the boxes have been coloured based on the spinor symmetries that they contain. \notetodylan{talk about this in text}}
+{Integrals Needed for the First Element of \textbf{P}: Matrix Representation. This figure shows the top triangle of the symmetric two-electron integral matrix in a matrix representation. The required integrals have been highlighted with a green boarder. The basis set used had $nsym=3$ with $nbs(i) = (10, 10, 10)$. For clarity, the boxes have been coloured based on the spinor symmetries that they contain. \notetodylan{talk about this in text}}
 \label{fig:eint2matlots}
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{Figures/eint2_vec_lots.png}
 \caption[Integrals Needed for the First Element of \textbf{P}: Vector Representation]
-{Integrals Needed for the First Element of \textbf{P}: Vector Representation. This figure shows the top triangle of the symmetric two-electron integral matrix in a vector representation. The required integrals have been highlighted with a green boarder.  The spreading out of the elements means that reads to them can not be done effectively. The basis set used had $nsym=7$ with $nbs(i) = (10, 10, 10)$. For clarity, the boxes have been coloured in the same way as Figure \ref{fig:eint2matlots}. \notetodylan{talk about this in text}}
+{Integrals Needed for the First Element of \textbf{P}: Vector Representation. This figure shows the top triangle of the symmetric two-electron integral matrix in a vector representation. The required integrals have been highlighted with a green boarder.  The spreading out of the elements means that reads to them can not be done effectively. The basis set used had $nsym=3$ with $nbs(i) = (10, 10, 10)$. For clarity, the boxes have been coloured in the same way as Figure \ref{fig:eint2matlots}. \notetodylan{talk about this in text}}
 \label{fig:eint2matlots}
 \end{figure}
 

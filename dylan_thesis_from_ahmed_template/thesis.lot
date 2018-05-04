@@ -1,10 +1,10 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Basis sets optimized using rwtbs\relax }}{4}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Basis sets optimized using rwtbs}}{5}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Kernel Resource Usage\relax }}{37}
-\contentsline {table}{\numberline {3.2}{\ignorespaces \textit {\textbf {eint2}} Kernel Performance}}{38}
-\contentsline {table}{\numberline {3.3}{\ignorespaces \textit {\textbf {formpq\_alg1}} Kernel Profiling Results.}}{40}
-\contentsline {table}{\numberline {3.4}{\ignorespaces \textit {\textbf {formpq\_alg2}} Kernel Profiling Results.}}{40}
-\contentsline {table}{\numberline {3.5}{\ignorespaces Total Speedup of Alg1}}{44}
-\contentsline {table}{\numberline {3.6}{\ignorespaces Total Speedup of Alg2}}{44}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Kernel Resource Usage\relax }}{38}
+\contentsline {table}{\numberline {3.2}{\ignorespaces \textit {\textbf {eint2}} Kernel Performance}}{39}
+\contentsline {table}{\numberline {3.3}{\ignorespaces \textit {\textbf {formpq\_alg1}} Kernel Profiling Results.}}{41}
+\contentsline {table}{\numberline {3.4}{\ignorespaces \textit {\textbf {formpq\_alg2}} Kernel Profiling Results.}}{41}
+\contentsline {table}{\numberline {3.5}{\ignorespaces Total Speedup of Alg1}}{45}
+\contentsline {table}{\numberline {3.6}{\ignorespaces Total Speedup of Alg2}}{45}

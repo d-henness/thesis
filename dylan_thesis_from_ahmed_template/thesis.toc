@@ -1,28 +1,28 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
-\contentsline {section}{\numberline {1.1}Hartree-Fock SCF}{1}
-\contentsline {subsection}{\numberline {1.1.1}Relativistic SCF}{1}
-\contentsline {chapter}{\numberline {2}Basis Sets}{3}
-\contentsline {section}{\numberline {2.1}Methods}{3}
-\contentsline {subsection}{\numberline {2.1.1}Basis set size optimization}{3}
-\contentsline {section}{\numberline {2.2}Discussion}{4}
-\contentsline {chapter}{\numberline {3}CUDAProphet}{7}
-\contentsline {section}{\numberline {3.1}GPU Architecture}{7}
-\contentsline {subsection}{\numberline {3.1.1}Threads, Blocks, and Grids}{7}
-\contentsline {subsection}{\numberline {3.1.2}Memory}{8}
-\contentsline {subsection}{\numberline {3.1.3}Occupancy and Performance}{12}
-\contentsline {subsection}{\numberline {3.1.4}Matrix Multiplication Example}{12}
-\contentsline {section}{\numberline {3.2}Program flow}{16}
-\contentsline {section}{\numberline {3.3}Alterations for CUDA}{17}
-\contentsline {subsection}{\numberline {3.3.1}Two-electron Integrals}{17}
-\contentsline {subsection}{\numberline {3.3.2}Density Matrix Formation}{28}
-\contentsline {subsubsection}{\numberline {3.3.2.1}P Q Super Matrices}{28}
-\contentsline {subsubsection}{\numberline {3.3.2.2}FORMPQ Algorithm}{31}
-\contentsline {subsubsection}{\numberline {3.3.2.3}MTSE Algorithm}{32}
-\contentsline {subsubsection}{\numberline {3.3.2.4}STSE Algorithm}{35}
-\contentsline {section}{\numberline {3.4}Discussion}{37}
-\contentsline {subsection}{\numberline {3.4.1}Resource Usage}{37}
-\contentsline {subsection}{\numberline {3.4.2}Two-Electron Integral performance}{38}
-\contentsline {subsection}{\numberline {3.4.3}P and Q Matrix Formation Performance}{39}
-\contentsline {subsection}{\numberline {3.4.4}Total Speedup}{44}
-\contentsline {section}{\numberline {3.5}Input Description}{45}
-\contentsline {chapter}{Bibliography}{49}
+\contentsline {section}{\numberline {1.1}Solving the Schr\"{o}dinger Equation}{1}
+\contentsline {section}{\numberline {1.2}Hartree-Fock SCF}{2}
+\contentsline {chapter}{\numberline {2}Basis Sets}{4}
+\contentsline {section}{\numberline {2.1}Methods}{4}
+\contentsline {subsection}{\numberline {2.1.1}Basis set size optimization}{4}
+\contentsline {section}{\numberline {2.2}Discussion}{5}
+\contentsline {chapter}{\numberline {3}CUDAProphet}{8}
+\contentsline {section}{\numberline {3.1}GPU Architecture}{8}
+\contentsline {subsection}{\numberline {3.1.1}Threads, Blocks, and Grids}{8}
+\contentsline {subsection}{\numberline {3.1.2}Memory}{9}
+\contentsline {subsection}{\numberline {3.1.3}Occupancy and Performance}{13}
+\contentsline {subsection}{\numberline {3.1.4}Matrix Multiplication Example}{13}
+\contentsline {section}{\numberline {3.2}Program flow}{17}
+\contentsline {section}{\numberline {3.3}Alterations for CUDA}{18}
+\contentsline {subsection}{\numberline {3.3.1}Two-electron Integrals}{18}
+\contentsline {subsection}{\numberline {3.3.2}Density Matrix Formation}{29}
+\contentsline {subsubsection}{\numberline {3.3.2.1}P Q Super Matrices}{29}
+\contentsline {subsubsection}{\numberline {3.3.2.2}FORMPQ Algorithm}{32}
+\contentsline {subsubsection}{\numberline {3.3.2.3}MTSE Algorithm}{33}
+\contentsline {subsubsection}{\numberline {3.3.2.4}STSE Algorithm}{36}
+\contentsline {section}{\numberline {3.4}Discussion}{38}
+\contentsline {subsection}{\numberline {3.4.1}Resource Usage}{38}
+\contentsline {subsection}{\numberline {3.4.2}Two-Electron Integral performance}{39}
+\contentsline {subsection}{\numberline {3.4.3}P and Q Matrix Formation Performance}{40}
+\contentsline {subsection}{\numberline {3.4.4}Total Speedup}{45}
+\contentsline {section}{\numberline {3.5}Input Description}{46}
+\contentsline {chapter}{Bibliography}{50}

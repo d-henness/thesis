@@ -832,9 +832,35 @@ Canada}%
 \bodyoftext
 
 \chapter{Introduction}
-\section{Hartree-Fock SCF}
-\subsection{Relativistic SCF}
+\section{Solving the Schr\"{o}dinger Equation}
+The Schr\"{o}dinger equation\citethis in its time-independent, non-relativistic form is given in Equation \ref{eq:schro} 
 
+\begin{equation}
+\label{eq:schro}
+\hat{H}\Psi = E\Psi
+\end{equation} 
+
+where $\hat{H}$ is the Hamiltonian operator, $\Psi$ is referred to as the wavefunction, and $E$ is the energy of the system described by the wavefunction. For a molecular system, the Hamiltonian operator in atomic units (a.u) is given by Equation \ref{eq:ham}
+
+\begin{equation}
+\label{eq:ham}
+\hat{H} = -\frac{1}{2}\sum_{i}\nabla^{2}_{i} - \sum_{A}\frac{1}{2M_{A}}\nabla^{2}_{A} - \sum_{i}\sum_{A}\frac{Z_{A}}{r_{iA}}
++ \sum_{i}\sum_{j>i}\frac{1}{r_{ij}} + \sum_{A}\sum_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}
+\end{equation} 
+
+where $i$ and $j$ refer to electrons, and $A$ and $B$ refer to nuclei. $M_{A}$ and $Z_{A}$ are the mass and charge of nucleus $A$. $r_{xy}$ is the distance between particles $x$ and $y$, and $\nabla^{2}_{n}=\frac{\delta^{2}}{\delta x^{2}}+\frac{\delta^{2}}{\delta y^{2}}+\frac{\delta^{2}}{\delta z^{2}}$ where $x$, $y$, and $z$ are the Cartesian coordinates of particle $n$. Each term accounts for a different kind of energy. $-\frac{1}{2}\sum_{i}\nabla^{2}_{i}$ is the kinetic energy of the electrons, $\sum_{A}\frac{1}{2M_{A}}\nabla^{2}_{A}$ is the kinetic energy of the electrons, $\sum_{i}\sum_{A}\frac{Z_{A}}{r_{iA}}$ is the potential energy of attraction between nuclei and electrons, $\sum_{i}\sum_{j>i}\frac{1}{r_{ij}}$ is the potential energy of repulsion between electrons, and $\sum_{A}\sum_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}$ is the potential energy of repulsion between nuclei. Together, this accounts for all of the energy of a molecular system. As this operator is quite complex, it would be helpful to simplify it if possible. Fortunately, Born and Oppenheimer\citethis realized something that will allow us to get away with murder.
+
+Much like a satellite in orbit around the Earth, the proton and neutron vastly outweigh the electron. We can therefore assume that disturbances of nuclear coordinates caused by movement of electrons are far less than the disturbances of electronic coordinates caused by movement of nuclei. This means the nuclei are effectively stationary, and their kinetic energy is reduced to 0. As a bonus, the potential energy of repulsion now becomes a constant. The killing of these two terms reduces the Hamiltonian operator to the \textit{electronic} Hamiltonian given in Equation \ref{eq:elham}
+
+\begin{equation}
+\label{eq:elham}
+\hat{H_{ele}} = -\frac{1}{2}\sum_{i}\nabla^{2}_{i}  - \sum_{i}\sum_{A}\frac{Z_{A}}{r_{iA}} + \sum_{i}\sum_{j>i}\frac{1}{r_{ij}}
+\end{equation} 
+
+$\hat{H}$ can be assumed to be $\hat{H_{ele}}$ for the remainder of this Thesis, and with the Hamiltonian out of the way, we can now turn our attention to the wavefunction. While we were able to get away with turning nuclei into classical particles, the electrons unfortunately remain fully quantum. Therefore, we need to deal with all the complex mathematical baggage this comes with.
+
+\section{Hartree-Fock SCF}
+\notetodylan{rewrite this section so that it makes sense with what came before it.}
 In the previous subsection we discussed the calculation of the two-electron integrals, now we will discuss how they are actually used. 
 
 SCF begins with the formation of the density matrices. In this program, each spinor symmetry $\lambda$ has its own density matrix. There are also two types of density matrices, one for contributions from closed shell spinors (\textbf{D$_\textbf{C}$}) and one for contributions from open shelled spinors (\textbf{D$_\textbf{O}$}).

@@ -850,23 +850,23 @@ where $\hat{H}$ is the Hamiltonian operator, $\Psi$ is referred to as the wavefu
 
 where $i$ and $j$ refer to electrons, and $A$ and $B$ refer to nuclei. $M_{A}$ and $Z_{A}$ are the mass and charge of nucleus $A$. $r_{xy}$ is the distance between particles $x$ and $y$, and $\nabla^{2}_{n}=\frac{\delta^{2}}{\delta x^{2}}+\frac{\delta^{2}}{\delta y^{2}}+\frac{\delta^{2}}{\delta z^{2}}$ where $x$, $y$, and $z$ are the Cartesian coordinates of particle $n$. Each term accounts for a different kind of energy: $-\frac{1}{2}\sum_{i}\nabla^{2}_{i}$ is the kinetic energy of the electrons, $\sum_{A}\frac{1}{2M_{A}}\nabla^{2}_{A}$ is the kinetic energy of the electrons, $\sum_{i}\sum_{A}\frac{Z_{A}}{r_{iA}}$ is the potential energy of attraction between nuclei and electrons, $\sum_{i}\sum_{j>i}\frac{1}{r_{ij}}$ is the potential energy of repulsion between electrons, and $\sum_{A}\sum_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}$ is the potential energy of repulsion between nuclei. Together, this accounts for all of the energy of a molecular system. As this operator is quite complex, it would be helpful to simplify it if possible. Fortunately, Born\citethis and Oppenheimer\citethis realized something that will allow us to get away with murder.
 
-Much like a satellite in orbit around the Earth, the proton and neutron vastly outweigh the electron. We can therefore assume that disturbances of nuclear coordinates caused by movement of electrons are far less than the disturbances of electronic coordinates caused by movement of nuclei. This means the nuclei are effectively stationary, and their kinetic energy is reduced to zero. As a bonus, the potential energy of repulsion now becomes a constant. The killing of these two terms reduces the Hamiltonian operator to the \textit{electronic} Hamiltonian given in Equation \ref{eq:elham}
+Much like a satellite in orbit around the Earth \notetodylan{think of a better analogy}, the proton and neutron vastly outweigh the electron. We can therefore assume that disturbances of nuclear coordinates caused by movement of electrons are far less than the disturbances of electronic coordinates caused by movement of nuclei. This means the nuclei are effectively stationary, and their kinetic energy is reduced to zero. As a bonus, the potential energy of repulsion now becomes a constant. The killing of these two terms reduces the Hamiltonian operator to the \textit{electronic} Hamiltonian given in Equation \ref{eq:elham}
 
 \begin{equation}
 \label{eq:elham}
-\hat{H_{ele}} = -\frac{1}{2}\sum_{i}\nabla^{2}_{i}  - \sum_{i}\sum_{A}\frac{Z_{A}}{r_{iA}} + \sum_{i}\sum_{j>i}\frac{1}{r_{ij}}
+\hat{H_{el}} = -\frac{1}{2}\sum_{i}\nabla^{2}_{i}  - \sum_{i}\sum_{A}\frac{Z_{A}}{r_{iA}} + \sum_{i}\sum_{j>i}\frac{1}{r_{ij}}
 \end{equation} 
 
-$\hat{H}$ can be assumed to be $\hat{H_{ele}}$ for the remainder of this Thesis, and with the Hamiltonian out of the way, we can now turn our attention to the wavefunction. While we were able to get away with turning nuclei into classical particles, the electrons unfortunately remain fully quantum. Therefore, we need to deal with all the complicated mathematical baggage this comes with.
+$\hat{H}$ can be assumed to be $\hat{H_{el}}$ for the remainder of this Thesis, and with the Hamiltonian out of the way, we can now turn our attention to the wavefunction. While we were able to get away with turning nuclei into classical particles, the electrons unfortunately remain fully quantum. Therefore, we need to deal with all the complicated mathematical baggage this comes with.
 
-Consider the hydrogen atom. By the grace of God, it (and all other one-electron atomic systems) is one of the few exactly solvable problems in quantum mechanics. The solution for its wavefunction in spherical coordinates is given in Equation \ref{eq:wavehydro} \notetodylan{solutions taken from Ideas of Quantum Chemistry}
+Consider the hydrogen atom. By the grace of God, it (and all other one-electron atomic systems) is one of the few exactly solvable problems in quantum mechanics. The solution for its wavefunction in spherical coordinates is given in Equation \ref{eq:wavehydro} \notetodylan{solutions taken from Griffiths remember to correct equations}
 
 \begin{equation}
 \label{eq:wavehydro}
 \Psi_{nlm}(r, \theta, \phi) = N_{nl}R_{nl}(r)Y^{m}_{l}(\theta,\phi)
 \end{equation} 
 
-where $N_{nl}$ is a normalization constant \notetodylan{check with Mariusz}, $R_{nl}$ is
+where $N_{nl}$ is a normalization constant, $R_{nl}$ is
 
 \begin{equation}
 \label{eq:wavehydro_R}
@@ -909,7 +909,66 @@ Oh my, well it didn't take long for this to get ugly did it. Inspection of these
 \section{Hartree-Fock}
 While the wavefunction might appear complex, it is important to remember that it is still just a wave, and one of the fundamental properties of waves is that they can be added together to produce a separate, more complex wave. Likewise, any wave, no matter how complex, can be broken down as a summation of many simpler waves \notetodylan{cite fourier transform}. Thus, any linear combination of solutions to the wavefunction must therefore be a solution of a different (albeit perhaps non-physical) wavefunction. It is this property that will be exploited to solve our many electron problem. But first we must layout some ground rules.
 
-The first rule is our combination of \textit{trial} wavefunctions ($\psi(r)$) must meet the boundary conditions of the problem. For atoms and molecules, this means that the our collection of $\psi(r)$s must go to 0 as $r$ goes to infinity. This is easy enough to satisfy, we just saw one that does this in Equation \ref{eq:wavehydro}. The second rule is that the overall wavefunction must satisfy the Pauli exclusion principle.   
+The first rule is that the overall wavefunction must satisfy the Pauli exclusion principle\citethis. There are two components to this, the first is that two electrons can not occupy the same orbital if they have the same \textit{spin}, and the second is that the wavefunction must be antisymmetric with respect to the exchanging of electronic coordinates. We can satisfy these requirements by using a Slater determinant\citethis, an example of which is shown below.
+
+\begin{equation}
+\label{eq:slate_det}
+\Psi =
+\frac{1}{\sqrt{n!}}
+\begin{vmatrix}
+\chi_{1}(1)		&	\chi_{2}(1)		&	\chi_{3}(1)		&	\ldots	&	\chi_{n}(1)		\\
+\chi_{1}(2)		&	\chi_{2}(2)		&	\chi_{3}(2)		&	\ldots	&	\chi_{n}(2)		\\
+\chi_{1}(3)		&	\chi_{2}(3)		&	\chi_{3}(3)		&	\ldots	&	\chi_{n}(3)		\\
+\ldots		&	\ldots		&	\ldots		&	\ldots	&	\ldots		\\
+\chi_{1}(n)		&	\chi_{2}(n)		&	\chi_{3}(n)		&	\ldots	&	\chi_{n}(n)		\\
+
+\end{vmatrix}
+\end{equation} 
+
+Here, $n$ refers to the number of electrons in the system, and the numbers in parentheses refer to specific electrons. $\chi_{i}$ refers to the $i^{th}$ \textit{spin} orbital which is equal to $\psi_{i}\alpha(\omega)$ if $i$ is odd, or $\psi_{i}\beta(\omega)$ if $i$ is even ($\psi$ is an orbital). $\alpha$ and $\beta$ are called spin functions. What they actually are doesn't matter, because they are defined to be orthonormal to each other. The consequence of this allows us to fulfill the requirements of the Pauli exclusion principle, . If we had a system where two electrons of the same spin where in the same orbital, than that would mean that two of the rows of our determinant would be the same. Such a determinant would be equal to zero which means the wavefunction for that system would not exist. The math showing that it satisfies the second requirement is shown below
+
+\begin{align}
+\label{eq:pauli_2t_1}
+\Psi(1,2) =
+\frac{1}{\sqrt{2}}
+\begin{vmatrix}
+\psi_{1}(1)\alpha(\omega_{1})		&	\psi_{1}(1)\beta(\omega_{1})		\\
+\psi_{1}(2)\alpha(\omega_{2})		&	\psi_{1}(2)\beta(\omega_{2})		\\
+\end{vmatrix}
+\end{align}
+
+\begin{align}
+\label{eq:pauli_2t_2}
+\Psi(1,2) =
+\frac{1}{\sqrt{2}}
+\left[
+\psi_{1}(1)\alpha(\omega_{1})\psi_{1}(2)\beta(\omega_{2}) -
+\psi_{1}(1)\beta(\omega_{1})\psi_{1}(2)\alpha(\omega_{2})
+\right]
+\end{align}
+
+\begin{align}
+\label{eq:pauli_2t_3}
+-\Psi(1,2) =
+\frac{1}{\sqrt{2}}
+\left[
+\psi_{1}(1)\beta(\omega_{1})\psi_{1}(2)\alpha(\omega_{2}) -
+\psi_{1}(1)\alpha(\omega_{1})\psi_{1}(2)\beta(\omega_{2})
+\right]
+\end{align}
+
+\begin{align}
+\label{eq:pauli_2t_1}
+-\Psi(1,2) =
+\frac{1}{\sqrt{2}}
+\begin{vmatrix}
+\psi_{1}(2)\alpha(\omega_{2})	&	\psi_{1}(2)\beta(\omega_{2})	\\
+\psi_{1}(1)\alpha(\omega_{1})	&	\psi_{1}(1)\beta(\omega_{1})	\\
+\end{vmatrix}
+=\Psi(2,1)
+\end{align}
+
+As can be seen, changing the indexing of the electrons is equivalent to swapping the rows for those electrons, which changes the sign of the determinant. 
 
 \section{Hartree-Fock SCF}
 \notetodylan{rewrite this section so that it makes sense with what came before it.}
@@ -942,7 +1001,7 @@ In keeping with the theme of ``computers should work, people should think", we d
 
 \textit{Step 1.} Begin by finding the fewest number of f functions necessary. This can be done by generating .inps files that range in size from s$(1:40)$p$(1:40)$d$(1:40)$f$(1:1)$ to s$(1:40)$p$(1:40)$d$(1:40)$f$(1:40)$.
 
-\textit{Step 2.} Optimize the basis sets and select the smallest basis set that is still below some minimum accuracy threshold. \newaddition{We chose a relative error of no greater than $5.0\times10^{-9}$ to numerical calculations where relative error is defined as $\frac{|(\text{optimized energy}) - (\text{numerical energy})|}{\text{numerical energy}}$}. The size of this basis set is s$(1:40)$p$(1:40)$d$(1:40)$f$(1:x_{f})$.
+\textit{Step 2.} Optimize the basis sets and select the smallest basis set that is still below some minimum accuracy threshold. We chose a relative error of no greater than $5.0\times10^{-9}$ to numerical calculations where relative error is defined as $\frac{|(\text{optimized energy}) - (\text{numerical energy})|}{\text{numerical energy}}$. The size of this basis set is s$(1:40)$p$(1:40)$d$(1:40)$f$(1:x_{f})$.
 
 \textit{Step 3.} Replace the wtbs parameters with those from the newly optimized set and generate a list of .inp files that range in size from s$(1:40)$p$(1:40)$d$(1:x_{f})$f$(1:x_{f})$ to s$(1:40)$p$(1:40)$d$(1:40)$f$(1:x_{f})$.
 
@@ -956,7 +1015,7 @@ In keeping with the theme of ``computers should work, people should think", we d
 
 \textit{Step 8.} Repeat steps 6 and 7 for the other symmetries except s. The final basis set will be of size s$(1:x_{s})$p$(y_{p}:x_{p})$d$(y_{d}:x_{d})$f$(y_{f}:x_{f})$.
 
-This process has a major drawback in that it requires a lot of computer power to run efficiently. But this is not really a problem if access to large computer clusters is available. \newaddition{Additionally, considering that calculations for the chain 1-8 can be run in parallel for different atoms, this optimization process is trivially parallel.} The advantages of this are it finds a very small basis set that is still accurate, and it is also completely automatable. If there are no problems with individual calculations not converging, the output files never even need to be manually examined!
+This process has a major drawback in that it requires a lot of computer power to run efficiently. But this is not really a problem if access to large computer clusters is available. Additionally, considering that calculations for the chain 1-8 can be run in parallel for different atoms, this optimization process is trivially parallel. The advantages of this are it finds a very small basis set that is still accurate, and it is also completely automatable. If there are no problems with individual calculations not converging, the output files never even need to be manually examined!
 
 \section{Discussion}
 
@@ -1085,13 +1144,13 @@ Global memory is both the most plentiful and the slowest available memory on a G
 
 Shared memory, as its name implies, is shared and private to threads in a single block. It is able to be access much faster than global memory, but this comes at the cost of a much reduced volume. The amount of it available per SM varies with hardware generation, but the maximum available on our card is 48KB. This amount is shared among all blocks that are running on the SM, so the amount available per block will typically be even less. Also, there is no guarantee that memory loaded by one thread will be available to all other threads right away, only a call to \comm{syncthreads} ensures proper loading. But, when used properly, shared memory is indispensable for speeding up calculations. It does not suffer from threads reading from non-contiguous memory locations like global memory does, and if all threads in a warp read from the same memory location a ``broadcast" occurs. This means that instead of the read being serialized, all threads are able to read the data in one transaction. Shared memory is also distinct from global memory in that instead of being declared in the host code, it is declared in the device code. This is done by giving the variable the ``shared" attribute in its declaration. One must be careful not to over use the shared memory however. As mentioned, there is only 48KB available per SM. If a block needs more than is available, the function will fail to execute. It can also affect the occupancy of the kernel, a concept that will be explained later on.
 
-Lastly there is the register memory. This is the fastest memory available and is also private to an individual thread. \newaddition{As this may have been a lot to take in, Figure \ref{fig:gpuarc} shows the hierarchy of the grid, blocks, and threads, as well as how each memory type is localized.} On the Tesla C2050, there are a total of 32768 32-bit registers available per SM. An individual thread in a block can use no more than 63 registers, and if the number of threads in a block times the number of registers needed per thread for a kernel is larger than the total registers available per SM then the execution of the kernel will fail. If a thread needs more memory than the registers will allow, then ``register-spilling" takes place. This means that instead of a variable being stored into a register, it ``spills over" into a fourth memory type called local memory. Local memory is really just a section of the global memory and comes with all the problems that global memory has, but the compiler is able to arrange it such that it can be read efficiently without the programmer having to worry about this. There is no way for a programmer to specify which variables will be stored in register or local memory, the complier handles all of this. There are complier flags which can change the maximum amount of registers per thread allowed which will prompt the complier to place more data into local memory. While this may sound like a bad idea, we will see in the next section how there are situations where this might be useful.
+Lastly there is the register memory. This is the fastest memory available and is also private to an individual thread. As this may have been a lot to take in, Figure \ref{fig:gpuarc} shows the hierarchy of the grid, blocks, and threads, as well as how each memory type is localized. On the Tesla C2050, there are a total of 32768 32-bit registers available per SM. An individual thread in a block can use no more than 63 registers, and if the number of threads in a block times the number of registers needed per thread for a kernel is larger than the total registers available per SM then the execution of the kernel will fail. If a thread needs more memory than the registers will allow, then ``register-spilling" takes place. This means that instead of a variable being stored into a register, it ``spills over" into a fourth memory type called local memory. Local memory is really just a section of the global memory and comes with all the problems that global memory has, but the compiler is able to arrange it such that it can be read efficiently without the programmer having to worry about this. There is no way for a programmer to specify which variables will be stored in register or local memory, the complier handles all of this. There are complier flags which can change the maximum amount of registers per thread allowed which will prompt the complier to place more data into local memory. While this may sound like a bad idea, we will see in the next section how there are situations where this might be useful.
 
 \begin{figure}[h!]
 \center
 \includegraphics[width=0.83\textwidth]{Figures/gpu_arc.png}
 \caption[Architecture of a GPU]
-{\newaddition{Architecture of a GPU. This figure shows how threads and blocks are organized in the grid, as well as how the different memory types are localized within them. The grid is coloured dark blue, blocks are coloured light blue, and threads are coloured cyan. As for memory, the global memory is coloured red, shared memory is coloured orange, and register memory is coloured yellow. The numbers in parenthesis indicate the block or thread's $blockIdx$ or $threadIdx$ variables. In this particular case, $blockDim=(8,4)$ and $gridDim=(2,2)$. A thread is able to access memory that is inside its registers, but not the registers of other threads, and memory that is inside the shared memory of its block, but not the shared memory of other blocks. All threads can access all of the global memory.}}
+{Architecture of a GPU. This figure shows how threads and blocks are organized in the grid, as well as how the different memory types are localized within them. The grid is coloured dark blue, blocks are coloured light blue, and threads are coloured cyan. As for memory, the global memory is coloured red, shared memory is coloured orange, and register memory is coloured yellow. The numbers in parenthesis indicate the block or thread's $blockIdx$ or $threadIdx$ variables. In this particular case, $blockDim=(8,4)$ and $gridDim=(2,2)$. A thread is able to access memory that is inside its registers, but not the registers of other threads, and memory that is inside the shared memory of its block, but not the shared memory of other blocks. All threads can access all of the global memory.}
 \label{fig:gpuarc}
 \end{figure}
 
@@ -1108,22 +1167,14 @@ Registers are the fastest memory available, but they are also the easiest to ove
 As with everything, these rules are only guide lines. The best resource configuration will be individual not only to every kernel, but the GPU it is to be run on as well. The best way to maximize the efficiency of a calculation is to make minor alterations to where data is stored and play around with the code. Finally, it might not always be the best idea to maximize the occupancy of a kernel. If the bottleneck is not the actual calculation, but how fast the data can be read, then it might be advantageous to fill up the registers and shared memory as much as possible and have a very low occupation. The only way to know is to try!
 
 \subsection{Matrix Multiplication Example}
-\newaddition{
 To complete the introduction to CUDA programming, we will go over a real example of CUDA Fortran code. For our example, we will examine code that preforms matrix multiplication on matrices of arbitrary dimensions. This makes use of all the concepts we've covered so far, so it will be a good exercise to examine. The code is given below.
-}
 \lstinputlisting[caption={Matrix Multiplication Kernel}]{mat_mul.cuf}
 
-\newaddition{
 \notetodylan{make sure line numbers are correct} Lines 1 - 43 define a module which contains our matrix multiplication kernel. The kernel takes the matrices \texttt{inputA} and \texttt{inputB}, multiplies them together, and stores the result in \texttt{output}. The kernel has the \texttt{{\color{myblue}{attributes}}(global)} attribute, which means that it can be called from either device or host code. \texttt{rowA}, \texttt{colA}, \texttt{rowB}, and \texttt{colB} are the rows and columns of \texttt{inputA} and \texttt{inputB}. Because they are small and don't change over the course of the calculation, they get stored in a special memory type called constant memory. This is a small cache of read only memory that is 64KB in size and allows for constant values to be read very quickly. There are two shared variables, \texttt{s\_tileA} and \texttt{s\_tileB}. Each of these are square matrices with dimensions of \texttt{block\_dim} and these will be used to store sections or ``tiles" of \texttt{inputA} and \texttt{inputB} respectively. We want each thread to do all the calculations needed to compute a simple element of \texttt{output}. Line 13 and 14 use the \texttt{threadIdx}, \texttt{blockDim}, and \texttt{blockIdx} variables so that each thread get a unique combination of \texttt{x} and \texttt{y} values. \texttt{x} corresponds to a row of the \texttt{output} matrix and \texttt{y} corresponds to a column, so each thread is then uniquely mapped to an element of \texttt{output}. We will see in the host code how these index values are determined, but for now it is sufficient to know that there will be at least as many threads as elements of \texttt{output}.
-}
 
-\newaddition{
 \notetodylan{make sure line numbers are correct} Lines 17 - 37 are where the actual calculation takes place. For each iteration of the loop, a different tile of \texttt{inputA} and \texttt{inputB} are fetched from the global memory and stored into the shared memory. The reason for using this tiling approach can be seen when we consider how the threads must read \texttt{inputB}. If we did not use shared memory, the loop would just be \texttt{total {\color{myyellow}{=}} total {\color{myyellow}{+}} inputA(x, i) {\color{myyellow}{*}} inputB(i, y)}. In this case, access to \texttt{inputA} is coalesced, but access to \texttt{inputB} is not. Therefore, the kernel will be stunted due this unoptimized memory usage. Instead, we load tiles in a coalesced manner into the shared memory, synchronize the threads, and then read through the shared memory in an uncoalesced fashion which carries no penalty. At the end of each loop, the tiles are moved in the \texttt{y} direction for \texttt{inputA} and in the \texttt{x} direction for \texttt{inputB}, and the process repeats. Notice how it is possible that a tile might fall on the boundary of an \texttt{input} matrix. This is why there are checks to make sure the coordinates of the tile don't exceed the boundaries of a matrix so we don't start reading garbage.
-}
 
-\newaddition{
 \notetodylan{make sure line numbers are correct} In the host code on lines 45 - 102, we have two sets of variables, those for the host and those for the device. Notice how device variables have the \texttt{{\color{mygreen}{device}}} attribute. For clarity, they are given the same name as their host variables but with a \texttt{d\_} prefix. Next we assign constant variables from line 5 to arbitrary values. Next we set up the random number generator, allocate the host matrices memory, and and randomly initialize the input matrices. Then the device variables are allocated memory and the host data is then uploaded to the GPU. On lines 87 and 88 are where the block and grid dimensions are setup. \texttt{blockDim} and \texttt{gridDim} are variables of \texttt{{\color{mygreen}{type}}(dim3)} which is a tuple that is defined in the \texttt{cudafor} module. The block has two dimensions containing \texttt{block\_dim}$^{2}$ threads. The grid also has two dimensions, and as we need one thread per element of \texttt{output} we preform a calculation which returns the minimum number of blocks that will cover it. Finally, we launch the kernel on line 90 using the \texttt{\color{myyellow}{<<< >>>}} operators to provide the grid and block dimensions, download the result from the GPU, and deallocate the memory.
-}
 
 \section{Program flow}
 In this section, the control flow of a typical calculation is given.
@@ -1209,7 +1260,7 @@ The original DFRATOM calculates the two electron integrals with a long series of
 \end{algorithmic}
 \end{algorithm}
 
-The first problem arises due to warp divergence. Because the maximum values of $M$, $R$, and $S$ depend on $L$, $P$, and $Q$, different threads will have a different number of loops to complete than others. Because a streaming multiprocessor (SM) must finish the block is it currently working on before it can grab another, there is the possibility that most of the threads in a block are idling while waiting for others in the same block to finish. The second problem is that with this method, there will always be several blocks that have threads that remain idle throughout the block's runtime, no matter what. \newaddition{This can be seen more clearly in Figure \ref{fig:naivelayout}}. The third problem with this is that with the maximum values for $L$, $P$, and $Q$ available for a single atom, there might not even be enough combinations to completely fill the GPU. While all of these issues begin to disappear once the number of integrals to evaluate becomes large enough, we are still very much in the range where they are in play. Therefore a smarter algorithm had to be used.
+The first problem arises due to warp divergence. Because the maximum values of $M$, $R$, and $S$ depend on $L$, $P$, and $Q$, different threads will have a different number of loops to complete than others. Because a streaming multiprocessor (SM) must finish the block is it currently working on before it can grab another, there is the possibility that most of the threads in a block are idling while waiting for others in the same block to finish. The second problem is that with this method, there will always be several blocks that have threads that remain idle throughout the block's runtime, no matter what. This can be seen more clearly in Figure \ref{fig:naivelayout}. The third problem with this is that with the maximum values for $L$, $P$, and $Q$ available for a single atom, there might not even be enough combinations to completely fill the GPU. While all of these issues begin to disappear once the number of integrals to evaluate becomes large enough, we are still very much in the range where they are in play. Therefore a smarter algorithm had to be used.
 
 \begin{figure}[h!]
 \includegraphics[width=1\textwidth]{Figures/30_25_20_15_naive_layout.png}
@@ -1218,19 +1269,19 @@ The first problem arises due to warp divergence. Because the maximum values of $
 \label{fig:naivelayout}
 \end{figure}
 
-The second problem can be solved by \newaddition{restricting the dimensionality of the solution instead of the using the three dimensional one of Algorithm \ref{easycode}. We might consider using a two dimensional solution, but then we still will have blocks with idle threads which can be seen in Figure \ref{fig:genmatblock}. By restricting ourselves to only using $threadIdx.x$, we ensure that only the last block to run will have the possibility of having threads remaining idle throughout the block's runtime as shown in Figure \ref{fig:genvecblock}}. The third problem can be solved by having each thread calculate one and only one set of J and K integrals. If we start with a valid combination of $L$, $M$, $P$, $Q$, $R$, and $S$ values, we can very easily figure out which thread will calculate that set of integrals by using the following equations:
+The second problem can be solved by restricting the dimensionality of the solution instead of the using the three dimensional one of Algorithm \ref{easycode}. We might consider using a two dimensional solution, but then we still will have blocks with idle threads which can be seen in Figure \ref{fig:genmatblock}. By restricting ourselves to only using $threadIdx.x$, we ensure that only the last block to run will have the possibility of having threads remaining idle throughout the block's runtime as shown in Figure \ref{fig:genvecblock}. The third problem can be solved by having each thread calculate one and only one set of J and K integrals. If we start with a valid combination of $L$, $M$, $P$, $Q$, $R$, and $S$ values, we can very easily figure out which thread will calculate that set of integrals by using the following equations:
 
 \begin{figure}[h!]
 \includegraphics[width=1\textwidth]{Figures/gen_mat_block_layout.png}
 \caption[Two-Electron Integral Layout: 2D Blocks and Grid]
-{\newaddition{Two-Electron Integral Layout: 2D Blocks and Grid. Orange lines indicate the border of blocks. Notice that many blocks have idle threads.}}
+{Two-Electron Integral Layout: 2D Blocks and Grid. Orange lines indicate the border of blocks. Notice that many blocks have idle threads.}
 \label{fig:genmatblock}
 \end{figure}
 
 \begin{figure}[h!]
 \includegraphics[width=1\textwidth]{Figures/gen_vec_block_layout.png}
 \caption[Two-Electron Integral Layout: 1D Blocks and Grid]
-{\newaddition{Two-Electron Integral Layout: 1D Blocks and Grid. Orange lines indicate the border of blocks. Notice that only the last block contains idle threads.}}
+{Two-Electron Integral Layout: 1D Blocks and Grid. Orange lines indicate the border of blocks. Notice that only the last block contains idle threads.}
 \label{fig:genvecblock}
 \end{figure}
 

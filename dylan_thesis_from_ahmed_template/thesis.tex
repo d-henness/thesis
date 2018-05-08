@@ -16,7 +16,7 @@
 \usepackage{lscape}
 \usepackage{longtable}
 \usepackage[numbers,compress]{natbib}
-%\usepackage{booktabs}
+\usepackage{booktabs}
 %\usepackage{cite}
 %\usepackage[natbib=true,uniquename=init,firstinits,bibstyle=chicago]{biblatex}
 \usepackage{multirow}
@@ -848,16 +848,16 @@ where $\hat{H}$ is the Hamiltonian operator, $\Psi$ is referred to as the wavefu
 + \sum_{i}\sum_{j>i}\frac{1}{r_{ij}} + \sum_{A}\sum_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}
 \end{equation} 
 
-where $i$ and $j$ refer to electrons, and $A$ and $B$ refer to nuclei. $M_{A}$ and $Z_{A}$ are the mass and charge of nucleus $A$. $r_{xy}$ is the distance between particles $x$ and $y$, and $\nabla^{2}_{n}=\frac{\delta^{2}}{\delta x^{2}}+\frac{\delta^{2}}{\delta y^{2}}+\frac{\delta^{2}}{\delta z^{2}}$ where $x$, $y$, and $z$ are the Cartesian coordinates of particle $n$. Each term accounts for a different kind of energy. $-\frac{1}{2}\sum_{i}\nabla^{2}_{i}$ is the kinetic energy of the electrons, $\sum_{A}\frac{1}{2M_{A}}\nabla^{2}_{A}$ is the kinetic energy of the electrons, $\sum_{i}\sum_{A}\frac{Z_{A}}{r_{iA}}$ is the potential energy of attraction between nuclei and electrons, $\sum_{i}\sum_{j>i}\frac{1}{r_{ij}}$ is the potential energy of repulsion between electrons, and $\sum_{A}\sum_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}$ is the potential energy of repulsion between nuclei. Together, this accounts for all of the energy of a molecular system. As this operator is quite complex, it would be helpful to simplify it if possible. Fortunately, Born and Oppenheimer\citethis realized something that will allow us to get away with murder.
+where $i$ and $j$ refer to electrons, and $A$ and $B$ refer to nuclei. $M_{A}$ and $Z_{A}$ are the mass and charge of nucleus $A$. $r_{xy}$ is the distance between particles $x$ and $y$, and $\nabla^{2}_{n}=\frac{\delta^{2}}{\delta x^{2}}+\frac{\delta^{2}}{\delta y^{2}}+\frac{\delta^{2}}{\delta z^{2}}$ where $x$, $y$, and $z$ are the Cartesian coordinates of particle $n$. Each term accounts for a different kind of energy: $-\frac{1}{2}\sum_{i}\nabla^{2}_{i}$ is the kinetic energy of the electrons, $\sum_{A}\frac{1}{2M_{A}}\nabla^{2}_{A}$ is the kinetic energy of the electrons, $\sum_{i}\sum_{A}\frac{Z_{A}}{r_{iA}}$ is the potential energy of attraction between nuclei and electrons, $\sum_{i}\sum_{j>i}\frac{1}{r_{ij}}$ is the potential energy of repulsion between electrons, and $\sum_{A}\sum_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}$ is the potential energy of repulsion between nuclei. Together, this accounts for all of the energy of a molecular system. As this operator is quite complex, it would be helpful to simplify it if possible. Fortunately, Born\citethis and Oppenheimer\citethis realized something that will allow us to get away with murder.
 
-Much like a satellite in orbit around the Earth, the proton and neutron vastly outweigh the electron. We can therefore assume that disturbances of nuclear coordinates caused by movement of electrons are far less than the disturbances of electronic coordinates caused by movement of nuclei. This means the nuclei are effectively stationary, and their kinetic energy is reduced to 0. As a bonus, the potential energy of repulsion now becomes a constant. The killing of these two terms reduces the Hamiltonian operator to the \textit{electronic} Hamiltonian given in Equation \ref{eq:elham}
+Much like a satellite in orbit around the Earth, the proton and neutron vastly outweigh the electron. We can therefore assume that disturbances of nuclear coordinates caused by movement of electrons are far less than the disturbances of electronic coordinates caused by movement of nuclei. This means the nuclei are effectively stationary, and their kinetic energy is reduced to zero. As a bonus, the potential energy of repulsion now becomes a constant. The killing of these two terms reduces the Hamiltonian operator to the \textit{electronic} Hamiltonian given in Equation \ref{eq:elham}
 
 \begin{equation}
 \label{eq:elham}
 \hat{H_{ele}} = -\frac{1}{2}\sum_{i}\nabla^{2}_{i}  - \sum_{i}\sum_{A}\frac{Z_{A}}{r_{iA}} + \sum_{i}\sum_{j>i}\frac{1}{r_{ij}}
 \end{equation} 
 
-$\hat{H}$ can be assumed to be $\hat{H_{ele}}$ for the remainder of this Thesis, and with the Hamiltonian out of the way, we can now turn our attention to the wavefunction. While we were able to get away with turning nuclei into classical particles, the electrons unfortunately remain fully quantum. Therefore, we need to deal with all the complex mathematical baggage this comes with.
+$\hat{H}$ can be assumed to be $\hat{H_{ele}}$ for the remainder of this Thesis, and with the Hamiltonian out of the way, we can now turn our attention to the wavefunction. While we were able to get away with turning nuclei into classical particles, the electrons unfortunately remain fully quantum. Therefore, we need to deal with all the complicated mathematical baggage this comes with.
 
 Consider the hydrogen atom. By the grace of God, it (and all other one-electron atomic systems) is one of the few exactly solvable problems in quantum mechanics. The solution for its wavefunction in spherical coordinates is given in Equation \ref{eq:wavehydro} \notetodylan{solutions taken from Ideas of Quantum Chemistry}
 
@@ -904,7 +904,7 @@ P^{|m|}_{l}(x) = (1 - x^{2})^{\frac{|m|}{2}}\frac{d^{|m|}}{dx^{|m|}}P_{l}(x)
 P_{l}(x) = \frac{1}{2^{l}l!}\frac{d^{j}}{dx^{j}}(x^{2}-1)^{l}
 \end{equation} 
 
-Oh my, well it didn't take long for this to get ugly did it. Inspection of these equations reveals that $n$ must be a positive integer greater than 0, $l$ must be a positive integer between 0 and $n-1$, and $|m|$ can be no larger than $l$. These are called quantum numbers, specifically $n$ is the principal quantum number, $l$ is the azimuthal quantum number, and $l$ is the magnetic quantum number. Also notice that there is no limit to how large $n$ can get, which suggests that there is not just one solution to this equation, but an infinite number of them. The solutions to the hydrogen like atom problem are given the special name of orbitals. Table \ref{tab:hsol} shows the reduced form of $\Psi$ for a few different orbitals. So how about solutions for atoms with more than one electron? Well, if we make some further assumptions about the nature of reality, it has been shown that an atomic system with two electrons can also be solved \notetodylan{cite harmonic helium}, but we can go no further than this. At least, not exactly. In the next section we will see how solutions for atoms, and indeed molecules can begin to be approached.
+Oh my, well it didn't take long for this to get ugly did it. Inspection of these equations reveals that $n$ must be a positive integer greater than 0, $l$ must be a positive integer between 0 and $n-1$, and $|m|$ can be no larger than $l$. These are called quantum numbers, specifically $n$ is the principal quantum number, $l$ is the azimuthal quantum number, and $m$ is the magnetic quantum number. Also notice that there is no limit to how large $n$ can get, which suggests that there is not just one solution to this equation, but an infinite number of them. The solutions to the hydrogen-like atom wavefunction are given the special name of orbitals. Table \ref{tab:hsol} shows the reduced form of $\Psi$ for a few different orbitals. So how about solutions for atoms with more than one electron? Well, if we make some further assumptions about the nature of reality, it has been shown that an atomic system with two electrons can also be solved \notetodylan{cite harmonic helium}, but we can go no further than this. At least, not exactly. In the next section we will see how solutions for atoms, and indeed molecules can begin to be approached.
 
 \section{Hartree-Fock}
 While the wavefunction might appear complex, it is important to remember that it is still just a wave, and one of the fundamental properties of waves is that they can be added together to produce a separate, more complex wave. Likewise, any wave, no matter how complex, can be broken down as a summation of many simpler waves \notetodylan{cite fourier transform}. Thus, any linear combination of solutions to the wavefunction must therefore be a solution of a different (albeit perhaps non-physical) wavefunction. It is this property that will be exploited to solve our many electron problem. But first we must layout some ground rules.
@@ -963,15 +963,17 @@ This process has a major drawback in that it requires a lot of computer power to
 The optimized wtbs parameters and basis set sizes for elements 2 to 86 are shown in Table \ref{tab:BStab}.
 
 \begin{longtable}{l l r r r r r r r r}
-\caption{Basis sets optimized using rwtbs}\label{tab:BStab} \\
+\caption[Basis sets optimized using rwtbs]{Basis sets optimized using rwtbs \notetodylan{make these a multirow}}\label{tab:BStab} \\
+\toprule
 	Element	&	Term		&	$\alpha$	&	$\beta$	&	$\delta$	&	$\gamma$	&	s	&	p	&	d	&	f	\\
 			&	Symbol	&			&			&			&				&		&		&		&		\\
-\hline
+\midrule
 \endfirsthead
 \caption[]{(continued)}\\
+\toprule
 	Element	&	Term		&	$\alpha$	&	$\beta$	&	$\delta$	&	$\gamma$	&	s	&	p	&	d	&	f	\\
 			&	Symbol	&			&			&			&				&		&		&		&		\\
-\hline
+\midrule
 \endhead
 02 He & $^{1}S$ & 8.140$\times10^{-02}$ & 1.953 & 4.504 & 1.515 & (1:18) \\
 03 Li & $^{2}S$ & 1.596$\times10^{-02}$ & 1.933 & 5.701 & 1.573 & (1:22)  \\
@@ -1057,6 +1059,7 @@ The optimized wtbs parameters and basis set sizes for elements 2 to 86 are shown
 84 Po & $^{3}P$ & 4.783$\times10^{-02}$ & 1.763 & 5.977 & 1.516 & (1:32) & (1:27) & (3:23) & (6:19) \\
 85 At & $^{2}P$ & 5.210$\times10^{-02}$ & 1.757 & 5.846 & 1.502 & (1:32) & (1:27) & (3:23) & (6:19) \\
 86 Rn & $^{1}S$ & 5.716$\times10^{-02}$ & 1.749 & 5.695 & 1.486 & (1:32) & (1:27) & (3:23) & (6:19) \\
+\bottomrule
 \end{longtable}
 
 
@@ -1115,7 +1118,7 @@ To complete the introduction to CUDA programming, we will go over a real example
 }
 
 \newaddition{
-\notetodylan{make sure line numbers are correct} Lines 17 - 37 are where the actual calculation takes place. For each iteration of the loop, a different tile of \texttt{inputA} and \texttt{inputB} are fetched from the global memory and stored into the shared memory. The reason for using this tiling approach can be seen when we consider how the threads must read \texttt{inputB}. If we did not use shared memory, the loop would just be \texttt{total {\color{myyellow}{=}} total {\color{myyellow}{+}} inputA(x, i) {\color{myyellow}{*}} inputB(i, y)}. In this case, access to \texttt{inputA} is coalesced, but access to \texttt{inputB} is not. Therefore, the kernel will be stunted due this unoptimized memory usage. Instead, we load tiles in a coalesced manor into the shared memory, synchronize the threads, and then read through the shared memory in an uncoalesced fashion which carries no penalty. At the end of each loop, the tiles are moved in the \texttt{y} direction for \texttt{inputA} and in the \texttt{x} direction for \texttt{inputB}, and the process repeats. Notice how it is possible that a tile might fall on the boundary of an \texttt{input} matrix. This is why there are checks to make sure the coordinates of the tile don't exceed the boundaries of a matrix so we don't start reading garbage.
+\notetodylan{make sure line numbers are correct} Lines 17 - 37 are where the actual calculation takes place. For each iteration of the loop, a different tile of \texttt{inputA} and \texttt{inputB} are fetched from the global memory and stored into the shared memory. The reason for using this tiling approach can be seen when we consider how the threads must read \texttt{inputB}. If we did not use shared memory, the loop would just be \texttt{total {\color{myyellow}{=}} total {\color{myyellow}{+}} inputA(x, i) {\color{myyellow}{*}} inputB(i, y)}. In this case, access to \texttt{inputA} is coalesced, but access to \texttt{inputB} is not. Therefore, the kernel will be stunted due this unoptimized memory usage. Instead, we load tiles in a coalesced manner into the shared memory, synchronize the threads, and then read through the shared memory in an uncoalesced fashion which carries no penalty. At the end of each loop, the tiles are moved in the \texttt{y} direction for \texttt{inputA} and in the \texttt{x} direction for \texttt{inputB}, and the process repeats. Notice how it is possible that a tile might fall on the boundary of an \texttt{input} matrix. This is why there are checks to make sure the coordinates of the tile don't exceed the boundaries of a matrix so we don't start reading garbage.
 }
 
 \newaddition{
@@ -1215,7 +1218,7 @@ The first problem arises due to warp divergence. Because the maximum values of $
 \label{fig:naivelayout}
 \end{figure}
 
-The second problem can be solved by opting \newaddition{restricting the dimensionally of the solution instead of the using the three dimensional one of Algorithm \ref{easycode}. We might consider using a two dimensional solution, but then we still will have blocks with idle threads which can be seen in Figure \ref{fig:genmatblock} By restricting ourselves to only using $threadIdx.x$, we ensure that only the last block to run will have the possibility of having threads remaining idle throughout the block's runtime as shown in Figure \ref{fig:genvecblock}}. The third problem can be solved by having each thread calculate one and only one set of J and K integrals. If we start with a valid combination of $L$, $M$, $P$, $Q$, $R$, and $S$ values, we can very easily figure out which thread will calculate that set of integrals by using the following equations:
+The second problem can be solved by \newaddition{restricting the dimensionality of the solution instead of the using the three dimensional one of Algorithm \ref{easycode}. We might consider using a two dimensional solution, but then we still will have blocks with idle threads which can be seen in Figure \ref{fig:genmatblock}. By restricting ourselves to only using $threadIdx.x$, we ensure that only the last block to run will have the possibility of having threads remaining idle throughout the block's runtime as shown in Figure \ref{fig:genvecblock}}. The third problem can be solved by having each thread calculate one and only one set of J and K integrals. If we start with a valid combination of $L$, $M$, $P$, $Q$, $R$, and $S$ values, we can very easily figure out which thread will calculate that set of integrals by using the following equations:
 
 \begin{figure}[h!]
 \includegraphics[width=1\textwidth]{Figures/gen_mat_block_layout.png}
@@ -1443,7 +1446,7 @@ where $J(pqrs)$ is an integer function that selects specific definitions of the 
 The form of the \textbf{Q} super matrix is almost the same a \textbf{P}, but there will be and additional multiplication of the vector coupling coefficient between the open shells for each summation.
 
 \subsubsection{FORMPQ Algorithm}
-Forming the P and Q matrices proved to be the most difficult part of this program to parallelize. Its difficultly was due to the second term in the summations where each \textbf{X} matrix used depends on how far the summation has progressed. Further, each element of \textbf{P} will have the \textbf{X} matrix change at different times. These two factors result in many \textbf{if} statements which GPUs have difficulty handling in parallel. There is also the issue where each element in the $LL$ and $SS$ sections need to loop over every element of the same sections of the density matrix, as do the $LS$ and $SL$ sections. This means that there will be lots of global memory reads unless handled properly. All together, this makes for a very ugly algorithm to try and parallelize.
+Forming the P and Q matrices proved to be the most difficult part of this program to parallelize. Its difficulty was due to the second term in the summations where each \textbf{X} matrix used depends on how far the summation has progressed. Further, each element of \textbf{P} will have the \textbf{X} matrix change at different times. These two factors result in many \textbf{if} statements which GPUs have difficulty handling in parallel. There is also the issue where each element in the $LL$ and $SS$ sections need to loop over every element of the same sections of the density matrix, as do the $LS$ and $SL$ sections. This means that there will be lots of global memory reads unless handled properly. All together, this makes for a very ugly algorithm to try and parallelize.
 
 Two different attempts were made to try and accelerate this algorithm. Each tried to exploit a different property of GPUs. One attempted to combat the amount of floating point operations to perform by distributing the amount of work to as many threads as possible. This will be referred to as the Multiple Threads Single Element (MTSE) algorithm. The second one tried to deal with the amount of global memory reads by making the most of each read. This will be referred to as Single Thread Single Element (STSE) algorithm. Each will be described in the sections below.
 
@@ -1546,7 +1549,7 @@ As previously stated, the purpose of the MTSE algorithm is to distribute the amo
 
 $inttype$ refers to one or more if the \textbf{P} or \textbf{Q} matrices. In Algorithm \ref{MTSE_K1}, $inttype$ can have a value of 0 or 1, where 0 refers to the $LL$ and $SS$ \textbf{P} or \textbf{Q} matrices, and 1 is the $SL$ and $LS$ matrices.  In Algorithm \ref{MTSE_K2}, $inttype$ can have a values ranging from 0 to 7 where 0 to 3 are the \textbf{P} $LL$, $SS$, $SL$, $LS$ matrices, and the rest are the \textbf{Q} matrices in the same order. $d$ is \textbf{D} in its vector representation and $pos$ are the locations of the $p$ and $q$ elements within it. $locmx$ is an array with 7 elements, and each element is equal to the number of unique $LL$, $SS$, $SL$, $LS$ elements of symmetry $l-1$. $fctr$ accounts for when an element is single or double counted in the summation. $x(\chi, :)$ is the vector representation of \textbf{X$^{\chi}$}, $loc$ is the location of needed $pqrs$ element in the vector, $total$ is the length of one of the dimensions of \textbf{X$^{\chi}$}, and $k1$ and $k2$ are the outputs of the $J$ function from Equation \ref{PSMTX}. Finally, $pXY$ variables are matrices dimension $total \times total$ and store the sum of the two multiplications of the $d$ and $x$ vectors, $pmx$ if the vector representation of the \textbf{P} matrices, and $s\_tile$ is a vector in the shared memory for summing up the elements of each row of the $pXY$ matrices. 
 
-The grid will need to have $\frac{total - 1}{blockDim.x} \times \frac{total - 1}{blockDim.y} \times 2$ dimensions for Algorithm \ref{MTSE_K1} and $\frac{total - 1}{blockDim.x} \times \frac{total - 1}{blockDim.y} \times 8$ for Algorithm \ref{MTSE_K2}. Algorithm \ref{MTSE_K1} is fairly straight forward, but Algorithm \ref{MTSE_K2} could use a little more explanation. It is a ``parallel reduction" algorithm. At the start, each thread loads an element of the relevant $pXY$ array into the shared variable $s\_tile$ and also loads the element that is $blockDim.x$ elements ahead of the original element. Then, in a loop starting from $j= \textbf{log}_{2}(blockDim.x)$ and descending to $j = 0$ threads with a $threadIdx.x$ value of less then $2^{j}$ add the value of  $s\_tile(threadIdx.x + 2^{j})$ to $s\_tile(threadIdx.x)$. The key feature is that the amount of elements that need to be added up is reduced by half every loop. Because it is possible that the total number of elements of $pXY$ needed to sum up for the relevant $pmx$ element could be larger than one block can handle, atomic operations are used to force the final addition to occur serially.
+The grid will need to have $\frac{total - 1}{blockDim.x} \times \frac{total - 1}{blockDim.y} \times 2$ dimensions for Algorithm \ref{MTSE_K1} and $\frac{total - 1}{blockDim.x} \times \frac{total - 1}{blockDim.y} \times 8$ for Algorithm \ref{MTSE_K2}. Algorithm \ref{MTSE_K1} is fairly straightforward, but Algorithm \ref{MTSE_K2} could use a little more explanation. It is a ``parallel reduction" algorithm. At the start, each thread loads an element of the relevant $pXY$ array into the shared variable $s\_tile$ and also loads the element that is $blockDim.x$ elements ahead of the original element. Then, in a loop starting from $j= \textbf{log}_{2}(blockDim.x)$ and descending to $j = 0$ threads with a $threadIdx.x$ value of less then $2^{j}$ add the value of  $s\_tile(threadIdx.x + 2^{j})$ to $s\_tile(threadIdx.x)$. The key feature is that the amount of elements that need to be added up is reduced by half every loop. Because it is possible that the total number of elements of $pXY$ needed to sum up for the relevant $pmx$ element could be larger than one block can handle, atomic operations are used to force the final addition to occur serially.
 
 \subsubsection{STSE Algorithm}
 The STSE algorithm tries a different approach to this problem than the MTSE algorithm. Instead of trying to spread out the amount of work to do as much as possible, it tries to reduce the amount of global memory reads by making each thread do as much work as it can. This results in fewer blocks, but each block needs to run longer. Giving only the calculations for $pmx$ and when $inttype = 0$, Algorithm \ref{STSE_K} shows how this is done.
@@ -1603,7 +1606,7 @@ The STSE algorithm tries a different approach to this problem than the MTSE algo
 
 All variables are the same as in Algorithms \ref{MTSE_K1} and \ref{MTSE_K2}, but $inttype$ can only be 0 or 1 (the meanings are the same as in Algorithm \ref{MTSE_K1}). As for the new variables, $s\_d$ is a chunk of $d$ that has been loaded into the shared memory. $mink$ and $maxk$ are used to calculated the sections of $x$ that current chunk of $d$ in shared memory applies to and $loop$ is used to adjust the value of $loc$ if the needed two-electron integral is on the bottom triangle of a \textbf{X} matrix. $pm1$ and $pm2$ are accumulator variables that track the sum of an element of $pmx$ as $d$ is looped through.
 
-Algorithm \ref{STSE_K} has two nested loops. The outer one loops over elements of $d$, loading chunks of it into the shared memory as it goes. The inner one loops over elements of $x$ and preforms the multiplications of $d$ and $x$ elements, keeping a running tally of the sum of these multiplications. Something that is not shown in the pseudocode is checking if $l$ and $m$ have open shells. If both of them do, then $qm1$ and $qm2$ will be calculated as well. If only one or neither of them do, then this calculation is skipped. Because most of the shells will be closed, this allows for many calculations to be skipped. Once the inner loop has finished, the next section of $d$ is loaded into the shared memory and then the multiplication of $x$ and $s\_d$ continues. This process goes on until all elements of a row of \textbf{X} have been used.
+Algorithm \ref{STSE_K} has two nested loops. The outer one loops over elements of $d$, loading chunks of it into the shared memory as it goes. The inner one loops over elements of $x$ and performs the multiplications of $d$ and $x$ elements, keeping a running tally of the sum of these multiplications. Something that is not shown in the pseudocode is checking if $l$ and $m$ have open shells. If both of them do, then $qm1$ and $qm2$ will be calculated as well. If only one or neither of them do, then this calculation is skipped. Because most of the shells will be closed, this allows for many calculations to be skipped. Once the inner loop has finished, the next section of $d$ is loaded into the shared memory and then the multiplication of $x$ and $s\_d$ continues. This process goes on until all elements of a row of \textbf{X} have been used.
 
 \section{Discussion}
 In this section, the results of GPU resource usage and profiling the various algorithms discussed previously will be presented. For profiling, the radon atom was chosen. Radon was selected because it contains many spinor orbitals and should be a good test of the \kernel{formpq} and \kernel{eint2} kernels on large atomic systems. Here, we only care about how long a calculation will take, not how accurate it is. Therefore, basis sets use the arbitrarily chosen wtbs parameters of $\alpha = 6.87\times10^{-2}$, $\beta = 1.83$,  $\delta = 3.97$, and $\gamma = 0.78$. Additionally, due to the spherical symmetry of an atom exploited by CUDAProphet, the growth of a calculation differs depending on how the basis functions are distributed among the spinor symmetries. Therefore, results are reported in terms of the number of two-electron integrals instead of number of basis functions as is typically done.
@@ -1611,11 +1614,13 @@ In this section, the results of GPU resource usage and profiling the various alg
 In the case of the work in this Thesis, the resource bottleneck for my kernels was almost always the number of registers used per thread. 63 32-bit registers provide only 252 bytes to work with, which when using double precision 8-byte numbers is hardly anything at all. A summary of the block sizes and resource usage of all kernels is given in Table \ref{tab:resources}.
 
 \begin{table}[h]
+\centering
 \caption{Kernel Resource Usage}
 \label{tab:resources}
 \begin{tabular}{lrrr}
+\toprule
 	Kernel				&	Block Size		&	Registers	&	Shared Memory (bytes)	\\
-	\hline
+\midrule
 	\kernel{eint1}			&	(512, 1, 1)		&	63		&	45056				\\
 	\kernel{eint2}			&	(512, 1, 1)		&	63		&	45088				\\
 	\kernel{vec2matrix}		&	(512, 1, 1)		&	17		&	0					\\
@@ -1629,6 +1634,7 @@ In the case of the work in this Thesis, the resource bottleneck for my kernels w
 	\kernel{xtrpf}			&	(512, 1, 1)		&	12		&	0					\\
 	\kernel{formg}			&	(32, 16, 1)		&	55		&	12288				\\
 	\kernel{swapcol}		&	(32, 16, 1)		&	10		&	0					\\
+\bottomrule
 \end{tabular}\\
 \notetodylan{replace all instances of \kernel{formpq\_alg1} with whatever acronym you decide on.}
 \end{table}
@@ -1639,13 +1645,15 @@ Of these kernels, \kernel{eint2} and the \kernel{formpq\_alg} kernels take up th
 Table \ref{tab:2eintprof} and Figure \ref{fig:2eintprof} show the results of profiling the \kernel{eint2} kernel against its CPU counterpart.
 
 \begin{table}[h!]
+\begin{center}
 \caption[\kernel{eint2} Kernel Performance]{\kernel{eint2} Kernel Performance. Times are in ms.}
 \label{tab:2eintprof}
 \begin{tabular}{rrrrrrr}
+\toprule
 	\multirow{3}{2cm}{Two-Electron Integrals$^{\textrm{a}}$}	&	\multirow{3}{*}{CPU Time}		&	\multirow{3}{*}{\kernel{eint2}}	&	\multirow{3}{2.4cm}{\kernel{binary\_search}}		&	\multirow{3}{1cm}{Total GPU time}	&	\multirow{3}{*}{Speedup$^{\textrm{b}}$}	&	\multirow{3}{*}{Speedup$^{\textrm{c}}$}	\\
 	\\
 	\\
-	\hline
+\midrule
 	74305	&	59		&	4.68		&	0.18		&	4.86		&	12.81	&	12.32	\\
 	353220	&	320		&	18.05	&	0.71		&	18.77	&	17.72	&	17.04	\\
 	1081185	&	980		&	52.51	&	2.21		&	54.72	&	18.66	&	17.90	\\
@@ -1654,8 +1662,9 @@ Table \ref{tab:2eintprof} and Figure \ref{fig:2eintprof} show the results of pro
 	9726255	&	8880		&	437.88	&	20.81	&	458.69	&	20.27	&	19.35	\\
 	16476670	&	15140	&	730.24	&	35.96	&	766.20	&	20.73	&	19.75	\\
 	26248635	&	24180	&	1159.98	&	57.99	&	1217.97	&	20.84	&	19.85	\\
+\bottomrule
 \end{tabular}
-\\
+\end{center}
 $^{\textrm{a}}$ For only the upper triangle of one of the 8 \textbf{X} matrices. \\
 $^{\textrm{b}}$ Speedup comparing just the time of \kernel{eint2} to the CPU time. \\
 $^{\textrm{c}}$ Speedup comparing the time of \kernel{eint2} and \kernel{binary\_search} to the CPU time. \\
@@ -1675,11 +1684,13 @@ As can be seen, the GPU calculations outperform the CPU calculations with an ave
 As explained in section \ref{sec:PQmeth}, there were two different attempts to speedup the formation of \textbf{P} and \textbf{Q}. The results of these attempts are shown in Tables \ref{tab:PQprofalg1} and \ref{tab:PQprofalg2} and also in Figure \ref{fig:formpqprof}.
 
 \begin{table}[h!]
+\begin{center}
 \caption[\kernel{formpq\_alg1} Kernel Profiling Results.]{\kernel{formpq\_alg1} Kernel Profiling Results. Times are in ms.}
 \label{tab:PQprofalg1}
 \begin{tabular}{rrrr}
+\toprule
 	Two-Electron Integrals	&	Time per Iteration CPU	&	Time per Iteration GPU	&	Speedup	\\
-	\hline
+\midrule
 	74305	&	1.90		&	6.06		&	0.31		\\
 	353220	&	5.78		&	14.25	&	0.40		\\
 	1081185	&	18.42	&	27.81	&	0.66		\\
@@ -1688,18 +1699,20 @@ As explained in section \ref{sec:PQmeth}, there were two different attempts to s
 	9726255	&	152.50	&	173.64	&	0.87		\\
 	16476670	&	266.53	&	291.79	&	0.91		\\
 	26248635	&	426.25	&	459.38	&	0.92		\\
-\end{tabular}\\
+\bottomrule
+\end{tabular}
+\end{center}
 \notetodylan{include the hardware info}
 \end{table}
 
 \begin{table}[h!]
+\begin{center}
 \caption[\kernel{formpq\_alg2} Kernel Profiling Results.]{\kernel{formpq\_alg2} Kernel Profiling Results. Times are in ms.}
 \label{tab:PQprofalg2}
 \begin{tabular}{rrrr}
+\toprule
 	Two-Electron Integrals	&	Time per Iteration CPU		&	Time per Iteration GPU	&	Speedup	\\
-	\\
-	\\
-	\hline
+\midrule
 	74305	&	1.90		&	2.94		&	0.64	\\
 	353220	&	5.78		&	7.56		&	0.76	\\
 	1081185	&	18.42	&	15.34	&	1.20	\\
@@ -1708,7 +1721,9 @@ As explained in section \ref{sec:PQmeth}, there were two different attempts to s
 	9726255	&	152.50	&	88.78	&	1.71	\\
 	16476670	&	266.53	&	135.64	&	1.96	\\
 	26248635	&	426.25	&	193.99	&	2.19	\\
-\end{tabular}\\
+\bottomrule
+\end{tabular}
+\end{center}
 \notetodylan{include the hardware info}
 \end{table}
 
@@ -1744,12 +1759,14 @@ How long will this be true though? At the moment, the limitations of these algor
 There was some difficulty in determining the total speedup of a calculation. The reason why can be seen in Tables \ref{tab:totalprofalg1} and \ref{tab:totalprofalg2}.
 
 \begin{table}[h!]
+\begin{center}
 \caption[Total Speedup of Alg1]{Total Speedup of Alg1. The results for a total calculation are shown. All times are in s.}
 \label{tab:totalprofalg1}
 \begin{tabular}{rrrrrr}
+\toprule
 	\multirow{2}{3cm}{Two-Electron Integrals}	&	\multirow{2}{3cm}{SCF Iterations CPU}	&	\multirow{2}{2cm}{Total CPU Time}		&	\multirow{2}{3cm}{SCF Iteractions GPU}		&	\multirow{2}{2cm}{Total GPU Time}		&	\multirow{2}{*}{Speedup}	\\
 	\\
-	\hline
+\midrule
 	74305	&	21	&	0.12		&	21	&	0.84	&	0.14	\\
 	353220	&	19	&	0.49		&	19	&	1.19	&	0.41	\\
 	1081185	&	19	&	1.44		&	19	&	1.75	&	0.82	\\
@@ -1758,16 +1775,20 @@ There was some difficulty in determining the total speedup of a calculation. The
 	9726255	&	24	&	13.29	&	19	&	5.77	&	2.30	\\
 	16476670	&	26	&	23.23	&	19	&	8.60	&	2.69	\\
 	26248635	&	24	&	35.63	&	19	&	12.5	&	2.82	\\
+\bottomrule
 \end{tabular}
+\end{center}
 \end{table}
 
 \begin{table}[h!]
+\begin{center}
 \caption[Total Speedup of Alg2]{Total Speedup of Alg2. The results for a total calculation are shown. All times are in s.}
 \label{tab:totalprofalg2}
 \begin{tabular}{rrrrrr}
+\toprule
 	\multirow{2}{3cm}{Two-Electron Integrals}	&	\multirow{2}{3cm}{SCF Iterations CPU}	&	\multirow{2}{2cm}{Total CPU Time}		&	\multirow{2}{3cm}{SCF Iteractions GPU}		&	\multirow{2}{2cm}{Total GPU Time}		&	\multirow{2}{*}{Speedup}	\\
 	\\
-	\hline
+\midrule
 	74305	&	21	&	0.12		&	21	&	0.78	&	0.15	\\
 	353220	&	19	&	0.49		&	19	&	1.07	&	0.46	\\
 	1081185	&	19	&	1.44		&	19	&	1.51	&	0.95	\\
@@ -1776,7 +1797,9 @@ There was some difficulty in determining the total speedup of a calculation. The
 	9726255	&	24	&	13.29	&	19	&	4.14	&	3.20	\\
 	16476670	&	26	&	23.23	&	19	&	5.57	&	4.16	\\
 	26248635	&	24	&	35.63	&	19	&	7.47	&	4.76	\\
+\bottomrule
 \end{tabular}
+\end{center}
 \end{table}
 
 \begin{figure}[h!]

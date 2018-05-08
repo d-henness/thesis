@@ -909,7 +909,7 @@ Oh my, well it didn't take long for this to get ugly did it. Inspection of these
 \section{Hartree-Fock}
 While the wavefunction might appear complex, it is important to remember that it is still just a wave, and one of the fundamental properties of waves is that they can be added together to produce a separate, more complex wave. Likewise, any wave, no matter how complex, can be broken down as a summation of many simpler waves \notetodylan{cite fourier transform}. Thus, any linear combination of solutions to the wavefunction must therefore be a solution of a different (albeit perhaps non-physical) wavefunction. It is this property that will be exploited to solve our many electron problem. But first we must layout some ground rules.
 
-The first rule is that the overall wavefunction must satisfy the Pauli exclusion principle\citethis. There are two components to this, the first is that two electrons can not occupy the same orbital if they have the same \textit{spin}, and the second is that the wavefunction must be antisymmetric with respect to the exchanging of electronic coordinates. We can satisfy these requirements by using a Slater determinant\citethis, an example of which is shown below.
+The first rule is that the overall wavefunction must satisfy the Pauli exclusion principle\citethis. There are two components to this, the first is that two electrons can not occupy the same orbital if they have the same \textit{spin}, and the second is that the wavefunction must be antisymmetric with respect to the exchanging of electronic coordinates. Spin is actually a fourth quantum number, which I have neglected to talk about so far. Spin is a confusing property of some quantum particles have. No one really knows what is is, other than to say it has something to do with the angular momentum of the particle, and oddly enough that it in no way refers to the direction that the particle is spinning. It has been shown to have binary values, which I will refer to as up spin ($\uparrow$) and down spin ($\downarrow$). We can satisfy the requirements of the Pauli exclusion principal by using a Slater determinant\citethis, an example of which is shown in equation \ref{eq:slate_det}.
 
 \begin{equation}
 \label{eq:slate_det}
@@ -925,9 +925,19 @@ The first rule is that the overall wavefunction must satisfy the Pauli exclusion
 \end{vmatrix}
 \end{equation} 
 
-Here, $n$ refers to the number of electrons in the system, and the numbers in parentheses refer to specific electrons. $\chi_{i}$ refers to the $i^{th}$ \textit{spin} orbital which is equal to $\psi_{i}\alpha(\omega)$ if $i$ is odd, or $\psi_{i}\beta(\omega)$ if $i$ is even ($\psi$ is an orbital). $\alpha$ and $\beta$ are called spin functions. What they actually are doesn't matter, because they are defined to be orthonormal to each other. The consequence of this allows us to fulfill the requirements of the Pauli exclusion principle, . If we had a system where two electrons of the same spin where in the same orbital, than that would mean that two of the rows of our determinant would be the same. Such a determinant would be equal to zero which means the wavefunction for that system would not exist. The math showing that it satisfies the second requirement is shown below
+Here, $n$ refers to the number of electrons in the system, and the numbers in parentheses refer to specific electrons. $\chi_{i}$ refers to the $i^{th}$ \textit{spin} orbital which is equal to $\psi_{\frac{i+1}{2}}\alpha(\omega)$ if $i$ is odd, or $\psi_{\frac{i}{2}}\beta(\omega)$ if $i$ is even ($\psi$ is an orbital and $\omega$ is arbitrary). $\alpha$ and $\beta$ are called spin functions. What they actually are doesn't matter, because they are defined to be orthonormal to each other. 
 
-\begin{align}
+\begin{equation}
+\label{eq:a_b_def}
+\begin{split}
+\left<\alpha(\omega_{i})|\alpha(\omega_{i})\right> = \left<\beta(\omega_{i})|\beta(\omega_{i})\right> = 1	\\
+\left<\alpha(\omega_{i})|\beta(\omega_{i})\right> = \left<\beta(\omega_{i})|\alpha(\omega_{i})\right> = 0	\\
+\end{split}
+\end{equation}
+
+The consequence of this allows us to fulfill the requirements of the Pauli exclusion principle. If we had a system where two electrons of the same spin where in the same orbital, than that would mean that two of the rows of our determinant would be the same. Such a determinant would be equal to zero which means the wavefunction for that system would not exist. The math showing that it satisfies the second requirement is shown below
+
+\begin{equation}
 \label{eq:pauli_2t_1}
 \Psi(1,2) =
 \frac{1}{\sqrt{2}}
@@ -935,9 +945,9 @@ Here, $n$ refers to the number of electrons in the system, and the numbers in pa
 \psi_{1}(1)\alpha(\omega_{1})		&	\psi_{1}(1)\beta(\omega_{1})		\\
 \psi_{1}(2)\alpha(\omega_{2})		&	\psi_{1}(2)\beta(\omega_{2})		\\
 \end{vmatrix}
-\end{align}
+\end{equation}
 
-\begin{align}
+\begin{equation}
 \label{eq:pauli_2t_2}
 \Psi(1,2) =
 \frac{1}{\sqrt{2}}
@@ -945,9 +955,9 @@ Here, $n$ refers to the number of electrons in the system, and the numbers in pa
 \psi_{1}(1)\alpha(\omega_{1})\psi_{1}(2)\beta(\omega_{2}) -
 \psi_{1}(1)\beta(\omega_{1})\psi_{1}(2)\alpha(\omega_{2})
 \right]
-\end{align}
+\end{equation}
 
-\begin{align}
+\begin{equation}
 \label{eq:pauli_2t_3}
 -\Psi(1,2) =
 \frac{1}{\sqrt{2}}
@@ -955,10 +965,10 @@ Here, $n$ refers to the number of electrons in the system, and the numbers in pa
 \psi_{1}(1)\beta(\omega_{1})\psi_{1}(2)\alpha(\omega_{2}) -
 \psi_{1}(1)\alpha(\omega_{1})\psi_{1}(2)\beta(\omega_{2})
 \right]
-\end{align}
+\end{equation}
 
-\begin{align}
-\label{eq:pauli_2t_1}
+\begin{equation}
+\label{eq:pauli_2t_4}
 -\Psi(1,2) =
 \frac{1}{\sqrt{2}}
 \begin{vmatrix}
@@ -966,9 +976,62 @@ Here, $n$ refers to the number of electrons in the system, and the numbers in pa
 \psi_{1}(1)\alpha(\omega_{1})	&	\psi_{1}(1)\beta(\omega_{1})	\\
 \end{vmatrix}
 =\Psi(2,1)
-\end{align}
+\end{equation}
 
-As can be seen, changing the indexing of the electrons is equivalent to swapping the rows for those electrons, which changes the sign of the determinant. 
+As can be seen, changing the indexing of the electrons is equivalent to swapping the rows for those electrons, which changes the sign of the determinant. It is important to note that because observable quantities depend not the wavefunction, but the \textit{absolute square} of the wavefunction, altering the indexing of the electrons does not change the calculation of these observables. Consider the example of the electron density probability distribution shown below (note that $\psi$, $\alpha$, and $\beta$ are real in this example, but even if they weren't the results would not change).
+
+\begin{equation}
+\label{eq:el_prob_dist_1}
+|\Psi(1,2)|^{2} =
+\frac{1}{2}\left[
+\begin{vmatrix}
+\psi_{1}(1)\alpha(\omega_{1})		&	\psi_{1}(1)\beta(\omega_{1})		\\
+\psi_{1}(2)\alpha(\omega_{2})		&	\psi_{1}(2)\beta(\omega_{2})		\\
+\end{vmatrix}^2
+\right]
+\end{equation}
+
+\begin{equation}
+\label{eq:el_prob_dist_2}
+\begin{split}
+|\Psi(1,2)|^{2}	&	=
+\frac{1}{2}
+[
+\left(
+\psi_{1}(1)\alpha(\omega_{1})\psi_{1}(2)\beta(\omega_{2}) -
+\psi_{1}(1)\beta(\omega_{1})\psi_{1}(2)\alpha(\omega_{2})
+\right)	\\
+	&	\times\left(
+\psi_{1}(1)\alpha(\omega_{1})\psi_{1}(2)\beta(\omega_{2}) -
+\psi_{1}(1)\beta(\omega_{1})\psi_{1}(2)\alpha(\omega_{2})
+\right)
+]
+\end{split}
+\end{equation}
+
+\begin{equation}
+\label{eq:el_prob_dist_3}
+\begin{split}
+|\Psi(1,2)|^{2}	&	=
+\frac{1}{2}\int\int\int\int
+[
+\psi_{1}(1)^{2}\alpha(\omega_{1})^{2}\psi_{1}(2)^{2}\beta(\omega_{2})^{2} +
+\psi_{1}(1)^{2}\beta(\omega_{1})^{2}\psi_{1}(2)^{2}\alpha(\omega_{2})^{2}
+	\\
+	&	-2
+\psi_{1}(1)^{2}\alpha(\omega_{1})\beta(\omega_{1})\psi_{1}(2)^{2}\beta(\omega_{2})\alpha(\omega_{2})
+]d1d2d\omega_{1}d\omega_{2}
+\end{split}
+\end{equation}
+
+\begin{equation}
+\label{eq:el_prob_dist_4}
+|\Psi(1,2)|^{2} =
+\frac{1}{2}
+\left[
+|\psi_{1}(1)|^{2}|\psi_{1}(2)|^{2} + |\psi_{1}(1)|^{2}|\psi_{1}(2)|^{2}
+\right]
+\end{equation}
 
 \section{Hartree-Fock SCF}
 \notetodylan{rewrite this section so that it makes sense with what came before it.}

@@ -1,16 +1,16 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture of a GPU}}{14}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Two-Electron Integral Layout: Naive Implementation}}{24}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Two-Electron Integral Layout: 2D Blocks and Grid}}{25}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Two-Electron Integral Layout: 1D Blocks and Grid}}{26}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Two-electron Integral Matrix as a Matrix}}{28}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Two-electron Integral Matrix as a Vector}}{29}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Density Matrix as a Matrix}}{32}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Density Matrix as a Vector}}{33}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Profiling of Two-Electron Integral Calculations}}{42}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Profiling of the \textit {\textbf {formpq}} Kernels.}}{44}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Integrals Needed for the First Element of \textbf {P}: Matrix Representation}}{45}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Integrals Needed for the First Element of \textbf {P}: Vector Representation}}{46}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Total Time need to complete a calculation.}}{48}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture of a GPU}}{15}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Two-Electron Integral Layout: Naive Implementation}}{25}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Two-Electron Integral Layout: 2D Blocks and Grid}}{26}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Two-Electron Integral Layout: 1D Blocks and Grid}}{27}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Two-electron Integral Matrix as a Matrix}}{29}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Two-electron Integral Matrix as a Vector}}{30}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Density Matrix as a Matrix}}{33}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Density Matrix as a Vector}}{34}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Profiling of Two-Electron Integral Calculations}}{43}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Profiling of the \textit {\textbf {formpq}} Kernels.}}{45}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Integrals Needed for the First Element of \textbf {P}: Matrix Representation}}{46}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Integrals Needed for the First Element of \textbf {P}: Vector Representation}}{47}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Total Time need to complete a calculation.}}{49}

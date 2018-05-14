@@ -859,44 +859,51 @@ Much like a satellite in orbit around the Earth, the proton and neutron vastly o
 
 $\hat{H}$ can be assumed to be $\hat{H_{el}}$ for the remainder of this Thesis, and with the Hamiltonian out of the way, we can now turn our attention to the wavefunction. While we were able to get away with turning nuclei into classical particles, the electrons unfortunately remain fully quantum. Therefore, we need to deal with all the complicated mathematical baggage this comes with.
 
-Consider the hydrogen atom. By the grace of God, it (and all other one-electron atomic systems) is one of the few exactly solvable problems in quantum mechanics. The solution for its wavefunction in spherical coordinates is given in Equation \ref{eq:wavehydro} \notetodylan{solutions taken from Griffiths remember to correct equations}
+Consider the hydrogen atom. By the grace of God, it (and all other one-electron atomic systems) is one of the few exactly solvable problems in quantum mechanics. The solution for its wavefunction in spherical coordinates is given in Equation \ref{eq:wavehydro} \notetodylan{solutions taken from Griffiths}
 
 \begin{equation}
 \label{eq:wavehydro}
-\Psi_{nlm}(r, \theta, \phi) = N_{nl}R_{nl}(r)Y^{m}_{l}(\theta,\phi)
+\Psi_{nlm}(r, \theta, \phi) = R_{nl}(r)Y^{m}_{l}(\theta,\phi)
 \end{equation} 
 
-where $N_{nl}$ is a normalization constant, $R_{nl}$ is
+where $R_{nl}$ is called the radial equation and $Y^{m}_{l}(\theta,\phi)$ is called the angular equation. The radial equation has the form of
 
 \begin{equation}
 \label{eq:wavehydro_R}
-R_{nl}(r) = r^{l}L^{2l+1}_{n+l}\left(\frac{2Zr}{na_{0}}\right)e^{-\frac{Zr}{na_{0}}}
+R_{nl}(r) = \frac{1}{r}\left(\frac{r}{an}\right)^{l+1}e^{-\frac{r}{an}}L^{2l+1}_{n-l-1}\left(\frac{r}{an}\right)
 \end{equation} 
 
-where $a_{0}$ is the reduced Bohr radius
+where $a$ is the Bohr radius and $L^{2l+1}_{n-l-1}\left(\frac{r}{an}\right)$ is polynomial of $\left(\frac{r}{an}\right)$ and order $j_{\text{max}}=n-l-1$ of $\left(\frac{r}{an}\right)$. Its coefficients are given by
+
+\begin{equation}
+\label{eq:wavehydro_R_coef}
+c_{j+1} = \frac{2(j+l+1-n)}{(j+1)(j+2l+2)}c_{j}
+\end{equation} 
+
+And the polynomial itself given by
 
 \begin{equation}
 \label{eq:wavehydro_L1}
-L^{\beta}_{\alpha}(x) = \frac{d^\beta}{dx_{\beta}}L_{\alpha}(x)
+L^{p}_{q-p}(x) = (-1)^{p}\left(\frac{d}{dx}\right)^{q}L_{q}(x)
 \end{equation}
 
 \begin{equation}
 \label{eq:wavehydro_L2}
-L_{\alpha}(x) = e^{x}\frac{d^{\alpha}}{dx^{\alpha}}\left[x^{\alpha}e^{-x}\right]
+L_{q}(x) = e^{x}\left(\frac{d}{dx}\right)^{q}\left[x^{q}e^{-x}\right]
 \end{equation}
 
-and
+The angular equation has the form of 
 
 \begin{equation}
 \label{eq:wavehydro_Y1}
-Y^{m}_{l}(\theta,\phi) = \sqrt{\frac{(2l + 1)}{2}\frac{(l-|m|)!}{(l+|m|)!}}P^{|m|}_{l}(cos\theta)\frac{1}{2\pi}e^{im\phi}
+Y^{m}_{l}(\theta,\phi) = \epsilon\sqrt{\frac{(2l + 1)}{4\pi}\frac{(l-|m|)!}{(l+|m|)!}}P^{m}_{l}(cos\theta)e^{im\phi}
 \end{equation}
 
-where $i=\sqrt{-1}$ and 
+where $i=\sqrt{-1}$ and $\epsilon = (-1)^{m}$ for $m \geq 0$ or 1 if  $m < 0$. $P^{m}_{l}(cos\theta)$ is a polynomial of $cos\theta$ and has the form of
 
 \begin{equation}
 \label{eq:wavehydro_Y2}
-P^{|m|}_{l}(x) = (1 - x^{2})^{\frac{|m|}{2}}\frac{d^{|m|}}{dx^{|m|}}P_{l}(x)
+P^{m}_{l}(x) = (1 - x^{2})^{\frac{|m|}{2}}\frac{d^{|m|}}{dx^{|m|}}P_{l}(x)
 \end{equation}
 
 \begin{equation}
@@ -906,11 +913,31 @@ P_{l}(x) = \frac{1}{2^{l}l!}\frac{d^{j}}{dx^{j}}(x^{2}-1)^{l}
 
 Oh my, well it didn't take long for this to get ugly did it. Inspection of these equations reveals that $n$ must be a positive integer greater than 0, $l$ must be a positive integer between 0 and $n-1$, and $|m|$ can be no larger than $l$. These are called quantum numbers, specifically $n$ is the principal quantum number, $l$ is the azimuthal quantum number, and $m$ is the magnetic quantum number. Also notice that there is no limit to how large $n$ can get, which suggests that there is not just one solution to this equation, but an infinite number of them. The solutions to the hydrogen-like atom wavefunction are given the special name of orbitals. Table \ref{tab:hsol} shows the reduced form of $\Psi$ for a few different orbitals. So how about solutions for atoms with more than one electron? Well, if we make some further assumptions about the nature of reality, it has been shown that an atomic system with two electrons can also be solved \notetodylan{cite harmonic helium}, but we can go no further than this. At least, not exactly. In the next section we will see how solutions for atoms, and indeed molecules can begin to be approached.
 
+\begin{table}[h!]
+\caption{The first few exact solutions for the hydrogen atom wavefunction.}
+\label{tab:hsol}
+\centering
+\begin{tabular}{cccc}
+\toprule
+$n$	&	\multicolumn{3}{c}{$l$}	\\
+\cmidrule(lr){1-1} \cmidrule(lr){2-4}
+				&	0		&	\multicolumn{2}{c}{1}	\\ 
+					\cmidrule(lr){2-2} \cmidrule(lr){3-4}
+				&	$m=0$	&	$m=0$	&	$m=\pm1$	\\
+\midrule
+1	&	$\left(\frac{1}{\pi a^{3}}\right)^{\frac{1}{2}}e^{\left(-\frac{r}{a}\right)}$			&	$-$	&	$-$	\\
+\\
+2	&	$\frac{1}{\sqrt{8\pi a^{3}}}\left(1-\frac{r}{2a}\right)e^{\left(-\frac{r}{2a}\right)}$	&	$\frac{1}{\sqrt{32\pi a^{3}}}\frac{r}{a}e^{\left(-\frac{r}{2a}\right)}cos\theta $	&	
+$\mp\frac{1}{\sqrt{64\pi a^{3}}}\frac{r}{a}e^{\left(-\frac{r}{2a}\right)}sin\theta e^{\pm i \phi}$	\\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \section{Hartree-Fock}
 \label{sec:hartree_fock}
 While the wavefunction might appear complex, it is important to remember that it is still just a wave, and one of the fundamental properties of waves is that they can be added together to produce a separate, more complex wave. Likewise, any wave, no matter how complex, can be broken down as a summation of many simpler waves \notetodylan{cite fourier transform}. Thus, any linear combination of solutions to the wavefunction must therefore be a solution of a different (albeit perhaps non-physical) wavefunction. It is this property that will be exploited to solve our many electron problem. But first we must layout some ground rules.
 
-The first rule is that the overall wavefunction must satisfy the Pauli exclusion principle\citethis. This means that the wavefunction must be antisymmetric with respect to the exchanging of electronic coordinates, i.e. $\Psi(1, 2,\ldots, n,\ldots,m) = -\Psi(1, 2,\ldots, m,\ldots,n)$. The easiest way to meet this requirement is by using a Slater determinant\citethis, an example of which is shown below.
+The first rule is that the overall wavefunction must describe a system of fermions. This means that the wavefunction must be antisymmetric with respect to the exchanging of electronic coordinates, i.e. $\Psi(1, 2,\ldots, n,\ldots,m) = -\Psi(1, 2,\ldots, m,\ldots,n)$ \textit{and} the probability density of the wavefunction must be indistinguishable with respect to the exchanging of electronic coordinates, i.e. $|\Psi(1, 2,\ldots, n,\ldots,m)|^{2} = |\Psi(1, 2,\ldots, m,\ldots,n)|^{2}$. The easiest way to meet this requirement is by using a Slater determinant\citethis, and by introducing the concept of spin. Spin is actually a fourth quantum number, which I have neglected to talk about so far. Spin is a confusing property that some quantum particles have. No one really knows what is is, other than to say it has something to do with the angular momentum of the particle, and oddly enough that it in no way refers to the direction that the particle is spinning. It has been shown to have binary values\citethis, which I will refer to as up spin ($\uparrow$) and down spin ($\downarrow$). A Slater determinant that obeys antisymmetry is shown in Equation \ref{eq:slate_det}
 
 \begin{equation}
 \label{eq:slate_det}
@@ -926,9 +953,19 @@ The first rule is that the overall wavefunction must satisfy the Pauli exclusion
 \end{vmatrix}
 \end{equation} 
 
-Here, $n$ refers to the number of electrons in the system, and the numbers in parentheses refer to specific electrons. $\chi_{i}$ refers to the $i^{th}$ \textit{spin} orbital which is equal to $\psi_{i}\alpha(\omega)$ if $i$ is odd, or $\psi_{i}\beta(\omega)$ if $i$ is even ($\psi$ is an orbital). $\alpha$ and $\beta$ are called spin functions. What they actually are doesn't matter, because they are defined to be orthonormal to each other. The consequence of this allows us to fulfill the requirements of the Pauli exclusion principle, . If we had a system where two electrons of the same spin where in the same orbital, than that would mean that two of the rows of our determinant would be the same. Such a determinant would be equal to zero which means the wavefunction for that system would not exist. The math showing that it satisfies the second requirement is shown below
+Here, $n$ refers to the number of electrons in the system, and the numbers in parentheses refer to specific electrons. $\chi_{i}$ refers to the $i^{th}$ \textit{spin} orbital which is equal to $\psi_{\frac{i+1}{2}}\alpha(\omega)$ if $i$ is odd, or $\psi_{\frac{i}{2}}\beta(\omega)$ if $i$ is even ($\psi$ is an orbital and $\omega$ is arbitrary). $\alpha$ and $\beta$ are called spin functions. What they actually are doesn't matter, because they are defined to be orthonormal to each other. 
 
-\begin{align}
+\begin{equation}
+\label{eq:a_b_def}
+\begin{split}
+\left<\alpha(\omega_{i})|\alpha(\omega_{i})\right> = \left<\beta(\omega_{i})|\beta(\omega_{i})\right> = 1	\\
+\left<\alpha(\omega_{i})|\beta(\omega_{i})\right> = \left<\beta(\omega_{i})|\alpha(\omega_{i})\right> = 0	\\
+\end{split}
+\end{equation}
+
+Using orthonormal spin functions produces some interesting consequences. If we had a system where two electrons of the same spin were in the same spin orbital, that would mean that two of the columns would be equal to one another. Such a determinant would be equal to zero, which means that the wavefunction for such a system would not exist. This is the famous Pauli exclusion principle\citethis. The math showing that is satisfies antisymmetry is shown below.
+
+\begin{equation}
 \label{eq:pauli_2t_1}
 \Psi(1,2) =
 \frac{1}{\sqrt{2}}
@@ -936,9 +973,9 @@ Here, $n$ refers to the number of electrons in the system, and the numbers in pa
 \psi_{1}(1)\alpha(\omega_{1})		&	\psi_{1}(1)\beta(\omega_{1})		\\
 \psi_{1}(2)\alpha(\omega_{2})		&	\psi_{1}(2)\beta(\omega_{2})		\\
 \end{vmatrix}
-\end{align}
+\end{equation}
 
-\begin{align}
+\begin{equation}
 \label{eq:pauli_2t_2}
 \Psi(1,2) =
 \frac{1}{\sqrt{2}}
@@ -946,9 +983,9 @@ Here, $n$ refers to the number of electrons in the system, and the numbers in pa
 \psi_{1}(1)\alpha(\omega_{1})\psi_{1}(2)\beta(\omega_{2}) -
 \psi_{1}(1)\beta(\omega_{1})\psi_{1}(2)\alpha(\omega_{2})
 \right]
-\end{align}
+\end{equation}
 
-\begin{align}
+\begin{equation}
 \label{eq:pauli_2t_3}
 -\Psi(1,2) =
 \frac{1}{\sqrt{2}}
@@ -956,10 +993,10 @@ Here, $n$ refers to the number of electrons in the system, and the numbers in pa
 \psi_{1}(1)\beta(\omega_{1})\psi_{1}(2)\alpha(\omega_{2}) -
 \psi_{1}(1)\alpha(\omega_{1})\psi_{1}(2)\beta(\omega_{2})
 \right]
-\end{align}
+\end{equation}
 
-\begin{align}
-\label{eq:pauli_2t_1}
+\begin{equation}
+\label{eq:pauli_2t_4}
 -\Psi(1,2) =
 \frac{1}{\sqrt{2}}
 \begin{vmatrix}
@@ -967,9 +1004,62 @@ Here, $n$ refers to the number of electrons in the system, and the numbers in pa
 \psi_{1}(1)\alpha(\omega_{1})	&	\psi_{1}(1)\beta(\omega_{1})	\\
 \end{vmatrix}
 =\Psi(2,1)
-\end{align}
+\end{equation}
 
-As can be seen, changing the indexing of the electrons is equivalent to swapping the rows for those electrons, which changes the sign of the determinant.
+As can be seen, changing the indexing of the electrons is equivalent to swapping the rows for those electrons, which changes the sign of the determinant. It is important to note that because observable quantities depend not the wavefunction, but the \textit{absolute square} of the wavefunction, altering the indexing of the electrons does not change the calculation of these observables. Consider the example of the electron density probability distribution shown below (note that $\psi$, $\alpha$, and $\beta$ are real in this example, but even if they weren't the results would not change).
+
+\begin{equation}
+\label{eq:el_prob_dist_1}
+|\Psi(1,2)|^{2} =
+\frac{1}{2}\left[
+\begin{vmatrix}
+\psi_{1}(1)\alpha(\omega_{1})		&	\psi_{1}(1)\beta(\omega_{1})		\\
+\psi_{1}(2)\alpha(\omega_{2})		&	\psi_{1}(2)\beta(\omega_{2})		\\
+\end{vmatrix}^2
+\right]
+\end{equation}
+
+\begin{equation}
+\label{eq:el_prob_dist_2}
+\begin{split}
+|\Psi(1,2)|^{2}	&	=
+\frac{1}{2}
+[
+\left(
+\psi_{1}(1)\alpha(\omega_{1})\psi_{1}(2)\beta(\omega_{2}) -
+\psi_{1}(1)\beta(\omega_{1})\psi_{1}(2)\alpha(\omega_{2})
+\right)	\\
+	&	\times\left(
+\psi_{1}(1)\alpha(\omega_{1})\psi_{1}(2)\beta(\omega_{2}) -
+\psi_{1}(1)\beta(\omega_{1})\psi_{1}(2)\alpha(\omega_{2})
+\right)
+]
+\end{split}
+\end{equation}
+
+\begin{equation}
+\label{eq:el_prob_dist_3}
+\begin{split}
+|\Psi(1,2)|^{2}	&	=
+\frac{1}{2}\int\int\int\int
+[
+\psi_{1}(1)^{2}\alpha(\omega_{1})^{2}\psi_{1}(2)^{2}\beta(\omega_{2})^{2} +
+\psi_{1}(1)^{2}\beta(\omega_{1})^{2}\psi_{1}(2)^{2}\alpha(\omega_{2})^{2}
+	\\
+	&	-2
+\psi_{1}(1)^{2}\alpha(\omega_{1})\beta(\omega_{1})\psi_{1}(2)^{2}\beta(\omega_{2})\alpha(\omega_{2})
+]d1d2d\omega_{1}d\omega_{2}
+\end{split}
+\end{equation}
+
+\begin{equation}
+\label{eq:el_prob_dist_4}
+|\Psi(1,2)|^{2} =
+\frac{1}{2}
+\left[
+|\psi_{1}(1)|^{2}|\psi_{1}(2)|^{2} + |\psi_{1}(1)|^{2}|\psi_{1}(2)|^{2}
+\right]
+\end{equation}
 
 \subsection{Two-Electron Integrals}
 As stated before, the main difficulty of performing calculations on many electron systems is figuring out how to deal with the interactions between the electrons. We can get around this by making the assumption that these interactions can be approximated by figuring out how a single electron interacts with the \textit{average} field generated by all the other electrons. This is called the self-consistent-field (SCF) method. With this, we can replace the Hamilton operator with the one-electron Fock operator which is given below
@@ -979,7 +1069,7 @@ As stated before, the main difficulty of performing calculations on many electro
 f(i) = -\frac{1}{2}\nabla^{2}_{i}  - \sum_{A}\frac{Z_{A}}{r_{iA}} + v^{HF}(i)
 \end{equation} 
 
-I will combine the first two terms into an operator I will call the $H^{\text{core}}$ operator ($h(i)$) and $v^{HF}(i)$ is the potential generated by all the electrons except the $i$ one. $v^{HF}(i)$ is composed of two different operators: the coulomb operator and the exchange operator. The coulomb operator is intuitive, it is simply the interaction electron 1 experiences when in a coulomb potential generated by electron 2
+I will combine the first two terms into an operator I will call the $H^{\text{core}}$ operator ($h(i)$) and $v^{HF}(i)$ is the potential generated by all the electrons except the $i^{th}$ one. $v^{HF}(i)$ is composed of two different operators: the coulomb operator and the exchange operator. The coulomb operator is intuitive, it is simply the interaction electron 1 experiences when in a coulomb potential generated by electron 2
 
 \begin{equation}
 \label{eq:coulomb_op}
@@ -1033,23 +1123,23 @@ where the factor of one half is multiplied to the two electron terms as a result
 \subsection{Basis Sets}
 Back in section \ref{sec:hartree_fock}, I said that there were some ground rules for our wavefunction. The second of these ground rules is that our trial wavefunction ($\Phi$) must meet the boundary conditions for the original problem. Up until now, I have used only spin orbitals ($\chi$) to describe the wavefunction, which as you'll recall is composed of a spin function, which I have already talk about at length, and a spacial orbital ($\psi$) which I have almost completely ignored. Let's fix that now. 
 
-As I mentioned, the overall wavefunction of a system ($\Psi$) cannot be known exactly unless we are looking only at hydrogen-like atoms. So instead we write the wavefunction as a Slater determinant composed of spin orbitals. Okay, so what exactly is the mathematical form of these spin orbitals? Well, as it turns out, unless we are talking only about atoms, we have no idea what these are either, even from a numerical stand point. We can make a fairly educated guess about what they \textit{should} resemble though. The general idea is this: by pre-calculating a set of functions ($\zeta$), we can produce a $\Phi$ that adequately reproduces results of numerical calculations of $\psi$. Mathematically, this is expressed as
+As I mentioned, the overall wavefunction of a system ($\Psi$) cannot be known exactly unless we are looking only at hydrogen-like atoms. So instead we write the wavefunction as a Slater determinant composed of spin orbitals. Okay, so what exactly is the mathematical form of these spin orbitals? Well, as it turns out, unless we are talking only about atoms, we have no idea what these are either, even from a numerical stand point. We can make a fairly educated guess about what they \textit{should} resemble though. The general idea is this: by pre-calculating a set of functions with adjustable parameters ($\zeta$), we can produce a wavefunction with a linear combination of $\Phi(\zeta)$ that adequately reproduces results of numerical calculations of $\psi$. Mathematically, this is expressed as
 
 \begin{equation}
 \label{eq:linear_comb_bs}
-\psi_{u} \approx \Phi_{u} = \sum^{K}_{i=1}C_{u,i}\zeta_{u,i}
+\psi_{u} \approx \sum^{K}_{i=1}C_{u,i}\Phi(\zeta_{u,i})
 \end{equation}
 
-where $\zeta_{u,i}$ is the $i^{th}$ basis function of the $u^{th}$ $\Phi$, $C_{u,i}$ is the $i^{th}$ coefficient of $i^{th}$ basis function of the $u^{th}$ $\Phi$, and $K$ is the total number of basis functions that make up the basis set. $C_{u,i}$ can intuitively be thought of as the ``percentage" of $\Phi$ that $\zeta_{u,i}$ makes up (this is not strictly speaking true, as $C_{u,i}$ can be greater than one or negative, but the general idea is there).
+where $\zeta_{u,i}$ is the $i^{th}$ adjustable parameters of the basis function $\Phi$ which is approximating the $u^{th}$ orbital, $C_{u,i}$ is the $i^{th}$ coefficient of $i^{th}$ basis function of the $u^{th}$ $\psi$, and $K$ is the total number of basis functions that make up the basis set. $C_{u,i}$ can intuitively be thought of as the ``percentage" of $\psi$ that $\Phi(\zeta_{u,i})$ makes up (this is not strictly speaking true, as $C_{u,i}$ can be greater than one or negative, but the general idea is there).
 
-So how do we chose our $\zeta$s? This is where our ground rule comes in to play. We must choose a function that meets the boundary conditions of the problem, which means that is must go to zero at infinity (this is also not exactly true, we can chose any function we want so this rule is really more of a guideline, but our basis sets will be much smaller the closer they are to the actual problem so it is good practice to follow it). It should also contain an adjustable parameter so that we can fine-tune the functions in-order to minimize the number we'll need. Because an atom (or molecule) consists of electrons in the potential generated by one (or many) nuclei, would it not be reasonable to conclude that the wavefunction would be similar to that of the hydrogen atom? The following people seem to think so \notetodylan{cite lots of basis set papers here}. We might initially think to use the exact hydrogen atom solution, but it quickly requires lots of floating point operations to compute which makes it impractical to use for large scale calculations. A more reasonable function is the Slater-type orbital (STO). The radial part of its 1s orbital centered at $R_{A}$ is shown below
+So how do we chose our $\Phi$s? This is where our ground rule comes in to play. We must choose a function that meets the boundary conditions of the problem, which means that is must go to zero at infinity (this is also not exactly true, we can chose any function we want so this rule is really more of a guideline, but our basis sets will be much smaller the closer they are to the actual problem so it is good practice to follow it). Because an atom (or molecule) consists of electrons in the potential generated by one (or many) nuclei, would it not be reasonable to conclude that the wavefunction would be similar to that of the hydrogen atom? The following people seem to think so \notetodylan{cite lots of basis set papers here}. We might initially think to use the exact hydrogen atom solution, but it quickly requires lots of floating point operations to compute which makes it impractical to use for large scale calculations. A more reasonable function is the Slater-type orbital (STO). The radial part of its 1s orbital centered at $R_{A}$ is shown below
 
 \begin{equation}
 \label{eq:sto_1s}
 \Phi^{STO}_{1s}(r - R_{A}) = \sqrt{\frac{\zeta^{3}}{\pi}}e^{-\zeta|r- R_{A}|}
 \end{equation}
 
-where $\zeta$ is the aforementioned adjustable parameter, or exponent (because a basis set will always be made up functions with the same general form with only the exponents differing between them, I will be using $\zeta$ to refer to exponents and functions interchangeably). This is more well behaved than the exact hydrogen atom solution, but problems arise when we try to use them in the two-electron integrals. Because we may be trying to do a double integral over function which could have up to four different centers, we end up with something that is very hard to compute. Therefore, Gaussian-type orbitals (GTOs) have become the de facto method of producing basis sets. The radial part of its 1s orbital centered at $R_{A}$ is shown below
+This is more well behaved than the exact hydrogen atom solution, but problems arise when we try to use them in the two-electron integrals. Because we may be trying to do a double integral over function which could have up to four different centers, we end up with something that is very hard to compute. Therefore, Gaussian-type orbitals (GTOs) have become the de facto method of producing basis sets. The radial part of its 1s orbital centered at $R_{A}$ is shown below
 
 \begin{equation}
 \label{eq:gto_1s}

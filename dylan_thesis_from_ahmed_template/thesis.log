@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.29)  14 MAY 2018 11:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.7.29)  14 MAY 2018 15:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -507,8 +507,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [17] [18 <./Figures/gpu_arc.png (PNG copy)>] [19
 
-] (./mat_mul.cuf [20] [21])
-[22]
+] (./code_snippets/mat_mul.cuf
+[20] [21]) [22]
 Overfull \hbox (19.58568pt too wide) in paragraph at lines 1372--1373
 []\OT1/cmr/m/it/12 Step 2\OT1/cmr/m/n/12 . The cal-cu-la-tion of small ar-rays 
 and other con-stants is per-formed by \OT1/cmr/bx/it/12 calc[]parameters
@@ -786,9 +786,9 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred when \ifx on line 678 was incomplete) 
 Here is how much of TeX's memory you used:
- 6833 strings out of 493013
- 96610 string characters out of 6133343
- 319723 words of memory out of 5000000
+ 6834 strings out of 493013
+ 96652 string characters out of 6133343
+ 319751 words of memory out of 5000000
  10216 multiletter control sequences out of 15000+600000
  14052 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191

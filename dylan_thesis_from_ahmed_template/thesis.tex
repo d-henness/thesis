@@ -909,11 +909,11 @@ Oh my, well it didn't take long for this to get ugly did it. Inspection of these
 \section{Hartree-Fock}
 While the wavefunction might appear complex, it is important to remember that it is still just a wave, and one of the fundamental properties of waves is that they can be added together to produce a separate, more complex wave. Likewise, any wave, no matter how complex, can be broken down as a summation of many simpler waves \notetodylan{cite fourier transform}. Thus, any linear combination of solutions to the wavefunction must therefore be a solution of a different (albeit perhaps non-physical) wavefunction. It is this property that will be exploited to solve our many electron problem. But first we must layout some ground rules.
 
-The first rule is that the overall wavefunction must satisfy the Pauli exclusion principle\citethis. There are two components to this, the first is that two electrons can not occupy the same orbital if they have the same \textit{spin}, and the second is that the wavefunction must be antisymmetric with respect to the exchanging of electronic coordinates. We can satisfy these requirements by using a Slater determinant\citethis, an example of which is shown below.
+The first rule is that the overall wavefunction must satisfy the Pauli exclusion principle\citethis. This means that the wavefunction must be antisymmetric with respect to the exchanging of electronic coordinates, i.e. $\Psi(1, 2,\ldots, n,\ldots,m) = -\Psi(1, 2,\ldots, m,\ldots,n)$. The easiest way to meet this requirement is by using a Slater determinant\citethis, an example of which is shown below.
 
 \begin{equation}
 \label{eq:slate_det}
-\Psi =
+\Psi(1, 2, 3, \ldots, n) =
 \frac{1}{\sqrt{n!}}
 \begin{vmatrix}
 \chi_{1}(1)		&	\chi_{2}(1)		&	\chi_{3}(1)		&	\ldots	&	\chi_{n}(1)		\\

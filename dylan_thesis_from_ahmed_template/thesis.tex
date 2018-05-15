@@ -863,10 +863,10 @@ Consider the hydrogen atom. By the grace of God, it (and all other one-electron 
 
 \begin{equation}
 \label{eq:wavehydro}
-\Psi_{nlm}(r, \theta, \phi) = R_{nl}(r)Y^{m}_{l}(\theta,\phi)
+\Psi_{nlm}(r, \theta, \varphi) = R_{nl}(r)Y^{m}_{l}(\theta,\varphi)
 \end{equation} 
 
-where $R_{nl}$ is called the radial equation and $Y^{m}_{l}(\theta,\phi)$ is called the angular equation. The radial equation has the form of
+where $R_{nl}$ is called the radial equation and $Y^{m}_{l}(\theta,\varphi)$ is called the angular equation. The radial equation has the form of
 
 \begin{equation}
 \label{eq:wavehydro_R}
@@ -896,7 +896,7 @@ The angular equation has the form of
 
 \begin{equation}
 \label{eq:wavehydro_Y1}
-Y^{m}_{l}(\theta,\phi) = \epsilon\sqrt{\frac{(2l + 1)}{4\pi}\frac{(l-|m|)!}{(l+|m|)!}}P^{m}_{l}(cos\theta)e^{im\phi}
+Y^{m}_{l}(\theta,\varphi) = \epsilon\sqrt{\frac{(2l + 1)}{4\pi}\frac{(l-|m|)!}{(l+|m|)!}}P^{m}_{l}(cos\theta)e^{im\varphi}
 \end{equation}
 
 where $i=\sqrt{-1}$ and $\epsilon = (-1)^{m}$ for $m \geq 0$ or 1 if  $m < 0$. $P^{m}_{l}(cos\theta)$ is a polynomial of $cos\theta$ and has the form of
@@ -925,10 +925,10 @@ $n$	&	\multicolumn{3}{c}{$l$}	\\
 					\cmidrule(lr){2-2} \cmidrule(lr){3-4}
 				&	$m=0$	&	$m=0$	&	$m=\pm1$	\\
 \midrule
-1	&	$\left(\frac{1}{\pi a^{3}}\right)^{\frac{1}{2}}e^{\left(-\frac{r}{a}\right)}$			&	$-$	&	$-$	\\
+1	&	$\displaystyle\left(\frac{1}{\pi a^{3}}\right)^{\frac{1}{2}}e^{\left(-\frac{r}{a}\right)}$			&	$-$	&	$-$	\\
 \\
-2	&	$\frac{1}{\sqrt{8\pi a^{3}}}\left(1-\frac{r}{2a}\right)e^{\left(-\frac{r}{2a}\right)}$	&	$\frac{1}{\sqrt{32\pi a^{3}}}\frac{r}{a}e^{\left(-\frac{r}{2a}\right)}cos\theta $	&	
-$\mp\frac{1}{\sqrt{64\pi a^{3}}}\frac{r}{a}e^{\left(-\frac{r}{2a}\right)}sin\theta e^{\pm i \phi}$	\\
+2	&	$\displaystyle\frac{1}{\sqrt{8\pi a^{3}}}\left(1-\frac{r}{2a}\right)e^{\left(-\frac{r}{2a}\right)}$	&	$\displaystyle\frac{1}{\sqrt{32\pi a^{3}}}\frac{r}{a}e^{\left(-\frac{r}{2a}\right)}cos\theta $	&	
+$\displaystyle\mp\frac{1}{\sqrt{64\pi a^{3}}}\frac{r}{a}e^{\left(-\frac{r}{2a}\right)}sin\theta e^{\pm i \varphi}$	\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -944,16 +944,16 @@ The first rule is that the overall wavefunction must describe a system of fermio
 \Psi(1, 2, 3, \ldots, n) =
 \frac{1}{\sqrt{n!}}
 \begin{vmatrix}
-\chi_{1}(1)		&	\chi_{2}(1)		&	\chi_{3}(1)		&	\ldots	&	\chi_{n}(1)		\\
-\chi_{1}(2)		&	\chi_{2}(2)		&	\chi_{3}(2)		&	\ldots	&	\chi_{n}(2)		\\
-\chi_{1}(3)		&	\chi_{2}(3)		&	\chi_{3}(3)		&	\ldots	&	\chi_{n}(3)		\\
+\psi_{1}(1)		&	\psi_{2}(1)		&	\psi_{3}(1)		&	\ldots	&	\psi_{n}(1)		\\
+\psi_{1}(2)		&	\psi_{2}(2)		&	\psi_{3}(2)		&	\ldots	&	\psi_{n}(2)		\\
+\psi_{1}(3)		&	\psi_{2}(3)		&	\psi_{3}(3)		&	\ldots	&	\psi_{n}(3)		\\
 \ldots		&	\ldots		&	\ldots		&	\ldots	&	\ldots		\\
-\chi_{1}(n)		&	\chi_{2}(n)		&	\chi_{3}(n)		&	\ldots	&	\chi_{n}(n)		\\
+\psi_{1}(n)		&	\psi_{2}(n)		&	\psi_{3}(n)		&	\ldots	&	\psi_{n}(n)		\\
 
 \end{vmatrix}
 \end{equation} 
 
-Here, $n$ refers to the number of electrons in the system, and the numbers in parentheses refer to specific electrons. $\chi_{i}$ refers to the $i^{th}$ \textit{spin} orbital which is equal to $\psi_{\frac{i+1}{2}}\alpha(\omega)$ if $i$ is odd, or $\psi_{\frac{i}{2}}\beta(\omega)$ if $i$ is even ($\psi$ is an orbital and $\omega$ is arbitrary). $\alpha$ and $\beta$ are called spin functions. What they actually are doesn't matter, because they are defined to be orthonormal to each other. 
+Here, $n$ refers to the number of electrons in the system, and the numbers in parentheses refer to specific electrons. $\psi_{i}$ refers to the $i^{th}$ \textit{spin} orbital which is equal to $\phi_{\frac{i+1}{2}}\alpha(\omega)$ if $i$ is odd, or $\phi_{\frac{i}{2}}\beta(\omega)$ if $i$ is even ($\phi$ is an orbital and $\omega$ is arbitrary). $\alpha$ and $\beta$ are called spin functions. What they actually are doesn't matter, because they are defined to be orthonormal to each other. 
 
 \begin{equation}
 \label{eq:a_b_def}
@@ -963,15 +963,15 @@ Here, $n$ refers to the number of electrons in the system, and the numbers in pa
 \end{split}
 \end{equation}
 
-Using orthonormal spin functions produces some interesting consequences. If we had a system where two electrons of the same spin were in the same spin orbital, that would mean that two of the columns would be equal to one another. Such a determinant would be equal to zero, which means that the wavefunction for such a system would not exist. This is the famous Pauli exclusion principle\citethis. The math showing that is satisfies antisymmetry is shown below.
+Using orthonormal spin functions produces some interesting consequences. If we had a system where two electrons of the same spin were in the same spin orbital, that would mean that two of the columns would be equal to one another. Such a determinant would be equal to zero, which means that the wavefunction for such a system would not exist. This is the famous Pauli antisymmetry principle\citethis. The math showing that is satisfies antisymmetry is shown below.
 
 \begin{equation}
 \label{eq:pauli_2t_1}
 \Psi(1,2) =
 \frac{1}{\sqrt{2}}
 \begin{vmatrix}
-\psi_{1}(1)\alpha(\omega_{1})		&	\psi_{1}(1)\beta(\omega_{1})		\\
-\psi_{1}(2)\alpha(\omega_{2})		&	\psi_{1}(2)\beta(\omega_{2})		\\
+\phi_{1}(1)\alpha(\omega_{1})		&	\phi_{1}(1)\beta(\omega_{1})		\\
+\phi_{1}(2)\alpha(\omega_{2})		&	\phi_{1}(2)\beta(\omega_{2})		\\
 \end{vmatrix}
 \end{equation}
 
@@ -980,8 +980,8 @@ Using orthonormal spin functions produces some interesting consequences. If we h
 \Psi(1,2) =
 \frac{1}{\sqrt{2}}
 \left[
-\psi_{1}(1)\alpha(\omega_{1})\psi_{1}(2)\beta(\omega_{2}) -
-\psi_{1}(1)\beta(\omega_{1})\psi_{1}(2)\alpha(\omega_{2})
+\phi_{1}(1)\alpha(\omega_{1})\phi_{1}(2)\beta(\omega_{2}) -
+\phi_{1}(1)\beta(\omega_{1})\phi_{1}(2)\alpha(\omega_{2})
 \right]
 \end{equation}
 
@@ -990,8 +990,8 @@ Using orthonormal spin functions produces some interesting consequences. If we h
 -\Psi(1,2) =
 \frac{1}{\sqrt{2}}
 \left[
-\psi_{1}(1)\beta(\omega_{1})\psi_{1}(2)\alpha(\omega_{2}) -
-\psi_{1}(1)\alpha(\omega_{1})\psi_{1}(2)\beta(\omega_{2})
+\phi_{1}(1)\beta(\omega_{1})\phi_{1}(2)\alpha(\omega_{2}) -
+\phi_{1}(1)\alpha(\omega_{1})\phi_{1}(2)\beta(\omega_{2})
 \right]
 \end{equation}
 
@@ -1000,21 +1000,21 @@ Using orthonormal spin functions produces some interesting consequences. If we h
 -\Psi(1,2) =
 \frac{1}{\sqrt{2}}
 \begin{vmatrix}
-\psi_{1}(2)\alpha(\omega_{2})	&	\psi_{1}(2)\beta(\omega_{2})	\\
-\psi_{1}(1)\alpha(\omega_{1})	&	\psi_{1}(1)\beta(\omega_{1})	\\
+\phi_{1}(2)\alpha(\omega_{2})	&	\phi_{1}(2)\beta(\omega_{2})	\\
+\phi_{1}(1)\alpha(\omega_{1})	&	\phi_{1}(1)\beta(\omega_{1})	\\
 \end{vmatrix}
 =\Psi(2,1)
 \end{equation}
 
-As can be seen, changing the indexing of the electrons is equivalent to swapping the rows for those electrons, which changes the sign of the determinant. It is important to note that because observable quantities depend not the wavefunction, but the \textit{absolute square} of the wavefunction, altering the indexing of the electrons does not change the calculation of these observables. Consider the example of the electron density probability distribution shown below (note that $\psi$, $\alpha$, and $\beta$ are real in this example, but even if they weren't the results would not change).
+As can be seen, changing the indexing of the electrons is equivalent to swapping the rows for those electrons, which changes the sign of the determinant. It is important to note that because observable quantities depend not the wavefunction, but the \textit{absolute square} of the wavefunction, altering the indexing of the electrons does not change the calculation of these observables. Consider the example of the electron density probability distribution shown below (note that $\phi$, $\alpha$, and $\beta$ are real in this example, but even if they weren't the results would not change).
 
 \begin{equation}
 \label{eq:el_prob_dist_1}
 |\Psi(1,2)|^{2} =
 \frac{1}{2}\left[
 \begin{vmatrix}
-\psi_{1}(1)\alpha(\omega_{1})		&	\psi_{1}(1)\beta(\omega_{1})		\\
-\psi_{1}(2)\alpha(\omega_{2})		&	\psi_{1}(2)\beta(\omega_{2})		\\
+\phi_{1}(1)\alpha(\omega_{1})		&	\phi_{1}(1)\beta(\omega_{1})		\\
+\phi_{1}(2)\alpha(\omega_{2})		&	\phi_{1}(2)\beta(\omega_{2})		\\
 \end{vmatrix}^2
 \right]
 \end{equation}
@@ -1026,12 +1026,12 @@ As can be seen, changing the indexing of the electrons is equivalent to swapping
 \frac{1}{2}
 [
 \left(
-\psi_{1}(1)\alpha(\omega_{1})\psi_{1}(2)\beta(\omega_{2}) -
-\psi_{1}(1)\beta(\omega_{1})\psi_{1}(2)\alpha(\omega_{2})
+\phi_{1}(1)\alpha(\omega_{1})\phi_{1}(2)\beta(\omega_{2}) -
+\phi_{1}(1)\beta(\omega_{1})\phi_{1}(2)\alpha(\omega_{2})
 \right)	\\
 	&	\times\left(
-\psi_{1}(1)\alpha(\omega_{1})\psi_{1}(2)\beta(\omega_{2}) -
-\psi_{1}(1)\beta(\omega_{1})\psi_{1}(2)\alpha(\omega_{2})
+\phi_{1}(1)\alpha(\omega_{1})\phi_{1}(2)\beta(\omega_{2}) -
+\phi_{1}(1)\beta(\omega_{1})\phi_{1}(2)\alpha(\omega_{2})
 \right)
 ]
 \end{split}
@@ -1043,11 +1043,11 @@ As can be seen, changing the indexing of the electrons is equivalent to swapping
 |\Psi(1,2)|^{2}	&	=
 \frac{1}{2}\int\int\int\int
 [
-\psi_{1}(1)^{2}\alpha(\omega_{1})^{2}\psi_{1}(2)^{2}\beta(\omega_{2})^{2} +
-\psi_{1}(1)^{2}\beta(\omega_{1})^{2}\psi_{1}(2)^{2}\alpha(\omega_{2})^{2}
+\phi_{1}(1)^{2}\alpha(\omega_{1})^{2}\phi_{1}(2)^{2}\beta(\omega_{2})^{2} +
+\phi_{1}(1)^{2}\beta(\omega_{1})^{2}\phi_{1}(2)^{2}\alpha(\omega_{2})^{2}
 	\\
 	&	-2
-\psi_{1}(1)^{2}\alpha(\omega_{1})\beta(\omega_{1})\psi_{1}(2)^{2}\beta(\omega_{2})\alpha(\omega_{2})
+\phi_{1}(1)^{2}\alpha(\omega_{1})\beta(\omega_{1})\phi_{1}(2)^{2}\beta(\omega_{2})\alpha(\omega_{2})
 ]d1d2d\omega_{1}d\omega_{2}
 \end{split}
 \end{equation}
@@ -1057,45 +1057,45 @@ As can be seen, changing the indexing of the electrons is equivalent to swapping
 |\Psi(1,2)|^{2} =
 \frac{1}{2}
 \left[
-|\psi_{1}(1)|^{2}|\psi_{1}(2)|^{2} + |\psi_{1}(1)|^{2}|\psi_{1}(2)|^{2}
+|\phi_{1}(1)|^{2}|\phi_{1}(2)|^{2} + |\phi_{1}(1)|^{2}|\phi_{1}(2)|^{2}
 \right]
 \end{equation}
 
 \subsection{Two-Electron Integrals}
-As stated before, the main difficulty of performing calculations on many electron systems is figuring out how to deal with the interactions between the electrons. We can get around this by making the assumption that these interactions can be approximated by figuring out how a single electron interacts with the \textit{average} field generated by all the other electrons. This is called the self-consistent-field (SCF) method. With this, we can replace the Hamilton operator with the one-electron Fock operator which is given below
+As stated before, the main difficulty of performing calculations on many electron systems is figuring out how to deal with the interactions between the electrons. We can get around this by making the assumption that these interactions can be approximated by figuring out how a single electron interacts with the \textit{average} field generated by all the other electrons. This is called the self-consistent-field (SCF) method. With this, we can replace the Hamiltonian operator with the one-electron Fock operator which is given below
 
 \begin{equation}
 \label{eq:fock_op}
-f(i) = -\frac{1}{2}\nabla^{2}_{i}  - \sum_{A}\frac{Z_{A}}{r_{iA}} + v^{HF}(i)
+\hat{f}(i) = -\frac{1}{2}\nabla^{2}_{i}  - \sum_{A}\frac{Z_{A}}{r_{iA}} + v^{HF}(i)
 \end{equation} 
 
-I will combine the first two terms into an operator I will call the $H^{\text{core}}$ operator ($h(i)$) and $v^{HF}(i)$ is the potential generated by all the electrons except the $i^{th}$ one. $v^{HF}(i)$ is composed of two different operators: the coulomb operator and the exchange operator. The coulomb operator is intuitive, it is simply the interaction electron 1 experiences when in a coulomb potential generated by electron 2
+I will combine the first two terms into an operator I will call the $H^{\text{core}}$ operator ($\hat{h}(i)$) and $v^{HF}(i)$ is the potential generated by all the electrons except the $i^{th}$ one. $v^{HF}(i)$ is composed of two different operators: the coulomb operator and the exchange operator. The coulomb operator is intuitive, it is simply the interaction electron 1 experiences when in a coulomb potential generated by electron 2
 
 \begin{equation}
 \label{eq:coulomb_op}
-J_{b}(1)\chi_{a}(1)=\left[\int\chi^{*}_{b}(2)\frac{1}{r_{12}}\chi_{b}(2)d\textbf{x}_{2}\right]\chi_{a}(1)
+\hat{J}_{b}(1)\psi_{a}(1)=\left[\int\psi^{*}_{b}(2)\frac{1}{r_{12}}\psi_{b}(2)d\textbf{x}_{2}\right]\psi_{a}(1)
 \end{equation} 
 
-where $J_{b}(1)$ is the coulomb operator for electron 1 when interacting with an electron in spin orbital $b$ and \textbf{x}$_{i}$ is the spacial coordinates of electron $i$. The exchange operator is slightly more complicated than the coulomb operator. While the coulomb operator can be defined without a function to operate on (simply remove $\chi_{a}(1)$ from both sides of Equation \ref{eq:coulomb_op} and it is still a valid operator), the exchange operator only is defined when operating on a function. Its form is given below.
+where $J_{b}(1)$ is the coulomb operator for electron 1 when interacting with an electron in spin orbital $b$ and \textbf{x}$_{i}$ is the spacial coordinates of electron $i$. The exchange operator is slightly more complicated than the coulomb operator. While the coulomb operator can be defined without a function to operate on (simply remove $\psi_{a}(1)$ from both sides of Equation \ref{eq:coulomb_op} and it is still a valid operator), the exchange operator only is defined when operating on a function. Its form is given below.
 
 \begin{equation}
 \label{eq:exchange_op}
-K_{b}(1)\chi_{a}(1)=\left[\int\chi^{*}_{b}(2)\frac{1}{r_{12}}\chi_{a}(2)d\textbf{x}_{2}\right]\chi_{b}(1)
+\hat{K}_{b}(1)\psi_{a}(1)=\left[\int\psi^{*}_{b}(2)\frac{1}{r_{12}}\psi_{a}(2)d\textbf{x}_{2}\right]\psi_{b}(1)
 \end{equation} 
 
-where $K_{b}(1)$ is the exchange operator for electron 1 operating on spin orbital $a$. At first glance, it might appear to be almost the same as Equation \ref{eq:coulomb_op}, but notice that $\chi_{a}$ has been swapped (or exchanged) with $\chi_{b}$ \textit{inside} the integral. The term itself does not really have a classical interpretation, but its need arises due to the use of an antisymmetric wavefunction.
+where $K_{b}(1)$ is the exchange operator for electron 1 operating on spin orbital $a$. At first glance, it might appear to be almost the same as Equation \ref{eq:coulomb_op}, but notice that $\psi_{a}$ has been swapped (or exchanged) with $\psi_{b}$ \textit{inside} the integral. The term itself does not really have a classical interpretation, but its need arises due to the use of an antisymmetric wavefunction.
 
 Now it would be helpful to introduce some new notation. I will write the expectation values for these operators as follows
 
 \begin{equation}
 \label{eq:coulomb_op_ex}
-\left<\chi_{a}(1)|J_{b}(1)|\chi_{a}(1)\right>=\int\int\chi^{*}_{a}(1)\chi_{a}(1)\frac{1}{r_{12}}\chi^{*}_{b}(2)\chi_{b}(2)d\textbf{x}_{1}d\textbf{x}_{2}
+\left<\psi_{a}(1)|\hat{J}_{b}(1)|\psi_{a}(1)\right>=\int\int\psi^{*}_{a}(1)\psi_{a}(1)\frac{1}{r_{12}}\psi^{*}_{b}(2)\psi_{b}(2)d\textbf{x}_{1}d\textbf{x}_{2}
 =\left(aa|bb\right)
 \end{equation} 
 
 \begin{equation}
 \label{eq:exchange_op_ex}
-\left<\chi_{a}(1)|K_{b}(1)|\chi_{a}(1)\right>=\int\int\chi^{*}_{a}(1)\chi_{b}(1)\frac{1}{r_{12}}\chi^{*}_{b}(2)\chi_{a}(2)d\textbf{x}_{1}d\textbf{x}_{2}
+\left<\psi_{a}(1)|\hat{K}_{b}(1)|\psi_{a}(1)\right>=\int\int\psi^{*}_{a}(1)\psi_{b}(1)\frac{1}{r_{12}}\psi^{*}_{b}(2)\psi_{a}(2)d\textbf{x}_{1}d\textbf{x}_{2}
 =\left(ab|ba\right)
 \end{equation}
 
@@ -1103,34 +1103,34 @@ These are called the two-electron integrals. The Hartree-Fock equation can be wr
 
  \begin{equation}
 \label{eq:hartree-fock_eq}
-\left[h(1) + \sum^{n}_{b\neq a}\left(J_{b}(1)- K_{b}(1)\right)\right]\chi_{a}(1) = E_{a}\chi_{a}(1)
+\left[\hat{h}(1) + \sum^{n}_{b\neq a}\left(J_{b}(1)- K_{b}(1)\right)\right]\psi_{a}(1) = \epsilon_{a}\psi_{a}(1)
 \end{equation}
 
  \begin{equation}
 \label{eq:hartree-fock_eq}
-\left<\chi_{a}(1)|h(1)|\chi_{a}(1)\right> + \sum^{n}_{b\neq a}\left[\left(aa|bb\right) - \left(ab|ba\right)\right] = \epsilon_{a}
+\left<\psi_{a}(1)|\hat{h}(1)|\psi_{a}(1)\right> + \sum^{n}_{b\neq a}\left[\left(aa|bb\right) - \left(ab|ba\right)\right] = \epsilon_{a}
 \end{equation}
 
 where $n$ is the number of spin orbitals in the system and $\epsilon_{a}$ is the energy of spin orbital $a$. If instead we are interested in the energy of an atom or molecule as a whole, the equation becomes
 
  \begin{equation}
 \label{eq:hartree-fock_eq}
-\sum_{a}^{n}\left<\chi_{a}(1)|h(1)|\chi_{a}(1)\right> + \frac{1}{2}\sum^{n}_{a}\sum^{n}_{b}\left[\left(aa|bb\right) - \left(ab|ba\right)\right] = \epsilon
+\sum_{a}^{n}\left<\psi_{a}(1)|\hat{h}(1)|\psi_{a}(1)\right> + \frac{1}{2}\sum^{n}_{a}\sum^{n}_{b}\left[\left(aa|bb\right) - \left(ab|ba\right)\right] = \epsilon
 \end{equation}
 
 where the factor of one half is multiplied to the two electron terms as a result of the interactions being double counted by the summations.
 
 \subsection{Basis Sets}
-Back in section \ref{sec:hartree_fock}, I said that there were some ground rules for our wavefunction. The second of these ground rules is that our trial wavefunction ($\Phi$) must meet the boundary conditions for the original problem. Up until now, I have used only spin orbitals ($\chi$) to describe the wavefunction, which as you'll recall is composed of a spin function, which I have already talk about at length, and a spacial orbital ($\psi$) which I have almost completely ignored. Let's fix that now. 
+Back in section \ref{sec:hartree_fock}, I said that there were some ground rules for our wavefunction. The second of these ground rules is that our trial wavefunction ($\Phi$) must meet the boundary conditions for the original problem. Up until now, I have used only spin orbitals ($\psi$) to describe the wavefunction, which as you'll recall is composed of a spin function, which I have already talk about at length, and a spacial orbital ($\phi$) which I have almost completely ignored. Let's fix that now. 
 
-As I mentioned, the overall wavefunction of a system ($\Psi$) cannot be known exactly unless we are looking only at hydrogen-like atoms. So instead we write the wavefunction as a Slater determinant composed of spin orbitals. Okay, so what exactly is the mathematical form of these spin orbitals? Well, as it turns out, unless we are talking only about atoms, we have no idea what these are either, even from a numerical stand point. We can make a fairly educated guess about what they \textit{should} resemble though. The general idea is this: by pre-calculating a set of functions with adjustable parameters ($\zeta$), we can produce a wavefunction with a linear combination of $\Phi(\zeta)$ that adequately reproduces results of numerical calculations of $\psi$. Mathematically, this is expressed as
+As I mentioned, the overall wavefunction of a system ($\Psi$) cannot be known exactly unless we are looking only at hydrogen-like atoms. So instead we write the wavefunction as a Slater determinant composed of spin orbitals. Okay, so what exactly is the mathematical form of these spin orbitals? Well, as it turns out, unless we are talking only about atoms, we have no idea what these are either, even from a numerical stand point. We can make a fairly educated guess about what they \textit{should} resemble though. The general idea is this: by pre-calculating a set of functions with adjustable parameters ($\zeta$), we can produce a wavefunction with a linear combination of $\Phi(\zeta)$ that adequately reproduces results of numerical calculations of $\phi$. Mathematically, this is expressed as
 
 \begin{equation}
 \label{eq:linear_comb_bs}
-\psi_{u} \approx \sum^{K}_{i=1}C_{u,i}\Phi(\zeta_{u,i})
+\phi_{u} \approx \sum^{K}_{i=1}C_{u,i}\Phi(\zeta_{u,i})
 \end{equation}
 
-where $\zeta_{u,i}$ is the $i^{th}$ adjustable parameters of the basis function $\Phi$ which is approximating the $u^{th}$ orbital, $C_{u,i}$ is the $i^{th}$ coefficient of $i^{th}$ basis function of the $u^{th}$ $\psi$, and $K$ is the total number of basis functions that make up the basis set. $C_{u,i}$ can intuitively be thought of as the ``percentage" of $\psi$ that $\Phi(\zeta_{u,i})$ makes up (this is not strictly speaking true, as $C_{u,i}$ can be greater than one or negative, but the general idea is there).
+where $\zeta_{u,i}$ is the $i^{th}$ adjustable parameters of the basis function $\Phi$ which is approximating the $u^{th}$ orbital, $C_{u,i}$ is the $i^{th}$ coefficient of $i^{th}$ basis function of the $u^{th}$ $\phi$, and $K$ is the total number of basis functions that make up the basis set. $C_{u,i}$ can intuitively be thought of as the ``percentage" of $\phi$ that $\Phi(\zeta_{u,i})$ makes up (this is not strictly speaking true, as $C_{u,i}$ can be greater than one or negative, but the general idea is there).
 
 So how do we chose our $\Phi$s? This is where our ground rule comes in to play. We must choose a function that meets the boundary conditions of the problem, which means that is must go to zero at infinity (this is also not exactly true, we can chose any function we want so this rule is really more of a guideline, but our basis sets will be much smaller the closer they are to the actual problem so it is good practice to follow it). Because an atom (or molecule) consists of electrons in the potential generated by one (or many) nuclei, would it not be reasonable to conclude that the wavefunction would be similar to that of the hydrogen atom? The following people seem to think so \notetodylan{cite lots of basis set papers here}. We might initially think to use the exact hydrogen atom solution, but it quickly requires lots of floating point operations to compute which makes it impractical to use for large scale calculations. A more reasonable function is the Slater-type orbital (STO). The radial part of its 1s orbital centered at $R_{A}$ is shown below
 
@@ -1139,7 +1139,7 @@ So how do we chose our $\Phi$s? This is where our ground rule comes in to play. 
 \Phi^{STO}_{1s}(r - R_{A}) = \sqrt{\frac{\zeta^{3}}{\pi}}e^{-\zeta|r- R_{A}|}
 \end{equation}
 
-This is more well behaved than the exact hydrogen atom solution, but problems arise when we try to use them in the two-electron integrals. Because we may be trying to do a double integral over function which could have up to four different centers, we end up with something that is very hard to compute. Therefore, Gaussian-type orbitals (GTOs) have become the de facto method of producing basis sets. The radial part of its 1s orbital centered at $R_{A}$ is shown below
+This is more well behaved than the exact hydrogen atom solution, but problems arise when we try to use them in the two-electron integrals. Because we may be trying to do a double integral over function which could have up to four different centers, we end up with something that is very hard to compute. Therefore, Gaussian-type orbitals (GTOs) have become the de facto method of producing basis sets. The radial part of its 1s orbital centered at $R_{A}$ is shown below \notetodylan{ref Boys paper here}
 
 \begin{equation}
 \label{eq:gto_1s}
@@ -1173,13 +1173,35 @@ and the non-relativistic \textbf{F} for closed shells of symmetry $\lambda$ is g
 
 \begin{equation}
 \label{FOCKM}
-\textbf{F}_{p_{\lambda},q_{\lambda}} = \langle p_{\lambda}|h(1)|q_{\lambda}\rangle + \sum^{nsym}_{\mu=1}\sum^{K}_{r=1}\sum^{K}_{s=1}\left( 2\sum^{occ}_{a=1}\textbf{C}_{r_{\mu},a}\textbf{C}^{*}_{s_{\mu}, a}\right)
+\textbf{F}_{p_{\lambda},q_{\lambda}} = \langle p_{\lambda}|\hat{h}(1)|q_{\lambda}\rangle + \sum^{nsym}_{\mu=1}\sum^{K}_{r=1}\sum^{K}_{s=1}\left( 2\sum^{occ}_{a=1}\textbf{C}_{r_{\mu},a}\textbf{C}^{*}_{s_{\mu}, a}\right)
 				\left[\left( p_{\lambda}q_{\lambda}|r_{\mu}s_{\mu}\right) - \frac{1}{2}\left( p_{\lambda}q_{\lambda}|s_{\lambda}r_{\lambda}\right)\right]
 \end{equation}
 
-where $p$, $q$, $r$, and $s$ are basis functions, $K$ is the total number of basis functions for symmetry $\mu$, and $occ$ is the number of occupied closed shells in symmetry $\mu$. Because $p$ and $q$ will always be of the same symmetry, and likewise with $r$ and $s$, the $\lambda$ and $\mu$ subscripts will be dropped from these indices and instead will be obtained from context. As we can see, \textbf{F} is itself a function of \textbf{C} and we left with a rather disappointing outcome. That is, in order for us to find \textbf{C}, we first must know what it is. And so it would seem that all is lost and all of this hard work was for nothing. And yet, there is a glimmer of hope. \textbf{F} is made up of two terms, and as luck would have it, only the term corresponding to contributions from the two-electron integrals depends on \textbf{C}, the term from one-electron integrals can be used independently of \textbf{C}. Thus, we begin by assuming that \textbf{F} depends solely on the one-electron term, effectively assuming that $\textbf{C}=\textbf{0}$. Solving Equation \ref{RHE} with the $H^{\text{core}}$ hamiltonian matrix only will give us the initial guess of \textbf{C}. With this, we can then resolve \textbf{F} with the guess of \textbf{C} and diagonalize the new \textbf{F} matrix to get another set of values for \textbf{C}. We can then repeat this process over and over until \textbf{C} is no longer changing outside an acceptable tolerance at which point we say the calculation has converged. We have now just completed a Hartree-Fock calculation.
+where $p$, $q$, $r$, and $s$ are basis functions, $K$ is the total number of basis functions for symmetry $\mu$, and $occ$ is the number of occupied closed shells in symmetry $\mu$ \notetodylan{should define symmetry somewhere}. Because $p$ and $q$ will always be of the same symmetry, and likewise with $r$ and $s$, the $\lambda$ and $\mu$ subscripts will be dropped from these indices and instead will be obtained from context. As we can see, \textbf{F} is itself a function of \textbf{C} and we left with a rather disappointing outcome. That is, in order for us to find \textbf{C}, we first must know what it is. And so it would seem that all is lost and all of this hard work was for nothing. And yet, there is a glimmer of hope. \textbf{F} is made up of two terms, and as luck would have it, only the term corresponding to contributions from the two-electron integrals depends on \textbf{C}, the term from one-electron integrals can be used independently of \textbf{C}. Thus, we begin by assuming that \textbf{F} depends solely on the one-electron term, effectively assuming that $\textbf{C}=\textbf{0}$. Solving Equation \ref{RHE} with the $H^{\text{core}}$ hamiltonian matrix only will give us the initial guess of \textbf{C}. With this, we can then resolve \textbf{F} with the guess of \textbf{C} and diagonalize the new \textbf{F} matrix to get another set of values for \textbf{C}. We can then repeat this process over and over until \textbf{C} is no longer changing outside an acceptable tolerance at which point we say the calculation has converged. We have now just completed a Hartree-Fock calculation.
 
+\section{Relativistic Quantum Mechanics}
+Another field of physics that was being developed at the same time as quantum mechanics was relativity. Relativity traces its roots to Michelson and Morley\citethis when they made the startling observation that all observers, no matter their frame of reference, will always agree on the speed of light. But it would not be until everyone's favorite Swiss patent cleric decided to examine this issue that the truly profound implications of this observation would be known. 
 
+This is perhaps a bit of an aside, but it is simply too interesting to pass up. Consider this thought experiment: you and I are in two different spaceships in space. We will define your frame of reference such that you are stationary at the origin, and that I am flying past you at a constant speed that is arbitrarily close to the speed of light, we will call this speed $v$. In my spaceship, there is a laser that I have pointed perfectly perpendicular to the direction I am traveling. From my frame of reference, where I am stationary, I turn the laser on and observe photons that move from the laser to the side of my spaceship, a distance equal to $d_{1}$, in time equal to $t$ at the speed of light $c$. Back in your frame of reference, you are also watching my experiment, but you make some different observations. In the time it take for the photons to move across my spaceship, I move a small distance $d_{2}$. So the total distance you see the photons move is not $d_{1}$, but $d_{3}$ which is the hypotenuse of the right angle triangle formed by $d_{1}$, $d_{2}$, and $d_{3}$. \textit{But}, we both agree that the photons were moving at speed $c$! So we can not agree on the time it took to do so because $d_{3} > d_{1}$. So you will observe the time it takes for the photons to move to be a time equal to $t'$. We can derive the relationship between $t$ and $t'$ in the following way.
+
+\begin{align}
+\label{eq:rel_proof}
+d_{1} &	= ct	&	d_{2} &	= vt'	&	d_{3} &	=ct'	\\
+&&	d_{3}^{2}	&	=d_{1}^{2}+d_{2}^{2}		\\
+&&	(ct')^{2}	&	=(vt')^{2} + (ct)^{2}	\\
+&&	(ct)^{2}	&	=(ct')^{2} - (vt')^{2}	\\
+&&	t	&	=t'\sqrt{1 - \frac{v^{2}}{c^{2}}}
+\label{eq:rel_proof_2}
+\end{align} 
+
+Not does this give the absolutely remarkable result that time is relative, Equation \ref{eq:rel_proof_2} also implies that an object can have a maximum speed. But how could this be possible, if I turned on the engine on my spaceship, what's to stop me from just getting faster and faster? The answer is that the mass of an object increases the closer to the speed of light it is. This can be described by
+ 
+\begin{equation}
+\label{eq:rel_mass}
+m(v) = \frac{m_{0}}{\sqrt{1 - \frac{v^{2}}{c^{2}}}}
+\end{equation}
+
+where $m(v)$ is the mass of an object moving at speed $v$ and $m_{0}$ is the rest mass of the object. With this we can see how it would be impossible for an object with mass to move at the speed of light. Its mass would go to infinity and would therefore need an infinite amount of energy to get there.
 
 \chapter{Basis Sets}
 \label{chap:basis_sets}
@@ -1187,11 +1209,11 @@ where $p$, $q$, $r$, and $s$ are basis functions, $K$ is the total number of bas
 \subsection{Basis set size optimization}
 In keeping with the theme of ``computers should work, people should think", we decided to use a somewhat novel method of generating our basis sets. We begin by choosing an arbitrarily large basis set size, such as s$(1:40)$p$(1:40)$d$(1:40)$f$(1:40)$ (here $i(\#:\#)$ refers to the starting and ending index of $\zeta$'s used for symmetry $i$). We then find the optimal $\alpha$, $\beta$, $\delta$, and $\gamma$ wtbs parameters for this basis set. We then use the following steps to find the optimal basis set size.
 
-\textit{Step 1.} Begin by finding the fewest number of f functions necessary. This can be done by generating .inps files that range in size from s$(1:40)$p$(1:40)$d$(1:40)$f$(1:1)$ to s$(1:40)$p$(1:40)$d$(1:40)$f$(1:40)$.
+\textit{Step 1.} Begin by finding the fewest number of f functions necessary. This can be done by generating input files that range in size from s$(1:40)$p$(1:40)$d$(1:40)$f$(1:1)$ to s$(1:40)$p$(1:40)$d$(1:40)$f$(1:40)$.
 
 \textit{Step 2.} Optimize the basis sets and select the smallest basis set that is still below some minimum accuracy threshold. We chose a relative error of no greater than $5.0\times10^{-9}$ to numerical calculations where relative error is defined as $\frac{|(\text{optimized energy}) - (\text{numerical energy})|}{\text{numerical energy}}$. The size of this basis set is s$(1:40)$p$(1:40)$d$(1:40)$f$(1:x_{f})$.
 
-\textit{Step 3.} Replace the wtbs parameters with those from the newly optimized set and generate a list of .inp files that range in size from s$(1:40)$p$(1:40)$d$(1:x_{f})$f$(1:x_{f})$ to s$(1:40)$p$(1:40)$d$(1:40)$f$(1:x_{f})$.
+\textit{Step 3.} Replace the wtbs parameters with those from the newly optimized set and generate a list of input files that range in size from s$(1:40)$p$(1:40)$d$(1:x_{f})$f$(1:x_{f})$ to s$(1:40)$p$(1:40)$d$(1:40)$f$(1:x_{f})$.
 
 \textit{Step 4.} Optimize these new sets and select the smallest one that brings about an error that is still below the accuracy threshold. The size of this basis set is s$(1:40)$p$(1:40)$d$(1:x_{d})$f$(1:x_{f})$.
 
@@ -1203,7 +1225,7 @@ In keeping with the theme of ``computers should work, people should think", we d
 
 \textit{Step 8.} Repeat steps 6 and 7 for the other symmetries except s. The final basis set will be of size s$(1:x_{s})$p$(y_{p}:x_{p})$d$(y_{d}:x_{d})$f$(y_{f}:x_{f})$.
 
-This process has a major drawback in that it requires a lot of computer power to run efficiently. But this is not really a problem if access to large computer clusters is available. Additionally, considering that calculations for the chain 1-8 can be run in parallel for different atoms, this optimization process is trivially parallel. The advantages of this are it finds a very small basis set that is still accurate, and it is also completely automatable. If there are no problems with individual calculations not converging, the output files never even need to be manually examined!
+\notetodylan{go through an example with Ne} This process has a major drawback in that it requires a lot of computer power to run efficiently. But this is not really a problem if access to large computer clusters is available. Additionally, considering that calculations for the chain 1-8 can be run in parallel for different atoms, this optimization process is trivially parallel. The advantages of this are it finds a very small basis set that is still accurate, and it is also completely automatable. If there are no problems with individual calculations not converging, the output files never even need to be manually examined!
 
 \section{Discussion}
 

@@ -1368,7 +1368,12 @@ where $V = q\hat{\varphi}$. Introducing $\alpha$ as a $4\times4$ matrix means th
 \end{pmatrix}
 \end{equation}
 
-where ${\bf{\psi}}$ and ${\bf{\phi}}$ are called spinors. ${\bf{\psi}}$ is called the large component and ${\bf{\phi}}$ is the small component. Using the spinors, we can write Equation \ref{eq:dirac_stat_state} as a matrix multiplication problem of the form
+where ${\bf{\psi}}$ and ${\bf{\phi}}$ are called spinors. ${\bf{\psi}}$ is called the large component and ${\bf{\phi}}$ is the small component. With this in hand, we are almost done, but there is one more trick we must use in-order for the Dirac equation to be usable. 
+
+\subsection{Kinetic Balancing}
+Recall that Equation \ref{eq:dirac_stat_state} is only half of the total equation. We still have all of the negative energy solutions to deal with. If we were to try an use Equation \ref{eq:dirac_stat_state} as is, the numerical methods we use of solving it would find these negative energies, and as there is no lower bound on the negative solutions, our solutions to the equation would all drop to negative infinity. We can solve this problem if we assume that all the infinite amount of negative energy states are filled with an infinite amount of positrons. This means that our electron can not drop into the negative energies due to the Pauli exclusion principal. Mathematically, we can reproduce this idea using a procedure called kinetic balancing, which is done in the following way.
+ 
+Using the spinors, we can write Equation \ref{eq:dirac_stat_state} as a matrix multiplication problem of the form
 
 \begin{equation}
 \label{eq:dirac_stat_state_matmul}
@@ -1412,6 +1417,32 @@ We can set where the energy is zero to anywhere we want, so lets make zero the e
 \label{eq:dirac_matmul_p4}
 (\epsilon - V + 2m_{0}c^{2}){\bf{\phi}} - c({\bf{\sigma\pi}}){\bf{\psi}} = 0
 \end{equation}
+
+We can rewrite Equation \ref{eq:dirac_matmul_p4} as
+
+\begin{equation}
+\label{eq:dirac_small_comp}
+{\bf{\phi}} = \left(1 + \frac{(\epsilon - V)}{2m_{0}c^{2}}\right)^{-1}\frac{1}{2m_{0}c^{2}}{\bf{\sigma\pi}}{\bf{\psi}}
+\end{equation}
+
+To a good approximation, $\epsilon - V$ will be much smaller than $2m_{0}c^{2}$, so we can assume the term in parentheses is equal to 1. Therefore, the small component can be written in terms of just ${\bf{\psi}}$ and be comes
+
+\begin{equation}
+\label{eq:dirac_small_comp_simp}
+{\bf{\phi}} = \frac{{\bf{\sigma\pi}}}{2m_{0}c^{2}}{\bf{\psi}}
+\end{equation}
+
+Not only does this make solving the Dirac equation much simpler (we only need to solve for ${\bf{\psi}}$ instead of ${\bf{\psi}}$ \textit{and} ${\bf{\phi}}$) it also ``hides" the negative energies from numerical methods. Note, though, that it relies on the assumption that $\epsilon - V$ is much smaller than $2m_{0}c^{2}$. If this is not the case, such as in the electrons in the heaviest of known elements, then this procedure will fail and we will get energies that are lower than they should be. When this occurs, we say that there is variational prolapse of the wavefunction.
+
+\subsection{The Dirac Hydrogen-Like Atom}
+Up until now, we have only looked at what Dirac's theory says about a free electron (well, a ``free" electron in the presence of an infinite amount of positrons, but I digress). So what happens to the hydrogen-like atom solutions?. The quantum numbers we get here are similar to the non-relativistic theory. They are: the principal quantum number ($n=1,2,3,\ldots$), the azimuthal quantum number ($l = 0, 1, 2, \ldots, n-1$), the angular momentum quantum number ($j = | l \pm \frac{1}{2}|$), and the magnetic quantum number ($m = -j,-j+1, \ldots, j-1, j$). The energy in terms of the quantum numbers is given by
+
+\begin{equation}
+\label{eq:dirac_energy}
+E_{n, j} = -\frac{1}{2n^{2}}\left[1+\frac{1}{nc^{2}}\left(\frac{1}{j+\frac{1}{2}}-\frac{3}{4n}\right)\right]
+\end{equation}
+
+It can be seen that there is a splitting in the energy levels of spinors with the same azimuthal number, whereas in the non-relativistic theory, orbitals with the same azimuthal number would all be perfectly degenerate.
 
 \chapter{Basis Sets}
 \label{chap:basis_sets}

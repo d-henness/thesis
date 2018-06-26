@@ -833,7 +833,7 @@ Canada}%
 
 \chapter{Introduction}
 \section{Solving the Schr\"{o}dinger Equation}
-The Schr\"{o}dinger equation\citethis in its time-independent, non-relativistic form is given in Equation \ref{eq:schro} 
+The Schr\"{o}dinger equation\cite{1926PhRv...28.1049S} in its time-independent, non-relativistic form is given in Equation \ref{eq:schro} 
 
 \begin{equation}
 \label{eq:schro}
@@ -848,7 +848,7 @@ where $\hat{H}$ is the Hamiltonian operator, $\Psi$ is referred to as the wavefu
 + \sum^{n}_{i}\sum^{N}_{j>i}\frac{1}{r_{ij}} + \sum^{N}_{A}\sum^{N}_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}
 \end{equation} 
 
-where $i$ and $j$ refer to electrons, $A$ and $B$ refer to nuclei, and $n$ and $N$ refer to the maximum number of electrons and nuclei respectively. $M_{A}$ and $Z_{A}$ are the mass and charge of nucleus $A$. $r_{xy}$ is the distance between particles $x$ and $y$, and $\nabla^{2}_{n}=\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}$ where $x$, $y$, and $z$ are the Cartesian coordinates of particle $n$. Each term accounts for a different kind of energy: $-\frac{1}{2}\sum^{n}_{i}\nabla^{2}_{i}$ is the kinetic energy of the electrons, $\sum^{N}_{A}\frac{1}{2M_{A}}\nabla^{2}_{A}$ is the kinetic energy of the nuclei, $\sum^{n}_{i}\sum^{N}_{A}\frac{Z_{A}}{r_{iA}}$ is the potential energy of attraction between nuclei and electrons, $\sum^{n}_{i}\sum^{N}_{j>i}\frac{1}{r_{ij}} $ is the potential energy of repulsion between electrons, and $\sum^{N}_{A}\sum^{N}_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}$ is the potential energy of repulsion between nuclei. Together, this accounts for all of the energy of a molecular system. As this operator is quite complex, it would be helpful to simplify it if possible. Fortunately, Born\citethis and Oppenheimer\citethis realized something that will allow us to get away with murder.
+where $i$ and $j$ refer to electrons, $A$ and $B$ refer to nuclei, and $n$ and $N$ refer to the maximum number of electrons and nuclei respectively. $M_{A}$ and $Z_{A}$ are the mass and charge of nucleus $A$. $r_{xy}$ is the distance between particles $x$ and $y$, and $\nabla^{2}_{n}=\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}$ where $x$, $y$, and $z$ are the Cartesian coordinates of particle $n$. Each term accounts for a different kind of energy: $-\frac{1}{2}\sum^{n}_{i}\nabla^{2}_{i}$ is the kinetic energy of the electrons, $\sum^{N}_{A}\frac{1}{2M_{A}}\nabla^{2}_{A}$ is the kinetic energy of the nuclei, $\sum^{n}_{i}\sum^{N}_{A}\frac{Z_{A}}{r_{iA}}$ is the potential energy of attraction between nuclei and electrons, $\sum^{n}_{i}\sum^{N}_{j>i}\frac{1}{r_{ij}} $ is the potential energy of repulsion between electrons, and $\sum^{N}_{A}\sum^{N}_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}$ is the potential energy of repulsion between nuclei. Together, this accounts for all of the energy of a molecular system. As this operator is quite complex, it would be helpful to simplify it if possible. Fortunately, Born and Oppenheimer\cite{1927AnP...389..457B} realized something that will allow us to get away with murder.
 
 Much like a satellite in orbit around the Earth, the proton and neutron vastly outweigh the electron. If we look at the second term in Equation \ref{eq:ham}, we notice that it is inversely proportional to the mass of the nuclei. We can therefore assume, to a decent approximation, that the kinetic energy of the nuclei is very close to zero compared to the other terms. This allows us to treat them as stationary classical particles. As a bonus, this turns the potential energy of repulsion between nuclei into a constant. The killing of these two terms reduces the Hamiltonian operator to the \textit{electronic} Hamiltonian given in Equation \ref{eq:elham}
 
@@ -859,7 +859,7 @@ Much like a satellite in orbit around the Earth, the proton and neutron vastly o
 
 $\hat{H}$ can be assumed to be $\hat{H_{el}}$ for the remainder of this Thesis, and with the Hamiltonian out of the way, we can now turn our attention to the wavefunction. While we were able to get away with turning nuclei into classical particles, the electrons unfortunately remain fully quantum. Therefore, we need to deal with all the complicated mathematical baggage this comes with.
 
-Consider the hydrogen atom. By the grace of God, it (and all other one-electron atomic systems) is one of the few exactly solvable problems in quantum mechanics. The solution for its wavefunction in spherical coordinates is given in Equation \ref{eq:wavehydro} \notetodylan{solutions taken from Griffiths}
+Consider the hydrogen atom. By the grace of God, it (and all other one-electron atomic systems) is one of the few exactly solvable problems in quantum mechanics. The solution for its wavefunction in spherical coordinates is given in Equation \ref{eq:wavehydro}\cite{Griffiths2}
 
 \begin{equation}
 \label{eq:wavehydro}
@@ -911,7 +911,7 @@ P^{m}_{l}(x) = (1 - x^{2})^{\frac{|m|}{2}}\frac{d^{|m|}}{dx^{|m|}}P_{l}(x)
 P_{l}(x) = \frac{1}{2^{l}l!}\frac{d^{j}}{dx^{j}}(x^{2}-1)^{l}
 \end{equation} 
 
-Oh my, well it didn't take long for this to get ugly did it. Inspection of these equations reveals that $n$ must be a positive integer greater than 0, $l$ must be a positive integer between 0 and $n-1$, and $|m|$ can be no larger than $l$. These are called quantum numbers, specifically $n$ is the principal quantum number, $l$ is the azimuthal quantum number, and $m$ is the magnetic quantum number. Also notice that there is no limit to how large $n$ can get, which suggests that there is not just one solution to this equation, but an infinite number of them. The solutions to the hydrogen-like atom wavefunction are given the special name of orbitals. Also, orbitals with the same value of $l$ are refered to be of the same symmetry. Table \ref{tab:hsol} shows the reduced form of $\Psi$ for a few different orbitals. So how about solutions for atoms with more than one electron? Well, if we make some further assumptions about the nature of reality, it has been shown that an atomic system with two electrons can also be solved \notetodylan{cite harmonic helium}, but we can go no further than this. At least, not exactly. In the next section we will see how solutions for atoms, and indeed molecules can begin to be approached.
+Oh my, well it didn't take long for this to get ugly did it. Inspection of these equations reveals that $n$ must be a positive integer greater than 0, $l$ must be a positive integer between 0 and $n-1$, and $|m|$ can be no larger than $l$. These are called quantum numbers, specifically $n$ is the principal quantum number, $l$ is the azimuthal quantum number, and $m$ is the magnetic quantum number. Also notice that there is no limit to how large $n$ can get, which suggests that there is not just one solution to this equation, but an infinite number of them. The solutions to the hydrogen-like atom wavefunction are given the special name of orbitals. Also, orbitals with the same value of $l$ are refered to be of the same symmetry. Table \ref{tab:hsol} shows the reduced form of $\Psi$ for a few different orbitals. So how about solutions for atoms with more than one electron? Well, if we make some further assumptions about the nature of reality, it has been shown that an atomic system with two electrons can also be solved\cite{harmonium}, but we can go no further than this. At least, not exactly. In the next section we will see how solutions for atoms, and indeed molecules can begin to be approached.
 
 \begin{table}[h!]
 \caption{The first few exact solutions for the hydrogen atom wavefunction.}
@@ -935,9 +935,9 @@ $\displaystyle\mp\frac{1}{\sqrt{64\pi a^{3}}}\frac{r}{a}e^{\left(-\frac{r}{2a}\r
 
 \section{Hartree-Fock}
 \label{sec:hartree_fock}
-While the wavefunction might appear complex, it is important to remember that it is still just a wave, and one of the fundamental properties of waves is that they can be added together to produce a separate, more complex wave. Likewise, any wave, no matter how complex, can be broken down as a summation of many simpler waves \notetodylan{cite fourier transform}. Thus, any linear combination of solutions to the wavefunction must therefore be a solution of a different (albeit perhaps non-physical) wavefunction. It is this property that will be exploited to solve our many electron problem. But first we must layout some ground rules.
+While the wavefunction might appear complex, it is important to remember that it is still just a wave, and one of the fundamental properties of waves is that they can be added together to produce a separate, more complex wave. Likewise, any wave, no matter how complex, can be broken down as a summation of many simpler waves\cite{fourier1822thorie}. Thus, any linear combination of solutions to the wavefunction must therefore be a solution of a different (albeit perhaps non-physical) wavefunction. It is this property that will be exploited to solve our many electron problem. But first we must layout some ground rules.
 
-The first rule is that the overall wavefunction must describe a system of fermions. This means that the wavefunction must be antisymmetric with respect to the exchanging of electronic coordinates, i.e. $\Psi(1, 2,\ldots, n,\ldots,m) = -\Psi(1, 2,\ldots, m,\ldots,n)$ \textit{and} the probability density of the wavefunction must be indistinguishable with respect to the exchanging of electronic coordinates, i.e. $|\Psi(1, 2,\ldots, n,\ldots,m)|^{2} = |\Psi(1, 2,\ldots, m,\ldots,n)|^{2}$. The easiest way to meet this requirement is by using a Slater determinant\citethis, and by introducing the concept of spin. Spin is actually a fourth quantum number, which I have neglected to talk about so far. Spin is a confusing property that some quantum particles have. No one really knows what is is, other than to say it has something to do with the angular momentum of the particle, and oddly enough that it in no way refers to the direction that the particle is spinning. It has been shown to have binary values\citethis, which I will refer to as up spin ($\uparrow$) and down spin ($\downarrow$). A Slater determinant that obeys antisymmetry is shown in Equation \ref{eq:slate_det}
+The first rule is that the overall wavefunction must describe a system of fermions. This means that the wavefunction must be antisymmetric with respect to the exchanging of electronic coordinates, i.e. $\Psi(1, 2,\ldots, n,\ldots,m) = -\Psi(1, 2,\ldots, m,\ldots,n)$ \textit{and} the probability density of the wavefunction must be indistinguishable with respect to the exchanging of electronic coordinates, i.e. $|\Psi(1, 2,\ldots, n,\ldots,m)|^{2} = |\Psi(1, 2,\ldots, m,\ldots,n)|^{2}$. The easiest way to meet this requirement is by using a Slater determinant\cite{PhysRev.34.1293}, and by introducing the concept of spin. Spin is actually a fourth quantum number, which I have neglected to talk about so far. Spin is a confusing property that some quantum particles have. No one really knows what is is, other than to say it has something to do with the angular momentum of the particle, and oddly enough that it in no way refers to the direction that the particle is spinning. It has been shown to have binary values\cite{Gerlach1922}, which I will refer to as up spin ($\uparrow$) and down spin ($\downarrow$). A Slater determinant that obeys antisymmetry is shown in Equation \ref{eq:slate_det}
 
 \begin{equation}
 \label{eq:slate_det}
@@ -963,7 +963,7 @@ Here, $n$ refers to the number of electrons in the system, and the numbers in pa
 \end{split}
 \end{equation}
 
-Using orthonormal spin functions produces some interesting consequences. If we had a system where two electrons of the same spin were in the same spin orbital, that would mean that two of the columns would be equal to one another. Such a determinant would be equal to zero, which means that the wavefunction for such a system would not exist. This is the famous Pauli antisymmetry principle\citethis. The math showing that is satisfies antisymmetry is shown below.
+Using orthonormal spin functions produces some interesting consequences. If we had a system where two electrons of the same spin were in the same spin orbital, that would mean that two of the columns would be equal to one another. Such a determinant would be equal to zero, which means that the wavefunction for such a system would not exist. This is the famous Pauli antisymmetry principle\cite{Pauli1925}. The math showing that is satisfies antisymmetry is shown below\cite{Ostlund}.
 
 \begin{equation}
 \label{eq:pauli_2t_1}
@@ -1062,7 +1062,7 @@ As can be seen, changing the indexing of the electrons is equivalent to swapping
 \end{equation}
 
 \subsection{Two-Electron Integrals}
-As stated before, the main difficulty of performing calculations on many electron systems is figuring out how to deal with the interactions between the electrons. We can get around this by making the assumption that these interactions can be approximated by figuring out how a single electron interacts with the \textit{average} field generated by all the other electrons. This is called the self-consistent-field (SCF) method. With this, we can replace the Hamiltonian operator with the one-electron Fock operator which is given below
+As stated before, the main difficulty of performing calculations on many electron systems is figuring out how to deal with the interactions between the electrons. We can get around this by making the assumption that these interactions can be approximated by figuring out how a single electron interacts with the \textit{average} field generated by all the other electrons. This is called the self-consistent-field (SCF) method\cite{RHF}. With this, we can replace the Hamiltonian operator with the one-electron Fock operator which is given below\cite{Ostlund}
 
 \begin{equation}
 \label{eq:fock_op}
@@ -1124,7 +1124,7 @@ where the factor of one half is multiplied to the two electron terms as a result
 \label{subsec:basis_sets}
 Back in section \ref{sec:hartree_fock}, I said that there were some ground rules for our wavefunction. The second of these ground rules is that our trial wavefunction ($\Phi$) must meet the boundary conditions for the original problem. Up until now, I have used only spin orbitals ($\psi$) to describe the wavefunction, which as you'll recall is composed of a spin function, which I have already talk about at length, and a spacial orbital ($\phi$) which I have almost completely ignored. Let's fix that now. 
 
-As I mentioned, the overall wavefunction of a system ($\Psi$) cannot be known exactly unless we are looking only at hydrogen-like atoms. So instead we write the wavefunction as a Slater determinant composed of spin orbitals. Okay, so what exactly is the mathematical form of these spin orbitals? Well, as it turns out, unless we are talking only about atoms, we have no idea what these are either, even from a numerical stand point. We can make a fairly educated guess about what they \textit{should} resemble though. The general idea is this: by pre-calculating a set of functions with adjustable parameters ($\zeta$), we can produce a wavefunction with a linear combination of $\Phi(\zeta)$ that adequately reproduces results of numerical calculations of $\phi$. Mathematically, this is expressed as
+As I mentioned, the overall wavefunction of a system ($\Psi$) cannot be known exactly unless we are looking only at hydrogen-like atoms. So instead we write the wavefunction as a Slater determinant composed of spin orbitals. Okay, so what exactly is the mathematical form of these spin orbitals? Well, as it turns out, unless we are talking only about atoms, we have no idea what these are either, even from a numerical stand point. We can make a fairly educated guess about what they \textit{should} resemble though. The general idea is this: by pre-calculating a set of functions with adjustable parameters ($\zeta$), we can produce a wavefunction with a linear combination of $\Phi(\zeta)$ that adequately reproduces results of numerical calculations of $\phi$. Mathematically, this is expressed as\cite{Ostlund}
 
 \begin{equation}
 \label{eq:linear_comb_bs}
@@ -1133,14 +1133,14 @@ As I mentioned, the overall wavefunction of a system ($\Psi$) cannot be known ex
 
 where $\zeta_{u,i}$ is the $i^{th}$ adjustable parameters of the basis function $\Phi$ which is approximating the $u^{th}$ orbital, $C_{u,i}$ is the $i^{th}$ coefficient of $i^{th}$ basis function of the $u^{th}$ $\phi$, and $K$ is the total number of basis functions that make up the basis set. $C_{u,i}$ can intuitively be thought of as the ``percentage" of $\phi$ that $\Phi(\zeta_{u,i})$ makes up (this is not strictly speaking true, as $C_{u,i}$ can be greater than one or negative, but the general idea is there).
 
-So how do we chose our $\Phi$s? This is where our ground rule comes in to play. We must choose a function that meets the boundary conditions of the problem, which means that is must go to zero at infinity (this is also not exactly true, we can chose any function we want so this rule is really more of a guideline, but our basis sets will be much smaller the closer they are to the actual problem so it is good practice to follow it). Because an atom (or molecule) consists of electrons in the potential generated by one (or many) nuclei, would it not be reasonable to conclude that the wavefunction would be similar to that of the hydrogen atom? The following people seem to think so \notetodylan{cite lots of basis set papers here}. We might initially think to use the exact hydrogen atom solution, but it quickly requires lots of floating point operations to compute which makes it impractical to use for large scale calculations. A more reasonable function is the Slater-type orbital (STO). The radial part of its 1s orbital centered at $R_{A}$ is shown below
+So how do we chose our $\Phi$s? This is where our ground rule comes in to play. We must choose a function that meets the boundary conditions of the problem, which means that is must go to zero at infinity (this is also not exactly true, we can chose any function we want so this rule is really more of a guideline, but our basis sets will be much smaller the closer they are to the actual problem so it is good practice to follow it). Because an atom (or molecule) consists of electrons in the potential generated by one (or many) nuclei, it is reasonable to conclude that the wavefunction would be similar to that of the hydrogen atom. We might initially think to use the exact hydrogen atom solution, but it quickly requires lots of floating point operations to compute which makes it impractical to use for large scale calculations. A more reasonable function is the Slater-type orbital (STO)\cite{PhysRev.36.57}. The radial part of its 1s orbital centered at $R_{A}$ is shown below
 
 \begin{equation}
 \label{eq:sto_1s}
 \Phi^{STO}_{1s}(r - R_{A}) = \sqrt{\frac{\zeta^{3}}{\pi}}e^{-\zeta|r- R_{A}|}
 \end{equation}
 
-This is more well behaved than the exact hydrogen atom solution, but problems arise when we try to use them in the two-electron integrals. Because we may be trying to do a double integral over function which could have up to four different centers, we end up with something that is very hard to compute. Therefore, Gaussian-type orbitals (GTOs) have become the de facto method of producing basis sets. The radial part of its 1s orbital centered at $R_{A}$ is shown below \notetodylan{ref Boys paper here}
+This is more well behaved than the exact hydrogen atom solution, but problems arise when we try to use them in the two-electron integrals. Because we may be trying to do a double integral over function which could have up to four different centers, we end up with something that is very hard to compute. Therefore, Gaussian-type orbitals (GTOs) have become the de facto method of producing basis sets. The radial part of its 1s orbital centered at $R_{A}$ is shown below\cite{Boys542}
 
 \begin{equation}
 \label{eq:gto_1s}
@@ -1156,7 +1156,7 @@ In the previous sections, we discussed the calculation of the two-electron integ
 
 SCF begins with the formation of the density matrices. If we are looking at a single atom, we can exploit the symmetry of the problem by having a smaller density matrix for each orbital symmetry ($\lambda$), instead of one large one for the whole system. There are also two types of density matrices, one for contributions from closed shell spinors (\textbf{D$_\textbf{C}$}) and one for contributions from open shelled spinors (\textbf{D$_\textbf{O}$}).
 
-Using a procedure developed by Roothaan and Hall\citethis{}, we first need to find the matrix \textbf{C} which satisfies 
+Using a procedure developed by Roothaan and Hall\cite{RHF, Hall541}, we first need to find the matrix \textbf{C} which satisfies 
 
 \begin{equation}
 \label{RHE}
@@ -1178,12 +1178,10 @@ and the non-relativistic \textbf{F} for closed shells of symmetry $\lambda$ is g
 				\left[\left( p_{\lambda}q_{\lambda}|r_{\mu}s_{\mu}\right) - \frac{1}{2}\left( p_{\lambda}q_{\lambda}|s_{\lambda}r_{\lambda}\right)\right]
 \end{equation}
 
-where $p$, $q$, $r$, and $s$ are basis functions, $K$ is the total number of basis functions for symmetry $\mu$, and $occ$ is the number of occupied closed shells in symmetry $\mu$ \notetodylan{should define symmetry somewhere}. Because $p$ and $q$ will always be of the same symmetry, and likewise with $r$ and $s$, the $\lambda$ and $\mu$ subscripts will be dropped from these indices and instead will be obtained from context. As we can see, \textbf{F} is itself a function of \textbf{C} and we left with a rather disappointing outcome. That is, in order for us to find \textbf{C}, we first must know what it is. And so it would seem that all is lost and all of this hard work was for nothing. And yet, there is a glimmer of hope. \textbf{F} is made up of two terms, and as luck would have it, only the term corresponding to contributions from the two-electron integrals depends on \textbf{C}, the term from one-electron integrals can be used independently of \textbf{C}. Thus, we begin by assuming that \textbf{F} depends solely on the one-electron term, effectively assuming that $\textbf{C}=\textbf{0}$. Solving Equation \ref{RHE} with the $H^{\text{core}}$ hamiltonian matrix only will give us the initial guess of \textbf{C}. With this, we can then resolve \textbf{F} with the guess of \textbf{C} and diagonalize the new \textbf{F} matrix to get another set of values for \textbf{C}. We can then repeat this process over and over until \textbf{C} is no longer changing outside an acceptable tolerance at which point we say the calculation has converged. We have now just completed a Hartree-Fock calculation.
+where $p$, $q$, $r$, and $s$ are basis functions, $K$ is the total number of basis functions for symmetry $\mu$, and $occ$ is the number of occupied closed shells in symmetry $\mu$. Because $p$ and $q$ will always be of the same symmetry, and likewise with $r$ and $s$, the $\lambda$ and $\mu$ subscripts will be dropped from these indices and instead will be obtained from context. As we can see, \textbf{F} is itself a function of \textbf{C} and we left with a rather disappointing outcome. That is, in order for us to find \textbf{C}, we first must know what it is. And so it would seem that all is lost and all of this hard work was for nothing. And yet, there is a glimmer of hope. \textbf{F} is made up of two terms, and as luck would have it, only the term corresponding to contributions from the two-electron integrals depends on \textbf{C}, the term from one-electron integrals can be used independently of \textbf{C}. Thus, we begin by assuming that \textbf{F} depends solely on the one-electron term, effectively assuming that $\textbf{C}=\textbf{0}$. Solving Equation \ref{RHE} with the $H^{\text{core}}$ hamiltonian matrix only will give us the initial guess of \textbf{C}. With this, we can then resolve \textbf{F} with the guess of \textbf{C} and diagonalize the new \textbf{F} matrix to get another set of values for \textbf{C}. We can then repeat this process over and over until \textbf{C} is no longer changing outside an acceptable tolerance at which point we say the calculation has converged. We have now just completed a Hartree-Fock calculation.
 
 \section{Special Relativity}
-\notetodylan{most things in is section came from Piela and Bethe}
-
-Another field of physics that was being developed at the same time as quantum mechanics was special relativity (general relativity which involves gravity's effect on spacetime is far, \textit{far} outside the scope of this thesis. I will therefore be refining to special relativity as just relativity from now on). Relativity traces its roots to Michelson and Morley\citethis when they made the startling observation that all observers, no matter their frame of reference, will always agree on the speed of light. But it would not be until everyone's favorite Swiss patent cleric decided to examine this issue that the truly profound implications of this observation would be known. 
+Another field of physics that was being developed at the same time as quantum mechanics was special relativity (general relativity which involves gravity's effect on spacetime is far, \textit{far} outside the scope of this thesis. I will therefore be refining to special relativity as just relativity from now on). Relativity traces its roots to Michelson and Morley\cite{Michelson} when they made the startling observation that all observers, no matter their frame of reference, will always agree on the speed of light. But it would not be until everyone's favorite Swiss patent cleric decided to examine this issue that the truly profound implications of this observation would be known. 
 
 This is perhaps a bit of an aside, but it is simply too interesting to pass up. Consider this thought experiment: you and I are in two different spaceships in space. We will define your frame of reference such that you are stationary at the origin, and that I am flying past you at a constant speed that is arbitrarily close to the speed of light, we will call this speed $v$. In my spaceship, there is a laser that I have pointed perfectly perpendicular to the direction I am traveling. From my frame of reference, where I am stationary, I turn the laser on and observe photons that move from the laser to the side of my spaceship, a distance equal to $d_{1}$, in time equal to $t$ at the speed of light $c$. Back in your frame of reference, you are also watching my experiment, but you make some different observations. In the time it take for the photons to move across my spaceship, I move a small distance $d_{2}$. So the total distance you see the photons move is not $d_{1}$, but $d_{3}$ which is the hypotenuse of the right angle triangle formed by $d_{1}$, $d_{2}$, and $d_{3}$. \textit{But}, we both agree that the photons were moving at speed $c$! So we can not agree on the time it took to do so because $d_{3} > d_{1}$. So you will observe the time it takes for the photons to move to be a time equal to $t'$. We can derive the relationship between $t$ and $t'$ in the following way.
 
@@ -1197,7 +1195,7 @@ d_{1} &	= ct	&	d_{2} &	= vt'	&	d_{3} &	=ct'	\\
 \label{eq:rel_proof_2}
 \end{align} 
 
-Not does this give the absolutely remarkable result that time is relative, Equation \ref{eq:rel_proof_2} also implies that an object can have a maximum speed. But how could this be possible, if I turned on the engine on my spaceship, what's to stop me from just getting faster and faster? The answer is that the mass of an object increases the closer to the speed of light it is. This can be described by
+Not does this give the absolutely remarkable result that time is relative, Equation \ref{eq:rel_proof_2} also implies that an object can have a maximum speed. But how could this be possible, if I turned on the engine on my spaceship, what's to stop me from just getting faster and faster? The answer is that the mass of an object increases the closer to the speed of light it is. This can be described by\cite{Piela}
  
 \begin{equation}
 \label{eq:rel_mass}
@@ -1227,17 +1225,15 @@ So if we take the mass of an object at speed $v$ and subtract the mass of the ob
 E_{kin} = m(v)c^{2}
 \end{equation}
 
-\notetodylan{maybe show how much energy there is in a kg of $^{235}$U just for fun}
-
 \subsection{Relativistic Quantum Mechanics}
-So it would seem that relativity concerns the physics of the very large and fast, while quantum mechanics is concerned with the very small. How do we merge the two, and do we even have to? Well as it turns out the 1s electrons in gold have a momentum that would indicate they have a speed equivalent to \notetodylan{find exact percentage and cite}. In fact the speed of the electrons increases with nuclear charge, so it becomes more and more necessary to include these relativistic effects the further we go down the periodic table. So lets start from the beginning with the time-dependent one-dimensional Schr\"{o}dinger equation which I will rewrite here in a more general and explicit form
+So it would seem that relativity concerns the physics of the very large and fast, while quantum mechanics is concerned with the very small. How do we merge the two. So lets start from the beginning with the time-dependent one-dimensional Schr\"{o}dinger equation which I will rewrite here in a more general and explicit form\cite{1926PhRv...28.1049S}
 
 \begin{equation}
 \label{eq:schr_full}
 i\hbar\frac{\partial\Psi(x, t)}{\partial t} = -\frac{\hbar^{2}}{2m}\frac{\partial^{2}\Psi(x, t)}{\partial x^{2}} + \hat{V}(x)\Psi(x, t)
 \end{equation}
 
-where $i\hbar\frac{\partial}{\partial t}$ is the energy operator, $-\hbar^{2}\frac{\partial^{2}}{\partial x^{2}}$ is the momentum squared operator ($\hat{p} = -i\hbar\frac{\partial}{\partial x}$), $\hbar$ is the reduced Plank's constant ($\hbar = \frac{h}{2\pi}$) and $\hat{V}(x)$ is the potential energy operator that the particle described by $\Psi(x, t)$ experiences. The reason we can not use the Schr\"{o}dinger equation directly in relativistic quantum mechanics is because it treats time and space differently (it depends on only the first derivative of time, but the second derivative of space). So we need some way to fix this. If we try to express Equation \ref{eq:emc2} in terms of $\hat{p}$ we get
+where $i\hbar\frac{\partial}{\partial t}$ is the energy operator, $-\hbar^{2}\frac{\partial^{2}}{\partial x^{2}}$ is the momentum squared operator ($\hat{p} = -i\hbar\frac{\partial}{\partial x}$), $\hbar$ is the reduced Plank's constant ($\hbar = \frac{h}{2\pi}$) and $\hat{V}(x)$ is the potential energy operator that the particle described by $\Psi(x, t)$ experiences. The reason we can not use the Schr\"{o}dinger equation directly in relativistic quantum mechanics is because it treats time and space differently (it depends on only the first derivative of time, but the second derivative of space). So we need some way to fix this. If we try to express Equation \ref{eq:emc2} in terms of $\hat{p}$ we get\cite{Piela}
 
 \begin{equation}
 \label{eq:emc2_mom}
@@ -1251,7 +1247,7 @@ If we want to solve for a free particle ($\hat{V}(x) = 0$), we could put the ene
 -\hbar^{2}\frac{\partial^{2}\Psi(x,t)}{\partial t^{2}} = c^{2}\left(-\hbar^{2}\frac{\partial^{2}\Psi(x, t)}{\partial x^{2}} + m_{0}^{2}c^{2}\Psi(x,t)\right)
 \end{equation}
 
-which is called the Klein-Gordon\citethis equation for a free particle. We could also solve for a particle of charge $q$ in a electromagnetic field described by potentials $\hat{A}$ and $\hat{\varphi}$ as
+which is called the Klein-Gordon\cite{Gordon1926, Klein1927} equation for a free particle. We could also solve for a particle of charge $q$ in a electromagnetic field described by potentials $\hat{A}$ and $\hat{\varphi}$ as
 
 \begin{equation}
 \label{eq:klein-gord_elec_mag}
@@ -1262,7 +1258,7 @@ Here we are treating time and space exactly the same, but there is a problem. Wh
 
 \subsection{Dirac Equation}
 
-Dirac began with the Klein-Gordon equation which I will rewrite in its three-dimensional form as
+Dirac\cite{Dirac610} began with the Klein-Gordon equation which I will rewrite in its three-dimensional form as
 
 \begin{equation}
 \label{eq:dirac_3D}
@@ -1309,7 +1305,7 @@ It's clear that the $\alpha$s must be matrices. The simplest of these that meet 
 \end{pmatrix} 
 \end{equation}
 
-where $\sigma_{i}$ are the Pauli spin matrices for $i=x,y,z$, \textbf{0} is a $2\times2$ matrix of zeros, and \textbf{I} is a $2\times2$ identity matrix. We now have two different operator equations
+where $\sigma_{i}$ are the Pauli spin matrices for $i=x,y,z$, \textbf{0} is a $2\times2$ matrix of zeros, and \textbf{I} is a $2\times2$ identity matrix\cite{Piela}. We now have two different operator equations
 
 \begin{equation}
 \label{eq:dirac_neg_energy}
@@ -1320,7 +1316,7 @@ where $\sigma_{i}$ are the Pauli spin matrices for $i=x,y,z$, \textbf{0} is a $2
 \left({\bf{\pi}}_{0} - \sum_{u=x,y,z}\alpha_{u}{\bf{\pi}}_{u} - \beta{}m_{0}c\right)\Psi(x, y, z, t) = 0
 \end{equation}
 
-Equation \ref{eq:dirac_neg_energy} will give negative energy and Equation \ref{eq:dirac_pos_energy} will give positive energy. The positive energy solutions are electrons, but what about the negative energy solutions. As it turns out, they correspond to antimatter, which is remarkable because antimatter would not be discovered until years later\citethis. The stationary states (time-independent) for the electron then become
+Equation \ref{eq:dirac_neg_energy} will give negative energy and Equation \ref{eq:dirac_pos_energy} will give positive energy. The positive energy solutions are electrons, but what about the negative energy solutions. As it turns out, they correspond to antimatter, which is remarkable because antimatter would not be discovered until years later\cite{PhysRev.43.491}. The stationary states (time-independent) for the electron then become
 
 \begin{equation}
 \label{eq:dirac_stat_state}
@@ -1372,7 +1368,7 @@ where $V = q\hat{\varphi}$. Introducing $\alpha$ as a $4\times4$ matrix means th
 where ${\bf{\psi}}$ and ${\bf{\phi}}$ are called spinors. ${\bf{\psi}}$ is called the large component and ${\bf{\phi}}$ is the small component. With this in hand, we are almost done, but there is one more trick we must use in-order for the Dirac equation to be usable. 
 
 \subsection{Kinetic Balancing}
-Recall that Equation \ref{eq:dirac_stat_state} is only half of the total equation. We still have all of the negative energy solutions to deal with. If we were to try an use Equation \ref{eq:dirac_stat_state} as is, the numerical methods we use of solving it would find these negative energies, and as there is no lower bound on the negative solutions, our solutions to the equation would all drop to negative infinity. We can solve this problem if we assume that all the infinite amount of negative energy states are filled with an infinite amount of positrons. This means that our electron can not drop into the negative energies due to the Pauli exclusion principal. Mathematically, we can reproduce this idea using a procedure called kinetic balancing, which is done in the following way.
+Recall that Equation \ref{eq:dirac_stat_state} is only half of the total equation. We still have all of the negative energy solutions to deal with. If we were to try an use Equation \ref{eq:dirac_stat_state} as is, the numerical methods we use of solving it would find these negative energies, and as there is no lower bound on the negative solutions, our solutions to the equation would all drop to negative infinity. We can solve this problem if we assume that all the infinite amount of negative energy states are filled with an infinite amount of positrons. This means that our electron can not drop into the negative energies due to the Pauli exclusion principal. Mathematically, we can reproduce this idea using a procedure called kinetic balancing, which is done in the following way\cite{Piela}.
  
 Using the spinors, we can write Equation \ref{eq:dirac_stat_state} as a matrix multiplication problem of the form
 
@@ -1436,7 +1432,7 @@ To a good approximation, $\epsilon - V$ will be much smaller than $2m_{0}c^{2}$,
 Not only does this make solving the Dirac equation much simpler (we only need to solve for ${\bf{\psi}}$ instead of ${\bf{\psi}}$ \textit{and} ${\bf{\phi}}$) it also ``hides" the negative energies from numerical methods. Note, though, that it relies on the assumption that $\epsilon - V$ is much smaller than $2m_{0}c^{2}$. If this is not the case, such as in the electrons in the heaviest of known elements, then this procedure will fail and we will get energies that are lower than they should be. When this occurs, we say that there is variational prolapse of the wavefunction.
 
 \subsection{The Dirac Hydrogen-Like Atom}
-Up until now, we have only looked at what Dirac's theory says about a free electron (well, a ``free" electron in the presence of an infinite amount of positrons, but I digress). So what happens to the hydrogen-like atom solutions?. The quantum numbers we get here are similar to the non-relativistic theory. They are: the principal quantum number ($n=1,2,3,\ldots$), the azimuthal quantum number ($l = 0, 1, 2, \ldots, n-1$), the angular momentum quantum number ($j = | l \pm \frac{1}{2}|$), and the magnetic quantum number ($m = -j,-j+1, \ldots, j-1, j$). The energy in terms of the quantum numbers is given by
+Up until now, we have only looked at what Dirac's theory says about a free electron (well, a ``free" electron in the presence of an infinite amount of positrons, but I digress). So what happens to the hydrogen-like atom solutions?. The quantum numbers we get here are similar to the non-relativistic theory. They are: the principal quantum number ($n=1,2,3,\ldots$), the azimuthal quantum number ($l = 0, 1, 2, \ldots, n-1$), the angular momentum quantum number ($j = | l \pm \frac{1}{2}|$), and the magnetic quantum number ($m = -j,-j+1, \ldots, j-1, j$). The energy in terms of the quantum numbers is given by\cite{Piela}
 
 \begin{equation}
 \label{eq:dirac_energy}
@@ -1444,6 +1440,57 @@ E_{n, j} = -\frac{1}{2n^{2}}\left[1+\frac{1}{nc^{2}}\left(\frac{1}{j+\frac{1}{2}
 \end{equation}
 
 It can be seen that there is a splitting in the energy levels of spinors with the same azimuthal number, whereas in the non-relativistic theory, orbitals with the same azimuthal number would all be perfectly degenerate.
+
+\subsection{Relativistic Effects}
+The effects of relativity have a dramatic effect on chemistry. Two classic examples are gold's distinctive colour, and mercury being the only metal that is liquid at room temperature. In the case of gold, its 6s$_{1/2}$ electrons are lowered in energy and its 5d$_{5/2}$ electrons are raised. This shifts its absorption region into the blue end of the spectrum, making it appear yellow\cite{Bartlett1998}. The 6s$_{1/2}$ electrons of mercury are similarly stabilized and since its 5d$_{3/2}$ and 5d$_{5/2}$ orbitals are filled, it behaves quite like a nobel gas, making bonding quite difficult at room temperature\cite{Norrby1991}.
+
+Relativistic effects are broken up into two categories: primary and secondary effects. Primary effects are due to the contraction of the s and p electrons. The non-relativistic Bohr radius for the 1s electron of hydrogen is\cite{Griffiths2} 
+
+\begin{equation}
+\label{eq:non_rel_bohr}
+a_{0} = \frac{4\pi{}\epsilon_{0}\hbar^{2}}{m_{0}e^{2}}
+\end{equation}
+
+where $\epsilon_{0}$ is the permittivity of free space, $\hbar$ is the reduced planks constant, $e$ is the charge of an electron, and $m_{0}$ is the mass of an election at rest. Recall from Equation \ref{eq:rel_mass} that the mass of an object increases with its speed. If we substitute $m(v)$ from Equation \ref{eq:rel_mass} for $m_{0}$ into Equation \ref{eq:non_rel_bohr} we get
+
+\begin{equation}
+\label{eq:rel_bohr}
+a_{v} = \frac{4\pi{}\epsilon_{0}\hbar^{2}\sqrt{1 - \frac{v^2}{c^2}}}{m_{0}e^{2}}
+\end{equation}
+
+Dividing Equation \ref{eq:rel_bohr} by \ref{eq:non_rel_bohr} gives 
+
+\begin{equation}
+\label{eq:bohr_frac}
+\frac{a_{v}}{a_{0}} = \sqrt{1 - \frac{v^2}{c^2}}
+\end{equation}
+
+which is less than 1 and will get closer and closer to zero as $v$ increases ($v$ will increase in proportion to the nuclear charge). This contraction stabilizes the electrons, making them more inert. 
+
+Secondary effects are a direct result of the electron contraction. The contraction of these electrons leads to greater shielding of the nucleus, reducing its effective nuclear charge. This causes the d and f electrons to feel less attracted to their nucleus, which makes their orbitals enlarge. This destabilizes these electrons, making them more reactive\cite{Piela}.
+
+\subsection{Gaussian Nucleus}
+Up till now, we have assumed the nucleus can be represented as a point. For many applications, this works just fine, but it can make it difficult to find convergence when relativity is considered. Therefore, it is helpful to use a model more grounded in reality in this case. One such model is the Gaussian nucleus. This changes the potential in Equation \ref{eq:dirac_stat_state_matmul} to
+
+\begin{equation}
+\label{eq:gauss_nuc_pot}
+V(\textbf{r}) = Z\left(\frac{\alpha}{\pi}\right)^{\frac{3}{2}}\int\frac{e^{-\alpha(\textbf{r} - \textbf{R})^{2}}}{|\textbf{r} - \textbf{R}|}d\textbf{R}
+\end{equation}
+
+where \textbf{r} is the coordinates of an electron, \textbf{R} is the coordinates of the nuclei, $Z$ is the nuclear charge, and $\alpha$ is an estimation of the ``size" of the nucleus. This is usually approximated using the root-mean-square (RMS) radius of the nuclei\cite{VISSCHER1997207}, which can be related to the mass of the nucleus by\cite{1985ADNDT..33..405J}
+
+\begin{equation}
+\label{eq:gauss_nuc_RMS}
+\sqrt{\left<R^{2}\right>} = \left(0.836A^{1/3} + 0.570\right)
+\end{equation}
+
+where $\left<R^{2}\right>$ is the mean-square radius in femtometers, and $A$ is the mass of the nucleus. Converting the RMS into atomic units and substituting it into the following equation gives the value of $\alpha$\cite{VISSCHER1997207}
+
+\begin{equation}
+\label{eq:gauss_nuc_alpha}
+\alpha = \frac{3}{2\left<R^{2}\right>}
+\end{equation}
+
 
 \chapter{Basis Sets}
 \label{chap:basis_sets}
@@ -1616,10 +1663,10 @@ The optimized wtbs parameters and basis set sizes for elements 2 to 86 are shown
 
 \chapter{CUDAProphet}
 \section{GPU Architecture}
-While general purpose computing on graphics processing units (GPGPU) (GPUs) has been adopted by the high performance computing (HPC) community for quite some time, it can seem quite complex to the uninitiated. While most quantum chemists who decide to dip their toes into computational waters can get away with having little to no understanding of what is actually going on under the hood when programming for a central processing uint (CPU), the same can not at all be said for GPUs. Therefore, in this section I will explain what makes a GPU tick in order to help understand the terms and techniques used in the following chapter. As CUDAProphet was optimized for the Nvidia Tesla C2050, I will be referring to the Tesla C2050 specifications for examples when needed. I will begin will the most granularity possible, and zoom out so that by the end of this section, the reader should come away prepared for the rest of this chapter.
+While general purpose computing on graphics processing units (GPGPU) (GPUs) has been adopted by the high performance computing (HPC) community for quite some time, it can seem quite complex to the uninitiated. While most quantum chemists who decide to dip their toes into computational waters can get away with having little to no understanding of what is actually going on under the hood when programming for a central processing uint (CPU), the same can not at all be said for GPUs. Therefore, in this section I will explain what makes a GPU tick in order to help understand the terms and techniques used in the following chapter. As CUDAProphet was optimized for the Nvidia Tesla C2050, I will be referring to the Tesla C2050 specifications for examples when needed. I will begin will the most granularity possible, and zoom out so that by the end of this section, the reader should come away prepared for the rest of this chapter. The bulk of this section has been adapted from \cite{Ruetsch:2013:CFS:2588277, cudaFortran_pgi} and from my own experience.
 
-\subsection{Threads, Blocks, and Grids}\label{ThBlGr}
-\notetodylan{remember to go through label threads, blocks etc once a decision on how to label them has been made.}
+\subsection{Threads, Blocks, and Grids}
+\label{ThBlGr}
 The most granular element of computation on a GPU is the thread. When a CUDA function or subroutine (hereafter called a kernel) is called, it is a thread that actually executes the code. What makes GPGPU so powerful is that while a thread in a kernel is always executing the same code, the data a thread works with can be completely different between threads. This method of parallelism is called single instruction, multiple data (SIMD). 
 
 32 threads are organized into a structure called a warp. Within a warp, all threads execute code in lock-step. If a condition arises where some threads in warp must execute some code, and other threads in the same warp execute some other code (for instance in a \textbf{if else} statement), this leads to serialization of code execution, a process called warp divergence. In a worst case scenario, this could cause all 32 threads to execute serially which could lead to a massive hit to performance. It can also cause warps to fall behind other warps and has the potential to cause race conditions to appear. If one warp needs data generated by another warp that is several steps behind, this can cause all kinds of confusing errors to appear. Therefore, it is generally advisable to avoid warp divergence whenever possible. But, for programs of any considerable usefulness, warp divergence will be inevitable. Thankfully, the good people of Nvidia have included the \comm{syncthreads} command. This provides a barrier that all threads within a block must meet before any can continue. 
@@ -1638,7 +1685,7 @@ Shared memory, as its name implies, is shared and private to threads in a single
 
 Lastly there is the register memory. This is the fastest memory available and is also private to an individual thread. As this may have been a lot to take in, Figure \ref{fig:gpuarc} shows the hierarchy of the grid, blocks, and threads, as well as how each memory type is localized. On the Tesla C2050, there are a total of 32768 32-bit registers available per SM. An individual thread in a block can use no more than 63 registers, and if the number of threads in a block times the number of registers needed per thread for a kernel is larger than the total registers available per SM then the execution of the kernel will fail. If a thread needs more memory than the registers will allow, then ``register-spilling" takes place. This means that instead of a variable being stored into a register, it ``spills over" into a fourth memory type called local memory. Local memory is really just a section of the global memory and comes with all the problems that global memory has, but the compiler is able to arrange it such that it can be read efficiently without the programmer having to worry about this. There is no way for a programmer to specify which variables will be stored in register or local memory, the complier handles all of this. There are complier flags which can change the maximum amount of registers per thread allowed which will prompt the complier to place more data into local memory. While this may sound like a bad idea, we will see in the next section how there are situations where this might be useful.
 
-\begin{figure}[h!]
+\begin{figure}
 \center
 \includegraphics[width=0.83\textwidth]{Figures/gpu_arc.png}
 \caption[Architecture of a GPU]
@@ -1646,13 +1693,11 @@ Lastly there is the register memory. This is the fastest memory available and is
 \label{fig:gpuarc}
 \end{figure}
 
-\clearpage
-
 \subsection{Occupancy and Performance}
 \label{sec:gpuocc}
 With the description of the various resources out of the way, now we can talk about how the can be used most effectively. The occupancy of a kernel is the number of warps that are actually able to run on a SM divided by the maximum possible warps a SM can run. Occupancy is important, as it determines the maximum number of blocks, and thus threads that are able to be run simultaneously. The occupancy of a kernel is determined by three things: the block size, the amount of shared memory per block, and the number of registers used per thread. While block size and shared memory are explicitly set by the programmer, it is next to impossible to guess how registers will be used before compile time. Thankfully, there are complier flags that will display this information.
 
-Armed with the resources our kernel will need, we can now determine its occupancy. The ``CUDA Occupancy Calculator" is an Excel \notetodylan{cite the link to the sheet} spreadsheet provided by NVIDIA and is an indispensable tool. We can input the needed resources and the hardware generation of our card and then receive the occupancy of the current resource configuration, where the bottle neck of the current configuration is, as well as information on how the occupancy will change upon tweaking the configuration. In some sense, the best block size is determined by how the other resources are used. Therefore, in order to maximize the occupancy, we must first make sure that we are using the memory provided correctly.
+Armed with the resources our kernel will need, we can now determine its occupancy. The ``CUDA Occupancy Calculator" is an Excel spreadsheet provided by NVIDIA and is an indispensable tool. We can input the needed resources and the hardware generation of our card and then receive the occupancy of the current resource configuration, where the bottle neck of the current configuration is, as well as information on how the occupancy will change upon tweaking the configuration. In some sense, the best block size is determined by how the other resources are used. Therefore, in order to maximize the occupancy, we must first make sure that we are using the memory provided correctly.
 
 Registers are the fastest memory available, but they are also the easiest to over use. Therefore, they are best suited for small variables that need to be referenced frequently, such as accumulators. Shared memory is best used for storing large sections of non-contiguous data stored in the global memory. Finally data that is able to be stored nicely, or is infrequently used might best be left in the global memory.
 
@@ -1662,11 +1707,11 @@ As with everything, these rules are only guide lines. The best resource configur
 To complete the introduction to CUDA programming, we will go over a real example of CUDA Fortran code. For our example, we will examine code that preforms matrix multiplication on matrices of arbitrary dimensions. This makes use of all the concepts we've covered so far, so it will be a good exercise to examine. The code is given below.
 \lstinputlisting[caption={Matrix Multiplication Kernel}]{code_snippets/mat_mul.cuf}
 
-\notetodylan{make sure line numbers are correct} Lines 1 - 43 define a module which contains our matrix multiplication kernel. The kernel takes the matrices \texttt{inputA} and \texttt{inputB}, multiplies them together, and stores the result in \texttt{output}. The kernel has the \texttt{{\color{myblue}{attributes}}(global)} attribute, which means that it can be called from either device or host code. \texttt{rowA}, \texttt{colA}, \texttt{rowB}, and \texttt{colB} are the rows and columns of \texttt{inputA} and \texttt{inputB}. Because they are small and don't change over the course of the calculation, they get stored in a special memory type called constant memory. This is a small cache of read only memory that is 64KB in size and allows for constant values to be read very quickly. There are two shared variables, \texttt{s\_tileA} and \texttt{s\_tileB}. Each of these are square matrices with dimensions of \texttt{block\_dim} and these will be used to store sections or ``tiles" of \texttt{inputA} and \texttt{inputB} respectively. We want each thread to do all the calculations needed to compute a simple element of \texttt{output}. Line 13 and 14 use the \texttt{threadIdx}, \texttt{blockDim}, and \texttt{blockIdx} variables so that each thread get a unique combination of \texttt{x} and \texttt{y} values. \texttt{x} corresponds to a row of the \texttt{output} matrix and \texttt{y} corresponds to a column, so each thread is then uniquely mapped to an element of \texttt{output}. We will see in the host code how these index values are determined, but for now it is sufficient to know that there will be at least as many threads as elements of \texttt{output}.
+Lines 1 - 43 define a module which contains our matrix multiplication kernel. The kernel takes the matrices \texttt{inputA} and \texttt{inputB}, multiplies them together, and stores the result in \texttt{output}. The kernel has the \texttt{{\color{myblue}{attributes}}(global)} attribute, which means that it can be called from either device or host code. \texttt{rowA}, \texttt{colA}, \texttt{rowB}, and \texttt{colB} are the rows and columns of \texttt{inputA} and \texttt{inputB}. Because they are small and don't change over the course of the calculation, they get stored in a special memory type called constant memory. This is a small cache of read only memory that is 64KB in size and allows for constant values to be read very quickly. There are two shared variables, \texttt{s\_tileA} and \texttt{s\_tileB}. Each of these are square matrices with dimensions of \texttt{block\_dim} and these will be used to store sections or ``tiles" of \texttt{inputA} and \texttt{inputB} respectively. We want each thread to do all the calculations needed to compute a simple element of \texttt{output}. Line 13 and 14 use the \texttt{threadIdx}, \texttt{blockDim}, and \texttt{blockIdx} variables so that each thread get a unique combination of \texttt{x} and \texttt{y} values. \texttt{x} corresponds to a row of the \texttt{output} matrix and \texttt{y} corresponds to a column, so each thread is then uniquely mapped to an element of \texttt{output}. We will see in the host code how these index values are determined, but for now it is sufficient to know that there will be at least as many threads as elements of \texttt{output}.
 
-\notetodylan{make sure line numbers are correct} Lines 17 - 37 are where the actual calculation takes place. For each iteration of the loop, a different tile of \texttt{inputA} and \texttt{inputB} are fetched from the global memory and stored into the shared memory. The reason for using this tiling approach can be seen when we consider how the threads must read \texttt{inputB}. If we did not use shared memory, the loop would just be \texttt{total {\color{myyellow}{=}} total {\color{myyellow}{+}} inputA(x, i) {\color{myyellow}{*}} inputB(i, y)}. In this case, access to \texttt{inputA} is coalesced, but access to \texttt{inputB} is not. Therefore, the kernel will be stunted due this unoptimized memory usage. Instead, we load tiles in a coalesced manner into the shared memory, synchronize the threads, and then read through the shared memory in an uncoalesced fashion which carries no penalty. At the end of each loop, the tiles are moved in the \texttt{y} direction for \texttt{inputA} and in the \texttt{x} direction for \texttt{inputB}, and the process repeats. Notice how it is possible that a tile might fall on the boundary of an \texttt{input} matrix. This is why there are checks to make sure the coordinates of the tile don't exceed the boundaries of a matrix so we don't start reading garbage.
+Lines 17 - 37 are where the actual calculation takes place. For each iteration of the loop, a different tile of \texttt{inputA} and \texttt{inputB} are fetched from the global memory and stored into the shared memory. The reason for using this tiling approach can be seen when we consider how the threads must read \texttt{inputB}. If we did not use shared memory, the loop would just be \texttt{total {\color{myyellow}{=}} total {\color{myyellow}{+}} inputA(x, i) {\color{myyellow}{*}} inputB(i, y)}. In this case, access to \texttt{inputA} is coalesced, but access to \texttt{inputB} is not. Therefore, the kernel will be stunted due this unoptimized memory usage. Instead, we load tiles in a coalesced manner into the shared memory, synchronize the threads, and then read through the shared memory in an uncoalesced fashion which carries no penalty. At the end of each loop, the tiles are moved in the \texttt{y} direction for \texttt{inputA} and in the \texttt{x} direction for \texttt{inputB}, and the process repeats. Notice how it is possible that a tile might fall on the boundary of an \texttt{input} matrix. This is why there are checks to make sure the coordinates of the tile don't exceed the boundaries of a matrix so we don't start reading garbage.
 
-\notetodylan{make sure line numbers are correct} In the host code on lines 45 - 102, we have two sets of variables, those for the host and those for the device. Notice how device variables have the \texttt{{\color{mygreen}{device}}} attribute. For clarity, they are given the same name as their host variables but with a \texttt{d\_} prefix. Next we assign constant variables from line 5 to arbitrary values. Next we set up the random number generator, allocate the host matrices memory, and and randomly initialize the input matrices. Then the device variables are allocated memory and the host data is then uploaded to the GPU. On lines 87 and 88 are where the block and grid dimensions are setup. \texttt{blockDim} and \texttt{gridDim} are variables of \texttt{{\color{mygreen}{type}}(dim3)} which is a tuple that is defined in the \texttt{cudafor} module. The block has two dimensions containing \texttt{block\_dim}$^{2}$ threads. The grid also has two dimensions, and as we need one thread per element of \texttt{output} we preform a calculation which returns the minimum number of blocks that will cover it. Finally, we launch the kernel on line 90 using the \texttt{\color{myyellow}{<<< >>>}} operators to provide the grid and block dimensions, download the result from the GPU, and deallocate the memory.
+In the host code on lines 45 - 102, we have two sets of variables, those for the host and those for the device. Notice how device variables have the \texttt{{\color{mygreen}{device}}} attribute. For clarity, they are given the same name as their host variables but with a \texttt{d\_} prefix. Next we assign constant variables from line 5 to arbitrary values. Next we set up the random number generator, allocate the host matrices memory, and and randomly initialize the input matrices. Then the device variables are allocated memory and the host data is then uploaded to the GPU. On lines 87 and 88 are where the block and grid dimensions are setup. \texttt{blockDim} and \texttt{gridDim} are variables of \texttt{{\color{mygreen}{type}}(dim3)} which is a tuple that is defined in the \texttt{cudafor} module. The block has two dimensions containing \texttt{block\_dim}$^{2}$ threads. The grid also has two dimensions, and as we need one thread per element of \texttt{output} we preform a calculation which returns the minimum number of blocks that will cover it. Finally, we launch the kernel on line 90 using the \texttt{\color{myyellow}{<<< >>>}} operators to provide the grid and block dimensions, download the result from the GPU, and deallocate the memory.
 
 \section{Program flow}
 In this section, the control flow of a typical calculation is given.
@@ -1686,7 +1731,7 @@ In this section, the control flow of a typical calculation is given.
 \textit{Step 7} (optional). If jobtyp=`bsopt', then an optional basis set optimization is then carried out. This starts by assigning pointers to variables on the CPU and GPU through \textit{\textbf{hookup\_cpu}} and \textit{\textbf{hookup\_gpu}}. Then, the four wtbs parameters are optimized by \textit{\textbf{newuoa}}. \textit{\textbf{newuoa}} calls \textit{\textbf{calc\_energy}} which essentially reconstructs the basis set from new parameters from \textit{\textbf{newuoa}}, then repeats steps 2 - 6 and feeds the energy back into \textit{\textbf{newuoa}}. This repeats until optimal wtbs parameters have been found.
 
 \section{Alterations for CUDA}
-While almost all of the code from the original DFRATOM was modified in someway, the most extreme changes were the integral evaluation and the formation of the P and Q matrixes. Therefore, we will discuss these changes in detail in this section.
+While almost all of the code from the original DFRATOM\cite{MATSUOKA2001218} was modified in someway, the most extreme changes were the integral evaluation and the formation of the P and Q matrixes. Therefore, we will discuss these changes in detail in this section.
 
 \subsection{Two-electron Integrals}
 The original DFRATOM calculates the two electron integrals with a long series of nested \textbf{for} loops. Working from the outside in, the indices of the loops are $L$, $P$, $Q$, $M$, $R$, and $S$ where $L$ and $M$ are spinor symmetries, $P$ and $Q$ are basis functions of symmetry $L$, and $R$ and $S$ are basis functions of symmetry $M$. The pseudocode for these is shown in Algorithm \ref{origcode}. Where $nsym$ is the total number of symmetries, and $nbs(i)$ is the number of basis functions for symmetry species $i$. Thus, each set of J and K integrals is uniquely defined by its $L$, $M$, $P$, $Q$, $R$, and $S$ values. In order to have an effective CUDA implementation of this algorithm, we need to find a way to map these six numbers to CUDA threads. The simplest approach would be to map the values of $L$, $P$, and $Q$ onto the $threadIdx.x$, $threadIdx.y$, and $threadIdx.z$ variables for each thread, launch the needed number of blocks, and then have each thread loop over the remaining indices. The pseudocode for this can be seen in Algorithm \ref{easycode}. A similar method is employed by many other programs, and for larger systems it works perfectly well. But because this program is for only single atoms, problems begin to appear.
@@ -1916,10 +1961,10 @@ In this algorithm, variables with the $s\_$ prefix refer to those in the shared 
 \end{algorithmic}
 \end{algorithm}
 
-From here, the code for evaluating the integrals remains largely the same as the original code\citethis{}, except for some minor changes to allow for more efficient global or shared memory access. We also use a process referred to as ``grid-stride looping" where all these binary search algorithms have their \textbf{if} $i \le i_{max}$ \textbf{then} removed, and then are placed within the following loop: \textbf{for} $i = threadIdx.x + (blockIdx.x - 1) * blockDim.x$ to $i_{max}$, $i \mathrel{+}= blockDim.x * gridDim.x$ \textbf{do}. If we know the occupancy of the algorithm on the GPU beforehand, we can launch exactly the number of blocks that will fill the GPU. This reduces the overhead of block swapping and lets us further eke out some performance.
+From here, the new code for evaluating the integrals remains largely the same as the original, except for some minor changes to allow for more efficient global or shared memory access. We also use a process referred to as ``grid-stride looping" where all these binary search algorithms have their \textbf{if} $i \le i_{max}$ \textbf{then} removed, and then are placed within the following loop: \textbf{for} $i = threadIdx.x + (blockIdx.x - 1) * blockDim.x$ to $i_{max}$, $i \mathrel{+}= blockDim.x * gridDim.x$ \textbf{do}. If we know the occupancy of the algorithm on the GPU beforehand, we can launch exactly the number of blocks that will fill the GPU. This reduces the overhead of block swapping and lets us further eke out some performance.
 
 \subsection{Density Matrix Formation}
-The term in parenthesis in Equation \ref{FOCKM} corresponds to the non-relativistic density matrix. But as we are interested in relativistic calculations, it will need to be altered. Firstly, because a relativistic wavefunction has both large and small components, so too does its density matrix. Therefore, it will have two dimensions that span from 1 to $2K$ where dimensions 1 to $K$ are the large components and the rest are for small components. Secondly, the factor of 2 is replaced by the number of electrons that can occupy spinors of symmetry $\mu$. Its matrix and vector representations are shown in Figures \ref{fig:dtmxmat} and \ref{fig:dtmxvec} respectively. Its mathematical form is given in Equation \ref{RDCMX}
+The term in parenthesis in Equation \ref{FOCKM} corresponds to the non-relativistic density matrix. But as we are interested in relativistic calculations, it will need to be altered. Firstly, because a relativistic wavefunction has both large and small components, so too does its density matrix. Therefore, it will have two dimensions that span from 1 to $2K$ where dimensions 1 to $K$ are the large components and the rest are for small components. Secondly, the factor of 2 is replaced by the number of electrons that can occupy spinors of symmetry $\mu$. Its matrix and vector representations are shown in Figures \ref{fig:dtmxmat} and \ref{fig:dtmxvec} respectively. Its mathematical form is given in Equation \ref{RDCMX}\cite{MATSUOKA2001218}
 
 \begin{equation}
 \label{RDCMX}
@@ -1954,7 +1999,7 @@ The total density matrix is $\textbf{D$_{\textbf{T}}$} =  \textbf{D$_{\textbf{C}
 
 \subsubsection{P Q Super Matrices}
 \label{sec:PQmeth}
-With the density matrices in hand we can begin to combine the two-electron integrals from the previous section. These integrals have the following form.
+With the density matrices in hand we can begin to combine the two-electron integrals from the previous section. These integrals have the following form.\cite{MATSUOKA2001218}
 
 \begin{equation}
 \label{2EINTS}
@@ -1972,7 +2017,7 @@ With the density matrices in hand we can begin to combine the two-electron integ
 
 where the subscripts $L$ and $S$ refer to the large and small components respectively. $I$ is a function that returns the values of $x$ and $y$ from Equations \ref{ylpq} and \ref{xmrs} where $L=\lambda$ and $M=\mu$. From here, all subscripts of \textbf{X} will be implied to go through this $I$ function.
 
-The \textbf{P} and \textbf{Q} super matrices have a similar layout to the density matrices. The elements of \textbf{P} have the following form
+The \textbf{P} and \textbf{Q} super matrices have a similar layout to the density matrices. The elements of \textbf{P} have the following form\cite{MATSUOKA2001218}
 
 \begin{equation}
 \label{PSMTX}
@@ -1994,9 +2039,7 @@ Forming the P and Q matrices proved to be the most difficult part of this progra
 Two different attempts were made to try and accelerate this algorithm. Each tried to exploit a different property of GPUs. One attempted to combat the amount of floating point operations to perform by distributing the amount of work to as many threads as possible. This will be referred to as the Multiple Threads Single Element (MTSE) algorithm. The second one tried to deal with the amount of global memory reads by making the most of each read. This will be referred to as Single Thread Single Element (STSE) algorithm. Each will be described in the sections below.
 
 \subsubsection{MTSE Algorithm}
-\notetodylan{The acronyms for these algorithms don't really describe what each does, think of something better}
-
-As previously stated, the purpose of the MTSE algorithm is to distribute the amount of work needed to be done to as many threads as possible. This was achieved by having multiple threads each computing two of the multiplications needed for a single element of two matrices in Equation \ref{PSMTX}, and then combining the products of these multiplications in parallel. These two tasks were performed by two separate kernels and the pseudocode for each is shown in Algorithms \ref{MTSE_K1} and \ref{MTSE_K2} respectively. The pseudocode shows only the calculation for the \notetodylan{the final algorithm has changed from 2 to 1 kernel, update the code  \textbf{P} matrices, and Algorithm \ref{MTSE_K2} shows only the calculation of the \textbf{P$^{LL}$} portion.} 
+As previously stated, the purpose of the MTSE algorithm is to distribute the amount of work needed to be done to as many threads as possible. This was achieved by having multiple threads each computing two of the multiplications needed for a single element of two matrices in Equation \ref{PSMTX}, and then combining the products of these multiplications in parallel. These two tasks were performed by two separate kernels and the pseudocode for each is shown in Algorithms \ref{MTSE_K1} and \ref{MTSE_K2} respectively. The pseudocode shows only the calculation for the 
 
 \begin{algorithm}
 \caption{Kernel 1 for MTSE}
@@ -2179,7 +2222,6 @@ In the case of the work in this Thesis, the resource bottleneck for my kernels w
 	\kernel{swapcol}		&	(32, 16, 1)		&	10		&	0					\\
 \bottomrule
 \end{tabular}\\
-\notetodylan{replace all instances of \kernel{formpq\_alg1} with whatever acronym you decide on.}
 \end{table}
 
 Of these kernels, \kernel{eint2} and the \kernel{formpq\_alg} kernels take up the bulk of the time needed in a typical calculation. This is in part due to the exponential growth in the number of two-electron integrals, but it is also caused by the amount of register spilling that each kernel will have. As stated in section \ref{sec:gpumem} when the amount of registers a thread needs exceeds the amount that is available, it will begin to store the data in the global memory. As global memory is the slowest available memory type, this is very undesirable. To counteract this, many variables that would otherwise be better stored in register memory were moved into the shared memory. But this is also undesirable because it means that there will be less shared memory available for storing data that needs to be read frequently from global memory. This in turn leads to more frequent reads from the global memory. Solving this balancing act required many iterations of testing, moving variables around, compiling, and retesting. Eventually, I arrived at the configurations shown above. Note how each kernel uses a block containing 512 threads. This number was chosen because it is the largest possible block size that can run when the required number of register per thread exceeds 32. 512 is also a good block size because in instances where a kernel is not limited by register or shared memory usage, it allows for the maximum number of threads per SM (1536) to be run.
@@ -2211,7 +2253,6 @@ Table \ref{tab:2eintprof} and Figure \ref{fig:2eintprof} show the results of pro
 $^{\textrm{a}}$ For only the upper triangle of one of the 8 \textbf{X} matrices. \\
 $^{\textrm{b}}$ Speedup comparing just the time of \kernel{eint2} to the CPU time. \\
 $^{\textrm{c}}$ Speedup comparing the time of \kernel{eint2} and \kernel{binary\_search} to the CPU time. \\
-\notetodylan{include the hardware info}
 \end{table}
 
 \begin{figure}[h!]
@@ -2245,7 +2286,6 @@ As explained in section \ref{sec:PQmeth}, there were two different attempts to s
 \bottomrule
 \end{tabular}
 \end{center}
-\notetodylan{include the hardware info}
 \end{table}
 
 \begin{table}[h!]
@@ -2267,7 +2307,6 @@ As explained in section \ref{sec:PQmeth}, there were two different attempts to s
 \bottomrule
 \end{tabular}
 \end{center}
-\notetodylan{include the hardware info}
 \end{table}
 
 \begin{figure}[h!]
@@ -2284,14 +2323,14 @@ There are several reasons this could be the case. The first due to the poor glob
 \begin{figure}
 \includegraphics[width=1\textwidth]{Figures/eint2_mat_lots.png}
 \caption[Integrals Needed for the First Element of \textbf{P}: Matrix Representation]
-{Integrals Needed for the First Element of \textbf{P}: Matrix Representation. This figure shows the top triangle of the symmetric two-electron integral matrix in a matrix representation. The required integrals have been highlighted with a green boarder. The basis set used had $nsym=3$ with $nbs(i) = (10, 10, 10)$. For clarity, the boxes have been coloured based on the spinor symmetries that they contain. \notetodylan{talk about this in text}}
+{Integrals Needed for the First Element of \textbf{P}: Matrix Representation. This figure shows the top triangle of the symmetric two-electron integral matrix in a matrix representation. The required integrals have been highlighted with a green boarder. The basis set used had $nsym=3$ with $nbs(i) = (10, 10, 10)$. For clarity, the boxes have been coloured based on the spinor symmetries that they contain.}
 \label{fig:eint2matlots}
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{Figures/eint2_vec_lots.png}
 \caption[Integrals Needed for the First Element of \textbf{P}: Vector Representation]
-{Integrals Needed for the First Element of \textbf{P}: Vector Representation. This figure shows the top triangle of the symmetric two-electron integral matrix in a vector representation. The required integrals have been highlighted with a green boarder.  The spreading out of the elements means that reads to them can not be done effectively. The basis set used had $nsym=3$ with $nbs(i) = (10, 10, 10)$. For clarity, the boxes have been coloured in the same way as Figure \ref{fig:eint2matlots}. \notetodylan{talk about this in text}}
+{Integrals Needed for the First Element of \textbf{P}: Vector Representation. This figure shows the top triangle of the symmetric two-electron integral matrix in a vector representation. The required integrals have been highlighted with a green boarder.  The spreading out of the elements means that reads to them can not be done effectively. The basis set used had $nsym=3$ with $nbs(i) = (10, 10, 10)$. For clarity, the boxes have been coloured in the same way as Figure \ref{fig:eint2matlots}.}
 \label{fig:eint2matlots}
 \end{figure}
 

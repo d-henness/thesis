@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.13)  27 JUN 2018 12:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.13)  27 JUN 2018 14:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -503,7 +503,27 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) [20]
 (./code_snippets/BS_sub_auto.sh [21] [22] [23] [24] [25] [26] [27]) [28]
-(./code_snippets/BS_find_best.sh) [29] [30] [31] [32] [33]
+(./code_snippets/BS_find_best.sh) [29] [30] [31]
+Overfull \hbox (28.49303pt too wide) in alignment at lines 1713--1720
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.49303pt too wide) in alignment at lines 1720--1726
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.49303pt too wide) in alignment at lines 1726--1747
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.49303pt too wide) in alignment at lines 1747--1760
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[32] [33]
 Chapter 3.
 [34
 
@@ -800,7 +820,7 @@ public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (85 pages, 1159609 bytes).
+Output written on thesis.pdf (85 pages, 1159739 bytes).
 PDF statistics:
  369 PDF objects out of 1000 (max. 8388607)
  247 compressed objects within 3 object streams

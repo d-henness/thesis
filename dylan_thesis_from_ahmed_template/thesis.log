@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.13)  26 JUN 2018 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.13)  27 JUN 2018 12:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -503,280 +503,280 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ) [20]
 (./code_snippets/BS_sub_auto.sh [21] [22] [23] [24] [25] [26] [27]) [28]
-(./code_snippets/BS_find_best.sh) [29] [30] [31] [32]
+(./code_snippets/BS_find_best.sh) [29] [30] [31] [32] [33]
 Chapter 3.
-[33
+[34
 
-] [34] [35]
-<Figures/gpu_arc.png, id=160, 803.0pt x 1057.9525pt>
+] [35] [36]
+<Figures/gpu_arc.png, id=163, 803.0pt x 1057.9525pt>
 File: Figures/gpu_arc.png Graphic file (type png)
 <use Figures/gpu_arc.png>
-Package pdftex.def Info: Figures/gpu_arc.png  used on input line 1690.
+Package pdftex.def Info: Figures/gpu_arc.png  used on input line 1788.
 (pdftex.def)             Requested size: 389.89749pt x 513.70364pt.
 
 
-LaTeX Warning: Float too large for page by 3.77364pt on input line 1694.
+LaTeX Warning: Float too large for page by 3.77364pt on input line 1792.
 
-[36] [37 <./Figures/gpu_arc.png (PNG copy)>] (./code_snippets/mat_mul.cuf
-[38] [39]) [40]
-Overfull \hbox (19.58568pt too wide) in paragraph at lines 1721--1722
+[37] [38 <./Figures/gpu_arc.png (PNG copy)>] (./code_snippets/mat_mul.cuf
+[39] [40]) [41]
+Overfull \hbox (19.58568pt too wide) in paragraph at lines 1819--1820
 []\OT1/cmr/m/it/12 Step 2\OT1/cmr/m/n/12 . The cal-cu-la-tion of small ar-rays 
 and other con-stants is per-formed by \OT1/cmr/bx/it/12 calc[]parameters
  []
 
-[41] [42] [43] [44]
-<Figures/30_25_20_15_naive_layout.png, id=191, 1957.3125pt x 2007.5pt>
+[42] [43] [44] [45]
+<Figures/30_25_20_15_naive_layout.png, id=194, 1957.3125pt x 2007.5pt>
 File: Figures/30_25_20_15_naive_layout.png Graphic file (type png)
 <use Figures/30_25_20_15_naive_layout.png>
 Package pdftex.def Info: Figures/30_25_20_15_naive_layout.png  used on input li
-ne 1803.
+ne 1901.
 (pdftex.def)             Requested size: 469.75499pt x 481.77922pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/gen_mat_block_layout.png, id=192, 1003.75pt x 1001.7425pt>
+<Figures/gen_mat_block_layout.png, id=195, 1003.75pt x 1001.7425pt>
 File: Figures/gen_mat_block_layout.png Graphic file (type png)
 <use Figures/gen_mat_block_layout.png>
 Package pdftex.def Info: Figures/gen_mat_block_layout.png  used on input line 1
-812.
+910.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/gen_vec_block_layout.png, id=193, 1003.75pt x 1286.8075pt>
+<Figures/gen_vec_block_layout.png, id=196, 1003.75pt x 1286.8075pt>
 File: Figures/gen_vec_block_layout.png Graphic file (type png)
 <use Figures/gen_vec_block_layout.png>
 Package pdftex.def Info: Figures/gen_vec_block_layout.png  used on input line 1
-819.
+917.
 (pdftex.def)             Requested size: 469.75499pt x 602.22742pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[45]
+[46]
 
-LaTeX Warning: Text page 46 contains only floats.
+LaTeX Warning: Text page 47 contains only floats.
 
-[46 <./Figures/30_25_20_15_naive_layout.png (PNG copy)>] [47 <./Figures/gen_mat
-_block_layout.png (PNG copy)>] [48 <./Figures/gen_vec_block_layout.png (PNG cop
+[47 <./Figures/30_25_20_15_naive_layout.png (PNG copy)>] [48 <./Figures/gen_mat
+_block_layout.png (PNG copy)>] [49 <./Figures/gen_vec_block_layout.png (PNG cop
 y)>]
-<Figures/eint2_mat.png, id=207, 1003.75pt x 1001.7425pt>
+<Figures/eint2_mat.png, id=210, 1003.75pt x 1001.7425pt>
 File: Figures/eint2_mat.png Graphic file (type png)
 <use Figures/eint2_mat.png>
-Package pdftex.def Info: Figures/eint2_mat.png  used on input line 1857.
+Package pdftex.def Info: Figures/eint2_mat.png  used on input line 1955.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/eint2_vec.png, id=208, 1003.75pt x 787.94376pt>
+<Figures/eint2_vec.png, id=211, 1003.75pt x 787.94376pt>
 File: Figures/eint2_vec.png Graphic file (type png)
 <use Figures/eint2_vec.png>
-Package pdftex.def Info: Figures/eint2_vec.png  used on input line 1864.
+Package pdftex.def Info: Figures/eint2_vec.png  used on input line 1962.
 (pdftex.def)             Requested size: 469.75499pt x 368.75859pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[49
+[50
 
-] [50 <./Figures/eint2_mat.png (PNG copy)>] [51 <./Figures/eint2_vec.png (PNG c
-opy)>] [52]
-<Figures/dtmx_mat.png, id=222, 1003.75pt x 1001.7425pt>
+] [51 <./Figures/eint2_mat.png (PNG copy)>] [52 <./Figures/eint2_vec.png (PNG c
+opy)>] [53]
+<Figures/dtmx_mat.png, id=225, 1003.75pt x 1001.7425pt>
 File: Figures/dtmx_mat.png Graphic file (type png)
 <use Figures/dtmx_mat.png>
-Package pdftex.def Info: Figures/dtmx_mat.png  used on input line 1975.
+Package pdftex.def Info: Figures/dtmx_mat.png  used on input line 2073.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
-<Figures/dtmx_vec.png, id=223, 1003.75pt x 713.66624pt>
+<Figures/dtmx_vec.png, id=226, 1003.75pt x 713.66624pt>
 File: Figures/dtmx_vec.png Graphic file (type png)
 <use Figures/dtmx_vec.png>
-Package pdftex.def Info: Figures/dtmx_vec.png  used on input line 1982.
+Package pdftex.def Info: Figures/dtmx_vec.png  used on input line 2080.
 (pdftex.def)             Requested size: 469.75499pt x 333.99663pt.
- [53] [54 <./Figures/dtmx_mat.png (PNG copy)>] [55 <./Figures/dtmx_vec.png (PNG
- copy)>] [56] [57] [58] [59] [60] [61] [62]
-Overfull \hbox (13.66783pt too wide) in paragraph at lines 2238--2238
+ [54] [55 <./Figures/dtmx_mat.png (PNG copy)>] [56 <./Figures/dtmx_vec.png (PNG
+ copy)>] [57] [58] [59] [60] [61] [62] [63]
+Overfull \hbox (13.66783pt too wide) in paragraph at lines 2336--2336
 []|\OT1/cmr/bx/it/12 binary[]search|  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2253--2256
+Underfull \hbox (badness 10000) in paragraph at lines 2351--2354
 
  []
 
-<Figures/eint2prof.png, id=255, 1003.75pt x 625.33624pt>
+<Figures/eint2prof.png, id=258, 1003.75pt x 625.33624pt>
 File: Figures/eint2prof.png Graphic file (type png)
 <use Figures/eint2prof.png>
-Package pdftex.def Info: Figures/eint2prof.png  used on input line 2259.
+Package pdftex.def Info: Figures/eint2prof.png  used on input line 2357.
 (pdftex.def)             Requested size: 469.75499pt x 292.6581pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[63]
+[64]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/formpqprof.png, id=259, 1003.75pt x 637.38126pt>
+<Figures/formpqprof.png, id=263, 1003.75pt x 637.38126pt>
 File: Figures/formpqprof.png Graphic file (type png)
 <use Figures/formpqprof.png>
-Package pdftex.def Info: Figures/formpqprof.png  used on input line 2313.
+Package pdftex.def Info: Figures/formpqprof.png  used on input line 2411.
 (pdftex.def)             Requested size: 469.75499pt x 298.29517pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[64 <./Figures/eint2prof.png (PNG copy)>]
-<Figures/eint2_mat_lots.png, id=264, 1003.75pt x 1001.7425pt>
+[65 <./Figures/eint2prof.png (PNG copy)>]
+<Figures/eint2_mat_lots.png, id=267, 1003.75pt x 1001.7425pt>
 File: Figures/eint2_mat_lots.png Graphic file (type png)
 <use Figures/eint2_mat_lots.png>
-Package pdftex.def Info: Figures/eint2_mat_lots.png  used on input line 2324.
+Package pdftex.def Info: Figures/eint2_mat_lots.png  used on input line 2422.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
- [65]
-<Figures/eint2_vec_lots.png, id=268, 2007.5pt x 1238.6275pt>
+ [66]
+<Figures/eint2_vec_lots.png, id=271, 2007.5pt x 1238.6275pt>
 File: Figures/eint2_vec_lots.png Graphic file (type png)
 <use Figures/eint2_vec_lots.png>
-Package pdftex.def Info: Figures/eint2_vec_lots.png  used on input line 2331.
+Package pdftex.def Info: Figures/eint2_vec_lots.png  used on input line 2429.
 (pdftex.def)             Requested size: 469.75499pt x 289.83011pt.
 
-Overfull \hbox (15.54016pt too wide) in paragraph at lines 2347--2362
+Overfull \hbox (15.54016pt too wide) in paragraph at lines 2445--2460
  [] 
  []
 
-[66 <./Figures/formpqprof.png (PNG copy)>] [67 <./Figures/eint2_mat_lots.png (P
-NG copy)>] [68 <./Figures/eint2_vec_lots.png (PNG copy)>]
-Overfull \hbox (15.54016pt too wide) in paragraph at lines 2369--2384
+[67 <./Figures/formpqprof.png (PNG copy)>] [68 <./Figures/eint2_mat_lots.png (P
+NG copy)>] [69 <./Figures/eint2_vec_lots.png (PNG copy)>]
+Overfull \hbox (15.54016pt too wide) in paragraph at lines 2467--2482
  [] 
  []
 
-<Figures/totaltimeprof.png, id=278, 1003.75pt x 642.4pt>
+<Figures/totaltimeprof.png, id=281, 1003.75pt x 642.4pt>
 File: Figures/totaltimeprof.png Graphic file (type png)
 <use Figures/totaltimeprof.png>
-Package pdftex.def Info: Figures/totaltimeprof.png  used on input line 2388.
+Package pdftex.def Info: Figures/totaltimeprof.png  used on input line 2486.
 (pdftex.def)             Requested size: 469.75499pt x 300.64395pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[69] [70 <./Figures/totaltimeprof.png (PNG copy)>]
-Overfull \hbox (4.57948pt too wide) in paragraph at lines 2411--2411
+[70] [71 <./Figures/totaltimeprof.png (PNG copy)>]
+Overfull \hbox (4.57948pt too wide) in paragraph at lines 2509--2509
 []\OT1/cmr/m/n/12 'energy'| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2407--2415
+Underfull \hbox (badness 10000) in paragraph at lines 2505--2513
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2415--2426
+Underfull \hbox (badness 10000) in paragraph at lines 2513--2524
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2426--2437
+Underfull \hbox (badness 10000) in paragraph at lines 2524--2535
 
  []
 
-[71]
-Overfull \hbox (4.38567pt too wide) in paragraph at lines 2441--2441
+[72]
+Overfull \hbox (4.38567pt too wide) in paragraph at lines 2539--2539
 []\OT1/cmr/m/n/12 wtbspara| 
  []
 
 
-Underfull \hbox (badness 3895) in paragraph at lines 2446--2447
+Underfull \hbox (badness 3895) in paragraph at lines 2544--2545
 []\OT1/cmr/m/n/12 Where in the $[]\OML/cmm/m/it/12 ^^P$ \OT1/cmr/m/n/12 pool ea
 ch sym-me-
  []
 
 
-Underfull \hbox (badness 1122) in paragraph at lines 2446--2447
+Underfull \hbox (badness 1122) in paragraph at lines 2544--2545
 \OT1/cmr/m/n/12 try starts tak-ing ex-po-nents from (de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2438--2451
+Underfull \hbox (badness 10000) in paragraph at lines 2536--2549
 
  []
 
 
-Overfull \hbox (17.11868pt too wide) in paragraph at lines 2452--2466
+Overfull \hbox (17.11868pt too wide) in paragraph at lines 2550--2564
 []\OT1/cmr/m/n/12 $newuoa has to be given if job-type='bsopt'. Re-fer to the ne
 wuoa$[]$documentation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2452--2466
+Underfull \hbox (badness 10000) in paragraph at lines 2550--2564
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2452--2466
+Underfull \hbox (badness 10000) in paragraph at lines 2550--2564
 
  []
 
 
-Underfull \hbox (badness 5133) in paragraph at lines 2472--2473
+Underfull \hbox (badness 5133) in paragraph at lines 2570--2571
 \OT1/cmr/m/n/12 bi-na-tions of spinor oc-cu-pan-cies (de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2466--2479
+Underfull \hbox (badness 10000) in paragraph at lines 2564--2577
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2466--2479
+Underfull \hbox (badness 10000) in paragraph at lines 2564--2577
 
  []
 
-[72]
-Underfull \hbox (badness 3396) in paragraph at lines 2487--2488
+[73]
+Underfull \hbox (badness 3396) in paragraph at lines 2585--2586
 []\OT1/cmr/m/n/12 Convergence limit for the large-large
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2487--2488
+Underfull \hbox (badness 10000) in paragraph at lines 2585--2586
 \OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
  []
 
 
-Underfull \hbox (badness 2653) in paragraph at lines 2488--2489
+Underfull \hbox (badness 2653) in paragraph at lines 2586--2587
 []\OT1/cmr/m/n/12 Convergence limit for the small-large
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2488--2489
+Underfull \hbox (badness 10000) in paragraph at lines 2586--2587
 \OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
  []
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 2489--2490
+Underfull \hbox (badness 2020) in paragraph at lines 2587--2588
 []\OT1/cmr/m/n/12 Convergence limit for the small-small
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2489--2490
+Underfull \hbox (badness 10000) in paragraph at lines 2587--2588
 \OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2479--2492
+Underfull \hbox (badness 10000) in paragraph at lines 2577--2590
 
  []
 
-[73] (./thesis.bbl [74
+[74] (./thesis.bbl [75
 
 
-]) [75] (./thesis.aux)
+]) [76] (./thesis.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  )
 (\end occurred when \ifx on line 678 was incomplete) 
 Here is how much of TeX's memory you used:
- 7481 strings out of 492646
- 103665 string characters out of 6129563
- 406811 words of memory out of 5000000
- 11191 multiletter control sequences out of 15000+600000
+ 7483 strings out of 492646
+ 103685 string characters out of 6129563
+ 406984 words of memory out of 5000000
+ 11193 multiletter control sequences out of 15000+600000
  15999 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,23n,48p,1870b,1775s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -800,10 +800,10 @@ public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (84 pages, 1157746 bytes).
+Output written on thesis.pdf (85 pages, 1159609 bytes).
 PDF statistics:
- 365 PDF objects out of 1000 (max. 8388607)
- 244 compressed objects within 3 object streams
+ 369 PDF objects out of 1000 (max. 8388607)
+ 247 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

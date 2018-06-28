@@ -1,12 +1,12 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {1.1}{\ignorespaces The first few exact solutions for the hydrogen atom wavefunction.\relax }}{3}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Basis sets optimized using rWTBS}}{30}
-\contentsline {table}{\numberline {2.2}{\ignorespaces Basis sets optimized using cudaDFRATOM}}{32}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Basis sets optimized using rWTBS}}{26}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Basis sets optimized using cudaDFRATOM}}{29}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Kernel Resource Usage\relax }}{63}
-\contentsline {table}{\numberline {3.2}{\ignorespaces \textit {\textbf {eint2}} Kernel Performance}}{64}
-\contentsline {table}{\numberline {3.3}{\ignorespaces \textit {\textbf {formpq\_alg1}} Kernel Profiling Results.}}{66}
-\contentsline {table}{\numberline {3.4}{\ignorespaces \textit {\textbf {formpq\_alg2}} Kernel Profiling Results.}}{66}
-\contentsline {table}{\numberline {3.5}{\ignorespaces Total Speedup of Alg1}}{70}
-\contentsline {table}{\numberline {3.6}{\ignorespaces Total Speedup of Alg2}}{70}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Kernel Resource Usage\relax }}{59}
+\contentsline {table}{\numberline {3.2}{\ignorespaces \textit {\textbf {eint2}} Kernel Performance}}{60}
+\contentsline {table}{\numberline {3.3}{\ignorespaces \textit {\textbf {formpq\_alg1}} Kernel Profiling Results.}}{62}
+\contentsline {table}{\numberline {3.4}{\ignorespaces \textit {\textbf {formpq\_alg2}} Kernel Profiling Results.}}{62}
+\contentsline {table}{\numberline {3.5}{\ignorespaces Total Speedup of Alg1}}{66}
+\contentsline {table}{\numberline {3.6}{\ignorespaces Total Speedup of Alg2}}{66}

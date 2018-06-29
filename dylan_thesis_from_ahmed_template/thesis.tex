@@ -10,7 +10,7 @@
 \newcommand{\kernel}[1]{\textit{\textbf{#1}}}
 \newcommand{\comm}[1]{\textbf{#1}}
 
-\usepackage{graphicx,epsfig,subfig}
+\usepackage{graphicx,epsfig}
 \usepackage{amsmath}
 \usepackage{uathesis}
 \usepackage{lscape}
@@ -40,6 +40,7 @@
 \usepackage{algorithmic}
 \usepackage{amsmath}
 \usepackage{listings}
+\usepackage{subcaption}
 
 
 % options for listings
@@ -1543,7 +1544,7 @@ We decided to use a somewhat novel method of generating our basis sets. We begin
 
 This procedure is perhaps a bit clunky, so lets work through an example using Ne. Ne has both s and p type orbitals, and so to will our basis set. We might initially guess that no more than 26 functions per symmetry will enough to get the accuracy we want, so we start with a basis set of size s(1:26)p(1:26). We then optimize the $\alpha$, $\beta$, $\delta$, and $\gamma$ parameters for a basis set of this size. We make sure that the energy using a basis set of this size produces accurate enough results, and then be begin to trim off the fat. We carry over the WTBS parameters optimized in the last step, and generate input files corresponding to basis sets of size s(1:26)p(1:15) to s(1:26)p(1:26) (12 calculations in total) to try and determine the minimum number of contracted functions we will need to accurately describe the p orbitals. After reoptimizing the WTBS parameters, we find that while s(1:26)p(1:15) is too small to be accurate enough, s(1:26)p(1:16) is still inside the threshold we want. So, we take the WTBS parameters from this calculation, and use them to generate new basis sets ranging in size from s(1:16)p(1:16) to s(1:26)p(1:16) (so we are trying to eliminate contracted functions from the s orbitals). Here we don't get as lucky as we did with the p orbitals, and we find that s(1:23)p(1:16) is the smallest basis set that we can use. Now, we want to eliminate diffuse functions. Carrying over the WTBS parameter from the last acceptable basis set, we generate basis sets of size s(1:23)p(1:16) to s(1:23)p(5:16). We find that trying to remove any more functions makes the basis set unusable so we stick with s(1:23)p(1:16). We could try to remove diffuse functions from the s symmetry, but experience teaches that s needs all the functions to be accurate, so we don't bother.
 
-This process has a major drawback in that it requires a lot of computer power to run efficiently. But this is not really a problem if access to large computer clusters is available. Additionally, considering that calculations for the chain 1-8 can be run in parallel for different atoms, this optimization process is trivially parallel. The advantages of this process are twofold: it finds a very small basis set that is still accurate and it is completely automatable. If there are no problems with individual calculations not converging, the output files never even need to be manually (and intellectually) examined! We generated non-relativistic basis sets using the rwtbs program\citethis and the cudaDFRATOM program which is outlined in detail in Chapter \ref{chp:cuda_dfratom}.
+This process has a major drawback in that it requires a lot of computer power to run efficiently. But this is not really a problem if access to large computer clusters is available. Additionally, considering that calculations for the chain 1-8 can be run in parallel for different atoms, this optimization process is trivially parallel. The advantages of this process are twofold: it finds a very small basis set that is still accurate and it is completely automatable. If there are no problems with individual calculations not converging, the output files never even need to be manually (and intellectually) examined! We generated non-relativistic basis sets for elements 2-86 using the rwtbs program\citethis and relativistic basis sets for elements 55-86 using the cudaDFRATOM program which is outlined in detail in Chapter \ref{chp:cuda_dfratom}.
 
 \section{Discussion}
 \subsection{Automating Optimization}
@@ -1560,7 +1561,7 @@ Once the flags have been parsed, the script makes a directory with the same name
 This script takes in one argument, the relative error we are looking for in a calculation. It enters each of the subdirectories made by BS\_sub\_auto.sh and scans the output files for the relative error compared to numerical calculations. It finds the file with the smallest basis set that is still under the error threshold, and copies the input and output files for that calculation into a new directory called ``best". The user can then repeat this process for as many orbitals as they wish. There are also similar scripts for cudaDFRATOM which are given in \notetodylan{Appendix whatever}.
 
 \subsection{Optimized Non-Relativistic Basis Sets}
-The optimized WTBS parameters and basis set sizes for elements 2 to 86 are shown in Table \ref{tab:BStab}.
+The optimized non-relativistic WTBS parameters and basis set sizes for elements 2-86 are shown in Table \ref{tab:BStab}. Relativistic WTBS parameters for elements 55-86 are shown in Table \ref{tab:BStab_rel}.
 
 \begin{longtable}{l l r r r r r r r r}
 \caption[Basis sets optimized using rwtbs]{Basis sets optimized using rwtbs. We did not have literature data for some elements. These elements are marked with a *. The size of the basis set for these elements was determined by using the size of the nearest elements.}\label{tab:BStab} \\
@@ -1575,102 +1576,103 @@ The optimized WTBS parameters and basis set sizes for elements 2 to 86 are shown
 			&	Symbol	&			&			&			&				&		&		&		&		\\
 \midrule
 \endhead
-02 He & $^{1}S$ & 8.140$\times10^{-2}$ & 1.953 & 4.504 & 1.515 & (1:18) \\
-03 Li & $^{2}S$ & 1.596$\times10^{-2}$ & 1.933 & 5.701 & 1.573 & (1:22)  \\
-04 Be & $^{1}S$ & 2.647$\times10^{-2}$ & 1.938 & 5.841 & 1.594 & (1:22) \\	
-05 B & $^{2}P$ & 3.238$\times10^{-2}$ & 1.948 & 5.573 & 1.523 & (1:22) & (1:15) \\
-06 C & $^{3}P$ & 4.613$\times10^{-2}$ & 1.941 & 4.717 & 1.317 & (1:23) & (1:15) \\
-07 N & $^{4}S$ & 5.976$\times10^{-2}$ & 1.923 & 5.183 & 1.442 & (1:23) & (1:16)  \\
-08 O & $^{3}P$ & 6.967$\times10^{-2}$ & 1.936 & 5.170 & 1.426 & (1:23) & (1:16) \\
-09 F & $^{2}P$ & 8.321$\times10^{-2}$ & 1.942 & 5.084 & 1.408 & (1:23) & (1:16) \\
-10 Ne & $^{1}S$ & 9.943$\times10^{-2}$ & 1.945 & 4.988 & 1.392 & (1:23) & (1:16) \\
-11 Na & $^{2}S$ & 1.696$\times10^{-2}$ & 1.950 & 6.056 & 1.469 & (1:26) & (3:19)  \\
-12 Mg & $^{1}S$ & 2.375$\times10^{-2}$ & 1.932 & 5.686 & 1.430 & (1:26) & (3:19) \\
-13 Al & $^{2}P$ & 2.239$\times10^{-2}$ & 1.898 & 5.555 & 1.413 & (1:27) & (1:20)  \\
-14 Si & $^{3}P$ & 3.352$\times10^{-2}$ & 1.921 & 5.419 & 1.410 & (1:26) & (1:19)  \\
-15 P & $^{4}S$ & 4.410$\times10^{-2}$ & 1.907 & 5.196 & 1.390 & (1:26) & (1:19)     \\
-16 S & $^{3}P$ & 5.004$\times10^{-2}$ & 1.896 & 4.962 & 1.362 & (1:26) & (1:19)     \\
-17 Cl & $^{2}P$ & 5.831$\times10^{-2}$ & 1.886 & 4.784 & 1.344 & (1:26) & (1:19)     \\
-18 Ar & $^{1}S$ & 6.834$\times10^{-2}$ & 1.878 & 4.654 & 1.331 & (1:26) & (1:19)     \\
-19 K & $^{2}S$ & 1.392$\times10^{-2}$ & 1.889 & 6.354 & 1.523 & (1:28) & (3:22)     \\
-20 Ca & $^{1}S$ & 1.837$\times10^{-2}$ & 1.874 & 6.109 & 1.504 & (1:28) & (3:22)     \\
-21 Sc & $^{2}D$ & 2.040$\times10^{-2}$ & 1.878 & 6.160 & 1.505 & (1:28) & (3:22) & (2:16)   \\
-22 Ti & $^{3}F$ & 2.218$\times10^{-2}$ & 1.886 & 6.247 & 1.508 & (1:28) & (3:22) & (2:16)   \\
-23 V & $^{4}F$ & 2.361$\times10^{-2}$ & 1.887 & 6.573 & 1.507 & (1:29) & (3:23) & (2:16)   \\
-24 Cr & $^{7}S$ & 2.345$\times10^{-2}$ & 1.865 & 5.348 & 1.407 & (1:29) & (3:22) & (2:17)   \\
-25 Mn & $^{6}S$ & 2.572$\times10^{-2}$ & 1.865 & 5.336 & 1.407 & (1:29) & (3:22) & (2:17)   \\
-26 Fe & $^{5}D$ & 2.621$\times10^{-2}$ & 1.869 & 5.301 & 1.395 & (1:29) & (3:22) & (3:17)   \\
-27 Co & $^{4}F$ & 2.643$\times10^{-2}$ & 1.871 & 5.905 & 1.413 & (1:29) & (4:23) & (3:17)   \\
-28 Ni & $^{3}F$ & 2.882$\times10^{-2}$ & 1.875 & 5.935 & 1.413 & (1:29) & (3:23) & (3:17)   \\
-29 Cu & $^{2}S$ & 2.283$\times10^{-2}$ & 1.857 & 5.485 & 1.413 & (1:30) & (4:23) & (3:18)   \\
-30 Zn & $^{1}S$ & 3.297$\times10^{-2}$ & 1.881 & 5.817 & 1.339 & (1:30) & (3:24) & (2:17)   \\
-31 Ga & $^{2}P$ & 2.742$\times10^{-2}$ & 1.863 & 5.703 & 1.462 & (1:30) & (1:23) & (3:18)   \\
-32 Ge & $^{3}P$ & 3.143$\times10^{-2}$ & 1.848 & 5.290 & 1.386 & (1:30) & (1:23) & (4:18)   \\
-33 As & $^{4}S$ & 4.728$\times10^{-2}$ & 1.869 & 5.325 & 1.340 & (1:30) & (1:23) & (3:17)   \\
-34 Se & $^{3}P$ & 5.087$\times10^{-2}$ & 1.847 & 4.949 & 1.533 & (1:30) & (1:22) & (3:18)   \\
-35 Br & $^{2}P$ & 5.927$\times10^{-2}$ & 1.861 & 5.192 & 1.333 & (1:30) & (1:23) & (3:17)   \\
-36 Kr & $^{1}S$ & 6.804$\times10^{-2}$ & 1.859 & 5.510 & 1.370 & (1:29) & (1:23) & (3:17)   \\
-37 Rb & $^{2}S$ & 1.421$\times10^{-2}$ & 1.856 & 7.181 & 1.626 & (1:30) & (3:25) & (6:21)   \\
-38 Sr & $^{1}S$ & 1.808$\times10^{-2}$ & 1.846 & 6.674 & 1.553 & (1:30) & (3:25) & (6:20)   \\
-39 Y & $^{2}D$ & 1.997$\times10^{-2}$ & 1.841 & 6.569 & 1.543 & (1:30) & (3:25) & (2:20)   \\
-40 Zr & $^{5}F$ & 2.184$\times10^{-2}$ & 1.837 & 6.485 & 1.535 & (1:30) & (3:25) & (2:20)   \\
-41 Nb & $^{6}D$ & 2.340$\times10^{-2}$ & 1.835 & 6.434 & 1.530 & (1:30) & (3:25) & (2:20)   \\
-42 Mo & $^{7}S$ & 2.537$\times10^{-2}$ & 1.832 & 6.372 & 1.524 & (1:30) & (3:25) & (2:20)   \\
-43 Tc & $^{6}S$ & 2.597$\times10^{-2}$ & 1.836 & 6.453 & 1.534 & (1:30) & (3:25) & (2:20)   \\
-44 Ru & $^{5}F$ & 2.682$\times10^{-2}$ & 1.833 & 6.788 & 1.606 & (1:30) & (3:25) & (2:21)   \\
-45 Rh & $^{4}F$ & 2.751$\times10^{-2}$ & 1.835 & 6.883 & 1.620 & (1:30) & (3:25) & (2:21)   \\
-46 Pd & $^{1}S$ & 5.944$\times10^{-2}$ & 1.827 & 5.980 & 1.504 & (1:29) & (2:24) & (1:19)   \\
-47 Ag & $^{2}S$ & 2.438$\times10^{-2}$ & 1.800 & 5.521 & 1.423 & (1:31) & (4:25) & (3:21)   \\
-48 Cd & $^{1}S$ & 2.911$\times10^{-2}$ & 1.786 & 5.334 & 1.408 & (1:31) & (4:25) & (3:21)   \\
-49 In & $^{2}P$ & 2.714$\times10^{-2}$ & 1.799 & 5.540 & 1.431 & (1:31) & (1:25) & (3:21)   \\
-50 Sn & $^{3}P$ & 2.884$\times10^{-2}$ & 1.794 & 5.422 & 1.415 & (1:31) & (1:25) & (4:21)   \\
-51 Sb & $^{4}S$ & 4.481$\times10^{-2}$ & 1.815 & 6.567 & 1.605 & (1:30) & (1:25) & (3:21)   \\
-52 Te & $^{3}P$ & 4.846$\times10^{-2}$ & 1.817 & 6.247 & 1.528 & (1:30) & (1:26) & (3:20)   \\
-53 I & $^{2}P$ & 5.369$\times10^{-2}$ & 1.810 & 6.016 & 1.505 & (1:30) & (1:25) & (3:20)   \\
-54 Xe & $^{1}S$ & 5.981$\times10^{-2}$ & 1.802 & 5.862 & 1.490 & (1:30) & (1:25) & (3:20)   \\
-55 Cs & $^{2}S$ & 1.177$\times10^{-2}$ & 1.792 & 6.485 & 1.510 & (1:33) & (4:28) & (5:23)   \\
-56 Ba & $^{1}S$ & 1.560$\times10^{-2}$ & 1.770 & 6.152 & 1.518 & (1:32) & (3:28) & (6:23)   \\
-57 La & $^{2}D$ & 1.716$\times10^{-2}$ & 1.764 & 6.067 & 1.513 & (1:32) & (3:28) & (2:23) & (5:14) \\
-\notetodylan{missing}	\\
-59 Pr & $^{4}I$ & 1.696$\times10^{-2}$ & 1.776 & 6.297 & 1.533 & (1:32) & (3:28) & (6:23) & (4:19) \\
-60 Nd & $^{5}I$ & 1.737$\times10^{-2}$ & 1.778 & 6.563 & 1.579 & (1:32) & (3:28) & (6:24) & (4:19) \\
-61 Pm & $^{6}H$ & 1.784$\times10^{-2}$ & 1.780 & 6.615 & 1.585 & (1:32) & (3:28) & (6:24) & (4:19) \\
-62 Sm & $^{7}F$ & 1.857$\times10^{-2}$ & 1.778 & 5.842 & 1.464 & (1:33) & (3:27) & (6:23) & (4:19) \\
-63 Eu & $^{8}S$ & 1.876$\times10^{-2}$ & 1.784 & 6.718 & 1.596 & (1:32) & (3:28) & (6:24) & (4:19) \\
-\notetodylan{missing}	\\
-\notetodylan{missing}	\\
-66 Dy & $^{5}I$ & 2.020$\times10^{-2}$ & 1.788 & 6.543 & 1.540 & (1:33) & (3:28) & (6:23) & (4:19) \\
-\notetodylan{missing}	\\
-68 Er & $^{3}H$ & 2.106$\times10^{-2}$ & 1.792 & 7.029 & 1.638 & (1:32) & (3:28) & (6:24) & (4:20) \\
-69 Tm & $^{2}F$ & 2.152$\times10^{-2}$ & 1.794 & 7.075 & 1.643 & (1:32) & (3:28) & (6:24) & (4:20) \\
-71 Lu & $^{2}D$ & 2.373$\times10^{-2}$ & 1.790 & 7.018 & 1.640 & (1:32) & (3:28) & (2:24) & (4:20) \\
-72 Hf & $^{3}F$ & 2.511$\times10^{-2}$ & 1.788 & 6.963 & 1.636 & (1:32) & (3:28) & (2:24) & (5:20) \\
-73 Ta & $^{4}F$ & 2.684$\times10^{-2}$ & 1.784 & 6.907 & 1.633 & (1:32) & (2:28) & (2:24) & (5:20) \\
-74 W & $^{5}D$ & 2.814$\times10^{-2}$ & 1.783 & 6.889 & 1.633 & (1:32) & (3:28) & (2:24) & (5:20) \\
-75 Re & $^{6}S$ & 2.931$\times10^{-2}$ & 1.782 & 6.886 & 1.634 & (1:32) & (3:28) & (2:24) & (5:20) \\
-76 Os & $^{5}D$ & 3.075$\times10^{-2}$ & 1.781 & 6.896 & 1.637 & (1:32) & (2:29) & (2:24) & (4:20) \\
-77 Ir & $^{4}F$ & 3.195$\times10^{-2}$ & 1.780 & 6.867 & 1.635 & (1:32) & (3:28) & (2:24) & (5:20) \\
-78 Pt & $^{3}D$ & 3.173$\times10^{-2}$ & 1.785 & 7.020 & 1.654 & (1:32) & (3:28) & (2:24) & (5:20) \\
-79 Au & $^{2}S$ & 3.190$\times10^{-2}$ & 1.791 & 6.702 & 1.569 & (1:33) & (4:28) & (2:23) & (5:19) \\
-80 Hg & $^{1}S$ & 3.546$\times10^{-2}$ & 1.781 & 6.691 & 1.604 & (1:32) & (3:28) & (2:23) & (5:20) \\
-81 Tl & $^{2}P$ & 3.241$\times10^{-2}$ & 1.794 & 6.826 & 1.561 & (1:34) & (1:29) & (3:23) & (6:20) \\
-82 Pb & $^{3}P$ & 3.867$\times10^{-2}$ & 1.778 & 6.948 & 1.656 & (1:32) & (1:28) & (3:25) & (6:21) \\
-83 Bi & $^{4}S$ & 4.514$\times10^{-2}$ & 1.766 & 6.158 & 1.545 & (1:32) & (1:27) & (2:24) & (6:19) \\
-84 Po & $^{3}P$ & 4.783$\times10^{-2}$ & 1.763 & 5.977 & 1.516 & (1:32) & (1:27) & (3:23) & (6:19) \\
-85 At & $^{2}P$ & 5.210$\times10^{-2}$ & 1.757 & 5.846 & 1.502 & (1:32) & (1:27) & (3:23) & (6:19) \\
-86 Rn & $^{1}S$ & 5.716$\times10^{-2}$ & 1.749 & 5.695 & 1.486 & (1:32) & (1:27) & (3:23) & (6:19) \\
-\bottomrule
-\end{longtable}
-
-% just in case I need this
-%\begin{longtable}{l l r r r r r r r r}
-%\caption[Basis sets optimized using cudaDFRATOM]{Basis sets optimized using cudaDFRATOM}
-%\label{tab:BStab_rel} \\
-%\toprule
-%	Element	&	Electron		&	$\alpha$	&	$\beta$	&	$\delta$	&	$\gamma$	&	s	&	p	&	d	&	f	\\
-%			&	Configuration	&			&			&			&				&		&		&		&		\\
-%\midrule
-%\endfirsthead
+02 He	& 	$^{1}S$  	&   	8.140$\times10^{-2}$   	&    	1.953    	&    	4.504    	&    	1.515    	&    	(1:18)    	\\
+03 Li 	& 	$^{2}S$  	&   	1.596$\times10^{-2}$   	&    	1.933    	&    	5.701    	&    	1.573    	&    	(1:22)    	\\
+04 Be 	& 	$^{1}S$  	&   	2.647$\times10^{-2}$   	&    	1.938    	&    	5.841    	&    	1.594    	&    	(1:22)    	\\	
+05 B 		& 	$^{2}P$  	&   	3.238$\times10^{-2}$   	&    	1.948    	&    	5.573    	&    	1.523    	&    	(1:22)    	&    	(1:15)    	\\
+06 C 	&  	$^{3}P$  	&   	4.613$\times10^{-2}$   	&    	1.941    	&    	4.717    	&    	1.317    	&    	(1:23)    	&    	(1:15)    	\\
+07 N 	&  	$^{4}S$  	&   	5.976$\times10^{-2}$   	&    	1.923    	&    	5.183    	&    	1.442    	&    	(1:23)    	&    	(1:16)    	 \\
+08 O 	&  	$^{3}P$  	&   	6.967$\times10^{-2}$   	&    	1.936    	&    	5.170    	&    	1.426    	&    	(1:23)    	&    	(1:16)    	\\
+09 F 		&  	$^{2}P$  	&   	8.321$\times10^{-2}$   	&    	1.942    	&    	5.084    	&    	1.408    	&    	(1:23)    	&    	(1:16)    	\\
+10 Ne 	&  	$^{1}S$  	&   	9.943$\times10^{-2}$   	&    	1.945    	&    	4.988    	&    	1.392    	&    	(1:23)    	&    	(1:16)    	\\
+11 Na 	&  	$^{2}S$  	&   	1.696$\times10^{-2}$   	&    	1.950    	&    	6.056    	&    	1.469    	&    	(1:26)    	&    	(3:19)    	 \\
+12 Mg 	&  	$^{1}S$  	&   	2.375$\times10^{-2}$   	&    	1.932    	&    	5.686    	&    	1.430    	&    	(1:26)    	&    	(3:19)    	\\
+13 Al 	&  	$^{2}P$  	&   	2.239$\times10^{-2}$   	&    	1.898    	&    	5.555    	&    	1.413    	&    	(1:27)    	&    	(1:20)    	 \\
+14 Si 	&  	$^{3}P$  	&   	3.352$\times10^{-2}$   	&    	1.921    	&    	5.419    	&    	1.410    	&    	(1:26)    	&    	(1:19)    	 \\
+15 P 		&  	$^{4}S$  	&   	4.410$\times10^{-2}$   	&    	1.907    	&    	5.196    	&    	1.390    	&    	(1:26)    	&    	(1:19)    	    \\
+16 S 		&  	$^{3}P$  	&   	5.004$\times10^{-2}$   	&    	1.896    	&    	4.962    	&    	1.362    	&    	(1:26)    	&    	(1:19)    	    \\
+17 Cl 	&  	$^{2}P$  	&   	5.831$\times10^{-2}$   	&    	1.886    	&    	4.784    	&    	1.344    	&    	(1:26)    	&    	(1:19)    	    \\
+18 Ar 	&  	$^{1}S$   	&   	6.834$\times10^{-2}$   	&    	1.878    	&    	4.654    	&    	1.331    	&    	(1:26)    	&    	(1:19)    	    \\
+19 K 		&  	$^{2}S$   	&   	1.392$\times10^{-2}$   	&    	1.889    	&    	6.354    	&    	1.523    	&    	(1:28)    	&    	(3:22)    	    \\
+20 Ca 	&  	$^{1}S$   	&   	1.837$\times10^{-2}$   	&    	1.874    	&    	6.109    	&    	1.504    	&    	(1:28)    	&    	(3:22)    	    \\
+21 Sc 	&  	$^{2}D$   	&   	2.040$\times10^{-2}$   	&    	1.878    	&    	6.160    	&    	1.505    	&    	(1:28)    	&    	(3:22)    	&    	(2:16)   \\
+22 Ti 	&  	$^{3}F$   	&   	2.218$\times10^{-2}$   	&    	1.886    	&    	6.247    	&    	1.508    	&    	(1:28)    	&    	(3:22)    	&    	(2:16)   \\
+23 V 		&  	$^{4}F$   	&   	2.361$\times10^{-2}$   	&    	1.887    	&    	6.573    	&    	1.507    	&    	(1:29)    	&    	(3:23)    	&    	(2:16)   \\
+24 Cr 	&  	$^{7}S$   	&   	2.345$\times10^{-2}$   	&    	1.865    	&    	5.348    	&    	1.407    	&    	(1:29)    	&    	(3:22)    	&    	(2:17)   \\
+25 Mn 	&  	$^{6}S$   	&   	2.572$\times10^{-2}$   	&    	1.865    	&    	5.336    	&    	1.407    	&    	(1:29)    	&    	(3:22)    	&    	(2:17)   \\
+26 Fe 	&  	$^{5}D$   	&   	2.621$\times10^{-2}$   	&    	1.869    	&    	5.301    	&    	1.395    	&    	(1:29)    	&    	(3:22)    	&    	(3:17)   \\
+27 Co 	&  	$^{4}F$   	&   	2.643$\times10^{-2}$   	&    	1.871    	&    	5.905    	&    	1.413    	&    	(1:29)    	&    	(4:23)    	&    	(3:17)   \\
+28 Ni 	&  	$^{3}F$   	&   	2.882$\times10^{-2}$   	&    	1.875    	&    	5.935    	&    	1.413    	&    	(1:29)    	&    	(3:23)    	&    	(3:17)   \\
+29 Cu 	&  	$^{2}S$   	&   	2.283$\times10^{-2}$   	&    	1.857    	&    	5.485    	&    	1.413    	&    	(1:30)    	&    	(4:23)    	&    	(3:18)   \\
+30 Zn 	&  	$^{1}S$   	&   	3.297$\times10^{-2}$   	&    	1.881    	&    	5.817    	&    	1.339    	&    	(1:30)    	&    	(3:24)    	&    	(2:17)   \\
+31 Ga 	&  	$^{2}P$   	&   	2.742$\times10^{-2}$   	&    	1.863    	&    	5.703    	&    	1.462    	&    	(1:30)    	&    	(1:23)    	&    	(3:18)   \\
+32 Ge 	&  	$^{3}P$   	&   	3.143$\times10^{-2}$   	&    	1.848    	&    	5.290    	&    	1.386    	&    	(1:30)    	&    	(1:23)    	&    	(4:18)   \\
+33 As 	&  	$^{4}S$   	&   	4.728$\times10^{-2}$   	&    	1.869    	&    	5.325    	&    	1.340    	&    	(1:30)    	&    	(1:23)    	&    	(3:17)   \\
+34 Se 	&	$^{3}P$   	&   	5.087$\times10^{-2}$   	&    	1.847    	&    	4.949    	&    	1.533    	&    	(1:30)    	&    	(1:22)    	&    	(3:18)   \\
+35 Br 	&  	$^{2}P$   	&   	5.927$\times10^{-2}$   	&    	1.861    	&    	5.192    	&    	1.333    	&    	(1:30)    	&    	(1:23)    	&    	(3:17)   \\
+36 Kr 	&  	$^{1}S$   	&   	6.804$\times10^{-2}$   	&    	1.859    	&    	5.510    	&    	1.370    	&    	(1:29)    	&    	(1:23)    	&    	(3:17)   \\
+37 Rb 	&  	$^{2}S$   	&   	1.421$\times10^{-2}$   	&    	1.856    	&    	7.181    	&    	1.626    	&    	(1:30)    	&    	(3:25)    	&    	(6:21)   \\
+38 Sr 	&  	$^{1}S$   	&   	1.808$\times10^{-2}$   	&    	1.846    	&    	6.674    	&    	1.553    	&    	(1:30)    	&    	(3:25)    	&    	(6:20)   \\
+39 Y 		&  	$^{2}D$   	&   	1.997$\times10^{-2}$   	&    	1.841    	&    	6.569    	&    	1.543    	&    	(1:30)    	&    	(3:25)    	&    	(2:20)   \\
+40 Zr 	&  	$^{5}F$   	&   	2.184$\times10^{-2}$   	&    	1.837    	&    	6.485    	&    	1.535    	&    	(1:30)    	&    	(3:25)    	&    	(2:20)   \\
+41 Nb 	&  	$^{6}D$   	&   	2.340$\times10^{-2}$   	&    	1.835    	&    	6.434    	&    	1.530    	&    	(1:30)    	&    	(3:25)    	&    	(2:20)   \\
+42 Mo 	&  	$^{7}S$   	&   	2.537$\times10^{-2}$   	&    	1.832    	&    	6.372    	&    	1.524    	&    	(1:30)    	&    	(3:25)    	&    	(2:20)   \\
+43 Tc 	&  	$^{6}S$   	&   	2.597$\times10^{-2}$   	&    	1.836    	&    	6.453    	&    	1.534    	&    	(1:30)    	&    	(3:25)    	&    	(2:20)   \\
+44 Ru 	&  	$^{5}F$   	&   	2.682$\times10^{-2}$   	&    	1.833    	&    	6.788    	&    	1.606    	&    	(1:30)    	&    	(3:25)    	&    	(2:21)   \\
+45 Rh 	&  	$^{4}F$   	&   	2.751$\times10^{-2}$   	&    	1.835    	&    	6.883    	&    	1.620    	&    	(1:30)    	&    	(3:25)    	&    	(2:21)   \\
+46 Pd 	&  	$^{1}S$   	&   	5.944$\times10^{-2}$   	&    	1.827    	&    	5.980    	&    	1.504    	&    	(1:29)    	&    	(2:24)    	&    	(1:19)   \\
+47 Ag 	&  	$^{2}S$   	&   	2.438$\times10^{-2}$   	&    	1.800    	&    	5.521    	&    	1.423    	&    	(1:31)    	&    	(4:25)    	&    	(3:21)   \\
+48 Cd 	&  	$^{1}S$   	&   	2.911$\times10^{-2}$   	&   	1.786   	&   	5.334   	&   	1.408   	&   	(1:31)   	&    	(4:25)    	&    	(3:21)   \\
+49 In 	&  	$^{2}P$   	&   	2.714$\times10^{-2}$   	&    	1.799    	&    	5.540    	&    	1.431    	&    	(1:31)    	&    	(1:25)    	&    	(3:21)   \\
+50 Sn 	&  	$^{3}P$   	&   	2.884$\times10^{-2}$   	&    	1.794    	&    	5.422    	&    	1.415    	&    	(1:31)    	&    	(1:25)    	&    	(4:21)   \\
+51 Sb 	&  	$^{4}S$   	&   	4.481$\times10^{-2}$   	&    	1.815    	&    	6.567    	&    	1.605    	&    	(1:30)    	&   	(1:25)   	&    	(3:21)   \\
+52 Te 	&  	$^{3}P$   	&   	4.846$\times10^{-2}$   	&    	1.817    	&    	6.247    	&    	1.528    	&    	(1:30)    	&    	(1:26)    	&    	(3:20)   \\
+53 I 		&  	$^{2}P$   	&   	5.369$\times10^{-2}$   	&    	1.810    	&    	6.016    	&    	1.505    	&    	(1:30)    	&    	(1:25)    	&    	(3:20)   \\
+54 Xe 	&  	$^{1}S$   	&   	5.981$\times10^{-2}$   	&    	1.802    	&    	5.862    	&    	1.490    	&    	(1:30)    	&    	(1:25)    	&    	(3:20)   \\
+55 Cs 	&  	$^{2}S$   	&   	1.177$\times10^{-2}$   	&    	1.792    	&    	6.485    	&    	1.510    	&    	(1:33)    	&    	(4:28)    	&    	(5:23)   \\
+56 Ba 	&  	$^{1}S$   	&   	1.560$\times10^{-2}$   	&    	1.770    	&    	6.152    	&    	1.518    	&    	(1:32)    	&    	(3:28)    	&    	(6:23)   \\
+57 La 	&  	$^{2}D$   	&   	1.716$\times10^{-2}$   	&    	1.764    	&    	6.067    	&    	1.513    	&    	(1:32)    	&    	(3:28)    	&    	(2:23)     	&	(5:14)     	\\
+58 Ce* 	&  	$^{3}H$   	&   	1.652$\times10^{-2}$   	&    	1.774    	&    	6.254    	&    	1.529    	&    	(1:32)    	&    	(3:28)    	&    	(2:23)     	&	(4:19)     	\\
+59 Pr 	&  	$^{4}I$ 	&   	1.696$\times10^{-2}$   	&    	1.776    	&    	6.297    	&    	1.533    	&    	(1:32)    	&    	(3:28)    	&    	(6:23)     	& 	(4:19)     	\\
+60 Nd 	&  	$^{5}I$ 	&   	1.737$\times10^{-2}$   	&    	1.778    	&    	6.563    	&    	1.579    	&    	(1:32)    	&    	(3:28)    	&    	(6:24)     	& 	(4:19)     	\\
+61 Pm 	&  	$^{6}H$   	&   	1.784$\times10^{-2}$   	&    	1.780    	&    	6.615    	&    	1.585    	&    	(1:32)    	&    	(3:28)    	&    	(6:24)     	& 	(4:19)     	\\
+62 Sm 	&  	$^{7}F$   	&   	1.857$\times10^{-2}$   	&    	1.778    	&    	5.842    	&    	1.464    	&    	(1:33)    	&    	(3:27)    	&    	(6:23)     	& 	(4:19)     	\\
+63 Eu 	&  	$^{8}S$   	&   	1.876$\times10^{-2}$   	&    	1.784    	&    	6.718    	&    	1.596    	&    	(1:32)    	&    	(3:28)    	&    	(6:24)     	&  	(4:19)     	\\
+64 Gd* 	&  	$^{7}F$   	&   	1.926$\times10^{-2}$   	&    	1.782    	&    	6.844    	&    	1.599    	&    	(1:33)    	&    	(3:28)    	&    	(6:24)     	&  	(4:19)     	\\
+65 Tb* 	&  	$^{6}H$   	&   	1.971$\times10^{-2}$	&  	1.784	&   	6.898	&  	1.604	& 	(1:33) 	& 	(3:28) 	& 	(6:24)  	& 	(4:19)	\\   	   	   	
+66 Dy 	&  	$^{5}I$ 	&   	2.020$\times10^{-2}$ 	& 	1.788 	& 	6.543 	& 	1.540 	& 	(1:33) 	& 	(3:28) 	& 	(6:23)  	& 	(4:19)	\\   	   	   	
+67 Ho* 	&  	$^{4}I$ 	&   	2.064$\times10^{-2}$ 	&  	1.785	&    	7.090	&  	1.640	& 	(1:33) 	& 	(3:28) 	& 	(6:23)  	& 	(4:20)	\\   	   	  	
+68 Er 	&  	$^{3}H$   	&   	2.106$\times10^{-2}$   	&   	1.792   	&   	7.029   	&   	1.638   	&   	(1:32)   	&   	(3:28)   	&   	(6:24)   	&   	(4:20)     	\\   	
+69 Tm 	&  	$^{2}F$   	&   	2.152$\times10^{-2}$   	&   	1.794   	&   	7.075   	&   	1.643   	&   	(1:32)   	&   	(3:28)   	&   	(6:24)   	&   	(4:20)     	\\
+70 Yb* 	&  	$^{1}S$   	&   	2.200$\times10^{-2}$   	&   	1.795   	&   	7.141   	&   	1.652   	&   	(1:32)   	&   	(3:28)   	&   	(2:24)   	&   	(4:20)     	\\   	
+71 Lu 	&  	$^{2}D$   	&   	2.373$\times10^{-2}$   	&   	1.790   	&   	7.018   	&   	1.640   	&   	(1:32)   	&   	(3:28)   	&   	(2:24)   	&   	(4:20)     	\\   	
+72 Hf 	& 	$^{3}F$   	&   	2.511$\times10^{-2}$   	&   	1.788   	&   	6.963   	&   	1.636   	&   	(1:32)   	&   	(3:28)   	&   	(2:24)   	&   	(5:20)     	\\   	
+73 Ta 	& 	$^{4}F$   	&   	2.684$\times10^{-2}$   	&   	1.784   	&   	6.907   	&   	1.633   	&   	(1:32)   	&   	(2:28)   	&   	(2:24)   	&   	(5:20)     	\\   	
+74 W 	& 	$^{5}D$   	&   	2.814$\times10^{-2}$   	&   	1.783   	&   	6.889   	&   	1.633   	&   	(1:32)   	&   	(3:28)   	&   	(2:24)   	&   	(5:20)     	\\   	
+75 Re 	&	$^{6}S$   	&   	2.931$\times10^{-2}$   	&   	1.782   	&   	6.886   	&   	1.634   	&   	(1:32)   	&   	(3:28)   	&   	(2:24)   	&   	(5:20)     	\\   	
+76 Os 	&  	$^{5}D$   	&   	3.075$\times10^{-2}$   	&   	1.781   	&   	6.896   	&   	1.637   	&   	(1:32)   	&   	(2:29)   	&   	(2:24)   	&   	(4:20)     	\\   	
+77 Ir 		&  	$^{4}F$   	&   	3.195$\times10^{-2}$   	&   	1.780   	&   	6.867   	&   	1.635   	&   	(1:32)   	&   	(3:28)   	&   	(2:24)   	&   	(5:20)  	\\   	
+78 Pt 	&  	$^{3}D$   	&   	3.173$\times10^{-2}$   	&   	1.785   	&   	7.020   	&   	1.654   	&   	(1:32)   	&   	(3:28)   	&   	(2:24)   	&   	(5:20)  	\\   	
+79 Au 	&  	$^{2}S$   	&   	3.190$\times10^{-2}$   	&   	1.791   	&   	6.702   	&   	1.569   	&   	(1:33)   	&   	(4:28)   	&   	(2:23)   	&   	(5:19)  	\\   	
+80 Hg 	&  	$^{1}S$   	&   	3.546$\times10^{-2}$   	&   	1.781   	&   	6.691   	&   	1.604   	&   	(1:32)   	&   	(3:28)   	&   	(2:23)   	&   	(5:20) 	\\   	
+81 Tl 	&  	$^{2}P$   	&   	3.241$\times10^{-2}$   	&   	1.794   	&   	6.826   	&   	1.561   	&   	(1:34)   	&   	(1:29)   	&   	(3:23)   	&   	(6:20) 	\\   	
+82 Pb 	&  	$^{3}P$   	&   	3.867$\times10^{-2}$   	&   	1.778   	&   	6.948   	&   	1.656   	&   	(1:32)   	&   	(1:28)   	&   	(3:25)   	&   	(6:21) 	\\   	
+83 Bi 	&  	$^{4}S$   	&   	4.514$\times10^{-2}$   	&   	1.766   	&   	6.158   	&   	1.545   	&   	(1:32)   	&   	(1:27)   	&   	(2:24)   	&   	(6:19) 	\\   	
+84 Po 	& 	$^{3}P$   	&   	4.783$\times10^{-2}$ 	& 	1.763 	& 	5.977 	& 	1.516 	& 	(1:32) 	& 	(1:27) 	& 	(3:23) 	& 	(6:19) 	\\   	
+85 At 	& 	$^{2}P$ 	&   	5.210$\times10^{-2}$ 	& 	1.757 	& 	5.846 	& 	1.502 	& 	(1:32) 	& 	(1:27) 	& 	(3:23) 	& 	(6:19) 	\\
+86 Rn 	& 	$^{1}S$ 	&   	5.716$\times10^{-2}$ 	& 	1.749 	& 	5.695 	& 	1.486 	& 	(1:32) 	& 	(1:27) 	& 	(3:23) 	& 	(6:19) 	\\
+\bottomrule  	
+\end{longtable}  	
+  	
+% just in case I need this  	
+%\begin{longtable}{l l r r r r r   	r r r}
+%\caption[Basis sets optimiz  	ed using cudaDFRATOM]{Basis sets optimized using cudaDFRATOM}
+%\label{tab:BStab_rel} \\  	
+%\toprule  	
+%	Element	&	Electro  	n		&	$\alpha$	&	$\beta$	&	$\delta$	&	$\gamma$	&	s	&	p	&	d	&	f	\\
+%			&	Configu  	ration	&			&			&			&				&		&		&		&		\\
+%\midrule  	
+%\endfirsthead  	
 %\caption[]{(continued)}\\
 %\toprule
 %	Element	&	Electron		&	$\alpha$	&	$\beta$	&	$\delta$	&	$\gamma$	&	s	&	p	&	d	&	f	\\
@@ -1760,6 +1762,42 @@ The optimized WTBS parameters and basis set sizes for elements 2 to 86 are shown
 86 Rn	 	&	[Hg] 6p$^{6}$	&	6.671$\times10^{-2}$	&	1.831	&	3.906	&	0.867	&	(1:31)	&	 (1:29)	&	 (3:21)	&	 (6:17)\\
 \bottomrule
 \end{longtable}
+
+Figures \ref{fig:BS_non_rel_alpha}, \ref{fig:BS_non_rel_beta}, and \ref{fig:BS_non_rel_delt_gamm} show the trends the various non-relativistic parameters have with respect to nuclear charge. In Figure  \ref{fig:BS_non_rel_alpha}, we can see that there is an interesting pattern where the exponent of the most diffuse function becomes larger as we move right across a row. It is also interesting to note that the rate at which the exponent increases changes when going from one block of that row to the next. The trend roughly follows what we expect from periodic trends of atomic size. That is to say, that atoms get larger by going left on the table. The trend of atoms getting larger when moving down the periodic table is mostly obeyed, however there are exceptions. For instance, the 4d elements have smaller values of $\alpha$ than the 5d elements.
+
+In Figure \ref{fig:BS_non_rel_beta} shows that $\beta$ generally decreases as nuclear charge increases. As $\beta$ is involved in controlling the growth of the exponents, this indicates that the basis sets are getting more diffuse as the nuclear charge increases.
+
+Finally \ref{fig:BS_non_rel_delt_gamm} shows the values of $\delta$ and $\gamma$ with respect to nuclear charge. There are no clear trends in these parameters, but they are shown anyway for completeness.
+
+\begin{figure}
+\center
+\includegraphics[width=1\textwidth]{Figures/BS_non_rel_alpha.png}
+\caption[Scatter plot of the $\alpha$ parameter vs. nuclear charge.]
+{Scatter plot of the $\alpha$ parameter vs. nuclear charge. Regions of the plot are shaded based on periodic table block regions. There is a distinct pattern where the value of $\alpha$ increases along a row until a nobel gas is reached. Also note how the rate of the increase changes at periodic table block boundaries.}
+\label{fig:BS_non_rel_alpha}
+\end{figure}
+
+\begin{figure}
+\center
+\includegraphics[width=1\textwidth]{Figures/BS_non_rel_beta.png}
+\caption[Scatter plot of the $\beta$ parameter vs. nuclear charge.]
+{Scatter plot of the $\beta$ parameter vs. nuclear charge. Black vertical lines indicate periodic table block regions. There is a general trend of the value of $\beta$ to decrease as the nuclear charge grows larger.}
+\label{fig:BS_non_rel_beta}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{subfigure}[b]{0.49\textwidth}
+	\includegraphics[width=\textwidth]{Figures/BS_non_rel_delta.png}
+	\caption{$\delta$}
+\end{subfigure}
+\begin{subfigure}[b]{0.49\textwidth}
+	\includegraphics[width=\textwidth]{Figures/BS_non_rel_gamma.png}
+	\caption{$\gamma$}
+\end{subfigure}	
+\caption[Scatter plots of the $\delta$ and $\gamma$ parameters.]{Scatter plots of the $\delta$ and $\gamma$ parameters. Black vertical lines indicate periodic table block regions. There are no clear trends with respect to the nuclear charge.}
+\label{fig:BS_non_rel_delt_gamm}
+\end{figure}
 
 \chapter{cudaDFRATOM}
 \label{chp:cuda_dfratom}

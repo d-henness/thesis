@@ -1,19 +1,22 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Scatter plot of the ${\setbox 0=\hbox {$\mathbf {x\global \edef 7{0}}$}}\mathchar "010B $ parameter vs. nuclear charge.}}{30}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Scatter plot of the ${\setbox 0=\hbox {$\mathbf {x\global \edef 7{0}}$}}\mathchar "010C $ parameter vs. nuclear charge.}}{31}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Scatter plots of the ${\setbox 0=\hbox {$\mathbf {x\global \edef 7{0}}$}}\mathchar "010E $ and ${\setbox 0=\hbox {$\mathbf {x\global \edef 7{0}}$}}\mathchar "010D $ parameters.}}{31}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Architecture of a GPU}}{21}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Two-Electron Integral Layout: Naive Implementation}}{30}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Two-Electron Integral Layout: 2D Blocks and Grid}}{31}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Two-Electron Integral Layout: 1D Blocks and Grid}}{32}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Two-electron Integral Matrix as a Matrix}}{34}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Two-electron Integral Matrix as a Vector}}{35}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Density Matrix as a Matrix}}{38}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Density Matrix as a Vector}}{39}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Profiling of Two-Electron Integral Calculations}}{48}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Profiling of the \textit {\textbf {formpq}} Kernels.}}{50}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Integrals Needed for the First Element of \textbf {P}: Matrix Representation}}{51}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Integrals Needed for the First Element of \textbf {P}: Vector Representation}}{52}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Total Time need to complete a calculation.}}{54}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture of a GPU}}{36}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Two-Electron Integral Layout: Naive Implementation}}{45}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Two-Electron Integral Layout: 2D Blocks and Grid}}{46}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Two-Electron Integral Layout: 1D Blocks and Grid}}{47}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Two-electron Integral Matrix as a Matrix}}{49}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Two-electron Integral Matrix as a Vector}}{50}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Density Matrix as a Matrix}}{53}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Density Matrix as a Vector}}{54}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Profiling of Two-Electron Integral Calculations}}{63}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Profiling of the \textit {\textbf {formpq}} Kernels.}}{65}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Integrals Needed for the First Element of \textbf {P}: Matrix Representation}}{66}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Integrals Needed for the First Element of \textbf {P}: Vector Representation}}{67}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Total Time need to complete a calculation.}}{69}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Scatter plot of the ${\setbox 0=\hbox {$\mathbf {x\global \edef 7{0}}$}}\mathchar "010B $ parameter vs. nuclear charge.}}{71}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Scatter plot of the ${\setbox 0=\hbox {$\mathbf {x\global \edef 7{0}}$}}\mathchar "010C $ parameter vs. nuclear charge.}}{72}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Scatter plots of the ${\setbox 0=\hbox {$\mathbf {x\global \edef 7{0}}$}}\mathchar "010E $ and ${\setbox 0=\hbox {$\mathbf {x\global \edef 7{0}}$}}\mathchar "010D $ parameters.}}{72}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Scatter plot of the relativistic and non-relativistic ${\setbox 0=\hbox {$\mathbf {x\global \edef 7{0}}$}}\mathchar "010B $ parameters vs. nuclear charge.}}{73}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Scatter plot of the relativistic and non-relativistic ${\setbox 0=\hbox {$\mathbf {x\global \edef 7{0}}$}}\mathchar "010C $ parameters vs. nuclear charge.}}{74}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Scatter plot of the relativistic and non-relativistic ${\setbox 0=\hbox {$\mathbf {x\global \edef 7{0}}$}}\mathchar "010E $ and ${\setbox 0=\hbox {$\mathbf {x\global \edef 7{0}}$}}\mathchar "010D $ parameters.}}{74}

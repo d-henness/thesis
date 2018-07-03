@@ -36,6 +36,6 @@
 \contentsline {section}{\numberline {3.2}Methods}{60}
 \contentsline {subsection}{\numberline {3.2.1}Basis set size optimization}{60}
 \contentsline {subsection}{\numberline {3.2.2}Automating Optimization}{62}
-\contentsline {section}{\numberline {3.3}Discussion}{67}
-\contentsline {subsection}{\numberline {3.3.1}Optimized Non-Relativistic Basis Sets}{67}
-\contentsline {chapter}{Bibliography}{75}
+\contentsline {section}{\numberline {3.3}Discussion}{68}
+\contentsline {subsection}{\numberline {3.3.1}Optimized Non-Relativistic Basis Sets}{68}
+\contentsline {chapter}{Bibliography}{76}

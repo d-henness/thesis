@@ -8,5 +8,5 @@
 \contentsline {table}{\numberline {2.5}{\ignorespaces Total Speedup of Alg1}}{53}
 \contentsline {table}{\numberline {2.6}{\ignorespaces Total Speedup of Alg2}}{53}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Basis sets optimized using rwtbs}}{67}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Basis sets optimized using rwtbs}}{68}
 \contentsline {table}{\numberline {3.2}{\ignorespaces Basis sets optimized using cudaDFRATOM}}{70}

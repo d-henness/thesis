@@ -23,7 +23,15 @@ where $\zeta_{l,k}$ is the $k^{\text{th}}$ exponent of basis function for orbita
 \zeta_{k} = \zeta_{k-1}\beta\left[1+\gamma\left(\frac{k}{n}\right)^{\delta}\right], \quad k = 2, 3,\ldots, n, \quad \zeta_{0}=\alpha, \quad \zeta_{1} = \alpha\beta
 \end{equation}
 
-where $n$ is the maximum number of basis functions for the set, and $\alpha$ and $\beta$ have the same restrictions on them as they did before. The parameters $\delta$ and $\gamma$ have the effect of shrinking the gap caused by $\beta$ at high $k$. This means that the growth of the exponents is reduced as they get larger, which allows them to make a more meaningful contribution to the total wavefunction. Thus, we get a more accurate basis set with far fewer functions. The effect that altering $\gamma$ and $\delta$ has on the exponents can be seen in \notetodylan{Figure whatever}.
+where $n$ is the maximum number of basis functions for the set, and $\alpha$ and $\beta$ have the same restrictions on them as they did before. The parameters $\delta$ and $\gamma$ have the effect of shrinking the gap caused by $\beta$ at high $k$. This means that the growth of the exponents is reduced as they get larger, which allows them to make a more meaningful contribution to the total wavefunction. Thus, we get a more accurate basis set with far fewer functions. The effect that altering $\gamma$ and $\delta$ has on the exponents can be seen in Figure \ref{fig:deltagamm}.
+
+\begin{figure}
+\center
+\includegraphics[width=1\textwidth]{Figures/deltagamm.png}
+\caption[Changes in $\zeta$ as the values of $\delta$ and $\gamma$ are changed.]
+{Changes in $\zeta$ as the values of $\delta$ and $\gamma$ are changed. The value of $n$ was 36, $\alpha$ was 0.02, and $\beta$ was 1.5}
+\label{fig:deltagamm}
+\end{figure}
 
 One more thing to mention is that each symmetry does not need to use the entire set of $\zeta$s that we optimize. Indeed, the most diffuse orbitals in the valence shells often don't use the most contracted functions at all, and conversely the most contracted orbitals in the core don't make much use of the most diffuse functions. Therefore, it is better to think of the set of $\zeta$s as pool, and that each symmetry is drawing a range of functions from that pool.  
 
@@ -303,6 +311,8 @@ Finally \ref{fig:BS_non_rel_delt_gamm} shows the values of $\delta$ and $\gamma$
 \caption[Scatter plots of the $\delta$ and $\gamma$ parameters.]{Scatter plots of the $\delta$ and $\gamma$ parameters. Regions of the plot are shaded based on periodic table block regions. There are no clear trends with respect to the nuclear charge.}
 \label{fig:BS_non_rel_delt_gamm}
 \end{figure}
+
+As for the relativistic basis sets, we can see from Figure \ref{fig:BS_rel_alpha} that the trend in $\alpha$ from the non-relativistic basis sets mostly holds, however there is a slight change in the trend starting at thallium. There is a substantial drop in the value of $\alpha$ when changing from the d to the p block in the relativistic basis sets which is not seen in the non-relativistic sets. We can also see that the change in $\alpha$ for the relativistic basis sets is much larger going through the d block than the change for the non-relativistic basis sets. As for the other WTBS parameters, the trends in the relativistic basis sets are mostly consistent with their non-relativistic counterparts. Figures for the remaining parameters are given in Figures \ref{fig:BS_rel_beta} and \ref{fig:BS_rel_delt_gamm}.
 
 \begin{figure}
 \center

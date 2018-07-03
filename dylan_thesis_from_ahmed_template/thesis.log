@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.13)  3 JUL 2018 09:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.13)  3 JUL 2018 10:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -468,49 +468,67 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ./thesis.lof:17: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.17 ...010B $ parameter vs. nuclear charge.}}{71}
+l.17 ...0}}$}}\mathchar "010D $ are changed.}}{60}
+                                                  
+? 
+./thesis.lof:17: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.17 ...0}}$}}\mathchar "010D $ are changed.}}{60}
+                                                  
+? 
+./thesis.lof:17: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.17 ...0}}$}}\mathchar "010D $ are changed.}}{60}
                                                   
 ? 
 ./thesis.lof:18: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.18 ...010C $ parameter vs. nuclear charge.}}{72}
+l.18 ...010B $ parameter vs. nuclear charge.}}{72}
                                                   
 ? 
 ./thesis.lof:19: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.19 ...{0}}$}}\mathchar "010D $ parameters.}}{72}
-                                                  
-? 
-./thesis.lof:19: Missing control sequence inserted.
-<inserted text> 
-                \inaccessible 
-l.19 ...{0}}$}}\mathchar "010D $ parameters.}}{72}
+l.19 ...010C $ parameter vs. nuclear charge.}}{73}
                                                   
 ? 
 ./thesis.lof:20: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.20 ...10B $ parameters vs. nuclear charge.}}{73}
+l.20 ...{0}}$}}\mathchar "010D $ parameters.}}{73}
+                                                  
+? 
+./thesis.lof:20: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.20 ...{0}}$}}\mathchar "010D $ parameters.}}{73}
                                                   
 ? 
 ./thesis.lof:21: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.21 ...10C $ parameters vs. nuclear charge.}}{74}
+l.21 ...10B $ parameters vs. nuclear charge.}}{74}
                                                   
 ? 
 ./thesis.lof:22: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.22 ...{0}}$}}\mathchar "010D $ parameters.}}{74}
+l.22 ...10C $ parameters vs. nuclear charge.}}{75}
                                                   
 ? 
-./thesis.lof:22: Missing control sequence inserted.
+./thesis.lof:23: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.22 ...{0}}$}}\mathchar "010D $ parameters.}}{74}
+l.23 ...{0}}$}}\mathchar "010D $ parameters.}}{75}
+                                                  
+? 
+./thesis.lof:23: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.23 ...{0}}$}}\mathchar "010D $ parameters.}}{75}
                                                   
 ? 
 )
@@ -824,82 +842,90 @@ Chapter 3.
 
 
 
-] [59] [60] [61] (./code_snippets/BS_sub_auto_rwtbs.sh [62] [63] [64]
+] [59]
+<Figures/deltagamm.png, id=251, 1505.625pt x 960.58875pt>
+File: Figures/deltagamm.png Graphic file (type png)
+<use Figures/deltagamm.png>
+Package pdftex.def Info: Figures/deltagamm.png  used on input line 30.
+(pdftex.def)             Requested size: 469.75499pt x 299.69955pt.
+ [60 <./Figures/deltagamm.png (PNG copy)>] [61]
+(./code_snippets/BS_sub_auto_rwtbs.sh [62] [63] [64]
 Overfull \hbox (44.63216pt too wide) in paragraph at lines 159--160
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-) [65] (./code_snippets/BS_find_best.sh [66]) [67] [68] [69]
-Overfull \hbox (28.49303pt too wide) in alignment at lines 222--229
+[65]) [66] (./code_snippets/BS_find_best.sh) [67] [68] [69]
+Overfull \hbox (28.49303pt too wide) in alignment at lines 230--237
  [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (28.49303pt too wide) in alignment at lines 229--235
+Overfull \hbox (28.49303pt too wide) in alignment at lines 237--243
  [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (28.49303pt too wide) in alignment at lines 235--256
+Overfull \hbox (28.49303pt too wide) in alignment at lines 243--264
  [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (28.49303pt too wide) in alignment at lines 256--269
+Overfull \hbox (28.49303pt too wide) in alignment at lines 264--277
  [] [] [] [] [] [] [] [] [] [] 
  []
 
 [70]
-<Figures/BS_non_rel_alpha.png, id=286, 1505.625pt x 949.5475pt>
+<Figures/BS_non_rel_alpha.png, id=287, 1505.625pt x 949.5475pt>
 File: Figures/BS_non_rel_alpha.png Graphic file (type png)
 <use Figures/BS_non_rel_alpha.png>
-Package pdftex.def Info: Figures/BS_non_rel_alpha.png  used on input line 279.
+Package pdftex.def Info: Figures/BS_non_rel_alpha.png  used on input line 287.
 (pdftex.def)             Requested size: 469.75499pt x 296.25473pt.
-<Figures/BS_non_rel_beta.png, id=287, 1505.625pt x 948.54375pt>
+<Figures/BS_non_rel_beta.png, id=288, 1505.625pt x 948.54375pt>
 File: Figures/BS_non_rel_beta.png Graphic file (type png)
 <use Figures/BS_non_rel_beta.png>
-Package pdftex.def Info: Figures/BS_non_rel_beta.png  used on input line 287.
+Package pdftex.def Info: Figures/BS_non_rel_beta.png  used on input line 295.
 (pdftex.def)             Requested size: 469.75499pt x 295.94156pt.
-<Figures/BS_non_rel_delta.png, id=288, 1505.625pt x 957.5775pt>
+<Figures/BS_non_rel_delta.png, id=289, 1505.625pt x 957.5775pt>
 File: Figures/BS_non_rel_delta.png Graphic file (type png)
 <use Figures/BS_non_rel_delta.png>
-Package pdftex.def Info: Figures/BS_non_rel_delta.png  used on input line 296.
+Package pdftex.def Info: Figures/BS_non_rel_delta.png  used on input line 304.
 (pdftex.def)             Requested size: 230.18251pt x 146.39198pt.
-<Figures/BS_non_rel_gamma.png, id=289, 1505.625pt x 947.54pt>
+<Figures/BS_non_rel_gamma.png, id=290, 1505.625pt x 947.54pt>
 File: Figures/BS_non_rel_gamma.png Graphic file (type png)
 <use Figures/BS_non_rel_gamma.png>
-Package pdftex.def Info: Figures/BS_non_rel_gamma.png  used on input line 300.
+Package pdftex.def Info: Figures/BS_non_rel_gamma.png  used on input line 308.
 (pdftex.def)             Requested size: 230.18251pt x 144.85747pt.
-<Figures/BS_rel_alpha.png, id=290, 1505.625pt x 961.5925pt>
+ [71] [72 <./Figures/BS_non_rel_alpha.png (PNG copy)>] [73 <./Figures/BS_non_re
+l_beta.png (PNG copy)> <./Figures/BS_non_rel_delta.png (PNG copy)> <./Figures/B
+S_non_rel_gamma.png (PNG copy)>]
+<Figures/BS_rel_alpha.png, id=302, 1505.625pt x 961.5925pt>
 File: Figures/BS_rel_alpha.png Graphic file (type png)
 <use Figures/BS_rel_alpha.png>
-Package pdftex.def Info: Figures/BS_rel_alpha.png  used on input line 309.
+Package pdftex.def Info: Figures/BS_rel_alpha.png  used on input line 319.
 (pdftex.def)             Requested size: 469.75499pt x 300.01271pt.
-<Figures/BS_rel_beta.png, id=291, 1505.625pt x 948.54375pt>
+<Figures/BS_rel_beta.png, id=303, 1505.625pt x 948.54375pt>
 File: Figures/BS_rel_beta.png Graphic file (type png)
 <use Figures/BS_rel_beta.png>
-Package pdftex.def Info: Figures/BS_rel_beta.png  used on input line 317.
+Package pdftex.def Info: Figures/BS_rel_beta.png  used on input line 327.
 (pdftex.def)             Requested size: 469.75499pt x 295.94156pt.
-<Figures/BS_rel_delta.png, id=292, 1505.625pt x 963.6pt>
+<Figures/BS_rel_delta.png, id=304, 1505.625pt x 963.6pt>
 File: Figures/BS_rel_delta.png Graphic file (type png)
 <use Figures/BS_rel_delta.png>
-Package pdftex.def Info: Figures/BS_rel_delta.png  used on input line 326.
+Package pdftex.def Info: Figures/BS_rel_delta.png  used on input line 336.
 (pdftex.def)             Requested size: 230.18251pt x 147.31268pt.
-<Figures/BS_rel_gamma.png, id=293, 1505.625pt x 957.5775pt>
+<Figures/BS_rel_gamma.png, id=305, 1505.625pt x 957.5775pt>
 File: Figures/BS_rel_gamma.png Graphic file (type png)
 <use Figures/BS_rel_gamma.png>
-Package pdftex.def Info: Figures/BS_rel_gamma.png  used on input line 330.
+Package pdftex.def Info: Figures/BS_rel_gamma.png  used on input line 340.
 (pdftex.def)             Requested size: 230.18251pt x 146.39198pt.
-) [71 <./Figures/BS_non_rel_alpha.png (PNG copy)>] [72 <./Figures/BS_non_rel_be
-ta.png (PNG copy)> <./Figures/BS_non_rel_delta.png (PNG copy)> <./Figures/BS_no
-n_rel_gamma.png (PNG copy)>] [73 <./Figures/BS_rel_alpha.png (PNG copy)>]
-[74 <./Figures/BS_rel_beta.png (PNG copy)> <./Figures/BS_rel_delta.png (PNG cop
-y)> <./Figures/BS_rel_gamma.png (PNG copy)>] (./thesis.bbl [75
+) [74 <./Figures/BS_rel_alpha.png (PNG copy)>] [75 <./Figures/BS_rel_beta.png (
+PNG copy)> <./Figures/BS_rel_delta.png (PNG copy)> <./Figures/BS_rel_gamma.png 
+(PNG copy)>] (./thesis.bbl [76
 
 
 
-]) [76]
+]) [77]
 (./thesis.aux (./chp_intro.aux) (./chp_cuda_dfratom.aux) (./chp_basis_sets.aux)
 )
 
@@ -908,10 +934,10 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred when \ifx on line 678 was incomplete) 
 Here is how much of TeX's memory you used:
- 7456 strings out of 492646
- 103900 string characters out of 6129563
- 319423 words of memory out of 5000000
- 11137 multiletter control sequences out of 15000+600000
+ 7462 strings out of 492646
+ 104031 string characters out of 6129563
+ 324434 words of memory out of 5000000
+ 11142 multiletter control sequences out of 15000+600000
  18007 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,23n,49p,1883b,1686s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -937,10 +963,10 @@ blic/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publi
 c/amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (85 pages, 1448367 bytes).
+Output written on thesis.pdf (86 pages, 1486184 bytes).
 PDF statistics:
- 385 PDF objects out of 1000 (max. 8388607)
- 253 compressed objects within 3 object streams
+ 389 PDF objects out of 1000 (max. 8388607)
+ 255 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

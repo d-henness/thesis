@@ -17,8 +17,8 @@
 \contentsline {subsection}{\numberline {2.2.1}Basis set size optimization}{19}
 \contentsline {section}{\numberline {2.3}Discussion}{21}
 \contentsline {subsection}{\numberline {2.3.1}Automating Optimization}{21}
-\contentsline {subsection}{\numberline {2.3.2}Optimized Non-Relativistic Basis Sets}{30}
-\contentsline {chapter}{\numberline {3}CUDAProphet}{34}
+\contentsline {subsection}{\numberline {2.3.2}Optimized Basis Sets}{30}
+\contentsline {chapter}{\numberline {3}cudaDFRATOM}{34}
 \contentsline {section}{\numberline {3.1}GPU Architecture}{34}
 \contentsline {subsection}{\numberline {3.1.1}Threads, Blocks, and Grids}{34}
 \contentsline {subsection}{\numberline {3.1.2}Memory}{35}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 JUN 2018 20:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  3 JUL 2018 21:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -62,42 +62,9 @@ Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 \epsfxsize=\dimen105
 \epsfysize=\dimen106
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/subfig/subfig.sty
-Package: subfig 2005/06/28 ver: 1.3 subfig package
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
-Package caption3 Info: TeX engine: e-TeX on input line 57.
-\captionmargin=\dimen107
-\captionmargin@=\dimen108
-\captionwidth=\dimen109
-\caption@tempdima=\dimen110
-\caption@indent=\dimen111
-\caption@parindent=\dimen112
-\caption@hangindent=\dimen113
-)
-\c@ContinuedFloat=\count89
-)
-\c@KVtest=\count90
-\sf@farskip=\skip43
-\sf@captopadj=\dimen114
-\sf@capskip=\skip44
-\sf@nearskip=\skip45
-\c@subfigure=\count91
-\c@subfigure@save=\count92
-\c@lofdepth=\count93
-\c@subtable=\count94
-\c@subtable@save=\count95
-\c@lotdepth=\count96
-\sf@top=\skip46
-\sf@bottom=\skip47
-)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip48
+\@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -106,49 +73,49 @@ Package: amstext 2000/06/29 v2.01
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks15
-\ex@=\dimen115
+\ex@=\dimen107
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen116
+\pmbraise@=\dimen108
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count97
+\inf@bad=\count89
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count98
-\leftroot@=\count99
+\uproot@=\count90
+\leftroot@=\count91
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count100
-\DOTSCASE@=\count101
+\classnum@=\count92
+\DOTSCASE@=\count93
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
-\big@size=\dimen117
+\big@size=\dimen109
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count102
-\c@MaxMatrixCols=\count103
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
 \dotsspace@=\muskip10
-\c@parentequation=\count104
-\dspbrk@lvl=\count105
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
 \tag@help=\toks16
-\row@=\count106
-\column@=\count107
-\maxfields@=\count108
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
 \andhelp@=\toks17
-\eqnshift@=\dimen118
-\alignsep@=\dimen119
-\tagshift@=\dimen120
-\tagwidth@=\dimen121
-\totwidth@=\dimen122
-\lineht@=\dimen123
+\eqnshift@=\dimen110
+\alignsep@=\dimen111
+\tagshift@=\dimen112
+\tagwidth@=\dimen113
+\totwidth@=\dimen114
+\lineht@=\dimen115
 \@envbody=\toks18
-\multlinegap=\skip49
-\multlinetaggap=\skip50
+\multlinegap=\skip44
+\multlinetaggap=\skip45
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
@@ -159,52 +126,72 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip51
-\LTright=\skip52
-\LTpre=\skip53
-\LTpost=\skip54
-\LTchunksize=\count109
-\LTcapwidth=\dimen124
+\LTleft=\skip46
+\LTright=\skip47
+\LTpre=\skip48
+\LTpost=\skip49
+\LTchunksize=\count101
+\LTcapwidth=\dimen116
 \LT@head=\box28
 \LT@firsthead=\box29
 \LT@foot=\box30
 \LT@lastfoot=\box31
-\LT@cols=\count110
-\LT@rows=\count111
-\c@LT@tables=\count112
-\c@LT@chunks=\count113
+\LT@cols=\count102
+\LT@rows=\count103
+\c@LT@tables=\count104
+\c@LT@chunks=\count105
 \LT@p@ftn=\toks20
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip55
-\bibsep=\skip56
+\bibhang=\skip50
+\bibsep=\skip51
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count114
+\c@NAT@ctr=\count106
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen125
-\lightrulewidth=\dimen126
-\cmidrulewidth=\dimen127
-\belowrulesep=\dimen128
-\belowbottomsep=\dimen129
-\aboverulesep=\dimen130
-\abovetopsep=\dimen131
-\cmidrulesep=\dimen132
-\cmidrulekern=\dimen133
-\defaultaddspace=\dimen134
-\@cmidla=\count115
-\@cmidlb=\count116
-\@aboverulesep=\dimen135
-\@belowrulesep=\dimen136
-\@thisruleclass=\count117
-\@lastruleclass=\count118
-\@thisrulewidth=\dimen137
+\heavyrulewidth=\dimen117
+\lightrulewidth=\dimen118
+\cmidrulewidth=\dimen119
+\belowrulesep=\dimen120
+\belowbottomsep=\dimen121
+\aboverulesep=\dimen122
+\abovetopsep=\dimen123
+\cmidrulesep=\dimen124
+\cmidrulekern=\dimen125
+\defaultaddspace=\dimen126
+\@cmidla=\count107
+\@cmidlb=\count108
+\@aboverulesep=\dimen127
+\@belowrulesep=\dimen128
+\@thisruleclass=\count109
+\@lastruleclass=\count110
+\@thisrulewidth=\dimen129
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen138
+\bigstrutjot=\dimen130
 )
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen131
+\captionmargin@=\dimen132
+\captionwidth=\dimen133
+\caption@tempdima=\dimen134
+\caption@indent=\dimen135
+\caption@parindent=\dimen136
+\caption@hangindent=\dimen137
+)
+\c@ContinuedFloat=\count111
+Package caption Info: longtable package is loaded.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
+))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
@@ -216,23 +203,23 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count119
+\lst@mode=\count112
 \lst@gtempboxa=\box32
 \lst@token=\toks21
-\lst@length=\count120
-\lst@currlwidth=\dimen139
-\lst@column=\count121
-\lst@pos=\count122
-\lst@lostspace=\dimen140
-\lst@width=\dimen141
-\lst@newlines=\count123
-\lst@lineno=\count124
-\lst@maxwidth=\dimen142
+\lst@length=\count113
+\lst@currlwidth=\dimen138
+\lst@column=\count114
+\lst@pos=\count115
+\lst@lostspace=\dimen139
+\lst@width=\dimen140
+\lst@newlines=\count116
+\lst@lineno=\count117
+\lst@maxwidth=\dimen141
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-\c@lstnumber=\count125
-\lst@skipnumbers=\count126
+\c@lstnumber=\count118
+\lst@skipnumbers=\count119
 \lst@framebox=\box33
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
@@ -263,7 +250,7 @@ nment
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count127
+\c@float@type=\count120
 \float@exts=\toks22
 \float@box=\box34
 \@float@everytoks=\toks23
@@ -273,40 +260,45 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks24
-\c@algorithm=\count128
+\c@algorithm=\count121
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count129
-\c@ALC@line=\count130
-\c@ALC@rem=\count131
-\c@ALC@depth=\count132
-\ALC@tlm=\skip57
-\algorithmicindent=\skip58
+\c@ALC@unique=\count122
+\c@ALC@line=\count123
+\c@ALC@rem=\count124
+\c@ALC@depth=\count125
+\ALC@tlm=\skip52
+\algorithmicindent=\skip53
 )
-\c@theorem=\count133
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count126
+\c@subtable=\count127
+)
+\c@theorem=\count128
 
 
-./thesis.tex:107: LaTeX Error: Command \algorithm already defined.
+./thesis.tex:108: LaTeX Error: Command \algorithm already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.107 \newtheorem{algorithm}[theorem]{Algorithm}
+l.108 \newtheorem{algorithm}[theorem]{Algorithm}
                                                 
 ? 
 (./tcilatex.tex
 TCILATEX Macros for Scientific Word 2.5 <22 Dec 95>.
 NOTICE: This macro file is NOT proprietary and may be freely copied and distrib
 uted.
-\@hour=\count134
-\@minute=\count135
-\GRAPHICSTYPE=\count136
-\draft=\count137
-\dispkind=\count138
-\theight=\dimen143
+\@hour=\count129
+\@minute=\count130
+\GRAPHICSTYPE=\count131
+\draft=\count132
+\dispkind=\count133
+\theight=\dimen142
 LaTeX Info: Redefining \rm on input line 557.
 LaTeX Info: Redefining \sf on input line 558.
 LaTeX Info: Redefining \tt on input line 559.
@@ -320,7 +312,7 @@ Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
-\c@equationnumber=\count139
+\c@equationnumber=\count134
 
 amsgen already loaded)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/xr.sty
@@ -330,45 +322,47 @@ Package: xr 1994/05/28 v5.02 eXternal References (DPC)
 Package xr Warning: 
 No file supp.aux
 LABELS NOT IMPORTED.
- on input line 130.
+ on input line 131.
 
-(./thesis.aux
-
-LaTeX Warning: Label `eq:hartree-fock_eq' multiply defined.
-
+(./thesis.aux (./chp_intro.aux
 
 LaTeX Warning: Label `eq:hartree-fock_eq' multiply defined.
 
+
+LaTeX Warning: Label `eq:hartree-fock_eq' multiply defined.
+
+) (./chp_cuda_dfratom.aux
 
 LaTeX Warning: Label `fig:eint2matlots' multiply defined.
 
-)
+) (./chp_basis_sets.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
- (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
+LaTeX Font Info:    ... okay on input line 133.
+
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count140
-\scratchdimen=\dimen144
+\scratchcounter=\count135
+\scratchdimen=\dimen143
 \scratchbox=\box36
-\nofMPsegments=\count141
-\nofMParguments=\count142
+\nofMPsegments=\count136
+\nofMParguments=\count137
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count143
-\MPscratchDim=\dimen145
-\MPnumerator=\count144
-\makeMPintoPDFobject=\count145
+\MPscratchCnt=\count138
+\MPscratchDim=\dimen144
+\MPnumerator=\count139
+\makeMPintoPDFobject=\count140
 \everyMPtoPDFconversion=\toks26
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -419,24 +413,18 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
-Package caption Info: longtable package is loaded.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/ltcaption.sty
-Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
-)
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count146
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 524.
+\c@lstlisting=\count141
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 525.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 524.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 525.
  [1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
@@ -473,371 +461,539 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
  [8
 
-] (./thesis.lof)
+] (./thesis.lof
+./thesis.lof:17: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.17 ...0}}$}}\mathchar "010D $ are changed.}}{60}
+                                                  
+? 
+./thesis.lof:17: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.17 ...0}}$}}\mathchar "010D $ are changed.}}{60}
+                                                  
+? 
+./thesis.lof:17: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.17 ...0}}$}}\mathchar "010D $ are changed.}}{60}
+                                                  
+? 
+./thesis.lof:18: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.18 ...010B $ parameter vs. nuclear charge.}}{72}
+                                                  
+? 
+./thesis.lof:19: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.19 ...010C $ parameter vs. nuclear charge.}}{73}
+                                                  
+? 
+./thesis.lof:20: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.20 ...{0}}$}}\mathchar "010D $ parameters.}}{73}
+                                                  
+? 
+./thesis.lof:20: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.20 ...{0}}$}}\mathchar "010D $ parameters.}}{73}
+                                                  
+? 
+./thesis.lof:21: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.21 ...10B $ parameters vs. nuclear charge.}}{74}
+                                                  
+? 
+./thesis.lof:22: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.22 ...10C $ parameters vs. nuclear charge.}}{75}
+                                                  
+? 
+./thesis.lof:23: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.23 ...{0}}$}}\mathchar "010D $ parameters.}}{75}
+                                                  
+? 
+./thesis.lof:23: Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.23 ...{0}}$}}\mathchar "010D $ parameters.}}{75}
+                                                  
+? 
+)
 \tf@lof=\write5
 \openout5 = `thesis.lof'.
 
  [9
 
 ]
+\openout2 = `chp_intro.aux'.
+
+ (./chp_intro.tex
 Chapter 1.
 [1
 
+
 ] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 1265.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 432.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 1265.
- [12] [13] [14] [15] [16]
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 432.
+ [12] [13] [14] [15]) [16]
+\openout2 = `chp_cuda_dfratom.aux'.
+
+
+(./chp_cuda_dfratom.tex
 Chapter 2.
 [17
 
-] [18] [19]
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
-) [20]
-(./code_snippets/BS_sub_auto.sh [21] [22] [23] [24] [25] [26] [27]) [28]
-(./code_snippets/BS_find_best.sh) [29] [30] [31]
-Overfull \hbox (28.49303pt too wide) in alignment at lines 1713--1720
- [] [] [] [] [] [] [] [] [] [] 
- []
 
 
-Overfull \hbox (28.49303pt too wide) in alignment at lines 1720--1726
- [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (28.49303pt too wide) in alignment at lines 1726--1747
- [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (28.49303pt too wide) in alignment at lines 1747--1760
- [] [] [] [] [] [] [] [] [] [] 
- []
-
-[32] [33]
-Chapter 3.
-[34
-
-] [35] [36] <Figures/gpu_arc.png, id=163, 803.0pt x 1057.9525pt>
+] [18] [19] <Figures/gpu_arc.png, id=108, 803.0pt x 1057.9525pt>
 File: Figures/gpu_arc.png Graphic file (type png)
 
 <use Figures/gpu_arc.png>
-Package pdftex.def Info: Figures/gpu_arc.png used on input line 1789.
+Package pdftex.def Info: Figures/gpu_arc.png used on input line 28.
 (pdftex.def)             Requested size: 389.89749pt x 513.70364pt.
 
 
-LaTeX Warning: Float too large for page by 3.77364pt on input line 1793.
+LaTeX Warning: Float too large for page by 3.77364pt on input line 32.
 
-[37] [38 <./Figures/gpu_arc.png (PNG copy)>] (./code_snippets/mat_mul.cuf
-[39] [40]) [41]
-Overfull \hbox (19.58568pt too wide) in paragraph at lines 1820--1821
+[20] [21 <./Figures/gpu_arc.png (PNG copy)>] (./code_snippets/mat_mul.cuf
+[22] [23]) [24]
+Overfull \hbox (19.58568pt too wide) in paragraph at lines 59--60
 []\OT1/cmr/m/it/12 Step 2\OT1/cmr/m/n/12 . The cal-cu-la-tion of small ar-rays 
 and other con-stants is per-formed by \OT1/cmr/bx/it/12 calc[]parameters
  []
 
-[42] [43] [44] [45]
-<Figures/30_25_20_15_naive_layout.png, id=194, 1957.3125pt x 2007.5pt>
+[25]
+Overfull \hbox (4.8889pt too wide) in paragraph at lines 69--70
+\OT1/cmr/bx/it/12 hookup[]cpu \OT1/cmr/m/n/12 and \OT1/cmr/bx/it/12 hookup[]gpu
+\OT1/cmr/m/n/12 . Then, the four WTBS pa-ram-e-ters are op-ti-mized by \OT1/cmr
+/bx/it/12 newuoa\OT1/cmr/m/n/12 .
+ []
+
+[26] [27] [28]
+<Figures/30_25_20_15_naive_layout.png, id=140, 1957.3125pt x 2007.5pt>
 File: Figures/30_25_20_15_naive_layout.png Graphic file (type png)
 
 <use Figures/30_25_20_15_naive_layout.png>
 Package pdftex.def Info: Figures/30_25_20_15_naive_layout.png used on input lin
-e 1902.
+e 141.
 (pdftex.def)             Requested size: 469.75499pt x 481.77922pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/gen_mat_block_layout.png, id=195, 1003.75pt x 1001.7425pt>
+<Figures/gen_mat_block_layout.png, id=141, 1003.75pt x 1001.7425pt>
 File: Figures/gen_mat_block_layout.png Graphic file (type png)
 
 <use Figures/gen_mat_block_layout.png>
-Package pdftex.def Info: Figures/gen_mat_block_layout.png used on input line 19
-11.
+Package pdftex.def Info: Figures/gen_mat_block_layout.png used on input line 15
+0.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/gen_vec_block_layout.png, id=196, 1003.75pt x 1286.8075pt>
+<Figures/gen_vec_block_layout.png, id=142, 1003.75pt x 1286.8075pt>
 File: Figures/gen_vec_block_layout.png Graphic file (type png)
 
 <use Figures/gen_vec_block_layout.png>
-Package pdftex.def Info: Figures/gen_vec_block_layout.png used on input line 19
-18.
+Package pdftex.def Info: Figures/gen_vec_block_layout.png used on input line 15
+7.
 (pdftex.def)             Requested size: 469.75499pt x 602.22742pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[46]
+[29]
 
-LaTeX Warning: Text page 47 contains only floats.
+LaTeX Warning: Text page 30 contains only floats.
 
-[47 <./Figures/30_25_20_15_naive_layout.png (PNG copy)>] [48 <./Figures/gen_mat
-_block_layout.png (PNG copy)>] [49 <./Figures/gen_vec_block_layout.png (PNG cop
-y)>] <Figures/eint2_mat.png, id=210, 1003.75pt x 1001.7425pt>
+[30 <./Figures/30_25_20_15_naive_layout.png (PNG copy)>] [31 <./Figures/gen_mat
+_block_layout.png (PNG copy)>] [32 <./Figures/gen_vec_block_layout.png (PNG cop
+y)>] <Figures/eint2_mat.png, id=155, 1003.75pt x 1001.7425pt>
 File: Figures/eint2_mat.png Graphic file (type png)
 
 <use Figures/eint2_mat.png>
-Package pdftex.def Info: Figures/eint2_mat.png used on input line 1956.
+Package pdftex.def Info: Figures/eint2_mat.png used on input line 195.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/eint2_vec.png, id=211, 1003.75pt x 787.94376pt>
+<Figures/eint2_vec.png, id=156, 1003.75pt x 787.94376pt>
 File: Figures/eint2_vec.png Graphic file (type png)
 
 <use Figures/eint2_vec.png>
-Package pdftex.def Info: Figures/eint2_vec.png used on input line 1963.
+Package pdftex.def Info: Figures/eint2_vec.png used on input line 202.
 (pdftex.def)             Requested size: 469.75499pt x 368.75859pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[50
+[33
 
-] [51 <./Figures/eint2_mat.png (PNG copy)>] [52 <./Figures/eint2_vec.png (PNG c
-opy)>] [53] <Figures/dtmx_mat.png, id=225, 1003.75pt x 1001.7425pt>
+] [34 <./Figures/eint2_mat.png (PNG copy)>] [35 <./Figures/eint2_vec.png (PNG c
+opy)>] [36] <Figures/dtmx_mat.png, id=170, 1003.75pt x 1001.7425pt>
 File: Figures/dtmx_mat.png Graphic file (type png)
 
 <use Figures/dtmx_mat.png>
-Package pdftex.def Info: Figures/dtmx_mat.png used on input line 2074.
+Package pdftex.def Info: Figures/dtmx_mat.png used on input line 313.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
 
-<Figures/dtmx_vec.png, id=226, 1003.75pt x 713.66624pt>
+<Figures/dtmx_vec.png, id=171, 1003.75pt x 713.66624pt>
 File: Figures/dtmx_vec.png Graphic file (type png)
 
 <use Figures/dtmx_vec.png>
-Package pdftex.def Info: Figures/dtmx_vec.png used on input line 2081.
+Package pdftex.def Info: Figures/dtmx_vec.png used on input line 320.
 (pdftex.def)             Requested size: 469.75499pt x 333.99663pt.
- [54] [55 <./Figures/dtmx_mat.png (PNG copy)>]
-[56 <./Figures/dtmx_vec.png (PNG copy)>] [57] [58] [59] [60] [61] [62] [63]
-Overfull \hbox (13.66783pt too wide) in paragraph at lines 2337--2337
+ [37] [38 <./Figures/dtmx_mat.png (PNG copy)>]
+[39 <./Figures/dtmx_vec.png (PNG copy)>] [40] [41] [42] [43] [44] [45] [46]
+Overfull \hbox (13.66783pt too wide) in paragraph at lines 576--576
 []|\OT1/cmr/bx/it/12 binary[]search|  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2352--2355
+Underfull \hbox (badness 10000) in paragraph at lines 591--594
 
  []
 
-<Figures/eint2prof.png, id=258, 1003.75pt x 625.33624pt>
+<Figures/eint2prof.png, id=205, 1003.75pt x 625.33624pt>
 File: Figures/eint2prof.png Graphic file (type png)
 
 <use Figures/eint2prof.png>
-Package pdftex.def Info: Figures/eint2prof.png used on input line 2358.
+Package pdftex.def Info: Figures/eint2prof.png used on input line 597.
 (pdftex.def)             Requested size: 469.75499pt x 292.6581pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[64]
+[47]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/formpqprof.png, id=263, 1003.75pt x 637.38126pt>
+<Figures/formpqprof.png, id=209, 1003.75pt x 637.38126pt>
 File: Figures/formpqprof.png Graphic file (type png)
 
 <use Figures/formpqprof.png>
-Package pdftex.def Info: Figures/formpqprof.png used on input line 2412.
+Package pdftex.def Info: Figures/formpqprof.png used on input line 651.
 (pdftex.def)             Requested size: 469.75499pt x 298.29517pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[65 <./Figures/eint2prof.png (PNG copy)>]
-<Figures/eint2_mat_lots.png, id=267, 1003.75pt x 1001.7425pt>
+[48 <./Figures/eint2prof.png (PNG copy)>]
+<Figures/eint2_mat_lots.png, id=213, 1003.75pt x 1001.7425pt>
 File: Figures/eint2_mat_lots.png Graphic file (type png)
 
 <use Figures/eint2_mat_lots.png>
-Package pdftex.def Info: Figures/eint2_mat_lots.png used on input line 2423.
+Package pdftex.def Info: Figures/eint2_mat_lots.png used on input line 662.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
- [66]
-<Figures/eint2_vec_lots.png, id=271, 2007.5pt x 1238.6275pt>
+ [49]
+<Figures/eint2_vec_lots.png, id=217, 2007.5pt x 1238.6275pt>
 File: Figures/eint2_vec_lots.png Graphic file (type png)
 
 <use Figures/eint2_vec_lots.png>
-Package pdftex.def Info: Figures/eint2_vec_lots.png used on input line 2430.
+Package pdftex.def Info: Figures/eint2_vec_lots.png used on input line 669.
 (pdftex.def)             Requested size: 469.75499pt x 289.83011pt.
 
-Overfull \hbox (15.54016pt too wide) in paragraph at lines 2446--2461
+Overfull \hbox (15.54016pt too wide) in paragraph at lines 685--700
  [] 
  []
 
-[67 <./Figures/formpqprof.png (PNG copy)>] [68 <./Figures/eint2_mat_lots.png (P
-NG copy)>] [69 <./Figures/eint2_vec_lots.png (PNG copy)>]
-Overfull \hbox (15.54016pt too wide) in paragraph at lines 2468--2483
+[50 <./Figures/formpqprof.png (PNG copy)>] [51 <./Figures/eint2_mat_lots.png (P
+NG copy)>] [52 <./Figures/eint2_vec_lots.png (PNG copy)>]
+Overfull \hbox (15.54016pt too wide) in paragraph at lines 707--722
  [] 
  []
 
-<Figures/totaltimeprof.png, id=281, 1003.75pt x 642.4pt>
+<Figures/totaltimeprof.png, id=228, 1003.75pt x 642.4pt>
 File: Figures/totaltimeprof.png Graphic file (type png)
 
 <use Figures/totaltimeprof.png>
-Package pdftex.def Info: Figures/totaltimeprof.png used on input line 2487.
+Package pdftex.def Info: Figures/totaltimeprof.png used on input line 726.
 (pdftex.def)             Requested size: 469.75499pt x 300.64395pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[70] [71 <./Figures/totaltimeprof.png (PNG copy)>]
-Overfull \hbox (4.57948pt too wide) in paragraph at lines 2510--2510
+[53] (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+) [54 <./Figures/totaltimeprof.png (PNG copy)>]
+Overfull \hbox (4.57948pt too wide) in paragraph at lines 749--749
 []\OT1/cmr/m/n/12 'energy'| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2506--2514
+Underfull \hbox (badness 10000) in paragraph at lines 745--753
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2514--2525
+Underfull \hbox (badness 10000) in paragraph at lines 753--764
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2525--2536
-
- []
-
-[72]
-Overfull \hbox (4.38567pt too wide) in paragraph at lines 2540--2540
-[]\OT1/cmr/m/n/12 wtbspara| 
+Overfull \hbox (6.36836pt too wide) in paragraph at lines 769--769
+[]\OT1/cmr/m/n/12 'WTBS'| 
  []
 
 
-Underfull \hbox (badness 3895) in paragraph at lines 2545--2546
+Underfull \hbox (badness 10000) in paragraph at lines 764--775
+
+ []
+
+[55]
+Overfull \hbox (15.57445pt too wide) in paragraph at lines 779--779
+[]\OT1/cmr/m/n/12 WTBSpara| 
+ []
+
+
+Underfull \hbox (badness 3895) in paragraph at lines 784--785
 []\OT1/cmr/m/n/12 Where in the $[]\OML/cmm/m/it/12 ^^P$ \OT1/cmr/m/n/12 pool ea
 ch sym-me-
  []
 
 
-Underfull \hbox (badness 1122) in paragraph at lines 2545--2546
+Underfull \hbox (badness 1122) in paragraph at lines 784--785
 \OT1/cmr/m/n/12 try starts tak-ing ex-po-nents from (de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2537--2550
+Underfull \hbox (badness 10000) in paragraph at lines 776--789
 
  []
 
 
-Overfull \hbox (17.11868pt too wide) in paragraph at lines 2551--2565
+Overfull \hbox (17.11868pt too wide) in paragraph at lines 790--804
 []\OT1/cmr/m/n/12 $newuoa has to be given if job-type='bsopt'. Re-fer to the ne
 wuoa$[]$documentation
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2551--2565
+Underfull \hbox (badness 10000) in paragraph at lines 790--804
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2551--2565
+Underfull \hbox (badness 10000) in paragraph at lines 790--804
 
  []
 
 
-Underfull \hbox (badness 5133) in paragraph at lines 2571--2572
+Underfull \hbox (badness 5133) in paragraph at lines 810--811
 \OT1/cmr/m/n/12 bi-na-tions of spinor oc-cu-pan-cies (de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2565--2578
+Underfull \hbox (badness 10000) in paragraph at lines 804--817
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2565--2578
+Underfull \hbox (badness 10000) in paragraph at lines 804--817
 
  []
 
-[73]
-Underfull \hbox (badness 3396) in paragraph at lines 2586--2587
+[56]
+Underfull \hbox (badness 3396) in paragraph at lines 825--826
 []\OT1/cmr/m/n/12 Convergence limit for the large-large
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2586--2587
+Underfull \hbox (badness 10000) in paragraph at lines 825--826
 \OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
  []
 
 
-Underfull \hbox (badness 2653) in paragraph at lines 2587--2588
+Underfull \hbox (badness 2653) in paragraph at lines 826--827
 []\OT1/cmr/m/n/12 Convergence limit for the small-large
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2587--2588
+Underfull \hbox (badness 10000) in paragraph at lines 826--827
 \OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
  []
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 2588--2589
+Underfull \hbox (badness 2020) in paragraph at lines 827--828
 []\OT1/cmr/m/n/12 Convergence limit for the small-small
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2588--2589
+Underfull \hbox (badness 10000) in paragraph at lines 827--828
 \OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2578--2591
+Underfull \hbox (badness 10000) in paragraph at lines 817--830
 
  []
 
-[74] (./thesis.bbl [75
+) [57]
+\openout2 = `chp_basis_sets.aux'.
+
+ (./chp_basis_sets.tex
+Chapter 3.
+[58
 
 
-]) [76] (./thesis.aux)
+
+] [59] <Figures/deltagamm.png, id=251, 1505.625pt x 961.5925pt>
+File: Figures/deltagamm.png Graphic file (type png)
+
+<use Figures/deltagamm.png>
+Package pdftex.def Info: Figures/deltagamm.png used on input line 30.
+(pdftex.def)             Requested size: 469.75499pt x 300.01271pt.
+ [60 <./Figures/deltagamm.png (PNG copy)>] [61]
+(./code_snippets/BS_sub_auto_rwtbs.sh [62] [63] [64]
+Overfull \hbox (44.63216pt too wide) in paragraph at lines 159--160
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[65]) [66] (./code_snippets/BS_find_best.sh) [67] [68] [69]
+Overfull \hbox (28.49303pt too wide) in alignment at lines 230--237
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.49303pt too wide) in alignment at lines 237--243
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.49303pt too wide) in alignment at lines 243--264
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (28.49303pt too wide) in alignment at lines 264--277
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+[70] <Figures/BS_non_rel_alpha.png, id=287, 1505.625pt x 949.5475pt>
+File: Figures/BS_non_rel_alpha.png Graphic file (type png)
+
+<use Figures/BS_non_rel_alpha.png>
+Package pdftex.def Info: Figures/BS_non_rel_alpha.png used on input line 287.
+(pdftex.def)             Requested size: 469.75499pt x 296.25473pt.
+
+<Figures/BS_non_rel_beta.png, id=288, 1505.625pt x 948.54375pt>
+File: Figures/BS_non_rel_beta.png Graphic file (type png)
+
+<use Figures/BS_non_rel_beta.png>
+Package pdftex.def Info: Figures/BS_non_rel_beta.png used on input line 295.
+(pdftex.def)             Requested size: 469.75499pt x 295.94156pt.
+
+<Figures/BS_non_rel_delta.png, id=289, 1505.625pt x 957.5775pt>
+File: Figures/BS_non_rel_delta.png Graphic file (type png)
+
+<use Figures/BS_non_rel_delta.png>
+Package pdftex.def Info: Figures/BS_non_rel_delta.png used on input line 304.
+(pdftex.def)             Requested size: 230.18251pt x 146.39198pt.
+
+<Figures/BS_non_rel_gamma.png, id=290, 1505.625pt x 947.54pt>
+File: Figures/BS_non_rel_gamma.png Graphic file (type png)
+
+<use Figures/BS_non_rel_gamma.png>
+Package pdftex.def Info: Figures/BS_non_rel_gamma.png used on input line 308.
+(pdftex.def)             Requested size: 230.18251pt x 144.85747pt.
+ [71] [72 <./Figures/BS_non_rel_alpha.png (PNG copy)>] [73 <./Figures/BS_non_re
+l_beta.png (PNG copy)> <./Figures/BS_non_rel_delta.png (PNG copy)> <./Figures/B
+S_non_rel_gamma.png (PNG copy)>]
+<Figures/BS_rel_alpha.png, id=302, 1505.625pt x 961.5925pt>
+File: Figures/BS_rel_alpha.png Graphic file (type png)
+
+<use Figures/BS_rel_alpha.png>
+Package pdftex.def Info: Figures/BS_rel_alpha.png used on input line 319.
+(pdftex.def)             Requested size: 469.75499pt x 300.01271pt.
+
+<Figures/BS_rel_beta.png, id=303, 1505.625pt x 948.54375pt>
+File: Figures/BS_rel_beta.png Graphic file (type png)
+
+<use Figures/BS_rel_beta.png>
+Package pdftex.def Info: Figures/BS_rel_beta.png used on input line 327.
+(pdftex.def)             Requested size: 469.75499pt x 295.94156pt.
+
+<Figures/BS_rel_delta.png, id=304, 1505.625pt x 963.6pt>
+File: Figures/BS_rel_delta.png Graphic file (type png)
+
+<use Figures/BS_rel_delta.png>
+Package pdftex.def Info: Figures/BS_rel_delta.png used on input line 336.
+(pdftex.def)             Requested size: 230.18251pt x 147.31268pt.
+
+<Figures/BS_rel_gamma.png, id=305, 1505.625pt x 957.5775pt>
+File: Figures/BS_rel_gamma.png Graphic file (type png)
+
+<use Figures/BS_rel_gamma.png>
+Package pdftex.def Info: Figures/BS_rel_gamma.png used on input line 340.
+(pdftex.def)             Requested size: 230.18251pt x 146.39198pt.
+) [74 <./Figures/BS_rel_alpha.png (PNG copy)>]
+[75 <./Figures/BS_rel_beta.png (PNG copy)> <./Figures/BS_rel_delta.png (PNG cop
+y)> <./Figures/BS_rel_gamma.png (PNG copy)>] (./thesis.bbl [76
+
+
+
+]) [77]
+(./thesis.aux (./chp_intro.aux) (./chp_cuda_dfratom.aux) (./chp_basis_sets.aux)
+)
 
 LaTeX Warning: There were multiply-defined labels.
 
  )
 (\end occurred when \ifx on line 678 was incomplete) 
 Here is how much of TeX's memory you used:
- 7057 strings out of 493089
- 99738 string characters out of 6134842
- 402211 words of memory out of 5000000
- 10367 multiletter control sequences out of 15000+600000
- 15999 words of font info for 62 fonts, out of 8000000 for 9000
+ 7030 strings out of 493089
+ 99983 string characters out of 6134842
+ 319668 words of memory out of 5000000
+ 10310 multiletter control sequences out of 15000+600000
+ 18007 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,23n,48p,1870b,1653s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,23n,49p,1883b,1564s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
-lic/amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (85 pages, 1159676 bytes).
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2015/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msbm10.pfb>
+Output written on thesis.pdf (86 pages, 1484852 bytes).
 PDF statistics:
- 369 PDF objects out of 1000 (max. 8388607)
- 247 compressed objects within 3 object streams
+ 389 PDF objects out of 1000 (max. 8388607)
+ 255 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

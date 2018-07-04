@@ -38,4 +38,7 @@
 \contentsline {subsection}{\numberline {3.2.2}Automating Optimization}{62}
 \contentsline {section}{\numberline {3.3}Discussion}{68}
 \contentsline {subsection}{\numberline {3.3.1}Optimized Non-Relativistic Basis Sets}{68}
-\contentsline {chapter}{Bibliography}{76}
+\contentsline {chapter}{\numberline {4}Conclusions and Future Work}{76}
+\contentsline {section}{\numberline {4.1}cudaDFRATOM}{76}
+\contentsline {section}{\numberline {4.2}Basis Set Optimization}{77}
+\contentsline {chapter}{Bibliography}{79}

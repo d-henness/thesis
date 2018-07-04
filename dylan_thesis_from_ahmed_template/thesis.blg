@@ -4,46 +4,47 @@ The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: chp_intro.aux
 A level-1 auxiliary file: chp_cuda_dfratom.aux
 A level-1 auxiliary file: chp_basis_sets.aux
+A level-1 auxiliary file: chp_con_fut.aux
 The style file: initunsrt.bst
 Database file #1: thesis.bib
-You've used 26 entries,
+You've used 28 entries,
             1791 wiz_defined-function locations,
-            647 strings with 6989 characters,
-and the built_in function-call counts, 5315 in all, are:
-= -- 508
-> -- 146
+            662 strings with 7330 characters,
+and the built_in function-call counts, 5715 in all, are:
+= -- 544
+> -- 165
 < -- 0
-+ -- 63
-- -- 37
-* -- 371
-:= -- 841
-add.period$ -- 77
-call.type$ -- 26
-change.case$ -- 22
++ -- 70
+- -- 42
+* -- 398
+:= -- 910
+add.period$ -- 83
+call.type$ -- 28
+change.case$ -- 25
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 236
-empty$ -- 571
-format.name$ -- 37
-if$ -- 1174
+cite$ -- 28
+duplicate$ -- 251
+empty$ -- 609
+format.name$ -- 42
+if$ -- 1262
 int.to.chr$ -- 0
-int.to.str$ -- 26
-missing$ -- 30
-newline$ -- 132
-num.names$ -- 25
-pop$ -- 52
+int.to.str$ -- 28
+missing$ -- 31
+newline$ -- 142
+num.names$ -- 27
+pop$ -- 55
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 79
+skip$ -- 84
 stack$ -- 0
-substring$ -- 438
-swap$ -- 26
+substring$ -- 465
+swap$ -- 27
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 57
-width$ -- 28
-write$ -- 286
+while$ -- 60
+width$ -- 30
+write$ -- 308

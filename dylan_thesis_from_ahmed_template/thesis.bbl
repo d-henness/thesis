@@ -139,4 +139,16 @@ O.~Matsuoka and Y.~Watanabe.
 \newblock An atomic dirac-fock-roothaan program.
 \newblock {\em Comput. Phys. Commun}, 139(2):218 -- 234, 2001.
 
+\bibitem{ETBS}
+R.~Raffenetti and K.~Ruedenberg.
+\newblock Even‐tempered representations of atomic self‐consistent‐field
+  wavefunctions.
+\newblock Technical report, Ames Laboratory, 1973.
+
+\bibitem{WTBS}
+S.~Huzinaga, M.~Klobukowski, and H.~Tatewaki.
+\newblock The well-tempered gtf basis sets and their applications in the scf
+  calculations on n2, co, na2, and p2.
+\newblock {\em Can. J. Chem.}, 63(7):1812--1828, 1985.
+
 \end{thebibliography}

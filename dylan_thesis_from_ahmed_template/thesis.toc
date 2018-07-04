@@ -4,10 +4,10 @@
 \contentsline {subsection}{\numberline {1.2.1}Two-Electron Integrals}{5}
 \contentsline {subsection}{\numberline {1.2.2}Basis Sets}{7}
 \contentsline {subsection}{\numberline {1.2.3}Hartree-Fock SCF}{8}
-\contentsline {section}{\numberline {1.3}Special Relativity}{10}
+\contentsline {section}{\numberline {1.3}Special Relativity}{9}
 \contentsline {subsection}{\numberline {1.3.1}Relativistic Quantum Mechanics}{11}
 \contentsline {subsection}{\numberline {1.3.2}Dirac Equation}{12}
-\contentsline {subsection}{\numberline {1.3.3}Kinetic Balancing}{14}
+\contentsline {subsection}{\numberline {1.3.3}Kinetic Balancing}{13}
 \contentsline {subsection}{\numberline {1.3.4}The Dirac Hydrogen-Like Atom}{15}
 \contentsline {subsection}{\numberline {1.3.5}Relativistic Effects}{15}
 \contentsline {subsection}{\numberline {1.3.6}Gaussian Nucleus}{16}

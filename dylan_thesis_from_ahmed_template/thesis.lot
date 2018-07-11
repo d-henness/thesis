@@ -3,8 +3,8 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {2.1}{\ignorespaces Kernel resource usage\relax }}{46}
 \contentsline {table}{\numberline {2.2}{\ignorespaces \textit {\textbf {eint2}} kernel performance}}{47}
-\contentsline {table}{\numberline {2.3}{\ignorespaces \textit {\textbf {formpq\_alg1}} kernel profiling results.}}{49}
-\contentsline {table}{\numberline {2.4}{\ignorespaces \textit {\textbf {formpq\_alg2}} kernel profiling results.}}{49}
+\contentsline {table}{\numberline {2.3}{\ignorespaces \textit {\textbf {MTSE}} kernel profiling results.}}{49}
+\contentsline {table}{\numberline {2.4}{\ignorespaces \textit {\textbf {STSE}} kernel profiling results.}}{49}
 \contentsline {table}{\numberline {2.5}{\ignorespaces Total speedup of alg1}}{53}
 \contentsline {table}{\numberline {2.6}{\ignorespaces Total speedup of alg2}}{53}
 \addvspace {10\p@ }

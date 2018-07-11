@@ -7,44 +7,46 @@ A level-1 auxiliary file: chp_basis_sets.aux
 A level-1 auxiliary file: chp_con_fut.aux
 The style file: initunsrt.bst
 Database file #1: thesis.bib
-You've used 28 entries,
+Warning--can't use both author and editor fields in Powell2006
+You've used 29 entries,
             1791 wiz_defined-function locations,
-            662 strings with 7330 characters,
-and the built_in function-call counts, 5715 in all, are:
-= -- 544
-> -- 165
-< -- 0
-+ -- 70
-- -- 42
-* -- 398
-:= -- 910
-add.period$ -- 83
-call.type$ -- 28
+            672 strings with 7580 characters,
+and the built_in function-call counts, 6058 in all, are:
+= -- 581
+> -- 169
+< -- 1
++ -- 72
+- -- 43
+* -- 416
+:= -- 951
+add.period$ -- 86
+call.type$ -- 29
 change.case$ -- 25
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 251
-empty$ -- 609
-format.name$ -- 42
-if$ -- 1262
+cite$ -- 30
+duplicate$ -- 271
+empty$ -- 644
+format.name$ -- 43
+if$ -- 1348
 int.to.chr$ -- 0
-int.to.str$ -- 28
-missing$ -- 31
-newline$ -- 142
-num.names$ -- 27
-pop$ -- 55
+int.to.str$ -- 29
+missing$ -- 33
+newline$ -- 147
+num.names$ -- 28
+pop$ -- 60
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 84
+skip$ -- 99
 stack$ -- 0
-substring$ -- 465
-swap$ -- 27
-text.length$ -- 0
+substring$ -- 497
+swap$ -- 38
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 60
-width$ -- 30
-write$ -- 308
+warning$ -- 1
+while$ -- 64
+width$ -- 31
+write$ -- 320
+(There was 1 warning)

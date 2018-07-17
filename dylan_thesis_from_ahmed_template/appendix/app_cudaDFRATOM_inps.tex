@@ -1,0 +1,23 @@
+\chapter{cudaDFRATOM Input and Output files}
+\label{app:cudaDFRATOM_inp}
+
+This appendix shows cudaDFRATOM input files for a few common calculations. The output files are also given.
+
+\section{Single Point Energy with predefined WTBS parameters}
+This input file will perform a calculation on lead using predefined well-tempered basis set (WTBS) parameters. It uses the ``autogen" option to automatically generate electron configurations.
+
+\lstinputlisting[caption={Input file for calculating the single point energy of Pb.}, language={}, basicstyle=\ttfamily\tiny\color{black}]{appendix/inp_out_files/82Pb_gauss_35s30p-30p+25d-25d+20f-20f+.inp}
+\lstinputlisting[caption={Output file for calculating the single point energy of Pb.}, language={}, basicstyle=\ttfamily\tiny\color{black}]{appendix/inp_out_files/82Pb_gauss_35s30p-30p+25d-25d+20f-20f+.log}
+
+\section{Optimizing a Basis Set for a Specific Electron Configuration}
+\label{sec:opt_bs_spec}
+This input file will optimize a WTBS basis set for protactinium with a specific electron configuration. Note that in the output file, the ``freeel" variable is set to 1. ``freeel" only matters if ``autogen" is set to true, the actual number of electrons in open shells is determined from the electron configurations that are read in.
+
+\lstinputlisting[caption={Input file for Pa basis set optimization calculation.}, language={}, basicstyle=\ttfamily\tiny\color{black}]{appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+.inp}
+\lstinputlisting[caption={Output file for Pa basis set optimization calculation.}, language={}, basicstyle=\ttfamily\tiny\color{black}]{appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+.log}
+
+\section{Single Point Energy using a predefined Basis Set}
+This input file will perform a single point energy calculation on protactinium using the basis optimized in Section \ref{sec:opt_bs_spec}.
+
+\lstinputlisting[caption={Input file for calculating the single point energy of Pa using a predefined basis set.}, language={}, basicstyle=\ttfamily\tiny\color{black}]{appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+_readin.inp}
+\lstinputlisting[caption={Output file for calculating the single point energy of Pa using a predefined basis set.}, language={}, basicstyle=\ttfamily\tiny\color{black}]{appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+_readin.log}

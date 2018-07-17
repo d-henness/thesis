@@ -43,3 +43,7 @@
 \contentsline {section}{\numberline {4.1}cudaDFRATOM}{76}
 \contentsline {section}{\numberline {4.2}Basis Set Optimization}{77}
 \contentsline {chapter}{Bibliography}{79}
+\contentsline {chapter}{\numberline {A}cudaDFRATOM Input and Output files}{81}
+\contentsline {section}{\numberline {A.1}Single Point Energy with predefined WTBS parameters}{81}
+\contentsline {section}{\numberline {A.2}Optimizing a Basis Set for a Specific Electron Configuration}{89}
+\contentsline {section}{\numberline {A.3}Single Point Energy using a predefined Basis Set}{104}

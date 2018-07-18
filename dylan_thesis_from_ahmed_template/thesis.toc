@@ -47,3 +47,4 @@
 \contentsline {section}{\numberline {A.1}Single Point Energy with predefined WTBS parameters}{81}
 \contentsline {section}{\numberline {A.2}Optimizing a Basis Set for a Specific Electron Configuration}{89}
 \contentsline {section}{\numberline {A.3}Single Point Energy using a predefined Basis Set}{104}
+\contentsline {chapter}{\numberline {B}Scripts for cudaDFRATOM}{115}

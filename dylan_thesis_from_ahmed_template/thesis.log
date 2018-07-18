@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.13)  17 JUL 2018 13:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.13)  18 JUL 2018 11:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -331,7 +331,8 @@ LaTeX Warning: Label `eq:hartree-fock_eq' multiply defined.
 LaTeX Warning: Label `fig:eint2matlots' multiply defined.
 
 ) (./chp_basis_sets.aux) (./chp_con_fut.aux)
-(./appendix/app_cudaDFRATOM_inps.aux))
+(./appendix/app_cudaDFRATOM_inps.aux) (./appendix/app_cudaDFRATOM_suto_sub.aux)
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
@@ -346,8 +347,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
 LaTeX Font Info:    ... okay on input line 133.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
 LaTeX Font Info:    ... okay on input line 133.
-
-(/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count136
 \scratchdimen=\dimen143
@@ -932,19 +932,31 @@ Appendix A.
 [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103])
 (./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+_readin.inp [104]
 [105]) (./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+_readin.log
-[106] [107] [108] [109] [110] [111] [112] [113])) [114] (./thesis.aux
-(./chp_intro.aux) (./chp_cuda_dfratom.aux) (./chp_basis_sets.aux)
-(./chp_con_fut.aux) (./appendix/app_cudaDFRATOM_inps.aux))
+[106] [107] [108] [109] [110] [111] [112] [113])) [114]
+\openout2 = `appendix/app_cudaDFRATOM_suto_sub.aux'.
+
+
+(./appendix/app_cudaDFRATOM_suto_sub.tex
+Appendix B.
+(./appendix/auto_scripts/BS_sub_auto.sh [115
+
+
+
+] [116])
+(./appendix/auto_scripts/BS_get_best.sh)) [117] (./thesis.aux (./chp_intro.aux)
+(./chp_cuda_dfratom.aux) (./chp_basis_sets.aux) (./chp_con_fut.aux)
+(./appendix/app_cudaDFRATOM_inps.aux) (./appendix/app_cudaDFRATOM_suto_sub.aux)
+)
 
 LaTeX Warning: There were multiply-defined labels.
 
  )
 (\end occurred when \ifx on line 678 was incomplete) 
 Here is how much of TeX's memory you used:
- 7612 strings out of 492646
- 106567 string characters out of 6129563
- 667376 words of memory out of 5000000
- 11259 multiletter control sequences out of 15000+600000
+ 7703 strings out of 492646
+ 107841 string characters out of 6129563
+ 667916 words of memory out of 5000000
+ 11336 multiletter control sequences out of 15000+600000
  18175 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,23n,49p,1883b,1686s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -971,10 +983,10 @@ lic/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (123 pages, 1715231 bytes).
+Output written on thesis.pdf (126 pages, 1731346 bytes).
 PDF statistics:
- 512 PDF objects out of 1000 (max. 8388607)
- 339 compressed objects within 4 object streams
+ 521 PDF objects out of 1000 (max. 8388607)
+ 345 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

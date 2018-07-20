@@ -1,0 +1,17 @@
+91Pa
+ $contrl jobtype='bsopt' $end
+ $nuc znuc=91 nucmdl=3 $end
+ $bas nsym=7  bastype='wtbs' $end
+ $wtbs wtbspara=1.9453737E-02 1.8578241E+00 4.9471334E+00 1.4389341E+00
+       nbs=35 30 30 25 25 20 20
+       start=1 1 1 1 1 1 1 $end
+ $newuoa rhobeg=1.0e-1 rhoend=1.0e-5 iprint=2 maxfun=2000 $end
+ $econfig nclose=7 5 5 3 3 1 1 nopen=0 0 0 1 1 1 1 nconf=6 $end
+ 0.0 0.0 0.0 1.0 0.0 0.0 2.0
+ 0.0 0.0 0.0 1.0 0.0 1.0 1.0
+ 0.0 0.0 0.0 1.0 0.0 2.0 0.0
+ 0.0 0.0 0.0 0.0 1.0 0.0 2.0
+ 0.0 0.0 0.0 0.0 1.0 1.0 1.0
+ 0.0 0.0 0.0 0.0 1.0 2.0 0.0
+ $scf maxitr=100 ixtrp=1 dfctr=0.5 $end
+

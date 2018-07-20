@@ -1,3 +1,160 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{1926PhRv...28.1049S}
+E.~{Schr{\"o}dinger}.
+\newblock {An Undulatory Theory of the Mechanics of Atoms and Molecules}.
+\newblock {\em Phys Rev}, 28:1049--1070, December 1926.
+
+\bibitem{1927AnP...389..457B}
+M.~{Born} and R.~{Oppenheimer}.
+\newblock {Zur Quantentheorie der Molekeln}.
+\newblock {\em Ann. Physik}, 389:457--484, 1927.
+
+\bibitem{Griffiths2}
+D.~J. Griffiths.
+\newblock {\em {Introduction to Quantum Mechanics}}.
+\newblock Pearson Prentice Hall, Upper Saddle River, NJ, 2nd edition, 2005.
+
+\bibitem{harmonium}
+S.~Kais, D.~R. Herschbach, N.~C. Handy, C.~W. Murray, and G.~J. Laming.
+\newblock {Density functionals and dimensional renormalization for an exactly
+  solvable model}.
+\newblock {\em J. Chem. Phys.}, 99(1):417--425, 1993.
+
+\bibitem{fourier1822thorie}
+J.~Fourier.
+\newblock {\em {Th{\'e}orie analytique de la chaleur}}.
+\newblock Chez Firmin Didot, p{\`e}re et fils, 1822.
+
+\bibitem{PhysRev.34.1293}
+J.~C. Slater.
+\newblock {The Theory of Complex Spectra}.
+\newblock {\em Phys. Rev.}, 34:1293--1322, Nov 1929.
+
+\bibitem{Gerlach1922}
+W.~Gerlach and O.~Stern.
+\newblock {Der experimentelle Nachweis der Richtungsquantelung im Magnetfeld}.
+\newblock {\em Z. Physik}, 9(1):349--352, Dec 1922.
+
+\bibitem{Pauli1925}
+W.~Pauli.
+\newblock {{\"U}ber den Zusammenhang des Abschlusses der Elektronengruppen im
+  Atom mit der Komplexstruktur der Spektren}.
+\newblock {\em Z. Physik}, 31(1):765--783, Feb 1925.
+
+\bibitem{Ostlund}
+A.~Szabo and N.~S. Ostlund.
+\newblock {\em {Modern Quantum Chemistry : Introduction to Advanced Electronic
+  Structure Theory.}}
+\newblock Dover Publications, Mineola, N.Y, 1996.
+
+\bibitem{RHF}
+C.~C.~J. Roothaan.
+\newblock {New Developments in Molecular Orbital Theory}.
+\newblock {\em Rev. Mod. Phys.}, 23:69--89, Apr 1951.
+
+\bibitem{PhysRev.36.57}
+J.~C. Slater.
+\newblock {Atomic Shielding Constants}.
+\newblock {\em Phys. Rev.}, 36:57--64, Jul 1930.
+
+\bibitem{Boys542}
+S.~F. Boys.
+\newblock {Electronic wave functions - I. A general method of calculation for
+  the stationary states of any molecular system}.
+\newblock {\em Proc. R. Soc. Lond. A}, 200(1063):542--554, 1950.
+
+\bibitem{Hall541}
+G.~G. Hall.
+\newblock {The molecular orbital theory of chemical valency VIII. A method of
+  calculating ionization potentials}.
+\newblock {\em Proc. R. Soc. Lond. A}, 205(1083):541--552, 1951.
+
+\bibitem{Michelson}
+A.~A. Michelson and E.~W. Morley.
+\newblock {On the Relative Motion of the Earth and of the Luminiferous Ether}.
+\newblock {\em Am. J. Sci}, 34:333, 1887.
+
+\bibitem{Piela}
+L.~Piela.
+\newblock {\em {Ideas of Quantum Chemistry}}.
+\newblock Elsevier, Amsterdam, 2007.
+
+\bibitem{Gordon1926}
+W.~Gordon.
+\newblock {Der Comptoneffekt nach der Schr{\"o}dingerschen Theorie}.
+\newblock {\em Z. Physik}, 40(1):117--133, Jan 1926.
+
+\bibitem{Klein1927}
+O.~Klein.
+\newblock {Elektrodynamik und Wellenmechanik vom Standpunkt des
+  Korrespondenzprinzips}.
+\newblock {\em Z. Physik A}, 41(6):407--442, Oct 1927.
+
+\bibitem{Dirac610}
+P.~A.~M. Dirac.
+\newblock {The quantum theory of the electron}.
+\newblock {\em Proc. R. Soc. Lond. A}, 117(778):610--624, 1928.
+
+\bibitem{PhysRev.43.491}
+C.~D. Anderson.
+\newblock {The Positive Electron}.
+\newblock {\em Phys. Rev.}, 43:491--494, Mar 1933.
+
+\bibitem{Bartlett1998}
+N.~Bartlett.
+\newblock {Relativistic effects and the chemistry of gold}.
+\newblock {\em Gold Bull}, 31(1):22--25, Mar 1998.
+
+\bibitem{Norrby1991}
+L.~J. Norrby.
+\newblock {Why is mercury liquid? Or, why do relativistic effects not get into
+  chemistry textbooks?}
+\newblock {\em J. Chem. Educ.}, 68(2):110, 1991.
+
+\bibitem{VISSCHER1997207}
+L.~Visscher and K.~Dyall.
+\newblock {Dirac-Fock atomic electronic structure calculations using different
+  nuclear charge distributions}.
+\newblock {\em Atom. Data Nucl. Data Tabl.}, 67(2):207 -- 224, 1997.
+
+\bibitem{1985ADNDT..33..405J}
+W.~R. {Johnson} and G.~{Soff}.
+\newblock {The Lamb Shift in Hydrogen-like Atoms, 1 $\leq$ Z $\leq$ 110}.
+\newblock {\em Atom. Data Nucl. Data Tabl.}, 33:405, 1985.
+
+\bibitem{MATSUOKA2001218}
+O.~Matsuoka and Y.~Watanabe.
+\newblock {An atomic Dirac-Fock-Roothaan program}.
+\newblock {\em Comput. Phys. Commun}, 139(2):218 -- 234, 2001.
+
+\bibitem{cudaFortran_pgi}
+PGI.
+\newblock {\em {CUDA Fortran Programming Guide and Reference}}, Version 2018.
+
+\bibitem{Ruetsch:2013:CFS:2588277}
+G.~Ruetsch and M.~Fatica.
+\newblock {\em {CUDA Fortran for Scientists and Engineers: Best Practices for
+  Efficient CUDA Fortran Programming}}.
+\newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edition,
+  2013.
+
+\bibitem{Powell2006}
+M.~J.~D. Powell.
+\newblock {\em {The NEWUOA software for unconstrained optimization without
+  derivatives}}, pages 255--297.
+\newblock Springer US, Boston, MA, 2006.
+
+\bibitem{ETBS}
+R.~Raffenetti and K.~Ruedenberg.
+\newblock {Even‐Tempered Representations of Atomic Self‐Consistent‐Field
+  Wavefunctions}.
+\newblock Technical report, Ames Laboratory, 1973.
+
+\bibitem{WTBS}
+S.~Huzinaga, M.~Klobukowski, and H.~Tatewaki.
+\newblock {The well-tempered GTF basis sets and their applications in the SCF
+  calculations on N2, CO, Na2, and P2}.
+\newblock {\em Can. J. Chem.}, 63(7):1812--1828, 1985.
 
 \end{thebibliography}

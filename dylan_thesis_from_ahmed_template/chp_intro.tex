@@ -1,0 +1,659 @@
+\chapter{Introduction}
+\section{Solving the Schr\"{o}dinger Equation}
+The Schr\"{o}dinger equation\cite{1926PhRv...28.1049S} in its time-independent, non-relativistic form is given in Equation \ref{eq:schro} 
+
+\begin{equation}
+\label{eq:schro}
+\hat{H}\Psi = E\Psi
+\end{equation} 
+
+where $\hat{H}$ is the Hamiltonian operator, $\Psi$ is referred to as the wavefunction, and $E$ is the energy of the system described by the wavefunction. For a molecular system, the Hamiltonian operator in atomic units (a.u) is given by Equation \ref{eq:ham}
+
+\begin{equation}
+\label{eq:ham}
+\hat{H} = -\frac{1}{2}\sum^{n}_{i}\nabla^{2}_{i} - \sum^{N}_{A}\frac{1}{2M_{A}}\nabla^{2}_{A} - \sum^{n}_{i}\sum^{N}_{A}\frac{Z_{A}}{r_{iA}}
++ \sum^{n}_{i}\sum^{N}_{j>i}\frac{1}{r_{ij}} + \sum^{N}_{A}\sum^{N}_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}
+\end{equation} 
+
+where $i$ and $j$ refer to electrons, $A$ and $B$ refer to nuclei, and $n$ and $N$ refer to the maximum number of electrons and nuclei respectively. $M_{A}$ and $Z_{A}$ are the mass and charge of nucleus $A$. $r_{xy}$ is the distance between particles $x$ and $y$, and $\nabla^{2}_{n}=\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}$ where $x$, $y$, and $z$ are the Cartesian coordinates of particle $n$. Each term accounts for a different kind of energy: $-\frac{1}{2}\sum^{n}_{i}\nabla^{2}_{i}$ is the kinetic energy of the electrons, $\sum^{N}_{A}\frac{1}{2M_{A}}\nabla^{2}_{A}$ is the kinetic energy of the nuclei, $\sum^{n}_{i}\sum^{N}_{A}\frac{Z_{A}}{r_{iA}}$ is the potential energy of attraction between nuclei and electrons, $\sum^{n}_{i}\sum^{N}_{j>i}\frac{1}{r_{ij}} $ is the potential energy of repulsion between electrons, and $\sum^{N}_{A}\sum^{N}_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}$ is the potential energy of repulsion between nuclei. Together, this accounts for all of the energy of a molecular system. As this operator is quite complex, it would be helpful to simplify it if possible. Fortunately, Born and Oppenheimer\cite{1927AnP...389..457B} realized that an approximation could be made that would substantially reduce the amount of work we have to do.
+
+Much like a satellite in orbit around the Earth, the proton and neutron vastly outweigh the electron. If we look at the second term in Equation \ref{eq:ham}, we notice that it is inversely proportional to the mass of the nuclei. We can therefore assume, to a decent approximation, that the kinetic energy of the nuclei is very close to zero compared to the other terms. This allows us to treat them as stationary classical particles. As a bonus, this turns the potential energy of repulsion between nuclei into a constant. The killing of these two terms reduces the Hamiltonian operator to the \textit{electronic} Hamiltonian given in Equation \ref{eq:elham}
+
+\begin{equation}
+\label{eq:elham}
+\hat{H_{el}} = -\frac{1}{2}\sum^{n}_{i}\nabla^{2}_{i}  - \sum^{n}_{i}\sum^{N}_{A}\frac{Z_{A}}{r_{iA}} + \sum^{n}_{i}\sum^{N}_{j>i}\frac{1}{r_{ij}} + \sum^{N}_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}
+\end{equation} 
+
+$\hat{H}$ can be assumed to be $\hat{H_{el}}$ for the remainder of this Thesis, and with the Hamiltonian out of the way, we can now turn our attention to the wavefunction. While we were able to get away with turning nuclei into classical particles, the electrons unfortunately remain fully quantum. Therefore, we need to deal with all the complicated mathematical baggage this comes with.
+
+Consider the hydrogen atom which, like all other one-electron atomic systems, is one of the few exactly solvable problems in quantum mechanics. The solution for its wavefunction in spherical coordinates is given in Equation \ref{eq:wavehydro}\cite{Griffiths2}
+
+\begin{equation}
+\label{eq:wavehydro}
+\Psi_{nlm}(r, \theta, \varphi) = R_{nl}(r)Y^{m}_{l}(\theta,\varphi)
+\end{equation} 
+
+where $R_{nl}$ is called the radial function and $Y^{m}_{l}(\theta,\varphi)$ is called the angular function. The radial equation has the form 
+
+\begin{equation}
+\label{eq:wavehydro_R}
+R_{nl}(r) = \frac{1}{r}\left(\frac{r}{a_{o}n}\right)^{l+1}e^{-\frac{r}{a_{o}n}}L^{2l+1}_{n-l-1}\left(\frac{r}{a_{o}n}\right)
+\end{equation} 
+
+where $a_{o}$ is the Bohr radius and $L^{2l+1}_{n-l-1}\left(\frac{r}{a_{o}n}\right)$ is polynomial of $\left(\frac{r}{a_{o}n}\right)$ and order $j_{\text{max}}=n-l-1$ of $\left(\frac{r}{a_{o}n}\right)$. Its coefficients are given by
+
+\begin{equation}
+\label{eq:wavehydro_R_coef}
+c_{j+1} = \frac{2(j+l+1-n)}{(j+1)(j+2l+2)}c_{j}
+\end{equation} 
+
+and the polynomial itself given by
+
+\begin{equation}
+\label{eq:wavehydro_L1}
+L^{p}_{q-p}(x) = (-1)^{p}\left(\frac{d}{dx}\right)^{q}L_{q}(x)
+\end{equation}
+
+\begin{equation}
+\label{eq:wavehydro_L2}
+L_{q}(x) = e^{x}\left(\frac{d}{dx}\right)^{q}\left[x^{q}e^{-x}\right]
+\end{equation}
+
+The angular function has the form 
+
+\begin{equation}
+\label{eq:wavehydro_Y1}
+Y^{m}_{l}(\theta,\varphi) = \epsilon\sqrt{\frac{(2l + 1)}{4\pi}\frac{(l-|m|)!}{(l+|m|)!}}P^{m}_{l}(cos\theta)e^{im\varphi}
+\end{equation}
+
+where $i=\sqrt{-1}$ and $\epsilon = (-1)^{m}$ for $m \geq 0$ or 1 if  $m < 0$. $P^{m}_{l}(cos\theta)$ is a polynomial of $cos\theta$ and has the form of
+
+\begin{equation}
+\label{eq:wavehydro_Y2}
+P^{m}_{l}(x) = (1 - x^{2})^{\frac{|m|}{2}}\frac{d^{|m|}}{dx^{|m|}}P_{l}(x)
+\end{equation}
+
+\begin{equation}
+\label{eq:wavehydro_Y3}
+P_{l}(x) = \frac{1}{2^{l}l!}\frac{d^{j}}{dx^{j}}(x^{2}-1)^{l}
+\end{equation} 
+
+Inspection of these equations reveals that $n$ must be a positive integer greater than 0, $l$ must be a positive integer between 0 and $n-1$, and $|m|$ can be no larger than $l$. These are called quantum numbers, specifically $n$ is the principal quantum number, $l$ is the azimuthal quantum number, and $m$ is the magnetic quantum number. Also notice that there is no limit to how large $n$ can get, which suggests that there is not just one solution to this equation, but an infinite number of them. The solutions to the hydrogen-like atom wavefunction are given the special name of orbitals. Also, orbitals with the same value of $l$ are refered to be of the same symmetry. Table \ref{tab:hsol} shows the reduced form of $\Psi$ for a few different orbitals. For atoms with more than one electron, if we make a further assumption that electrons can be modelled like ideal springs, it has been shown that an atomic system with two electrons can also be solved\cite{harmonium}, but we can go no further than this. At least, not exactly. In the next section we will see how solutions for atoms, and indeed molecules, can begin to be approached.
+
+\begin{table}[h!]
+\caption{The first few exact solutions for the hydrogen atom wavefunction.}
+\label{tab:hsol}
+\centering
+\begin{tabular}{cccc}
+\toprule
+$n$	&	\multicolumn{3}{c}{$l$}	\\
+\cmidrule(lr){1-1} \cmidrule(lr){2-4}
+				&	0		&	\multicolumn{2}{c}{1}	\\ 
+					\cmidrule(lr){2-2} \cmidrule(lr){3-4}
+				&	$m=0$	&	$m=0$	&	$m=\pm1$	\\
+\midrule
+1	&	$\displaystyle\left(\frac{1}{\pi a^{3}}\right)^{\frac{1}{2}}e^{\left(-\frac{r}{a}\right)}$			&	$-$	&	$-$	\\
+\\
+2	&	$\displaystyle\frac{1}{\sqrt{8\pi a^{3}}}\left(1-\frac{r}{2a}\right)e^{\left(-\frac{r}{2a}\right)}$	&	$\displaystyle\frac{1}{\sqrt{32\pi a^{3}}}\frac{r}{a}e^{\left(-\frac{r}{2a}\right)}cos\theta $	&	
+$\displaystyle\mp\frac{1}{\sqrt{64\pi a^{3}}}\frac{r}{a}e^{\left(-\frac{r}{2a}\right)}sin\theta e^{\pm i \varphi}$	\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Hartree-Fock}
+\label{sec:hartree_fock}
+While the wavefunction might appear complex, it is important to remember that it is still just a wave, and one of the fundamental properties of waves is that they can be added together to produce a separate, more complex wave. Likewise, any wave, no matter how complex, can be broken down as a summation of many simpler waves\cite{fourier1822thorie}. Thus, any linear combination of solutions to the wavefunction must therefore be a solution of a different (albeit perhaps non-physical) wavefunction. It is this property that will be exploited to solve our many electron problem. But first we must layout some ground rules.
+
+The first rule is that the overall wavefunction must describe a system of fermions. This means that the wavefunction must be antisymmetric with respect to the exchanging of electronic coordinates, i.e. $\Psi(1, 2,\ldots, n,\ldots,m) = -\Psi(1, 2,\ldots, m,\ldots,n)$ \textit{and} the probability density of the wavefunction must be indistinguishable with respect to the exchanging of electronic coordinates, i.e. $|\Psi(1, 2,\ldots, n,\ldots,m)|^{2} = |\Psi(1, 2,\ldots, m,\ldots,n)|^{2}$. The easiest way to meet this requirement is by using a Slater determinant\cite{PhysRev.34.1293}, and by introducing the concept of spin. Spin is actually a fourth quantum number, which we have neglected to talk about so far. Spin is a confusing property that some quantum particles have. No one really knows what it is, other than to say it has something to do with the angular momentum of the particle, and oddly enough that it in no way refers to the direction that the particle is spinning. It has been shown to have binary values\cite{Gerlach1922}, which will be refered to as up spin ($\uparrow$) and down spin ($\downarrow$). A Slater determinant that obeys antisymmetry is shown in Equation \ref{eq:slate_det}
+
+\begin{equation}
+\label{eq:slate_det}
+\Psi(1, 2, 3, \ldots, n) =
+\frac{1}{\sqrt{n!}}
+\begin{vmatrix}
+\psi_{1}(1)		&	\psi_{2}(1)		&	\psi_{3}(1)		&	\ldots	&	\psi_{n}(1)		\\
+\psi_{1}(2)		&	\psi_{2}(2)		&	\psi_{3}(2)		&	\ldots	&	\psi_{n}(2)		\\
+\psi_{1}(3)		&	\psi_{2}(3)		&	\psi_{3}(3)		&	\ldots	&	\psi_{n}(3)		\\
+\ldots		&	\ldots		&	\ldots		&	\ldots	&	\ldots		\\
+\psi_{1}(n)		&	\psi_{2}(n)		&	\psi_{3}(n)		&	\ldots	&	\psi_{n}(n)		\\
+
+\end{vmatrix}
+\end{equation} 
+
+Here, $n$ refers to the number of electrons in the system, and the numbers in parentheses refer to specific electrons. $\psi_{i}$ refers to the $i^{th}$ \textit{spin} orbital which is equal to $\phi_{\frac{i+1}{2}}(r, \theta, \varphi)\alpha(\omega)$ if $i$ is odd, or $\phi_{\frac{i}{2}}(r, \theta, \varphi)\beta(\omega)$ if $i$ is even ($\phi$ is an orbital and $\omega$ is the spin coordinate). $\alpha$ and $\beta$ are called spin functions. What they actually are doesn't matter, but they do have to be orthonormal to each other. 
+
+\begin{equation}
+\label{eq:a_b_def}
+\begin{split}
+\left<\alpha(\omega_{i})|\alpha(\omega_{i})\right> = \left<\beta(\omega_{i})|\beta(\omega_{i})\right> = 1	\\
+\left<\alpha(\omega_{i})|\beta(\omega_{i})\right> = \left<\beta(\omega_{i})|\alpha(\omega_{i})\right> = 0	\\
+\end{split}
+\end{equation}
+
+Using Slater determinants has some interesting consequences. If we had a system where two electrons of the same spin were in the same spin orbital, that would mean that two of the columns would be equal to one another. Such a determinant would be equal to zero, which means that the wavefunction for such a system would not exist. This is the famous Pauli antisymmetry principle\cite{Pauli1925}. The math showing that is satisfies antisymmetry is shown below\cite{Ostlund}.
+
+\begin{equation}
+\label{eq:pauli_2t_1}
+\Psi(1,2) =
+\frac{1}{\sqrt{2}}
+\begin{vmatrix}
+\phi_{1}(1)\alpha(\omega_{1})		&	\phi_{1}(1)\beta(\omega_{1})		\\
+\phi_{1}(2)\alpha(\omega_{2})		&	\phi_{1}(2)\beta(\omega_{2})		\\
+\end{vmatrix}
+\end{equation}
+
+\begin{equation}
+\label{eq:pauli_2t_2}
+\Psi(1,2) =
+\frac{1}{\sqrt{2}}
+\left[
+\phi_{1}(1)\alpha(\omega_{1})\phi_{1}(2)\beta(\omega_{2}) -
+\phi_{1}(1)\beta(\omega_{1})\phi_{1}(2)\alpha(\omega_{2})
+\right]
+\end{equation}
+
+\begin{equation}
+\label{eq:pauli_2t_3}
+-\Psi(1,2) =
+\frac{1}{\sqrt{2}}
+\left[
+\phi_{1}(1)\beta(\omega_{1})\phi_{1}(2)\alpha(\omega_{2}) -
+\phi_{1}(1)\alpha(\omega_{1})\phi_{1}(2)\beta(\omega_{2})
+\right]
+\end{equation}
+
+\begin{equation}
+\label{eq:pauli_2t_4}
+-\Psi(1,2) =
+\frac{1}{\sqrt{2}}
+\begin{vmatrix}
+\phi_{1}(2)\alpha(\omega_{2})	&	\phi_{1}(2)\beta(\omega_{2})	\\
+\phi_{1}(1)\alpha(\omega_{1})	&	\phi_{1}(1)\beta(\omega_{1})	\\
+\end{vmatrix}
+=\Psi(2,1)
+\end{equation}
+
+As can be seen, changing the indexing of the electrons is equivalent to swapping the rows for those electrons, which changes the sign of the determinant. It is important to note that because observable quantities depend not the wavefunction, but the \textit{absolute square} of the wavefunction, altering the indexing of the electrons does not change the calculation of these observables. Consider the example of the electron density probability distribution shown below (note that $\phi$, $\alpha$, and $\beta$ are real in this example, but even if they weren't the results would not change).
+
+\begin{equation}
+\label{eq:el_prob_dist_1}
+|\Psi(1,2)|^{2} =
+\frac{1}{2}\left[
+\begin{vmatrix}
+\phi_{1}(1)\alpha(\omega_{1})		&	\phi_{1}(1)\beta(\omega_{1})		\\
+\phi_{1}(2)\alpha(\omega_{2})		&	\phi_{1}(2)\beta(\omega_{2})		\\
+\end{vmatrix}^2
+\right]
+\end{equation}
+
+\begin{equation}
+\label{eq:el_prob_dist_2}
+\begin{split}
+|\Psi(1,2)|^{2}	&	=
+\frac{1}{2}
+[
+\left(
+\phi_{1}(1)\alpha(\omega_{1})\phi_{1}(2)\beta(\omega_{2}) -
+\phi_{1}(1)\beta(\omega_{1})\phi_{1}(2)\alpha(\omega_{2})
+\right)	\\
+	&	\times\left(
+\phi_{1}(1)\alpha(\omega_{1})\phi_{1}(2)\beta(\omega_{2}) -
+\phi_{1}(1)\beta(\omega_{1})\phi_{1}(2)\alpha(\omega_{2})
+\right)
+]
+\end{split}
+\end{equation}
+
+\begin{equation}
+\label{eq:el_prob_dist_3}
+\begin{split}
+|\Psi(1,2)|^{2}	&	=
+\frac{1}{2}\int\int\int\int
+[
+\phi_{1}(1)^{2}\alpha(\omega_{1})^{2}\phi_{1}(2)^{2}\beta(\omega_{2})^{2} +
+\phi_{1}(1)^{2}\beta(\omega_{1})^{2}\phi_{1}(2)^{2}\alpha(\omega_{2})^{2}
+	\\
+	&	-2
+\phi_{1}(1)^{2}\alpha(\omega_{1})\beta(\omega_{1})\phi_{1}(2)^{2}\beta(\omega_{2})\alpha(\omega_{2})
+]d1d2d\omega_{1}d\omega_{2}
+\end{split}
+\end{equation}
+
+\begin{equation}
+\label{eq:el_prob_dist_4}
+|\Psi(1,2)|^{2} =
+\frac{1}{2}
+\left[
+|\phi_{1}(1)|^{2}|\phi_{1}(2)|^{2} + |\phi_{1}(1)|^{2}|\phi_{1}(2)|^{2}
+\right]
+\end{equation}
+
+\subsection{Two-Electron Integrals}
+As stated before, the main difficulty of performing calculations on many electron systems is figuring out how to deal with the interactions between the electrons. We can get around this by making the assumption that these interactions can be approximated by figuring out how a single electron interacts with the \textit{average} field generated by all the other electrons. This is called the self-consistent-field (SCF) method\cite{RHF}. With this, we can replace the Hamiltonian operator with the one-electron Fock operator which is given below\cite{Ostlund}
+
+\begin{equation}
+\label{eq:fock_op}
+\hat{f}(i) = -\frac{1}{2}\nabla^{2}_{i}  - \sum_{A}\frac{Z_{A}}{r_{iA}} + v^{HF}(i)
+\end{equation} 
+
+The first two terms are combined into an operator called the $H^{\text{core}}$ operator ($\hat{h}(i)$) and $v^{HF}(i)$ is the potential generated by all the electrons except the $i^{th}$ one. $v^{HF}(i)$ is composed of two different operators: the Coulomb operator and the exchange operator. The Coulomb operator is intuitive, it is simply the interaction electron 1 experiences when in a Coulomb potential generated by electron 2
+
+\begin{equation}
+\label{eq:Coulomb_op}
+\hat{J}_{b}(1)\psi_{a}(1)=\left[\int\psi^{*}_{b}(2)\frac{1}{r_{12}}\psi_{b}(2)d\textbf{x}_{2}\right]\psi_{a}(1)
+\end{equation} 
+
+where $J_{b}(1)$ is the Coulomb operator for electron 1 when interacting with an electron in spin orbital $b$ and \textbf{x}$_{i}$ is the spatial coordinates of electron $i$. The exchange operator is slightly more complicated than the Coulomb operator. While the Coulomb operator can be defined without a function to operate on (simply remove $\psi_{a}(1)$ from both sides of Equation \ref{eq:Coulomb_op} and it is still a valid operator), the exchange operator only is defined when operating on a function. Its form is given below.
+
+\begin{equation}
+\label{eq:exchange_op}
+\hat{K}_{b}(1)\psi_{a}(1)=\left[\int\psi^{*}_{b}(2)\frac{1}{r_{12}}\psi_{a}(2)d\textbf{x}_{2}\right]\psi_{b}(1)
+\end{equation} 
+
+where $K_{b}(1)$ is the exchange operator for electron 1 operating on spin orbital $a$. At first glance, it might appear to be almost the same as Equation \ref{eq:Coulomb_op}, but notice that $\psi_{a}$ has been swapped (or exchanged) with $\psi_{b}$ \textit{inside} the integral. The term itself does not really have a classical interpretation, but its need arises due to the use of an antisymmetric wavefunction.
+
+Now it would be helpful to introduce some new notation. The expectation values for these operators are defined as follows
+
+\begin{equation}
+\label{eq:Coulomb_op_ex}
+\left<\psi_{a}(1)|\hat{J}_{b}(1)|\psi_{a}(1)\right>=\int\int\psi^{*}_{a}(1)\psi_{a}(1)\frac{1}{r_{12}}\psi^{*}_{b}(2)\psi_{b}(2)d\textbf{x}_{1}d\textbf{x}_{2}
+=\left(aa|bb\right)
+\end{equation} 
+
+\begin{equation}
+\label{eq:exchange_op_ex}
+\left<\psi_{a}(1)|\hat{K}_{b}(1)|\psi_{a}(1)\right>=\int\int\psi^{*}_{a}(1)\psi_{b}(1)\frac{1}{r_{12}}\psi^{*}_{b}(2)\psi_{a}(2)d\textbf{x}_{1}d\textbf{x}_{2}
+=\left(ab|ba\right)
+\end{equation}
+
+These are called the two-electron integrals. The Hartree-Fock equation can be written as 
+
+ \begin{equation}
+\label{eq:hartree-fock_eq}
+\left[\hat{h}(1) + \sum^{n}_{b\neq a}\left(J_{b}(1)- K_{b}(1)\right)\right]\psi_{a}(1) = \epsilon_{a}\psi_{a}(1)
+\end{equation}
+
+ \begin{equation}
+\label{eq:hartree-fock_eq}
+\left<\psi_{a}(1)|\hat{h}(1)|\psi_{a}(1)\right> + \sum^{n}_{b\neq a}\left[\left(aa|bb\right) - \left(ab|ba\right)\right] = \epsilon_{a}
+\end{equation}
+
+where $n$ is the number of spin orbitals in the system and $\epsilon_{a}$ is the energy of an electron in spin orbital $a$. If instead we are interested in the energy of an entire atom or molecule, the equation becomes
+
+ \begin{equation}
+\label{eq:hartree-fock_eq}
+\sum_{a}^{n}\left<\psi_{a}(1)|\hat{h}(1)|\psi_{a}(1)\right> + \frac{1}{2}\sum^{n}_{a}\sum^{n}_{b}\left[\left(aa|bb\right) - \left(ab|ba\right)\right] = \epsilon
+\end{equation}
+
+where the factor of one half is multiplied to the two electron terms as a result of the interactions being double counted by the summations.
+
+\subsection{Basis Sets}
+\label{subsec:basis_sets}
+Back in section \ref{sec:hartree_fock}, it was said that there were some ground rules for our wavefunction. The second of these ground rules is that our trial wavefunction ($\Phi$) must meet the boundary conditions for the original problem. Up until now, we have used only spin orbitals ($\psi$) to describe the wavefunction, which as you'll recall is composed of a spin function, which we have already talked about at length, and a spatial orbital ($\phi$) which we have almost completely ignored. I'll discuss the spatial orbitals next. 
+
+As mentioned, the overall wavefunction of a system ($\Psi$) cannot be known exactly unless we are looking only at hydrogen-like atoms. So instead we write the wavefunction as a Slater determinant composed of spin orbitals. What exactly is the mathematical form of these spin orbitals? As it turns out, unless we are talking only about atoms, we have no idea what these are either, even from a numerical stand point. However, we can make a fairly educated guess about what they \textit{should} resemble. The general idea is this: by pre-calculating a set of functions with adjustable parameters ($\zeta$), we can represent a wavefunction with a linear combination of $\Phi(\zeta)$ that adequately reproduces results of numerical calculations of $\phi$. Mathematically, this is expressed as\cite{Ostlund}
+
+\begin{equation}
+\label{eq:linear_comb_bs}
+\phi_{u} \approx \sum^{K}_{i=1}C_{u,i}\Phi(\zeta_{u,i})
+\end{equation}
+
+where $\zeta_{u,i}$ is the $i^{th}$ adjustable parameters of the basis function $\Phi$ which is approximating the $u^{th}$ orbital, $C_{u,i}$ is the $i^{th}$ coefficient of $i^{th}$ basis function of the $u^{th}$ $\phi$, and $K$ is the total number of basis functions that make up the basis set. $C^{2}_{u,i}$ can be thought of as the ``weight" of $\phi$ that $\Phi(\zeta_{u,i})$ makes up.
+
+When choosing our $\Phi$s, our ground rule comes into play. We must choose a function that meets the boundary conditions of the problem, which means that is must go to zero at infinity. Because an atom (or molecule) consists of electrons in the potential generated by one (or many) nuclei, it is reasonable to conclude that the wavefunction would be similar to that of the hydrogen atom. We might initially think to use the exact hydrogen atom solution, but it quickly requires lots of floating point operations to compute which makes it impractical to use for large scale calculations. A more reasonable function is the Slater-type orbital (STO)\cite{PhysRev.36.57}. The radial part of its 1s orbital centered at $R_{A}$ is shown below
+
+\begin{equation}
+\label{eq:sto_1s}
+\Phi^{STO}_{1s}(r - R_{A}) = \sqrt{\frac{\zeta^{3}}{\pi}}e^{-\zeta|r- R_{A}|}
+\end{equation}
+
+This is more well-behaved than the exact hydrogen atom solution, but problems arise when we try to use them in the two-electron integrals. Because we may be trying to do a double integral over function which could have up to four different centers, we end up with something that is very hard to compute. Therefore, Gaussian-type orbitals (GTOs) have become the de facto method of producing basis sets. The radial part of its 1s orbital centered at $R_{A}$ is shown below\cite{Boys542}
+
+\begin{equation}
+\label{eq:gto_1s}
+\Phi^{GTO}_{1s}(r - R_{A}) = \left(\frac{2\zeta}{\pi}\right)^{\frac{3}{4}}e^{-\zeta|r- R_{A}|^{2}}
+\end{equation}
+
+Because the product of two different Gaussians centered at two different locations is a third Gaussian centered at a third location, this makes the two-electron integrals much easier to deal with. The trade off is that GTOs do not as accurately match the hydrogen atom solution as STOs, but this can be fixed somewhat by just using more of them.
+
+All of this reduces our wavefunction issue to a simple optimization problem, which will be discussed more in-depth in Chapter \ref{chap:basis_sets}.
+
+\subsection{Hartree-Fock SCF}
+In the previous sections, we discussed the calculation of the two-electron integrals and introduced the concept of using basis sets to approximate a wavefunction. Now we will discuss how they are actually used. 
+
+SCF begins with the formation of the density matrices. If we are looking at a single atom, we can exploit the symmetry of the problem by having a smaller density matrix for each orbital symmetry ($\lambda$), instead of one large one for the whole system. There are also two types of density matrices, one for contributions from closed shell spinors (\textbf{D$_\textbf{C}$}) and one for contributions from open shelled spinors (\textbf{D$_\textbf{O}$}).
+
+Using a procedure developed independently by Roothaan and Hall\cite{RHF, Hall541}, we first need to find the matrix \textbf{C} which satisfies 
+
+\begin{equation}
+\label{RHE}
+\textbf{FC} = \epsilon{}\textbf{SC}
+\end{equation}
+
+where \textbf{F} is the Fock matrix, $\epsilon$ is the vector of eigenvalues, and \textbf{S} is the overlap matrix. The matrix elements of \textbf{S} are
+
+\begin{equation}
+\label{eq:smat}
+\textbf{S}_{p_{\lambda}, q_{\lambda}} = \left<p_{\lambda}|q_{\lambda}\right>
+\end{equation}
+
+and the non-relativistic \textbf{F} for closed shells of symmetry $\lambda$ is given by
+
+\begin{equation}
+\label{FOCKM}
+\textbf{F}_{p_{\lambda},q_{\lambda}} = \langle p_{\lambda}|\hat{h}(1)|q_{\lambda}\rangle + \sum^{nsym}_{\mu=1}\sum^{K}_{r=1}\sum^{K}_{s=1}\left( 2\sum^{occ}_{a=1}\textbf{C}_{r_{\mu},a}\textbf{C}^{*}_{s_{\mu}, a}\right)
+				\left[\left( p_{\lambda}q_{\lambda}|r_{\mu}s_{\mu}\right) - \frac{1}{2}\left( p_{\lambda}q_{\lambda}|s_{\lambda}r_{\lambda}\right)\right]
+\end{equation}
+
+where $p$, $q$, $r$, and $s$ are basis functions, $K$ is the total number of basis functions for symmetry $\mu$, and $occ$ is the number of occupied closed shells in symmetry $\mu$. Because $p$ and $q$ will always be of the same symmetry, and likewise with $r$ and $s$, the $\lambda$ and $\mu$ subscripts will be dropped from these indices and instead will be obtained from context. As we can see, \textbf{F} is itself a function of \textbf{C} and we left with a rather disappointing outcome, that in order to find \textbf{C}, we first must know what it is. And so it would seem that all is lost and all of this hard work was for nothing. And yet, there is a glimmer of hope. \textbf{F} is made up of two terms, and as only the term corresponding to contributions from the two-electron integrals depends on \textbf{C}, the term from one-electron integrals can be used independently of \textbf{C}. Thus, we begin by assuming that \textbf{F} depends solely on the one-electron term, effectively assuming that $\textbf{C}=\textbf{0}$. Solving Equation \ref{RHE} with the $H^{\text{core}}$ hamiltonian matrix only will give us the initial guess of \textbf{C}. With this, we can then resolve \textbf{F} with the guess of \textbf{C} and diagonalize the new \textbf{F} matrix to get another set of values for \textbf{C}. We can then repeat this process over and over until \textbf{C} is no longer changing outside an acceptable tolerance at which point we say the calculation has converged. We have now just completed a Hartree-Fock calculation.
+
+\section{Special Relativity}
+Another field of physics that was being developed at the same time as quantum mechanics was special relativity (general relativity which involves gravity's effect on spacetime is far, \textit{far} outside the scope of this thesis. I will therefore be referring to special relativity as just relativity from now on). Relativity traces its roots to Michelson and Morley\cite{Michelson} who made the startling observation that all observers, regardless of their frame of reference, will always agree on the speed of light. But it would not be until everyone's favourite Swiss patent clerk decided to examine this issue that the truly profound implications of this observation would be known. 
+
+This is perhaps a bit of an aside, but it is simply too interesting to pass up. Consider this thought experiment: you and I are in two different spaceships in space. We will define your frame of reference such that you are stationary at the origin, and that I am flying past you at a constant speed that is arbitrarily close to the speed of light, we will call this speed $v$. In my spaceship, there is a laser that I have pointed perfectly perpendicular to the direction I am traveling. From my frame of reference, where I am stationary, I turn the laser on and observe photons that move from the laser to the side of my spaceship, a distance equal to $d_{1}$, in time equal to $t$ at the speed of light $c$. Back in your frame of reference, you are also watching my experiment, but you make some different observations. In the time it take for the photons to move across my spaceship, I move a small distance $d_{2}$. So the total distance you see the photons move is not $d_{1}$, but $d_{3}$ which is the hypotenuse of the right angle triangle formed by $d_{1}$, $d_{2}$, and $d_{3}$. \textit{But}, we both agree that the photons were moving at speed $c$! So we can not agree on the time it took to do so because $d_{3} > d_{1}$. So you will observe the time it takes for the photons to move to be a time equal to $t'$. We can derive the relationship between $t$ and $t'$ in the following way.
+
+\begin{align}
+\label{eq:rel_proof}
+d_{1} &	= ct	&	d_{2} &	= vt'	&	d_{3} &	=ct'	\\
+&&	d_{3}^{2}	&	=d_{1}^{2}+d_{2}^{2}		\\
+&&	(ct')^{2}	&	=(vt')^{2} + (ct)^{2}	\\
+&&	(ct)^{2}	&	=(ct')^{2} - (vt')^{2}	\\
+&&	t	&	=t'\sqrt{1 - \frac{v^{2}}{c^{2}}}
+\label{eq:rel_proof_2}
+\end{align} 
+
+Not does this give the absolutely remarkable result that time is relative, Equation \ref{eq:rel_proof_2} also implies that an object can have a maximum speed. But how could this be possible, if I turned on the engine on my spaceship, what's to stop me from just getting faster and faster? The answer is that the mass of an object increases the closer to the speed of light it is. This can be described by\cite{Piela}
+ 
+\begin{equation}
+\label{eq:rel_mass}
+m(v) = \frac{m_{0}}{\sqrt{1 - \frac{v^{2}}{c^{2}}}}
+\end{equation}
+
+where $m(v)$ is the mass of an object moving at speed $v$ and $m_{0}$ is the rest mass of the object. With this we can see how it would be impossible for an object with mass to move at the speed of light. Its mass would go to infinity and would therefore need an infinite amount of energy to get there.
+
+If we expand Equation \ref{eq:rel_mass} as a Taylor series centered at zero, we obtain the following equation
+
+\begin{equation}
+\label{eq:rel_mass_taylor}
+m(v) = m_{0}\left[1 + \frac{1}{2}\frac{v^{2}}{c^{2}} + \frac{3}{8}\frac{v^{4}}{c^{4}} + \frac{5}{16}\frac{v^{6}}{c^{6}} + \frac{35}{128}\frac{v^{8}}{c^{8}} + \ldots\right]
+\end{equation}
+
+which after rearranging, and multiplying both sides by $c^{2}$ gives
+
+\begin{equation}
+\label{eq:rel_mass_taylor_rea}
+(m(v) -  m_{0})c^{2}= \frac{m_{0}v^{2}}{2} + m_{0}\left[\frac{3}{8}\frac{v^{4}}{c^{2}} + \frac{5}{16}\frac{v^{6}}{c^{4}} + \frac{35}{128}\frac{v^{8}}{c^{6}} + \ldots\right]
+\end{equation}
+
+So if we take the mass of an object at speed $v$ and subtract the mass of the object and then multiply the result by $c^{2}$, we get the kinetic energy of the object (plus some terms that very quickly go to zero). This is what led Einstein to believe that the total kinetic energy of an object was stored in its mass. He would use this to produce the world's most famous equation
+
+\begin{equation}
+\label{eq:emc2}
+E_{kin} = m(v)c^{2}
+\end{equation}
+
+\subsection{Relativistic Quantum Mechanics}
+It would seem that relativity concerns the physics of the very large and fast, while quantum mechanics is concerned with the very small. To merge the two, let us start from the beginning with the time-dependent one-dimensional Schr\"{o}dinger equation which we will rewrite here in a more general and explicit form\cite{1926PhRv...28.1049S}
+
+\begin{equation}
+\label{eq:schr_full}
+i\hbar\frac{\partial\Psi(x, t)}{\partial t} = -\frac{\hbar^{2}}{2m}\frac{\partial^{2}\Psi(x, t)}{\partial x^{2}} + \hat{V}(x)\Psi(x, t)
+\end{equation}
+
+where $i\hbar\frac{\partial}{\partial t}$ is the energy operator, $-\hbar^{2}\frac{\partial^{2}}{\partial x^{2}}$ is the momentum squared operator ($\hat{p} = -i\hbar\frac{\partial}{\partial x}$), $\hbar$ is the reduced Planck's constant ($\hbar = \frac{h}{2\pi}$) and $\hat{V}(x)$ is the potential energy operator that the particle described by $\Psi(x, t)$ experiences. The reason we can not use the Schr\"{o}dinger equation directly in relativistic quantum mechanics is because it treats time and space differently (it depends on only the first derivative of time, but the second derivative of space). In order to fix this, we may express Equation \ref{eq:emc2} in terms of $\hat{p}$ and get\cite{Piela}
+
+\begin{equation}
+\label{eq:emc2_mom}
+E_{kin}^{2} = \hat{p}^{2}c^{2} + m_{0}^{2}c^{4}
+\end{equation}
+
+If we want to solve for a free particle ($\hat{V}(x) = 0$), we could put the energy and momentum operator from Equation \ref{eq:schr_full} into Equation \ref{eq:emc2_mom} and multiply both sides from the right to obtain
+
+\begin{equation}
+\label{eq:klein-gord_free}
+-\hbar^{2}\frac{\partial^{2}\Psi(x,t)}{\partial t^{2}} = c^{2}\left(-\hbar^{2}\frac{\partial^{2}\Psi(x, t)}{\partial x^{2}} + m_{0}^{2}c^{2}\Psi(x,t)\right)
+\end{equation}
+
+which is called the Klein-Gordon\cite{Gordon1926, Klein1927} equation for a free particle. We could also solve for a particle of charge $q$ in a electromagnetic field described by potentials $\hat{A}$ and $\hat{\varphi}$ as
+
+\begin{equation}
+\label{eq:klein-gord_elec_mag}
+\left(i\hbar\frac{\partial}{\partial t} -q\hat{\varphi}\right)^{2}\Psi(x, t) = c^{2}\left[\left(-i\hbar\frac{\partial}{\partial x} - \frac{q}{c}\hat{A}\right)^{2} + m_{0}^{2}c^{2}\right]\Psi(x,t)
+\end{equation}
+
+Here we are treating time and space exactly the same, but there is a problem. While this equation works perfectly well for spinless particles, we can not ad hoc add spin to this equation like we did with the original Schr\"{o}dinger equation without violating its Lorentz invariance, which is also important for relativistic theories. Also, because this equation solves for the \textit{square} of the energy, it implies that the energy could both be positive or negative. This is a puzzling result that we will return to later, but for now let us examine how Dirac fixed the issue of introducing spin. 
+
+\subsection{Dirac Equation}
+
+Dirac\cite{Dirac610} began with the Klein-Gordon equation which may be written in a three-dimensional form as
+
+\begin{equation}
+\label{eq:dirac_3D}
+{\bf{\pi}}_{0}^{2} - \left[\sum_{u=x,y,z}{\bf{\pi}}_{u}^{2} + m_{0}^{2}c^{2}\right] = 0
+\end{equation}
+
+\begin{equation}
+\label{eq:dirac_3D_def}
+{\bf{\pi}}_{0} = \frac{i\hbar\frac{\partial}{\partial t} -q\hat{\varphi}}{c}, \quad {\bf{\pi}}_{u} = -i\hbar\frac{\partial}{\partial u} - \frac{q}{c}\hat{A}
+\end{equation}
+
+Dirac wanted to write this equation as the product of one equation and its conjugate, which can be done as follows
+
+\begin{equation}
+\label{eq:dirac_3D_conj}
+\left({\bf{\pi}}_{0} + \left[\sum_{u=x,y,z}\alpha_{u}{\bf{\pi}}_{u} + \alpha_{0}m_{0}c\right]\right)\left({\bf{\pi}}_{0} - \left[\sum_{u=x,y,z}\alpha_{u}{\bf{\pi}}_{u} - \alpha_{0}m_{0}c\right]\right) = 0
+\end{equation}
+
+so long as we restrict $\alpha$ as
+
+\begin{equation}
+\label{eq:dirac_alpha_conditions}
+\alpha^{2}_{i} = 1, \quad \alpha_{i}\alpha_{j} + \alpha_{j}\alpha_{i} = 0 \quad \text{for} \quad i \neq j
+\end{equation}
+
+It's clear that the $\alpha$s must be matrices. The simplest of these that meet the requirements of Equation \ref{eq:dirac_alpha_conditions} are
+
+\begin{equation}
+\label{eq:dirac_alpha_matrix}
+\alpha_{i} = 
+\begin{pmatrix}
+{\bf{0}}	&	\sigma_{i}	\\
+\sigma_{i}	&	{\bf{0}}	\\
+\end{pmatrix} 
+\quad \text{for} \quad i \neq 0
+\end{equation}
+
+\begin{equation}
+\label{eq:dirac_beta_matrix}
+\alpha_{0} \equiv \beta = 
+\begin{pmatrix}
+{\bf{I}}	&	{\bf{0}}	\\
+{\bf{0}}	&	-{\bf{I}}	\\
+\end{pmatrix} 
+\end{equation}
+
+where $\sigma_{i}$ are the Pauli spin matrices for $i=x,y,z$, \textbf{0} is a $2\times2$ matrix of zeros, and \textbf{I} is a $2\times2$ identity matrix\cite{Piela}. We now have two different operator equations
+
+\begin{equation}
+\label{eq:dirac_neg_energy}
+\left({\bf{\pi}}_{0} + \sum_{u=x,y,z}\alpha_{u}{\bf{\pi}}_{u} + \beta{}m_{0}c\right)\Psi(x, y, z, t) = 0
+\end{equation}
+\begin{equation}
+\label{eq:dirac_pos_energy}
+\left({\bf{\pi}}_{0} - \sum_{u=x,y,z}\alpha_{u}{\bf{\pi}}_{u} - \beta{}m_{0}c\right)\Psi(x, y, z, t) = 0
+\end{equation}
+
+Equation \ref{eq:dirac_neg_energy} will give negative energy and Equation \ref{eq:dirac_pos_energy} will give positive energy. The positive energy solutions correspond to electrons. The negative energy solutions correspond to antimatter, which is remarkable because antimatter would not be discovered until years later\cite{PhysRev.43.491}. The stationary states (time-independent) for the electron then become
+
+\begin{equation}
+\label{eq:dirac_stat_state}
+\left(E - V -\beta m_{0}c^{2} - c\sum_{u=x,y,z}\alpha_{u}{\bf{\pi}}_{u}\right)\Psi(x, y, z) = 0
+\end{equation}
+
+where $V = q\hat{\varphi}$. Introducing $\alpha$ as a $4\times4$ matrix means that $\Psi$ must also have four components. It is typically written as
+
+\begin{equation}
+\label{eq:4c_wave}
+\Psi =
+\begin{pmatrix}
+\psi_{1}	\\
+\psi_{2}	\\
+\phi_{1}	\\
+\phi_{2}	\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+\psi_{1}	\\
+\psi_{2}	\\
+0	\\
+0	\\
+\end{pmatrix}
++
+\begin{pmatrix}
+0	\\
+0	\\
+\phi_{1}	\\
+\phi_{2}	\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+{\bf{\psi}}	\\
+\textbf{0}	\\
+\end{pmatrix}
++
+\begin{pmatrix}
+\textbf{0}	\\
+{\bf{\phi}}	\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+{\bf{\psi}}	\\
+{\bf{\phi}}	\\
+\end{pmatrix}
+\end{equation}
+
+where ${\bf{\psi}}$ and ${\bf{\phi}}$ are called spinors. ${\bf{\psi}}$ is called the large component and ${\bf{\phi}}$ is the small component.
+
+\subsection{Kinetic Balancing}
+Recall that Equation \ref{eq:dirac_stat_state} is only half of the total equation. We still have all of the negative energy solutions to deal with. If we were to try an use Equation \ref{eq:dirac_stat_state} as is, the numerical methods we use of solving it would find these negative energies, and as there is no lower bound on the negative solutions, our solutions to the equation would all drop to negative infinity. We can solve this problem if we assume that all the infinite number of negative energy states are filled with an infinite number of positrons. This means that the electron can not drop into the negative energies due to the Pauli exclusion principle. Mathematically, we can reproduce this idea using a procedure called kinetic balancing, which is done in the following way\cite{Piela}.
+ 
+Using the spinors, we can write Equation \ref{eq:dirac_stat_state} as a matrix multiplication problem of the form
+
+\begin{equation}
+\label{eq:dirac_stat_state_matmul}
+\begin{pmatrix}
+(V + \beta m_{0}c^{2})	&	c({\bf{\sigma\pi}})		\\
+c({\bf{\sigma\pi}})		&	(V + \beta m_{0}c^{2})	\\
+\end{pmatrix}
+\begin{pmatrix}
+{\bf{\psi}}	\\
+{\bf{\phi}}	\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+E	&	0	\\
+0	&	E	\\
+\end{pmatrix}
+\begin{pmatrix}
+{\bf{\psi}}	\\
+{\bf{\phi}}	\\
+\end{pmatrix}
+\end{equation}
+
+where ${\bf{\sigma\pi}} =\sum_{u=x,y,z}\alpha_{u}{\bf{\pi}}_{u}$. This is equivalent to adding the following two equations together
+
+\begin{equation}
+\label{eq:dirac_matmul_p1}
+(E - V - m_{0}c^{2}){\bf{\psi}} - c({\bf{\sigma\pi}}){\bf{\phi}} = 0
+\end{equation}
+\begin{equation}
+\label{eq:dirac_matmul_p2}
+(E - V + m_{0}c^{2}){\bf{\phi}} - c({\bf{\sigma\pi}}){\bf{\psi}} = 0
+\end{equation}
+
+We can set where the energy is zero to anywhere we want, so let us make zero the energy of a free electron at rest ($\epsilon = E - m_{0}c^{2}$). Equations \ref{eq:dirac_matmul_p1} and \ref{eq:dirac_matmul_p2} now become
+
+\begin{equation}
+\label{eq:dirac_matmul_p3}
+(\epsilon - V){\bf{\psi}} - c({\bf{\sigma\pi}}){\bf{\phi}} = 0
+\end{equation}
+\begin{equation}
+\label{eq:dirac_matmul_p4}
+(\epsilon - V + 2m_{0}c^{2}){\bf{\phi}} - c({\bf{\sigma\pi}}){\bf{\psi}} = 0
+\end{equation}
+
+We can rewrite Equation \ref{eq:dirac_matmul_p4} as
+
+\begin{equation}
+\label{eq:dirac_small_comp}
+{\bf{\phi}} = \left(1 + \frac{(\epsilon - V)}{2m_{0}c^{2}}\right)^{-1}\frac{1}{2m_{0}c^{2}}{\bf{\sigma\pi}}{\bf{\psi}}
+\end{equation}
+
+To a good approximation, $\epsilon - V$ will be much smaller than $2m_{0}c^{2}$, so we can assume the term in parentheses is equal to 1. Therefore, the small component can be written in terms of just ${\bf{\psi}}$ and becomes
+
+\begin{equation}
+\label{eq:dirac_small_comp_simp}
+{\bf{\phi}} = \frac{{\bf{\sigma\pi}}}{2m_{0}c^{2}}{\bf{\psi}}
+\end{equation}
+
+Not only does this make solving the Dirac equation much simpler (we only need to solve for ${\bf{\psi}}$ instead of ${\bf{\psi}}$ \textit{and} ${\bf{\phi}}$) it also ``hides" the negative energies from numerical methods. Note, though, that it relies on the assumption that $\epsilon - V$ is much smaller than $2m_{0}c^{2}$. If this is not the case, such as in the electrons in the heaviest known elements, then this procedure will fail and we will get energies that are lower than they should be. When this occurs, we say that there is variational prolapse of the wavefunction.
+
+\subsection{The Dirac Hydrogen-Like Atom}
+Up until now, we have only looked at what Dirac's theory says about a free electron (well, a ``free" electron in the presence of an infinite amount of positrons). In the case of hydrogen-like atom solutions, the quantum numbers are similar to the non-relativistic theory. They are: the principal quantum number ($n=1,2,3,\ldots$), the azimuthal quantum number ($l = 0, 1, 2, \ldots, n-1$), the angular momentum quantum number ($j = | l \pm \frac{1}{2}|$), and the magnetic quantum number ($m = -j,-j+1, \ldots, j-1, j$). The energy in terms of the quantum numbers is given by\cite{Piela}
+
+\begin{equation}
+\label{eq:dirac_energy}
+E_{n, j} = -\frac{1}{2n^{2}}\left[1+\frac{1}{nc^{2}}\left(\frac{1}{j+\frac{1}{2}}-\frac{3}{4n}\right)\right]
+\end{equation}
+
+It can be seen that there is a splitting in the energy levels of spinors with the same azimuthal number, whereas in the non-relativistic theory, orbitals with the same azimuthal number would all be perfectly degenerate.
+
+\subsection{Relativistic Effects}
+The effects of relativity have a dramatic effect on chemistry. Two classic examples are gold's distinctive colour, and mercury being the only metal that is liquid at room temperature. In the case of gold, its 6s$_{1/2}$ electrons are lowered in energy and its 5d$_{5/2}$ electrons are raised. This shifts its absorption region into the blue end of the spectrum, making it appear yellow\cite{Bartlett1998}. The 6s$_{1/2}$ electrons of mercury are similarly stabilized and since its 5d$_{3/2}$ and 5d$_{5/2}$ orbitals are filled, it behaves quite like a noble gas, making bonding quite difficult at room temperature\cite{Norrby1991}.
+
+Relativistic effects are broken up into two categories: primary and secondary effects. Primary effects are due to the contraction of the s and p electrons. The non-relativistic Bohr radius for the 1s electron of hydrogen is\cite{Griffiths2} 
+
+\begin{equation}
+\label{eq:non_rel_bohr}
+a_{0} = \frac{4\pi{}\epsilon_{0}\hbar^{2}}{m_{0}e^{2}}
+\end{equation}
+
+where $\epsilon_{0}$ is the permittivity of free space, $\hbar$ is the reduced planks constant, $e$ is the charge of an electron, and $m_{0}$ is the mass of an election at rest. Recall from Equation \ref{eq:rel_mass} that the mass of an object increases with its speed. If we substitute $m(v)$ from Equation \ref{eq:rel_mass} for $m_{0}$ into Equation \ref{eq:non_rel_bohr} we get
+
+\begin{equation}
+\label{eq:rel_bohr}
+a_{v} = \frac{4\pi{}\epsilon_{0}\hbar^{2}\sqrt{1 - \frac{v^2}{c^2}}}{m_{0}e^{2}}
+\end{equation}
+
+Dividing Equation \ref{eq:rel_bohr} by \ref{eq:non_rel_bohr} gives 
+
+\begin{equation}
+\label{eq:bohr_frac}
+\frac{a_{v}}{a_{0}} = \sqrt{1 - \frac{v^2}{c^2}}
+\end{equation}
+
+which is less than 1 and will get closer and closer to zero as $v$ increases ($v$ will increase in proportion to the nuclear charge). This contraction stabilizes the electrons, making them more inert. 
+
+Secondary effects are a direct result of the electron density contraction. The contraction of these electrons leads to greater shielding of the nucleus, reducing its effective nuclear charge. This causes the d and f electrons to feel a smaller attraction to their nucleus, which makes their orbitals enlarge. This destabilizes these electrons, making them more reactive\cite{Piela}.
+
+\subsection{Gaussian Nucleus}
+Up till now, we have assumed the nucleus can be represented as a point. For many applications this works just fine, but it can make it difficult to find convergence when relativity is considered. Therefore, it is helpful to use a model more grounded in reality in this case. One such model is the Gaussian nucleus. This changes the potential in Equation \ref{eq:dirac_stat_state_matmul} to
+
+\begin{equation}
+\label{eq:gauss_nuc_pot}
+V(\textbf{r}) = Z\left(\frac{\alpha}{\pi}\right)^{\frac{3}{2}}\int\frac{e^{-\alpha(\textbf{r} - \textbf{R})^{2}}}{|\textbf{r} - \textbf{R}|}d\textbf{R}
+\end{equation}
+
+where \textbf{r} is the coordinates of an electron, \textbf{R} is the coordinates of the nuclei, $Z$ is the nuclear charge, and $\alpha$ is an estimation of the ``size" of the nucleus. This is usually approximated using the root-mean-square (RMS) radius of the nuclei\cite{VISSCHER1997207}, which can be related to the mass of the nucleus by\cite{1985ADNDT..33..405J}
+
+\begin{equation}
+\label{eq:gauss_nuc_RMS}
+\sqrt{\left<R^{2}\right>} = \left(0.836A^{1/3} + 0.570\right)
+\end{equation}
+
+where $\left<R^{2}\right>$ is the mean-square radius in femtometers, and $A$ is the mass of the nucleus. Converting the RMS into atomic units and substituting its value into the following equation gives the value of $\alpha$\cite{VISSCHER1997207}
+
+\begin{equation}
+\label{eq:gauss_nuc_alpha}
+\alpha = \frac{3}{2\left<R^{2}\right>}
+\end{equation}

@@ -1,0 +1,8 @@
+Pb
+  $contrl jobtype='energy' $end
+  $nuc znuc=82 nucmdl=3 $end
+  $bas nsym=7 bastype='wtbs' $end
+  $wtbs wtbspara= 3.5433483E-02  1.8399050E+00  4.4867042E+00  2.0048353E+00
+        nbs=35 30 30 25 25 20 20 $end
+  $econfig nclose=6 4 4 3 3 1 1 nopen=0 1 1 0 0 0 0 freeel=2 autogen=.t. $end
+  $scf maxitr=50 ixtrp=1 dfctr=0.3 $end

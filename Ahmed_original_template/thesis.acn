@@ -1,26 +1,26 @@
-\glossaryentry{MT?\glossaryentryfield{mt}{\glsnamefont{MT}}{Microtubule}{\relax }|setentrycounter[]{page}\glsnumberformat}{3}
-\glossaryentry{GTP?\glossaryentryfield{gtp}{\glsnamefont{GTP}}{Guanosine Triphosphate}{\relax }|setentrycounter[]{page}\glsnumberformat}{4}
-\glossaryentry{GDP?\glossaryentryfield{gdp}{\glsnamefont{GDP}}{Guanosine Diphosphate}{\relax }|setentrycounter[]{page}\glsnumberformat}{4}
-\glossaryentry{QTAIM?\glossaryentryfield{qtaim}{\glsnamefont{QTAIM}}{Quantum Theory of Atoms in Molecules}{\relax }|setentrycounter[]{page}\glsnumberformat}{5}
-\glossaryentry{MD?\glossaryentryfield{md}{\glsnamefont{MD}}{Molecular Dynamics}{\relax }|setentrycounter[]{page}\glsnumberformat}{8}
-\glossaryentry{MSA?\glossaryentryfield{MSA}{\glsnamefont{MSA}}{Microtubule Stabilizing Agent}{\relax }|setentrycounter[]{page}\glsnumberformat}{17}
-\glossaryentry{MM/PBSA?\glossaryentryfield{mmpbsa}{\glsnamefont{MM/PBSA}}{Molecular Mechanics/Poisson-Boltzmann Surface Area Method}{\relax }|setentrycounter[]{page}\glsnumberformat}{20}
-\glossaryentry{RMSD?\glossaryentryfield{rmsd}{\glsnamefont{RMSD}}{Root-Mean-Square Deviation}{\relax }|setentrycounter[]{page}\glsnumberformat}{21}
-\glossaryentry{Peff?\glossaryentryfield{Peff}{\glsnamefont{Peff}}{Effective Human Jejunal Permeability}{\relax }|setentrycounter[]{page}\glsnumberformat}{21}
-\glossaryentry{FaSSIF?\glossaryentryfield{FaSSIF}{\glsnamefont{FaSSIF}}{Fasted-state Solubility in Simulated Intestinal Fluid}{\relax }|setentrycounter[]{page}\glsnumberformat}{21}
-\glossaryentry{MSA?\glossaryentryfield{MSA}{\glsnamefont{MSA}}{Microtubule Stabilizing Agent}{\relax }|setentrycounter[]{page}\glsnumberformat}{28}
-\glossaryentry{PDB?\glossaryentryfield{pdb}{\glsnamefont{PDB}}{Protein Data Bank}{\relax }|setentrycounter[]{page}\glsnumberformat}{33}
-\glossaryentry{SD?\glossaryentryfield{sd}{\glsnamefont{SD}}{Standard Deviation}{\relax }|setentrycounter[]{page}\glsnumberformat}{34}
-\glossaryentry{WBI?\glossaryentryfield{WBI}{\glsnamefont{WBI}}{Wiberg Bond Index}{\relax }|setentrycounter[]{page}\glsnumberformat}{39}
-\glossaryentry{OWBO?\glossaryentryfield{OWBO}{\glsnamefont{OWBO}}{Overlap-Weighted Bond Order}{\relax }|setentrycounter[]{page}\glsnumberformat}{39}
-\glossaryentry{MOC?\glossaryentryfield{MOC}{\glsnamefont{MOC}}{Mulliken Overlap Charge}{\relax }|setentrycounter[]{page}\glsnumberformat}{39}
-\glossaryentry{AIM?\glossaryentryfield{aim}{\glsnamefont{AIM}}{Atoms in Molecules}{\relax }|setentrycounter[]{page}\glsnumberformat}{48}
-\glossaryentry{LongAB?\glossaryentryfield{longab}{\glsnamefont{LongAB}}{Longitudinal interface between two tubulin dimers}{\relax }|setentrycounter[]{page}\glsnumberformat}{49}
-\glossaryentry{LatB?\glossaryentryfield{latb}{\glsnamefont{LatB}}{Lateral interface between two tubulin dimers in B-configuration}{\relax }|setentrycounter[]{page}\glsnumberformat}{49}
-\glossaryentry{LatA?\glossaryentryfield{lata}{\glsnamefont{LatA}}{Lateral interface between two tubulin dimers in A-configuration}{\relax }|setentrycounter[]{page}\glsnumberformat}{49}
-\glossaryentry{HD?\glossaryentryfield{hd}{\glsnamefont{HD}}{Hydrogen bond Donor}{\relax }|setentrycounter[]{page}\glsnumberformat}{49}
-\glossaryentry{HA?\glossaryentryfield{ha}{\glsnamefont{HA}}{Hydrogen bond Acceptor}{\relax }|setentrycounter[]{page}\glsnumberformat}{49}
-\glossaryentry{BCP?\glossaryentryfield{bcp}{\glsnamefont{BCP}}{Bond Critical Point}{\relax }|setentrycounter[]{page}\glsnumberformat}{49}
-\glossaryentry{MM/GBSA?\glossaryentryfield{mmgbsa}{\glsnamefont{MM/GBSA}}{Molecular Mechanics/Generalizedd-Born Surface Area Method}{\relax }|setentrycounter[]{page}\glsnumberformat}{52}
-\glossaryentry{GMPCPP?\glossaryentryfield{gmpcpp}{\glsnamefont{GMPCPP}}{Guanylyl-(alpha, beta)-Methylene-Diphosphonate}{\relax }|setentrycounter[]{page}\glsnumberformat}{66}
-\glossaryentry{vdW?\glossaryentryfield{vdW}{\glsnamefont{vdW}}{van der Waals}{\relax }|setentrycounter[]{page}\glsnumberformat}{70}
+\glossaryentry{MT?\glossentry{mt}|setentrycounter[]{page}\glsnumberformat}{3}
+\glossaryentry{GTP?\glossentry{gtp}|setentrycounter[]{page}\glsnumberformat}{4}
+\glossaryentry{GDP?\glossentry{gdp}|setentrycounter[]{page}\glsnumberformat}{4}
+\glossaryentry{QTAIM?\glossentry{qtaim}|setentrycounter[]{page}\glsnumberformat}{5}
+\glossaryentry{MD?\glossentry{md}|setentrycounter[]{page}\glsnumberformat}{8}
+\glossaryentry{MSA?\glossentry{MSA}|setentrycounter[]{page}\glsnumberformat}{17}
+\glossaryentry{MM/PBSA?\glossentry{mmpbsa}|setentrycounter[]{page}\glsnumberformat}{20}
+\glossaryentry{RMSD?\glossentry{rmsd}|setentrycounter[]{page}\glsnumberformat}{21}
+\glossaryentry{Peff?\glossentry{Peff}|setentrycounter[]{page}\glsnumberformat}{21}
+\glossaryentry{FaSSIF?\glossentry{FaSSIF}|setentrycounter[]{page}\glsnumberformat}{21}
+\glossaryentry{MSA?\glossentry{MSA}|setentrycounter[]{page}\glsnumberformat}{28}
+\glossaryentry{PDB?\glossentry{pdb}|setentrycounter[]{page}\glsnumberformat}{33}
+\glossaryentry{SD?\glossentry{sd}|setentrycounter[]{page}\glsnumberformat}{34}
+\glossaryentry{WBI?\glossentry{WBI}|setentrycounter[]{page}\glsnumberformat}{39}
+\glossaryentry{OWBO?\glossentry{OWBO}|setentrycounter[]{page}\glsnumberformat}{39}
+\glossaryentry{MOC?\glossentry{MOC}|setentrycounter[]{page}\glsnumberformat}{39}
+\glossaryentry{AIM?\glossentry{aim}|setentrycounter[]{page}\glsnumberformat}{48}
+\glossaryentry{LongAB?\glossentry{longab}|setentrycounter[]{page}\glsnumberformat}{49}
+\glossaryentry{LatB?\glossentry{latb}|setentrycounter[]{page}\glsnumberformat}{49}
+\glossaryentry{LatA?\glossentry{lata}|setentrycounter[]{page}\glsnumberformat}{49}
+\glossaryentry{HD?\glossentry{hd}|setentrycounter[]{page}\glsnumberformat}{49}
+\glossaryentry{HA?\glossentry{ha}|setentrycounter[]{page}\glsnumberformat}{49}
+\glossaryentry{BCP?\glossentry{bcp}|setentrycounter[]{page}\glsnumberformat}{49}
+\glossaryentry{MM/GBSA?\glossentry{mmgbsa}|setentrycounter[]{page}\glsnumberformat}{52}
+\glossaryentry{GMPCPP?\glossentry{gmpcpp}|setentrycounter[]{page}\glsnumberformat}{66}
+\glossaryentry{vdW?\glossentry{vdW}|setentrycounter[]{page}\glsnumberformat}{70}

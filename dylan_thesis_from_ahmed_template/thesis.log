@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.13)  20 JUL 2018 10:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.13)  20 JUL 2018 12:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -431,16 +431,28 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 525.
  [1
 
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (0.51385pt too wide) in paragraph at lines 584--585
+[]\OT1/cmr/m/n/12 When cal-cu-lat-ing the two-electron in-te-grals, cu-d-aD-FRA
+TOM uses a very ef-fec-tive method
+ []
+
+
+Overfull \hbox (3.28606pt too wide) in paragraph at lines 588--589
+\OT1/cmr/m/n/12 rWTBS pro-gram and at the four-component rel-a-tivis-tic level 
+of the-ory us-ing cu-d-aD-FRATOM.
+ []
+
+[2
 
 ] [3
 
 ] [4] [5
 
-]
-(./thesis.toc
+] (./thesis.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 2.
@@ -979,7 +991,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  7726 strings out of 492646
  108171 string characters out of 6129563
- 667962 words of memory out of 5000000
+ 667954 words of memory out of 5000000
  11359 multiletter control sequences out of 15000+600000
  18175 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1007,7 +1019,7 @@ lic/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (130 pages, 1739374 bytes).
+Output written on thesis.pdf (130 pages, 1741093 bytes).
 PDF statistics:
  534 PDF objects out of 1000 (max. 8388607)
  354 compressed objects within 4 object streams

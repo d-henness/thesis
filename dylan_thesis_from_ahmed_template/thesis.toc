@@ -43,8 +43,8 @@
 \contentsline {section}{\numberline {4.1}cudaDFRATOM}{79}
 \contentsline {section}{\numberline {4.2}Basis Set Optimization}{80}
 \contentsline {chapter}{Bibliography}{82}
-\contentsline {chapter}{\numberline {A}cudaDFRATOM Input and Output files}{84}
-\contentsline {section}{\numberline {A.1}Single Point Energy with predefined WTBS parameters}{84}
-\contentsline {section}{\numberline {A.2}Optimizing a Basis Set for a Specific Electron Configuration}{92}
-\contentsline {section}{\numberline {A.3}Single Point Energy using a predefined Basis Set}{107}
-\contentsline {chapter}{\numberline {B}Scripts for cudaDFRATOM}{118}
+\contentsline {chapter}{\numberline {A}cudaDFRATOM Input and Output files}{85}
+\contentsline {section}{\numberline {A.1}Single Point Energy with predefined WTBS parameters}{85}
+\contentsline {section}{\numberline {A.2}Optimizing a Basis Set for a Specific Electron Configuration}{93}
+\contentsline {section}{\numberline {A.3}Single Point Energy using a predefined Basis Set}{108}
+\contentsline {chapter}{\numberline {B}Scripts for cudaDFRATOM}{119}

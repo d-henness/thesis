@@ -10,45 +10,45 @@ A level-1 auxiliary file: appendix/app_cudaDFRATOM_inps.aux
 A level-1 auxiliary file: appendix/app_cudaDFRATOM_suto_sub.aux
 Database file #1: thesis.bib
 Warning--can't use both author and editor fields in Powell2006
-You've used 30 entries,
+You've used 35 entries,
             1791 wiz_defined-function locations,
-            681 strings with 7878 characters,
-and the built_in function-call counts, 6258 in all, are:
-= -- 598
-> -- 177
+            715 strings with 8651 characters,
+and the built_in function-call counts, 7350 in all, are:
+= -- 700
+> -- 213
 < -- 1
-+ -- 75
-- -- 45
-* -- 431
-:= -- 984
-add.period$ -- 89
-call.type$ -- 30
-change.case$ -- 26
++ -- 89
+- -- 54
+* -- 504
+:= -- 1159
+add.period$ -- 104
+call.type$ -- 35
+change.case$ -- 31
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 280
-empty$ -- 665
-format.name$ -- 45
-if$ -- 1392
+cite$ -- 36
+duplicate$ -- 324
+empty$ -- 778
+format.name$ -- 54
+if$ -- 1638
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 34
-newline$ -- 152
-num.names$ -- 29
-pop$ -- 61
+int.to.str$ -- 35
+missing$ -- 39
+newline$ -- 177
+num.names$ -- 34
+pop$ -- 66
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 103
+skip$ -- 123
 stack$ -- 0
-substring$ -- 509
-swap$ -- 39
+substring$ -- 611
+swap$ -- 44
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 66
-width$ -- 32
-write$ -- 331
+while$ -- 75
+width$ -- 37
+write$ -- 386
 (There was 1 warning)

@@ -157,6 +157,36 @@ S.~Huzinaga, M.~Klobukowski, and H.~Tatewaki.
   calculations on N2, CO, Na2, and P2}.
 \newblock {\em Can. J. Chem.}, 63(7):1812--1828, 1985.
 
+\bibitem{WTBS2}
+S.~Huzinaga and M.~Klobukowski.
+\newblock {The well-tempered GTF basis set and the ab initio molecular
+  calculation}.
+\newblock {\em J. Mol. Struct. (THEOCHEM)}, 135:403--408, 1986.
+
+\bibitem{WTBS3}
+S.~Huzinaga and M.~Klobukowski.
+\newblock {Well-tempered gaussian basis set expansions of Roothaan-Hartree-Fock
+  atomic wavefunctions for lithium through mercury}.
+\newblock {\em J. Mol. Struct. (THEOCHEM)}, 167(1-210), 1988.
+
+\bibitem{WTBS4}
+S.~Huzinaga and B.~Miguel.
+\newblock A comparison of the geometrical sequence formula and the
+  well-tempered formulas for generating gto basis orbital exponents.
+\newblock {\em Chem. Phys. Lett.}, 175:289 -- 291, 1990.
+
+\bibitem{WTBS5}
+S.~Huzinaga and M.~Klobukowski.
+\newblock Well-tempered gaussian basis sets for the calculation of matrix
+  hartree-fock wavefunctions.
+\newblock {\em Chem. Phys. Lett.}, 212:260 -- 264, 1993.
+
+\bibitem{WTBS6}
+M.~Barysz.
+\newblock Systematic treatment of relativistic effects accurate through
+  arbitrarily high order in $\alpha^{2}$.
+\newblock {\em J. Chem. Phys.}, 114:9315--9324, 2001.
+
 \bibitem{non_rel_lit_data}
 T.~Koga and A.~J. Thakkar.
 \newblock {Moments and expansion coefficients of atomic electron momentum

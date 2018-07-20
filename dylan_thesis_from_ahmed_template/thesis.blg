@@ -6,47 +6,49 @@ A level-1 auxiliary file: chp_cuda_dfratom.aux
 A level-1 auxiliary file: chp_basis_sets.aux
 A level-1 auxiliary file: chp_con_fut.aux
 The style file: initunsrt.bst
+A level-1 auxiliary file: appendix/app_cudaDFRATOM_inps.aux
+A level-1 auxiliary file: appendix/app_cudaDFRATOM_suto_sub.aux
 Database file #1: thesis.bib
 Warning--can't use both author and editor fields in Powell2006
-You've used 29 entries,
+You've used 30 entries,
             1791 wiz_defined-function locations,
-            672 strings with 7580 characters,
-and the built_in function-call counts, 6058 in all, are:
-= -- 581
-> -- 169
+            681 strings with 7878 characters,
+and the built_in function-call counts, 6258 in all, are:
+= -- 598
+> -- 177
 < -- 1
-+ -- 72
-- -- 43
-* -- 416
-:= -- 951
-add.period$ -- 86
-call.type$ -- 29
-change.case$ -- 25
++ -- 75
+- -- 45
+* -- 431
+:= -- 984
+add.period$ -- 89
+call.type$ -- 30
+change.case$ -- 26
 chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 271
-empty$ -- 644
-format.name$ -- 43
-if$ -- 1348
+cite$ -- 31
+duplicate$ -- 280
+empty$ -- 665
+format.name$ -- 45
+if$ -- 1392
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 33
-newline$ -- 147
-num.names$ -- 28
-pop$ -- 60
+int.to.str$ -- 30
+missing$ -- 34
+newline$ -- 152
+num.names$ -- 29
+pop$ -- 61
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 99
+skip$ -- 103
 stack$ -- 0
-substring$ -- 497
-swap$ -- 38
+substring$ -- 509
+swap$ -- 39
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 64
-width$ -- 31
-write$ -- 320
+while$ -- 66
+width$ -- 32
+write$ -- 331
 (There was 1 warning)

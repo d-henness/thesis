@@ -157,4 +157,10 @@ S.~Huzinaga, M.~Klobukowski, and H.~Tatewaki.
   calculations on N2, CO, Na2, and P2}.
 \newblock {\em Can. J. Chem.}, 63(7):1812--1828, 1985.
 
+\bibitem{non_rel_lit_data}
+T.~Koga and A.~J. Thakkar.
+\newblock {Moments and expansion coefficients of atomic electron momentum
+  densities: numerical Hartree - Fock calculations for hydrogen to lawrencium}.
+\newblock {\em J. Phys. B: At. Mol. Opt. Phys}, 29(14):2973, 1996.
+
 \end{thebibliography}

@@ -41,6 +41,7 @@
 \usepackage{amsmath}
 \usepackage{listings}
 \usepackage{subcaption}
+\usepackage{listofsymbols}
 
 
 % options for listings
@@ -764,7 +765,45 @@ For Jessie, who puts up with more than she needs to
 \tableofcontents
 \listoftables
 \listoffigures
-
+\newpage
+\listofsymbols
+%horrible way of doing this, but a this point also the easiest
+Some symbols are reused. The exact meaning will need to obtained from context.
+\begin{table}[h!]
+\begin{tabular}{ll}
+\toprule
+Symbol			&	Description 					\\
+\midrule
+$\hat{H}$				&	Hamiltonian operator				\\
+$\Psi$				&	Wavefunction					\\
+$E$					&	Energy						\\
+$\nabla$				&	Gradient of a function			\\
+$\hat{H}_{el}$			&	Electronic Hamiltonian operator		\\
+$a_{o}$				&	Bohr radius					\\
+$\psi$				&	Spin orbital					\\
+$\phi$				&	Orbital						\\
+$\alpha$				&	Spin function, four-component matrix, Gaussian nuclei exponent, \\
+					&	well-tempered basis set parameter		\\
+$\beta$				&	Spin function, four-component matrix, well-tempered basis set parameter	\\
+$\omega$				&	Spin coordinate					\\
+$\epsilon$				&	Vector of spin orbital energies		\\
+$\Phi$				&	Basis function					\\
+$\zeta$				&	Basis function exponent 			\\
+$\lambda$				&	Orbital symmetry				\\
+$\mu$				&	Orbital symmetry				\\
+$c$					&	Speed of light					\\
+$m_{0}$				&	Mass of object at rest			\\
+$\hbar$					&	Reduced Planck's constant		\\
+$q$					&	Particle charge					\\
+$\hat{A}, \hat{\varphi}$	&	Electromagnetic field potentials 	\\
+${\bf\psi}$			&	Large component spinor			\\	
+${\bf\phi}$			&	Large component spinor			\\	
+$\epsilon_{0}$		&	Permittivity of free space			\\
+$\delta$		&	Well-tempered basis set parameter	\\
+$\gamma$		&	Well-tempered basis set parameter	\\
+\bottomrule
+\end{tablular}
+\end{table}
 
 %\newacronym{gtp}{GTP}{Guanosine Triphosphate}
 %\newacronym{gdp}{GDP}{Guanosine Diphosphate}
@@ -840,7 +879,6 @@ For Jessie, who puts up with more than she needs to
 %generates lists of tables, figures and the table of contents
 
 \bodyoftext
-
 \include{chp_intro}
 \include{chp_cuda_dfratom}
 \include{chp_basis_sets}

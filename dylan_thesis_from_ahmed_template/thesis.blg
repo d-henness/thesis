@@ -12,14 +12,14 @@ Database file #1: thesis.bib
 Warning--can't use both author and editor fields in Powell2006
 You've used 35 entries,
             1791 wiz_defined-function locations,
-            715 strings with 8651 characters,
-and the built_in function-call counts, 7350 in all, are:
+            706 strings with 8619 characters,
+and the built_in function-call counts, 7330 in all, are:
 = -- 700
 > -- 213
 < -- 1
 + -- 89
 - -- 54
-* -- 504
+* -- 484
 := -- 1159
 add.period$ -- 104
 call.type$ -- 35

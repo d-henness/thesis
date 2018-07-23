@@ -577,13 +577,13 @@ Canada}%
 %BeginExpansion
 \begin{abstract}
 
-General Purpose computing with Graphics Processing Units (GPGPU) is a method of computation that allows for many similar calculations to be performed simultaneously. Graphics Processing Units (GPU) allow a single basic computer to perform as well as a super computer cluster composed of only Central Processing Units (CPU), at a fraction of the cost.  As quantum computational chemistry scales very poorly for larger systems, the use of GPGPU could be a very effective tool for quantum chemists.
+General Purpose computing with Graphics Processing Units (GPGPU) is a method of computation that allows for calculations to be performed in parallel. Graphics Processing Units (GPU) allow a single basic computer to perform as well as a super computer cluster composed of only Central Processing Units (CPU), at a fraction of the cost.  As quantum computational chemistry scales very poorly with the size of systems, the use of GPGPU has been a very effective tool for quantum chemists.
 
-This thesis presents a program written in CUDA Fortran called cudaDFRATOM. cudaDFRATOM allows for the calculation and optimization of Well-Tempered Basis Sets (WTBS) at the four-component relativistic level of theory. Except for a few small initial calculations and control flow, all work is performed entirely on the GPU. 
+This thesis presents a program called cudaDFRATOM. This program, written in CUDA Fortran, allows for the calculation and optimization of Well-Tempered Basis Sets (WTBS) at the four-component relativistic level of theory. Except for a few small initial calculations and control flow, all work is performed entirely on the GPU. 
 
-When calculating the two-electron integrals, cudaDFRATOM uses a very effective method of utilizing as much of the resources of the GPU as possible and can calculate these integrals approximately 20 times faster than a similar program running on only a CPU. 
+When calculating the two-electron integrals, cudaDFRATOM uses a very effective method of utilizing as much of the GPU's resources as possible and can calculate these integrals approximately 20 times faster than a similar program running on only a CPU. 
 
-Two different algorithms for forming the \textbf{P} and \textbf{Q} supermatrices are presented. The relatively small size of these matrices and the need to use double precision floating point operations stunts the speedup of these algorithms such that they only attain a speedup of about 2 times over the CPU program. An overall speedup of about 4 times is achieved by cudaDFRATOM.
+Two different algorithms for forming the \textbf{P} and \textbf{Q} supermatrices are presented. The relatively small size of these matrices and the need to use double-precision floating-point operations stunts the speedup of these algorithms such that they only attain a speedup of about 2 times over the CPU program. An overall speedup of about 4 times is achieved by cudaDFRATOM.
 
 In addition, new WTBS are calculated for non-relativistic levels of theory using the rWTBS program and at the four-component relativistic level of theory using cudaDFRATOM. In both cases, a novel algorithm for automating the optimization of these basis sets was used. The algorithm finds a basis set that is as small a possible while still retaining sufficient accuracy to numerical calculations.
 
@@ -642,6 +642,8 @@ In addition, new WTBS are calculated for non-relativistic levels of theory using
 \begin{preface}
 
 This thesis is my own original work. No part of this thesis has been previously published. Experiments and code were planned, performed, and written by myself with the help of Mariusz Klobukowski.
+
+In addition, I have also worked on a project with Mariusz which is not in this thesis. The project investigated how the FHF$^{-}$ molecule behaves in a confining potential. The results were published in a paper titled ``Hydrogen bonding and autoionization in confined bifluoride system FHF$^{-}$"  in \textit{The Journal of Physics B: Atomic, Molecular and Optical Physics} vol. 50 page 155101 in the year 2017.
 
 \end{preface}
 %TCIMACRO{

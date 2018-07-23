@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.13)  20 JUL 2018 12:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.13)  23 JUL 2018 13:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -445,33 +445,32 @@ of the-ory us-ing cu-d-aD-FRATOM.
 
 [2
 
-] [3
-
-] [4] [5
-
-] (./thesis.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 2.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
+]
+LaTeX Font Info:    Try loading font information for U+msa on input line 646.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 2.
+LaTeX Font Info:    Try loading font information for U+msb on input line 646.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 2.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 646.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) [6
+) [3
+
+] [4] [5
+
+]
+(./thesis.toc [6
 
 ])
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
- [7]
-(./thesis.lot)
+ [7] (./thesis.lot)
 \tf@lot=\write4
 \openout4 = `thesis.lot'.
 
@@ -558,7 +557,60 @@ Chapter 1.
 [1
 
 
-] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11]
+]
+./chp_intro.tex:47: Missing } inserted.
+<inserted text> 
+                }
+l.47 ...alue of j and initial value of c$_{jint}$}
+                                                  
+? 
+./chp_intro.tex:47: Display math should end with $$.
+<to be read again> 
+                   _
+l.47 ...alue of j and initial value of c$_{jint}$}
+                                                  
+? 
+./chp_intro.tex:47: Missing $ inserted.
+<inserted text> 
+                $
+l.47 ...alue of j and initial value of c$_{jint}$}
+                                                  
+? 
+./chp_intro.tex:47: Extra }, or forgotten \endgroup.
+\@textcolor ...otect \leavevmode {\color #1{#2}#3}
+                                                  
+l.47 ...alue of j and initial value of c$_{jint}$}
+                                                  
+? 
+
+./chp_intro.tex:48: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 \end{equation}
+                   
+? 
+./chp_intro.tex:48: You can't use `\eqno' in horizontal mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.48 \end{equation}
+                   
+? 
+./chp_intro.tex:48: Missing $ inserted.
+<inserted text> 
+                $
+l.48 \end{equation}
+                   
+? 
+./chp_intro.tex:48: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.48 \end{equation}
+                   
+? 
+[2] [3] [4] [5] [6] [7] [8] [9] [10] [11]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 432.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
@@ -1019,7 +1071,7 @@ lic/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (130 pages, 1741093 bytes).
+Output written on thesis.pdf (130 pages, 1741718 bytes).
 PDF statistics:
  534 PDF objects out of 1000 (max. 8388607)
  354 compressed objects within 4 object streams

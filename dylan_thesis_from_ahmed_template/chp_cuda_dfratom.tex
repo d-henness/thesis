@@ -14,7 +14,7 @@ The most granular element of computation on a GPU is the thread. When a CUDA fun
 
 Warp divergence can also cause warps to fall behind other warps and has the potential to cause race conditions to appear. A race condition appears when different threads need to use the same memory location, but there is nothing in the code to enforce the order the threads will access the memory location. If one warp needs to read data written by another warp that is several steps behind, this can cause all kinds of confusing errors to appear. Therefore, it is generally advisable to avoid warp divergence whenever possible. But, for programs of any considerable usefulness, warp divergence will be inevitable. Thankfully, NVIDIA has included the \comm{syncthreads} command which provides a barrier that all threads within a block must meet before any can continue. 
 
-The next highest structure is the thread block, or block for short. Simply put, a block is a collection of one or more threads. When a kernel is called, the block scheduler assigns each block to a streaming multiprocessor (SM). How many blocks a SM can run at once depends on the resources each block uses (more on this in section \ref{sec:gpumem}), but no more than 8 blocks per SM can ever be run at once on the C2050. Blocks also add an element of dimensionality to threads through the thread index ($threadIdx$) variable. This variable has three parts, $threadIdx.x$, $threadIdx.y$, and $threadIdx.z$. These variables make dealing with matrixes and arrays much simpler and can help with parallelizing large nested loops. The size of dimensions of the grid can be accessed through the $blockDim$ variable. $blockDim$ also has $x$, $y$, and $z$ parts. These variables are all integer type, and the $threadIdx$ variables range from 1 in Fortran (or 0 in C/++) to the relevant part of $blockDim$ in Fortran (or $blockDim$ -1 in C/++). The $threadIdx$ set of variables are all reset at the boundary of each block. 
+The next highest structure is the thread block, or block for short. Simply put, a block is a collection of one or more threads. When a kernel is called, the block scheduler assigns each block to a streaming multiprocessor (SM). How many blocks a SM can run at once depends on the resources each block uses (more on this in section \ref{sec:gpumem}), but no more than 8 blocks per SM can ever be run at once on the C2050. Blocks also add an element of dimensionality to threads through the thread index ($threadIdx$) variable. This variable has three parts, $threadIdx.x$, $threadIdx.y$, and $threadIdx.z$\footnote{Note that in Fortran, the $x$, (or $y$ or $z$) part of the $threadIdx$ variable would be written as $threadIdx\%x$. I find the C style dot notation to be more visually appealing, so that is what is used in this thesis.}. These variables make dealing with matrixes and arrays much simpler and can help with parallelizing large nested loops. The size of dimensions of the grid can be accessed through the $blockDim$ variable. $blockDim$ also has $x$, $y$, and $z$ parts. These variables are all integer type, and the $threadIdx$ variables range from 1 in Fortran (or 0 in C/++) to the relevant part of $blockDim$ in Fortran (or $blockDim$ -1 in C/++). The $threadIdx$ set of variables are all reset at the boundary of each block. 
 
 Finally there is the grid. The grid is the entire collection of blocks that are launched for a kernel. The grid gives a dimensionality to blocks through the $blockIdx$ variable which has similar parts to the $threadIdx$ variable. The grid also has the $gridDim$ variable which is analogous to $blockDim$.
 
@@ -687,7 +687,7 @@ There was some difficulty in determining the total speedup of a calculation. The
 
 \begin{table}[h!]
 \begin{center}
-\caption[Total speedup of alg1]{Total speedup of alg1. The results for a total calculation are shown. All times are in s.}
+\caption[Total speedup of alg1]{Total speedup of cudaDFRATOM using \textbf{MTSE}. The results for a total calculation are shown. All times are in s.}
 \label{tab:totalprofalg1}
 \begin{tabular}{rrrrrr}
 \toprule
@@ -709,7 +709,7 @@ There was some difficulty in determining the total speedup of a calculation. The
 
 \begin{table}[h!]
 \begin{center}
-\caption[Total speedup of alg2]{Total speedup of alg2. The results for a total calculation are shown. All times are in s.}
+\caption[Total speedup of alg2]{Total speedup of cudaDFRATOM using \textbf{STSE}. The results for a total calculation are shown. All times are in s.}
 \label{tab:totalprofalg2}
 \begin{tabular}{rrrrrr}
 \toprule

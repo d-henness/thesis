@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.13)  23 JUL 2018 14:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.13)  23 JUL 2018 15:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -721,7 +721,7 @@ Chapter 2.
 
 
 ] [18] [19]
-<Figures/gpu_arc.png, id=111, 803.0pt x 1057.9525pt>
+<Figures/gpu_arc.png, id=114, 803.0pt x 1057.9525pt>
 File: Figures/gpu_arc.png Graphic file (type png)
 <use Figures/gpu_arc.png>
 Package pdftex.def Info: Figures/gpu_arc.png  used on input line 33.
@@ -738,7 +738,7 @@ and other con-stants is per-formed by \OT1/cmr/bx/it/12 calc[]parameters
  []
 
 [26] [27] [28]
-<Figures/30_25_20_15_naive_layout.png, id=143, 1957.3125pt x 2007.5pt>
+<Figures/30_25_20_15_naive_layout.png, id=146, 1957.3125pt x 2007.5pt>
 File: Figures/30_25_20_15_naive_layout.png Graphic file (type png)
 <use Figures/30_25_20_15_naive_layout.png>
 Package pdftex.def Info: Figures/30_25_20_15_naive_layout.png  used on input li
@@ -748,7 +748,7 @@ ne 146.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/gen_mat_block_layout.png, id=144, 1003.75pt x 1001.7425pt>
+<Figures/gen_mat_block_layout.png, id=147, 1003.75pt x 1001.7425pt>
 File: Figures/gen_mat_block_layout.png Graphic file (type png)
 <use Figures/gen_mat_block_layout.png>
 Package pdftex.def Info: Figures/gen_mat_block_layout.png  used on input line 1
@@ -757,7 +757,7 @@ Package pdftex.def Info: Figures/gen_mat_block_layout.png  used on input line 1
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/gen_vec_block_layout.png, id=145, 1003.75pt x 1286.8075pt>
+<Figures/gen_vec_block_layout.png, id=148, 1003.75pt x 1286.8075pt>
 File: Figures/gen_vec_block_layout.png Graphic file (type png)
 <use Figures/gen_vec_block_layout.png>
 Package pdftex.def Info: Figures/gen_vec_block_layout.png  used on input line 1
@@ -773,7 +773,7 @@ LaTeX Warning: Text page 30 contains only floats.
 [30 <./Figures/30_25_20_15_naive_layout.png (PNG copy)>] [31 <./Figures/gen_mat
 _block_layout.png (PNG copy)>] [32 <./Figures/gen_vec_block_layout.png (PNG cop
 y)>]
-<Figures/eint2_mat.png, id=158, 1003.75pt x 1001.7425pt>
+<Figures/eint2_mat.png, id=161, 1003.75pt x 1001.7425pt>
 File: Figures/eint2_mat.png Graphic file (type png)
 <use Figures/eint2_mat.png>
 Package pdftex.def Info: Figures/eint2_mat.png  used on input line 202.
@@ -782,7 +782,7 @@ Package pdftex.def Info: Figures/eint2_mat.png  used on input line 202.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/eint2_vec.png, id=159, 1003.75pt x 787.94376pt>
+<Figures/eint2_vec.png, id=162, 1003.75pt x 787.94376pt>
 File: Figures/eint2_vec.png Graphic file (type png)
 <use Figures/eint2_vec.png>
 Package pdftex.def Info: Figures/eint2_vec.png  used on input line 209.
@@ -794,12 +794,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ] [34 <./Figures/eint2_mat.png (PNG copy)>] [35 <./Figures/eint2_vec.png (PNG c
 opy)>] [36]
-<Figures/dtmx_mat.png, id=173, 1003.75pt x 1001.7425pt>
+<Figures/dtmx_mat.png, id=176, 1003.75pt x 1001.7425pt>
 File: Figures/dtmx_mat.png Graphic file (type png)
 <use Figures/dtmx_mat.png>
 Package pdftex.def Info: Figures/dtmx_mat.png  used on input line 320.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
-<Figures/dtmx_vec.png, id=174, 1003.75pt x 713.66624pt>
+<Figures/dtmx_vec.png, id=177, 1003.75pt x 713.66624pt>
 File: Figures/dtmx_vec.png Graphic file (type png)
 <use Figures/dtmx_vec.png>
 Package pdftex.def Info: Figures/dtmx_vec.png  used on input line 327.
@@ -815,7 +815,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 598--601
 
  []
 
-<Figures/eint2prof.png, id=208, 1003.75pt x 625.33624pt>
+<Figures/eint2prof.png, id=211, 1003.75pt x 625.33624pt>
 File: Figures/eint2prof.png Graphic file (type png)
 <use Figures/eint2prof.png>
 Package pdftex.def Info: Figures/eint2prof.png  used on input line 604.
@@ -830,7 +830,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/formpqprof.png, id=212, 1003.75pt x 637.38126pt>
+<Figures/formpqprof.png, id=215, 1003.75pt x 637.38126pt>
 File: Figures/formpqprof.png Graphic file (type png)
 <use Figures/formpqprof.png>
 Package pdftex.def Info: Figures/formpqprof.png  used on input line 658.
@@ -839,12 +839,12 @@ Package pdftex.def Info: Figures/formpqprof.png  used on input line 658.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [48 <./Figures/eint2prof.png (PNG copy)>]
-<Figures/eint2_mat_lots.png, id=216, 1003.75pt x 1001.7425pt>
+<Figures/eint2_mat_lots.png, id=219, 1003.75pt x 1001.7425pt>
 File: Figures/eint2_mat_lots.png Graphic file (type png)
 <use Figures/eint2_mat_lots.png>
 Package pdftex.def Info: Figures/eint2_mat_lots.png  used on input line 669.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
-<Figures/eint2_vec_lots.png, id=217, 2007.5pt x 1238.6275pt>
+<Figures/eint2_vec_lots.png, id=220, 2007.5pt x 1238.6275pt>
 File: Figures/eint2_vec_lots.png Graphic file (type png)
 <use Figures/eint2_vec_lots.png>
 Package pdftex.def Info: Figures/eint2_vec_lots.png  used on input line 676.
@@ -860,7 +860,7 @@ Overfull \hbox (15.54016pt too wide) in paragraph at lines 714--729
  [] 
  []
 
-<Figures/totaltimeprof.png, id=231, 1003.75pt x 642.4pt>
+<Figures/totaltimeprof.png, id=234, 1003.75pt x 642.4pt>
 File: Figures/totaltimeprof.png Graphic file (type png)
 <use Figures/totaltimeprof.png>
 Package pdftex.def Info: Figures/totaltimeprof.png  used on input line 733.
@@ -984,7 +984,7 @@ Chapter 3.
 
 
 ] [59]
-<Figures/deltagamm.png, id=254, 1505.625pt x 961.5925pt>
+<Figures/deltagamm.png, id=257, 1505.625pt x 961.5925pt>
 File: Figures/deltagamm.png Graphic file (type png)
 <use Figures/deltagamm.png>
 Package pdftex.def Info: Figures/deltagamm.png  used on input line 30.
@@ -1017,22 +1017,22 @@ Overfull \hbox (28.49303pt too wide) in alignment at lines 214--227
  []
 
 [70] [71] [72] [73]
-<Figures/BS_non_rel_alpha.png, id=299, 1505.625pt x 949.5475pt>
+<Figures/BS_non_rel_alpha.png, id=302, 1505.625pt x 949.5475pt>
 File: Figures/BS_non_rel_alpha.png Graphic file (type png)
 <use Figures/BS_non_rel_alpha.png>
 Package pdftex.def Info: Figures/BS_non_rel_alpha.png  used on input line 369.
 (pdftex.def)             Requested size: 469.75499pt x 296.25473pt.
-<Figures/BS_non_rel_beta.png, id=300, 1505.625pt x 948.54375pt>
+<Figures/BS_non_rel_beta.png, id=303, 1505.625pt x 948.54375pt>
 File: Figures/BS_non_rel_beta.png Graphic file (type png)
 <use Figures/BS_non_rel_beta.png>
 Package pdftex.def Info: Figures/BS_non_rel_beta.png  used on input line 377.
 (pdftex.def)             Requested size: 469.75499pt x 295.94156pt.
-<Figures/BS_non_rel_delta.png, id=301, 1505.625pt x 957.5775pt>
+<Figures/BS_non_rel_delta.png, id=304, 1505.625pt x 957.5775pt>
 File: Figures/BS_non_rel_delta.png Graphic file (type png)
 <use Figures/BS_non_rel_delta.png>
 Package pdftex.def Info: Figures/BS_non_rel_delta.png  used on input line 386.
 (pdftex.def)             Requested size: 230.18251pt x 146.39198pt.
-<Figures/BS_non_rel_gamma.png, id=302, 1505.625pt x 947.54pt>
+<Figures/BS_non_rel_gamma.png, id=305, 1505.625pt x 947.54pt>
 File: Figures/BS_non_rel_gamma.png Graphic file (type png)
 <use Figures/BS_non_rel_gamma.png>
 Package pdftex.def Info: Figures/BS_non_rel_gamma.png  used on input line 390.
@@ -1040,22 +1040,22 @@ Package pdftex.def Info: Figures/BS_non_rel_gamma.png  used on input line 390.
  [74] [75 <./Figures/BS_non_rel_alpha.png (PNG copy)>]
 [76 <./Figures/BS_non_rel_beta.png (PNG copy)> <./Figures/BS_non_rel_delta.png 
 (PNG copy)> <./Figures/BS_non_rel_gamma.png (PNG copy)>]
-<Figures/BS_rel_alpha.png, id=315, 1505.625pt x 961.5925pt>
+<Figures/BS_rel_alpha.png, id=317, 1505.625pt x 961.5925pt>
 File: Figures/BS_rel_alpha.png Graphic file (type png)
 <use Figures/BS_rel_alpha.png>
 Package pdftex.def Info: Figures/BS_rel_alpha.png  used on input line 401.
 (pdftex.def)             Requested size: 469.75499pt x 300.01271pt.
-<Figures/BS_rel_beta.png, id=316, 1505.625pt x 948.54375pt>
+<Figures/BS_rel_beta.png, id=318, 1505.625pt x 948.54375pt>
 File: Figures/BS_rel_beta.png Graphic file (type png)
 <use Figures/BS_rel_beta.png>
 Package pdftex.def Info: Figures/BS_rel_beta.png  used on input line 409.
 (pdftex.def)             Requested size: 469.75499pt x 295.94156pt.
-<Figures/BS_rel_delta.png, id=317, 1505.625pt x 963.6pt>
+<Figures/BS_rel_delta.png, id=319, 1505.625pt x 963.6pt>
 File: Figures/BS_rel_delta.png Graphic file (type png)
 <use Figures/BS_rel_delta.png>
 Package pdftex.def Info: Figures/BS_rel_delta.png  used on input line 418.
 (pdftex.def)             Requested size: 230.18251pt x 147.31268pt.
-<Figures/BS_rel_gamma.png, id=318, 1505.625pt x 957.5775pt>
+<Figures/BS_rel_gamma.png, id=320, 1505.625pt x 957.5775pt>
 File: Figures/BS_rel_gamma.png Graphic file (type png)
 <use Figures/BS_rel_gamma.png>
 Package pdftex.def Info: Figures/BS_rel_gamma.png  used on input line 422.
@@ -1144,11 +1144,11 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred when \ifx on line 678 was incomplete) 
 Here is how much of TeX's memory you used:
- 7907 strings out of 492646
- 110769 string characters out of 6129563
- 670471 words of memory out of 5000000
- 11524 multiletter control sequences out of 15000+600000
- 18175 words of font info for 71 fonts, out of 8000000 for 9000
+ 7918 strings out of 492646
+ 110893 string characters out of 6129563
+ 670480 words of memory out of 5000000
+ 11533 multiletter control sequences out of 15000+600000
+ 20059 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,23n,52p,1883b,1686s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/te
@@ -1163,21 +1163,23 @@ ist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2018/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2018/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2018/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2018/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmti12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/
-amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (131 pages, 1742927 bytes).
+onts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmti12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmtt12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmtt8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msbm10.pfb>
+Output written on thesis.pdf (131 pages, 1767785 bytes).
 PDF statistics:
- 537 PDF objects out of 1000 (max. 8388607)
- 356 compressed objects within 4 object streams
+ 545 PDF objects out of 1000 (max. 8388607)
+ 362 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

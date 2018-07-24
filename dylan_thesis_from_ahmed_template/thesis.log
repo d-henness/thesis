@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  19 JUL 2018 21:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  24 JUL 2018 15:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -276,29 +276,68 @@ Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 \c@subfigure=\count126
 \c@subtable=\count127
 )
-\c@theorem=\count128
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listofsymbols/listofsymbols.sty
+Package: listofsymbols 
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count128
+\calc@Bcount=\count129
+\calc@Adimen=\dimen142
+\calc@Bdimen=\dimen143
+\calc@Askip=\skip54
+\calc@Bskip=\skip55
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count130
+\calc@Cskip=\skip56
+)
+\symindent=\skip57
+\symwidth=\skip58
+\sympagenowidth=\skip59
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+\old@parskip=\skip60
+\old@parindent=\skip61
 
 
-./thesis.tex:108: LaTeX Error: Command \algorithm already defined.
+/usr/local/texlive/2015/texmf-dist/tex/latex/listofsymbols/listofsymbols.sty:18
+2: LaTeX Error: Command \listofsymbols already defined.
                Or name \end... illegal, see p.192 of the manual.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.108 \newtheorem{algorithm}[theorem]{Algorithm}
+l.182   \setlength{\parindent}{\old@parindent}}}
+                                                
+? 
+)
+\c@theorem=\count131
+
+
+./thesis.tex:109: LaTeX Error: Command \algorithm already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.109 \newtheorem{algorithm}[theorem]{Algorithm}
                                                 
 ? 
 (./tcilatex.tex
 TCILATEX Macros for Scientific Word 2.5 <22 Dec 95>.
 NOTICE: This macro file is NOT proprietary and may be freely copied and distrib
 uted.
-\@hour=\count129
-\@minute=\count130
-\GRAPHICSTYPE=\count131
-\draft=\count132
-\dispkind=\count133
-\theight=\dimen142
+\@hour=\count132
+\@minute=\count133
+\GRAPHICSTYPE=\count134
+\draft=\count135
+\dispkind=\count136
+\theight=\dimen144
 LaTeX Info: Redefining \rm on input line 557.
 LaTeX Info: Redefining \sf on input line 558.
 LaTeX Info: Redefining \tt on input line 559.
@@ -312,7 +351,7 @@ Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
-\c@equationnumber=\count134
+\c@equationnumber=\count137
 
 amsgen already loaded)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/xr.sty
@@ -322,7 +361,7 @@ Package: xr 1994/05/28 v5.02 eXternal References (DPC)
 Package xr Warning: 
 No file supp.aux
 LABELS NOT IMPORTED.
- on input line 131.
+ on input line 132.
 
 (./thesis.aux (./chp_intro.aux
 
@@ -340,30 +379,30 @@ LaTeX Warning: Label `fig:eint2matlots' multiply defined.
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 133.
-LaTeX Font Info:    ... okay on input line 133.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
  (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count135
-\scratchdimen=\dimen143
+\scratchcounter=\count138
+\scratchdimen=\dimen145
 \scratchbox=\box36
-\nofMPsegments=\count136
-\nofMParguments=\count137
+\nofMPsegments=\count139
+\nofMParguments=\count140
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count138
-\MPscratchDim=\dimen144
-\MPnumerator=\count139
-\makeMPintoPDFobject=\count140
+\MPscratchCnt=\count141
+\MPscratchDim=\dimen146
+\MPnumerator=\count142
+\makeMPintoPDFobject=\count143
 \everyMPtoPDFconversion=\toks26
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -417,46 +456,57 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count141
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 525.
+\c@lstlisting=\count144
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 526.
 
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 525.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 526.
  [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (0.51385pt too wide) in paragraph at lines 585--586
+[]\OT1/cmr/m/n/12 When cal-cu-lat-ing the two-electron in-te-grals, cu-d-aD-FRA
+TOM uses a very ef-fec-tive method
+ []
 
-] [3
 
-] [4] [5
+Overfull \hbox (3.28606pt too wide) in paragraph at lines 589--590
+\OT1/cmr/m/n/12 rWTBS pro-gram and at the four-component rel-a-tivis-tic level 
+of the-ory us-ing cu-d-aD-FRATOM.
+ []
+
+[2
 
 ]
-(./thesis.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 2.
+LaTeX Font Info:    Try loading font information for U+msa on input line 647.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 2.
+LaTeX Font Info:    Try loading font information for U+msb on input line 647.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 2.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 647.
 
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) [6
+) [3
+
+] [4] [5
+
+]
+(./thesis.toc [6
 
 ])
 \tf@toc=\write3
 \openout3 = `thesis.toc'.
 
- [7]
-(./thesis.lot)
+ [7] (./thesis.lot)
 \tf@lot=\write4
 \openout4 = `thesis.lot'.
 
@@ -536,6 +586,13 @@ l.23 ...{0}}$}}\mathchar "010D $ parameters.}}{78}
  [9
 
 ]
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 806.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 806.
+ [10
+
+]
 \openout2 = `chp_intro.aux'.
 
  (./chp_intro.tex
@@ -543,12 +600,60 @@ Chapter 1.
 [1
 
 
-] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11]
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 432.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 432.
- [12] [13] [14] [15]) [16]
+]
+./chp_intro.tex:47: Missing } inserted.
+<inserted text> 
+                }
+l.47 ...alue of j and initial value of c$_{jint}$}
+                                                  
+? 
+./chp_intro.tex:47: Display math should end with $$.
+<to be read again> 
+                   _
+l.47 ...alue of j and initial value of c$_{jint}$}
+                                                  
+? 
+./chp_intro.tex:47: Missing $ inserted.
+<inserted text> 
+                $
+l.47 ...alue of j and initial value of c$_{jint}$}
+                                                  
+? 
+./chp_intro.tex:47: Extra }, or forgotten \endgroup.
+\@textcolor ...otect \leavevmode {\color #1{#2}#3}
+                                                  
+l.47 ...alue of j and initial value of c$_{jint}$}
+                                                  
+? 
+
+./chp_intro.tex:48: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 \end{equation}
+                   
+? 
+./chp_intro.tex:48: You can't use `\eqno' in horizontal mode.
+\endmathdisplay@a ...\df@tag \@empty \else \veqno 
+                                                  \alt@tag \df@tag \fi \ifx ...
+l.48 \end{equation}
+                   
+? 
+./chp_intro.tex:48: Missing $ inserted.
+<inserted text> 
+                $
+l.48 \end{equation}
+                   
+? 
+./chp_intro.tex:48: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.48 \end{equation}
+                   
+? 
+[2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]) [16]
 \openout2 = `chp_cuda_dfratom.aux'.
 
 
@@ -558,7 +663,7 @@ Chapter 2.
 
 
 
-] [18] [19] <Figures/gpu_arc.png, id=108, 803.0pt x 1057.9525pt>
+] [18] [19] <Figures/gpu_arc.png, id=114, 803.0pt x 1057.9525pt>
 File: Figures/gpu_arc.png Graphic file (type png)
 
 <use Figures/gpu_arc.png>
@@ -576,7 +681,7 @@ and other con-stants is per-formed by \OT1/cmr/bx/it/12 calc[]parameters
  []
 
 [26] [27] [28]
-<Figures/30_25_20_15_naive_layout.png, id=140, 1957.3125pt x 2007.5pt>
+<Figures/30_25_20_15_naive_layout.png, id=146, 1957.3125pt x 2007.5pt>
 File: Figures/30_25_20_15_naive_layout.png Graphic file (type png)
 
 <use Figures/30_25_20_15_naive_layout.png>
@@ -587,7 +692,7 @@ e 146.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/gen_mat_block_layout.png, id=141, 1003.75pt x 1001.7425pt>
+<Figures/gen_mat_block_layout.png, id=147, 1003.75pt x 1001.7425pt>
 File: Figures/gen_mat_block_layout.png Graphic file (type png)
 
 <use Figures/gen_mat_block_layout.png>
@@ -598,7 +703,7 @@ Package pdftex.def Info: Figures/gen_mat_block_layout.png used on input line 15
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/gen_vec_block_layout.png, id=142, 1003.75pt x 1286.8075pt>
+<Figures/gen_vec_block_layout.png, id=148, 1003.75pt x 1286.8075pt>
 File: Figures/gen_vec_block_layout.png Graphic file (type png)
 
 <use Figures/gen_vec_block_layout.png>
@@ -615,7 +720,7 @@ LaTeX Warning: Text page 30 contains only floats.
 
 [30 <./Figures/30_25_20_15_naive_layout.png (PNG copy)>] [31 <./Figures/gen_mat
 _block_layout.png (PNG copy)>] [32 <./Figures/gen_vec_block_layout.png (PNG cop
-y)>] <Figures/eint2_mat.png, id=155, 1003.75pt x 1001.7425pt>
+y)>] <Figures/eint2_mat.png, id=161, 1003.75pt x 1001.7425pt>
 File: Figures/eint2_mat.png Graphic file (type png)
 
 <use Figures/eint2_mat.png>
@@ -625,7 +730,7 @@ Package pdftex.def Info: Figures/eint2_mat.png used on input line 202.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/eint2_vec.png, id=156, 1003.75pt x 787.94376pt>
+<Figures/eint2_vec.png, id=162, 1003.75pt x 787.94376pt>
 File: Figures/eint2_vec.png Graphic file (type png)
 
 <use Figures/eint2_vec.png>
@@ -638,14 +743,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [33
 
 ] [34 <./Figures/eint2_mat.png (PNG copy)>] [35 <./Figures/eint2_vec.png (PNG c
-opy)>] [36] <Figures/dtmx_mat.png, id=170, 1003.75pt x 1001.7425pt>
+opy)>] [36] <Figures/dtmx_mat.png, id=176, 1003.75pt x 1001.7425pt>
 File: Figures/dtmx_mat.png Graphic file (type png)
 
 <use Figures/dtmx_mat.png>
 Package pdftex.def Info: Figures/dtmx_mat.png used on input line 320.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
 
-<Figures/dtmx_vec.png, id=171, 1003.75pt x 713.66624pt>
+<Figures/dtmx_vec.png, id=177, 1003.75pt x 713.66624pt>
 File: Figures/dtmx_vec.png Graphic file (type png)
 
 <use Figures/dtmx_vec.png>
@@ -662,7 +767,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 598--601
 
  []
 
-<Figures/eint2prof.png, id=205, 1003.75pt x 625.33624pt>
+<Figures/eint2prof.png, id=211, 1003.75pt x 625.33624pt>
 File: Figures/eint2prof.png Graphic file (type png)
 
 <use Figures/eint2prof.png>
@@ -679,7 +784,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/formpqprof.png, id=209, 1003.75pt x 637.38126pt>
+<Figures/formpqprof.png, id=215, 1003.75pt x 637.38126pt>
 File: Figures/formpqprof.png Graphic file (type png)
 
 <use Figures/formpqprof.png>
@@ -690,14 +795,14 @@ Package pdftex.def Info: Figures/formpqprof.png used on input line 658.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [48 <./Figures/eint2prof.png (PNG copy)>]
-<Figures/eint2_mat_lots.png, id=213, 1003.75pt x 1001.7425pt>
+<Figures/eint2_mat_lots.png, id=219, 1003.75pt x 1001.7425pt>
 File: Figures/eint2_mat_lots.png Graphic file (type png)
 
 <use Figures/eint2_mat_lots.png>
 Package pdftex.def Info: Figures/eint2_mat_lots.png used on input line 669.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
 
-<Figures/eint2_vec_lots.png, id=214, 2007.5pt x 1238.6275pt>
+<Figures/eint2_vec_lots.png, id=220, 2007.5pt x 1238.6275pt>
 File: Figures/eint2_vec_lots.png Graphic file (type png)
 
 <use Figures/eint2_vec_lots.png>
@@ -714,7 +819,7 @@ Overfull \hbox (15.54016pt too wide) in paragraph at lines 714--729
  [] 
  []
 
-<Figures/totaltimeprof.png, id=228, 1003.75pt x 642.4pt>
+<Figures/totaltimeprof.png, id=234, 1003.75pt x 642.4pt>
 File: Figures/totaltimeprof.png Graphic file (type png)
 
 <use Figures/totaltimeprof.png>
@@ -839,7 +944,7 @@ Chapter 3.
 
 
 
-] [59] <Figures/deltagamm.png, id=251, 1505.625pt x 961.5925pt>
+] [59] <Figures/deltagamm.png, id=257, 1505.625pt x 961.5925pt>
 File: Figures/deltagamm.png Graphic file (type png)
 
 <use Figures/deltagamm.png>
@@ -853,121 +958,82 @@ Overfull \hbox (44.63216pt too wide) in paragraph at lines 159--160
  []
 
 [65]) [66] (./code_snippets/BS_find_best.sh) [67] [68] [69]
-Overfull \hbox (28.49303pt too wide) in alignment at lines 230--237
+Overfull \hbox (28.49303pt too wide) in alignment at lines 180--187
  [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (28.49303pt too wide) in alignment at lines 237--243
+Overfull \hbox (28.49303pt too wide) in alignment at lines 187--193
  [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (28.49303pt too wide) in alignment at lines 243--264
+Overfull \hbox (28.49303pt too wide) in alignment at lines 193--214
  [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (28.49303pt too wide) in alignment at lines 264--277
+Overfull \hbox (28.49303pt too wide) in alignment at lines 214--227
  [] [] [] [] [] [] [] [] [] [] 
  []
 
-[70]
-Overfull \hbox (54.74031pt too wide) in alignment at lines 279--285
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (54.74031pt too wide) in alignment at lines 285--290
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (54.74031pt too wide) in alignment at lines 290--311
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (54.74031pt too wide) in alignment at lines 311--331
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (54.74031pt too wide) in alignment at lines 331--351
- [] [] [] [] [] 
- []
-
-[71]
-Overfull \hbox (54.74031pt too wide) in alignment at lines 351--371
- [] [] [] [] [] 
- []
-
-
-Overfull \hbox (54.74031pt too wide) in alignment at lines 371--391
- [] [] [] [] [] 
- []
-
-[72]
-Overfull \hbox (54.74031pt too wide) in alignment at lines 391--409
- [] [] [] [] [] 
- []
-
-[73] <Figures/BS_non_rel_alpha.png, id=296, 1505.625pt x 949.5475pt>
+[70] [71] [72] [73]
+<Figures/BS_non_rel_alpha.png, id=302, 1505.625pt x 949.5475pt>
 File: Figures/BS_non_rel_alpha.png Graphic file (type png)
 
 <use Figures/BS_non_rel_alpha.png>
-Package pdftex.def Info: Figures/BS_non_rel_alpha.png used on input line 419.
+Package pdftex.def Info: Figures/BS_non_rel_alpha.png used on input line 369.
 (pdftex.def)             Requested size: 469.75499pt x 296.25473pt.
 
-<Figures/BS_non_rel_beta.png, id=297, 1505.625pt x 948.54375pt>
+<Figures/BS_non_rel_beta.png, id=303, 1505.625pt x 948.54375pt>
 File: Figures/BS_non_rel_beta.png Graphic file (type png)
 
 <use Figures/BS_non_rel_beta.png>
-Package pdftex.def Info: Figures/BS_non_rel_beta.png used on input line 427.
+Package pdftex.def Info: Figures/BS_non_rel_beta.png used on input line 377.
 (pdftex.def)             Requested size: 469.75499pt x 295.94156pt.
 
-<Figures/BS_non_rel_delta.png, id=298, 1505.625pt x 957.5775pt>
+<Figures/BS_non_rel_delta.png, id=304, 1505.625pt x 957.5775pt>
 File: Figures/BS_non_rel_delta.png Graphic file (type png)
 
 <use Figures/BS_non_rel_delta.png>
-Package pdftex.def Info: Figures/BS_non_rel_delta.png used on input line 436.
+Package pdftex.def Info: Figures/BS_non_rel_delta.png used on input line 386.
 (pdftex.def)             Requested size: 230.18251pt x 146.39198pt.
 
-<Figures/BS_non_rel_gamma.png, id=299, 1505.625pt x 947.54pt>
+<Figures/BS_non_rel_gamma.png, id=305, 1505.625pt x 947.54pt>
 File: Figures/BS_non_rel_gamma.png Graphic file (type png)
 
 <use Figures/BS_non_rel_gamma.png>
-Package pdftex.def Info: Figures/BS_non_rel_gamma.png used on input line 440.
+Package pdftex.def Info: Figures/BS_non_rel_gamma.png used on input line 390.
 (pdftex.def)             Requested size: 230.18251pt x 144.85747pt.
  [74] [75 <./Figures/BS_non_rel_alpha.png (PNG copy)>] [76 <./Figures/BS_non_re
 l_beta.png (PNG copy)> <./Figures/BS_non_rel_delta.png (PNG copy)> <./Figures/B
 S_non_rel_gamma.png (PNG copy)>]
-<Figures/BS_rel_alpha.png, id=312, 1505.625pt x 961.5925pt>
+<Figures/BS_rel_alpha.png, id=317, 1505.625pt x 961.5925pt>
 File: Figures/BS_rel_alpha.png Graphic file (type png)
 
 <use Figures/BS_rel_alpha.png>
-Package pdftex.def Info: Figures/BS_rel_alpha.png used on input line 451.
+Package pdftex.def Info: Figures/BS_rel_alpha.png used on input line 401.
 (pdftex.def)             Requested size: 469.75499pt x 300.01271pt.
 
-<Figures/BS_rel_beta.png, id=313, 1505.625pt x 948.54375pt>
+<Figures/BS_rel_beta.png, id=318, 1505.625pt x 948.54375pt>
 File: Figures/BS_rel_beta.png Graphic file (type png)
 
 <use Figures/BS_rel_beta.png>
-Package pdftex.def Info: Figures/BS_rel_beta.png used on input line 459.
+Package pdftex.def Info: Figures/BS_rel_beta.png used on input line 409.
 (pdftex.def)             Requested size: 469.75499pt x 295.94156pt.
 
-<Figures/BS_rel_delta.png, id=314, 1505.625pt x 963.6pt>
+<Figures/BS_rel_delta.png, id=319, 1505.625pt x 963.6pt>
 File: Figures/BS_rel_delta.png Graphic file (type png)
 
 <use Figures/BS_rel_delta.png>
-Package pdftex.def Info: Figures/BS_rel_delta.png used on input line 468.
+Package pdftex.def Info: Figures/BS_rel_delta.png used on input line 418.
 (pdftex.def)             Requested size: 230.18251pt x 147.31268pt.
 
-<Figures/BS_rel_gamma.png, id=315, 1505.625pt x 957.5775pt>
+<Figures/BS_rel_gamma.png, id=320, 1505.625pt x 957.5775pt>
 File: Figures/BS_rel_gamma.png Graphic file (type png)
 
 <use Figures/BS_rel_gamma.png>
-Package pdftex.def Info: Figures/BS_rel_gamma.png used on input line 472.
+Package pdftex.def Info: Figures/BS_rel_gamma.png used on input line 422.
 (pdftex.def)             Requested size: 230.18251pt x 146.39198pt.
 ) [77 <./Figures/BS_rel_alpha.png (PNG copy)>]
 [78 <./Figures/BS_rel_beta.png (PNG copy)> <./Figures/BS_rel_delta.png (PNG cop
@@ -994,35 +1060,47 @@ Missing character: There is no  in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no  in font cmr12!
-) [83]
+Missing character: There is no Â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no Â in font cmr12!
+Missing character: There is no ” in font cmr12!
+) [83] [84]
 \openout2 = `appendix/app_cudaDFRATOM_inps.aux'.
 
- (./appendix/app_cudaDFRATOM_inps.tex
+
+(./appendix/app_cudaDFRATOM_inps.tex
 Appendix A.
 (./appendix/inp_out_files/82Pb_gauss_35s30p-30p+25d-25d+20f-20f+.inp)
-(./appendix/inp_out_files/82Pb_gauss_35s30p-30p+25d-25d+20f-20f+.log [84
+(./appendix/inp_out_files/82Pb_gauss_35s30p-30p+25d-25d+20f-20f+.log [85
 
 
 ]
-[85] [86] [87] [88] [89] [90] [91])
+[86] [87] [88] [89] [90] [91] [92])
 (./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+.inp)
-(./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+.log [92] [93]
-[94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106])
-(./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+_readin.inp [107]
-[108]) (./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+_readin.log
-[109] [110] [111] [112] [113] [114] [115] [116])) [117]
+(./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+.log [93] [94]
+[95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107])
+(./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+_readin.inp [108]
+[109]) (./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+_readin.log
+[110] [111] [112] [113] [114] [115] [116] [117])) [118]
 \openout2 = `appendix/app_cudaDFRATOM_suto_sub.aux'.
 
 
 (./appendix/app_cudaDFRATOM_suto_sub.tex
 Appendix B.
-(./appendix/auto_scripts/BS_sub_auto.sh [118
+(./appendix/auto_scripts/BS_sub_auto.sh [119
 
 
 
-] [119])
-(./appendix/auto_scripts/BS_get_best.sh)) [120] (./thesis.aux (./chp_intro.aux)
-(./chp_cuda_dfratom.aux) (./chp_basis_sets.aux) (./chp_con_fut.aux)
+] [120])
+(./appendix/auto_scripts/BS_get_best.sh)) [121]
+\@syc=\write6
+\openout6 = `thesis.syc'.
+
+\@suc=\write7
+\openout7 = `thesis.suc'.
+
+ (./thesis.aux (./chp_intro.aux) (./chp_cuda_dfratom.aux) (./chp_basis_sets.aux
+) (./chp_con_fut.aux)
 (./appendix/app_cudaDFRATOM_inps.aux) (./appendix/app_cudaDFRATOM_suto_sub.aux)
 )
 
@@ -1031,13 +1109,13 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred when \ifx on line 678 was incomplete) 
 Here is how much of TeX's memory you used:
- 7277 strings out of 493089
- 103863 string characters out of 6134842
- 662579 words of memory out of 5000000
- 10510 multiletter control sequences out of 15000+600000
- 18175 words of font info for 71 fonts, out of 8000000 for 9000
+ 7476 strings out of 493089
+ 106746 string characters out of 6134842
+ 665197 words of memory out of 5000000
+ 10696 multiletter control sequences out of 15000+600000
+ 20059 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,23n,49p,1883b,1564s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,23n,50p,1883b,1564s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texm
@@ -1050,21 +1128,23 @@ ist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2015/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
-amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (129 pages, 1737689 bytes).
+onts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmtt8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msbm10.pfb>
+Output written on thesis.pdf (131 pages, 1769288 bytes).
 PDF statistics:
- 531 PDF objects out of 1000 (max. 8388607)
- 352 compressed objects within 4 object streams
+ 545 PDF objects out of 1000 (max. 8388607)
+ 362 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

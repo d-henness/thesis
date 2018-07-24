@@ -1,7 +1,7 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Solving the Schr\"{o}dinger Equation}{1}
-\contentsline {section}{\numberline {1.2}Hartree-Fock}{4}
-\contentsline {subsection}{\numberline {1.2.1}Two-Electron Integrals}{6}
+\contentsline {section}{\numberline {1.2}Hartree-Fock Method}{4}
+\contentsline {subsection}{\numberline {1.2.1}Two-Electron Integrals}{5}
 \contentsline {subsection}{\numberline {1.2.2}Basis Sets}{7}
 \contentsline {subsection}{\numberline {1.2.3}Hartree-Fock SCF}{8}
 \contentsline {section}{\numberline {1.3}Special Relativity}{9}
@@ -43,8 +43,8 @@
 \contentsline {section}{\numberline {4.1}cudaDFRATOM}{79}
 \contentsline {section}{\numberline {4.2}Basis Set Optimization}{80}
 \contentsline {chapter}{Bibliography}{82}
-\contentsline {chapter}{\numberline {A}cudaDFRATOM Input and Output files}{84}
-\contentsline {section}{\numberline {A.1}Single Point Energy with predefined WTBS parameters}{84}
-\contentsline {section}{\numberline {A.2}Optimizing a Basis Set for a Specific Electron Configuration}{92}
-\contentsline {section}{\numberline {A.3}Single Point Energy using a predefined Basis Set}{107}
-\contentsline {chapter}{\numberline {B}Scripts for cudaDFRATOM}{118}
+\contentsline {chapter}{\numberline {A}cudaDFRATOM Input and Output files}{85}
+\contentsline {section}{\numberline {A.1}Single Point Energy with predefined WTBS parameters}{85}
+\contentsline {section}{\numberline {A.2}Optimizing a Basis Set for a Specific Electron Configuration}{93}
+\contentsline {section}{\numberline {A.3}Single Point Energy using a predefined Basis Set}{108}
+\contentsline {chapter}{\numberline {B}Scripts for cudaDFRATOM}{119}

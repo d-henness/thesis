@@ -41,6 +41,7 @@
 \usepackage{amsmath}
 \usepackage{listings}
 \usepackage{subcaption}
+\usepackage{listofsymbols}
 
 
 % options for listings
@@ -316,7 +317,7 @@ Canada}%
 %\TeXButton{examiners}{\examiners{J. Fraser Forbes, Martin Guay, G. Galileo }%
 %}}%
 %BeginExpansion
-\examiners{Alexander Brown, Robert Campbell}%
+\examiners{Alexander Brown, Paul Lu}%
 %
 %EndExpansion
 %
@@ -577,7 +578,15 @@ Canada}%
 %BeginExpansion
 \begin{abstract}
 
-\notetodylan{put abstract here}
+General Purpose computing with Graphics Processing Units (GPGPU) is a method of computation that allows for calculations to be performed in parallel. Graphics Processing Units (GPU) allow a single basic computer to perform as well as a super computer cluster composed of only Central Processing Units (CPU), at a fraction of the cost.  As quantum computational chemistry scales very poorly with the size of systems, the use of GPGPU has been a very effective tool for quantum chemists.
+
+This thesis presents a program called cudaDFRATOM. This program, written in CUDA Fortran, allows for the calculation and optimization of Well-Tempered Basis Sets (WTBS) at the four-component relativistic level of theory. Except for a few small initial calculations and control flow, all work is performed entirely on the GPU. 
+
+When calculating the two-electron integrals, cudaDFRATOM uses a very effective method of utilizing as much of the GPU's resources as possible and can calculate these integrals approximately 20 times faster than a similar program running on only a CPU. 
+
+Two different algorithms for forming the \textbf{P} and \textbf{Q} supermatrices are presented. The relatively small size of these matrices and the need to use double-precision floating-point operations stunts the speedup of these algorithms such that they only attain a speedup of about 2 times over the CPU program. An overall speedup of about 4 times is achieved by cudaDFRATOM.
+
+In addition, new WTBS are calculated for non-relativistic levels of theory using the rWTBS program and at the four-component relativistic level of theory using cudaDFRATOM. In both cases, a novel algorithm for automating the optimization of these basis sets was used. The algorithm finds a basis set that is as small a possible while still retaining sufficient accuracy to numerical calculations.
 
 \end{abstract}%
 %
@@ -633,7 +642,9 @@ Canada}%
 
 \begin{preface}
 
-\notetodylan{put preface here}
+This thesis is my own original work. No part of this thesis has been previously published. Experiments and code were planned, performed, and written by myself with the help of Mariusz Klobukowski.
+
+In addition, I have also worked on a project with Mariusz which is not in this thesis. The project investigated how the FHF$^{-}$ molecule behaves in a confining potential. The results were published in a paper titled ``Hydrogen bonding and autoionization in confined bifluoride system FHF$^{-}$"  in \textit{The Journal of Physics B: Atomic, Molecular and Optical Physics} vol. 50 page 155101 in the year 2017.
 
 \end{preface}
 %TCIMACRO{
@@ -643,14 +654,10 @@ Canada}%
 
 \vskip0pt plus.3fil
 \begin{center}
-\notetodylan{put dedication here}
+For Jessie, who puts up with more than she needs to
 \end{center}
 \vskip0pt plus.6fil
 
-
-%\begin{center}
-%\large To my Mum, Dad, wife, kids and my beloved country Egypt%
-%\end{center}
 %
 %EndExpansion
 %
@@ -701,7 +708,17 @@ Canada}%
 %}}%
 %BeginExpansion
 \begin{acknowledgements}
-\notetodylan{Put acknowledgements here} 
+
+I would first like to acknowledge my supervisor, Mariusz Klobukowski. Few grad students are lucky enough to have a mentor who is as kind, helpful, and a source of as much interesting conversation as he. I would not have as easily discovered my love of programming if it weren't for him, and for that I am truly grateful. He dealt with my \ldots{} sporadic writing schedule with the patience and grace of a saint which made this whole process of writing a thesis that much more bearable. I really cannot say enough how much his guidance has meant to me.
+
+I would like to thank one of my course instructors, Paul Lu. He took a chance with me when no one else would and gave me the opportunity to more fully explore my computational potential. I don't think I could have made it without his help, so again, thank you. 
+
+I would also like to thank my friends and family. As much as I love it, the science can't be the reason to wake up \textit{every} morning, so thank you to those who helped keep my spirits up, especially when it seemed like I would be writing this forever.
+
+I should also thank the money. The work in this thesis could not have happened without the funding from NSERC and FGSR, and without the computer resources of WestGrid and Compute Canada.
+
+Finally, I would like to thank my girlfriend Jessie Hartmann. We've been through Hell and back together, and there is no one else I would have rather had at my side than her. For some reason, she continues to love me, even as a make her watch a video on sorting algorithms for the tenth time, so for you Jessie I give my appreciation, affection, and love.
+
 \end{acknowledgements}
 %
 %EndExpansion
@@ -755,7 +772,45 @@ Canada}%
 \tableofcontents
 \listoftables
 \listoffigures
-
+\newpage
+\listofsymbols
+%horrible way of doing this, but a this point also the easiest
+Some symbols are reused. The exact meaning will need to obtained from context.
+\begin{table}[h!]
+\begin{tabular}{ll}
+\toprule
+Symbol			&	Description 					\\
+\midrule
+$\hat{H}$				&	Hamiltonian operator				\\
+$\Psi$				&	Wavefunction					\\
+$E$					&	Energy						\\
+$\nabla$				&	Gradient of a function			\\
+$\hat{H}_{el}$			&	Electronic Hamiltonian operator		\\
+$a_{o}$				&	Bohr radius					\\
+$\psi$				&	Spin orbital					\\
+$\phi$				&	Orbital						\\
+$\alpha$				&	Spin function, four-component matrix, Gaussian nuclei exponent, \\
+					&	well-tempered basis set parameter		\\
+$\beta$				&	Spin function, four-component matrix, well-tempered basis set parameter	\\
+$\omega$				&	Spin coordinate					\\
+$\epsilon$				&	Vector of spin orbital energies		\\
+$\Phi$				&	Basis function					\\
+$\zeta$				&	Basis function exponent 			\\
+$\lambda$				&	Orbital symmetry				\\
+$\mu$				&	Orbital symmetry				\\
+$c$					&	Speed of light					\\
+$m_{0}$				&	Mass of object at rest			\\
+$\hbar$				&	Reduced Planck's constant		\\
+$q$					&	Particle charge					\\
+$\hat{A}, \hat{\varphi}$	&	Electromagnetic field potentials 	\\
+${\bf\psi}$				&	Large component spinor			\\	
+${\bf\phi}$				&	Large component spinor			\\	
+$\epsilon_{0}$			&	Permittivity of free space			\\
+$\delta$				&	Well-tempered basis set parameter	\\
+$\gamma$			&	Well-tempered basis set parameter	\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 %\newacronym{gtp}{GTP}{Guanosine Triphosphate}
 %\newacronym{gdp}{GDP}{Guanosine Diphosphate}
@@ -831,7 +886,6 @@ Canada}%
 %generates lists of tables, figures and the table of contents
 
 \bodyoftext
-
 \include{chp_intro}
 \include{chp_cuda_dfratom}
 \include{chp_basis_sets}

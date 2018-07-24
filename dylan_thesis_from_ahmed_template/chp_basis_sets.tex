@@ -57,7 +57,7 @@ We decided to use a somewhat novel method of generating our basis sets. We begin
 
 This procedure is perhaps a bit clunky, so let us work through an example using Ne. Ne has both s and p type orbitals, and so will our basis set. We might initially guess that no more than 26 functions per symmetry will enough to get the accuracy we want, so we start with a basis set of size s(1:26)p(1:26). We then optimize the $\alpha$, $\beta$, $\delta$, and $\gamma$ parameters for a basis set of this size. We make sure that the energy using a basis set of this size produces results that are accurate enough, and then we begin to reduce the size of the basis set for the p space. We carry over the WTBS parameters optimized in the last step, and generate input files corresponding to basis sets of size s(1:26)p(1:15) to s(1:26)p(1:26) (12 calculations in total) to determine the minimum number of tight functions we will need to accurately describe the p orbitals. After reoptimizing the WTBS parameters, we find that while s(1:26)p(1:15) is too small to be accurate enough, s(1:26)p(1:16) is still inside the threshold we want. So, we take the WTBS parameters from this calculation, and use them to generate new basis sets ranging in size from s(1:16)p(1:16) to s(1:26)p(1:16) (so we are trying to eliminate contracted functions from the s orbitals). Here we find that s(1:23)p(1:16) is the smallest basis set we can use. Now, we want to eliminate diffuse functions. Carrying over the WTBS parameter from the last acceptable basis set, we generate basis sets of size s(1:23)p(1:16) to s(1:23)p(5:16). We find that trying to remove any more functions makes the basis set unacceptable so we keep the s(1:23)p(1:16) basis set. We could try to remove diffuse functions from the s symmetry, but experience teaches that the s space needs all the functions to be accurate, so we don't bother.
 
-This process has a major drawback in that it requires a lot of computer power to run efficiently. But this is not really a problem if access to large computer clusters is available. Additionally, considering that calculations for the chain 1-8 can be run in parallel for different atoms, this optimization process is trivially parallel. The advantages of this process are twofold: it finds a very small basis set that is still accurate and it is completely automatable. If there are no problems with individual calculations not converging, the output files never even need to be manually (and intellectually) examined! We generated non-relativistic basis sets for elements 2-86 using the rwtbs program\citethis and relativistic basis sets for elements 55-86 using the cudaDFRATOM program which is outlined in detail in Chapter \ref{chp:cuda_dfratom}.
+This process has a major drawback in that it requires a lot of computer power to run efficiently. But this is not really a problem if access to large computer clusters is available. Additionally, considering that calculations for the chain 1-8 can be run in parallel for different atoms, this optimization process is trivially parallel. The advantages of this process are twofold: it finds a very small basis set that is still accurate and it is completely automatable. If there are no problems with individual calculations not converging, the output files never even need to be manually (and intellectually) examined! We generated non-relativistic basis sets for elements 2-86 using the rWTBS program\cite{WTBS, WTBS2, WTBS3, WTBS4, WTBS5, WTBS6} and relativistic basis sets for elements 55-86 using the cudaDFRATOM program which is outlined in detail in Chapter \ref{chp:cuda_dfratom}.
 
 \subsection{Automating Optimization}
 Automating the optimization process was quite simple. I did this by writing two scripts: BS\_sub\_auto\_rwtbs.sh and BS\_find\_best\_rwtbs.sh. The code for BS\_sub\_auto.sh is given here
@@ -77,7 +77,7 @@ This script takes in one argument, the relative error we are looking for in a ca
 The optimized non-relativistic WTBS parameters and basis set sizes for elements 2-86 are shown in Table \ref{tab:BStab}. Relativistic WTBS parameters for elements 55-86 are shown in Table \ref{tab:BStab_rel}. Table \ref{tab:BStab_with_refs} gives the energies calculated with these basis sets compared to their literature values.
 
 \begin{longtable}{l l r r r r r r r r}
-\caption[Basis sets optimized using rwtbs]{Basis sets optimized using rwtbs. We did not have literature data for some elements. These elements are marked with a *. The size of the basis set for these elements was determined by using the size of the nearest elements. \notetodylan{include refs for lit data}}\label{tab:BStab} \\
+\caption[Basis sets optimized using rWTBS]{Basis sets optimized using rWTBS. We did not have literature data for some elements. These elements are marked with a *. The size of the basis set for these elements was determined by using the size of the nearest elements.}\label{tab:BStab} \\
 \toprule
 	Element	&	Term		&	$\alpha$	&	$\beta$	&	$\delta$	&	$\gamma$	&	s	&	p	&	d	&	f	\\
 			&	Symbol	&			&			&			&				&		&		&		&		\\
@@ -177,56 +177,6 @@ The optimized non-relativistic WTBS parameters and basis set sizes for elements 
 \bottomrule  	
 \end{longtable}  	
   	
-% just in case I need this  	
-%\begin{longtable}{l l r r r r r   	r r r}
-%\caption[Basis sets optimiz  	ed using cudaDFRATOM]{Basis sets optimized using cudaDFRATOM}
-%\label{tab:BStab_rel} \\  	
-%\toprule  	
-%	Element	&	Electro  	n		&	$\alpha$	&	$\beta$	&	$\delta$	&	$\gamma$	&	s	&	p	&	d	&	f	\\
-%			&	Configu  	ration	&			&			&			&				&		&		&		&		\\
-%\midrule  	
-%\endfirsthead  	
-%\caption[]{(continued)}\\
-%\toprule
-%	Element	&	Electron		&	$\alpha$	&	$\beta$	&	$\delta$	&	$\gamma$	&	s	&	p	&	d	&	f	\\
-%			&	Configuration	&			&			&			&				&		&		&		&		\\
-%\midrule
-%\endhead
-%55 Cs		&	[Xe] 6s$^{1}$	&	1.8249211E-02	&	1.9216555E+00	&	6.0853905E+00	&	1.0629084E+00	&	\\
-%56 Ba		&	[Xe] 6s$^{2}$	&	2.0331981E-02	&	1.9040982E+00	&	5.4732927E+00	&	1.1616445E+00	&	\\
-%57 La		&	[Ba] 4f$^{1}$	&	1.5401100E-02	&	1.8711630E+00	&	5.1664517E+00	&	2.0368799E+00	&	\\
-%58 Ce		&	[Ba] 4f$^{2}$	&	1.8388352E-02	&	1.8572055E+00	&	4.9690044E+00	&	1.4504645E+00	&	\\
-%59 Pr		&	[Ba] 4f$^{3}$	&	1.9453737E-02	&	1.8578241E+00	&	4.9471334E+00	&	1.4389341E+00	&	\\
-%60 Nd		&	[Ba] 4f$^{4}$	&	2.0432280E-02	&	1.8591058E+00	&	4.9281668E+00	&	1.4227741E+00	&	\\
-%61 Pm		&	[Ba] 4f$^{5}$	&	2.1420469E-02	&	1.8605374E+00	&	4.9067912E+00	&	1.4056859E+00	&	\\
-%62 Sm		&	[Ba] 4f$^{6}$	&	2.4146170E-02	&	1.8566294E+00	&	4.8544693E+00	&	1.3796056E+00	&	\\
-%63 Eu		&	[Ba] 4f$^{7}$	&	1.9935404E-02	&	1.8779255E+00	&	5.0999491E+00	&	1.0203099E+00	&	\\
-%64 Gd		&	[Ba] 4f$^{8}$	&	2.0630976E-02	&	1.8804903E+00	&	5.0649514E+00	&	0.9960273E-01		&	\\
-%65 Td		&	[Ba] 4f$^{9}$	&	2.3967390E-02	&	1.8697625E+00	&	4.8401175E+00	&	0.9679685E-01		&	\\
-%66 Dy		&	[Ba] 4f$^{10}$	&	2.1771432E-02	&	1.8886270E+00	&	5.3534407E+00	&	0.8398667E-01		&	\\
-%67 Ho		&	[Ba] 4f$^{11}$	&	2.5175727E-02	&	1.8785760E+00	&	5.1262047E+00	&	0.8167072E-01		&	\\
-%68 Er		&	[Ba] 4f$^{12}$	&	2.8115298E-02	&	1.8754779E+00	&	5.1453409E+00	&	1.0457308E+00	&	\\
-%69 Tm		&	[Ba] 4f$^{13}$	&	2.6281632E-02	&	1.8874734E+00	&	5.4806247E+00	&	0.8869454E-01		&	\\
-%70 Yb		&	[Ba] 4f$^{14}$	&	2.9189218E-02	&	1.8838514E+00	&	5.4909377E+00	&	0.8733322E-01		&	\\
-%71 Lu		&	[Yb] 5d$^{1}$	&	3.4242485E-02	&	1.8733425E+00	&	5.1249307E+00	&	1.3538764E+00	&	\\
-%72 Hf		&	[Yb] 5d$^{2}$	&	3.9822870E-02	&	1.9003862E+00	&	6.1178564E+00	&	1.4733032E+00	&	\\
-%73 Ta		&	[Yb] 5d$^{3}$	&	4.2719873E-02	&	1.8998226E+00	&	6.1261899E+00	&	1.4504439E+00	&	\\
-%74 W			&	[Yb] 5d$^{4}$	&	4.5644839E-02	&	1.9017019E+00	&	5.9366446E+00	&	1.3510346E+00	&	\\
-%75 Re		&	[Yb] 5d$^{5}$	&	4.8274427E-02	&	1.9002753E+00	&	5.8987740E+00	&	1.3232634E+00	&	\\
-%76 Os		&	[Yb] 5d$^{6}$	&	5.0819753E-02	&	1.8991745E+00	&	5.8735732E+00	&	1.2968501E+00	&	\\
-%77 Ir		 	&	[Yb] 5d$^{7}$	&	5.3334498E-02	&	1.8983266E+00	&	5.8460464E+00	&	1.2745694E+00	&	\\
-%78 Pt		 	&	[Yb] 5d$^{8}$	&	5.3913420E-02	&	1.8927594E+00	&	6.0588391E+00	&	1.3650209E+00	&	\\
-%79 Au		&	[Yb] 5d$^{9}$	&	5.6844748E-02	&	1.8931382E+00	&	6.1117360E+00		&	1.3543426E+00	&	\\
-%80 Hg	 	&	[Yb] 5d$^{10}$	&	5.9658473E-02	&	1.8930108E+00	&	6.1563586E+00	&	1.3421336E+00	&	\\
-%81 Tl		 	&	[Hg] 6p$^{1}$	&	4.0719425E-02	&	1.8756278E+00	&	5.1618799E+00	&	0.9440672E-01		&	\\
-%82 Pb		&	[Hg] 6p$^{2}$	&	4.3648962E-02	&	1.8692790E+00	&	5.0159316E+00	&	0.9259884E-01		&	\\
-%83 Bi		 	&	[Hg] 6p$^{3}$	&	5.1099018E-02	&	1.8547621E+00	&	3.9536416E+00	&	0.7926030E-01		&	\\
-%84 Po		&	[Hg] 6p$^{4}$	&	5.4394469E-02	&	1.8495247E+00	&	4.6665694E+00	&	0.8907797E-01		&	\\
-%85 At		 	&	[Hg] 6p$^{5}$	&	6.1773332E-02	&	1.8928041E+00	&	1.2238998E+01	&	1.5006772E+00	&	\\
-%86 Rn	 	&	[Hg] 6p$^{6}$	&	6.6718693E-02	&	1.8318575E+00	&	3.9063596E+00	&	0.8671602E-01		&	\\
-%\bottomrule
-%\end{longtable}
-
 \begin{longtable}{l l r r r r r r r r}
 \caption[Basis sets optimized using cudaDFRATOM]{Basis sets optimized using cudaDFRATOM}
 \label{tab:BStab_rel} \\
@@ -277,134 +227,134 @@ The optimized non-relativistic WTBS parameters and basis set sizes for elements 
 \end{longtable}
 
 \begin{longtable}{l r r r r}
-\caption[Energies produced from basis sets in Tables \ref{tab:BStab} and \ref{tab:BStab_rel}]{Energies produced from basis sets in Tables \ref{tab:BStab} and \ref{tab:BStab_rel}. Relativistic basis sets are labeled with $^{r}$. All energies are in Hartree.}\label{tab:BStab_with_refs} \\
+\caption[Energies produced from basis sets in Tables \ref{tab:BStab} and \ref{tab:BStab_rel}]{Energies produced from basis sets in Tables \ref{tab:BStab} and \ref{tab:BStab_rel}. Relativistic basis sets are labeled with $^{r}$. All energies are in Hartree. Non-relativisic data comes from \cite{non_rel_lit_data}. Relativistic data comes from \cite{VISSCHER1997207}.}\label{tab:BStab_with_refs} \\
 \toprule
-	Element	&	Calculated Energy		&	Literature Energy	&	Absolute Error	&	Relative Error	\\
+	Element	  &	Calculated Energy		&	Literature Energy	&	Absolute Error	        &	Relative Error	        \\
 			
 \midrule
 \endfirsthead
 \caption[]{(continued)}\\
 \toprule
-	Element	&	Calculated Energy		&	Literature Energy	&	Absolute Error	&	Relative Error	\\
+	Element	  &	Calculated Energy   &	Literature Energy &   Absolute Error        &   Relative Error	      \\
 \midrule
 \endhead
-02he & -2.8616800 & -2.8616800 & 0.000000 & 3.6D-09 \\
-03li & -7.4327269 & -7.4327269 & 0.000000 & 2.9D-09 \\
-04be & -14.5730231 & -14.5730232 & 0.000000 & 3.2D-09 \\
-05b & -24.5290606 & -24.5290607 & 0.000000 & 4.8D-09 \\
-06c & -37.6886188 & -37.6886190 & 0.000000 & 4.1D-09 \\
-07n & -54.4009341 & -54.4009342 & 0.000000 & 2.8D-09 \\
-08o & -74.8093982 & -74.8093985 & 0.000000 & 3.4D-09 \\
-09f & -99.4093490 & -99.4093494 & 0.000000 & 4.0D-09 \\
-10ne & -128.5470975 & -128.5470981 & 0.000001 & 4.4D-09 \\
-11na & -161.8589109 & -161.8589116 & 0.000001 & 4.4D-09 \\
-12mg & -199.6146356 & -199.6146364 & 0.000001 & 3.9D-09 \\
-13al & -241.8767066 & -241.8767073 & 0.000001 & 2.8D-09 \\
-14si & -288.8543612 & -288.8543625 & 0.000001 & 4.6D-09 \\
-15p & -340.7187795 & -340.7187810 & 0.000001 & 4.3D-09 \\
-16s & -397.5048941 & -397.5048959 & 0.000002 & 4.5D-09 \\
-17cl & -459.4820703 & -459.4820724 & 0.000002 & 4.6D-09 \\
-18ar & -526.8175104 & -526.8175128 & 0.000002 & 4.5D-09 \\
-19k & -599.1647840 & -599.1647868 & 0.000003 & 4.6D-09 \\
-20ca & -676.7581833 & -676.7581859 & 0.000003 & 3.8D-09 \\
-21sc & -759.7357147 & -759.7357180 & 0.000003 & 4.3D-09 \\
-22ti & -848.4059928 & -848.4059970 & 0.000004 & 4.9D-09 \\
-23v & -942.8843336 & -942.8843377 & 0.000004 & 4.4D-09 \\
-24cr & -1043.3563717 & -1043.3563760 & 0.000004 & 4.1D-09 \\
-25mn & -1149.8662465 & -1149.8662520 & 0.000006 & 4.8D-09 \\
-26fe & -1262.4436593 & -1262.4436650 & 0.000006 & 4.5D-09 \\
-27co & -1381.4145466 & -1381.4145530 & 0.000006 & 4.6D-09 \\
-28ni & -1506.8709008 & -1506.8709080 & 0.000007 & 4.8D-09 \\
-29cu & -1638.9637365 & -1638.9637420 & 0.000006 & 3.4D-09 \\
-30zn & -1777.8481075 & -1777.8481160 & 0.000009 & 4.8D-09 \\
-31ga & -1923.2610014 & -1923.2610100 & 0.000009 & 4.5D-09 \\
-32ge & -2075.3597271 & -2075.3597340 & 0.000007 & 3.3D-09 \\
-33as & -2234.2386432 & -2234.2386540 & 0.000011 & 4.8D-09 \\
-34se & -2399.8676013 & -2399.8676120 & 0.000011 & 4.4D-09 \\
-35br & -2572.4413206 & -2572.4413330 & 0.000012 & 4.8D-09 \\
-36kr & -2752.0549641 & -2752.0549770 & 0.000013 & 4.7D-09 \\
-37rb & -2938.3574402 & -2938.3574540 & 0.000014 & 4.7D-09 \\
-38sr & -3131.5456722 & -3131.5456860 & 0.000014 & 4.4D-09 \\
-39y & -3331.6841552 & -3331.6841700 & 0.000015 & 4.4D-09 \\
-40zr & -3538.9950493 & -3538.9950650 & 0.000016 & 4.4D-09 \\
-41nb & -3753.5977117 & -3753.5977280 & 0.000016 & 4.3D-09 \\
-42mo & -3975.5494822 & -3975.5495000 & 0.000018 & 4.5D-09 \\
-43tc & -4204.7887172 & -4204.7887370 & 0.000020 & 4.7D-09 \\
-44ru & -4441.5394682 & -4441.5394880 & 0.000020 & 4.5D-09 \\
-45rh & -4685.8816816 & -4685.8817040 & 0.000022 & 4.8D-09 \\
-46pd & -4937.9210001 & -4937.9210240 & 0.000024 & 4.8D-09 \\
-47ag & -5197.6984507 & -5197.6984730 & 0.000022 & 4.3D-09 \\
-48cd & -5465.1331202 & -5465.1331430 & 0.000023 & 4.2D-09 \\
-49in & -5740.1691296 & -5740.1691560 & 0.000026 & 4.6D-09 \\
-50sn & -6022.9316716 & -6022.9316950 & 0.000023 & 3.9D-09 \\
-51sb & -6313.4852929 & -6313.4853210 & 0.000028 & 4.4D-09 \\
-52te & -6611.7840274 & -6611.7840590 & 0.000032 & 4.8D-09 \\
-53i & -6917.9808644 & -6917.9808960 & 0.000032 & 4.6D-09 \\
-54xe & -7232.1383330 & -7232.1383640 & 0.000031 & 4.3D-09 \\
-55cs & -7553.9336309 & -7553.9336580 & 0.000027 & 3.6D-09 \\
-56ba & -7883.5437885 & -7883.5438270 & 0.000039 & 4.9D-09 \\
-57la & -8221.0666632 & -8221.0667030 & 0.000040 & 4.8D-09 \\
-58ce & -8566.9195397 & -8566.9280000 & 0.008460 & 9.9D-07 \\
-59pr & -8921.1809840 & -8921.1810280 & 0.000044 & 4.9D-09 \\
-60nd & -9283.8829009 & -9283.8829450 & 0.000044 & 4.8D-09 \\
-61pm & -9655.0989235 & -9655.0989690 & 0.000046 & 4.7D-09 \\
-62sm & -10034.9525063 & -10034.9525500 & 0.000044 & 4.4D-09 \\
-63eu & -10423.5429709 & -10423.5430200 & 0.000049 & 4.7D-09 \\
-64gd & -10820.6172839 & -10820.6300000 & 0.012716 & 1.2D-06 \\
-65tb & -11226.5683349 & -11226.5800000 & 0.011665 & 1.0D-06 \\
-66dy & -11641.4525487 & -11641.4526000 & 0.000051 & 4.4D-09 \\
-67ho & -12065.2897614 & -12065.3000000 & 0.010239 & 8.5D-07 \\
-68er & -12498.1527199 & -12498.1527800 & 0.000060 & 4.8D-09 \\
-69tm & -12940.1743374 & -12940.1744000 & 0.000063 & 4.8D-09 \\
-70yb & -13391.4561218 & -13391.4600000 & 0.003878 & 2.9D-07 \\
-71lu & -13851.8079351 & -13851.8080000 & 0.000065 & 4.7D-09 \\
-72hf & -14321.2497408 & -14321.2498100 & 0.000069 & 4.8D-09 \\
-73ta & -14799.8125279 & -14799.8126000 & 0.000072 & 4.9D-09 \\
-74w & -15287.5462959 & -15287.5463700 & 0.000074 & 4.8D-09 \\
-75re & -15784.5331128 & -15784.5331900 & 0.000077 & 4.9D-09 \\
-76os & -16290.6485192 & -16290.6486000 & 0.000081 & 5.0D-09 \\
-77ir & -16806.1130661 & -16806.1131500 & 0.000084 & 5.0D-09 \\
-78pt & -17331.0698734 & -17331.0699600 & 0.000087 & 5.0D-09 \\
-79au & -17865.3999926 & -17865.4000800 & 0.000087 & 4.9D-09 \\
-80hg & -18408.9913975 & -18408.9914900 & 0.000093 & 5.0D-09 \\
-81tl & -18961.8247335 & -18961.8248200 & 0.000086 & 4.6D-09 \\
-82pb & -19524.0079434 & -19524.0080400 & 0.000097 & 4.9D-09 \\
-83bi & -20095.5863304 & -20095.5864300 & 0.000100 & 5.0D-09 \\
-84po & -20676.5008149 & -20676.5009100 & 0.000095 & 4.6D-09 \\
-85at & -21266.8816153 & -21266.8817100 & 0.000095 & 4.5D-09 \\
-86rn & -21866.7721458 & -21866.7722400 & 0.000094 & 4.3D-09 \\
-55Cs$^{r}$ & -7.7867713086383210E+03 & -7.7867716683330000E+03 & 3.60E-04 & 4.62E-08 \\
-56Ba$^{r}$ & -8.1356446287972267E+03 & -8.1356450111889999E+03 & 3.82E-04 & 4.70E-08 \\
-57La$^{r}$ & -8.4935431621724547E+03 & -8.4935435772670007E+03 & 4.15E-04 & 4.89E-08 \\
-58Ce$^{r}$ & -8.8609972911519108E+03 & -8.8609976963370009E+03 & 4.05E-04 & 4.57E-08 \\
-59Pr$^{r}$ & -9.2381480945133153E+03 & -9.2381485273580001E+03 & 4.33E-04 & 4.69E-08 \\
-60Nd$^{r}$ & -9.6251314021401740E+03 & -9.6251318665140006E+03 & 4.64E-04 & 4.82E-08 \\
-61Pm$^{r}$ & -1.0022094858563170E+04 & -1.0022095359150000E+04 & 5.01E-04 & 4.99E-08 \\
-62Sm$^{r}$ & -1.0429162610028317E+04 & -1.0429163113990000E+04 & 5.04E-04 & 4.83E-08 \\
-63Eu$^{r}$ & -1.0846504596042865E+04 & -1.0846505076449999E+04 & 4.80E-04 & 4.43E-08 \\
-64Gd$^{r}$ & -1.1274242333341021E+04 & -1.1274242864620001E+04 & 5.31E-04 & 4.71E-08 \\
-65Td$^{r}$ & -1.1712544794787165E+04 & -1.1712545308250001E+04 & 5.13E-04 & 4.38E-08 \\
-66Dy$^{r}$ & -1.2161545173435634E+04 & -1.2161545777670000E+04 & 6.04E-04 & 4.97E-08 \\
-67Ho$^{r}$ & -1.2621412752540933E+04 & -1.2621413334220000E+04 & 5.82E-04 & 4.61E-08 \\
-68Er$^{r}$ & -1.3092269886049820E+04 & -1.3092270535180000E+04 & 6.49E-04 & 4.96E-08 \\
-69Tm$^{r}$ & -1.3574316406241513E+04 & -1.3574317065750000E+04 & 6.60E-04 & 4.86E-08 \\
-70Yb$^{r}$ & -1.4067676599887684E+04 & -1.4067677259599999E+04 & 6.60E-04 & 4.69E-08 \\
-71Lu$^{r}$ & -1.4572532526894645E+04 & -1.4572533252740001E+04 & 7.26E-04 & 4.98E-08 \\
-72Hf$^{r}$ & -1.5088785863008496E+04 & -1.5088786607230000E+04 & 7.44E-04 & 4.93E-08 \\
-73Ta$^{r}$ & -1.5616630036738923E+04 & -1.5616630785040001E+04 & 7.48E-04 & 4.79E-08 \\
-74W$^{r}$ & -1.6156184606301416E+04 & -1.6156185412200000E+04 & 8.06E-04 & 4.99E-08 \\
-75Re$^{r}$ & -1.6707619304342632E+04 & -1.6707620131740001E+04 & 8.27E-04 & 4.95E-08 \\
-76Os$^{r}$ & -1.7271081592960112E+04 & -1.7271082448590001E+04 & 8.56E-04 & 4.95E-08 \\
-77Ir$^{r}$ & -1.7846787859713084E+04 & -1.7846788750579999E+04 & 8.91E-04 & 4.99E-08 \\
-78Pt$^{r}$ & -1.8434873521918991E+04 & -1.8434874439190000E+04 & 9.17E-04 & 4.98E-08 \\
-79Au$^{r}$ & -1.9035525741099074E+04 & -1.9035526682780001E+04 & 9.42E-04 & 4.95E-08 \\
-80Hg$^{r}$ & -1.9648895182245171E+04 & -1.9648896156370000E+04 & 9.74E-04 & 4.96E-08 \\
-81Tl$^{r}$ & -2.0274849656905419E+04 & -2.0274850644279999E+04 & 9.87E-04 & 4.87E-08 \\
-82Pb$^{r}$ & -2.0913713343270552E+04 & -2.0913714331849998E+04 & 9.89E-04 & 4.73E-08 \\
-83Bi$^{r}$ & -2.1565705009928595E+04 & -2.1565706079680000E+04 & 1.07E-03 & 4.96E-08 \\
-84Po$^{r}$ & -2.2231012258953873E+04 & -2.2231013178779998E+04 & 9.20E-04 & 4.14E-08 \\
-85At$^{r}$ & -2.2909806748056904E+04 & -2.2909807616009999E+04 & 8.68E-04 & 3.79E-08 \\
-86Rn$^{r}$ & -2.3602103092622747E+04 & -2.3602104245539998E+04 & 1.15E-03 & 4.88E-08 \\
+02 He       &       -2.861        &     -2.861        &   $>1\times10^{-6}$     &   $3.6\times10^{-9}$    \\
+03 Li       &       -7.432        &     -7.432        &   $>1\times10^{-6}$     &   $2.9\times10^{-9}$    \\
+04 Be       &      -14.573        &    -14.573        &   $>1\times10^{-6}$     &   $3.2\times10^{-9}$    \\
+05 B        &      -24.529        &    -24.529        &   $>1\times10^{-6}$     &   $4.8\times10^{-9}$    \\
+06 C        &      -37.688        &    -37.688        &   $>1\times10^{-6}$     &   $4.1\times10^{-9}$    \\
+07 N        &      -54.400        &    -54.400        &   $>1\times10^{-6}$     &   $2.8\times10^{-9}$    \\
+08 O        &      -74.809        &    -74.809        &   $>1\times10^{-6}$     &   $3.4\times10^{-9}$    \\
+09 F        &      -99.409        &    -99.409        &   $>1\times10^{-6}$     &   $4.0\times10^{-9}$    \\
+10 Ne       &     -128.547        &   -128.547        &   $1\times10^{-6}$      &   $4.4\times10^{-9}$    \\
+11 Na       &     -161.858        &   -161.858        &   $1\times10^{-6}$      &   $4.4\times10^{-9}$    \\
+12 Mg       &     -199.614        &   -199.614        &   $1\times10^{-6}$      &   $3.9\times10^{-9}$    \\
+13 Al       &     -241.876        &   -241.876        &   $1\times10^{-6}$      &   $2.8\times10^{-9}$    \\
+14 Si       &     -288.854        &   -288.854        &   $1\times10^{-6}$      &   $4.6\times10^{-9}$    \\
+15 P        &     -340.718        &   -340.718        &   $1\times10^{-6}$      &   $4.3\times10^{-9}$    \\
+16 S        &     -397.504        &   -397.504        &   $2\times10^{-6}$      &   $4.5\times10^{-9}$    \\
+17 Cl       &     -459.482        &   -459.482        &   $2\times10^{-6}$      &   $4.6\times10^{-9}$    \\
+18 Ar       &     -526.817        &   -526.817        &   $2\times10^{-6}$      &   $4.5\times10^{-9}$    \\
+19 K        &     -599.164        &   -599.164        &   $3\times10^{-6}$      &   $4.6\times10^{-9}$    \\
+20 Ca       &     -676.758        &   -676.758        &   $3\times10^{-6}$      &   $3.8\times10^{-9}$    \\
+21 Sc       &     -759.735        &   -759.735        &   $3\times10^{-6}$      &   $4.3\times10^{-9}$    \\
+22 Ti       &     -848.405        &   -848.405        &   $4\times10^{-6}$      &   $4.9\times10^{-9}$    \\
+23 V        &     -942.884        &   -942.884        &   $4\times10^{-6}$      &   $4.4\times10^{-9}$    \\
+24 Cr       &    -1043.356        &  -1043.356        &   $4\times10^{-6}$      &   $4.1\times10^{-9}$    \\
+25 Mn       &    -1149.866        &  -1149.866        &   $6\times10^{-6}$      &   $4.8\times10^{-9}$    \\
+26 Fe       &    -1262.443        &  -1262.443        &   $6\times10^{-6}$      &   $4.5\times10^{-9}$    \\
+27 Co       &    -1381.414        &  -1381.414        &   $6\times10^{-6}$      &   $4.6\times10^{-9}$    \\
+28 Ni       &    -1506.870        &  -1506.870        &   $7\times10^{-6}$      &   $4.8\times10^{-9}$    \\
+29 Cu       &    -1638.963        &  -1638.963        &   $6\times10^{-6}$      &   $3.4\times10^{-9}$    \\
+30 Zn       &    -1777.848        &  -1777.848        &   $9\times10^{-6}$      &   $4.8\times10^{-9}$    \\
+31 Ga       &    -1923.261        &  -1923.261        &   $9\times10^{-6}$      &   $4.5\times10^{-9}$    \\
+32 Ge       &    -2075.359        &  -2075.359        &   $7\times10^{-6}$      &   $3.3\times10^{-9}$    \\
+33 As       &    -2234.238        &  -2234.238        &   $1\times10^{-5}$      &   $4.8\times10^{-9}$    \\
+34 Se       &    -2399.867        &  -2399.867        &   $1\times10^{-5}$      &   $4.4\times10^{-9}$    \\
+35 Br       &    -2572.441        &  -2572.441        &   $1\times10^{-5}$      &   $4.8\times10^{-9}$    \\
+36 Kr       &    -2752.054        &  -2752.054        &   $1\times10^{-5}$      &   $4.7\times10^{-9}$    \\
+37 Rb       &    -2938.357        &  -2938.357        &   $1\times10^{-5}$      &   $4.7\times10^{-9}$    \\
+38 Sr       &    -3131.545        &  -3131.545        &   $1\times10^{-5}$      &   $4.4\times10^{-9}$    \\
+39 Y        &    -3331.684        &  -3331.684        &   $1\times10^{-5}$      &   $4.4\times10^{-9}$    \\
+40 Zr       &    -3538.995        &  -3538.995        &   $1\times10^{-5}$      &   $4.4\times10^{-9}$    \\
+41 Nb       &    -3753.597        &  -3753.597        &   $1\times10^{-5}$      &   $4.3\times10^{-9}$    \\
+42 Mo       &    -3975.549        &  -3975.549        &   $1\times10^{-5}$      &   $4.5\times10^{-9}$    \\
+43 Tc       &    -4204.788        &  -4204.788        &   $2\times10^{-5}$      &   $4.7\times10^{-9}$    \\
+44 Ru       &    -4441.539        &  -4441.539        &   $2\times10^{-5}$      &   $4.5\times10^{-9}$    \\
+45 Rh       &    -4685.881        &  -4685.881        &   $2\times10^{-5}$      &   $4.8\times10^{-9}$    \\
+46 Pd       &    -4937.921        &  -4937.921        &   $2\times10^{-5}$      &   $4.8\times10^{-9}$    \\
+47 Ag       &    -5197.698        &  -5197.698        &   $2\times10^{-5}$      &   $4.3\times10^{-9}$    \\
+48 Cd       &    -5465.133        &  -5465.133        &   $2\times10^{-5}$      &   $4.2\times10^{-9}$    \\
+49 In       &    -5740.169        &  -5740.169        &   $2\times10^{-5}$      &   $4.6\times10^{-9}$    \\
+50 Sn       &    -6022.931        &  -6022.931        &   $2\times10^{-5}$      &   $3.9\times10^{-9}$    \\
+51 Sb       &    -6313.485        &  -6313.485        &   $2\times10^{-5}$      &   $4.4\times10^{-9}$    \\
+52 Te       &    -6611.784        &  -6611.784        &   $3\times10^{-5}$      &   $4.8\times10^{-9}$    \\
+53 I        &    -6917.980        &  -6917.980        &   $3\times10^{-5}$      &   $4.6\times10^{-9}$    \\
+54 Xe       &    -7232.138        &  -7232.138        &   $3\times10^{-5}$      &   $4.3\times10^{-9}$    \\
+55 Cs       &    -7553.933        &  -7553.933        &   $2\times10^{-5}$      &   $3.6\times10^{-9}$    \\
+56 Ba       &    -7883.543        &  -7883.543        &   $3\times10^{-5}$      &   $4.9\times10^{-9}$    \\
+57 La       &    -8221.066        &  -8221.066        &   $4\times10^{-5}$      &   $4.8\times10^{-9}$    \\
+58 Ce       &    -8566.919        &  -                &    -                    &    -                    \\
+59 Pr       &    -8921.180        &  -8921.181        &   $4\times10^{-5}$      &   $4.9\times10^{-9}$   \\
+60 Nd       &    -9283.882        &  -9283.882        &   $4\times10^{-5}$      &   $4.8\times10^{-9}$    \\
+61 Pm       &    -9655.098        &  -9655.098        &   $4\times10^{-5}$      &   $4.7\times10^{-9}$    \\
+62 Sm       &   -10034.952        & -10034.952        &   $4\times10^{-5}$      &   $4.4\times10^{-9}$    \\
+63 Eu       &   -10423.543        & -10423.543        &   $4\times10^{-5}$      &   $4.7\times10^{-9}$    \\
+64 Gd       &   -10820.617        & -                 &    -                    &    -                    \\
+65 Tb       &   -11226.568        & -                 &    -                    &    -                    \\
+66 Dy       &   -11641.452        & -11641.452        &   $5\times10^{-5}$      &   $4.4\times10^{-9}$    \\
+67 Ho       &   -12065.289        & -                 &    -                    &    -                    \\
+68 Er       &   -12498.152        & -12498.152        &   $6\times10^{-5}$      &   $4.8\times10^{-9}$    \\
+69 Tm       &   -12940.174        & -12940.174        &   $6\times10^{-5}$      &   $4.8\times10^{-9}$    \\
+70 Yb       &   -13391.456        & -                 &    -                    &    -                    \\
+71 Lu       &   -13851.807        & -13851.808        &   $6\times10^{-5}$      &   $4.7\times10^{-9}$    \\
+72 Hf       &   -14321.249        & -14321.249        &   $6\times10^{-5}$      &   $4.8\times10^{-9}$    \\
+73 Ta       &   -14799.812        & -14799.812        &   $7\times10^{-5}$      &   $4.9\times10^{-9}$    \\
+74 W        &   -15287.546        & -15287.546        &   $7\times10^{-5}$      &   $4.8\times10^{-9}$    \\
+75 Re       &   -15784.533        & -15784.533        &   $7\times10^{-5}$      &   $4.9\times10^{-9}$    \\
+76 Os       &   -16290.648        & -16290.648        &   $8\times10^{-5}$      &   $5.0\times10^{-9}$    \\
+77 Ir       &   -16806.113        & -16806.113        &   $8\times10^{-5}$      &   $5.0\times10^{-9}$    \\
+78 Pt       &   -17331.069        & -17331.069        &   $8\times10^{-5}$      &   $5.0\times10^{-9}$    \\
+79 Au       &   -17865.399        & -17865.400        &   $8\times10^{-5}$      &   $4.9\times10^{-9}$    \\
+80 Hg       &   -18408.991        & -18408.991        &   $9\times10^{-5}$      &   $5.0\times10^{-9}$    \\
+81 Tl       &   -18961.824        & -18961.824        &   $8\times10^{-5}$      &   $4.6\times10^{-9}$    \\
+82 Pb       &   -19524.008        & -19524.008        &   $9\times10^{-5}$      &   $4.9\times10^{-9}$    \\
+83 Bi       &   -20095.586        & -20095.586        &   $1\times10^{-4}$      &   $5.0\times10^{-9}$    \\
+84 Po       &   -20676.500        & -20676.500        &   $9\times10^{-5}$      &   $4.6\times10^{-9}$    \\
+85 At       &   -21266.881        & -21266.881        &   $9\times10^{-5}$      &   $4.5\times10^{-9}$    \\
+86 Rn       &   -21866.772        & -21866.772        &   $9\times10^{-5}$      &   $4.3\times10^{-9}$    \\
+55 Cs$^{r}$ &    -7786.771        &  -7786.771        &   $3\times10^{-4}$      &   $4.6\times10^{-8}$    \\
+56 Ba$^{r}$ &    -8135.644        &  -8135.645        &   $3\times10^{-4}$      &   $4.7\times10^{-8}$    \\
+57 La$^{r}$ &    -8493.543        &  -8493.543        &   $4\times10^{-4}$      &   $4.8\times10^{-8}$    \\
+58 Ce$^{r}$ &    -8860.997        &  -8860.997        &   $4\times10^{-4}$      &   $4.5\times10^{-8}$    \\
+59 Pr$^{r}$ &    -9238.148        &  -9238.148        &   $4\times10^{-4}$      &   $4.6\times10^{-8}$    \\
+60 Nd$^{r}$ &    -9625.131        &  -9625.131        &   $4\times10^{-4}$      &   $4.8\times10^{-8}$    \\
+61 Pm$^{r}$ &   -10022.094        & -10022.095        &   $5\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+62 Sm$^{r}$ &   -10429.162        & -10429.163        &   $5\times10^{-4}$      &   $4.8\times10^{-8}$    \\
+63 Eu$^{r}$ &   -10846.504        & -10846.505        &   $4\times10^{-4}$      &   $4.4\times10^{-8}$    \\
+64 Gd$^{r}$ &   -11274.242        & -11274.242        &   $5\times10^{-4}$      &   $4.7\times10^{-8}$    \\
+65 Td$^{r}$ &   -11712.544        & -11712.545        &   $5\times10^{-4}$      &   $4.3\times10^{-8}$    \\
+66 Dy$^{r}$ &   -12161.545        & -12161.545        &   $6\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+67 Ho$^{r}$ &   -12621.412        & -12621.413        &   $5\times10^{-4}$      &   $4.6\times10^{-8}$    \\
+68 Er$^{r}$ &   -13092.269        & -13092.270        &   $6\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+69 Tm$^{r}$ &   -13574.316        & -13574.317        &   $6\times10^{-4}$      &   $4.8\times10^{-8}$    \\
+70 Yb$^{r}$ &   -14067.676        & -14067.677        &   $6\times10^{-4}$      &   $4.6\times10^{-8}$    \\
+71 Lu$^{r}$ &   -14572.532        & -14572.533        &   $7\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+72 Hf$^{r}$ &   -15088.785        & -15088.786        &   $7\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+73 Ta$^{r}$ &   -15616.630        & -15616.630        &   $7\times10^{-4}$      &   $4.7\times10^{-8}$    \\
+74 W$^{r}$  &   -16156.184        & -16156.185        &   $8\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+75 Re$^{r}$ &   -16707.619        & -16707.620        &   $8\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+76 Os$^{r}$ &   -17271.081        & -17271.082        &   $8\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+77 Ir$^{r}$ &   -17846.787        & -17846.788        &   $8\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+78 Pt$^{r}$ &   -18434.873        & -18434.874        &   $9\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+79 Au$^{r}$ &   -19035.525        & -19035.526        &   $9\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+80 Hg$^{r}$ &   -19648.895        & -19648.896        &   $9\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+81 Tl$^{r}$ &   -20274.849        & -20274.850        &   $9\times10^{-4}$      &   $4.8\times10^{-8}$    \\
+82 Pb$^{r}$ &   -20913.713        & -20913.714        &   $9\times10^{-4}$      &   $4.7\times10^{-8}$    \\
+83 Bi$^{r}$ &   -21565.705        & -21565.706        &   $1\times10^{-3}$      &   $4.9\times10^{-8}$    \\
+84 Po$^{r}$ &   -22231.012        & -22231.013        &   $9\times10^{-4}$      &   $4.1\times10^{-8}$    \\
+85 At$^{r}$ &   -22909.806        & -22909.807        &   $8\times10^{-4}$      &   $3.7\times10^{-8}$    \\
+86 Rn$^{r}$ &   -23602.103        & -23602.104        &   $1\times10^{-3}$      &   $4.8\times10^{-8}$    \\
 \bottomrule  	
 \end{longtable} 
 

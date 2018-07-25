@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  24 JUL 2018 15:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  24 JUL 2018 19:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -600,60 +600,7 @@ Chapter 1.
 [1
 
 
-]
-./chp_intro.tex:47: Missing } inserted.
-<inserted text> 
-                }
-l.47 ...alue of j and initial value of c$_{jint}$}
-                                                  
-? 
-./chp_intro.tex:47: Display math should end with $$.
-<to be read again> 
-                   _
-l.47 ...alue of j and initial value of c$_{jint}$}
-                                                  
-? 
-./chp_intro.tex:47: Missing $ inserted.
-<inserted text> 
-                $
-l.47 ...alue of j and initial value of c$_{jint}$}
-                                                  
-? 
-./chp_intro.tex:47: Extra }, or forgotten \endgroup.
-\@textcolor ...otect \leavevmode {\color #1{#2}#3}
-                                                  
-l.47 ...alue of j and initial value of c$_{jint}$}
-                                                  
-? 
-
-./chp_intro.tex:48: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.48 \end{equation}
-                   
-? 
-./chp_intro.tex:48: You can't use `\eqno' in horizontal mode.
-\endmathdisplay@a ...\df@tag \@empty \else \veqno 
-                                                  \alt@tag \df@tag \fi \ifx ...
-l.48 \end{equation}
-                   
-? 
-./chp_intro.tex:48: Missing $ inserted.
-<inserted text> 
-                $
-l.48 \end{equation}
-                   
-? 
-./chp_intro.tex:48: Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.48 \end{equation}
-                   
-? 
-[2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]) [16]
+] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]) [16]
 \openout2 = `chp_cuda_dfratom.aux'.
 
 
@@ -1141,7 +1088,7 @@ msfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmtt8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on thesis.pdf (131 pages, 1769288 bytes).
+Output written on thesis.pdf (131 pages, 1769256 bytes).
 PDF statistics:
  545 PDF objects out of 1000 (max. 8388607)
  362 compressed objects within 4 object streams

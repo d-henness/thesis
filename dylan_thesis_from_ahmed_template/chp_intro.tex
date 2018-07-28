@@ -12,19 +12,19 @@ where $\hat{H}$ is the Hamiltonian operator, $\Psi$ is referred to as the wavefu
 \begin{equation}
 \label{eq:ham}
 \hat{H} = -\frac{1}{2}\sum^{n}_{i}\nabla^{2}_{i} - \sum^{N}_{A}\frac{1}{2M_{A}}\nabla^{2}_{A} - \sum^{n}_{i}\sum^{N}_{A}\frac{Z_{A}}{r_{iA}}
-+ \sum^{n}_{i}\sum^{N}_{j>i}\frac{1}{r_{ij}} + \sum^{N}_{A}\sum^{N}_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}
++ \sum^{n}_{i}\sum^{n}_{j>i}\frac{1}{r_{ij}} + \sum^{N}_{A}\sum^{N}_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}
 \end{equation} 
 
 where $i$ and $j$ refer to electrons, $A$ and $B$ refer to nuclei, and $n$ and $N$ refer to the maximum number of electrons and nuclei, respectively. $M_{A}$ and $Z_{A}$ are the mass and charge of nucleus $A$. $r_{xy}$ is the distance between particles $x$ and $y$, and $\nabla^{2}_{n}=\frac{\partial^{2}}{\partial x^{2}}+\frac{\partial^{2}}{\partial y^{2}}+\frac{\partial^{2}}{\partial z^{2}}$ where $x$, $y$, and $z$ are the Cartesian coordinates of particle $n$. Each term accounts for a different kind of energy: $-\frac{1}{2}\sum^{n}_{i}\nabla^{2}_{i}$ is the kinetic energy of the electrons, $\sum^{N}_{A}\frac{1}{2M_{A}}\nabla^{2}_{A}$ is the kinetic energy of the nuclei, $\sum^{n}_{i}\sum^{N}_{A}\frac{Z_{A}}{r_{iA}}$ is the potential energy of attraction between nuclei and electrons, $\sum^{n}_{i}\sum^{N}_{j>i}\frac{1}{r_{ij}} $ is the potential energy of repulsion between electrons, and $\sum^{N}_{A}\sum^{N}_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}$ is the potential energy of repulsion between nuclei. Together, this accounts for all of the energy of a molecular system. As this operator is quite complex, it would be helpful to simplify it if possible. Fortunately, Born and Oppenheimer\cite{1927AnP...389..457B} realized that an approximation could be made that would substantially reduce the amount of work we have to do.
 
-Much like a satellite in orbit around the Earth, the proton and neutron vastly outweigh the electron. If we look at the second term in Equation \ref{eq:ham}, we notice that it is inversely proportional to the mass of the nuclei. We can therefore assume, to a decent approximation, that the kinetic energy of the nuclei is very close to zero compared to the other terms. This allows us to treat them as stationary classical particles. As a bonus, this turns the potential energy of repulsion between nuclei into a constant. The killing of these two terms reduces the Hamiltonian operator to the \textit{electronic} Hamiltonian given in Equation \ref{eq:elham}
+Much like a satellite in orbit around the Earth, the proton and neutron vastly outweigh the electron. If we look at the second term in Equation \ref{eq:ham}, we notice that it is inversely proportional to the mass of the nuclei. We can therefore assume, to a decent approximation, that the kinetic energy of the nuclei is very close to zero compared to the other terms. This allows us to treat them as stationary classical particles. As a bonus, this turns the potential energy of repulsion between nuclei into a constant. This approxximation reduces the Hamiltonian operator to the \textit{electronic} Hamiltonian given in Equation \ref{eq:elham}
 
 \begin{equation}
 \label{eq:elham}
 \hat{H_{el}} = -\frac{1}{2}\sum^{n}_{i}\nabla^{2}_{i}  - \sum^{n}_{i}\sum^{N}_{A}\frac{Z_{A}}{r_{iA}} + \sum^{n}_{i}\sum^{N}_{j>i}\frac{1}{r_{ij}} + \sum^{N}_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}
 \end{equation} 
 
-$\hat{H}$ can be assumed to be $\hat{H_{el}}$ for the remainder of this Thesis, and with the Hamiltonian out of the way, we can now turn our attention to the wavefunction. While we were able to get away with turning nuclei into classical particles, the electrons unfortunately remain fully quantum. Therefore, we need to deal with all the complicated mathematical baggage this comes with.
+$\hat{H}$ can be assumed to be $\hat{H_{el}}$ for the remainder of this thesis, and with the Hamiltonian out of the way, we can now turn our attention to the wavefunction. While we were able to get away with turning nuclei into classical particles, the electrons unfortunately remain fully quantum. Therefore, we need to deal with all the complicated mathematical baggage this comes with.
 
 Consider the hydrogen atom which, like all other one-electron atomic systems, is one of the few exactly solvable problems in quantum mechanics. The solution for its wavefunction in spherical coordinates is given in Equation \ref{eq:wavehydro}\cite{Griffiths2}
 
@@ -33,7 +33,7 @@ Consider the hydrogen atom which, like all other one-electron atomic systems, is
 \Psi_{nlm}(r, \theta, \varphi) = R_{nl}(r)Y^{m}_{l}(\theta,\varphi)
 \end{equation} 
 
-where $R_{nl}$ is called the radial function and $Y^{m}_{l}(\theta,\varphi)$ is called the angular function. The radial equation has the form 
+where $R_{nl}$ is called the radial function and $Y^{m}_{l}(\theta,\varphi)$ is called the angular function. The radial function has the form 
 
 \begin{equation}
 \label{eq:wavehydro_R}
@@ -78,7 +78,7 @@ P^{m}_{l}(x) = (1 - x^{2})^{\frac{|m|}{2}}\frac{d^{|m|}}{dx^{|m|}}P_{l}(x)
 P_{l}(x) = \frac{1}{2^{l}l!}\frac{d^{j}}{dx^{j}}(x^{2}-1)^{l}
 \end{equation} 
 
-Inspection of these equations reveals that $n$ must be a positive integer greater than 0, $l$ must be a positive integer between 0 and $n-1$, and $|m|$ can be no larger than $l$. These are called quantum numbers, specifically $n$ is the principal quantum number, $l$ is the azimuthal quantum number, and $m$ is the magnetic quantum number. Notice that there is no limit to how large $n$ can get, which suggests that there is not just one solution to this equation, but an infinite number of them. The solutions to the hydrogen-like atom wavefunctions are given the special name of orbitals. Also, orbitals with the same value of $l$ are refered to be of the same symmetry. Table \ref{tab:hsol} shows the reduced form of $\Psi$ for a few different orbitals. For atoms with more than one electron, if we make a further assumption that electrons can be modelled like ideal springs, it has been shown that an atomic system with two electrons can also be solved\cite{harmonium}, but we can go no further than this. At least, not exactly. In the next section we will see how solutions for atoms, and indeed molecules, can begin to be approached.
+Inspection of these equations reveals that $n$ must be a positive integer greater than 0, $l$ must be a positive integer between 0 and $n-1$, and $|m|$ can be no larger than $l$. The integers $n$, $l$, and $m$ are called quantum numbers, specifically $n$ is the principal quantum number, $l$ is the azimuthal quantum number, and $m$ is the magnetic quantum number. Notice that there is no limit to how large $n$ can get, which suggests that there is not just one solution to this equation, but an infinite number of them. The hydrogen-like atom wavefunctions are given the special name of orbitals. Also, orbitals with the same value of $l$ are referred to be of the same symmetry. Table \ref{tab:hsol} shows the reduced form of $\Psi$ for a few different orbitals. For atoms with more than one electron, if we make a further assumption that electrons can be modelled like ideal springs, it has been shown that an atomic system with two electrons can also be solved\cite{harmonium}, but we can go no further than this. At least, not exactly. In the next section we will see how solutions for atoms, and indeed molecules, can begin to be approached.
 
 \begin{table}[h!]
 \caption{The first few exact solutions for the hydrogen atom wavefunction.}
@@ -229,7 +229,7 @@ As can be seen, changing the indexing of the electrons is equivalent to swapping
 \end{equation}
 
 \subsection{Two-Electron Integrals}
-As stated before, the main difficulty of performing calculations on many electron systems is figuring out how to deal with the interactions between the electrons. We can get around this by making the assumption that these interactions can be approximated by figuring out how a single electron interacts with the \textit{average} field generated by all the other electrons. This is called the self-consistent-field (SCF) method\cite{RHF}. With this, we can replace the Hamiltonian operator with the one-electron Fock operator which is given below\cite{Ostlund}
+As stated before, the main difficulty of performing calculations on many electron systems is figuring out how to deal with the interactions between the electrons. We can get around this by making the assumption that these interactions can be approximated by figuring out how a single electron interacts with the \textit{average} field generated by all the other electrons. This is called the mean-field method\cite{RHF}. With this, we can replace the Hamiltonian operator with the one-electron Fock operator which is given below\cite{Ostlund}
 
 \begin{equation}
 \label{eq:fock_op}
@@ -285,7 +285,7 @@ where $n$ is the number of spin orbitals in the system and $\epsilon_{a}$ is the
 \sum_{a}^{n}\left<\psi_{a}(1)|\hat{h}(1)|\psi_{a}(1)\right> + \frac{1}{2}\sum^{n}_{a}\sum^{n}_{b}\left[\left(aa|bb\right) - \left(ab|ba\right)\right] = \epsilon
 \end{equation}
 
-where the factor of one half is multiplied to the two electron terms as a result of the interactions being double counted by the summations.
+where the factor of one half is multiplied to the two electron terms as a result of the interactions being doubly counted by the summations.
 
 \subsection{Basis Sets}
 \label{subsec:basis_sets}
@@ -307,7 +307,7 @@ When choosing the $\Phi$s, our ground rule comes into play. We must choose a fun
 \Phi^{STO}_{1s}(r - R_{A}) = \sqrt{\frac{\zeta^{3}}{\pi}}e^{-\zeta|r- R_{A}|}
 \end{equation}
 
-This is more well-behaved than the exact hydrogen atom solution, but problems arise when we try to use them in the two-electron integrals. Because we may be trying to do a two-electron integral over functions which could have up to four different centers, we end up with something that is very hard to compute. Therefore, Gaussian-type orbitals (GTOs) have become the preferred functions for producing basis sets. The radial part of a 1s GTO centered at $R_{A}$ is shown below\cite{Boys542}
+This is more well-behaved than the exact hydrogen atom solution, but problems arise when we try to use them in the two-electron integrals. Because we may be trying to do a two-electron integral over functions which could be located at up to four different centers, we end up with something that is very hard to compute. Therefore, Gaussian-type orbitals (GTOs) have become the preferred functions for producing basis sets. The radial part of a 1s GTO centered at $R_{A}$ is shown below\cite{Boys542}
 
 \begin{equation}
 \label{eq:gto_1s}
@@ -319,9 +319,9 @@ Because the product of two different Gaussians centered at two different locatio
 All of this reduces our wavefunction issue to a simple optimization problem, which will be discussed more in-depth in Chapter \ref{chap:basis_sets}.
 
 \subsection{Hartree-Fock SCF}
-In the previous sections, we discussed the calculation of the two-electron integrals and introduced the concept of using basis sets to approximate a wavefunction. Now we will discuss how they are actually used. 
+In the previous sections, we discussed the calculation of the two-electron integrals and introduced the concept of using basis sets to approximate a wavefunction. Now we will discuss how they are actually used. Inspection of the Hartree-Fock operators, Equations \ref{eq:Coulomb_op} and \ref{eq:exchange_op}, shows that they depend on the solutions of the Hartree-Fock equations. Consequently, these equations are solved using a technique called the self-consistent field (SCF) method.
 
-SCF begins with the formation of the density matrices. If we are looking at a single atom, we can exploit the symmetry of the problem by having a smaller density matrix for each orbital symmetry ($\lambda$), instead of one large one for the whole system. There are also two types of density matrices, one for contributions from closed shell spinors (\textbf{D$_\textbf{C}$}) and one for contributions from open shelled spinors (\textbf{D$_\textbf{O}$}).
+SCF method begins with the formation of the density matrices. If we are looking at a single atom, we can exploit the symmetry of the problem by having a smaller density matrix for each orbital symmetry ($\lambda$), instead of one large one for the whole system. There are also two types of density matrices, one for contributions from closed shell spinors (\textbf{D$_\textbf{C}$}) and one for contributions from open shelled spinors (\textbf{D$_\textbf{O}$}).
 
 Using a procedure developed independently by Roothaan and Hall\cite{RHF, Hall541}, we first need to find the matrix \textbf{C} which satisfies 
 

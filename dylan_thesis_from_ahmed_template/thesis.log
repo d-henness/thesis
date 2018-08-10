@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.13)  23 JUL 2018 15:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.6.13)  10 AUG 2018 14:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -590,64 +590,10 @@ l.23 ...{0}}$}}\mathchar "010D $ parameters.}}{78}
 
 ]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 799.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 806.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 799.
-
-
-./thesis.tex:805: LaTeX Error: \begin{tabular} on input line 773 ended by \end{
-tablular}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.805 \end{tablular}
-                    
-? 
-./thesis.tex:805: Missing } inserted.
-<inserted text> 
-                }
-l.805 \end{tablular}
-                    
-? 
-./thesis.tex:805: Missing } inserted.
-<inserted text> 
-                }
-l.805 \end{tablular}
-                    
-? 
-./thesis.tex:805: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.805 \end{tablular}
-                    
-? 
-./thesis.tex:805: Missing { inserted.
-<inserted text> 
-                {
-l.805 \end{tablular}
-                    
-? 
-./thesis.tex:805: Missing } inserted.
-<inserted text> 
-                }
-l.805 \end{tablular}
-                    
-? 
-./thesis.tex:805: Missing $ inserted.
-<inserted text> 
-                $
-l.805 \end{tablular}
-                    
-? 
-./thesis.tex:805: Missing } inserted.
-<inserted text> 
-                }
-l.805 \end{tablular}
-                    
-? 
-[10
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 806.
+ [10
 
 ]
 \openout2 = `chp_intro.aux'.
@@ -657,60 +603,7 @@ Chapter 1.
 [1
 
 
-]
-./chp_intro.tex:47: Missing } inserted.
-<inserted text> 
-                }
-l.47 ...alue of j and initial value of c$_{jint}$}
-                                                  
-? 
-./chp_intro.tex:47: Display math should end with $$.
-<to be read again> 
-                   _
-l.47 ...alue of j and initial value of c$_{jint}$}
-                                                  
-? 
-./chp_intro.tex:47: Missing $ inserted.
-<inserted text> 
-                $
-l.47 ...alue of j and initial value of c$_{jint}$}
-                                                  
-? 
-./chp_intro.tex:47: Extra }, or forgotten \endgroup.
-\@textcolor ...otect \leavevmode {\color #1{#2}#3}
-                                                  
-l.47 ...alue of j and initial value of c$_{jint}$}
-                                                  
-? 
-
-./chp_intro.tex:48: LaTeX Error: Bad math environment delimiter.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.48 \end{equation}
-                   
-? 
-./chp_intro.tex:48: You can't use `\eqno' in horizontal mode.
-\endmathdisplay@a ...\df@tag \@empty \else \veqno 
-                                                  \alt@tag \df@tag \fi \ifx ...
-l.48 \end{equation}
-                   
-? 
-./chp_intro.tex:48: Missing $ inserted.
-<inserted text> 
-                $
-l.48 \end{equation}
-                   
-? 
-./chp_intro.tex:48: Display math should end with $$.
-<to be read again> 
-                   \endgroup 
-l.48 \end{equation}
-                   
-? 
-[2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]) [16]
+] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]) [16]
 \openout2 = `chp_cuda_dfratom.aux'.
 
 
@@ -1076,33 +969,11 @@ Chapter 4.
 
 
 
-]
-
-./thesis.bbl:181: Package inputenc Error: Unicode character  (U+80)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.181   hartree-
-                  fock wavefunctions.
-? 
-
-./thesis.bbl:181: Package inputenc Error: Unicode character  (U+94)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.181   hartree-
-                    fock wavefunctions.
-? 
-) [83] [84]
+]) [83] [84]
 \openout2 = `appendix/app_cudaDFRATOM_inps.aux'.
 
- (./appendix/app_cudaDFRATOM_inps.tex
+
+(./appendix/app_cudaDFRATOM_inps.tex
 Appendix A.
 (./appendix/inp_out_files/82Pb_gauss_35s30p-30p+25d-25d+20f-20f+.inp)
 (./appendix/inp_out_files/82Pb_gauss_35s30p-30p+25d-25d+20f-20f+.log [85
@@ -1144,10 +1015,10 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred when \ifx on line 678 was incomplete) 
 Here is how much of TeX's memory you used:
- 7918 strings out of 492646
- 110893 string characters out of 6129563
+ 7916 strings out of 492646
+ 110888 string characters out of 6129563
  670480 words of memory out of 5000000
- 11533 multiletter control sequences out of 15000+600000
+ 11531 multiletter control sequences out of 15000+600000
  20059 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,23n,52p,1883b,1686s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1176,7 +1047,7 @@ msfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmtt12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmtt8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on thesis.pdf (131 pages, 1767785 bytes).
+Output written on thesis.pdf (131 pages, 1769523 bytes).
 PDF statistics:
  545 PDF objects out of 1000 (max. 8388607)
  362 compressed objects within 4 object streams

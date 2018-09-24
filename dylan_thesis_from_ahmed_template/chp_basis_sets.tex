@@ -41,7 +41,7 @@ It should be mentioned that each symmetry does not need to use the entire set of
 
 \section{Methods}
 \subsection{Basis set size optimization}
-We decided to use a somewhat novel method of generating our basis sets. We begin by choosing an arbitrarily large basis set size, such as \mbox{s$(1:40)$p$(1:40)$d$(1:40)$f$(1:40)$} (here $i(\#:\#)$ refers to the starting and ending index of $\zeta$'s used for symmetry $i$). Next, we then find the optimal $\alpha$, $\beta$, $\delta$, and $\gamma$ WTBS parameters for this basis set. \notetodylan{This is done using NEWUOA\cite{Powell2006} which will find the values $\alpha$, $\beta$, $\delta$, and $\gamma$ that produce the lowest possible energy for a given basis set size.} Finally, we use the following steps to find the optimal basis set size.
+We decided to use a somewhat novel method of generating our basis sets. We begin by choosing an arbitrarily large basis set size, such as \mbox{s$(1:40)$p$(1:40)$d$(1:40)$f$(1:40)$} (here $i(\#:\#)$ refers to the starting and ending index of $\zeta$'s used for symmetry $i$). Next, we then find the optimal $\alpha$, $\beta$, $\delta$, and $\gamma$ WTBS parameters for this basis set. \notetodylan{This is done using NEWUOA\cite{Powell2006} which finds the values $\alpha$, $\beta$, $\delta$, and $\gamma$ that lead to the lowest possible energy for a given basis set size.} Finally, we use the following steps to find the optimal basis set size.
 
 \textit{Step 1.} Begin by finding the fewest number of f functions necessary. This can be done by generating input files that range in size from  \mbox{s$(1:40)$p$(1:40)$d$(1:40)$f$(1:1)$} to  \mbox{s$(1:40)$p$(1:40)$d$(1:40)$f$(1:40)$}.
 

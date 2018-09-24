@@ -364,39 +364,35 @@ The optimized non-relativistic WTBS parameters and basis set sizes for elements 
 
 In Table \ref{tab:dyall_comp}
 
-\begin{longtable}{l r r r r}
-\caption[Comparison of basis sets produced by cudaDFRATOM and Dyall's triple-zeta basis sets.]{Comparison of basis sets produced by cudaDFRATOM and Dyall's triple-zeta basis sets. The basis sets for the 6s, 6p, and 5d elements are shown. The 4f elements were calculated with a different electron configuration, so they are omitted.} \label{tab:dyall_comp} \\
-\toprule
-	Element	  &	Calculated Energy		&	Literature Energy	&	Absolute Error	        &	Relative Error	        \\
-			
-\midrule
-\endfirsthead
-\caption[]{(continued)}\\
+\begin{table}
+\caption[Comparison of basis sets produced by cudaDFRATOM and Dyall's triple-zeta basis sets.]{Comparison of basis sets produced by cudaDFRATOM and Dyall's triple-zeta basis sets. The basis sets for the 6s, 6p, and 5d elements are shown. The 4f elements were calculated with a different electron configuration, so they are omitted.} 
+\label{tab:dyall_comp} \\
+\begin{tabular}{l r r r r}
 \toprule
   Element	  &	Calculated Energy$^{a}$ & Calculated Energy$^{b}$ & Total basis functions$^{a}$ & Total basis functions$^{b}$ 	      \\
 \midrule
-\endhead
-55 Cs$^{r}$ &    -7786.771            &  -7786.771              & 113                         & 105  \\
-56 Ba$^{r}$ &    -8135.644            &  -8135.644              & 112                         & 104  \\
-72 Hf$^{r}$ &   -15088.785            & -15088.784              & 158                         & 129   \\
-73 Ta$^{r}$ &   -15616.630            & -15616.628              & 156                         & 129   \\
-74 W$^{r}$  &   -16156.184            & -16156.183              & 154                         & 129   \\
-75 Re$^{r}$ &   -16707.619            & -16707.617              & 154                         & 129   \\
-76 Os$^{r}$ &   -17271.081            & -17271.080              & 154                         & 129   \\
-77 Ir$^{r}$ &   -17846.787            & -17846.786              & 154                         & 129   \\
-78 Pt$^{r}$ &   -18434.873            & -18434.872              & 156                         & 129   \\
-79 Au$^{r}$ &   -19035.525            & -19035.526              & 156                         & 129   \\
-80 Hg$^{r}$ &   -19648.895            & -19648.893              & 156                         & 129   \\
-81 Tl$^{r}$ &   -20274.849            & -20274.850              & 158                         & 134   \\
-82 Pb$^{r}$ &   -20913.713            & -20913.714              & 152                         & 134   \\
-83 Bi$^{r}$ &   -21565.705            & -21565.706              & 156                         & 134   \\
-84 Po$^{r}$ &   -22231.012            & -22231.013              & 152                         & 134   \\
-85 At$^{r}$ &   -22909.806            & -22909.807              & 154                         & 134   \\
-86 Rn$^{r}$ &   -23602.103            & -23602.104              & 151                         & 134   \\
+55 Cs &	-7786.771            &  -7786.771              & 113                         & 105  \\
+56 Ba &	-8135.644            &  -8135.644              & 112                         & 104  \\
+72 Hf &	-15088.785            & -15088.784              & 158                         & 129   \\
+73 Ta &   -15616.630            & -15616.628              & 156                         & 129   \\
+74 W &   -16156.184            & -16156.183              & 154                         & 129   \\
+75 Re &   -16707.619            & -16707.617              & 154                         & 129   \\
+76 Os &   -17271.081            & -17271.080              & 154                         & 129   \\
+77 Ir &   -17846.787            & -17846.786              & 154                         & 129   \\
+78 Pt	 &   -18434.873            & -18434.872              & 156                         & 129   \\
+79 Au &   -19035.525            & -19035.526              & 156                         & 129   \\
+80 Hg &   -19648.895            & -19648.893              & 156                         & 129   \\
+81 Tl &   -20274.849            & -20274.850              & 158                         & 134   \\
+82 Pb &   -20913.713            & -20913.714              & 152                         & 134   \\
+83 Bi &   -21565.705            & -21565.706              & 156                         & 134   \\
+84 Po &   -22231.012            & -22231.013              & 152                         & 134   \\
+85 At &   -22909.806            & -22909.807              & 154                         & 134   \\
+86 Rn &   -23602.103            & -23602.104              & 151                         & 134   \\
 \bottomrule
-  $^{a}$cudaDFRATOM basis sets
+\end{tabular}
+  $^{a}$cudaDFRATOM basis sets	\\
   $^{b}$Dyalls basis sets
-\end{longtable}
+\end{table}
 
 Figures \ref{fig:BS_non_rel_alpha}, \ref{fig:BS_non_rel_beta}, and \ref{fig:BS_non_rel_delt_gamm} show the trends of various non-relativistic parameters with respect to nuclear charge. In Figure  \ref{fig:BS_non_rel_alpha}, we can see that there is an interesting pattern where the exponent of the most diffuse function becomes larger as we move right across a row. It is also interesting to note that the rate at which the exponent increases changes when going from one block of that row to the next. The trend roughly follows what we expect from periodic trends of atomic size: atoms get larger by going left on the table. The trend of atoms getting larger when moving down the periodic table is mostly obeyed, however there are exceptions. For instance, the 4d elements have smaller values of $\alpha$ than the 5d elements.
 

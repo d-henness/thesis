@@ -39,12 +39,12 @@
 \contentsline {subsection}{\numberline {3.2.2}Automating Optimization}{63}
 \contentsline {section}{\numberline {3.3}Discussion}{69}
 \contentsline {subsection}{\numberline {3.3.1}Optimized Non-Relativistic Basis Sets}{69}
-\contentsline {chapter}{\numberline {4}Conclusions and Future Work}{80}
-\contentsline {section}{\numberline {4.1}cudaDFRATOM}{80}
-\contentsline {section}{\numberline {4.2}Basis Set Optimization}{81}
-\contentsline {chapter}{Bibliography}{83}
-\contentsline {chapter}{\numberline {A}cudaDFRATOM Input and Output files}{86}
-\contentsline {section}{\numberline {A.1}Single Point Energy with predefined WTBS parameters}{86}
-\contentsline {section}{\numberline {A.2}Optimizing a Basis Set for a Specific Electron Configuration}{94}
-\contentsline {section}{\numberline {A.3}Single Point Energy using a predefined Basis Set}{109}
-\contentsline {chapter}{\numberline {B}Scripts for cudaDFRATOM}{120}
+\contentsline {chapter}{\numberline {4}Conclusions and Future Work}{81}
+\contentsline {section}{\numberline {4.1}cudaDFRATOM}{81}
+\contentsline {section}{\numberline {4.2}Basis Set Optimization}{82}
+\contentsline {chapter}{Bibliography}{84}
+\contentsline {chapter}{\numberline {A}cudaDFRATOM Input and Output files}{87}
+\contentsline {section}{\numberline {A.1}Single Point Energy with predefined WTBS parameters}{87}
+\contentsline {section}{\numberline {A.2}Optimizing a Basis Set for a Specific Electron Configuration}{95}
+\contentsline {section}{\numberline {A.3}Single Point Energy using a predefined Basis Set}{110}
+\contentsline {chapter}{\numberline {B}Scripts for cudaDFRATOM}{121}

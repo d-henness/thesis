@@ -1,4 +1,7 @@
 \chapter{Introduction}
+
+\notetodylan{Graphics Processing Units (GPUs) have allowed quantum chemists to overcome to problem of two-electron integral scaling\cite{terachem_1,terachem_2,terachem_3,terachem_4}. This has allowed for very large systems to be studied at a very accurate level of chemical theory \cite{terachem_5}. There has been little advancement in the relativistic levels of chemical theory however. Therefore, this thesis presents a program called cudaDFRATOM which allows for the optimization of basis sets at the Dirac-Fock-Roothaan level of theory. In this chapter, the background of relativist theory is discussed. In Chapter 2, the details of the code used in cudaDFRATOM are given. Chapter 3 discusses the basis sets cudaDFRATOM produces.}
+
 \section{Solving the Schr\"{o}dinger Equation}
 The Schr\"{o}dinger equation\cite{1926PhRv...28.1049S} in its time-independent, non-relativistic form is given in Equation \ref{eq:schro} 
 
@@ -40,7 +43,7 @@ where $R_{nl}$ is called the radial function and $Y^{m}_{l}(\theta,\varphi)$ is 
 R_{nl}(r) = \frac{1}{r}\left(\frac{r}{a_{o}n}\right)^{l+1}e^{-\frac{r}{a_{o}n}}L^{2l+1}_{n-l-1}\left(\frac{r}{a_{o}n}\right)
 \end{equation} 
 
-where $a_{o}$ is the Bohr radius and $L^{2l+1}_{n-l-1}\left(\frac{r}{a_{o}n}\right)$ is polynomial of $\left(\frac{r}{a_{o}n}\right)$ and order $j_{\text{max}}=n-l-1$ of $\left(\frac{r}{a_{o}n}\right)$. Its coefficients are given by
+where $a_{o}$ is the Bohr radius and $L^{2l+1}_{n-l-1}\left(\frac{r}{a_{o}n}\right)$ is \notetodylan{a Laguerre} polynomial of $\left(\frac{r}{a_{o}n}\right)$ and order $j_{\text{max}}=n-l-1$ of $\left(\frac{r}{a_{o}n}\right)$. Its coefficients are given by
 
 \begin{equation}
 \label{eq:wavehydro_R_coef}
@@ -102,7 +105,7 @@ $\displaystyle\mp\frac{1}{\sqrt{64\pi a_{o}^{3}}}\frac{r}{a_{o}}e^{\left(-\frac{
 
 \section{Hartree-Fock Method}
 \label{sec:hartree_fock}
-While the wavefunction might appear complex, it is important to remember that it is still just a wave, and one of the fundamental properties of waves is that they can be added together to produce a separate, more complex wave. Likewise, any wave, no matter how complex, can be broken down as a summation of many simpler waves\cite{fourier1822thorie}. Thus, any linear combination of solutions to the wavefunction must therefore be a solution of a different (albeit perhaps non-physical) wavefunction. It is this property that will be exploited to solve our many electron problem. But first we must define some ground rules.
+While the wavefunction might appear complex, it is important to remember that it is still just a wave, and one of the fundamental properties of waves is that they can be added together to produce a separate, more complex wave. Likewise, any wave, no matter how complex, can be broken down as a summation of many simpler waves\cite{fourier1822thorie}. Thus, any linear combination of solutions to the \notetodylan{Schr\"{o}dinger equation must therefore be a solution of a different (albeit perhaps non-physical) equation}. It is this property that will be exploited to solve our many electron problem. But first we must define some ground rules.
 
 The first rule is that the overall wavefunction must describe a system of fermions. This means that the wavefunction must be antisymmetric with respect to the exchanging of electronic coordinates, i.e. $\Psi(1, 2,\ldots, n,\ldots,m) = -\Psi(1, 2,\ldots, m,\ldots,n)$ \textit{and} the probability density of the wavefunction must be indistinguishable with respect to the exchanging of electronic coordinates, i.e. $|\Psi(1, 2,\ldots, n,\ldots,m)|^{2} = |\Psi(1, 2,\ldots, m,\ldots,n)|^{2}$. The easiest way to meet this requirement is by using a Slater determinant\cite{PhysRev.34.1293}, and by introducing the concept of spin. Spin is a fourth quantum number, which we have neglected to talk about so far. Spin is a confusing property that some quantum particles have. No one really knows what it is, other than to say it has something to do with the angular momentum of the particle, and oddly enough that it in no way refers to the direction that the particle is spinning. It has been shown to have binary values\cite{Gerlach1922}, which will be refered to as up spin ($\uparrow$) and down spin ($\downarrow$). A Slater determinant that obeys antisymmetry is shown in Equation \ref{eq:slate_det}
 
@@ -300,14 +303,21 @@ As mentioned, the overall wavefunction of a system ($\Psi$) cannot be known exac
 
 where $\zeta_{u,i}$ is the $i^{th}$ adjustable parameters of the basis function $\Phi$ which is approximating the $u^{th}$ orbital, $C_{u,i}$ is the $i^{th}$ coefficient of $i^{th}$ basis function of the $u^{th}$ $\phi$, and $K$ is the total number of basis functions that make up the basis set. $C^{2}_{u,i}$ can be thought of as the ``weight" of $\phi$ that $\Phi(\zeta_{u,i})$ makes up.
 
-When choosing the $\Phi$s, our ground rule comes into play. We must choose a function that meets the boundary conditions of the problem, which means that is must go to zero at infinity. Because an atom (or molecule) consists of electrons in the potential generated by one (or many) nuclei, it is reasonable to conclude that the wavefunction would be similar to that of the hydrogen atom. We might initially think to use the exact hydrogen atom solution, but it quickly requires lots of floating point operations to compute which makes it impractical to use for large scale calculations. A more reasonable function is the Slater-type orbital (STO)\cite{PhysRev.36.57}. The radial part of its 1s orbital centered at $R_{A}$ is shown below
+When choosing the $\Phi$s, our ground rule comes into play. We must choose a function that meets the boundary conditions of the problem, which means that is must go to zero at infinity. Because an atom (or molecule) consists of electrons in the potential generated by one (or many) nuclei, it is reasonable to conclude that the wavefunction would be similar to that of the hydrogen atom. We might initially think to use the exact hydrogen atom solution, but it quickly requires lots of floating point operations to compute which makes it impractical to use for large scale calculations. A more reasonable function is the Slater-type orbital (STO)\cite{PhysRev.36.57}. \notetodylan{These use a different radial function, but still use the same spherical harmonics as the hydrogen-atom like wavefunctions.} The radial part of its 1s orbital centered at $R_{A}$ is shown below
 
 \begin{equation}
 \label{eq:sto_1s}
 \Phi^{STO}_{1s}(r - R_{A}) = \sqrt{\frac{\zeta^{3}}{\pi}}e^{-\zeta|r- R_{A}|}
 \end{equation}
 
-This is more well-behaved than the exact hydrogen atom solution, but problems arise when we try to use them in the two-electron integrals. Because we may be trying to do a two-electron integral over functions which could be located at up to four different centers, we end up with something that is very hard to compute. Therefore, Gaussian-type orbitals (GTOs) have become the preferred functions for producing basis sets. The radial part of a 1s GTO centered at $R_{A}$ is shown below\cite{Boys542}
+\notetodylan{The radial equation for any value of $n$ is}
+
+\begin{equation}
+\label{eq:sto_1s_gen}
+\Phi^{STO}(r - R_{A}) = Nr^{n-1}e^{-\zeta|r- R_{A}|}
+\end{equation}
+
+\notetodylan{Where $N$ is a normalization constant. This is a simpler equation to work with} than the exact hydrogen atom solution \notetodylan{because it does not need to use the Laguerre polynomials}. But even with these, problems arise when we try to use them in the two-electron integrals. Because we may be trying to do a two-electron integral over functions which could be located at up to four different centers, we end up with something that is very hard to compute. Therefore, Gaussian-type orbitals (GTOs) have become the preferred functions for producing basis sets. The radial part of a 1s GTO centered at $R_{A}$ is shown below\cite{Boys542}
 
 \begin{equation}
 \label{eq:gto_1s}

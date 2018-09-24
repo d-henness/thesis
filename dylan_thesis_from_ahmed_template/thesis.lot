@@ -1,5 +1,5 @@
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces The first few exact solutions for the hydrogen atom wavefunction.\relax }}{3}
+\contentsline {table}{\numberline {1.1}{\ignorespaces The first few exact solutions for the hydrogen atom wavefunction.\relax }}{4}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {2.1}{\ignorespaces Kernel resource usage\relax }}{46}
 \contentsline {table}{\numberline {2.2}{\ignorespaces \textit {\textbf {eint2}} kernel performance}}{47}
@@ -8,9 +8,9 @@
 \contentsline {table}{\numberline {2.5}{\ignorespaces Total speedup of alg1}}{53}
 \contentsline {table}{\numberline {2.6}{\ignorespaces Total speedup of alg2}}{53}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Basis sets optimized using rWTBS}}{68}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Basis sets optimized using cudaDFRATOM}}{70}
-\contentsline {table}{\numberline {3.3}{\ignorespaces Energies produced from basis sets in Tables 3.1\hbox {} and 3.2\hbox {}}}{71}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Basis sets optimized using rWTBS}}{69}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Basis sets optimized using cudaDFRATOM}}{71}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Energies produced from basis sets in Tables 3.1\hbox {} and 3.2\hbox {}}}{72}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

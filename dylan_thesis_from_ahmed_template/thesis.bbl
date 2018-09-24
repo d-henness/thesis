@@ -1,5 +1,35 @@
 \begin{thebibliography}{10}
 
+\bibitem{terachem_1}
+I.~S. Ufimtsev and T.~J. Mart{\'\i}nez.
+\newblock {Graphical Processing Units for Quantum Chemistry}.
+\newblock {\em Computing in Science Engineering}, 10:26--34, 2008.
+
+\bibitem{terachem_2}
+I.~S. Ufimtsev and T.~J. Mart{\~A}-nez.
+\newblock Quantum chemistry on graphical processing units. 1. strategies for
+  two-electron integral evaluation.
+\newblock {\em Journal of Chemical Theory and Computation}, 4:222--231, 2008.
+
+\bibitem{terachem_3}
+I.~S. Ufimtsev and T.~J. Martinez.
+\newblock Quantum chemistry on graphical processing units. 2. direct
+  self-consistent-field implementation.
+\newblock {\em Journal of Chemical Theory and Computation}, 5:1004--1015, 2009.
+
+\bibitem{terachem_4}
+I.~S. Ufimtsev and T.~J. Martinez.
+\newblock Quantum chemistry on graphical processing units. 3. analytical energy
+  gradients, geometry optimization, and first principles molecular dynamics.
+\newblock {\em Journal of Chemical Theory and Computation}, 5:2619--2628, 2009.
+
+\bibitem{terachem_5}
+J.~W. Snyder, E.~G. Hohenstein, N.~Luehr, and T.~J. Mart{\~A}nez.
+\newblock An atomic orbital-based formulation of analytical gradients and
+  nonadiabatic coupling vector elements for the state-averaged complete active
+  space self-consistent field method on graphical processing units.
+\newblock {\em The Journal of Chemical Physics}, 143:154107, 2015.
+
 \bibitem{1926PhRv...28.1049S}
 E.~{Schr{\"o}dinger}.
 \newblock {An Undulatory Theory of the Mechanics of Atoms and Molecules}.

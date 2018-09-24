@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  20 AUG 2018 22:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  24 SEP 2018 12:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -516,67 +516,67 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ./thesis.lof:17: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.17 ...0}}$}}\mathchar "010D $ are changed.}}{60}
+l.17 ...0}}$}}\mathchar "010D $ are changed.}}{61}
                                                   
 ? 
 ./thesis.lof:17: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.17 ...0}}$}}\mathchar "010D $ are changed.}}{60}
+l.17 ...0}}$}}\mathchar "010D $ are changed.}}{61}
                                                   
 ? 
 ./thesis.lof:17: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.17 ...0}}$}}\mathchar "010D $ are changed.}}{60}
+l.17 ...0}}$}}\mathchar "010D $ are changed.}}{61}
                                                   
 ? 
 ./thesis.lof:18: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.18 ...010B $ parameter vs. nuclear charge.}}{75}
+l.18 ...010B $ parameter vs. nuclear charge.}}{76}
                                                   
 ? 
 ./thesis.lof:19: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.19 ...010C $ parameter vs. nuclear charge.}}{76}
+l.19 ...010C $ parameter vs. nuclear charge.}}{77}
                                                   
 ? 
 ./thesis.lof:20: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.20 ...{0}}$}}\mathchar "010D $ parameters.}}{76}
+l.20 ...{0}}$}}\mathchar "010D $ parameters.}}{77}
                                                   
 ? 
 ./thesis.lof:20: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.20 ...{0}}$}}\mathchar "010D $ parameters.}}{76}
+l.20 ...{0}}$}}\mathchar "010D $ parameters.}}{77}
                                                   
 ? 
 ./thesis.lof:21: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.21 ...10B $ parameters vs. nuclear charge.}}{77}
+l.21 ...10B $ parameters vs. nuclear charge.}}{78}
                                                   
 ? 
 ./thesis.lof:22: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.22 ...10C $ parameters vs. nuclear charge.}}{78}
+l.22 ...10C $ parameters vs. nuclear charge.}}{79}
                                                   
 ? 
 ./thesis.lof:23: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.23 ...{0}}$}}\mathchar "010D $ parameters.}}{78}
+l.23 ...{0}}$}}\mathchar "010D $ parameters.}}{79}
                                                   
 ? 
 ./thesis.lof:23: Missing control sequence inserted.
 <inserted text> 
                 \inaccessible 
-l.23 ...{0}}$}}\mathchar "010D $ parameters.}}{78}
+l.23 ...{0}}$}}\mathchar "010D $ parameters.}}{79}
                                                   
 ? 
 )
@@ -600,7 +600,11 @@ Chapter 1.
 [1
 
 
-] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]) [16]
+] [2]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]) [16]
 \openout2 = `chp_cuda_dfratom.aux'.
 
 
@@ -741,27 +745,28 @@ Package pdftex.def Info: Figures/formpqprof.png used on input line 658.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[48 <./Figures/eint2prof.png (PNG copy)>]
-<Figures/eint2_mat_lots.png, id=219, 1003.75pt x 1001.7425pt>
+[48 <./Figures/eint2prof.png (PNG copy)>] [49]
+<Figures/eint2_mat_lots.png, id=222, 1003.75pt x 1001.7425pt>
 File: Figures/eint2_mat_lots.png Graphic file (type png)
 
 <use Figures/eint2_mat_lots.png>
 Package pdftex.def Info: Figures/eint2_mat_lots.png used on input line 669.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
 
-<Figures/eint2_vec_lots.png, id=220, 2007.5pt x 1238.6275pt>
+<Figures/eint2_vec_lots.png, id=223, 2007.5pt x 1238.6275pt>
 File: Figures/eint2_vec_lots.png Graphic file (type png)
 
 <use Figures/eint2_vec_lots.png>
 Package pdftex.def Info: Figures/eint2_vec_lots.png used on input line 676.
 (pdftex.def)             Requested size: 469.75499pt x 289.83011pt.
- [49]
+ [50 <./Figures/formpqprof.png (PNG copy)>]
+[51 <./Figures/eint2_mat_lots.png (PNG copy)>] [52 <./Figures/eint2_vec_lots.pn
+g (PNG copy)>]
 Overfull \hbox (15.54016pt too wide) in paragraph at lines 692--707
  [] 
  []
 
-[50 <./Figures/formpqprof.png (PNG copy)>] [51 <./Figures/eint2_mat_lots.png (P
-NG copy)>] [52 <./Figures/eint2_vec_lots.png (PNG copy)>]
+
 Overfull \hbox (15.54016pt too wide) in paragraph at lines 714--729
  [] 
  []
@@ -776,100 +781,81 @@ Package pdftex.def Info: Figures/totaltimeprof.png used on input line 733.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[53] (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+[53] [54 <./Figures/totaltimeprof.png (PNG copy)>]
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
-) [54 <./Figures/totaltimeprof.png (PNG copy)>]
-Overfull \hbox (4.57948pt too wide) in paragraph at lines 756--756
+)
+Overfull \hbox (4.57948pt too wide) in paragraph at lines 758--758
 []\OT1/cmr/m/n/12 'energy'| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 752--760
+Underfull \hbox (badness 10000) in paragraph at lines 754--762
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 760--771
+Underfull \hbox (badness 10000) in paragraph at lines 762--773
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 771--782
+Underfull \hbox (badness 10000) in paragraph at lines 773--784
 
  []
 
 [55]
-Overfull \hbox (4.38567pt too wide) in paragraph at lines 786--786
+Overfull \hbox (4.38567pt too wide) in paragraph at lines 788--788
 []\OT1/cmr/m/n/12 wtbspara| 
  []
 
 
-Underfull \hbox (badness 3895) in paragraph at lines 791--792
+Underfull \hbox (badness 3895) in paragraph at lines 793--794
 []\OT1/cmr/m/n/12 Where in the $[]\OML/cmm/m/it/12 ^^P$ \OT1/cmr/m/n/12 pool ea
 ch sym-me-
  []
 
 
-Underfull \hbox (badness 1122) in paragraph at lines 791--792
+Underfull \hbox (badness 1122) in paragraph at lines 793--794
 \OT1/cmr/m/n/12 try starts tak-ing ex-po-nents from (de-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 783--796
+Underfull \hbox (badness 10000) in paragraph at lines 785--798
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 797--811
+Underfull \hbox (badness 10000) in paragraph at lines 799--813
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 797--811
-
- []
-
-
-Underfull \hbox (badness 5133) in paragraph at lines 817--818
-\OT1/cmr/m/n/12 bi-na-tions of spinor oc-cu-pan-cies (de-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 811--824
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 811--824
+Underfull \hbox (badness 10000) in paragraph at lines 799--813
 
  []
 
 [56]
-Underfull \hbox (badness 3396) in paragraph at lines 832--833
+Underfull \hbox (badness 5133) in paragraph at lines 819--820
+\OT1/cmr/m/n/12 bi-na-tions of spinor oc-cu-pan-cies (de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 813--826
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 813--826
+
+ []
+
+
+Underfull \hbox (badness 3396) in paragraph at lines 834--835
 []\OT1/cmr/m/n/12 Convergence limit for the large-large
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 832--833
-\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
- []
-
-
-Underfull \hbox (badness 2653) in paragraph at lines 833--834
-[]\OT1/cmr/m/n/12 Convergence limit for the small-large
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 833--834
-\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
- []
-
-
-Underfull \hbox (badness 2020) in paragraph at lines 834--835
-[]\OT1/cmr/m/n/12 Convergence limit for the small-small
  []
 
 
@@ -878,122 +864,142 @@ Underfull \hbox (badness 10000) in paragraph at lines 834--835
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 824--837
+Underfull \hbox (badness 2653) in paragraph at lines 835--836
+[]\OT1/cmr/m/n/12 Convergence limit for the small-large
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 835--836
+\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 836--837
+[]\OT1/cmr/m/n/12 Convergence limit for the small-small
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 836--837
+\OT1/cmr/m/n/12 com-po-nents of the den-sity ma-trix
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 826--839
 
  []
 
-) [57]
+[57]) [58]
 \openout2 = `chp_basis_sets.aux'.
 
  (./chp_basis_sets.tex
 Chapter 3.
-[58
+[59
 
 
 
-] [59] <Figures/deltagamm.png, id=257, 1505.625pt x 961.5925pt>
+] [60] <Figures/deltagamm.png, id=260, 1505.625pt x 961.5925pt>
 File: Figures/deltagamm.png Graphic file (type png)
 
 <use Figures/deltagamm.png>
-Package pdftex.def Info: Figures/deltagamm.png used on input line 30.
+Package pdftex.def Info: Figures/deltagamm.png used on input line 34.
 (pdftex.def)             Requested size: 469.75499pt x 300.01271pt.
- [60 <./Figures/deltagamm.png (PNG copy)>] [61]
-(./code_snippets/BS_sub_auto_rwtbs.sh [62] [63] [64]
+ [61 <./Figures/deltagamm.png (PNG copy)>] [62]
+(./code_snippets/BS_sub_auto_rwtbs.sh [63] [64] [65]
 Overfull \hbox (44.63216pt too wide) in paragraph at lines 159--160
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[65]) [66] (./code_snippets/BS_find_best.sh) [67] [68] [69]
-Overfull \hbox (28.49303pt too wide) in alignment at lines 180--187
+[66]) [67] (./code_snippets/BS_find_best.sh) [68] [69] [70]
+Overfull \hbox (28.49303pt too wide) in alignment at lines 184--191
  [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (28.49303pt too wide) in alignment at lines 187--193
+Overfull \hbox (28.49303pt too wide) in alignment at lines 191--197
  [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (28.49303pt too wide) in alignment at lines 193--214
+Overfull \hbox (28.49303pt too wide) in alignment at lines 197--218
  [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (28.49303pt too wide) in alignment at lines 214--227
+Overfull \hbox (28.49303pt too wide) in alignment at lines 218--231
  [] [] [] [] [] [] [] [] [] [] 
  []
 
-[70] [71] [72] [73]
-<Figures/BS_non_rel_alpha.png, id=302, 1505.625pt x 949.5475pt>
+[71] [72] [73] [74]
+<Figures/BS_non_rel_alpha.png, id=305, 1505.625pt x 949.5475pt>
 File: Figures/BS_non_rel_alpha.png Graphic file (type png)
 
 <use Figures/BS_non_rel_alpha.png>
-Package pdftex.def Info: Figures/BS_non_rel_alpha.png used on input line 369.
+Package pdftex.def Info: Figures/BS_non_rel_alpha.png used on input line 373.
 (pdftex.def)             Requested size: 469.75499pt x 296.25473pt.
 
-<Figures/BS_non_rel_beta.png, id=303, 1505.625pt x 948.54375pt>
+<Figures/BS_non_rel_beta.png, id=306, 1505.625pt x 948.54375pt>
 File: Figures/BS_non_rel_beta.png Graphic file (type png)
 
 <use Figures/BS_non_rel_beta.png>
-Package pdftex.def Info: Figures/BS_non_rel_beta.png used on input line 377.
+Package pdftex.def Info: Figures/BS_non_rel_beta.png used on input line 381.
 (pdftex.def)             Requested size: 469.75499pt x 295.94156pt.
 
-<Figures/BS_non_rel_delta.png, id=304, 1505.625pt x 957.5775pt>
+<Figures/BS_non_rel_delta.png, id=307, 1505.625pt x 957.5775pt>
 File: Figures/BS_non_rel_delta.png Graphic file (type png)
 
 <use Figures/BS_non_rel_delta.png>
-Package pdftex.def Info: Figures/BS_non_rel_delta.png used on input line 386.
+Package pdftex.def Info: Figures/BS_non_rel_delta.png used on input line 390.
 (pdftex.def)             Requested size: 230.18251pt x 146.39198pt.
 
-<Figures/BS_non_rel_gamma.png, id=305, 1505.625pt x 947.54pt>
+<Figures/BS_non_rel_gamma.png, id=308, 1505.625pt x 947.54pt>
 File: Figures/BS_non_rel_gamma.png Graphic file (type png)
 
 <use Figures/BS_non_rel_gamma.png>
-Package pdftex.def Info: Figures/BS_non_rel_gamma.png used on input line 390.
+Package pdftex.def Info: Figures/BS_non_rel_gamma.png used on input line 394.
 (pdftex.def)             Requested size: 230.18251pt x 144.85747pt.
- [74] [75 <./Figures/BS_non_rel_alpha.png (PNG copy)>] [76 <./Figures/BS_non_re
+ [75] [76 <./Figures/BS_non_rel_alpha.png (PNG copy)>] [77 <./Figures/BS_non_re
 l_beta.png (PNG copy)> <./Figures/BS_non_rel_delta.png (PNG copy)> <./Figures/B
 S_non_rel_gamma.png (PNG copy)>]
-<Figures/BS_rel_alpha.png, id=317, 1505.625pt x 961.5925pt>
+<Figures/BS_rel_alpha.png, id=320, 1505.625pt x 961.5925pt>
 File: Figures/BS_rel_alpha.png Graphic file (type png)
 
 <use Figures/BS_rel_alpha.png>
-Package pdftex.def Info: Figures/BS_rel_alpha.png used on input line 401.
+Package pdftex.def Info: Figures/BS_rel_alpha.png used on input line 405.
 (pdftex.def)             Requested size: 469.75499pt x 300.01271pt.
 
-<Figures/BS_rel_beta.png, id=318, 1505.625pt x 948.54375pt>
+<Figures/BS_rel_beta.png, id=321, 1505.625pt x 948.54375pt>
 File: Figures/BS_rel_beta.png Graphic file (type png)
 
 <use Figures/BS_rel_beta.png>
-Package pdftex.def Info: Figures/BS_rel_beta.png used on input line 409.
+Package pdftex.def Info: Figures/BS_rel_beta.png used on input line 413.
 (pdftex.def)             Requested size: 469.75499pt x 295.94156pt.
 
-<Figures/BS_rel_delta.png, id=319, 1505.625pt x 963.6pt>
+<Figures/BS_rel_delta.png, id=322, 1505.625pt x 963.6pt>
 File: Figures/BS_rel_delta.png Graphic file (type png)
 
 <use Figures/BS_rel_delta.png>
-Package pdftex.def Info: Figures/BS_rel_delta.png used on input line 418.
+Package pdftex.def Info: Figures/BS_rel_delta.png used on input line 422.
 (pdftex.def)             Requested size: 230.18251pt x 147.31268pt.
 
-<Figures/BS_rel_gamma.png, id=320, 1505.625pt x 957.5775pt>
+<Figures/BS_rel_gamma.png, id=323, 1505.625pt x 957.5775pt>
 File: Figures/BS_rel_gamma.png Graphic file (type png)
 
 <use Figures/BS_rel_gamma.png>
-Package pdftex.def Info: Figures/BS_rel_gamma.png used on input line 422.
+Package pdftex.def Info: Figures/BS_rel_gamma.png used on input line 426.
 (pdftex.def)             Requested size: 230.18251pt x 146.39198pt.
-) [77 <./Figures/BS_rel_alpha.png (PNG copy)>]
-[78 <./Figures/BS_rel_beta.png (PNG copy)> <./Figures/BS_rel_delta.png (PNG cop
+) [78 <./Figures/BS_rel_alpha.png (PNG copy)>]
+[79 <./Figures/BS_rel_beta.png (PNG copy)> <./Figures/BS_rel_delta.png (PNG cop
 y)> <./Figures/BS_rel_gamma.png (PNG copy)>]
 \openout2 = `chp_con_fut.aux'.
 
  (./chp_con_fut.tex
 Chapter 4.
-[79
+[80
 
 
 
-] [80]) [81] (./thesis.bbl [82
+] [81]) [82] (./thesis.bbl [83
 
 
 
@@ -1007,35 +1013,35 @@ Missing character: There is no ê in font cmr12!
 Missing character: There is no ‚ in font cmr12!
 Missing character: There is no Ä in font cmr12!
 Missing character: There is no ê in font cmr12!
-) [83] [84]
+ [84]) [85]
 \openout2 = `appendix/app_cudaDFRATOM_inps.aux'.
 
 
 (./appendix/app_cudaDFRATOM_inps.tex
 Appendix A.
 (./appendix/inp_out_files/82Pb_gauss_35s30p-30p+25d-25d+20f-20f+.inp)
-(./appendix/inp_out_files/82Pb_gauss_35s30p-30p+25d-25d+20f-20f+.log [85
+(./appendix/inp_out_files/82Pb_gauss_35s30p-30p+25d-25d+20f-20f+.log [86
 
 
 ]
-[86] [87] [88] [89] [90] [91] [92])
+[87] [88] [89] [90] [91] [92] [93])
 (./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+.inp)
-(./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+.log [93] [94]
-[95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107])
-(./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+_readin.inp [108]
-[109]) (./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+_readin.log
-[110] [111] [112] [113] [114] [115] [116] [117])) [118]
+(./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+.log [94] [95]
+[96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108])
+(./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+_readin.inp [109]
+[110]) (./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+_readin.log
+[111] [112] [113] [114] [115] [116] [117] [118])) [119]
 \openout2 = `appendix/app_cudaDFRATOM_suto_sub.aux'.
 
 
 (./appendix/app_cudaDFRATOM_suto_sub.tex
 Appendix B.
-(./appendix/auto_scripts/BS_sub_auto.sh [119
+(./appendix/auto_scripts/BS_sub_auto.sh [120
 
 
 
-] [120])
-(./appendix/auto_scripts/BS_get_best.sh)) [121]
+] [121])
+(./appendix/auto_scripts/BS_get_best.sh)) [122]
 \@syc=\write6
 \openout6 = `thesis.syc'.
 
@@ -1052,13 +1058,13 @@ LaTeX Warning: There were multiply-defined labels.
  )
 (\end occurred when \ifx on line 678 was incomplete) 
 Here is how much of TeX's memory you used:
- 7476 strings out of 493089
- 106746 string characters out of 6134842
- 665197 words of memory out of 5000000
- 10696 multiletter control sequences out of 15000+600000
+ 7493 strings out of 493089
+ 107040 string characters out of 6134842
+ 665288 words of memory out of 5000000
+ 10713 multiletter control sequences out of 15000+600000
  20059 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,23n,50p,1883b,1564s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,23n,50p,1838b,1564s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texm
@@ -1084,10 +1090,10 @@ msfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmtt12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmtt8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on thesis.pdf (131 pages, 1769514 bytes).
+Output written on thesis.pdf (132 pages, 1773067 bytes).
 PDF statistics:
- 545 PDF objects out of 1000 (max. 8388607)
- 362 compressed objects within 4 object streams
+ 548 PDF objects out of 1000 (max. 8388607)
+ 364 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

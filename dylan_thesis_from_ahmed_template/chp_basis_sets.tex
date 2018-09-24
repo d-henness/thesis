@@ -41,11 +41,11 @@ It should be mentioned that each symmetry does not need to use the entire set of
 
 \section{Methods}
 \subsection{Basis set size optimization}
-We decided to use a somewhat novel method of generating our basis sets. We begin by choosing an arbitrarily large basis set size, such as \mbox{s$(1:40)$p$(1:40)$d$(1:40)$f$(1:40)$} (here $i(\#:\#)$ refers to the starting and ending index of $\zeta$'s used for symmetry $i$). Next, we then find the optimal $\alpha$, $\beta$, $\delta$, and $\gamma$ WTBS parameters for this basis set. Finally, we use the following steps to find the optimal basis set size.
+We decided to use a somewhat novel method of generating our basis sets. We begin by choosing an arbitrarily large basis set size, such as \mbox{s$(1:40)$p$(1:40)$d$(1:40)$f$(1:40)$} (here $i(\#:\#)$ refers to the starting and ending index of $\zeta$'s used for symmetry $i$). Next, we then find the optimal $\alpha$, $\beta$, $\delta$, and $\gamma$ WTBS parameters for this basis set. \notetodylan{This is done using NEWUOA\cite{Powell2006} which will find the values $\alpha$, $\beta$, $\delta$, and $\gamma$ that produce the lowest possible energy for a given basis set size.} Finally, we use the following steps to find the optimal basis set size.
 
 \textit{Step 1.} Begin by finding the fewest number of f functions necessary. This can be done by generating input files that range in size from  \mbox{s$(1:40)$p$(1:40)$d$(1:40)$f$(1:1)$} to  \mbox{s$(1:40)$p$(1:40)$d$(1:40)$f$(1:40)$}.
 
-\textit{Step 2.} Optimize the basis sets and select the smallest basis set that is still below some minimum accuracy threshold. We chose a relative error to numerical calculations of no greater than $5.0\times10^{-9}$ for non-relativistic sets and $5.0\times10^{-8}$ for relativistic sets where relative error is defined as $\frac{|(\text{optimized energy}) - (\text{numerical energy})|}{\text{numerical enlet usergy}}$. The size of this basis set is  \mbox{s$(1:40)$p$(1:40)$d$(1:40)$f$(1:x_{f})$}.
+\textit{Step 2.} Optimize the basis sets and select the smallest basis set that is still below some minimum accuracy threshold. We chose a relative error to numerical calculations of no greater than $5.0\times10^{-9}$ for non-relativistic sets and $5.0\times10^{-8}$ for relativistic sets where relative error is defined as $\frac{|(\text{optimized energy}) - (\text{numerical energy})|}{\text{numerical energy}}$. The size of this basis set is  \mbox{s$(1:40)$p$(1:40)$d$(1:40)$f$(1:x_{f})$}.
 
 \textit{Step 3.} Replace the WTBS parameters with those from the newly optimized set and generate a list of input files that range in size from  \mbox{s$(1:40)$p$(1:40)$d$(1:x_{f})$f$(1:x_{f})$} to  \mbox{s$(1:40)$p$(1:40)$d$(1:40)$f$(1:x_{f})$}.
 
@@ -360,7 +360,56 @@ The optimized non-relativistic WTBS parameters and basis set sizes for elements 
 85 At$^{r}$ &   -22909.806        & -22909.807        &   $8\times10^{-4}$      &   $3.7\times10^{-8}$    \\
 86 Rn$^{r}$ &   -23602.103        & -23602.104        &   $1\times10^{-3}$      &   $4.8\times10^{-8}$    \\
 \bottomrule  	
-\end{longtable} 
+\end{longtable}
+
+In Table  
+
+\begin{longtable}{l r r r r}
+\caption[Comparison of basis sets produced by cudaDFRATOM and Dyall's triple-zeta basis sets.]{Comparison of basis sets produced by cudaDFRATOM and Dyall's triple-zeta basis sets.} \label{tab:BStab_with_refs} \\
+\toprule
+	Element	  &	Calculated Energy		&	Literature Energy	&	Absolute Error	        &	Relative Error	        \\
+			
+\midrule
+\endfirsthead
+\caption[]{(continued)}\\
+\toprule
+	Element	  &	Calculated Energy   &	Literature Energy &   Absolute Error        &   Relative Error	      \\
+\midrule
+\endhead
+55 Cs$^{r}$ &    -7786.771        &  -7786.771        &   $3\times10^{-4}$      &   $4.6\times10^{-8}$    \\
+56 Ba$^{r}$ &    -8135.644        &  -8135.645        &   $3\times10^{-4}$      &   $4.7\times10^{-8}$    \\
+57 La$^{r}$ &    -8493.543        &  -8493.543        &   $4\times10^{-4}$      &   $4.8\times10^{-8}$    \\
+58 Ce$^{r}$ &    -8860.997        &  -8860.997        &   $4\times10^{-4}$      &   $4.5\times10^{-8}$    \\
+59 Pr$^{r}$ &    -9238.148        &  -9238.148        &   $4\times10^{-4}$      &   $4.6\times10^{-8}$    \\
+60 Nd$^{r}$ &    -9625.131        &  -9625.131        &   $4\times10^{-4}$      &   $4.8\times10^{-8}$    \\
+61 Pm$^{r}$ &   -10022.094        & -10022.095        &   $5\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+62 Sm$^{r}$ &   -10429.162        & -10429.163        &   $5\times10^{-4}$      &   $4.8\times10^{-8}$    \\
+63 Eu$^{r}$ &   -10846.504        & -10846.505        &   $4\times10^{-4}$      &   $4.4\times10^{-8}$    \\
+64 Gd$^{r}$ &   -11274.242        & -11274.242        &   $5\times10^{-4}$      &   $4.7\times10^{-8}$    \\
+65 Td$^{r}$ &   -11712.544        & -11712.545        &   $5\times10^{-4}$      &   $4.3\times10^{-8}$    \\
+66 Dy$^{r}$ &   -12161.545        & -12161.545        &   $6\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+67 Ho$^{r}$ &   -12621.412        & -12621.413        &   $5\times10^{-4}$      &   $4.6\times10^{-8}$    \\
+68 Er$^{r}$ &   -13092.269        & -13092.270        &   $6\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+69 Tm$^{r}$ &   -13574.316        & -13574.317        &   $6\times10^{-4}$      &   $4.8\times10^{-8}$    \\
+70 Yb$^{r}$ &   -14067.676        & -14067.677        &   $6\times10^{-4}$      &   $4.6\times10^{-8}$    \\
+71 Lu$^{r}$ &   -14572.532        & -14572.533        &   $7\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+72 Hf$^{r}$ &   -15088.785        & -15088.786        &   $7\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+73 Ta$^{r}$ &   -15616.630        & -15616.630        &   $7\times10^{-4}$      &   $4.7\times10^{-8}$    \\
+74 W$^{r}$  &   -16156.184        & -16156.185        &   $8\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+75 Re$^{r}$ &   -16707.619        & -16707.620        &   $8\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+76 Os$^{r}$ &   -17271.081        & -17271.082        &   $8\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+77 Ir$^{r}$ &   -17846.787        & -17846.788        &   $8\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+78 Pt$^{r}$ &   -18434.873        & -18434.874        &   $9\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+79 Au$^{r}$ &   -19035.525        & -19035.526        &   $9\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+80 Hg$^{r}$ &   -19648.895        & -19648.896        &   $9\times10^{-4}$      &   $4.9\times10^{-8}$    \\
+81 Tl$^{r}$ &   -20274.849        & -20274.850        &   $9\times10^{-4}$      &   $4.8\times10^{-8}$    \\
+82 Pb$^{r}$ &   -20913.713        & -20913.714        &   $9\times10^{-4}$      &   $4.7\times10^{-8}$    \\
+83 Bi$^{r}$ &   -21565.705        & -21565.706        &   $1\times10^{-3}$      &   $4.9\times10^{-8}$    \\
+84 Po$^{r}$ &   -22231.012        & -22231.013        &   $9\times10^{-4}$      &   $4.1\times10^{-8}$    \\
+85 At$^{r}$ &   -22909.806        & -22909.807        &   $8\times10^{-4}$      &   $3.7\times10^{-8}$    \\
+86 Rn$^{r}$ &   -23602.103        & -23602.104        &   $1\times10^{-3}$      &   $4.8\times10^{-8}$    \\
+\bottomrule  	
+\end{longtable}
 
 Figures \ref{fig:BS_non_rel_alpha}, \ref{fig:BS_non_rel_beta}, and \ref{fig:BS_non_rel_delt_gamm} show the trends of various non-relativistic parameters with respect to nuclear charge. In Figure  \ref{fig:BS_non_rel_alpha}, we can see that there is an interesting pattern where the exponent of the most diffuse function becomes larger as we move right across a row. It is also interesting to note that the rate at which the exponent increases changes when going from one block of that row to the next. The trend roughly follows what we expect from periodic trends of atomic size: atoms get larger by going left on the table. The trend of atoms getting larger when moving down the periodic table is mostly obeyed, however there are exceptions. For instance, the 4d elements have smaller values of $\alpha$ than the 5d elements.
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.26)  26 SEP 2018 15:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.26)  26 SEP 2018 15:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1260,6 +1260,8 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 135.
 LaTeX Info: Redefining \pageref on input line 135.
 LaTeX Info: Redefining \nameref on input line 135.
+
+(./thesis.out) (./thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
 
@@ -1307,66 +1309,158 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ] [4] [5
 
 ]
+(./thesis.toc [6
 
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
+])
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
-[6
-
-]
-
-Package hyperref Warning: old lot file detected, not used; run LaTeX again.
-
+ [7] (./thesis.lot)
 \tf@lot=\write6
 \openout6 = `thesis.lot'.
 
-[7
+ [8
 
-]
+] (./thesis.lof
+! Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.17 ...0D $ are changed.}}{61}{figure.caption.29}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
 
-Package hyperref Warning: old lof file detected, not used; run LaTeX again.
+! Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.17 ...0D $ are changed.}}{61}{figure.caption.29}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
 
+! Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.17 ...0D $ are changed.}}{61}{figure.caption.29}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+! Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.18 .... nuclear charge.}}{77}{figure.caption.31}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+! Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.19 .... nuclear charge.}}{78}{figure.caption.32}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+! Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.20 ...10D $ parameters.}}{78}{figure.caption.33}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+! Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.20 ...10D $ parameters.}}{78}{figure.caption.33}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+! Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.21 .... nuclear charge.}}{79}{figure.caption.34}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+! Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.22 .... nuclear charge.}}{80}{figure.caption.35}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+! Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.23 ...10D $ parameters.}}{80}{figure.caption.36}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+! Missing control sequence inserted.
+<inserted text> 
+                \inaccessible 
+l.23 ...10D $ parameters.}}{80}{figure.caption.36}
+                                                  
+Please don't say `\def cs{...}', say `\def\cs{...}'.
+I've inserted an inaccessible control sequence so that your
+definition will be completed without mixing me up too badly.
+You can recover graciously from this error, if you're
+careful; see exercise 27.2 in The TeXbook.
+
+)
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
-[8
+ [9
 
 ]
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 807.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 807.
- [9
+ [10
 
 ]
 \openout2 = `chp_intro.aux'.
 
  (./chp_intro.tex
 Chapter 1.
-Runaway argument?
-{\@firstoffive }\fi  
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.7 
-    
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.14 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1375,281 +1469,13 @@ l.22
       [1
 
 
-]
-Runaway argument?
-{\@firstoffive }\fi , we notice that it is inversely proportional to \ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.24 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+] [2]
 
-Runaway argument?
-{\@firstoffive }\fi \cite {Griffiths2} 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.33 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2]
-Runaway argument?
-{\@firstoffive }\fi  shows the reduced form of $\Psi $ for a few diff\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.85 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[3]
-Runaway argument?
-{\@firstoffive }\fi  
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.111 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[4] [5]
-Runaway argument?
-{\@firstoffive }\fi  and it is still a valid operator), the exchange \ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.250 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi , but notice that $\psi _{a}$ has been swapped (o\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.257 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[6]
-Runaway argument?
-{\@firstoffive }\fi , it was said that there were some ground rules f\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.296 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[7]
-Runaway argument?
-{\@firstoffive }\fi . 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.330 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  and \ref {eq:exchange_op}, shows that they depen\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.333 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[8]
-Runaway argument?
-{\@firstoffive }\fi  with the $H^{\text {core}}$ hamiltonian matrix o\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.359 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[9]
-Runaway argument?
-{\@firstoffive }\fi  also implies that an object can have a maximum s\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.376 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  as a Taylor series centered at zero, we obtain t\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.385 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[10]
-Runaway argument?
-{\@firstoffive }\fi  in terms of $\hat {p}$ and get\cite {Piela} 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.414 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  into Equation \ref {eq:emc2_mom} and multiply bo\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.421 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[11]
-Runaway argument?
-{\@firstoffive }\fi  are 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.465 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  will give negative energy and Equation \ref {eq:\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.497 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[12]
-Runaway argument?
-{\@firstoffive }\fi  is only half of the total equation. We still hav\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.549 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  as a matrix multiplication problem of the form 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.551 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  and \ref {eq:dirac_matmul_p2} now become 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.585 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  as 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.596 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[13]
-Runaway argument?
-{\@firstoffive }\fi  that the mass of an object increases with its sp\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.632 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[14]
-Runaway argument?
-{\@firstoffive }\fi  by \ref {eq:non_rel_bohr} gives 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.639 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  to 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.651 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-) [15]
-! Extra \else.
-\@include ...ediate \closeout \@partaux \fi \else 
-                                                  \deadcycles \z@ \@nameuse ...
-l.890 \include{chp_intro}
-                         
-I'm ignoring this; it doesn't match any \if.
-
+[3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15]) [16]
 \openout2 = `chp_cuda_dfratom.aux'.
+
 
 (./chp_cuda_dfratom.tex
 Chapter 2.
@@ -1657,150 +1483,75 @@ Chapter 2.
 
 
 
-]
-Runaway argument?
-{\@firstoffive }\fi ), but no more than 8 blocks per SM can ever be r\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.18 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[18]
-Runaway argument?
-{\@firstoffive }\fi  shows the hierarchy of the grid, blocks, and thr\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.30 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-<Figures/gpu_arc.png, id=290, 803.0pt x 1057.9525pt>
+] [18] [19]
+<Figures/gpu_arc.png, id=629, 803.0pt x 1057.9525pt>
 File: Figures/gpu_arc.png Graphic file (type png)
 <use Figures/gpu_arc.png>
 Package pdftex.def Info: Figures/gpu_arc.png  used on input line 33.
 (pdftex.def)             Requested size: 389.89749pt x 513.70364pt.
 
+
 LaTeX Warning: Float too large for page by 3.77364pt on input line 37.
 
-[19] [20 <./Figures/gpu_arc.png (PNG copy)>]
+[20] [21 <./Figures/gpu_arc.png (PNG copy)>]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 51.
  (./code_snippets/mat_mul.cuf
-[21] [22] [23]) [24]
+[22] [23]) [24] [25]
 Overfull \hbox (19.58568pt too wide) in paragraph at lines 64--65
 []\OT1/cmr/m/it/12 Step 2\OT1/cmr/m/n/12 . The cal-cu-la-tion of small ar-rays 
 and other con-stants is per-formed by \OT1/cmr/bx/it/12 calc[]parameters
  []
 
-[25]
-Runaway argument?
-{\@firstoffive }\fi  where $nsym$ is the total number of symmetries, \ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.81 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
+[26]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 83.
-Runaway argument?
-{\@firstoffive }\fi . The third problem with this is that with the ma\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.144 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[26] [27]
-<Figures/30_25_20_15_naive_layout.png, id=489, 1957.3125pt x 2007.5pt>
+ [27] [28]
+<Figures/30_25_20_15_naive_layout.png, id=825, 1957.3125pt x 2007.5pt>
 File: Figures/30_25_20_15_naive_layout.png Graphic file (type png)
 <use Figures/30_25_20_15_naive_layout.png>
 Package pdftex.def Info: Figures/30_25_20_15_naive_layout.png  used on input li
 ne 146.
 (pdftex.def)             Requested size: 469.75499pt x 481.77922pt.
 
-Runaway argument?
-{\@firstoffive }\fi . The basis set used had $nsym = 7$ with $nbs(i)=\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.148 ...ke this algorithm an undesirable choice.}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
 
-Runaway argument?
-{\@firstoffive }\fi . The basis set used had $nsym = 7$ with $nbs(i)=\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.148 ...ke this algorithm an undesirable choice.}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Runaway argument?
-{\@firstoffive }\fi . We might consider using a two dimensional solut\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.153 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[28 <./Figures/30_25_20_15_naive_layout.png (PNG copy)>]
-<Figures/gen_mat_block_layout.png, id=495, 1003.75pt x 1001.7425pt>
+<Figures/gen_mat_block_layout.png, id=831, 1003.75pt x 1001.7425pt>
 File: Figures/gen_mat_block_layout.png Graphic file (type png)
 <use Figures/gen_mat_block_layout.png>
 Package pdftex.def Info: Figures/gen_mat_block_layout.png  used on input line 1
 57.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
-<Figures/gen_vec_block_layout.png, id=496, 1003.75pt x 1286.8075pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Figures/gen_vec_block_layout.png, id=832, 1003.75pt x 1286.8075pt>
 File: Figures/gen_vec_block_layout.png Graphic file (type png)
 <use Figures/gen_vec_block_layout.png>
 Package pdftex.def Info: Figures/gen_vec_block_layout.png  used on input line 1
 64.
 (pdftex.def)             Requested size: 469.75499pt x 602.22742pt.
 
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[29 <./Figures/gen_mat_block_layout.png (PNG copy)>] [30] [31 <./Figures/gen_ve
-c_block_layout.png (PNG copy)>]
-Runaway argument?
-{\@firstoffive }\fi  and \ref {fig:eint2vec}. Figure \ref {fig:eint2m\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.200 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+[29]
 
-<Figures/eint2_mat.png, id=517, 1003.75pt x 1001.7425pt>
+LaTeX Warning: Text page 30 contains only floats.
+
+[30 <./Figures/30_25_20_15_naive_layout.png (PNG copy)>] [31 <./Figures/gen_mat
+_block_layout.png (PNG copy)>] [32 <./Figures/gen_vec_block_layout.png (PNG cop
+y)>]
+<Figures/eint2_mat.png, id=859, 1003.75pt x 1001.7425pt>
 File: Figures/eint2_mat.png Graphic file (type png)
 <use Figures/eint2_mat.png>
 Package pdftex.def Info: Figures/eint2_mat.png  used on input line 202.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
-<Figures/eint2_vec.png, id=518, 1003.75pt x 787.94376pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Figures/eint2_vec.png, id=860, 1003.75pt x 787.94376pt>
 File: Figures/eint2_vec.png Graphic file (type png)
 <use Figures/eint2_vec.png>
 Package pdftex.def Info: Figures/eint2_vec.png  used on input line 209.
@@ -1808,171 +1559,22 @@ Package pdftex.def Info: Figures/eint2_vec.png  used on input line 209.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[33
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-Runaway argument?
-{\@firstoffive }\fi , and $P$ and $Q$ can be found with Algorithm \ref \ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.253 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[32
-
- <./Figures/eint2_mat.png (PNG copy)>] [33 <./Figures/eint2_vec.png (PNG copy)>
-]
-Runaway argument?
-{\@firstoffive }\fi  corresponds to the non-relativistic density matr\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.313 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-<Figures/dtmx_mat.png, id=529, 1003.75pt x 1001.7425pt>
+] [34 <./Figures/eint2_mat.png (PNG copy)>] [35 <./Figures/eint2_vec.png (PNG c
+opy)>] [36]
+<Figures/dtmx_mat.png, id=951, 1003.75pt x 1001.7425pt>
 File: Figures/dtmx_mat.png Graphic file (type png)
 <use Figures/dtmx_mat.png>
 Package pdftex.def Info: Figures/dtmx_mat.png  used on input line 320.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
-<Figures/dtmx_vec.png, id=530, 1003.75pt x 713.66624pt>
+<Figures/dtmx_vec.png, id=952, 1003.75pt x 713.66624pt>
 File: Figures/dtmx_vec.png Graphic file (type png)
 <use Figures/dtmx_vec.png>
 Package pdftex.def Info: Figures/dtmx_vec.png  used on input line 327.
 (pdftex.def)             Requested size: 469.75499pt x 333.99663pt.
-[34] [35] [36 <./Figures/dtmx_mat.png (PNG copy)>] [37 <./Figures/dtmx_vec.png 
-(PNG copy)>]
-Runaway argument?
-{\@firstoffive }\fi  and \ref {xmrs} where $L=\lambda $ and $M=\mu $.\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.364 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi . How exactly this works is shown in the followin\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.378 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[38]
-Runaway argument?
-{\@firstoffive }\fi , and then combining the products of these multip\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.388 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi , $inttype$ can have a value of 0 or 1, where 0 r\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.482 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  and $\frac {total - 1}{blockDim.x} \times \frac \ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.484 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  shows how this is done. 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.487 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  and \ref {MTSE_K2}, but $inttype$ can only be 0 \ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.539 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  has two nested loops. The outer one loops over e\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.541 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[39] [40] [41] [42]
-Runaway argument?
-{\@firstoffive }\fi . 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.546 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  when the amount of registers a thread needs exce\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.573 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  and Figure \ref {fig:2eintprof} show the results\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.576 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-
+ [37] [38 <./Figures/dtmx_mat.png (PNG copy)>] [39 <./Figures/dtmx_vec.png (PNG
+ copy)>] [40] [41] [42] [43] [44] [45] [46]
 Overfull \hbox (13.66783pt too wide) in paragraph at lines 583--583
 []|\OT1/cmr/bx/it/12 binary[]search|  
  []
@@ -1982,45 +1584,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 598--601
 
  []
 
-[43]
-<Figures/eint2prof.png, id=772, 1003.75pt x 625.33624pt>
+<Figures/eint2prof.png, id=1145, 1003.75pt x 625.33624pt>
 File: Figures/eint2prof.png Graphic file (type png)
 <use Figures/eint2prof.png>
 Package pdftex.def Info: Figures/eint2prof.png  used on input line 604.
 (pdftex.def)             Requested size: 469.75499pt x 292.6581pt.
 
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Runaway argument?
-{\@firstoffive }\fi  shows two different speedups: one for just calcu\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.611 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi , there were two different attempts to speedup th\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.614 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
+[47]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/formpqprof.png, id=773, 1003.75pt x 637.38126pt>
+<Figures/formpqprof.png, id=1155, 1003.75pt x 637.38126pt>
 File: Figures/formpqprof.png Graphic file (type png)
 <use Figures/formpqprof.png>
 Package pdftex.def Info: Figures/formpqprof.png  used on input line 658.
@@ -2028,53 +1607,19 @@ Package pdftex.def Info: Figures/formpqprof.png  used on input line 658.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[44] [45 <./Figures/eint2prof.png (PNG copy)>] [46 <./Figures/formpqprof.png (P
-NG copy)>]
-<Figures/eint2_mat_lots.png, id=793, 1003.75pt x 1001.7425pt>
+[48 <./Figures/eint2prof.png (PNG copy)>] [49]
+<Figures/eint2_mat_lots.png, id=1164, 1003.75pt x 1001.7425pt>
 File: Figures/eint2_mat_lots.png Graphic file (type png)
 <use Figures/eint2_mat_lots.png>
 Package pdftex.def Info: Figures/eint2_mat_lots.png  used on input line 669.
 (pdftex.def)             Requested size: 469.75499pt x 468.81667pt.
-<Figures/eint2_vec_lots.png, id=794, 2007.5pt x 1238.6275pt>
+<Figures/eint2_vec_lots.png, id=1165, 2007.5pt x 1238.6275pt>
 File: Figures/eint2_vec_lots.png Graphic file (type png)
 <use Figures/eint2_vec_lots.png>
 Package pdftex.def Info: Figures/eint2_vec_lots.png  used on input line 676.
 (pdftex.def)             Requested size: 469.75499pt x 289.83011pt.
-
-Runaway argument?
-{\@firstoffive }\fi .\caption@ifstrut {\ifhmode \@finalstrut \strutbox \ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.678 ...me way as Figure \ref{fig:eint2matlots}.}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi .\caption@ifstrut {\ifhmode \@finalstrut \strutbox \ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.678 ...me way as Figure \ref{fig:eint2matlots}.}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  and \ref {tab:totalprofalg2}. 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.687 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-
+ [50 <./Figures/formpqprof.png (PNG copy)>] [51 <./Figures/eint2_mat_lots.png (
+PNG copy)>] [52 <./Figures/eint2_vec_lots.png (PNG copy)>]
 Overfull \hbox (15.54016pt too wide) in paragraph at lines 692--707
  [] 
  []
@@ -2084,32 +1629,21 @@ Overfull \hbox (15.54016pt too wide) in paragraph at lines 714--729
  [] 
  []
 
-[47] [48 <./Figures/eint2_mat_lots.png (PNG copy)>] [49 <./Figures/eint2_vec_lo
-ts.png (PNG copy)>]
-<Figures/totaltimeprof.png, id=812, 1003.75pt x 642.4pt>
+<Figures/totaltimeprof.png, id=1183, 1003.75pt x 642.4pt>
 File: Figures/totaltimeprof.png Graphic file (type png)
 <use Figures/totaltimeprof.png>
 Package pdftex.def Info: Figures/totaltimeprof.png  used on input line 733.
 (pdftex.def)             Requested size: 469.75499pt x 300.64395pt.
- [50 <./Figures/totaltimeprof.png (PNG copy)>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[53] [54 <./Figures/totaltimeprof.png (PNG copy)>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Runaway argument?
-{\@firstoffive }\fi . 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.751 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-
 Overfull \hbox (4.57948pt too wide) in paragraph at lines 758--758
 []\OT1/cmr/m/n/12 'energy'| 
  []
@@ -2119,12 +1653,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 754--762
 
  []
 
-[51]
+
 Underfull \hbox (badness 10000) in paragraph at lines 762--773
 
  []
 
-
+[55]
 Underfull \hbox (badness 10000) in paragraph at lines 773--784
 
  []
@@ -2150,17 +1684,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 785--798
 
  []
 
-[52]
-Underfull \hbox (badness 10000) in paragraph at lines 799--813
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 799--813
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 799--813
+
+ []
+
+[56]
 Underfull \hbox (badness 5133) in paragraph at lines 819--820
 \OT1/cmr/m/n/12 bi-na-tions of spinor oc-cu-pan-cies (de-
  []
@@ -2175,7 +1709,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 813--826
 
  []
 
-[53]
+
 Underfull \hbox (badness 3396) in paragraph at lines 834--835
 []\OT1/cmr/m/n/12 Convergence limit for the large-large
  []
@@ -2210,92 +1744,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 826--839
 
  []
 
-) [54]
-! Extra \else.
-\@include ...ediate \closeout \@partaux \fi \else 
-                                                  \deadcycles \z@ \@nameuse ...
-l.891 \include{chp_cuda_dfratom}
-                                
-I'm ignoring this; it doesn't match any \if.
-
+[57]) [58]
 \openout2 = `chp_basis_sets.aux'.
 
-(./chp_basis_sets.tex
+ (./chp_basis_sets.tex
 Chapter 3.
-Runaway argument?
-{\@firstoffive }\fi , the use of Gaussian-type functions is the favor\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.5 
-    
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
 [59
 
 
 
-]
-Runaway argument?
-{\@firstoffive }\fi . 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.31 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-<Figures/deltagamm.png, id=857, 1505.625pt x 961.5925pt>
+] [60]
+<Figures/deltagamm.png, id=1238, 1505.625pt x 961.5925pt>
 File: Figures/deltagamm.png Graphic file (type png)
 <use Figures/deltagamm.png>
 Package pdftex.def Info: Figures/deltagamm.png  used on input line 34.
 (pdftex.def)             Requested size: 469.75499pt x 300.01271pt.
-[60] [61 <./Figures/deltagamm.png (PNG copy)>] [62]
-Runaway argument?
-{\@firstoffive }\fi . 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.65 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
+ [61 <./Figures/deltagamm.png (PNG copy)>] [62]
 (./code_snippets/BS_sub_auto_rwtbs.sh [63] [64] [65] [66]
 Overfull \hbox (44.63216pt too wide) in paragraph at lines 159--160
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-) [67] (./code_snippets/BS_find_best.sh [68])
-Runaway argument?
-{\@firstoffive }\fi . 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.78 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi . Relativistic WTBS parameters for elements 55-86\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.82 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[69] [70]
+) [67] (./code_snippets/BS_find_best.sh) [68] [69] [70]
 Overfull \hbox (28.49303pt too wide) in alignment at lines 184--191
  [] [] [] [] [] [] [] [] [] [] 
  []
@@ -2310,80 +1781,12 @@ Overfull \hbox (28.49303pt too wide) in alignment at lines 197--218
  [] [] [] [] [] [] [] [] [] [] 
  []
 
-[71]
+
 Overfull \hbox (28.49303pt too wide) in alignment at lines 218--231
  [] [] [] [] [] [] [] [] [] [] 
  []
 
-Runaway argument?
-{\@firstoffive }\fi  and \ref {tab:BStab_rel}. Relativistic basis set\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.234 ... data comes from \cite{VISSCHER1997207}.}
-                                                  \label{tab:BStab_with_refs...
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  and \ref {tab:BStab_rel}. Relativistic basis set\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.234 ... data comes from \cite{VISSCHER1997207}.}
-                                                  \label{tab:BStab_with_refs...
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-[72] [73] [74]
-! Argument of \Hy@setref@link has an extra }.
-<inserted text> 
-                \par 
-l.365 ...account for these two different affects.}
-                                                  
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-{\@firstoffive }\fi  a comparison of the basis sets produced by cudaD\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.365 ...account for these two different affects.}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Argument of \Hy@setref@link has an extra }.
-<inserted text> 
-                \par 
-l.367 ... are more comparable in size to Dyall's.}
-                                                  
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-{\@firstoffive }\fi  that the cudaDFRATOM basis sets are all larger t\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.367 ... are more comparable in size to Dyall's.}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
+[71] [72] [73] [74] [75]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -2402,105 +1805,55 @@ Overfull \hbox (54.28563pt too wide) in paragraph at lines 372--397
 [][]
  []
 
-Runaway argument?
-{\@firstoffive }\fi , \ref {fig:BS_non_rel_beta}, and \ref {fig:BS_no\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.400 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  shows that $\beta $ generally decreases as nucle\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.402 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  shows the values of $\delta $ and $\gamma $ with\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.404 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-<Figures/BS_non_rel_alpha.png, id=1151, 1505.625pt x 949.5475pt>
+<Figures/BS_non_rel_alpha.png, id=1546, 1505.625pt x 949.5475pt>
 File: Figures/BS_non_rel_alpha.png Graphic file (type png)
 <use Figures/BS_non_rel_alpha.png>
 Package pdftex.def Info: Figures/BS_non_rel_alpha.png  used on input line 407.
 (pdftex.def)             Requested size: 469.75499pt x 296.25473pt.
-<Figures/BS_non_rel_beta.png, id=1152, 1505.625pt x 948.54375pt>
+[76]
+<Figures/BS_non_rel_beta.png, id=1552, 1505.625pt x 948.54375pt>
 File: Figures/BS_non_rel_beta.png Graphic file (type png)
 <use Figures/BS_non_rel_beta.png>
 Package pdftex.def Info: Figures/BS_non_rel_beta.png  used on input line 415.
 (pdftex.def)             Requested size: 469.75499pt x 295.94156pt.
-<Figures/BS_non_rel_delta.png, id=1153, 1505.625pt x 957.5775pt>
+<Figures/BS_non_rel_delta.png, id=1553, 1505.625pt x 957.5775pt>
 File: Figures/BS_non_rel_delta.png Graphic file (type png)
 <use Figures/BS_non_rel_delta.png>
 Package pdftex.def Info: Figures/BS_non_rel_delta.png  used on input line 424.
 (pdftex.def)             Requested size: 230.18251pt x 146.39198pt.
-<Figures/BS_non_rel_gamma.png, id=1154, 1505.625pt x 947.54pt>
+<Figures/BS_non_rel_gamma.png, id=1554, 1505.625pt x 947.54pt>
 File: Figures/BS_non_rel_gamma.png Graphic file (type png)
 <use Figures/BS_non_rel_gamma.png>
 Package pdftex.def Info: Figures/BS_non_rel_gamma.png  used on input line 428.
 (pdftex.def)             Requested size: 230.18251pt x 144.85747pt.
-Runaway argument?
-{\@firstoffive }\fi  that the trend in $\alpha $ from the non-relativ\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.436 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-<Figures/BS_rel_alpha.png, id=1155, 1505.625pt x 961.5925pt>
+<Figures/BS_rel_alpha.png, id=1558, 1505.625pt x 961.5925pt>
 File: Figures/BS_rel_alpha.png Graphic file (type png)
 <use Figures/BS_rel_alpha.png>
 Package pdftex.def Info: Figures/BS_rel_alpha.png  used on input line 439.
 (pdftex.def)             Requested size: 469.75499pt x 300.01271pt.
-<Figures/BS_rel_beta.png, id=1156, 1505.625pt x 948.54375pt>
+<Figures/BS_rel_beta.png, id=1559, 1505.625pt x 948.54375pt>
 File: Figures/BS_rel_beta.png Graphic file (type png)
 <use Figures/BS_rel_beta.png>
 Package pdftex.def Info: Figures/BS_rel_beta.png  used on input line 447.
 (pdftex.def)             Requested size: 469.75499pt x 295.94156pt.
-<Figures/BS_rel_delta.png, id=1157, 1505.625pt x 963.6pt>
+<Figures/BS_rel_delta.png, id=1560, 1505.625pt x 963.6pt>
 File: Figures/BS_rel_delta.png Graphic file (type png)
 <use Figures/BS_rel_delta.png>
 Package pdftex.def Info: Figures/BS_rel_delta.png  used on input line 456.
 (pdftex.def)             Requested size: 230.18251pt x 147.31268pt.
-<Figures/BS_rel_gamma.png, id=1158, 1505.625pt x 957.5775pt>
+<Figures/BS_rel_gamma.png, id=1561, 1505.625pt x 957.5775pt>
 File: Figures/BS_rel_gamma.png Graphic file (type png)
 <use Figures/BS_rel_gamma.png>
 Package pdftex.def Info: Figures/BS_rel_gamma.png  used on input line 460.
 (pdftex.def)             Requested size: 230.18251pt x 146.39198pt.
-) [75] [76] [77 <./Figures/BS_non_rel_alpha.png (PNG copy)>] [78 <./Figures/BS_
-non_rel_beta.png (PNG copy)> <./Figures/BS_non_rel_delta.png (PNG copy)> <./Fig
-ures/BS_non_rel_gamma.png (PNG copy)>] [79 <./Figures/BS_rel_alpha.png (PNG cop
-y)>] [80 <./Figures/BS_rel_beta.png (PNG copy)> <./Figures/BS_rel_delta.png (PN
-G copy)> <./Figures/BS_rel_gamma.png (PNG copy)>]
-! Extra \else.
-\@include ...ediate \closeout \@partaux \fi \else 
-                                                  \deadcycles \z@ \@nameuse ...
-l.892 \include{chp_basis_sets}
-                              
-I'm ignoring this; it doesn't match any \if.
-
+) [77 <./Figures/BS_non_rel_alpha.png (PNG copy)>] [78 <./Figures/BS_non_rel_be
+ta.png (PNG copy)> <./Figures/BS_non_rel_delta.png (PNG copy)> <./Figures/BS_no
+n_rel_gamma.png (PNG copy)>] [79 <./Figures/BS_rel_alpha.png (PNG copy)>]
+[80 <./Figures/BS_rel_beta.png (PNG copy)> <./Figures/BS_rel_delta.png (PNG cop
+y)> <./Figures/BS_rel_gamma.png (PNG copy)>]
 \openout2 = `chp_con_fut.aux'.
 
-(./chp_con_fut.tex
+ (./chp_con_fut.tex
 Chapter 4.
 [81
 
@@ -2535,28 +1888,11 @@ Appendix A.
 (./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+.inp)
 (./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+.log [95] [96]
 [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109])
-Runaway argument?
-{\@firstoffive }\fi . 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.21 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
 (./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+_readin.inp [110]
 [111]) (./appendix/inp_out_files/91Pa_35s30p-30p+25d-25d+20f-20f+_readin.log
 [112] [113] [114] [115] [116] [117] [118] [119])) [120]
-! Extra \else.
-\@include ...ediate \closeout \@partaux \fi \else 
-                                                  \deadcycles \z@ \@nameuse ...
-l.953 \include{appendix/app_cudaDFRATOM_inps}
-                                             
-I'm ignoring this; it doesn't match any \if.
-
 \openout2 = `appendix/app_cudaDFRATOM_suto_sub.aux'.
+
 
 (./appendix/app_cudaDFRATOM_suto_sub.tex
 Appendix B.
@@ -2580,95 +1916,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 999.
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 999.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 999.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 83CD293CD5EFFBA68738DED58E48F6DB;3515.
 
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  83CD293CD5EFFBA68738DED58E48F6DB;3515.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 999.
  )
-(\end occurred when \ifnum on line 953 was incomplete)
-(\end occurred when \ifx on line 401 was incomplete)
-(\end occurred when \ifx on line 399 was incomplete)
-(\end occurred when \ifx on line 367 was incomplete)
-(\end occurred when \ifx on line 365 was incomplete)
-(\end occurred when \ifx on line 234 was incomplete)
-(\end occurred when \ifx on line 234 was incomplete)
-(\end occurred when \ifx on line 81 was incomplete)
-(\end occurred when \ifx on line 77 was incomplete)
-(\end occurred when \ifx on line 64 was incomplete)
-(\end occurred when \ifx on line 30 was incomplete)
-(\end occurred when \ifx on line 4 was incomplete)
-(\end occurred when \iftrue on line 892 was incomplete)
-(\end occurred when \ifnum on line 892 was incomplete)
-(\end occurred when \ifx on line 678 was incomplete)
-(\end occurred when \ifx on line 678 was incomplete)
-(\end occurred when \ifx on line 613 was incomplete)
-(\end occurred when \ifx on line 610 was incomplete)
-(\end occurred when \ifx on line 575 was incomplete)
-(\end occurred when \ifx on line 572 was incomplete)
-(\end occurred when \ifx on line 545 was incomplete)
-(\end occurred when \ifx on line 540 was incomplete)
-(\end occurred when \ifx on line 538 was incomplete)
-(\end occurred when \ifx on line 486 was incomplete)
-(\end occurred when \ifx on line 483 was incomplete)
-(\end occurred when \ifx on line 481 was incomplete)
-(\end occurred when \ifx on line 387 was incomplete)
-(\end occurred when \ifx on line 377 was incomplete)
-(\end occurred when \ifx on line 363 was incomplete)
-(\end occurred when \ifx on line 312 was incomplete)
-(\end occurred when \ifx on line 252 was incomplete)
-(\end occurred when \ifx on line 199 was incomplete)
-(\end occurred when \ifx on line 152 was incomplete)
-(\end occurred when \ifx on line 148 was incomplete)
-(\end occurred when \ifx on line 148 was incomplete)
-(\end occurred when \ifx on line 143 was incomplete)
-(\end occurred when \ifx on line 80 was incomplete)
-(\end occurred when \ifx on line 29 was incomplete)
-(\end occurred when \ifx on line 17 was incomplete)
-(\end occurred when \iftrue on line 891 was incomplete)
-(\end occurred when \ifnum on line 891 was incomplete)
-(\end occurred when \ifx on line 631 was incomplete)
-(\end occurred when \ifx on line 595 was incomplete)
-(\end occurred when \ifx on line 584 was incomplete)
-(\end occurred when \ifx on line 550 was incomplete)
-(\end occurred when \ifx on line 548 was incomplete)
-(\end occurred when \ifx on line 496 was incomplete)
-(\end occurred when \ifx on line 464 was incomplete)
-(\end occurred when \ifx on line 420 was incomplete)
-(\end occurred when \ifx on line 413 was incomplete)
-(\end occurred when \ifx on line 384 was incomplete)
-(\end occurred when \ifx on line 375 was incomplete)
-(\end occurred when \ifx on line 358 was incomplete)
-(\end occurred when \ifx on line 332 was incomplete)
-(\end occurred when \ifx on line 329 was incomplete)
-(\end occurred when \ifx on line 295 was incomplete)
-(\end occurred when \ifx on line 256 was incomplete)
-(\end occurred when \ifx on line 249 was incomplete)
-(\end occurred when \ifx on line 110 was incomplete)
-(\end occurred when \ifx on line 84 was incomplete)
-(\end occurred when \ifx on line 32 was incomplete)
-(\end occurred when \ifx on line 23 was incomplete)
-(\end occurred when \ifx on line 13 was incomplete)
-(\end occurred when \ifx on line 6 was incomplete)
-(\end occurred when \iftrue on line 890 was incomplete)
-(\end occurred when \ifnum on line 890 was incomplete)
 (\end occurred when \ifx on line 678 was incomplete) 
 Here is how much of TeX's memory you used:
- 21513 strings out of 492982
- 308242 string characters out of 6134896
- 795705 words of memory out of 5000000
- 20655 multiletter control sequences out of 15000+600000
- 18175 words of font info for 71 fonts, out of 8000000 for 9000
+ 21587 strings out of 492982
+ 309215 string characters out of 6134896
+ 802507 words of memory out of 5000000
+ 20710 multiletter control sequences out of 15000+600000
+ 20059 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,23n,51p,1838b,3407s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,23n,56p,1838b,3407s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/ty
@@ -2680,19 +1944,21 @@ nts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (127 pages, 2342628 bytes).
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on thesis.pdf (133 pages, 2451433 bytes).
 PDF statistics:
- 5493 PDF objects out of 6186 (max. 8388607)
- 4080 named destinations out of 4296 (max. 500000)
- 115 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5877 PDF objects out of 6186 (max. 8388607)
+ 4087 named destinations out of 4296 (max. 500000)
+ 483 words of extra memory for PDF output out of 10000 (max. 10000000)
 

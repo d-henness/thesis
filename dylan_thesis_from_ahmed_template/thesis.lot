@@ -1,17 +1,17 @@
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1.1}{\ignorespaces The first few exact solutions for the hydrogen atom wavefunction.\relax }}{4}
+\contentsline {table}{\numberline {1.1}{\ignorespaces The first few exact solutions for the hydrogen atom wavefunction.\relax }}{3}{table.caption.9}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Kernel resource usage\relax }}{46}
-\contentsline {table}{\numberline {2.2}{\ignorespaces \textit {\textbf {eint2}} kernel performance}}{47}
-\contentsline {table}{\numberline {2.3}{\ignorespaces \textit {\textbf {MTSE}} kernel profiling results.}}{49}
-\contentsline {table}{\numberline {2.4}{\ignorespaces \textit {\textbf {STSE}} kernel profiling results.}}{49}
-\contentsline {table}{\numberline {2.5}{\ignorespaces Total speedup of alg1}}{53}
-\contentsline {table}{\numberline {2.6}{\ignorespaces Total speedup of alg2}}{53}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Kernel resource usage\relax }}{43}{table.caption.18}
+\contentsline {table}{\numberline {2.2}{\ignorespaces \textit {\textbf {eint2}} kernel performance}}{44}{table.caption.19}
+\contentsline {table}{\numberline {2.3}{\ignorespaces \textit {\textbf {MTSE}} kernel profiling results.}}{45}{table.caption.21}
+\contentsline {table}{\numberline {2.4}{\ignorespaces \textit {\textbf {STSE}} kernel profiling results.}}{46}{table.caption.22}
+\contentsline {table}{\numberline {2.5}{\ignorespaces Total speedup of alg1}}{47}{table.caption.26}
+\contentsline {table}{\numberline {2.6}{\ignorespaces Total speedup of alg2}}{50}{table.caption.27}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Basis sets optimized using rWTBS}}{69}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Basis sets optimized using cudaDFRATOM}}{71}
-\contentsline {table}{\numberline {3.3}{\ignorespaces Energies produced from basis sets in Tables 3.1\hbox {} and 3.2\hbox {}}}{72}
-\contentsline {table}{\numberline {3.4}{\ignorespaces Comparison of basis sets produced by cudaDFRATOM and Dyall's triple-zeta basis sets.}}{76}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Basis sets optimized using rWTBS}}{69}{table.3.1}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Basis sets optimized using cudaDFRATOM}}{72}{table.3.2}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Energies produced from basis sets in Tables \ref {tab:BStab} and \ref {tab:BStab_rel}}}{72}{table.3.3}
+\contentsline {table}{\numberline {3.4}{\ignorespaces Comparison of basis sets produced by cudaDFRATOM and Dyall's triple-zeta basis sets.}}{76}{table.caption.30}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

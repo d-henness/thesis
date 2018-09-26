@@ -576,7 +576,7 @@ Table \ref{tab:2eintprof} and Figure \ref{fig:2eintprof} show the results of pro
 
 \begin{table}[h!]
 \begin{center}
-\caption[\kernel{eint2} kernel performance]{\kernel{eint2} kernel performance. Times are in ms.}
+\caption[\kernel{eint2} kernel performance]{\kernel{eint2} kernel performance. Times are in ms. \notetodylan{Times given are an average of five runs.}}
 \label{tab:2eintprof}
 \begin{tabular}{rrrrrrr}
 \toprule
@@ -584,14 +584,14 @@ Table \ref{tab:2eintprof} and Figure \ref{fig:2eintprof} show the results of pro
 	\\
 	\\
 \midrule
-	74305	&	59		&	4.68		&	0.18		&	4.86		&	12.81	&	12.32	\\
-	353220	&	320		&	18.05	&	0.71		&	18.77	&	17.72	&	17.04	\\
-	1081185	&	980		&	52.51	&	2.21		&	54.72	&	18.66	&	17.90	\\
-	2588950	&	2360		&	118.20	&	5.36		&	123.56	&	19.96	&	19.09	\\
-	5299140	&	4910		&	237.96	&	11.07	&	249.03	&	20.63	&	19.71	\\
-	9726255	&	8880		&	437.88	&	20.81	&	458.69	&	20.27	&	19.35	\\
-	16476670	&	15140	&	730.24	&	35.96	&	766.20	&	20.73	&	19.75	\\
-	26248635	&	24180	&	1159.98	&	57.99	&	1217.97	&	20.84	&	19.85	\\
+	74305		&	59		&	   4.68		&	 0.18	&	   4.86	&	12.81	&	12.32	\\
+	353220		&	320		&	  18.03		&	 0.71	&	  18.74	&	17.72	&	17.04	\\
+	1081185		&	980		&	  52.50		&	 2.21	&	  54.71	&	18.66	&	17.90	\\
+	2588950		&	2360	&	 118.26		&	 5.36	&	 123.62	&	19.96	&	19.09	\\
+	5299140		&	4910	&	 237.75		&	11.07	&	 248.82	&	20.63	&	19.71	\\
+	9726255		&	8880	&	 437.74		&	20.81	&	 458.55	&	20.27	&	19.35	\\
+	16476670	&	15140	&	 730.56		&	35.96	&	 766.52	&	20.73	&	19.75	\\
+	26248635	&	24180	&	1160.82		&	58.00	&	1218.82	&	20.84	&	19.85	\\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -614,7 +614,7 @@ As explained in section \ref{sec:PQmeth}, there were two different attempts to s
 
 \begin{table}[h!]
 \begin{center}
-\caption[\kernel{MTSE} kernel profiling results.]{\kernel{MTSE} kernel profiling results. Times are in ms.}
+\caption[\kernel{MTSE} kernel profiling results.]{\kernel{MTSE} kernel profiling results. Times are in ms. \notetodylan{Times are given as the average time needed for a singel iteration from one calculation.}}
 \label{tab:PQprofalg1}
 \begin{tabular}{rrrr}
 \toprule
@@ -635,7 +635,7 @@ As explained in section \ref{sec:PQmeth}, there were two different attempts to s
 
 \begin{table}[h!]
 \begin{center}
-\caption[\kernel{STSE} kernel profiling results.]{\kernel{STSE} kernel profiling results. Times are in ms.}
+\caption[\kernel{STSE} kernel profiling results.]{\kernel{STSE} kernel profiling results. Times are in ms. \notetodylan{Times are given as the average time needed for a singel iteration from one calculation.}}
 \label{tab:PQprofalg2}
 \begin{tabular}{rrrr}
 \toprule
@@ -687,7 +687,7 @@ There was some difficulty in determining the total speedup of a calculation. The
 
 \begin{table}[h!]
 \begin{center}
-\caption[Total speedup of alg1]{Total speedup of cudaDFRATOM using \textbf{MTSE}. The results for a total calculation are shown. All times are in s.}
+\caption[Total speedup of alg1]{Total speedup of cudaDFRATOM using \textbf{MTSE}. The results for a total calculation are shown. All times are in s. \notetodylan{Times are given as the average time needed for five calculations.}}
 \label{tab:totalprofalg1}
 \begin{tabular}{rrrrrr}
 \toprule

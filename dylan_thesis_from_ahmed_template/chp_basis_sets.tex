@@ -362,10 +362,12 @@ The optimized non-relativistic WTBS parameters and basis set sizes for elements 
 \bottomrule  	
 \end{longtable}
 
-In Table \ref{tab:dyall_comp}
+\notetodylan{In Table \ref{tab:dyall_comp} a comparison of the basis sets produced by cudaDFRATOM and Dyall's triple-zeta basis sets\cite{dyall_s,dyall_p,dyall_d} is given. The cudaDFTAOM basis sets are all ove similar accuracy as Dyall's basis sets for the 6s and 5d elements, but there is a small decrease in the accuracy when comparing the 6p elements. This could be a result of the WTBS generating function not being able to accurately describe the primary and secondary relativistic effects with only four different paramters. Improvments could be made by instead using two different sets of WTBS parameters. One of them would be optimized for the s and p spaces while the other would be optimized for the d and f spaces. The reasoning for why this would be a better idea is that the s and p spinors are affected the contracting \textit{primary} relativistic effect, and the d and f spinors are affected by the diffusing \textit{secondary} relativistic effect. Because of this, it would be expected that using only one set of WTBS paramters would not be able to accuratly account for these two different affects.}
+
+\notetodylan{It can also be seen Table \ref{tab:dyall_comp} that the cudaDFRATOM basis sets are all larger than Dyall's basis sets. This is again a result of only using one set of four WTBS paramters, while Dyall is optimizing each exponent individually. As such, he is able to acheive a high accuracy while using fewer basis functions. The above mentioned fix for improving accuracy in the 6p elements should also reduce the size of the basis sets so that they are more comparable in size to Dyall's.}
 
 \begin{table}
-\caption[Comparison of basis sets produced by cudaDFRATOM and Dyall's triple-zeta basis sets.]{Comparison of basis sets produced by cudaDFRATOM and Dyall's triple-zeta basis sets. The basis sets for the 6s, 6p, and 5d elements are shown. The 4f elements were calculated with a different electron configuration, so they are omitted.} 
+\caption[Comparison of basis sets produced by cudaDFRATOM and Dyall's triple-zeta basis sets.]{Comparison of basis sets produced by cudaDFRATOM and Dyall's triple-zeta basis sets. The basis sets for the 6s\cite{dyall_s}, 6p\cite{dyall_p}, and 5d\cite{dyall_d} elements are shown. The 4f elements were calculated with a different electron configuration, so they are omitted.} 
 \label{tab:dyall_comp} \\
 \begin{tabular}{l r r r r}
 \toprule

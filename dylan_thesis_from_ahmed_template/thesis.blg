@@ -1,5 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: chp_intro.aux
 A level-1 auxiliary file: chp_cuda_dfratom.aux
@@ -10,45 +10,45 @@ A level-1 auxiliary file: appendix/app_cudaDFRATOM_inps.aux
 A level-1 auxiliary file: appendix/app_cudaDFRATOM_suto_sub.aux
 Database file #1: thesis.bib
 Warning--can't use both author and editor fields in Powell2006
-You've used 40 entries,
+You've used 43 entries,
             1791 wiz_defined-function locations,
-            735 strings with 9624 characters,
-and the built_in function-call counts, 8487 in all, are:
-= -- 805
-> -- 259
+            751 strings with 10042 characters,
+and the built_in function-call counts, 9164 in all, are:
+= -- 875
+> -- 271
 < -- 1
-+ -- 106
-- -- 66
-* -- 565
-:= -- 1346
-add.period$ -- 119
-call.type$ -- 40
-change.case$ -- 36
++ -- 112
+- -- 69
+* -- 610
+:= -- 1451
+add.period$ -- 128
+call.type$ -- 43
+change.case$ -- 39
 chr.to.int$ -- 0
-cite$ -- 41
-duplicate$ -- 369
-empty$ -- 894
-format.name$ -- 66
-if$ -- 1897
+cite$ -- 44
+duplicate$ -- 396
+empty$ -- 967
+format.name$ -- 69
+if$ -- 2046
 int.to.chr$ -- 0
-int.to.str$ -- 40
-missing$ -- 44
-newline$ -- 202
-num.names$ -- 39
-pop$ -- 71
+int.to.str$ -- 43
+missing$ -- 47
+newline$ -- 217
+num.names$ -- 42
+pop$ -- 74
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 142
+skip$ -- 151
 stack$ -- 0
-substring$ -- 719
-swap$ -- 49
+substring$ -- 802
+swap$ -- 52
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 85
-width$ -- 42
-write$ -- 441
+while$ -- 93
+width$ -- 45
+write$ -- 474
 (There was 1 warning)

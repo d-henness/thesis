@@ -540,7 +540,7 @@ All variables are the same as in Algorithms \ref{MTSE_K1} and \ref{MTSE_K2}, but
 Algorithm \ref{STSE_K} has two nested loops. The outer one loops over elements of $d$, loading chunks of it into the shared memory as it goes. The inner one loops over elements of $x$ and performs the multiplications of $d$ and $x$ elements, keeping a running tally of the sum of these multiplications. Something that is not shown in the pseudocode is checking if $l$ and $m$ have open shells. If both of them do, then $qm1$ and $qm2$ will be calculated as well. If only one or neither of them do, then this calculation is skipped. Because most of the shells will be closed, this allows for many calculations to be skipped. Once the inner loop has finished, the next section of $d$ is loaded into the shared memory and then the multiplication of $x$ and $s\_d$ continues. This process goes on until all elements of a row of \textbf{X} have been used.
 
 \section{Discussion}
-In this section, the results of GPU resource usage and profiling the various algorithms discussed previously will be presented. For profiling, the radon atom was chosen. Radon was selected because it contains many spinor orbitals and should be a good test of the \kernel{formpq} and \kernel{eint2} kernels on large atomic systems. \notetodylan{Some of the smaller basis sets used do not contain a sensible number of basis functions considering the number of electrons that Radon contains. This is not an issue though, as at this stage we are only concerned with how long the calculation takes, and not with how accurate its end result is.} Therefore, basis sets use the arbitrarily chosen WTBS parameters of $\alpha = 6.87\times10^{-2}$, $\beta = 1.83$,  $\delta = 3.97$, and $\gamma = 0.78$. Additionally, due to the spherical symmetry of an atom exploited by cudaDFRATOM, the growth of a calculation differs depending on how the basis functions are distributed among the spinor symmetries. Therefore, results are reported in terms of the number of two-electron integrals instead of number of basis functions as is typically done.
+In this section, the results of GPU resource usage and profiling the various algorithms discussed previously will be presented. For profiling, the radon atom was chosen. Radon was selected because it contains many spinor orbitals and should be a good test of the \kernel{formpq} and \kernel{eint2} kernels on large atomic systems. Some of the smaller basis sets used do not contain a sensible number of basis functions considering the number of electrons that Radon contains. This is not an issue though, as at this stage we are only concerned with how long the calculation takes, and not with how accurate its end result is. Therefore, basis sets use the arbitrarily chosen WTBS parameters of $\alpha = 6.87\times10^{-2}$, $\beta = 1.83$,  $\delta = 3.97$, and $\gamma = 0.78$. Additionally, due to the spherical symmetry of an atom exploited by cudaDFRATOM, the growth of a calculation differs depending on how the basis functions are distributed among the spinor symmetries. Therefore, results are reported in terms of the number of two-electron integrals instead of number of basis functions as is typically done.
 \subsection{Resource Usage}
 In the case of the work in this thesis, the resource bottleneck for my kernels was almost always the number of registers used per thread. 63 32-bit registers provide only 252 bytes to work with, which when using double precision 8-byte numbers is hardly anything at all. A summary of the block sizes and resource usage of all kernels is given in Table \ref{tab:resources}.
 
@@ -576,7 +576,7 @@ Table \ref{tab:2eintprof} and Figure \ref{fig:2eintprof} show the results of pro
 
 \begin{table}[h!]
 \begin{center}
-\caption[\kernel{eint2} kernel performance]{\kernel{eint2} kernel performance. Times are in ms. \notetodylan{Times given are an average of five runs.}}
+\caption[\kernel{eint2} kernel performance]{\kernel{eint2} kernel performance. Times are in ms. Times given are an average of five runs.}
 \label{tab:2eintprof}
 \begin{tabular}{rrrrrrr}
 \toprule
@@ -607,14 +607,14 @@ $^{\textrm{c}}$ Speedup comparing the time of \kernel{eint2} and \kernel{binary\
 \label{fig:2eintprof}
 \end{figure}
 
-As can be seen, the GPU calculations \notetodylan{of the two-electron integrals} outperform the CPU calculations with an average speedup factor of over 19. For calculations with fewer number of integrals to compute the speedup is not as dramatic. This is most likely due to the overhead involved in just starting a GPU kernel. Table \ref{tab:2eintprof} shows two different speedups: one for just calculation of the integrals, and one that shows the speedup if the time needed for \kernel{binary\_search} is included. The time needed to evaluate indices does not have much of an impact on the total performance on the total calculation time which proves this was a good way to generate the $lmpqrs$ indices. Additionally, because cudaDFRATOM is a basis set optimizer, \kernel{binary\_search} will need to be called only once, whereas \kernel{eint2} may need to be called many hundreds of times. Therefore, for an optimization calculation (which the original program is incapable of doing) the total speedup will limit to the just the integral calculations.
+As can be seen, the GPU calculations of the two-electron integrals outperform the CPU calculations with an average speedup factor of over 19. For calculations with fewer number of integrals to compute the speedup is not as dramatic. This is most likely due to the overhead involved in just starting a GPU kernel. Table \ref{tab:2eintprof} shows two different speedups: one for just calculation of the integrals, and one that shows the speedup if the time needed for \kernel{binary\_search} is included. The time needed to evaluate indices does not have much of an impact on the total performance on the total calculation time which proves this was a good way to generate the $lmpqrs$ indices. Additionally, because cudaDFRATOM is a basis set optimizer, \kernel{binary\_search} will need to be called only once, whereas \kernel{eint2} may need to be called many hundreds of times. Therefore, for an optimization calculation (which the original program is incapable of doing) the total speedup will limit to the just the integral calculations.
 
 \subsection{P and Q Matrix Formation Performance}
 As explained in section \ref{sec:PQmeth}, there were two different attempts to speedup the formation of \textbf{P} and \textbf{Q}. The results of these attempts are shown in Tables \ref{tab:PQprofalg1} and \ref{tab:PQprofalg2} and also in Figure \ref{fig:formpqprof}.
 
 \begin{table}[h!]
 \begin{center}
-\caption[\kernel{MTSE} kernel profiling results.]{\kernel{MTSE} kernel profiling results. Times are in ms. \notetodylan{Times are given as the average time needed for a singel iteration from one calculation.}}
+\caption[\kernel{MTSE} kernel profiling results.]{\kernel{MTSE} kernel profiling results. Times are in ms. Times are given as the average time needed for a singel iteration from one calculation.}
 \label{tab:PQprofalg1}
 \begin{tabular}{rrrr}
 \toprule
@@ -635,7 +635,7 @@ As explained in section \ref{sec:PQmeth}, there were two different attempts to s
 
 \begin{table}[h!]
 \begin{center}
-\caption[\kernel{STSE} kernel profiling results.]{\kernel{STSE} kernel profiling results. Times are in ms. \notetodylan{Times are given as the average time needed for a singel iteration from one calculation.}}
+\caption[\kernel{STSE} kernel profiling results.]{\kernel{STSE} kernel profiling results. Times are in ms. Times are given as the average time needed for a singel iteration from one calculation.}
 \label{tab:PQprofalg2}
 \begin{tabular}{rrrr}
 \toprule
@@ -676,7 +676,7 @@ There are several reasons this could be the case. The first due to the poor glob
 \includegraphics[width=1\textwidth]{Figures/eint2_vec_lots.png}
 \caption[Integrals needed for the first element of \textbf{P}: vector representation]
 {Integrals needed for the first element of \textbf{P}: The top triangle of the symmetric two-electron integral matrix in a vector representation. The required integrals have been highlighted with a green border.  The spreading out of the elements means that reads to them can not be done effectively. The basis set used had $nsym=3$ with $nbs(i) = (10, 10, 10)$. For clarity, the boxes have been coloured in the same way as Figure \ref{fig:eint2matlots}.}
-\label{fig:eint2matlots}
+\label{fig:eint2veclots}
 \end{figure}
 
 
@@ -687,7 +687,7 @@ There was some difficulty in determining the total speedup of a calculation. The
 
 \begin{table}[h!]
 \begin{center}
-\caption[Total speedup of alg1]{Total speedup of cudaDFRATOM using \textbf{MTSE}. The results for a total calculation are shown. All times are in s. \notetodylan{Times are given as the average time needed for five calculations.}}
+\caption[Total speedup of alg1]{Total speedup of cudaDFRATOM using \textbf{MTSE}. The results for a total calculation are shown. All times are in s. Times are given as the average time needed for five calculations.}
 \label{tab:totalprofalg1}
 \begin{tabular}{rrrrrr}
 \toprule
@@ -736,9 +736,9 @@ There was some difficulty in determining the total speedup of a calculation. The
 \label{fig:totaltimeprof}
 \end{figure}
 
-As can be seen, the number of SCF iterations differs when comparing the GPU calculations to the CPU even though the convergence criteria was exactly the same. This is somewhat puzzling but I offer the following explanation. \notetodylan{The differences do not occur in the two-electron integral calculations. We confirmed this by comparing the sum of the absolute values of the integrals from both the GPU and non-GPU programs and found that they were the same. The problem instead occurs as a result of changing the SCF routines}. First, when writing the SCF routines, it became apparent that rewriting the linear algebra into CUDA would be rather pointless when I could just use the cuSOLVER and cuBLAS libraries and achieve the same result. As such, the SCF is completed using entirely different algorithms \notetodylan{and unfortunately, these GPU libraries do not produce exactly the same eigenvalues as the original program.} Second, it is important to realize that a real number can only be \textit{approximated} using double precision variables. This introduces numerical instability. For instance, assume that we have a computer that could only hold the first four digits of a number (leading zeros don't count). Then we take the number 1.000 and we want to add 0.0001000 to it 10000 times. The result of the first addition should be 1.0001, but because our computer can only hold four digits, the number is truncated to 1.000. The final result of this computation would not be 2.000 as expected but 1.000. During an SCF calculation, there are millions of numbers being multiplied together and added up, many of which may be close to, but not quite 0. This allows for lots of error to creep into a calculation just because of the limitations of the hardware. 
+As can be seen, the number of SCF iterations differs when comparing the GPU calculations to the CPU even though the convergence criteria was exactly the same. This is somewhat puzzling but I offer the following explanation. The differences do not occur in the two-electron integral calculations. We confirmed this by comparing the sum of the absolute values of the integrals from both the GPU and non-GPU programs and found that they were the same. The problem instead occurs as a result of changing the SCF routines. First, when writing the SCF routines, it became apparent that rewriting the linear algebra into CUDA would be rather pointless when I could just use the cuSOLVER and cuBLAS libraries and achieve the same result. As such, the SCF is completed using entirely different algorithms and unfortunately, these GPU libraries do not produce exactly the same eigenvalues as the original program. Second, it is important to realize that a real number can only be \textit{approximated} using double precision variables. This introduces numerical instability. For instance, assume that we have a computer that could only hold the first four digits of a number (leading zeros don't count). Then we take the number 1.000 and we want to add 0.0001000 to it 10000 times. The result of the first addition should be 1.0001, but because our computer can only hold four digits, the number is truncated to 1.000. The final result of this computation would not be 2.000 as expected but 1.000. During an SCF calculation, there are millions of numbers being multiplied together and added up, many of which may be close to, but not quite 0. This allows for lots of error to creep into a calculation just because of the limitations of the hardware. 
 
-The fact that two different algorithms are being used on the GPU and CPU, and that they might not be handling numerical stability in the same way is what is most likely causing this to occur. It should also be pointed out that the final energy was not exactly the same from GPU to CPU either. Typically, the last 4 of 16 significant digits would be different. Because the rest are the same however, we still have ``chemical accuracy" \notetodylan{(the general consensus of chemical accuracy is $0.001$ Hartree, which cudaDFRATOM falls well within)} and I argue that cudaDFRATOMs results are therefore valid.
+The fact that two different algorithms are being used on the GPU and CPU, and that they might not be handling numerical stability in the same way is what is most likely causing this to occur. It should also be pointed out that the final energy was not exactly the same from GPU to CPU either. Typically, the last 4 of 16 significant digits would be different. Because the rest are the same however, we still have ``chemical accuracy" (the general consensus of chemical accuracy is $0.001$ Hartree, which cudaDFRATOM falls well within) and I argue that cudaDFRATOMs results are therefore valid.
 
 
 \section{Input Description}\label{inp_des}

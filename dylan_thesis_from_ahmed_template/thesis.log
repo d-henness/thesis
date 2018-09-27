@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.26)  26 SEP 2018 15:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.9.26)  27 SEP 2018 10:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1186,11 +1186,7 @@ LaTeX Warning: Label `eq:hartree-fock_eq' multiply defined.
 
 LaTeX Warning: Label `eq:hartree-fock_eq' multiply defined.
 
-) (./chp_cuda_dfratom.aux
-
-LaTeX Warning: Label `fig:eint2matlots' multiply defined.
-
-) (./chp_basis_sets.aux) (./chp_con_fut.aux)
+) (./chp_cuda_dfratom.aux) (./chp_basis_sets.aux) (./chp_con_fut.aux)
 (./appendix/app_cudaDFRATOM_inps.aux) (./appendix/app_cudaDFRATOM_suto_sub.aux)
 )
 \openout1 = `thesis.aux'.
@@ -1926,10 +1922,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 999.
  )
 (\end occurred when \ifx on line 678 was incomplete) 
 Here is how much of TeX's memory you used:
- 21587 strings out of 492982
- 309215 string characters out of 6134896
- 802507 words of memory out of 5000000
- 20710 multiletter control sequences out of 15000+600000
+ 21588 strings out of 492982
+ 309233 string characters out of 6134896
+ 802611 words of memory out of 5000000
+ 20711 multiletter control sequences out of 15000+600000
  20059 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,23n,56p,1838b,3407s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1956,7 +1952,7 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (133 pages, 2451433 bytes).
+Output written on thesis.pdf (133 pages, 2451164 bytes).
 PDF statistics:
  5877 PDF objects out of 6186 (max. 8388607)
  4087 named destinations out of 4296 (max. 500000)

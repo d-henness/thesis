@@ -24,7 +24,7 @@ Much like a satellite in orbit around the Earth, the proton and neutron vastly o
 
 \begin{equation}
 \label{eq:elham}
-\hat{H_{el}} = -\frac{1}{2}\sum^{n}_{i}\nabla^{2}_{i}  - \sum^{n}_{i}\sum^{N}_{A}\frac{Z_{A}}{r_{iA}} + \sum^{n}_{i}\sum^{N}_{j>i}\frac{1}{r_{ij}} + \sum^{N}_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}
+\hat{H_{el}} = -\frac{1}{2}\sum^{n}_{i}\nabla^{2}_{i}  - \sum^{n}_{i}\sum^{N}_{A}\frac{Z_{A}}{r_{iA}} + \sum^{n}_{i}\sum^{n}_{j>i}\frac{1}{r_{ij}} + \sum^{N}_{B>A}\frac{Z_{A}Z_{B}}{r_{AB}}
 \end{equation} 
 
 $\hat{H}$ can be assumed to be $\hat{H_{el}}$ for the remainder of this thesis, and with the Hamiltonian out of the way, we can now turn our attention to the wavefunction. While we were able to get away with turning nuclei into classical particles, the electrons unfortunately remain fully quantum. Therefore, we need to deal with all the complicated mathematical baggage this comes with.
@@ -133,7 +133,7 @@ Here, $n$ refers to the number of electrons in the system, and the numbers in pa
 \end{split}
 \end{equation}
 
-Using Slater determinants has some interesting consequences. If we had a system where two electrons of the same spin were in the same spin orbital, that would mean that two of the columns would be equal to one another. Such a determinant would be equal to zero, which means that the wavefunction for such a system would not exist. This is the famous Pauli antisymmetry principle\cite{Pauli1925}. The math showing that is satisfies antisymmetry is shown below\cite{Ostlund}.
+Using Slater determinants has some interesting consequences. If we had a system where two electrons of the same spin were in the same spin orbital, that would mean that two of the columns would be equal to one another. Such a determinant would be equal to zero, which means that the wavefunction for such a system would not exist. This is the famous Pauli antisymmetry principle\cite{Pauli1925}. The math showing that it satisfies antisymmetry is shown below\cite{Ostlund}.
 
 \begin{equation}
 \label{eq:pauli_2t_1}
@@ -372,7 +372,7 @@ d_{1} &	= ct	&	d_{2} &	= vt'	&	d_{3} &	=ct'	\\
 \label{eq:rel_proof_2}
 \end{align} 
 
-Not does this give the absolutely remarkable result that time is relative, Equation \ref{eq:rel_proof_2} also implies that an object can have a maximum speed. But how could this be possible, if I turned on the engine on my spaceship, what's to stop me from just getting faster and faster? The answer is that the mass of an object increases the closer to the speed of light it is. This can be described by\cite{Piela}
+Not only does this give the absolutely remarkable result that time is relative, Equation \ref{eq:rel_proof_2} also implies that an object can have a maximum speed. But how could this be possible, if I turned on the engine of my spaceship, what's to stop me from just getting faster and faster? The answer is that the mass of an object increases the closer to the speed of light it is. This can be described by\cite{Piela}
  
 \begin{equation}
 \label{eq:rel_mass}
@@ -417,7 +417,7 @@ where $i\hbar\frac{\partial}{\partial t}$ is the energy operator, $-\hbar^{2}\fr
 E_{kin}^{2} = \hat{p}^{2}c^{2} + m_{0}^{2}c^{4}
 \end{equation}
 
-If we want to solve for a free particle ($\hat{V}(x) = 0$), we could put the energy and momentum operator from Equation \ref{eq:schr_full} into Equation \ref{eq:emc2_mom} and multiply both sides from the right to obtain
+If we want to solve this equation for a free particle ($\hat{V}(x) = 0$), we could put the energy and momentum operator from Equation \ref{eq:schr_full} into Equation \ref{eq:emc2_mom} and multiply both sides from the right to obtain
 
 \begin{equation}
 \label{eq:klein-gord_free}
@@ -628,7 +628,7 @@ Relativistic effects are broken up into two categories: primary and secondary ef
 a_{0} = \frac{4\pi{}\epsilon_{0}\hbar^{2}}{m_{0}e^{2}}
 \end{equation}
 
-where $\epsilon_{0}$ is the permittivity of free space, $\hbar$ is the reduced planks constant, $e$ is the charge of an electron, and $m_{0}$ is the mass of an election at rest. Recall from Equation \ref{eq:rel_mass} that the mass of an object increases with its speed. If we substitute $m(v)$ from Equation \ref{eq:rel_mass} for $m_{0}$ into Equation \ref{eq:non_rel_bohr} we get
+where $\epsilon_{0}$ is the permittivity of free space, $\hbar$ is the reduced planks constant, $e$ is the charge of an electron, and $m_{0}$ is the mass of an electron at rest. Recall from Equation \ref{eq:rel_mass} that the mass of an object increases with its speed. If we substitute $m(v)$ from Equation \ref{eq:rel_mass} for $m_{0}$ into Equation \ref{eq:non_rel_bohr} we get
 
 \begin{equation}
 \label{eq:rel_bohr}

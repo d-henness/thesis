@@ -13,7 +13,7 @@ For example, say we have a molecular system in geometry state A. In this state, 
 
 Designing a basis set that reduces the effects of BSSE is relatively straightforward, we can simply brute force the problem by adding more and more functions until they begin to cancel each other out. Designing one that avoids the issue of approximate linear dependencies however is more tricky. It is simply not possible to test every possible combination of atoms in every possible geometry to determine if a basis set has these problems. But there are some strategies we can use to avoid this problem.
 
-One strategy that has shown to be particularly effective is using an exponent generating function to ensure that the exponents of the basis set are sufficiently different. There are many of these generating functions. One of these give what are called even-tempered basis sets (ETBS)\cite{ETBS}. The generating function for an ETBS is given below
+One strategy that has shown to be particularly effective is using an exponent generating function to ensure that the exponents of the basis set are sufficiently different. There are many of these generating functions. One of these gives what are called even-tempered basis sets (ETBS)\cite{ETBS}. The generating function for an ETBS is given below
 
 \begin{equation}
 \label{eq:ETBS_gen}
